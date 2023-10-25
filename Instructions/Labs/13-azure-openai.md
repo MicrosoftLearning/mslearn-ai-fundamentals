@@ -39,7 +39,7 @@ You can deploy, manage, and explore models in your Azure OpenAI Service by using
 
     When you first open Azure AI Studio, it should look similar to this:
 
-    ![Screenshot of Azure AI Studio.](../Media/ai-studio.png)
+    ![Screenshot of Azure AI Studio.](./media/generative-ai/ai-studio.png)
 
 1. View the pages available in the pane on the left. You can always return to the home page at the top. Additionally, AI Studio provides multiple pages where you can:
     - Experiment with models in a *playground*.
@@ -52,7 +52,7 @@ To experiment with natural language generation, you must first deploy a model.
 1. On the **Models** page view the available models in your Azure OpenAI service instance.
 1. Select any of the **gpt-35-turbo** models for which the **Deployable** status is **Yes**, and then select **Deploy**:
 
-    ![Screenshot of the Models page in Azure AI Studio.](../Media/deploy-model.png)
+    ![Screenshot of the Models page in Azure AI Studio.](./media/generative-ai/deploy-model.png)
 
 1. Create a new deployment with the following settings:
     - **Model**: gpt-35-turbo
@@ -103,7 +103,7 @@ In addition to language generation models, Azure OpenAI Service supports the DAL
 
 1. Select **Generate** and view the results, which should consist of an image based on the description you provided in the prompt, similar to this:
 
-    ![Screenshot of the DALL-E playgrund in Azure AI Studio.](../Media/dall-e-playground.png)
+    ![Screenshot of the DALL-E playgrund in Azure AI Studio.](./media/generative-ai/dall-e-playground.png)
 
 1. Generate a second image by modifying the prompt to:
 
@@ -112,7 +112,7 @@ In addition to language generation models, Azure OpenAI Service supports the DAL
     ```
 1. Verify that the new image matches the requirements of the prompt, similar to this:
 
-    ![Screenshot of DALL-E generated images in Azure AI Studio.](../Media/dall-e-results.png)
+    ![Screenshot of DALL-E generated images in Azure AI Studio.](./media/generative-ai/dall-e-results.png)
 
 ## Clean up
 

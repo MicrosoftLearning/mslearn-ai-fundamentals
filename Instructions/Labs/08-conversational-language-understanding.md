@@ -41,51 +41,49 @@ To implement natural language understanding with Conversational Language Underst
     - **Azure subscription**: Your Azure subscription.
     - **Language resource**: The Language resource you created previously.
 
-    >**Tip**
-    >If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
-    >1. On the bar at the top if the page, click the **Settings (&#9881;)** button.
-    >1. On the **Settings** page, view the **Resources** tab.
-    >1. Select your language resource, and click **Switch resource**.
-    >1. At the top of the page, click **Language Studio** to return to the Language Studio home page.
+   If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
+    1. On the bar at the top if the page, click the **Settings (&#9881;)** button.
+    2. On the **Settings** page, view the **Resources** tab.
+    3. Select the language resource you just created, and click **Switch resource**.
+    4. At the top of the page, click **Language Studio** to return to the Language Studio home page.
 
 1. At the top of the portal, in the **Create new** menu, select **Conversational language understanding**.
 
 1. In the **Create a project** dialog box, on the **Enter basic information** page, enter the following details and click **Next**:
     - **Name**: *Create a unique name*
-    - **Description**: *Simple home automation*
     - **Utterances primary language**: *English*
     - **Enable multiple languages in project**: *Do not select*
+    - **Description**: `Simple home automation`
 
-    ![Enter details for the project.](media/conversational-language-understanding/create-project.png)
+    > **Tip**: Make a note of your *project name*, you will use it later.
 
-    >**Tip**
-    >Write down your *project name*, you will use it later.
-
-1. On the *Review and finish* page, click **Create**.
+1. On the **Review and finish** page, click **Create**.
 
 ### Create intents, utterances, and entities
 
 An *intent* is an action you want to perform - for example, you might want to switch on a light, or turn off a fan. In this case, you'll define two intents: one to switch on a device, and another to switch off a device. For each intent, you'll specify sample *utterances* that indicate the kind of language used to indicate the intent.
 
-1. In the **Schema definition** pane, ensure that **Intents** is selected Then click **Add**, and add an intent with the name **switch_on** (in lower-case) and click **Add intent**.
+1. In the **Schema definition** pane, ensure that **Intents** is selected Then click **Add**, and add an intent with the name `switch_on` (in lower-case) and click **Add intent**.
 
     ![Click on add under Intents on the Build Schema pane.](media/conversational-language-understanding/build-schema.png)
+
     ![Add the switch_on intent then select Add intent.](media/conversational-language-understanding/add-intent.png)
 
-1. Select the **switch_on** intent. It will take you to the **Data labeling** page. In the **Intent** drop down, select **switch_on**. Next to the **switch_on** intent, type the utterance ***turn the light on*** and press **Enter** to submit this utterance to the list.
+1. Select the **switch_on** intent. It will take you to the **Data labeling** page. In the **Intent** drop down, select **switch_on**. Next to the **switch_on** intent, type the utterance `turn the light on` and press **Enter** to submit this utterance to the list.
 
     ![Add an utterance to the training set by typing in "turn the light on" under Utterance.](media/conversational-language-understanding/add-utterance-on.png)
 
 1. The language service needs at least five different utterance examples for each intent to sufficiently train the language model. Add five more utterance examples for the **switch_on** intent:  
-    - ***switch on the fan***
-    - ***put the fan on***
-    - ***put the light on***
-    - ***switch on the light***
-    - ***turn the fan on***
+    - `switch on the fan`
+    - `put the fan on`
+    - `put the light on`
+    - `switch on the light`
+    - `turn the fan on`
 
-1. On the **Labeling entities for training** pane on the right-hand side of the screen, select **Labels**, then select **Add entity**. Type **device** (in lower-case), select **List** and select **Add entity**.
+1. On the **Labeling entities for training** pane on the right-hand side of the screen, select **Labels**, then select **Add entity**. Type `device` (in lower-case), select **List** and select **Add entity**.
 
-    ![Add an entity by selecting Tags on the Tagging entities for training panel, then select Add entity.](media/conversational-language-understanding/add-entity.png) 
+    ![Add an entity by selecting Tags on the Tagging entities for training panel, then select Add entity.](media/conversational-language-understanding/add-entity.png)
+
     ![Type in device under Entity name and select List, then select Add entity.](media/conversational-language-understanding/add-entity-device.png)
 
 1. In the ***turn the fan on*** utterance, highlight the word "fan". Then in the list that appears, in the *Search for an entity* box select **device**.
@@ -105,18 +103,18 @@ An *intent* is an action you want to perform - for example, you might want to sw
 
     ![Once you are done, select Save changes.](media/conversational-language-understanding/save-changes.png) 
 
-1. In the pane on the left, click **Schema definition** and verify that your **switch_on** intent is listed. Then click **Add** and add a new intent with the name **switch_off** (in lower-case).
+1. In the pane on the left, click **Schema definition** and verify that your **switch_on** intent is listed. Then click **Add** and add a new intent with the name `switch_off` (in lower-case).
 
     ![Return to the Build Schema screen and add a switch_off intent.](media/conversational-language-understanding/add-switch-off.png) 
 
-1. Click on the **switch_off** intent. It will take you to the **Data labeling** page. In the **Intent** drop down, select **switch_off**. Next to the **switch_off** intent, add the utterance ***turn the light off***.
+1. Click on the **switch_off** intent. It will take you to the **Data labeling** page. In the **Intent** drop down, select **switch_off**. Next to the **switch_off** intent, add the utterance `turn the light off`.
 
 1. Add five more utterance examples to the **switch_off** intent.
-    - ***switch off the fan***
-    - ***put the fan off***
-    - ***put the light off***
-    - ***turn off the light***
-    - ***switch the fan off***
+    - `switch off the fan`
+    - `put the fan off`
+    - `put the light off`
+    - `turn off the light`
+    - `switch the fan off`
 
 1. Label the words *light* or *fan* with the **device** entity. When you're finished, verify that you have the following utterances and make sure to select **Save changes**:  
 
@@ -133,13 +131,13 @@ An *intent* is an action you want to perform - for example, you might want to sw
 
 Now you're ready to use the intents and entities you have defined to train the conversational language model for your app.
 
-1. On the left hand side of Language Studio, select **Training jobs**, then select **Start a training job**. Use the following settings: 
+1. On the left hand side of Language Studio, select **Training jobs**, then select **Start a training job**. Use the following settings:
     - **Train a new model**: *Selected and choose a model name*
     - **Training mode**: Standard training (free)
     - **Data Splitting**: *select Automatically split the testing set from the training data, keep default percentages*
     - Click **Train** at the bottom of the page.
 
-1. Wait for training to complete. 
+1. Wait for training to complete.
 
 ### Deploy and test the model
 
@@ -152,33 +150,34 @@ To use your trained model in a client application, you must deploy it as an endp
     - **Assign trained model to your deployment name**: *Select the name of the trained model*.
     - Click **Deploy**
 
-    >**Tip**
-    >Write down your *deployment name*, you will use it later. 
+    > **Tip**: Note your *deployment name*, you will use it later. 
 
 1. When the model is deployed, click **Testing deployments** on the left-hand side of the page, and then select your deployed model under **Deployment name**.
 
 1. Enter the following text, and then select **Run the test**:
 
-    *switch the light on*
+    `switch the light on`
 
     ![Test your model by selecting your deployed model, then entering text and selecting Run the test.](media/conversational-language-understanding/test-model.png) 
 
     Review the result that is returned, noting that it includes the predicted intent (which should be **switch_on**) and the predicted entity (**device**) with confidence scores that indicates the probability the model calculated for the predicted intent and entity. The JSON tab shows the comparative confidence for each potential intent (the one with the highest confidence score is the predicted intent)
 
 1. Clear the text box and test the model with the following utterances under *Enter your own text, or upload a text document*:
-    - *turn off the fan*
-    - *put the light on*
-    - *put the fan off*
+    - `turn off the fan`
+    - `put the light on`
+    - `put the fan off`
 
-You have now successfully configured a conversational language project, and defined entities, intents, and utterances. You have seen how to train and deploy a model in the Language Studio. And you have tried it out with both utterances you defined, and some that you did not explicitly define but the model was able to determine. 
->**NOTE**
->Conversational language understanding provides the intelligence to interpret the intention of the input; it doesn't perform any actions such as turning on the light or the fan.
+You have now successfully configured a conversational language project, and defined entities, intents, and utterances. You have seen how to train and deploy a model in the Language Studio. And you have tried it out with both utterances you defined, and some that you did not explicitly define but the model was able to determine.
+
+> **NOTE**: Conversational language understanding provides the intelligence to interpret the intention of the input; it doesn't perform any actions such as turning on the light or the fan. A developer would need to build an application that uses the Conversational Language Understanding model to determine the user's intent, and then automate the appropriate action.
 
 ## Clean up
+
 If you don’t intend to do more exercises, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
-1.	Open the [Azure portal]( https://portal.azure.com) and select the resource group that contains the resource you created. 
-1.	Select the resource and select **Delete** and then **Yes** to confirm. The resource is then deleted.
+
+1.Open the [Azure portal]( https://portal.azure.com) and select the resource group that contains the resource you created. 
+1.Select the resource and select **Delete** and then **Yes** to confirm. The resource is then deleted.
 
 ## Learn more
 
-This app shows only some of the capabilities of the Conversational Language Understanding feature of the Language service. To learn more about what you can do with this service, see the [Conversational Language Understanding page](https://docs.microsoft.com/azure/cognitive-services/language-service/conversational-language-understanding/overview). 
+This app shows only some of the capabilities of the Conversational Language Understanding feature of the Language service. To learn more about what you can do with this service, see the [Conversational Language Understanding page](https://docs.microsoft.com/azure/cognitive-services/language-service/conversational-language-understanding/overview).

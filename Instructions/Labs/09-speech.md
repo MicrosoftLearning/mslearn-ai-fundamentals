@@ -30,7 +30,7 @@ In this exercise, you will create an AI Speech resource, unless you already have
 
 ## Explore speech to text in Speech Studio
 
-1. Select https://github.com/MicrosoftLearning/AI-900-AIFundamentals/raw/main/data/speech/speech.zip) and save the file to a folder on your computer. Unzip the files and make a note of the folder name.
+1. Download [speech.zip](https://aka.ms/mslearn-speech-files) and save it in a folder on your computer. Unzip the files and make a note of the folder name.
 1. On the Get started with Speech page, under *Speech* find *Real-time speech to text*. Select **Try out Real-time speech to text**.
 
     ![Getting started with Speech](media/recognize-synthesize-speech/try-out-speech-to-text.png)

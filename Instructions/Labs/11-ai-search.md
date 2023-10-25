@@ -93,7 +93,7 @@ You'll need to provision an **Azure AI services** resource that's in the same lo
     - **Public access level**: Container (anonymous read access for containers and blobs)
     - **Advanced**: *no changes*.
 
-1. In a new browser tab, download the zipped documents from https://aka.ms/km-documents, and then extract the files to the *reviews* folder.
+1. In a new browser tab, download the [zipped coffee reviews](https://aka.ms/mslearn-coffee-reviews) from `https://aka.ms/mslearn-coffee-reviews`, and  extract the files to the *reviews* folder.
 
 1. In the Azure portal, select your *coffee-reviews* container. In the container, select **Upload**.
 
@@ -109,7 +109,7 @@ You'll need to provision an **Azure AI services** resource that's in the same lo
 
 ## Index the documents
 
-Once you have the documents in storage, you can use Azure Cognitive Search to extract insights from the documents. The Azure portal provides an *Import data wizard*. With this wizard, you can automatically create an index and indexer for supported data sources. You'll use the wizard to create an index, and import your search documents from storage into the Azure Cognitive Search index.
+After you have the documents in storage, you can use Azure Cognitive Search to extract insights from the documents. The Azure portal provides an *Import data wizard*. With this wizard, you can automatically create an index and indexer for supported data sources. You'll use the wizard to create an index, and import your search documents from storage into the Azure Cognitive Search index.
 
 1. In the Azure portal, browse to your Azure Cognitive Search resource. On the **Overview** page, select **Import data**.
 

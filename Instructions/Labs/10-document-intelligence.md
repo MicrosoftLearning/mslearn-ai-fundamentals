@@ -42,10 +42,7 @@ Keep Document Intelligence Studio open.
 
 You are now ready to analyze a receipt for the fictitious Northwind Traders retail company.
 
-1. Select the **image** below, then **right click** and select **Save as Picture**. Navigate to a folder on your computer and then select **Save**. Make a note of the image and folder names.
-
-    ![This is an image of a receipt.](media/analyze-receipts/receipt.jpg)
-
+1. Download a [sample receipt](https://aka.ms/mslearn-receipt) from `https://aka.ms/mslearn-receipt` to your computer and save it in a folder.
 1. Select **Form Recognizer Studio** to return to the **Get Started with Document Intelligence Studio** page, and under Receipts select **Try it out**.
 1. In the Prebuilt drop-down list, make sure that **Receipts** is selected.
 1. Select **Browse for files** and navigate to the folder where you saved the picture. Select the picture of the receipt and then **Open**. The image appears on the left side of the screen.

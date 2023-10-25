@@ -60,7 +60,7 @@ Let's look at the image captioning functionality of Azure AI Vision. Image capti
 
 1. Under the **Try It Out** subheading, acknowledge the resource usage policy by reading and checking the box.  
 
-1. Download the **image-analysis** zipped folder from https://aka.ms/image-analysis. Then unzip the folder containing the images and locate the file named **store-camera-1.jpg**; which contains the following image:
+1. Download [image-analysis.zip](https://aka.ms/mslearn-images-for-analysis) from https://aka.ms/mslearn-images-for-analysis. Then unzip the files to a folder on your computer locate the file named **store-camera-1.jpg**; which contains the following image:
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/analyze-images-vision/store-camera-1.jpg)
 
@@ -119,6 +119,7 @@ In this task, you use the **Object detection** feature of Image Analysis. Object
 ## Clean up
 
 If you don’t intend to do more exercises, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
+
 1.	Open the [Azure portal]( https://portal.azure.com) and select the resource group that contains the resource you created. 
 1.	Select the resource and select **Delete** and then **Yes** to confirm. The resource is then deleted.
 

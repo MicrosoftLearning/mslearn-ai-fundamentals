@@ -38,7 +38,7 @@ You can use the Azure AI Face service by creating either a **Face** resource or 
 1. Select **Vision Studio** to return to the Get Started with Vision page, and then select **Face** to display the Detect Faces in an image panel. Select **Try it out**.
 1. Select the checkbox to acknowledge the message about resource usage.
 1. Select each of the sample images and observe the face detection data that is returned.
-1. Download the zipped **detect-faces** folder from https://aka.ms/detect-faces. Then unzip the files to a folder in your computer's file system.
+1. Download [detect-faces.zip](https://aka.ms/mslearn-detect-faces) from https://aka.ms/mslearn-detect-faces. Then unzip the files to a folder on your computer.
 1. Upload **store-camera-1.jpg** (shown below) and review the face detection details that are returned.
 
     ![An image of people in a store.](./media/create-face-solutions/store-camera-1.jpg)
