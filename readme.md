@@ -1,27 +1,17 @@
-# INF99X: Sample Course
+# Microsoft Azure AI Fundamentals Exercises
 
-**Are you an MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
+This repository contains instructions and assets for hands-on exercises in the Microsoft Official Courseware to support the [Microsoft Certified: Azure AI Fundamentals](https://learn.microsoft.com/credentials/certifications/azure-ai-fundamentals/) certification. The exercises are designed to complement the associated training modules on [Microsoft Learn](https://learn.microsoft.com/training), and a <u>subset</u> of these exercises comprises the hands-on labs in the official [AI-900: Microsoft Azure AI Fundamentals](https://learn.microsoft.com/en-us/training/courses/ai-900t00) instructor-led training course.
 
-## What are we doing?
+## Exercise design principles
 
-- To support this course, we will need to make frequent updates to the course content to keep it current with the Microsoft services used in the course. We are publishing the lab instructions and lab files on GitHub to allow for open contributions between the course authors and MCTs (Microsoft Certified Trainer) to keep the content current with product changes.
+The exercises in the repo are designed to support <u>both</u> self-paced learners on Microsoft Learn, and students in official instructor-led training deliveries. In most cases, self-paced learners must provide their own cloud subscription, while students attending official instructor-led courses are typically provided with subscriptions they can use to complete each individual exercise that is included in the course. Note that Microsoft does not support instructor-led deliveries of the exercises in this repo in environments other than those provided by Microsoft authorized lab hosters (ALHs).
 
-- We hope this brings a sense of collaboration to the labs like we have never had before - when a Microsoft service such as Azure or Microsoft 365 changes and you find it first during a live delivery, go ahead and make an enhancement right in the lab source. Help your fellow MCTs.
+The exercises are designed to stand alone, independently of one another. Most labs begin with instructions to create an Azure AI Services resource (either a multi-service resource or a specific Azure AI service resource).
 
-## How should I use this repository??
+The numbering of the exercises in this repo indicates a suggested logical sequence that reflects the flow of modules in the official learning paths and the instructor-led materials. The numbers do <u>not</u> indicate the corresponding slide deck or "lab" in an instructor-led course.
 
-- The instructor materials are your primary source for teaching the course content.
+Trainers can use *any* of the exercises as instructor-led demonstrations at their discretion. Note however that hosted lab profiles and cloud subscriptions may not be provided for exercises that are not included as student labs in courses; and the exercise-specific hosted subscriptions that *are* provided in lab profiles may have policies applied that prevent completion of other exercises. Trainers are advised to test available lab profiles and to use their own cloud subscriptions for demonstrations if necessary.
 
-- These files on GitHub are designed to be used in the course labs, which use the hosted lab environment.
+## Contributing to this repo
 
-- It is recommended that for every delivery, trainers check GitHub for any changes that may have been made to support the latest Microsoft cloud services and get the latest files for their delivery.
-
-## What about changes to the student handbook?
-
-- We will review the student handbook on a quarterly basis and update through the normal MOC (Microsoft Official Curriculum) release channels as needed.
-
-## How do I contribute?
-
-- Any MCT (Microsoft Certified Trainer) can submit a pull request to the code or content in the GitHub repro. Microsoft and the course author will then triage and include content and lab code changes as needed.
-
-- You can submit bugs, changes, improvement, and ideas. Find a new Azure or Microsoft 365 feature before we have? Submit a new demo!
+Microsoft Certified Trainers (MCTs) are welcome to submit issues and PRs related to content or assets in this repo, subject to the guidance in the [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/). Trainers should bear in mind that the repo is designed to support self-paced learners on Microsoft Learn as well as students in instructor-led courses, and that some of the exercises in the repo are not included in the hosted lab profiles for classroom delivery. Issues relating to configuration or performance of lab environments provided by ALHs are not supported here - contact your ALH if you experience problems related to the hosted lab environment.
