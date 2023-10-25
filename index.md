@@ -1,25 +1,17 @@
 ---
-title: Online Hosted Instructions
+title: Microsoft Learn - Azure AI Fundamentals Exercises
 permalink: index.html
 layout: home
 ---
 
-# Content Directory
+# Azure AI Fundamentals Exercises
 
-Hyperlinks to each of the lab exercises and demos are listed below.
+These hands-on exercises are designed to support training content on [Microsoft Learn](https://docs.microsoft.com/training/).
 
-## Labs
+To complete these exercises, you'll need a Microsoft Azure subscription. You can sign up for a free trial at [https://azure.microsoft.com](https://azure.microsoft.com).
 
-{% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
-| Module | Lab |
-| --- | --- | 
-{% for activity in labs  %}| {{ activity.lab.module }} | [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
-{% endfor %}
-
-## Demos
-
-{% assign demos = site.pages | where_exp:"page", "page.url contains '/Instructions/Demos'" %}
-| Module | Demo |
-| --- | --- | 
-{% for activity in demos  %}| {{ activity.demo.module }} | [{{ activity.demo.title }}]({{ site.github.url }}{{ activity.url }}) |
+{% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions'" %}
+| Exercises |
+| ------- | 
+{% for activity in labs  %}| [{{ activity.lab.title }}]({{ site.github.url }}{{ activity.url }}) |
 {% endfor %}
