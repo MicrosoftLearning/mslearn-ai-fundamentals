@@ -7,7 +7,7 @@ lab:
 
 In this exercise you will explore the capabilities of Azure AI Language by analyzing some example hotel reviews. You’ll use Language Studio to understand whether the reviews are mostly positive or negative.
 
-Natural Language Processing (NLP) is a branch of artificial intelligence (AI) that deals with written and spoken language. You can use NLP to build solutions that extract semantic meaning from text or speech, or that formulate meaningful responses in natural language.
+Natural Language Processing (NLP) is a branch of AI that deals with written and spoken language. You can use NLP to build solutions that extract semantic meaning from text or speech, or that formulate meaningful responses in natural language.
 
 For example, suppose the fictitious travel agent Margie’s Travel encourages customers to submit reviews for hotel stays. You could use the Language service to identify key phrases, determine which reviews are positive and which are negative, or analyze the review text for mentions of known entities such as locations or people.
 
@@ -21,8 +21,8 @@ If you haven't already done so, create an **Azure AI services** resource in your
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
 
-1. Click the **&#65291;Create a resource** button and search for *Language service* and create a new **Language service** resource with the following settings:
-    - **Additional features**: None
+1. Select **&#65291;Create a resource** and search for *Language service* then create a new **Language service** resource with the following settings:
+    - **Additional features**: *None*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Select or create a resource group with a unique name*.
     - **Region**: *Choose any available region*.
@@ -37,7 +37,7 @@ If you haven't already done so, create an **Azure AI services** resource in your
 1. In another browser tab, open [Language Studio](https://language.cognitive.azure.com/). If you are prompted to select an Azure resource. Select the Language service resource you just created.
 
 1. Select the **Settings** cog icon at the top-right, then **Resources**.
-1. Select your Language service resource, and enaure **Managed identity** is enabled for it.
+1. Select your Language service resource, and ensure Managed identity is **Enabled**.
 1. Select **Language Studio** to return to the *Welcome page*.
 
 ## Analyze reviews in Language Studio
