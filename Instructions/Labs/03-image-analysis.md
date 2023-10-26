@@ -60,7 +60,7 @@ Let's look at the image captioning functionality of Azure AI Vision. Image capti
 
 1. Under the **Try It Out** subheading, acknowledge the resource usage policy by reading and checking the box.  
 
-1. Download [image-analysis.zip](https://aka.ms/mslearn-images-for-analysis) from https://aka.ms/mslearn-images-for-analysis. Then unzip the files to a folder on your computer locate the file named **store-camera-1.jpg**; which contains the following image:
+1. Download **image-analysis.zip** from https://aka.ms/mslearn-images-for-analysis. Then unzip the files to a folder on your computer locate the file named **store-camera-1.jpg**; which contains the following image:
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/analyze-images-vision/store-camera-1.jpg)
 
