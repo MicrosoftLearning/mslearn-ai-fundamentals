@@ -5,7 +5,7 @@ lab:
 
 # Detect faces in Vision Studio
 
-Vision solutions often require an artificial intelligence (AI) solution to be able to detect human faces. For example, suppose the retail company Northwind Traders wants to locate where customers are standing in a store to best assist them. One way to accomplish this is to determine if there are any faces in the images, and if so, to return the bounding box coordinates that show their location.
+Vision solutions often require AI to be able to detect human faces. Suppose the fictitious retail company Northwind Traders wants to locate where customers are standing in a store to best assist them. One way to accomplish this is to determine if there are any faces in the images, and if so, to return the bounding box coordinates that show their location.
 
 To test the face detection capabilities of the Azure AI Face service, you will use [Azure Vision Studio](https://portal.vision.cognitive.azure.com/). This is a UI-based platform that lets you explore Azure AI Vision features without needing to write any code.
 
@@ -33,7 +33,7 @@ You can use the Azure AI Face service by creating either a **Face** resource or 
 
 1. Select the **Settings** cog icon at the top right of the page, and then, on the **Select a resource to work with** page, select the resource you just created and set it as the default resource.
 
-    > **Note** : if your resource is not listed, you may need to **Refresh** the page.
+    > **Note** : If your resource is not listed, you may need to **Refresh** the page.
 
 1. Select **Vision Studio** to return to the Get Started with Vision page, and then select **Face** to display the Detect Faces in an image panel. Select **Try it out**.
 1. Select the checkbox to acknowledge the message about resource usage.
