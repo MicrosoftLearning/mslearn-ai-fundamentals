@@ -30,7 +30,11 @@ If you haven't already done so, create an **Azure AI services** resource in your
 ## Extract text from images in the Vision Studio
 
 1. In another browser tab, open [**Vision Studio**](https://portal.vision.cognitive.azure.com?azure-portal=true), signing in with your Microsoft account.
-1. Select the **Settings** cog icon at the top right, and then, on the **Select a resource to work with** page, select the resource you just created and make it the default resource.
+1. Select the **Settings** cog icon at the top right.
+
+    ![Settings cog.](media/read-text-computer-vision/settings-toggle.png)
+   
+1. On the **Select a resource to work with** page, select the resource you just created and make it the default resource.
 
     > **Note**: If your resource is not showing you may need to **Refresh** the page.
     
