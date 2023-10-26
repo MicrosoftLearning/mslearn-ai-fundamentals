@@ -9,7 +9,7 @@ Increasingly, we expect computers to be able to use AI to understand natural lan
 In this exercise, you will use Language Studio to create and test a project that sends instructions to devices such as lights or fans. You’ll use the capabilities of the Conversational Language Understanding service to configure your project. 
 
 > **Note**
-> To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
+> To complete this exercise, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
 
 ## Create a *Language service* resource
 
@@ -19,7 +19,7 @@ If you haven't already done so, create a **Language service** resource in your A
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
 
-1. Click the **&#65291;Create a resource** button, search for *Language service*, and create a **Language service** resource with the following settings:
+1. Select **&#65291;Create a resource**, search for *Language service*, and create a **Language service** resource with the following settings:
     - Select additional features: *Keep the default features and click Continue to create your resource*  
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select or create a resource group with a unique name*.
@@ -37,19 +37,19 @@ To implement natural language understanding with Conversational Language Underst
 1. In a new browser tab, open the Language Studio portal at [https://language.azure.com](https://language.azure.com?azure-portal=true) and sign in using the Microsoft account associated with your Azure subscription.
 
 1. If prompted to choose a Language resource, select the following settings:
-    - **Azure directory**: The Azure directory containing your subscription.
-    - **Azure subscription**: Your Azure subscription.
-    - **Language resource**: The Language resource you created previously.
+    - **Azure directory**: *The Azure directory containing your subscription*.
+    - **Azure subscription**: *Your Azure subscription*.
+    - **Language resource**: *The Language resource you created previously.*
 
    If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
-    1. On the bar at the top if the page, click the **Settings (&#9881;)** button.
+    1. On the bar at the top if the page, select **Settings (&#9881;)**.
     2. On the **Settings** page, view the **Resources** tab.
-    3. Select the language resource you just created, and click **Switch resource**.
-    4. At the top of the page, click **Language Studio** to return to the Language Studio home page.
+    3. Select the language resource you just created, and select **Switch resource**.
+    4. At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
 1. At the top of the portal, in the **Create new** menu, select **Conversational language understanding**.
 
-1. In the **Create a project** dialog box, on the **Enter basic information** page, enter the following details and click **Next**:
+1. In the **Create a project** dialog box, on the **Enter basic information** page, enter the following details and select **Next**:
     - **Name**: *Create a unique name*
     - **Utterances primary language**: *English*
     - **Enable multiple languages in project**: *Do not select*
@@ -57,15 +57,15 @@ To implement natural language understanding with Conversational Language Underst
 
     > **Tip**: Make a note of your *project name*, you will use it later.
 
-1. On the **Review and finish** page, click **Create**.
+1. On the **Review and finish** page, select **Create**.
 
 ### Create intents, utterances, and entities
 
 An *intent* is an action you want to perform - for example, you might want to switch on a light, or turn off a fan. In this case, you'll define two intents: one to switch on a device, and another to switch off a device. For each intent, you'll specify sample *utterances* that indicate the kind of language used to indicate the intent.
 
-1. In the **Schema definition** pane, ensure that **Intents** is selected Then click **Add**, and add an intent with the name `switch_on` (in lower-case) and click **Add intent**.
+1. In the **Schema definition** pane, ensure that **Intents** is selected then select **Add**, and add an intent with the name `switch_on` (in lower-case) and select **Add intent**.
 
-    ![Click on add under Intents on the Build Schema pane.](media/conversational-language-understanding/build-schema.png)
+    ![Select add under Intents on the Build Schema pane.](media/conversational-language-understanding/build-schema.png)
 
     ![Add the switch_on intent then select Add intent.](media/conversational-language-understanding/add-intent.png)
 
@@ -103,11 +103,11 @@ An *intent* is an action you want to perform - for example, you might want to sw
 
     ![Once you are done, select Save changes.](media/conversational-language-understanding/save-changes.png) 
 
-1. In the pane on the left, click **Schema definition** and verify that your **switch_on** intent is listed. Then click **Add** and add a new intent with the name `switch_off` (in lower-case).
+1. In the pane on the left, select **Schema definition** and verify that your **switch_on** intent is listed. Then select **Add** and add a new intent with the name `switch_off` (in lower-case).
 
     ![Return to the Build Schema screen and add a switch_off intent.](media/conversational-language-understanding/add-switch-off.png) 
 
-1. Click on the **switch_off** intent. It will take you to the **Data labeling** page. In the **Intent** drop down, select **switch_off**. Next to the **switch_off** intent, add the utterance `turn the light off`.
+1. Select the **switch_off** intent. It will take you to the **Data labeling** page. In the **Intent** drop down, select **switch_off**. Next to the **switch_off** intent, add the utterance `turn the light off`.
 
 1. Add five more utterance examples to the **switch_off** intent.
     - `switch off the fan`
@@ -135,7 +135,7 @@ Now you're ready to use the intents and entities you have defined to train the c
     - **Train a new model**: *Selected and choose a model name*
     - **Training mode**: Standard training (free)
     - **Data Splitting**: *select Automatically split the testing set from the training data, keep default percentages*
-    - Click **Train** at the bottom of the page.
+    - Select **Train** at the bottom of the page.
 
 1. Wait for training to complete.
 
@@ -143,16 +143,16 @@ Now you're ready to use the intents and entities you have defined to train the c
 
 To use your trained model in a client application, you must deploy it as an endpoint to which the client applications can send new utterances; from which intents and entities will be predicted.
 
-1. On the left-hand side of Language Studio, click **Deploying a model**.
+1. On the left-hand side of Language Studio, select **Deploying a model**.
 
-1. Select your model name and click **Add deployment**. Use these settings:
+1. Select your model name and then **Add deployment**. Use these settings:
     - **Create or select an existing deployment name**: *Select create a new deployment name. Add a unique name*.
     - **Assign trained model to your deployment name**: *Select the name of the trained model*.
-    - Click **Deploy**
+    - Select **Deploy**
 
     > **Tip**: Note your *deployment name*, you will use it later. 
 
-1. When the model is deployed, click **Testing deployments** on the left-hand side of the page, and then select your deployed model under **Deployment name**.
+1. When the model is deployed, select **Testing deployments** on the left-hand side of the page, and then select your deployed model under **Deployment name**.
 
 1. Enter the following text, and then select **Run the test**:
 
