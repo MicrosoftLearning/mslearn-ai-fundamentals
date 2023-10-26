@@ -15,9 +15,9 @@ Azure AI Language Service includes text analysis and NLP capabilities. These inc
 
 ## Create an *Azure AI services* resource
 
-You can use the Azure AI Vision service by creating either a **Computer Vision** resource or an **Azure AI services** resource.
+You can use the AI Language service by creating either a **Language service** resource or an **Azure AI services** resource.
 
-If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
+If you haven't already done so, create a **Language service** resource in your Azure subscription.
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
 
@@ -27,23 +27,29 @@ If you haven't already done so, create an **Azure AI services** resource in your
     - **Resource group**: *Select or create a resource group with a unique name*.
     - **Region**: *Choose any available region*.
     - **Name**: *Enter a unique name*.
-    - **Pricing tier**: *Free F0* is available (otherwise, *Standard S0.*)
+    - **Pricing tier**: *Free F0* if available (otherwise, *Standard S0.*)
     - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
 
 1. Review and create the resource, and wait for deployment to complete.
 
 ## Configure your resource in Azure AI Language Studio
 
-1. In another browser tab, open [Language Studio](https://language.cognitive.azure.com/). If you are prompted to select an Azure resource. Select the Language service resource you just created.
+1. In another browser tab, open [Language Studio](https://language.cognitive.azure.com/). When prompted, select the Language service resource you just created and then **Done**.
 
-1. Select the **Settings** cog icon at the top-right, then **Resources**.
+1. If you are not prompted, select the **Settings** cog icon at the top-right, then **Resources**.
+
+    ![Settings cog.](media/analyze-text-language-service/settings-toggle.png)
+
 1. Select your Language service resource, and ensure Managed identity is **Enabled**.
+
+    ![Enable language resource.](media/analyze-text-language-service/language-resource-enabled.png)
+
 1. Select **Language Studio** to return to the *Welcome page*.
 
 ## Analyze reviews in Language Studio
 
 1. Select **Classify text**, and under **Analyze sentiment and mine opinions**, select **Try it out**.
-1. Under *Select text language*, select **English**. 
+1. Under *Select text language*, select **English**.
 1. Under *Select your Azure resource*, select your Language resource.
 1. Under *Enter your own text, upload a file, or use one of our sample texts*, copy and paste the following review:
 
