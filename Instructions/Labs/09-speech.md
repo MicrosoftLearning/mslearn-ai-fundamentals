@@ -53,4 +53,4 @@ If you don’t intend to do more exercises, delete any resources that you no lon
 
 ## Learn more
 
-This exercise demonstrated only some of the capabilities of the Speech service. To learn more about what you can do with this service, see the [Speech page]([https://azure.microsoft.com/services/cognitive-services/speech-services/]).
+This exercise demonstrated only some of the capabilities of the Speech service. To learn more about what you can do with this service, see the [Speech page](https://azure.microsoft.com/services/cognitive-services/speech-services).
