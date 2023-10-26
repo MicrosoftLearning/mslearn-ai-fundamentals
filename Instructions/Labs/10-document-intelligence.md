@@ -14,7 +14,7 @@ The Document Intelligence service can extract information from forms such as rec
 
 Azure AI Document Intelligence uses prebuilt machine learning models trained to extract text from images of invoices, receipts, and more. While other computer vision models can capture text, Document Intelligence also captures the structure of the text, such as key/value pairs and information in tables. This way, instead of having to manually type in entries from a form into a database, you can automatically capture the relationships between text from the original file.
 
-In this exercise you’ll use Document Intelligence Studio to try out the capabilities of the AI Document Intelligence service, without writing any code. 
+In this exercise you’ll use Document Intelligence Studio to try out the capabilities of the AI Document Intelligence service, without writing any code.
 
 > **NOTE**
 > Azure AI Document Intelligence is the new name for Azure Form Recognizer. You may still see Azure Form Recognizer in the Azure portal or Document Intelligence Studio.
@@ -33,8 +33,8 @@ You can use the AI Document Intelligence service by using either an AI Document 
     - **Pricing tier**: *Free FO (if available, otherwise select Standard SO)*.
 1. Select **Continue** and then **Finish**. Wait for the resource to be deployed.
 
->**Note**
-> If your resource is not yet displayed, you may need to **Refresh** the page.
+    >**Note**
+    > If your resource is not yet displayed, you may need to **Refresh** the page.
 
 Keep Document Intelligence Studio open.
 
@@ -46,6 +46,9 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
 1. Select **Form Recognizer Studio** to return to the **Get Started with Document Intelligence Studio** page, and under Receipts select **Try it out**.
 1. In the Prebuilt drop-down list, make sure that **Receipts** is selected.
 1. Select **Browse for files** and navigate to the folder where you saved the picture. Select the picture of the receipt and then **Open**. The image appears on the left side of the screen.
+
+    ![Contoso receipt.](media/document-intelligence/contoso-receipt-small.png)
+
 1. On the right, select **Run analysis**.
 1. When the analysis has run, the results are returned. Notice that the service has recognized specific data fields such as the merchant’s name, the address, phone number, and the transaction date and time, as well as the line items, subtotal, tax, and total amounts. Next to each field is a percentage probability that the field is correct.
 
