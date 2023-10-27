@@ -51,7 +51,7 @@ You can use the Azure AI Face service by creating either a **Face** resource or 
 
     ![An image of people in a store with a plant obscuring a face.](./media/create-face-solutions/store-camera-3.jpg)
 
-In this exercise you have explored how Azure AI services can detect faces in images. You have seen that AI services can detect faces despite being blurred or partially obscured. If you have time, feel free to try the sample images or some of your own images.
+In this exercise you have explored how Azure AI services can detect faces in images. You have seen that AI services can detect faces despite being partially obscured. If you have time, feel free to try the sample images or some of your own images.
 
 ## Clean up
 
