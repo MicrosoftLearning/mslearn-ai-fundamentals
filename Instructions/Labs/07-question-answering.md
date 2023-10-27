@@ -75,12 +75,13 @@ The Language service's custom question answering feature enables you to quickly 
     - **Description**: `A simple knowledge base`
     - **Source language**: English
     - **Default answer when no answer is returned**: `No answer found`
-1. On the **Review and finish** page, click **Create project**.
-1. You will be taken to the **Manage sources** page. Click **&#65291;Add source** and select **URLs**.
-1. In the **Add URLs** box, click **+ Add url**. Type in the following and select **Add all**:
+1. On the **Review and finish** page, select **Create project**.
+1. You will be taken to the **Manage sources** page. Select **&#65291;Add source** and select **URLs**.
+1. In the **Add URLs** box, select **+ Add url**. Type in the following and select **Add all**:
     - **URL name**: `MargiesKB`
     - **URL**: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/main/data/natural-language/margies_faq.docx`
-    - **Classify file structure**: *Auto-detect* 
+    - **Classify file structure**: *Auto-detect*
+1. Select **Add all.**  
 
  ![Add URL](media/create-a-bot/add-url.png)
 
@@ -88,16 +89,16 @@ The Language service's custom question answering feature enables you to quickly 
 
 Your knowledge base is based on the details in the FAQ document and some pre-defined responses. You can add custom question-and-answer pairs to supplement these.
 
-1. Click **Edit knowledge base** on the left hand panel. Then click **+ Add question pair**.
-1. In the **Questions** box, type `Hello`, then click **Done**.
-1. Expand **Alternate questions** and select **+ Add alternate question**. Then enter `Hi`as an alternative phrasing for "Hello".
-1. At the top of the **Question answer pairs** pane, click **Save** to save your knowledge base.
+1. Expand the left panel and select **Edit knowledge base**. Then select **+** to add a new question pair.
+1. In the **Add a new question answer pair** dialog box, in the **Question** type `Hello`, and in the **Answer** type `Hi`, then select **Done**.
+1. Expand **Alternate questions** and select **+ Add alternate question**. Then enter `Hiya`as an alternative phrasing for "Hello".
+1. At the top of the **Question answer pairs** pane, select **Save** to save your knowledge base.
 
 ## Train and test the knowledge base
 
 Now that you have a knowledge base, you can test it.
 
-1. At the top of the **Question answer pairs** pane, click **Test** to test your knowledge base.
+1. At the top of the **Question answer pairs** pane, select **Test** to test your knowledge base.
 1. In the test pane, at the bottom enter the message `Hi`. The response *Hi* should be returned.
 1. In the test pane, at the bottom enter the message `I want to book a flight`. An appropriate response from the FAQ should be returned.
 
@@ -111,7 +112,7 @@ Now that you have a knowledge base, you can test it.
 
 The knowledge base provides a back-end service that client applications can use to answer questions through some sort of user interface. Commonly, these client applications are bots. To make the knowledge base available to a bot, you must publish it as a service that can be accessed over HTTP. You can then use the Azure Bot Service to create and host a bot that uses the knowledge base to answer user questions.
 
-1. At the left of the Language Studio page, select **Deploy knowledge base**.
+1. In the left panel, select **Deploy knowledge base**.
 1. At the top of the page, select **Deploy**. A dialogue box will ask if you want to deploy the project. Select **Deploy**.
 
  ![Deploy knowledge base.](media/create-a-bot/deploy-knowledge-base.png)
