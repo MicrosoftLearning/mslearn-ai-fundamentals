@@ -34,7 +34,8 @@ If you haven't already done so, create a **Language service** resource in your A
 
 ## Configure your resource in Azure AI Language Studio
 
-1. In another browser tab, open [Language Studio](https://language.cognitive.azure.com/). When prompted, select the Language service resource you just created and then **Done**.
+1. In another browser tab, open [Language Studio](https://language.cognitive.azure.com/) and sign in.
+1. When prompted, select the Language service resource you just created and then **Done**.
 
 1. If you are not prompted, select the **Settings** cog icon at the top-right, then **Resources**.
 
@@ -48,7 +49,7 @@ If you haven't already done so, create a **Language service** resource in your A
 
 ## Analyze reviews in Language Studio
 
-1. Select **Classify text**, and under **Analyze sentiment and mine opinions**, select **Try it out**.
+1. Select the **Classify text** tab, and under **Analyze sentiment and mine opinions**, select **Try it out**.
 1. Under *Select text language*, select **English**.
 1. Under *Select your Azure resource*, select your Language resource.
 1. Under *Enter your own text, upload a file, or use one of our sample texts*, copy and paste the following review:
