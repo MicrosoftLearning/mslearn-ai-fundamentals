@@ -42,6 +42,9 @@ In this exercise, you will create an AI Speech resource, unless you already have
 1. The Speech service transcribes and displays the text in real time. If you have audio on your computer, you can listen to the recording as the text is being transcribed.
 1. Review the output, which should have successfully recognized and transcribed the audio into text.
 
+    > **Note**
+    > If you get an error message, wait a few minutes before trying again. It takes a little time for the Speech resource to be available for first use.
+
 In this exercise you created an AI Speech resource in Speech Studio. You then used the Real-time speech to text service to transcribe an audio recording. You were able to see the text transcription being generated as the audio file was played.
 
 ## Clean up
