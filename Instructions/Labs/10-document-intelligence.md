@@ -47,7 +47,7 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
 1. In the Prebuilt drop-down list, make sure that **Receipts** is selected.
 1. Select **Browse for files** and navigate to the folder where you saved the picture. Select the picture of the receipt and then **Open**. The image appears on the left side of the screen.
 
-    ![Contoso receipt.](media/document-intelligence/northwind-receipt.png)
+    ![Northwind receipt.](media/document-intelligence/northwind-receipt.jpg)
 
 1. On the right, select **Run analysis**.
 1. When the analysis has run, the results are returned. Notice that the service has recognized specific data fields such as the merchant’s name, the address, phone number, and the transaction date and time, as well as the line items, subtotal, tax, and total amounts. Next to each field is a percentage probability that the field is correct.
