@@ -66,6 +66,8 @@ The Language service's custom question answering feature enables you to quickly 
     ![Custom question answering](media/create-a-bot/create-custom-question-answering.png)
 
 1. On the **Choose language setting for resource *your resource*** page, select **I want to select the language when I create a project in this resource** and click **Next**.
+  ![I want to select the language](media/create-a-bot/create-project.png)
+
 1. On the **Enter basic information** page, enter the following details and click **Next**:
     - **Language resource**: *choose your language resource*.  
     - **Azure search resource**: *choose your Azure search resource*.
