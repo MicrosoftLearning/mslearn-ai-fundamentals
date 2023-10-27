@@ -23,7 +23,7 @@ In this exercise you’ll use Document Intelligence Studio to try out the capabi
 
 You can use the AI Document Intelligence service by using either an AI Document Intelligence resource or an Azure AI services resource. In this exercise, you will create an Azure AI Document Intelligence resource, if you don’t already have one.
 
-1. In another browser tab, open the **Document Intelligence Studio**, signing in with your Microsoft account.
+1. In another browser tab, open [Document Intelligence Studio](https://formrecognizer.appliedai.azure.com/studio), signing in with your Microsoft account.
 1. Select **Settings** and select the **Resource** tab. Select **Create a new resource**.
 1. On the Create resource dialog box, enter the following:
     - **Subscription**: *Your Azure subscription*.
