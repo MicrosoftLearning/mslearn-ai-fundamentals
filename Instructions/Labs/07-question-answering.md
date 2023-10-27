@@ -21,23 +21,28 @@ The Language service's custom question answering feature enables you to quickly 
 
 1. Open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
 
-1. Select **&#65291;Create a resource**, search for *Language service*, and create a **Language service** resource with the following settings, and then click **Continue to create your resource**:
-    **Select Additional Features**
-    - **Default features**: *Keep the default features*.
-    - **Custom features**: *Select custom question answering*.
-
+1. Select **&#65291;Create a resource**, search for *Language service*, and create a **Language service** resource with the following settings: 
+    - **Select Additional Features**:
+        - **Default features**: *Keep the default features*.
+        - **Custom features**: *Select custom question answering*.
+     - Select **Continue to create your resource**
     ![Creating a Language Service resource with custom question answering enabled.](media/create-a-bot/create-language-service-resource.png)
 
 1. On the **Create Language** page, specify the following settings:
-    - **Subscription**: *Your Azure subscription*.
-    - **Resource group**: *Select an existing resource group or create a new one*.
-    - **Name**: *A unique name for your Language resource*.
-    - **Pricing tier**: S (1K Calls per minute)
-    - **Azure search region**: *Any available location*.
-    - **Azure search pricing tier**: Free F (3 Indexes) - (*If this tier is not available, select Basic*)
-    - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice**: *Selected*.
+    - **Project Details**
+        - **Subscription**: *Your Azure subscription*.
+        - **Resource group**: *Select an existing resource group or create a new one*.
+    - **Instance Details**
+        - **Region**: *Select a region*      
+        - **Name**: *A unique name for your Language resource*.
+        - **Pricing tier**: S (1K Calls per minute)
+    - **Custom question answering**
+        - **Azure search region**: *Any available location*.
+        - **Azure search pricing tier**: Free F (3 Indexes) - (*If this tier is not available, select Basic*)
+    - **Responsible AI Notice**
+        - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice**: *Selected*.
 
-1. Click **Review and Create** and then click **Create**. Wait for the deployment of the Language service that will support your custom question answering knowledge base.
+1. Select **Review and Create** and then select **Create**. Wait for the deployment of the Language service that will support your custom question answering knowledge base.
 
     > **Note**
     > If you have already provisioned a free-tier **Azure Cognitive Search** resource, your quota may not allow you to create another one. In which case, select a tier other than **Free F**.
@@ -53,12 +58,14 @@ The Language service's custom question answering feature enables you to quickly 
     If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
     1. On the bar at the top if the page, select **Settings (&#9881;)**.      
     1. On the **Settings** page, view the **Resources** tab.
-    1. Select the language resource you just created, and click **Switch resource**.
-    1. At the top of the page, click **Language Studio** to return to the Language Studio home page.
+    1. Select the language resource you just created, and select **Switch resource**.
+    1. At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
 1. At the top of the Language Studio portal, in the **Create new** menu, select **Custom question answering**.
 
     ![Custom question answering](media/create-a-bot/create-custom-question-answering.png)
+
+   **Select Azure Search resource**
 
 1. On the **Choose language setting for resource *your resource*** page, select **I want to select the language when I create a project in this resource** and click **Next**.
 1. On the **Enter basic information** page, enter the following details and click **Next**:
