@@ -12,10 +12,10 @@ The subset of AI-900 labs used in this course are mapped per module as follows:
 
 | AI-900 Trainer Lab # | Topic | Instructions |
 | --- | --- | --- |
-| AI-900 AI Overview | Explore Azure AI Services | [01-Lab-Instructions](https://go.microsoft.com/fwlink/?linkid=2250253) |
-| AI-900 Computer Vision | Analyze Images in Vision Studio | [02-Lab-Instructions](https://go.microsoft.com/fwlink/?linkid=2250145) |
-| AI-900 Natural Language Processing | Analyze Text with the Language Studio | [03-Lab-Instructions](https://go.microsoft.com/fwlink/?linkid=2250314) |
-| AI-900 Document Intelligence | Extract form data in Document Intelligence Studio | [04-Lab-Instructions](https://go.microsoft.com/fwlink/?linkid=2250315) |
-| AI-900 Generative AI | Explore Generative AI with Bing Copilot | [05-Lab-Instructions](https://go.microsoft.com/fwlink/?linkid=2249955) |
+| AI-900 AI Overview | Explore Azure AI Services | [Lab-Instructions](https://go.microsoft.com/fwlink/?linkid=2250253) |
+| AI-900 Computer Vision | Analyze Images in Vision Studio | [Lab-Instructions](https://go.microsoft.com/fwlink/?linkid=2250145) |
+| AI-900 Natural Language Processing | Analyze Text with the Language Studio | [Lab-Instructions](https://go.microsoft.com/fwlink/?linkid=2250314) |
+| AI-900 Document Intelligence | Extract form data in Document Intelligence Studio | [Lab-Instructions](https://go.microsoft.com/fwlink/?linkid=2250315) |
+| AI-900 Generative AI | Explore Generative AI with Bing Copilot | [Lab-Instructions](https://go.microsoft.com/fwlink/?linkid=2249955) |
 
 
