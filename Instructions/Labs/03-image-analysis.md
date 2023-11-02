@@ -92,7 +92,9 @@ The next feature you will try is the **Extract Tags** functionality. Extract tag
 
 4. Upload the **store-camera-2.jpg** file.
 
-5. Review the list of tags extracted from the image and the confidence score for each in the detected attributes panel. Recall that the confidence score is the likelihood that the text for the detected attribute describes what is actually in the image. Notice in the list of tags that it includes not only objects, but actions, such as *shopping*, *selling*, and *standing*.
+5. Review the list of tags extracted from the image and the confidence score for each in the detected attributes panel. Here the confidence score is the likelihood that the text for the detected attribute describes what is actually in the image. Notice in the list of tags that it includes not only objects, but actions, such as *shopping*, *selling*, and *standing*.
+
+    ![A screenshot of the detect attributes panel in the Vision Studio with text and confidence scores displayed next to the original image.](./media/analyze-images-vision/detect-attributes.png)
 
 ## Object detection
 
