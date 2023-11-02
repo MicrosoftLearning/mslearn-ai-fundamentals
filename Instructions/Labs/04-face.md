@@ -13,14 +13,14 @@ To use the Face detect capabilities you will create an Azure AI services multi-s
 
 ## Create an *Azure AI services* resource
 
-You can use the Azure AI Face service by creating either a **Face** resource or an **Azure AI services** resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
+You can use the Azure AI Face service with an **Azure AI services** resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
 
 1. Select **&#65291;Create a resource** and search for Azure AI services. Then create an Azure AI services resource with the following settings:
     - Subscription: *Your Azure subscription*.
     - Resource group: *Select or create a resource group*.
-    - Region: *Choose any available region*.
+    - Region: East US.
     - Name: *Enter a unique name.*
     - Pricing tier: *FO (if available, otherwise select SO.)*
     - Responsible AI Notice: *Select to confirm*.
