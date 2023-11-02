@@ -86,7 +86,7 @@ The next feature you will try is the **Extract Tags** functionality. Extract tag
 
 2. In the **Choose the model you want to try out**, leave **Prebuilt product vs. gap model** selected. In the **Choose your language**, select **English** or a language of your preference.
 
-3. Open the folder containing the images you downloaded and unzipped and locate the file named **store-image-2.jpg**, which looks like this:
+3. Open the folder containing the images you downloaded and locate the file named **store-image-2.jpg**, which looks like this:
 
     ![An image of person with a shopping basket in a supermarket](./media/analyze-images-vision/store-camera-2.jpg)
 
@@ -102,9 +102,9 @@ In this task, you use the **Object detection** feature of Image Analysis. Object
 
 1. Return to the home page of Vision Studio, then select the **Detect common objects in images** tile under the **Image analysis** tab.
 
-1. In the **Choose the model you want to try out**, leave **Pretrained Vision model** selected.
+1. In the **Choose the model you want to try out**, leave **Prebuilt product vs. gap model** selected.
 
-1. Open the folder containing the images you downloaded and unzipped and locate the file named **store-camera-3.jpg**, which looks like this:
+1. Open the folder containing the images you downloaded and locate the file named **store-camera-3.jpg**, which looks like this:
 
     ![An image of person with a shopping cart](./media/analyze-images-vision/store-camera-3.jpg)
 
