@@ -57,19 +57,25 @@ Next, connect the Azure AI service resource you provisioned above to Vision Stud
 
 1. Now let's try with some of our own images. Select [**https://aka.ms/mslearn-detect-faces**](https://aka.ms/mslearn-detect-faces) to download **detect-faces.zip**. Then open the folder on your computer.
 
-1. Upload **store-camera-1.jpg** (shown below) and review the face detection details that are returned.
+1. Locate the file named **store-camera-1.jpg**; which contains the following image:
 
     ![An image of people in a store.](./media/create-face-solutions/store-camera-1.jpg)
 
-1. Upload **store-camera-2.jpg** and review the face detection details that are returned.
+1. Upload **store-camera-1.jpg** and review the face detection details that are returned.
+
+1. Locate the file named **store-camera-2.jpg**; which contains the following image:
 
     ![An image of more people in a store.](./media/create-face-solutions/store-camera-2.jpg)
 
-1. Upload **store-camera-3.jpg** and review the face detection details that are returned.
+1. Upload **store-camera-2.jpg** and review the face detection details that are returned.
+
+1. Locate the file named **store-camera-3.jpg**; which contains the following image:
 
     ![An image of people in a store with a plant obscuring a face.](./media/create-face-solutions/store-camera-3.jpg)
 
-In this exercise you have explored how Azure AI services can detect faces in images. You have seen that AI services can detect faces despite being partially obscured. If you have time, feel free to try the sample images or some of your own images.
+1. Upload **store-camera-2.jpg** and review the face detection details that are returned. Notice how Azure AI Face can detect faces that are partially obscured. 
+
+In this exercise you have explored how Azure AI services can detect faces in images. If you have time, feel free to try the sample images or some of your own images.
 
 ## Clean up
 
