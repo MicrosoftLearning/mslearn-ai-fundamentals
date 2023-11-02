@@ -129,4 +129,4 @@ If you don’t intend to do more exercises, delete any resources that you no lon
 
 ## Learn more
 
-To learn more about what you can do with this service, see the [Computer Vision page](https://azure.microsoft.com/products/ai-services?activetab=pivot:visiontab).
+To learn more about what you can do with this service, see the [Azure AI Vision page](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview).
