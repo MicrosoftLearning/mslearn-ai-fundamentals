@@ -27,7 +27,9 @@ You can use the Azure AI Face service with an **Azure AI services** multi-servic
 
 ## Connect your Azure AI service resource to Vision Studio
 
-1. In another browser tab, navigate to [**Vision Studio**](https://portal.vision.cognitive.azure.com?azure-portal=true). 
+Next, connect the Azure AI service resource you provisioned above to Vision Studio.
+
+1. In another browser tab, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
 1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource.
 
@@ -35,21 +37,25 @@ You can use the Azure AI Face service with an **Azure AI services** multi-servic
 
     ![The View all resource link is highlighted under Getting started with Vision in Vision Studio.](./media/analyze-images-vision/vision-resources.png)
 
-4. On the **Select a resource to work with** page, hover your mouse cursor over the resource you created above in the list and then check the box to the left of the resource name, then select **Select as default resource**.
+1. On the **Select a resource to work with** page, hover your mouse cursor over the resource you created above in the list and then check the box to the left of the resource name, then select **Select as default resource**.
 
     > **Note** : If your resource is not listed, you may need to **Refresh** the page.
 
     ![The Select a resource to work with dialog is displayed with the cog-ms-learn-vision-SUFFIX Cognitive Services resource highlighted and checked. The Select as default resource button is highlighted.](./media/analyze-images-vision/default-resource.png)
 
+1. Close the settings page by selecting the "x" at the top right of the screen.
+
 ## Detect faces in the Vision Studio 
 
-1. Select **Vision Studio** to return to the Get Started with Vision page, and then select **Face** to display the Detect Faces in an image panel. Select **Try it out**.
+1. In a web browser, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
-1. Select the checkbox to acknowledge the message about resource usage.
+1. On the **Getting started with Vision** landing page, select the **Face** tab and then select the **Detect Faces in an image** tile.
+
+1. Under the **Try It Out** subheading, acknowledge the resource usage policy by reading and checking the box.  
 
 1. Select each of the sample images and observe the face detection data that is returned.
 
-1. Select [**https://aka.ms/mslearn-detect-faces**](https://aka.ms/mslearn-detect-faces) to download **detect-faces.zip**. Then open the folder on your computer.
+1. Now let's try with some of our own images. Select [**https://aka.ms/mslearn-detect-faces**](https://aka.ms/mslearn-detect-faces) to download **detect-faces.zip**. Then open the folder on your computer.
 
 1. Upload **store-camera-1.jpg** (shown below) and review the face detection details that are returned.
 

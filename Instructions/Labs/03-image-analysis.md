@@ -25,28 +25,28 @@ If you haven't already done so, create an **Azure AI services** resource in your
     - **Pricing tier**: *Standard S0.*
     - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
 
-2. Review the selected settings and then create the resource.
-3. After the resource is deployed, select **Go to Resource**.
+1. Select **Review + create** then **Create** and wait for deployment to complete.
+
 
 ## Connect your Azure AI service resource to Vision Studio
 
-Next, connect the Azure AI service resource you provisioned above to Vision Studio so it can be used for trying out image analysis.
+Next, connect the Azure AI service resource you provisioned above to Vision Studio.
 
 1. In another browser tab, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
-2. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource.
+1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource.
 
-3. On the Vision Studio home page, select **View all resources** under the **Getting started with Vision** heading.
+1. On the Vision Studio home page, select **View all resources** under the **Getting started with Vision** heading.
 
     ![The View all resource link is highlighted under Getting started with Vision in Vision Studio.](./media/analyze-images-vision/vision-resources.png)
 
-4. On the **Select a resource to work with** page, hover your mouse cursor over the resource you created above in the list and then check the box to the left of the resource name, then select **Select as default resource**.
+1. On the **Select a resource to work with** page, hover your mouse cursor over the resource you created above in the list and then check the box to the left of the resource name, then select **Select as default resource**.
 
     > **Note** : If your resource is not listed, you may need to **Refresh** the page.
 
     ![The Select a resource to work with dialog is displayed with the cog-ms-learn-vision-SUFFIX Cognitive Services resource highlighted and checked. The Select as default resource button is highlighted.](./media/analyze-images-vision/default-resource.png)
 
-5. Close the settings page by selecting the "x" at the top right of the screen.
+1. Close the settings page by selecting the "x" at the top right of the screen.
 
 ## Generate captions for an image
 
@@ -129,4 +129,4 @@ If you don’t intend to do more exercises, delete any resources that you no lon
 
 ## Learn more
 
-To learn more about what you can do with this service, see the [Azure AI Vision page](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview).
+To learn more about what you can do with this service, see the [Azure AI Vision page](https://learn.microsoft.com/azure/ai-services/computer-vision/overview).
