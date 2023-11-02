@@ -9,11 +9,9 @@ Vision solutions often require AI to be able to detect human faces. Suppose the 
 
 To test the face detection capabilities of the Azure AI Face service, you will use [Azure Vision Studio](https://portal.vision.cognitive.azure.com/). This is a UI-based platform that lets you explore Azure AI Vision features without needing to write any code.
 
-To use the Face detect capabilities you will create an Azure AI services multi-service resource.
-
 ## Create an *Azure AI services* resource
 
-You can use the Azure AI Face service with an **Azure AI services** resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
+You can use the Azure AI Face service with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
 
@@ -27,13 +25,23 @@ You can use the Azure AI Face service with an **Azure AI services** resource. If
 
 1. Select **Review + create** then **Create** and wait for deployment to complete.
 
-## Detect faces in the Vision Studio
+## Connect your Azure AI service resource to Vision Studio
 
-1. In another browser tab, open [**Vision Studio**](https://portal.vision.cognitive.azure.com?azure-portal=true), signing in with your Microsoft account.
+1. In another browser tab, navigate to [**Vision Studio**](https://portal.vision.cognitive.azure.com?azure-portal=true). 
 
-1. Select the **Settings** cog icon at the top right of the page, and then, on the **Select a resource to work with** page, select the resource you just created and set it as the default resource.
+1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource.
+
+1. On the Vision Studio home page, select **View all resources** under the **Getting started with Vision** heading.
+
+    ![The View all resource link is highlighted under Getting started with Vision in Vision Studio.](./media/analyze-images-vision/vision-resources.png)
+
+4. On the **Select a resource to work with** page, hover your mouse cursor over the resource you created above in the list and then check the box to the left of the resource name, then select **Select as default resource**.
 
     > **Note** : If your resource is not listed, you may need to **Refresh** the page.
+
+    ![The Select a resource to work with dialog is displayed with the cog-ms-learn-vision-SUFFIX Cognitive Services resource highlighted and checked. The Select as default resource button is highlighted.](./media/analyze-images-vision/default-resource.png)
+
+## Detect faces in the Vision Studio 
 
 1. Select **Vision Studio** to return to the Get Started with Vision page, and then select **Face** to display the Detect Faces in an image panel. Select **Try it out**.
 1. Select the checkbox to acknowledge the message about resource usage.

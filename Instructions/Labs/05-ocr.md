@@ -11,7 +11,7 @@ A common computer vision challenge is to detect and interpret text embedded with
 
 ## Create an *Azure AI services* resource
 
-You can use the Azure AI Vision service with an **Azure AI services** resource.
+You can use the Azure AI Vision service with an **Azure AI services** multi-service resource.
 
 If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
