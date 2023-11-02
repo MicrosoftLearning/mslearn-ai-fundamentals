@@ -11,7 +11,7 @@ In this exercise, you will use Vision Studio to analyze images using the built-i
 
 ## Create an *Azure AI services* resource
 
-You can use the Azure AI Face service by creating either a **Computer Vision** resource or an **Azure AI services** resource.
+You can use the Azure AI Vision service with an **Azure AI services** resource.
 
 If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 

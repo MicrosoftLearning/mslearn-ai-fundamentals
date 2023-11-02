@@ -11,21 +11,22 @@ A common computer vision challenge is to detect and interpret text embedded with
 
 ## Create an *Azure AI services* resource
 
-You can use the Azure AI Vision service by creating either a **Computer Vision** resource or an **Azure AI services** resource.
+You can use the Azure AI Vision service with an **Azure AI services** resource.
 
 If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
 
-1. Click the **&#65291;Create a resource** button and search for *Azure AI services*. Select **create** an **Azure AI services** resource. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
+1. Click the **&#65291;Create a resource** button and search for *Azure AI services*. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select or create a resource group with a unique name*.
-    - **Region**: *Choose any available region*.
+    - **Region**: East US
     - **Name**: *Enter a unique name*.
     - **Pricing tier**: *Standard S0.*
     - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
 
-1. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
+2. Review the selected settings and then create the resource.
+3. After the resource is deployed, select **Go to Resource**.
 
 ## Extract text from images in the Vision Studio
 
