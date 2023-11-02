@@ -84,15 +84,15 @@ The next feature you will try is the **Extract Tags** functionality. Extract tag
 
 1. Return to the home page of Vision Studio, then select the **Extract common tags from images** tile under the **Image analysis** tab.
 
-2. In the **Choose the model you want to try out**, leave **Pretrained Vision model** selected. In the **Choose your language**, select **English** or a language of your preference.
+2. In the **Choose the model you want to try out**, leave **Prebuilt product vs. gap model** selected. In the **Choose your language**, select **English** or a language of your preference.
 
 3. Open the folder containing the images you downloaded and unzipped and locate the file named **store-image-2.jpg**, which looks like this:
 
     ![An image of person with a shopping basket in a supermarket](./media/analyze-images-vision/store-camera-2.jpg)
 
-4. Upload the **store-image-2.jpg** file.
+4. Upload the **store-camera-2.jpg** file.
 
-5. Review the list of tags extracted from the image and the confidence score for each in the detected attributes panel. The confidence score is ... Notice in the list of tags that it includes not only objects, but actions, such as *shopping*, *selling*, and *standing*.
+5. Review the list of tags extracted from the image and the confidence score for each in the detected attributes panel. Recall that the confidence score is the likelihood that the text for the detected attribute describes what is actually in the image. Notice in the list of tags that it includes not only objects, but actions, such as *shopping*, *selling*, and *standing*.
 
 ## Object detection
 
