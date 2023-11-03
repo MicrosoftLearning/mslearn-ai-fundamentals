@@ -86,7 +86,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
             - Include all columns other than **Path**
             - Review the automatically detected types
 
-        Select the **bike-rentals** dataset after you've created it.
+        Select **Create**. After the dataset is created, select the **bike-rentals** dataset to continue to submit the Automated ML job.
 
     **Task settings**:
 
