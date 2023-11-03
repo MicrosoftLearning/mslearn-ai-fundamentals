@@ -6,29 +6,27 @@ lab:
 # Use Conversational Language Understanding with Language Studio
 
 Increasingly, we expect computers to be able to use AI to understand natural language commands, either spoken or typed. For example, you might want a home automation system to control devices in your home by using voice commands such as “switch on the light” or “put the fan on.” AI-powered devices can understand these commands and take appropriate action.
+
 In this exercise, you will use Language Studio to create and test a project that sends instructions to devices such as lights or fans. You’ll use the capabilities of the Conversational Language Understanding service to configure your project. 
 
-> **Note**
-> To complete this exercise, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
+## Create a *Language* resource
 
-## Create a *Language service* resource
+You can use many Azure AI Language features with either a **Language** or **Azure AI services** resource. There are some instances where only a Language resource can be used. For the exercise below, we will use a **Language** resource. If you haven't already done so, create a **Language** resource in your Azure subscription.
 
-You can use the Conversational Language Understanding service by creating a **Language service** resource.
+1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
 
-If you haven't already done so, create a **Language service** resource in your Azure subscription.
+1. Click the **&#65291;Create a resource** button and search for *Language service*. Select **create** a **Language service** plan. You will be taken to a page to *Select additional features**. Keep the default selection and click **Continue to create your resource**. 
 
-1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
-
-1. Select **&#65291;Create a resource**, search for *Language service*, and create a **Language service** resource with the following settings:
-    - Select additional features: *Keep the default features and click Continue to create your resource*  
+1. On the page **Create Language**, configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select or create a resource group with a unique name*.
-    - **Region**: East US 2
+    - **Region**: East US.
     - **Name**: *Enter a unique name*.
-    - **Pricing tier**: *S (1K Calls per minute)*
-    - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice.**: *Selected.*
+    - **Pricing tier**: *Free F0 or S if Free F0 is not available*
+    - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
 
-1. **Review and create** the resource, and wait for deployment to complete.
+1. Select **Review + create** then **Create** and wait for deployment to complete.
+
 
 ### Create a Conversational Language Understanding App
 

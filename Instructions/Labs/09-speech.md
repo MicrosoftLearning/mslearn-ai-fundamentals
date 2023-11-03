@@ -5,9 +5,6 @@ lab:
 
 # Explore Speech Studio
 
-> **Note**
-> To complete this exercise, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
-
 The **Azure AI Speech** service transcribes speech into text, and text into audible speech. You might use AI Speech to create an application that can transcribe meeting notes or generate text from the recording of interviews.
 
 In this exercise, you will try out the capabilities of Azure AI Speech using Azure AI Speech Studio. 
