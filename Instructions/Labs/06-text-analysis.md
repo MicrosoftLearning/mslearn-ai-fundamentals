@@ -13,15 +13,13 @@ For example, suppose the fictitious travel agent Margie's Travel encourages cust
 
 Azure AI Language Service includes text analysis and NLP capabilities. These include the identification of key phrases in text, and the classification of text based on sentiment.
 
-## Create an *Azure AI services* resource
+## Create a *Language* resource
 
-You can use the AI Language service by creating either a **Language service** resource or an **Azure AI services** resource.
-
-If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
+You can use many Azure AI Language features with either a **Language** or **Azure AI services** resource. For the exercise below, we will use a **Language** resource. If you haven't already done so, create a **Language** resource in your Azure subscription.
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
 
-1. Click the **&#65291;Create a resource** button and search for *Azure AI services*. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
+1. Click the **&#65291;Create a resource** button and search for *Language*. Select **create** a **Language** plan. You will be taken to a page to create a Language resource. Configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select or create a resource group with a unique name*.
     - **Region**: East US.
@@ -38,7 +36,7 @@ If you haven't already done so, create an **Azure AI services** resource in your
 1. When prompted with **Select an Azure resource**, make the following configurations:
     - **Azure directory**: *Default Directory, the directory you are using*
     - **Azure subscription**: *Select the subscription you are using*
-    - **Resource type**: Cognitive Services
+    - **Resource type**: Language
     - **Resource name**: *select the Language service resource you just created*
 
 Then select **Done**.
@@ -52,7 +50,6 @@ Then select **Done**.
 > 1. Select the resource you just created, and select **Switch resource**. Ensure Managed identity is **Enabled**.
 > ![Enable language resource.](media/analyze-text-language-service/language-resource-enabled.png)
 > 1. At the top of the page, select **Language Studio** to return to the Language Studio home page.
-
 
 ## Analyze reviews in Language Studio
 
