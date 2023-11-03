@@ -33,7 +33,7 @@ If you haven't already done so, create an **Azure AI services** resource in your
 
 ## Configure your resource in Azure AI Language Studio
 
-1. In another browser tab, open [Language Studio](https://language.cognitive.azure.com/) and sign in.
+1. In another browser tab, open [Language Studio](https://language.cognitive.azure.com?azure-portal=true) and sign in.
 
 1. When prompted with **Select an Azure resource**, make the following configurations:
     - **Azure directory**: *Default Directory, the directory you are using*
@@ -43,23 +43,27 @@ If you haven't already done so, create an **Azure AI services** resource in your
 
 Then select **Done**.
 
-> **Note**: As of July 2023, Azure AI services encompass all of what were previously known as Cognitive Services and Azure Applied AI Services. Some user interfaces are still updating their reference from `Cognitive Services` to `Azure AI services`. The two names refer to the same type of resource.
+> **Important**: As of July 2023, Azure AI services encompass all of what were previously known as Cognitive Services and Azure Applied AI Services. Some user interfaces are still updating their reference from `Cognitive Services` to `Azure AI services`. The two names refer to the same type of resource.
 
-1. If you are not prompted, select the **Settings** cog icon at the top-right, then **Resources**.
+> **Note**: If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
+> 1. On the bar at the top if the page, select **Settings (&#9881;)**. 
+> ![Settings cog.](media/analyze-text-language-service/settings-toggle.png)     
+> 1. On the **Settings** page, view the **Resources** tab.
+> 1. Select the resource you just created, and select **Switch resource**. Ensure Managed identity is **Enabled**.
+> ![Enable language resource.](media/analyze-text-language-service/language-resource-enabled.png)
+> 1. At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
-    ![Settings cog.](media/analyze-text-language-service/settings-toggle.png)
-
-1. Select your Language service resource, and ensure Managed identity is **Enabled**.
-
-    ![Enable language resource.](media/analyze-text-language-service/language-resource-enabled.png)
-
-1. Select **Language Studio** to return to the *Welcome page*.
 
 ## Analyze reviews in Language Studio
 
-1. Select the **Classify text** tab, and under **Analyze sentiment and mine opinions**, select **Try it out**.
+1. In a web browser, navigate to [Language Studio](https://language.cognitive.azure.com?azure-portal=true).
+
+1. On the **Welcome to Language Studio** landing page, select the **Classify text** tab, then select the **Analyze sentiment and mine opinions** tile.
+
 1. Under *Select text language*, select **English**.
-1. Under *Select your Azure resource*, select your Language resource.
+
+1. Under *Select your Azure resource*, select your resource.
+
 1. Under *Enter your own text, upload a file, or use one of our sample texts*, copy and paste the following review:
 
     ```
@@ -71,7 +75,11 @@ Then select **Done**.
 
 1. Check the box to acknowledge that the demo will incur usage and may incur costs, and then select **Run**.
 
-1. Review the output. Notice that the document is analyzed for sentiment, as well as each sentence. Select **Sentence 1** to show the sentiment analysis for that sentence. Select **Sentence 1** again to close. Notice that the sentiment displayed has a confidence level.
+1. Review the output. Notice that the document is analyzed for sentiment, as well as each sentence. Select **Sentence 1** to show the sentiment analysis for that sentence. 
+
+Notice that there is a document sentiment followed by scores next to three categories, *positive score*, *neutral score*, *negative score*. In each of the categories, a score between 0 and 1 is provided. These confidence scores indicate how likely the provided text is a particular sentiment. 
+
+Select **Sentence 1** again to close.
 
 1. Scroll up to select **Clear text box**, and copy and paste the following review:
 
