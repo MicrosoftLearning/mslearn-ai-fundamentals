@@ -19,7 +19,7 @@ You can use many Azure AI Language features with either a **Language** or **Azur
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
 
-1. Click the **&#65291;Create a resource** button and search for *Language service*. Select **create** a **Language service** plan. You will be taken to a page to *Select additional features**. Keep the default selection and click **Continue to create your resource**. 
+1. Click the **&#65291;Create a resource** button and search for *Language service*. Select **create** a **Language service** plan. You will be taken to a page to **Select additional features**. Keep the default selection and click **Continue to create your resource**. 
 
 1. On the page **Create Language**, configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
