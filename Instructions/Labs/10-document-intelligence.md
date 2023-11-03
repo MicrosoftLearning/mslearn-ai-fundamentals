@@ -5,9 +5,6 @@ lab:
 
 # Extract form data in Document Intelligence Studio
 
-> **Note**
-> To complete this exercise, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
-
 One of the services of Azure AI Document Intelligence is being able to analyze specific types of documents. A common use of AI is optical character recognition (OCR) for reading printed or handwritten documents. However, OCR extracts text in an unstructured format which is difficult to store in a database or analyze.
 
 The Document Intelligence service can extract information from forms such as receipts or invoices. It not only extracts information, but also identifies field names for the data. For example, it can identify a merchant’s name and address on a receipt. The prebuilt models in Document Intelligence are trained to recognize data for each type of document.
