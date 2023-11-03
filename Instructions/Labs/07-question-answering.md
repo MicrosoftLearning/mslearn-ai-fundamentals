@@ -9,11 +9,13 @@ In this exercise you will use Language Studio to create and train a knowledge ba
 
 When implementing a bot, the first step is to create a knowledge base of question and answer pairs. This is used together with built-in natural language processing capabilities so that the bot can interpret questions and find the most appropriate answer for the user.
 
-## Create a knowledge base
-
 Azure AI Language includes *question answering* capabilities, which you will use to create a knowledge base. Knowledge bases can be created either by entering question and answer pairs manually, or from an existing document or web page. Margie’s Travel wants to use their existing FAQ document.
 
 The Language service's question answering feature enables you to quickly create a knowledge base, either by entering question and answer pairs or from an existing document or web page. It can then use some built-in natural language processing capabilities to interpret questions and find appropriate answers.
+
+## Create a *Language* resource
+
+To use question answering, you need a **Language** resource.
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
 
