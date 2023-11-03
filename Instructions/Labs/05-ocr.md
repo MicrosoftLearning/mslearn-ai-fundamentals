@@ -27,7 +27,7 @@ You can use Azure AI Vision's OCR capabilities with an **Azure AI services** mul
 
 ## Connect your Azure AI service resource to Vision Studio
 
-Next, connect the Azure AI service resource you provisioned above to Vision Studio.
+Next, connect the Azure AI services resource you provisioned above to Vision Studio.
 
 1. In another browser tab, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
