@@ -11,9 +11,7 @@ A common computer vision challenge is to detect and interpret text embedded with
 
 ## Create an *Azure AI services* resource
 
-You can use the Azure AI Vision service with an **Azure AI services** multi-service resource.
-
-If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
+You can use Azure AI Vision's OCR capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
 
@@ -25,8 +23,7 @@ If you haven't already done so, create an **Azure AI services** resource in your
     - **Pricing tier**: *Standard S0.*
     - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
 
-2. Review the selected settings and then create the resource.
-3. After the resource is deployed, select **Go to Resource**.
+1. Select **Review + create** then **Create** and wait for deployment to complete.
 
 ## Connect your Azure AI service resource to Vision Studio
 
