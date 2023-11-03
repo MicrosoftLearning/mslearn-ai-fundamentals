@@ -73,9 +73,9 @@ Then select **Done**.
 
 1. Check the box to acknowledge that the demo will incur usage and may incur costs, and then select **Run**.
 
-1. Review the output. Notice that the document is analyzed for sentiment, as well as each sentence. Select **Sentence 1** to show the sentiment analysis for that sentence. 
+1. Review the output. Notice that the *document* is analyzed for sentiment, as well as each *sentence*. Select **Sentence 1** to show the sentiment analysis for that sentence. 
 
-Notice that there is a document sentiment followed by scores next to three categories, *positive score*, *neutral score*, *negative score*. In each of the categories, a score between 0 and 1 is provided. These confidence scores indicate how likely the provided text is a particular sentiment. 
+Notice that there is an overall sentiment followed by scores next to three categories, *positive score*, *neutral score*, *negative score*. In each of the categories, a score between 0 and 1 is provided. These confidence scores indicate how likely the provided text is a particular sentiment. 
 
 Select **Sentence 1** again to close.
 
