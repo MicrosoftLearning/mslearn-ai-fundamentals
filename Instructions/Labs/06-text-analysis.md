@@ -15,16 +15,17 @@ Azure AI Language Service includes text analysis and NLP capabilities. These inc
 
 ## Create a *Language* resource
 
-You can use many Azure AI Language features with either a **Language** or **Azure AI services** resource. For the exercise below, we will use a **Language** resource. If you haven't already done so, create a **Language** resource in your Azure subscription.
+You can use many Azure AI Language features with either a **Language** or **Azure AI services** resource. There are some instances where only a Language resource can be used. For the exercise below, we will use a **Language** resource. If you haven't already done so, create a **Language** resource in your Azure subscription.
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
 
-1. Click the **&#65291;Create a resource** button and search for *Language*. Select **create** a **Language** plan. You will be taken to a page to create a Language resource. Configure it with the following settings:
+1. Click the **&#65291;Create a resource** button and search for *Language service*. Select **create** a **Language service** plan. You will be taken to a page to *Select additional features**. Keep the default selection and click **Continue to create your resource**. 
+1. On the page **Create Language**, configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select or create a resource group with a unique name*.
     - **Region**: East US.
     - **Name**: *Enter a unique name*.
-    - **Pricing tier**: *Standard S0.*
+    - **Pricing tier**: *Free F0 or S if Free F0 is not available*
     - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
 
 1. Select **Review + create** then **Create** and wait for deployment to complete.
