@@ -34,7 +34,16 @@ If you haven't already done so, create an **Azure AI services** resource in your
 ## Configure your resource in Azure AI Language Studio
 
 1. In another browser tab, open [Language Studio](https://language.cognitive.azure.com/) and sign in.
-1. When prompted, select the Language service resource you just created and then **Done**.
+
+1. When prompted with **Select an Azure resource**, make the following configurations:
+    - **Azure directory**: *Default Directory, the directory you are using*
+    - **Azure subscription**: *Select the subscription you are using*
+    - **Resource type**: Cognitive Services
+    - **Resource name**: *select the Language service resource you just created*
+
+Then select **Done**.
+
+> **Note**: As of July 2023, Azure AI services encompass all of what were previously known as Cognitive Services and Azure Applied AI Services. Some user interfaces are still updating their reference from `Cognitive Services` to `Azure AI services`. The two names refer to the same type of resource.
 
 1. If you are not prompted, select the **Settings** cog icon at the top-right, then **Resources**.
 
