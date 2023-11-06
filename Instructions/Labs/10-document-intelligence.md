@@ -14,9 +14,9 @@ In this exercise, you'll take a look at a prebuilt model in Document Intelligenc
 > **NOTE**
 > Azure AI Document Intelligence is the new name for Azure Form Recognizer. You may still see Azure Form Recognizer in the Azure portal or Document Intelligence Studio.
 
-## Create an Azure AI Document Intelligence resource
+## Create *Document Intelligence* resource
 
-You can use the AI Document Intelligence service by using either an AI Document Intelligence resource or an Azure AI services resource. In this exercise, you will create an Azure AI Document Intelligence resource, if you don’t already have one.
+You can use Azure AI Document Intelligence by creating either a *Document Intelligence* resource or an *Azure AI services* resource. In this exercise, you will create *Document Intelligence* resource, if you don’t already have one.
 
 1. In another browser tab, open [Document Intelligence Studio](https://formrecognizer.appliedai.azure.com/studio), signing in with your Microsoft account.
 1. Select **Settings** and select the **Resource** tab. Select **Create a new resource**.
@@ -37,7 +37,7 @@ Keep Document Intelligence Studio open.
 
 You are now ready to analyze a receipt for the fictitious Northwind Traders retail company.
 
-1. Download a [sample receipt](https://aka.ms/mslearn-receipt) from `https://aka.ms/mslearn-receipt` to your computer and save it in a folder.
+1. Select [**https://aka.ms/mslearn-receipt**](https://aka.ms/mslearn-receipt) to download a sample document to your computer. Open the folder. 
 1. Select **Form Recognizer Studio** to return to the **Get Started with Document Intelligence Studio** page, and under Receipts select **Try it out**.
 1. In the Prebuilt drop-down list, make sure that **Receipts** is selected.
 1. Select **Browse for files** and navigate to the folder where you saved the picture. Select the picture of the receipt and then **Open**. The image appears on the left side of the screen.
