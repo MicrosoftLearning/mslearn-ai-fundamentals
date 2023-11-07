@@ -102,7 +102,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
         - **Max trials**: 3
         - **Max concurrent trials**: 3
         - **Max nodes**: 3
-        - **Metric score threshold**: 0.85 (*so that if a model achieves a normalized root mean squared error metric score of 0.085 or less, the job ends.*)
+        - **Metric score threshold**: 0.085 (*so that if a model achieves a normalized root mean squared error metric score of 0.085 or less, the job ends.*)
         - **Timeout**: 15
         - **Iteration timeout**: 5
         - **Enable early termination**: *Selected*
