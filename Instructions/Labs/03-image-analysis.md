@@ -11,40 +11,39 @@ In this exercise, you will use Vision Studio to analyze images using the built-i
 
 ## Create an *Azure AI services* resource
 
-You can use the Azure AI Face service by creating either a **Computer Vision** resource or an **Azure AI services** resource.
-
-If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
+You can use Azure AI Vision's image analysis capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
 
 1. Click the **&#65291;Create a resource** button and search for *Azure AI services*. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select or create a resource group with a unique name*.
-    - **Region**: Choose from East US, France Central, Korea Central, North Europe, Southeast Asia, West Europe, West US, or East Asia\*
+    - **Region**: East US.
     - **Name**: *Enter a unique name*.
     - **Pricing tier**: *Standard S0.*
     - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
 
-    \*Image Analysis 4.0 features are currently only available in these regions.
-
-2. Review the selected settings and then create the resource.
-3. After the resource is deployed, select **Go to Resource**.
+1. Select **Review + create** then **Create** and wait for deployment to complete.
 
 ## Connect your Azure AI service resource to Vision Studio
 
-Next, connect the Azure AI service resource you provisioned above to Vision Studio so it can be used for trying out image analysis.
+Next, connect the Azure AI service resource you provisioned above to Vision Studio.
 
-1. In a web browser, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
+1. In another browser tab, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
-2. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource.
+1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource.
 
-3. On the Vision Studio home page, select **View all resources** under the **Getting started with Vision** heading.
+1. On the Vision Studio home page, select **View all resources** under the **Getting started with Vision** heading.
 
     ![The View all resource link is highlighted under Getting started with Vision in Vision Studio.](./media/analyze-images-vision/vision-resources.png)
 
-4. On the **Select a resource to work with** page, hover your mouse cursor over the resource you created above in the list and then check the box to the left of the resource name, then select **Select as default resource**.
+1. On the **Select a resource to work with** page, hover your mouse cursor over the resource you created above in the list and then check the box to the left of the resource name, then select **Select as default resource**.
+
+    > **Note** : If your resource is not listed, you may need to **Refresh** the page.
 
     ![The Select a resource to work with dialog is displayed with the cog-ms-learn-vision-SUFFIX Cognitive Services resource highlighted and checked. The Select as default resource button is highlighted.](./media/analyze-images-vision/default-resource.png)
+
+1. Close the settings page by selecting the "x" at the top right of the screen.
 
 ## Generate captions for an image
 
@@ -60,7 +59,7 @@ Let's look at the image captioning functionality of Azure AI Vision. Image capti
 
 1. Under the **Try It Out** subheading, acknowledge the resource usage policy by reading and checking the box.  
 
-1. Download **image-analysis.zip** from https://aka.ms/mslearn-images-for-analysis. Then unzip the files to a folder on your computer locate the file named **store-camera-1.jpg**; which contains the following image:
+1. Select [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) to download **image-analysis.zip**. Open the folder on your computer and locate the file named **store-camera-1.jpg**; which contains the following image:
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/analyze-images-vision/store-camera-1.jpg)
 
@@ -86,15 +85,17 @@ The next feature you will try is the **Extract Tags** functionality. Extract tag
 
 1. Return to the home page of Vision Studio, then select the **Extract common tags from images** tile under the **Image analysis** tab.
 
-2. In the **Choose the model you want to try out**, leave **Pretrained Vision model** selected. In the **Choose your language**, select **English** or a language of your preference.
+2. In the **Choose the model you want to try out**, leave **Prebuilt product vs. gap model** selected. In the **Choose your language**, select **English** or a language of your preference.
 
-3. Open the folder containing the images you downloaded and unzipped and locate the file named **store-image-2.jpg**, which looks like this:
+3. Open the folder containing the images you downloaded and locate the file named **store-image-2.jpg**, which looks like this:
 
     ![An image of person with a shopping basket in a supermarket](./media/analyze-images-vision/store-camera-2.jpg)
 
-4. Upload the **store-image-2.jpg** file.
+4. Upload the **store-camera-2.jpg** file.
 
-5. Review the list of tags extracted from the image and the confidence score for each in the detected attributes panel. The confidence score is ... Notice in the list of tags that it includes not only objects, but actions, such as *shopping*, *selling*, and *standing*.
+5. Review the list of tags extracted from the image and the confidence score for each in the detected attributes panel. Here the confidence score is the likelihood that the text for the detected attribute describes what is actually in the image. Notice in the list of tags that it includes not only objects, but actions, such as *shopping*, *selling*, and *standing*.
+
+    ![A screenshot of the detect attributes panel in the Vision Studio with text and confidence scores displayed next to the original image.](./media/analyze-images-vision/detect-attributes.png)
 
 ## Object detection
 
@@ -102,9 +103,9 @@ In this task, you use the **Object detection** feature of Image Analysis. Object
 
 1. Return to the home page of Vision Studio, then select the **Detect common objects in images** tile under the **Image analysis** tab.
 
-1. In the **Choose the model you want to try out**, leave **Pretrained Vision model** selected.
+1. In the **Choose the model you want to try out**, leave **Prebuilt product vs. gap model** selected.
 
-1. Open the folder containing the images you downloaded and unzipped and locate the file named **store-camera-3.jpg**, which looks like this:
+1. Open the folder containing the images you downloaded and locate the file named **store-camera-3.jpg**, which looks like this:
 
     ![An image of person with a shopping cart](./media/analyze-images-vision/store-camera-3.jpg)
 
@@ -125,4 +126,4 @@ If you don’t intend to do more exercises, delete any resources that you no lon
 
 ## Learn more
 
-To learn more about what you can do with this service, see the [Computer Vision page](https://azure.microsoft.com/products/ai-services?activetab=pivot:visiontab).
+To learn more about what you can do with this service, see the [Azure AI Vision page](https://learn.microsoft.com/azure/ai-services/computer-vision/overview).

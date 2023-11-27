@@ -1,9 +1,9 @@
 ---
 lab:
-    title: 'Explore Automated Machine Learning in Azure ML'
+    title: 'Explore Automated Machine Learning in Azure Machine Learning'
 ---
 
-# Explore Automated Machine Learning in Azure ML
+# Explore Automated Machine Learning in Azure Machine Learning
 
 In this exercise, you'll use the automated machine learning feature in Azure Machine Learning to train and evaluate a machine learning model. You'll then deploy and test the trained model.
 
@@ -74,7 +74,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
             - Include all columns other than **Path**
             - Review the automatically detected types
 
-        Select the **bike-rentals** dataset after you've created it.
+        Select **Create**. After the dataset is created, select the **bike-rentals** dataset to continue to submit the Automated ML job.
 
     **Task settings**:
 
@@ -90,7 +90,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
         - **Max trials**: 3
         - **Max concurrent trials**: 3
         - **Max nodes**: 3
-        - **Metric score threshold**: 0.85 (*so that if a model achieves a normalized root mean squared error metric score of 0.085 or less, the job ends.*)
+        - **Metric score threshold**: 0.085 (*so that if a model achieves a normalized root mean squared error metric score of 0.085 or less, the job ends.*)
         - **Timeout**: 15
         - **Iteration timeout**: 5
         - **Enable early termination**: *Selected*

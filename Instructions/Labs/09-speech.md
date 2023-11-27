@@ -5,9 +5,6 @@ lab:
 
 # Explore Speech Studio
 
-> **Note**
-> To complete this exercise, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
-
 The **Azure AI Speech** service transcribes speech into text, and text into audible speech. You might use AI Speech to create an application that can transcribe meeting notes or generate text from the recording of interviews.
 
 In this exercise, you will try out the capabilities of Azure AI Speech using Azure AI Speech Studio. 
@@ -30,7 +27,8 @@ In this exercise, you will create an AI Speech resource, unless you already have
 
 ## Explore speech to text in Speech Studio
 
-1. Download **speech.zip** from https://aka.ms/mslearn-speech-files and save it in a folder on your computer. Unzip the files and make a note of the folder name.
+1. Select [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) to download **speech.zip**. Open the folder. 
+
 1. On the Get started with Speech page, under *Speech* find *Real-time speech to text*. Select **Try out Real-time speech to text**.
 
     ![Getting started with Speech](media/recognize-synthesize-speech/try-out-speech-to-text.png)

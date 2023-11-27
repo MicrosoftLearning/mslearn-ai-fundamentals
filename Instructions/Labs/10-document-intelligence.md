@@ -5,23 +5,18 @@ lab:
 
 # Extract form data in Document Intelligence Studio
 
-> **Note**
-> To complete this exercise, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
+Azure AI Document Intelligence is able to analyze and extract information from forms and documents, then identify field names and data. 
 
-One of the services of Azure AI Document Intelligence is being able to analyze specific types of documents. A common use of AI is optical character recognition (OCR) for reading printed or handwritten documents. However, OCR extracts text in an unstructured format which is difficult to store in a database or analyze.
+How does Document Intelligence build upon optical character recognition (OCR)? While OCR can read printed or handwritten documents, OCR extracts text in an unstructured format which is difficult to store in a database or analyze. Document intelligence makes sense of the unstructured data by capturing the structure of the text, such as key/value pairs and information in tables. 
 
-The Document Intelligence service can extract information from forms such as receipts or invoices. It not only extracts information, but also identifies field names for the data. For example, it can identify a merchant’s name and address on a receipt. The prebuilt models in Document Intelligence are trained to recognize data for each type of document.
-
-Azure AI Document Intelligence uses prebuilt machine learning models trained to extract text from images of invoices, receipts, and more. While other computer vision models can capture text, Document Intelligence also captures the structure of the text, such as key/value pairs and information in tables. This way, instead of having to manually type in entries from a form into a database, you can automatically capture the relationships between text from the original file.
-
-In this exercise you’ll use Document Intelligence Studio to try out the capabilities of the AI Document Intelligence service, without writing any code.
+In this exercise, you'll take a look at a prebuilt model in Document Intelligence that is trained to recognize data for receipts. 
 
 > **NOTE**
 > Azure AI Document Intelligence is the new name for Azure Form Recognizer. You may still see Azure Form Recognizer in the Azure portal or Document Intelligence Studio.
 
-## Create an Azure AI Document Intelligence resource
+## Create *Document Intelligence* resource
 
-You can use the AI Document Intelligence service by using either an AI Document Intelligence resource or an Azure AI services resource. In this exercise, you will create an Azure AI Document Intelligence resource, if you don’t already have one.
+You can use Azure AI Document Intelligence by creating either a *Document Intelligence* resource or an *Azure AI services* resource. In this exercise, you will create *Document Intelligence* resource, if you don’t already have one.
 
 1. In another browser tab, open [Document Intelligence Studio](https://formrecognizer.appliedai.azure.com/studio), signing in with your Microsoft account.
 1. Select **Settings** and select the **Resource** tab. Select **Create a new resource**.
@@ -42,7 +37,7 @@ Keep Document Intelligence Studio open.
 
 You are now ready to analyze a receipt for the fictitious Northwind Traders retail company.
 
-1. Download a [sample receipt](https://aka.ms/mslearn-receipt) from `https://aka.ms/mslearn-receipt` to your computer and save it in a folder.
+1. Select [**https://aka.ms/mslearn-receipt**](https://aka.ms/mslearn-receipt) to download a sample document to your computer. Open the folder. 
 1. Select **Form Recognizer Studio** to return to the **Get Started with Document Intelligence Studio** page, and under Receipts select **Try it out**.
 1. In the Prebuilt drop-down list, make sure that **Receipts** is selected.
 1. Select **Browse for files** and navigate to the folder where you saved the picture. Select the picture of the receipt and then **Open**. The image appears on the left side of the screen.

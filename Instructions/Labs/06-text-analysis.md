@@ -5,53 +5,63 @@ lab:
 
 # Analyze text with Language Studio
 
-In this exercise you will explore the capabilities of Azure AI Language by analyzing some example hotel reviews. You’ll use Language Studio to understand whether the reviews are mostly positive or negative.
+In this exercise you will explore the capabilities of Azure AI Language by analyzing some example hotel reviews. You'll use Language Studio to understand whether the reviews are mostly positive or negative.
 
 Natural Language Processing (NLP) is a branch of AI that deals with written and spoken language. You can use NLP to build solutions that extract semantic meaning from text or speech, or that formulate meaningful responses in natural language.
 
-For example, suppose the fictitious travel agent Margie’s Travel encourages customers to submit reviews for hotel stays. You could use the Language service to identify key phrases, determine which reviews are positive and which are negative, or analyze the review text for mentions of known entities such as locations or people.
+For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to identify key phrases, determine which reviews are positive and which are negative, or analyze the review text for mentions of known entities such as locations or people.
 
 Azure AI Language Service includes text analysis and NLP capabilities. These include the identification of key phrases in text, and the classification of text based on sentiment.
 
-## Create an *Azure AI services* resource
+## Create a *Language* resource
 
-You can use the AI Language service by creating either a **Language service** resource or an **Azure AI services** resource.
-
-If you haven't already done so, create a **Language service** resource in your Azure subscription.
+You can use many Azure AI Language features with either a **Language** or **Azure AI services** resource. There are some instances where only a Language resource can be used. For the exercise below, we will use a **Language** resource. If you haven't already done so, create a **Language** resource in your Azure subscription.
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
 
-1. Select **&#65291;Create a resource** and search for *Language service* then create a new **Language service** resource with the following settings:
-    - **Additional features**: *None*
-    - **Subscription**: *Your Azure subscription*
+1. Click the **&#65291;Create a resource** button and search for *Language service*. Select **create** a **Language service** plan. You will be taken to a page to **Select additional features**. Keep the default selection and click **Continue to create your resource**. 
+
+1. On the page **Create Language**, configure it with the following settings:
+    - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select or create a resource group with a unique name*.
-    - **Region**: *Choose any available region*.
+    - **Region**: East US.
     - **Name**: *Enter a unique name*.
-    - **Pricing tier**: *Free F0* if available (otherwise, *Standard S0.*)
+    - **Pricing tier**: *Free F0 or S if Free F0 is not available*
     - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
 
-1. Review and create the resource, and wait for deployment to complete.
+1. Select **Review + create** then **Create** and wait for deployment to complete.
 
 ## Configure your resource in Azure AI Language Studio
 
-1. In another browser tab, open [Language Studio](https://language.cognitive.azure.com/) and sign in.
-1. When prompted, select the Language service resource you just created and then **Done**.
+1. In another browser tab, open [Language Studio](https://language.cognitive.azure.com?azure-portal=true) and sign in.
 
-1. If you are not prompted, select the **Settings** cog icon at the top-right, then **Resources**.
+1. When prompted with **Select an Azure resource**, make the following configurations:
+    - **Azure directory**: *Default Directory, the directory you are using*
+    - **Azure subscription**: *Select the subscription you are using*
+    - **Resource type**: Language
+    - **Resource name**: *select the Language service resource you just created*
 
-    ![Settings cog.](media/analyze-text-language-service/settings-toggle.png)
+Then select **Done**.
 
-1. Select your Language service resource, and ensure Managed identity is **Enabled**.
+> **Important**: As of July 2023, Azure AI services encompass all of what were previously known as Cognitive Services and Azure Applied AI Services. Some user interfaces are still updating their reference from `Cognitive Services` to `Azure AI services`. The two names refer to the same type of resource.
 
-    ![Enable language resource.](media/analyze-text-language-service/language-resource-enabled.png)
-
-1. Select **Language Studio** to return to the *Welcome page*.
+> **Note**: If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
+> 1. On the bar at the top if the page, select **Settings (&#9881;)**. 
+> 1. On the **Settings** page, view the **Resources** tab.
+> 1. Select the resource you just created, and select **Switch resource**. Ensure Managed identity is **Enabled**.
+> ![Enable language resource.](media/analyze-text-language-service/language-resource-enabled.png)
+> 1. At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
 ## Analyze reviews in Language Studio
 
-1. Select the **Classify text** tab, and under **Analyze sentiment and mine opinions**, select **Try it out**.
+1. In a web browser, navigate to [Language Studio](https://language.cognitive.azure.com?azure-portal=true).
+
+1. On the **Welcome to Language Studio** landing page, select the **Classify text** tab, then select the **Analyze sentiment and mine opinions** tile.
+
 1. Under *Select text language*, select **English**.
-1. Under *Select your Azure resource*, select your Language resource.
+
+1. Under *Select your Azure resource*, select your resource.
+
 1. Under *Enter your own text, upload a file, or use one of our sample texts*, copy and paste the following review:
 
     ```
@@ -63,7 +73,11 @@ If you haven't already done so, create a **Language service** resource in your A
 
 1. Check the box to acknowledge that the demo will incur usage and may incur costs, and then select **Run**.
 
-1. Review the output. Notice that the document is analyzed for sentiment, as well as each sentence. Select **Sentence 1** to show the sentiment analysis for that sentence. Select **Sentence 1** again to close. Notice that the sentiment displayed has a confidence level.
+1. Review the output. Notice that the *document* is analyzed for sentiment, as well as each *sentence*. Select **Sentence 1** to show the sentiment analysis for that sentence. 
+
+Notice that there is an overall sentiment followed by scores next to three categories, *positive score*, *neutral score*, *negative score*. In each of the categories, a score between 0 and 1 is provided. These confidence scores indicate how likely the provided text is a particular sentiment. 
+
+Select **Sentence 1** again to close.
 
 1. Scroll up to select **Clear text box**, and copy and paste the following review:
 
@@ -97,4 +111,4 @@ If you don’t intend to do more exercises, delete any resources that you no lon
 
 ## Learn more
 
-To learn more about what you can do with this service, see the [Language service page](https://azure.microsoft.com/services/cognitive-services/language-service/).
+To learn more about what you can do with this service, see the [Language service page](https://learn.microsoft.com/azure/ai-services/language-service/overview).

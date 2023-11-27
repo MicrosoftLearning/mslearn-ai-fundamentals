@@ -5,9 +5,6 @@ lab:
 
 # Explore an Azure Cognitive Search index (UI)
 
-> **Note**
-> To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
-
 Let's imagine you work for Fourth Coffee, a national coffee chain. You're asked to help build a knowledge mining solution that makes it easy to search for insights about customer experiences. You decide to build an Azure Cognitive Search index using data extracted from customer reviews.  
 
 In this lab you'll:
