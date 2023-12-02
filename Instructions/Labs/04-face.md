@@ -47,7 +47,7 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 
 ## Detect faces in the Vision Studio 
 
-1. In a web browser, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
+1. In a web browser, navigate to **Vision Studio** at [https://portal.vision.cognitive.azure.com](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
 1. On the **Getting started with Vision** landing page, select the **Face** tab and then select the **Detect Faces in an image** tile.
 
@@ -81,7 +81,7 @@ In this exercise you have explored how Azure AI services can detect faces in ima
 
 If you don’t intend to do more exercises, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
 
-1. Open the [Azure portal](https://portal.azure.com) and select the resource group that contains the resource you created.
+1. Open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com?azure-portal=true) and select the resource group that contains the resource you created.
 1. Select the resource and select **Delete** and then **Yes** to confirm. The resource is then deleted.
 
 ## Learn more
