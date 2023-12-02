@@ -29,7 +29,7 @@ You can use Azure AI Face service with an **Azure AI services** multi-service re
 
 Next, connect the Azure AI services resource you provisioned above to Vision Studio.
 
-1. In another browser tab, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
+1. In another browser tab, navigate to **Vision Studio** at [https://portal.vision.cognitive.azure.com](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
 1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource.
 
