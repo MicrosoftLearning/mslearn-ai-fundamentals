@@ -13,7 +13,7 @@ A common computer vision challenge is to detect and interpret text embedded with
 
 You can use Azure AI Vision's OCR capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
 
-1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
+1. In another browser tab, open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
 
 1. Click the **&#65291;Create a resource** button and search for *Azure AI services*. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
@@ -29,7 +29,7 @@ You can use Azure AI Vision's OCR capabilities with an **Azure AI services** mul
 
 Next, connect the Azure AI services resource you provisioned above to Vision Studio.
 
-1. In another browser tab, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
+1. In another browser tab, navigate to **Vision Studio** at [https://portal.vision.cognitive.azure.com](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
 1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource.
 
@@ -47,7 +47,7 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 
 ## Extract text from images in the Vision Studio
     
-1. In a web browser, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
+1. In a web browser, navigate to **Vision Studio** at [https://portal.vision.cognitive.azure.com](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
 1. On the **Getting started with Vision** landing page, select **Optical character recognition**, and then the **Extract text from images** tile.
 
@@ -73,7 +73,7 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 
 If you don’t intend to do more exercises, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
 
-1. Open the [Azure portal]( https://portal.azure.com) and select the resource group that contains the resource you created.
+1. Open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com?azure-portal=true) and select the resource group that contains the resource you created.
 1. Select the resource and select **Delete** and then **Yes** to confirm. The resource is then deleted.
 
 ## Learn more
