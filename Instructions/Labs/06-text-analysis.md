@@ -33,7 +33,7 @@ You can use many Azure AI Language features with either a **Language** or **Azur
 
 ## Configure your resource in Azure AI Language Studio
 
-1. In another browser tab, open [Language Studio](https://language.cognitive.azure.com?azure-portal=true) and sign in.
+1. In another browser tab, open **Language Studio** at [https://language.cognitive.azure.com](https://language.cognitive.azure.com?azure-portal=true) and sign in.
 
 1. When prompted with **Select an Azure resource**, make the following configurations:
     - **Azure directory**: *Default Directory, the directory you are using*
@@ -54,7 +54,7 @@ Then select **Done**.
 
 ## Analyze reviews in Language Studio
 
-1. In a web browser, navigate to [Language Studio](https://language.cognitive.azure.com?azure-portal=true).
+1. In a web browser, navigate to **Language Studio** at [https://language.cognitive.azure.com](https://language.cognitive.azure.com?azure-portal=true).
 
 1. On the **Welcome to Language Studio** landing page, select the **Classify text** tab, then select the **Analyze sentiment and mine opinions** tile.
 
@@ -106,7 +106,7 @@ In this exercise you used Language Studio to either create a new Language resour
 
 If you don’t intend to do more exercises, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
 
-1. Open the [Azure portal]( https://portal.azure.com) and select the resource group that contains the resource you created.
+1. Open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com) and select the resource group that contains the resource you created.
 1. Select the resource and select **Delete** and then **Yes** to confirm. The resource is then deleted.
 
 ## Learn more
