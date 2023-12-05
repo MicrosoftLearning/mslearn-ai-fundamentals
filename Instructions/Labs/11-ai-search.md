@@ -1,11 +1,11 @@
 ---
 lab:
-    title: 'Explore an Azure Cognitive Search index (UI)'
+    title: 'Explore an Azure AI Search index (UI)'
 ---
 
-# Explore an Azure Cognitive Search index (UI)
+# Explore an Azure AI Search index (UI)
 
-Let's imagine you work for Fourth Coffee, a national coffee chain. You're asked to help build a knowledge mining solution that makes it easy to search for insights about customer experiences. You decide to build an Azure Cognitive Search index using data extracted from customer reviews.  
+Let's imagine you work for Fourth Coffee, a national coffee chain. You're asked to help build a knowledge mining solution that makes it easy to search for insights about customer experiences. You decide to build an Azure AI Search index using data extracted from customer reviews.  
 
 In this lab you'll:
 
@@ -20,19 +20,19 @@ In this lab you'll:
 
 The solution you'll create for Fourth Coffee requires the following resources in your Azure subscription:
 
-- An **Azure Cognitive Search** resource, which will manage indexing and querying.
+- An **Azure AI Search** resource, which will manage indexing and querying.
 - An **Azure AI services** resource, which provides AI services for skills that your search solution can use to enrich the data in the data source with AI-generated insights.
 
     > **Note**
-    > Your Azure Cognitive Search and Azure AI services resources must be in the same location!
+    > Your Azure AI Search and Azure AI services resources must be in the same location!
 
 - A **Storage account** with blob containers, which will store raw documents and other collections of tables, objects, or files.
 
-### Create an *Azure Cognitive Search* resource
+### Create an *Azure AI Search* resource
 
 1. Sign into the [Azure portal](https://portal.azure.com/learn.docs.microsoft.com?azure-portal=true).
 
-1. Click the **+ Create a resource** button, search for *Azure Cognitive Search*, and create a **Azure Cognitive Search** resource with the following settings:
+1. Click the **+ Create a resource** button, search for *Azure AI Search*, and create a **Azure AI Search** resource with the following settings:
 
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select or create a resource group with a unique name*.
@@ -42,16 +42,16 @@ The solution you'll create for Fourth Coffee requires the following resources in
 
 1. Select **Review + create**, and after you see the response **Validation Success**, select **Create**.
 
-1. After deployment completes, select **Go to resource**. On the Azure Cognitive Search overview page, you can add indexes, import data, and search created indexes.
+1. After deployment completes, select **Go to resource**. On the Azure AI Search overview page, you can add indexes, import data, and search created indexes.
 
 ### Create an Azure AI services resource
 
-You'll need to provision an **Azure AI services** resource that's in the same location as your Azure Cognitive Search resource. Your search solution will use this resource to enrich the data in the datastore with AI-generated insights.
+You'll need to provision an **Azure AI services** resource that's in the same location as your Azure AI Search resource. Your search solution will use this resource to enrich the data in the datastore with AI-generated insights.
 
 1. Return to the home page of the Azure portal. Click the **&#65291;Create a resource** button and search for *Azure AI services*. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
-    - **Resource group**: *The same resource group as your Azure Cognitive Search resource*.
-    - **Region**: *The same location as your Azure Cognitive Search resource*.
+    - **Resource group**: *The same resource group as your Azure AI Search resource*.
+    - **Region**: *The same location as your Azure AI Search resource*.
     - **Name**: *A unique name*.
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Selected
@@ -66,7 +66,7 @@ You'll need to provision an **Azure AI services** resource that's in the same lo
 
 1. Search for *storage account*, and create a **Storage account** resource with the following settings:
     - **Subscription**: *Your Azure subscription*.
-    - **Resource group**: *The same resource group as your Azure Cognitive Search and Azure AI services resources*.
+    - **Resource group**: *The same resource group as your Azure AI Search and Azure AI services resources*.
     - **Storage account name**: *A unique name*.
     - **Location**: *Choose any available location*.
     - **Performance**: Standard
@@ -106,9 +106,9 @@ You'll need to provision an **Azure AI services** resource that's in the same lo
 
 ## Index the documents
 
-After you have the documents in storage, you can use Azure Cognitive Search to extract insights from the documents. The Azure portal provides an *Import data wizard*. With this wizard, you can automatically create an index and indexer for supported data sources. You'll use the wizard to create an index, and import your search documents from storage into the Azure Cognitive Search index.
+After you have the documents in storage, you can use Azure AI Search to extract insights from the documents. The Azure portal provides an *Import data wizard*. With this wizard, you can automatically create an index and indexer for supported data sources. You'll use the wizard to create an index, and import your search documents from storage into the Azure AI Search index.
 
-1. In the Azure portal, browse to your Azure Cognitive Search resource. On the **Overview** page, select **Import data**.
+1. In the Azure portal, browse to your Azure AI Search resource. On the **Overview** page, select **Import data**.
 
     ![Screenshot that shows the import data wizard.](media/create-cognitive-search-solution/azure-search-wizard-1.png)
 
@@ -186,7 +186,7 @@ After you have the documents in storage, you can use Azure Cognitive Search to e
     - Runs the skillset of cognitive skills to generate more enriched fields.
     - Maps the extracted fields to the index.
 
-1. In the bottom half of the **Overview** page for your Azure Cognitive Search resource, select the **Indexers** tab. This tab shows the newly created **coffee-indexer**. Wait a minute, and select **&orarr; Refresh** until the **Status** indicates success.
+1. In the bottom half of the **Overview** page for your Azure AI Search resource, select the **Indexers** tab. This tab shows the newly created **coffee-indexer**. Wait a minute, and select **&orarr; Refresh** until the **Status** indicates success.
 
 1. Select the indexer name to see more details.
 
@@ -256,4 +256,4 @@ Let's see the power of the knowledge store in action. When you ran the *Import d
 
 ## Learn more
 
-This simple search index only some of the capabilities of the Azure Cognitive Search service. To learn more about what you can do with this service, see the [Azure Cognitive Search service page](/azure/search/search-what-is-azure-search).
+This simple search index only some of the capabilities of the Azure AI Search service. To learn more about what you can do with this service, see the [Azure AI Search service page](/azure/search/search-what-is-azure-search).
