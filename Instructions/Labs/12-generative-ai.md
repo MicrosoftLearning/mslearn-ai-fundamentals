@@ -8,7 +8,7 @@ In this exercise you will explore generative AI with Microsoft Copilot.
 
 ## Sign into Microsoft Copilot
 
-1. Open [Copilot.microsoft.com](https://www.copilot.microsoft.com) and sign in with your personal Microsoft account.
+1. Open [copilot.microsoft.com](https://copilot.microsoft.com?azure-portal=true) and sign in with your personal Microsoft account.
 
 1. Microsoft Copilot uses generative AI to enhance Bing search results. What this means is that unlike search alone, which returns existing content, Microsoft Copilot can put together new responses based on natural language modeling and the web's information.  
 
