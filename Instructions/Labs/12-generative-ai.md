@@ -10,7 +10,7 @@ In this exercise you will explore generative AI with Microsoft Copilot.
 
 1. Open [Copilot.microsoft.com](https://www.copilot.microsoft.com) and sign in with your personal Microsoft account.
 
-1. Microsoft Copilot uses generative AI to power Bing search results. What this means is that unlike search alone, which returns existing content, Microsoft Copilot can put together new responses based on natural language modeling and the web's information.  
+1. Microsoft Copilot uses generative AI to enhance Bing search results. What this means is that unlike search alone, which returns existing content, Microsoft Copilot can put together new responses based on natural language modeling and the web's information.  
 
 1. Towards the bottom of the screen, you will see a window **Ask me anything**. As you enter prompts into the window, Copilot uses the entire conversation thread to return responses. For example, let's try asking a series of questions about traveling.
 
