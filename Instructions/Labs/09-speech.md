@@ -29,7 +29,7 @@ In this exercise, you will create an AI Speech resource, unless you already have
 
 1. Select [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) to download **speech.zip**. Open the folder. 
 
-1. On the Get started with Speech page, under *Speech* find *Real-time speech to text*. Select **Try out Real-time speech to text**.
+1. On the Get started with Speech page, under *Speech to text* find *Real-time speech to text*. Select **Try out Real-time speech to text**.
 
     ![Getting started with Speech](media/recognize-synthesize-speech/try-out-speech-to-text.png)
 
