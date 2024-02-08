@@ -73,7 +73,7 @@ Next, connect the Azure AI services resource you provisioned above to Vision Stu
 
     ![An image of people in a store with a plant obscuring a face.](./media/create-face-solutions/store-camera-3.jpg)
 
-1. Upload **store-camera-2.jpg** and review the face detection details that are returned. Notice how Azure AI Face can detect faces that are partially obscured. 
+1. Upload **store-camera-3.jpg** and review the face detection details that are returned. Notice how Azure AI Face did not detect the face that is obscured.
 
 In this exercise you have explored how Azure AI services can detect faces in images. If you have time, feel free to try the sample images or some of your own images.
 
