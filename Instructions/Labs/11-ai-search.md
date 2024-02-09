@@ -274,4 +274,4 @@ Let's see the power of the knowledge store in action. When you ran the *Import d
 
 ## Learn more
 
-This simple search index only some of the capabilities of the Azure AI Search service. To learn more about what you can do with this service, see the [Azure AI Search service page](/azure/search/search-what-is-azure-search).
+This simple search index only some of the capabilities of the Azure AI Search service. To learn more about what you can do with this service, see the [Azure AI Search service page](https://learn.microsoft.com/azure/search).
