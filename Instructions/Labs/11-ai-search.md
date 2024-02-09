@@ -186,7 +186,7 @@ After you have the documents in storage, you can use Azure AI Search to extract 
     - Runs the skillset of cognitive skills to generate more enriched fields.
     - Maps the extracted fields to the index.
 
-1. In the bottom half of the **Overview** page for your Azure AI Search resource, select the **Indexers** tab. This tab shows the newly created **coffee-indexer**. Wait a minute, and select **&orarr; Refresh** until the **Status** indicates success.
+1. Return to your Azure AI Search resource page. On the left pane, under **Search Management**, select  **Indexers**. Select the newly created **coffee-indexer**. Wait a minute, and select **&orarr; Refresh** until the **Status** indicates success.
 
 1. Select the indexer name to see more details.
 
