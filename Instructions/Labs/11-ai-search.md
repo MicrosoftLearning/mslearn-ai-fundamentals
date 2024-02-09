@@ -242,33 +242,33 @@ Let's see the power of the knowledge store in action. When you ran the *Import d
 
 1. In the Azure portal, navigate back to your Azure storage account.
 
-1. In the left-hand menu pane, select **Containers**. Select the **knowledge-store** container.
+2. In the left-hand menu pane, select **Containers**. Select the **knowledge-store** container.
 
     ![Screenshot of the knowledge-store container.](media/create-cognitive-search-solution/knowledge-store-blob-0.png)
 
-1. Select any of the items, and then click the **objectprojection.json** file.
+3. Select any of the items, and then click the **objectprojection.json** file.
 
     ![Screenshot of the objectprojection.json.](media/create-cognitive-search-solution/knowledge-store-blob-1.png)
 
-1. Select **Edit** to see the JSON produced for one of the documents from your Azure data store.
+4. Select **Edit** to see the JSON produced for one of the documents from your Azure data store.
 
     ![Screenshot of how to find the edit button.](media/create-cognitive-search-solution/knowledge-store-blob-2.png)
 
-1. Select the storage blob breadcrumb at the top left of the screen to return to the Storage account *Containers*.
+5. Select the storage blob breadcrumb at the top left of the screen to return to the Storage account *Containers*.
 
     ![Screenshot of the storage blob breadcrumb.](media/create-cognitive-search-solution/knowledge-store-blob-4.png)
 
-1. In the *Containers*, select the container *coffee-skillset-image-projection*. Select any of the items.
+6. In the *Containers*, select the container *coffee-skillset-image-projection*. Select any of the items.
 
     ![Screenshot of the skillset container.](media/create-cognitive-search-solution/knowledge-store-blob-5.png)
 
-1. Select any of the *.jpg* files. Select **Edit** to see the image stored from the document. Notice how all the images from the documents are stored in this manner.
+7. Select any of the *.jpg* files. Select **Edit** to see the image stored from the document. Notice how all the images from the documents are stored in this manner.
 
     ![Screenshot of the saved image.](media/create-cognitive-search-solution/knowledge-store-blob-3.png)
 
-1. Select the storage blob breadcrumb at the top left of the screen to return to the Storage account *Containers*.
+8. Select the storage blob breadcrumb at the top left of the screen to return to the Storage account *Containers*.
 
-1. Select **Storage browser** on the left-hand panel, and select **Tables**. There's a table for each entity in the index. Select the table *coffeeSkillsetKeyPhrases*.
+9. Select **Storage browser** on the left-hand panel, and select **Tables**. There's a table for each entity in the index. Select the table *coffeeSkillsetKeyPhrases*.
 
     Look at the key phrases the knowledge store was able to capture from the content in the reviews. Many of the fields are keys, so you can link the tables like a relational database. The last field shows the key phrases that were extracted by the skillset.
 
