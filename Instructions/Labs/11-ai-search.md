@@ -200,18 +200,36 @@ Use the Search explorer to write and test queries. Search explorer is a tool bui
 
    ![Screenshot of how to find Search explorer.](media/create-cognitive-search-solution/5-exercise-screenshot-7.png)
 
-1. Notice how the index selected is the *coffee-index* you created.
+1. Notice how the index selected is the *coffee-index* you created. Below the index selected, change the *view* to **JSON view**. 
 
     ![Screenshot of the Search explorer.](media/create-cognitive-search-solution/search-explorer-query.png)
 
-    In the **Query string** field, enter `search=*&$count=true`, and then select **Search**. The search query returns all the documents in the search index, including a count of all the documents in the **@odata.count** field. The search index should return a JSON document containing your search results.
+    In the **JSON query editor** field, copy and paste: 
+```json
+{
+    "search": "*",
+    "count": true
+}
+```
+1. Select **Search**. The search query returns all the documents in the search index, including a count of all the documents in the **@odata.count** field. The search index should return a JSON document containing your search results.
 
-    > **Note**
-    > If a **To search in the portal, please allow the portal origin in your index CORS settings** message appears, select **Allow portal**, and then select **Search**.
+1. Now let's filter by location. In the **JSON query editor** field, copy and paste: 
+```json
+{
+    "search": "locations:'Chicago'",
+    "count": true
+}
+```
+1. Select **Search**. The query searches all the documents in the  index and filters for reviews with a Chicago location. You should see `3` in the `@odata.count` field.
 
-1. Now let's filter by location. Enter `search=locations:'Chicago'` in the **Query string** field, and then select **Search**. The query searches all the documents in the  index and filters for reviews with a Chicago location.
-
-1. Now let's filter by sentiment. Enter `search=sentiment:'negative'` in the **Query string** field, and then select **Search**. The query searches all the documents in the index and filters for reviews with a negative sentiment.
+1. Now let's filter by sentiment. In the **JSON query editor** field, copy and paste: 
+```json
+{
+    "search": "sentiment:'negative'",
+    "count": true
+}
+```
+1. Select **Search**. The query searches all the documents in the index and filters for reviews with a negative sentiment. You should see `1` in the `@odata.count` field.
 
    > **Note**
    > See how the results are sorted by `@search.score`. This is the score assigned by the search engine to show how closely the results match the given query.
