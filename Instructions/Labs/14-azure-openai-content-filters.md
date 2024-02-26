@@ -26,9 +26,22 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 2. Create an **Azure OpenAI** resource with the following settings:
     - **Subscription**: *An Azure subscription that has been approved for access to the Azure OpenAI service.*
     - **Resource group**: *Choose an existing resource group or create a new one with a name of your choice.*
-    - **Region**: *Choose any available region.*
-    - **Name**: *A unique name of your choice.*
+    - **Region**: *Make a **random** choice from any of the following regions*\*
+        - Australia East
+        - Canada East
+        - East US
+        - East US 2
+        - France Central
+        - Japan East
+        - North Central US
+        - Sweden Central
+        - Switzerland North
+        - UK South
+    - **Name**: *A unique name of your choice*
     - **Pricing tier**: Standard S0
+
+    > \* Azure OpenAI resources are constrained by regional quotas. The listed regions include default quota for the model type(s) used in this exercise. Randomly choosing a region reduces the risk of a single region reaching its quota limit in scenarios where you are sharing a subscription with other users. In the event of a quota limit being reached later in the exercise, there's a possibility you may need to create another resource in a different region.
+
 3. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
 ## Deploy a model
@@ -39,7 +52,14 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
 2. In Azure OpenAI Studio, create a new deployment with the following settings:
     - **Model**: gpt-35-turbo
     - **Model version**: Auto-update to default
-    - **Deployment name**: 35turbo
+    - **Deployment name**: *A unique name of your choice*
+    - **Advanced options**
+        - **Content filter**: Default
+        - **Deployment type**: Standard
+        - **Tokens per minute rate limit**: 5K\*
+        - **Enable dynamic quota**: Enabled
+
+    > \* A rate limit of 5,000 tokens per minute is more than adequate to complete this exercise while leaving capacity for other people using the same subscription.
 
 > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **GPT 3.5 Turbo** model in this exercise, which is highly capable for natural language generation and chat scenarios.
 

@@ -26,9 +26,12 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 2. Create an **Azure OpenAI** resource with the following settings:
     - **Subscription**: *An Azure subscription that has been approved for access to the Azure OpenAI service.*
     - **Resource group**: *Choose an existing resource group or create a new one with a name of your choice.*
-    - **Region**: *Choose any available region.*
-    - **Name**: *A unique name of your choice.*
+    - **Region**: East US\*
+    - **Name**: *A unique name of your choice*
     - **Pricing tier**: Standard S0
+
+    > \* Different regions have different availability and quota for models. In this exercise, you'll be using a GPT-35-Turbo model for text generation and a DALL-E model for image generation, both of which are suppoprted in East US. 
+
 3. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
 ## Explore Azure OpenAI Studio
@@ -58,6 +61,13 @@ To experiment with natural language generation, you must first deploy a model.
     - **Model**: gpt-35-turbo
     - **Model version**: Auto-update to default
     - **Deployment name**: *A unique name for your model deployment*
+    - **Advanced options**
+        - **Content filter**: Default
+        - **Deployment type**: Standard
+        - **Tokens per minute rate limit**: 5K\*
+        - **Enable dynamic quota**: Enabled
+
+    > \* A rate limit of 5,000 tokens per minute is more than adequate to complete this exercise while leaving capacity for other people using the same subscription.
 
 ## Use the *Chat* playground to work with the model
 
