@@ -8,7 +8,7 @@ In this exercise you will explore generative AI with Microsoft Copilot.
 
 ## Sign into Microsoft Copilot
 
-1. Open [copilot.microsoft.com](https://copilot.microsoft.com?azure-portal=true) and sign in with your personal Microsoft account.
+1. Open [Microsoft Copilot](https://copilot.microsoft.com) at `https://copilot.microsoft.com` and sign in with your personal Microsoft account.
 
 1. Microsoft Copilot uses generative AI to enhance Bing search results. What this means is that unlike search alone, which returns existing content, Microsoft Copilot can put together new responses based on natural language modeling and the web's information.  
 
@@ -36,11 +36,9 @@ In this exercise you will explore generative AI with Microsoft Copilot.
 
     ![A screenshot of elephants eating hamgburgers.](./media/generative-ai/dall-e-elephant.png)
 
-    Importantly, notice that the response may look similar but not the same. This is because responses are varied.  
+    > **Note**: Your images may not be identical to the ones shown here.  
 
-1. In the response, there is text at the bottom that reads "Powered by DALL-E". Consider how DALL-E is based on large language models as your natural language input generates images. 
-
-1. Return to Copilot's chat by clicking on the Microsoft Bing icon on the top right corner of the screen. 
+1. In the response, there is text at the bottom that reads "Powered by DALL-E". DALL-E is a large language model that generates images from natural language input.
 
 ## Try code generation
 
