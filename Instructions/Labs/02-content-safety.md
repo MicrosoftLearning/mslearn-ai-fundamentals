@@ -37,7 +37,7 @@ Before using the studio, you need to associate an Azure AI services resource wit
 
 ![Screenshot of where to select create a new resource from the Content Safety Studio's settings page.](./media/content-safety/create-new-resource-from-studio.png)
 
-1. On the *Create Content Safety* page in the [Azure Portal](https://portal.azure.com?auzre-portal=true), you need to configure several details to create your resource. Configure it with the following settings:
+1. On the *Create Content Safety* page in the [Azure Portal](https://portal.azure.com?azure-portal=true), you need to configure several details to create your resource. Configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select or create a resource group with a unique name*.
     - **Region**: *Choose any available region*.
