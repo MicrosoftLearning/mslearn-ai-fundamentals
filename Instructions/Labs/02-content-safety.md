@@ -30,29 +30,29 @@ Before using the studio, you need to associate an Azure AI services resource wit
 
 ![A screenshot of the settings icon on the top right of the screen, next to the bell, question mark, and smile icons.](./media/content-safety/settings-toggle.png)
 
-1. On the **Settings** page, you will see a *Directory* tab and *Resource* tab. On the *Resource* tab, select **Create a new resource**. This takes you to page to create a resource in the Azure Portal.
+2. On the **Settings** page, you will see a *Directory* tab and *Resource* tab. On the *Resource* tab, select **Create a new resource**. This takes you to page to create a resource in the Azure Portal.
 
 > **Note**
 > The *Directory* tab allows users to select different directories from which to create resources. You do not need to change its settings unless you wish to use a different directory. 
 
 ![Screenshot of where to select create a new resource from the Content Safety Studio's settings page.](./media/content-safety/create-new-resource-from-studio.png)
 
-1. On the *Create Content Safety* page in the [Azure Portal](https://portal.azure.com?azure-portal=true), you need to configure several details to create your resource. Configure it with the following settings:
+3. On the *Create Content Safety* page in the [Azure Portal](https://portal.azure.com?azure-portal=true), you need to configure several details to create your resource. Configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select or create a resource group with a unique name*.
     - **Region**: *Choose any available region*.
     - **Name**: *Enter a unique name*.
     - **Pricing tier**: Free F0
 
-1. Select **Review + Create** and review the configuration. Then select **Create**. The screen will indicate when the deployment is complete. 
+4. Select **Review + Create** and review the configuration. Then select **Create**. The screen will indicate when the deployment is complete. 
 
 *Congrats! You've just created, or provisioned, an Azure AI services resource. The one you provisioned in particular is a single-service Content Safety service resource.*
 
-1. When the deployment is complete, open up a new tab and return to the [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). 
+5. When the deployment is complete, open up a new tab and return to the [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). 
 
-1. Select the **Settings** icon on the top right of the screen again. This time you should see that your newly created resource has been added to the list.  
+6. Select the **Settings** icon on the top right of the screen again. This time you should see that your newly created resource has been added to the list.  
 
-1. On the Content Safety Studio's Settings page, select the Azure AI service resource you just created and click **Use resource** on the bottom of the screen. You will be taken back to the studio home page. Now you can begin using the studio with your newly created resource.
+7. On the Content Safety Studio's Settings page, select the Azure AI service resource you just created and click **Use resource** on the bottom of the screen. You will be taken back to the studio home page. Now you can begin using the studio with your newly created resource.
 
 ## Try out text moderation in the Content Safety Studio
 
