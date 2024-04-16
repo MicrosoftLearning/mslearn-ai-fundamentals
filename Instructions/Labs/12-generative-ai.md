@@ -21,7 +21,7 @@ This exercise requires a free Microsoft account (for example an *outlook.com*, *
 To start your exploration of generative AI, let's use Microsoft Copilot in Edge to examine an existing document and extract some insights from it.
 
 1. In Microsoft Edge, browse to [OneDrive](https://onedrive.live.com) at `https://onedrive.live.com` and sign in using your personal Microsoft account - closing any welcome messages or offers that are displayed.
-1. In another browser tab, open the document [Business Idea.docx](https://github.com/GraemeMalcolm/mslearn-copilot/raw/main/data/generative-ai/Business%20Idea.docx) from `https://github.com/GraemeMalcolm/mslearn-copilot/raw/main/data/generative-ai/Business%20Idea.docx`. Then, when the document opens in Edge, select the option to **Save a copy to OneDrive** and save the document in your **Documents** folder in OneDrive. The document should then open in Microsoft Word online automatically.
+1. In another browser tab, open the document [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) from `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. Then, when the document opens in Edge, select the option to **Save a copy to OneDrive** and save the document in your **Documents** folder in OneDrive. The document should then open in Microsoft Word online automatically.
 
     > **Tip**: If you don't see the option to save a copy of the file to OneDrive, download it to your local computer. Then, in OneDrive, open the **Documents** folder and use the **+ Add new** button to upload the **Business Idea.docx** file from your local computer to OneDrive.
 
