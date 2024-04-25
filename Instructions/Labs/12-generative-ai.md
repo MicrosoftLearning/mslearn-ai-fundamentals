@@ -34,7 +34,7 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
 1. In the chat box at the bottom of the Copilot pane, enter following the prompt:
 
     ```
-    What is this document about?`
+    What is this document about?
     ```
 
     If prompted, confirm that you want to allow Copilot to access the page and acknowledge that the conversation will not be saved (note that Copilot protects the privacy of the conversation because it includes information from a personal document in your OneDrive).
