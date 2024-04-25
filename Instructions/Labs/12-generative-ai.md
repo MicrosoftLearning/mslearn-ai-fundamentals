@@ -43,7 +43,7 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
 
     ![Screenshot of the Copilot pane with a response.](./media/generative-ai/copilot-response.png)
 
-    > **Note**: The specific reeponse may vary.
+    > **Note**: The specific response may vary.
 
 1. Enter the following prompt
 
