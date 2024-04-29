@@ -125,7 +125,7 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 
     ![Screenshot of the Copilot pane in Microsoft Edge.](./media/generative-ai/edge-copilot.png)
 
-1. In the Copilot pane, make sure **GPT-4 Creative** is highlighted and **GPT-4 Turbo** is selected for the best results, then enter the following prompt:
+1. In the Copilot pane, make sure **More Creative** is selected for the best results, then enter the following prompt:
 
     ```
     Create a corporate logo for the cleaning company. The logo should be round and include an iconic New York landmark.
