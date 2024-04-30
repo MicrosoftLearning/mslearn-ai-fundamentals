@@ -76,7 +76,7 @@ Now that you've done some initial research, let's have Copilot help you develop 
 1. Enter the following prompt, replacing *Contoso Cleaning* with the company name of your choice:
 
     ```
-    Write a business plan for "Constoso Cleaning" based on the information in this document. Include an executive summary, market overview, and financial projections.
+    Write a business plan for "Contoso Cleaning" based on the information in this document. Include an executive summary, market overview, and financial projections.
     ```
 
 1. Review the response, and under the output use the **Copy** (&#128461;) icon to copy it to the clipboard. Then select all of the text in the **Business Ideas.docx** document and paste the copied text into the document to replace it. Finally, tidy up the pasted text by replacing the initial text in the response (in which Copilot acknowledged the instruction) with a heading for your cleaning company name. You should end up with a business plan document, similar to this:
