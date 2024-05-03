@@ -6,6 +6,8 @@ lab:
 
 In this exercise you will explore some of the ways in which Microsoft Copilot can use generative AI to help you be more productive when creating new content. In the scenario for this exercise, you will start with some high-level notes for a business idea, and use Copilot for Microsoft 365 across multiple apps such as Word, PowerPoint, and Excel to help you develop a business plan and a presentation for potential investors.
 
+This exercise should take approximately **40** minutes to complete.
+
 ## Before you start
 
 This exercise requires a **Copilot for Microsoft 365** license from your organization. If you do not have a Copilot for Microsoft 365 license, you should complete the previous lab "Explore Copilot in Microsoft Edge" that covers similar exercises with a free Microsoft account (*outlook.com*, *live.com*, or *hotmail.com* for example) and the Microsoft Edge browser.
