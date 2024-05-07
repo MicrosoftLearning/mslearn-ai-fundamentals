@@ -8,19 +8,14 @@ In this exercise you will explore some of the ways in which Microsoft Copilot ca
 
 This exercise should take approximately **40** minutes to complete.
 
-## Before you start
-
-This exercise requires a **Copilot for Microsoft 365** license from your organization. If you do not have a Copilot for Microsoft 365 license, you should complete the previous lab "Explore Copilot in Microsoft Edge" that covers similar exercises with a free Microsoft account (*outlook.com*, *live.com*, or *hotmail.com* for example) and the Microsoft Edge browser.
-
-1. If you don't already have the latest version of Microsoft 365 installed, download and install it [aka.ms/office-install](https://aka.ms/office-install) after signing in with your Microsoft 365 account.
-1. After installing, ensure that you can open Microsoft Word, Microsoft PowerPoint, Microsoft Outlook, Microsoft Excel, and that OneDrive is syncing your files.
+> **Note**: This exercise requires a **Copilot for Microsoft 365** license from your organization.
 
 ## Use Copilot to explore a document and research an idea
 
 To start your exploration of generative AI, let's use Copilot for Word to examine an existing document and extract some insights from it.
 
 1. In Microsoft Edge, open the document [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) from `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. Then, when the document opens in Edge, select **Download** to save a copy on your PC.
-1. Navigate to where you saved the document, usually the **Downloads** folder in Windows, and drag or copy/paste **Business Idea.docx** to your OneDrive **Documents** folder.
+1. Navigate to where you saved the document, usually the **Downloads** folder in Windows, and drag or copy/paste **Business Idea.docx** to your OneDrive.
 1. Open **Business Idea.docx** in **Microsoft Word** on your PC and review the document, which describes some high-level ideas for a cleaning business in New York City.
 1. Find and select the **Copilot** icon on the Word toolbar to open the Copilot pane, as shown here:
 
