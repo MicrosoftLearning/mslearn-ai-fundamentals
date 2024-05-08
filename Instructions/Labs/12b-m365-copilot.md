@@ -60,8 +60,6 @@ Now that you've done some initial research, let's have Copilot help you develop 
     Can you suggest a name for my cleaning business?
     ```
 
-    <!-- ![Screenshot of the Copilot responding with a list of possible business names.](./media/generative-ai/copilot-word-business-name-prompt.png) -->
-
 1. Review the suggestions and select a name for your cleaning company (or continue prompting to find a name you like).
 1. In the Word document, select the Copilot icon in the margin to draft new content. Enter the following prompt, replacing **Contoso Cleaning** with the company name of your choice:
 
@@ -75,10 +73,7 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
     ![Screenshot of a Word document with a Copilot-generated business plan.](./media/generative-ai/copilot-draft-business-plan-response.png)
 
-1. Save the Word document and close it. 
-
-> [!NOTE]
-> If you weren't able to complete any of the steps due to time constraints or unforeseen issues, you can download a sample version of the business idea document with a business plan here: [Business Idea M365 FINAL.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea%20M365%20FINAL.docx) from `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea%20M365%20FINAL.docx`.
+1. Save the Word document and close it.
 
 ## Use Copilot to create content for a presentation
 
