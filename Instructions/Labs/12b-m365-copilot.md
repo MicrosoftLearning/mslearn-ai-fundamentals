@@ -79,7 +79,7 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
 With Copilot's help, you've created a draft of a business plan for the cleaning business idea. Now you'll need an effective presentation to convince an investor to lend you the funding to start the business.
 
-1. On your PC, open **PowerPoint** and create a new **blank presentation**. If the **Designer** pane opens automatically, close it.
+1. Open **PowerPoint** and create a new **blank presentation**. If the **Designer** pane opens automatically, close it.
 
     ![Screenshot of creating a new blank presentation in PowerPoint.](./media/generative-ai/powerpoint-create-blank-presentation.png)
 
@@ -94,7 +94,7 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 1. In the Copilot pane, ask to add a new slide using this prompt:
 
     ```
-    Create a new slide with a summary of the benefits of using a corporate cleaning company for your business. The summary should consist of five short bullet points and use the "Two Content" slide layout.
+    Create a new slide with a summary of the benefits of using a corporate cleaning company for your business. 
     ```
 
     ![Screenshot of PowerPoint presentation create a new slide.](./media/generative-ai/copilot-powerpoint-add-new-slide.png)
@@ -107,32 +107,7 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 
     ![Screenshot of Copilot generating a new image and adding it to the slide.](./media/generative-ai/copilot-powerpoint-create-image.png)
 
-1. Next, open the **Microsoft Edge** browser and use the **Copilot** icon on the Edge toolbar to open the Copilot pane, as shown here:
-
-    ![Screenshot of the Copilot pane in Microsoft Edge.](./media/generative-ai/edge-copilot.png)
-
-1. In the Copilot pane, make sure **More Creative** is selected for the best results, then enter the following prompt:
-
-    ```
-    Create a corporate logo for the cleaning company. The logo should be round and include an iconic New York landmark.
-    ```
-
-    ![Screenshot of Copilot in Edge generating a new image.](./media/generative-ai/copilot-edge-generate-logo.png)
-
-1. Review the results, which should present four options for a logo created by Microsoft Designer.
-1. Use more prompts to iterate on the design (for example, `Make it green and blue`) until you have a logo with which you are happy.
-
-    ![Screenshot of Copilot in Edge with the logo options.](./media/generative-ai/copilot-edge-generate-logo-results.png)
-
-1. Right-click the logo design you prefer and **Copy image**. Then paste it the title slide of the PowerPoint presentation by right-clicking and selecting **Paste > Picture**, like this:
-
-    ![Screenshot of pasting a picture in PowerPoint.](./media/generative-ai/powerpoint-paste-picture.png)
-
-1. Arrange the logo so it fits in with the slide and then, on the PowerPoint title bar, select the default presentation name (**Presentation**) and rename it to `Business Presentation.pptx`.
-
-    ![Screenshot of the title slide in PowerPoint with the company logo.](./media/generative-ai/copilot-powerpoint-title-slide-with-logo.png)
-
-1. Close the PowerPoint tab and return to the **Documents** folder in your OneDrive.
+1. Save the presentation and close PowerPoint.
 
 ## Use Copilot to compose an email
 
