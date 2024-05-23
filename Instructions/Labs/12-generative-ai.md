@@ -8,15 +8,7 @@ In this exercise you will explore some of the ways in which Microsoft Copilot ca
 
 This exercise should take approximately **40** minutes to complete.
 
-## Before you start
-
-This exercise requires a free Microsoft account (for example an *outlook.com*, *live.com*. or *hotmail.com* account), and the Microsoft Edge web browser.
-
-1. If you don't already have Microsoft Edge installed, download and install it for free from [https://www.microsoft.com/edge/download](https://www.microsoft.com/edge/download).
-1. If you don't already have a Microsoft account, sign up for one at [https://signup.live.com](https://signup.live.com).
-1. Sign into Microsoft Edge using your Microsoft account.
-
-    > **Tip**: If you did not sign into Edge after creating your account, use the user account icon (&#128100;) on the Edge toolbar to sign in using a *personal* account.
+> **Note**: This exercise assumes that you have a [personal Microsoft Account](https://signup.live.com) (such as an outlook.com account) with which you are signed into [Microsoft Edge](https://www.microsoft.com/edge/download) on your computer.
 
 ## Use Copilot to explore a document and research an idea
 
