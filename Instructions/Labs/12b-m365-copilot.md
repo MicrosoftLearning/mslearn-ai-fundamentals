@@ -14,10 +14,10 @@ This exercise should take approximately **40** minutes to complete.
 
 To start your exploration of generative AI, let's use Copilot for Word to examine an existing document and extract some insights from it.
 
-1. In Microsoft Edge, open the document [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) from `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. Then, when the document opens in Edge, select **Download** to save a copy on your PC.
+1. In Microsoft Edge, open the document [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) at `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. Download the document to save a copy on your PC.
 1. Navigate to where you saved the document, usually the **Downloads** folder in Windows, and drag or copy/paste **Business Idea.docx** to your OneDrive.
-1. Open **Business Idea.docx** in **Microsoft Word** on your PC and review the document, which describes some high-level ideas for a cleaning business in New York City.
-1. Find and select the **Copilot** icon on the Word toolbar to open the Copilot pane, as shown here:
+1. In your OneDrive, open **Business Idea.docx** in Microsoft Word (closing any welcome messages or notifications of new features) and review the document, which describes some high-level ideas for a cleaning business in New York City. If prompted, enable editing.
+1. Find and select the **Copilot** icon on the Word toolbar to open the Copilot pane, as shown here (your visual theme may vary):
 
     ![Screenshot of the Copilot pane in Microsoft Word.](./media/generative-ai/copilot-word-pane.png)
 
@@ -44,17 +44,19 @@ To start your exploration of generative AI, let's use Copilot for Word to examin
 
     ![Screenshot asking Copilot to visualize in a table format.](./media/generative-ai/copilot-rewrite-as-table.png)
 
-1. Review the table and ask Copilot to add more information, such as descriptions and references for more information.  Your response should look something like this:
+1. Review the table and ask Copilot to add more information, such as references for more information.  Your response should look something like this:
 
     ![Screenshot of the response from Copilot in a table format.](./media/generative-ai/copilot-rewrite-as-table-response.png)
 
     > **Important**: The AI-generated response is based on information publicly on the Web. While it may be useful to help you understand the steps required to set up a business, it is not guaranteed to be 100% accurate and does not replace the need for professional advice!
 
+1. When you're happy with the table that Copilot has generated, select the option to **Keep it**.
+
 ## Use Copilot to create content for a business plan
 
 Now that you've done some initial research, let's have Copilot help you develop a business plan for your cleaning company.
 
-1. With the **Business Idea M365.docx** document still open, bring up the Copilot pane and enter the following prompt:
+1. With the **Business Idea.docx** document still open, in the Copilot pane, enter the following prompt:
 
     ```
     Can you suggest a name for my cleaning business?
@@ -83,7 +85,7 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 
     ![Screenshot of creating a new blank presentation in PowerPoint.](./media/generative-ai/powerpoint-create-blank-presentation.png)
 
-1. Select the **Copilot button** in the **Home tab** of the ribbon, select **Create presentation from file...**, then choose **Business Idea M365.docx** from your OneDrive Documents folder and send the prompt to Copilot.
+1. Select the **Copilot button** in the **Home tab** of the ribbon, select **Create presentation from file...**, then choose **Business Idea.docx** from your OneDrive Documents folder and send the prompt to Copilot.
 
     ![Screenshot of Copilot creating a presentation from a Word document.](./media/generative-ai/copilot-powerpoint-create-presentation-from-file.png)
 
