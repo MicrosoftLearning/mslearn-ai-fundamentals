@@ -31,7 +31,7 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
     What is this document about?
     ```
 
-    If prompted, confirm that you want to allow Copilot to access the page and acknowledge that the conversation will not be saved (note that Copilot protects the privacy of the conversation because it includes information from a personal document in your OneDrive).
+    If prompted, confirm that you want to allow Copilot to access the page.
 
 1. Review the response from Copilot, which should summarize the main points in the document, as shown here:
 
@@ -39,13 +39,6 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
 
     > **Note**: The specific response may vary.
 
-1. Enter the following prompt
-
-    ```
-    What's the market opportunity for this business idea?
-    ```
-
-1. Review the response, which should provide some insights from the Web that may be useful when planning a new cleaning business in New York.
 1. Enter the following prompt:
 
     ```

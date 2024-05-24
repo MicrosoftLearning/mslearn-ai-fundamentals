@@ -14,9 +14,8 @@ This exercise should take approximately **40** minutes to complete.
 
 To start your exploration of generative AI, let's use Copilot for Word to examine an existing document and extract some insights from it.
 
-1. In Microsoft Edge, open the document [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) at `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. Download the document to save a copy on your PC.
-1. Navigate to where you saved the document, usually the **Downloads** folder in Windows, and drag or copy/paste **Business Idea.docx** to your OneDrive.
-1. In your OneDrive, open **Business Idea.docx** in Microsoft Word (closing any welcome messages or notifications of new features) and review the document, which describes some high-level ideas for a cleaning business in New York City. If prompted, enable editing.
+1. In your web browser, open the document [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) at `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. Then download the file and save it in the **Documents** folder in your **OneDrive** folder.
+1. In the **Documents** folder in your **OneDrive** folder, open **Business Idea.docx** in Microsoft Word (closing any welcome messages or notifications of new features) and review the document, which describes some high-level ideas for a cleaning business in New York City. If prompted, enable editing.
 1. Find and select the **Copilot** icon on the Word toolbar to open the Copilot pane, as shown here (your visual theme may vary):
 
     ![Screenshot of the Copilot pane in Microsoft Word.](./media/generative-ai/copilot-word-pane.png)
@@ -44,7 +43,7 @@ To start your exploration of generative AI, let's use Copilot for Word to examin
 
     ![Screenshot asking Copilot to visualize in a table format.](./media/generative-ai/copilot-rewrite-as-table.png)
 
-1. Review the table and ask Copilot to add more information, such as references for more information.  Your response should look something like this:
+1. Review the table and ask Copilot to add more information, such as references for more details.  Your response should look something like this (you may need to use the **Regenerate** button)
 
     ![Screenshot of the response from Copilot in a table format.](./media/generative-ai/copilot-rewrite-as-table-response.png)
 
