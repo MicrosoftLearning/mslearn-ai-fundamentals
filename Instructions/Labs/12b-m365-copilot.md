@@ -14,8 +14,15 @@ This exercise should take approximately **40** minutes to complete.
 
 To start your exploration of generative AI, let's use Copilot for Word to examine an existing document and extract some insights from it.
 
-1. In your web browser, open the document [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) at `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. Then download the file and save it in the **Documents** folder in your **OneDrive** folder.
-1. In the **Documents** folder in your **OneDrive** folder, open **Business Idea.docx** in Microsoft Word (closing any welcome messages or notifications of new features) and review the document, which describes some high-level ideas for a cleaning business in New York City. If prompted, enable editing.
+1. In your web browser, open the document [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) at `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. 
+1. Select **Download** to save the file to your PC's **Downloads** folder.
+1. Open **Windows Explorer** and select **OneDrive** to sign-in to the OneDrive app. Enter your credentials and skip any options to backup data, selecting **I'll do it later**.
+
+    ![Screenshot of the login screen for OneDrive.](./media/generative-ai/onedrive-client-signin.png)
+
+1. **Move** or **Copy & Paste** the document you just downloaded to the OneDrive folder.
+1. From your **OneDrive** folder, open **Business Idea.docx** in Microsoft Word (closing any welcome messages or notifications of new features) and review the document, which describes some high-level ideas for a cleaning business in New York City. 
+    1. If prompted, select **Enable editing** at the top.
 1. Find and select the **Copilot** icon on the Word toolbar to open the Copilot pane, as shown here (your visual theme may vary):
 
     ![Screenshot of the Copilot pane in Microsoft Word.](./media/generative-ai/copilot-word-pane.png)
@@ -43,7 +50,7 @@ To start your exploration of generative AI, let's use Copilot for Word to examin
 
     ![Screenshot asking Copilot to visualize in a table format.](./media/generative-ai/copilot-rewrite-as-table.png)
 
-1. Review the table and ask Copilot to add more information, such as references for more details.  Your response should look something like this (you may need to use the **Regenerate** button)
+1. Review the table and ask Copilot to add more information, such as references for more details.  Your response should look something like this (you may need to use the **Regenerate** button):
 
     ![Screenshot of the response from Copilot in a table format.](./media/generative-ai/copilot-rewrite-as-table-response.png)
 
@@ -76,7 +83,69 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
 1. Save the Word document and close it.
 
-## Use Copilot to create content for a presentation
+## Visualize financial projections in Copilot for Excel
+
+With a business plan in hand, let's take some of that data on financial projections and ask Copilot in Excel to visualize that data for us, so we can include it in emails or presentations to investors.
+
+1. On your PC with Microsoft 365 apps installed, open **Excel** and create a new blank workbook. Immediately save the workbook as **Financial Projetions.xlsx** to OneDrive, or Copilot won't work.
+1. Copy the table of sales projection from **Business Idea.docx** into the Excel spreadsheet and **format it as a table**. If Copilot didn't include that information in the previous exercise, ask Copilot to add that data to the bottom of your business plan.
+    1. Select a **cell** within your data.
+    1. Select **Home** and choose **Format as Table** under Styles. 
+    1. Choose a style for your table.
+    1. In the **Create Table** dialog box, confirm or set your cell range.
+    1. Mark if your table has headers, and select **OK**.
+1. With your sales projections formatted as a table, open the Copilot pane from the Excel ribbon and enter the following prompt:
+
+    ```
+    Suggest ways to visualize these financial projections.
+    ```
+    
+1. Copilot should suggest 1 or 2 ways to visualize your data and offer to add a pivot chart to a new sheet.
+
+    ![Screenshot of Copilot in Excel visualizing financial projections.](./media/generative-ai/copilot-excel-visualize-projections.png)
+
+1. However, you may want to see more data in the chart to show year-over-year changes, so enter the following prompt to add more:
+
+    ```
+    Visualize these financial projections in a line chart to show year-over-year revenue and profits.
+    ```
+
+    ![Screenshot of Copilot in Excel visualizing financial projections.](./media/generative-ai/copilot-excel-visualize-more.png)
+
+1. Add the pivot chart to a new sheet and open it. Select the chart and then select **Design** to apply styles, change the chart type and other actions. At the end, you should have something that resembles this:
+
+    ![Screenshot of Copilot in Excel adding a PivotChart.](./media/generative-ai/copilot-excel-chart-design.png)
+
+1. Save the file to OneDrive and close Excel.
+
+You have just used data created from Copilot in Word to visualize it in Excel. In the next exercise, you'll move onto using Copilot in Outlook to compose and send emails about the work you've done.
+
+## Use Copilot to compose an email
+
+You've created some collateral to help you get your business started. Now it's time to reach out to an investor seeking some startup funding.
+
+1. On your PC with Microsoft 365 apps installed, open **Outlook**. If you haven't setup Outlook with your Microsoft 365 account, see [Set up and use Outlook - Microsoft Support](https://support.microsoft.com/office/set-up-and-use-outlook-4636f361-d5e3-4a87-9cd4-382858de55fa).
+1. Turn on the **new Outlook** experience. To get the latest Copilot features in Outlook, you should be using the "New Outlook" experience. To see which version you're using, see [What version of Outlook do I have? - Microsoft Support](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c).
+1. Create a new email, and fill in the **To** box with your own email address.
+1. You can start drafting your email from the Copilot pane or right from within the body of the email:
+
+    ![Screenshot of Outlook and the options to draft an email with Copilot.](./media/generative-ai/copilot-draft-email-outlook.png)
+    
+1. Enter the following prompt and adjust the tone to "Formal" and the length to "Medium":
+
+    ```
+    Request a meeting with an investment bank to discuss funding for a commercial cleaning business.
+    ```
+
+    ![Screenshot of drafting an email with Copilot in Outlook.](./media/generative-ai/copilot-draft-email-adjust-tone-outlook.png)
+
+1. Select **Generate draft**, and review the output that is generated. Adjust the tone or tell Copilot what you'd like to change about the email.
+
+    ![Screenshot of the email generated with Copilot in Outlook.](./media/generative-ai/copilot-draft-email-results-outlook.png)
+
+1. You can send the email to yourself if you wish!
+
+<!-- ## Use Copilot to create content for a presentation
 
 With Copilot's help, you've created a draft of a business plan for the cleaning business idea. Now you'll need an effective presentation to convince an investor to lend you the funding to start the business.
 
@@ -110,30 +179,7 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 
 1. Save the presentation and close PowerPoint.
 
-## Use Copilot to compose an email
-
-You've created some collateral to help you get your business started. Now it's time to reach out to an investor seeking some startup funding.
-
-1. On your PC with Microsoft 365 apps installed, open **Outlook**. If you haven't setup Outlook with your Microsoft 365 account, see [Set up and use Outlook - Microsoft Support](https://support.microsoft.com/office/set-up-and-use-outlook-4636f361-d5e3-4a87-9cd4-382858de55fa).
-1. To get the latest Copilot features in Outlook, you should be using the "New Outlook" experience. To see which version you're using, see [What version of Outlook do I have? - Microsoft Support](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c).
-1. Create a new email, and fill in the **To** box with your own email address.
-1. You can start drafting your email from the Copilot pane or right from within the body of the email:
-
-    ![Screenshot of Outlook and the options to draft an email with Copilot.](./media/generative-ai/copilot-draft-email-outlook.png)
-    
-1. Enter the following prompt and adjust the tone to "Formal" and the length to "Medium":
-
-    ```
-    Request a meeting with an investment bank to discuss funding for a commercial cleaning business.
-    ```
-
-    ![Screenshot of drafting an email with Copilot in Outlook.](./media/generative-ai/copilot-draft-email-adjust-tone-outlook.png)
-
-1. Select **Generate draft**, and review the output that is generated.
-
-    ![Screenshot of the email generated with Copilot in Outlook.](./media/generative-ai/copilot-draft-email-results-outlook.png)
-
-1. You can send the email to yourself if you wish!
+-->
 
 ## Challenge
 
