@@ -16,11 +16,7 @@ To start your exploration of generative AI, let's use Copilot for Word to examin
 
 1. In your web browser, open the document [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) at `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. 
 1. Select **Download** to save the file to your PC's **Downloads** folder.
-1. Open **Windows Explorer** and select **OneDrive** to sign-in to the OneDrive app. Enter your credentials and skip any options to backup data, selecting **I'll do it later**.
-
-    ![Screenshot of the login screen for OneDrive.](./media/generative-ai/onedrive-client-signin.png)
-
-1. **Move** or **Copy & Paste** the document you just downloaded to the OneDrive folder.
+1. **Move** or **Copy & Paste** the document you just downloaded to the **OneDrive** folder.
 1. From your **OneDrive** folder, open **Business Idea.docx** in Microsoft Word (closing any welcome messages or notifications of new features) and review the document, which describes some high-level ideas for a cleaning business in New York City. 
     1. If prompted, select **Enable editing** at the top.
 1. Find and select the **Copilot** icon on the Word toolbar to open the Copilot pane, as shown here (your visual theme may vary):
