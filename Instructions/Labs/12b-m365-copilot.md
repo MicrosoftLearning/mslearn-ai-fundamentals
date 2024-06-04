@@ -173,7 +173,7 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 
 ## Challenge
 
-Now you've seen how to use Copilot for Microsoft 365 in a couple different apps to research ideas and generate content, why not try exploring further? Start a new Copilot session in Word, PowerPoint, or even Edge, and then try using Copilot to plan an event to promote children's literacy at a local library. Some things you could try include:
+Now you've seen how to use Copilot for Microsoft 365 in a couple different apps to research ideas and generate content, why not try exploring further? Try using Copilot to plan an event to promote children's literacy at a local library. Some things you could try include:
 
 - Research some tips for encouraging children to read at an early age.
 - Create a flyer or poster for the event.
