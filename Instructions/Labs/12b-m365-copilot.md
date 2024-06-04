@@ -85,7 +85,7 @@ Now that you've done some initial research, let's have Copilot help you develop 
 With a business plan in hand, let's take some of that data on financial projections and ask Copilot in Excel to visualize that data for us, so we can include it in emails or presentations to investors.
 
 1. On your PC with Microsoft 365 apps installed, open **Excel** and create a new blank workbook. Immediately save the workbook as **Financial Projetions.xlsx** to OneDrive, or Copilot won't work.
-1. Copy the table of sales projection from **Business Idea.docx** into the Excel spreadsheet and **format it as a table**. To do this:
+1. Paste the table of sales projection from **Business Idea.docx** into the Excel spreadsheet and **format it as a table**. To do this:
     1. Select a **cell** within your data.
     1. Select **Home** and choose **Format as Table** under Styles. 
     1. Choose a style for your table.
