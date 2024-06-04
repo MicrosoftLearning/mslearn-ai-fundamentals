@@ -184,8 +184,4 @@ Be as inventive as you like, and explore how Copilot can help you by finding inf
 
 ## Conclusion
 
-In this exercise, you've used Copilot for Microsoft 365 to find information and generate content. Hopefully you've seen how using generative AI in a copilot can help with productivity and creativity.
-
-While the features used in this exercises required additional Copilot licensing, you can use a free Microsoft account (*outlook.com*, *live.com*, or *hotmail.com* for example), the Microsoft Edge browser, and the online versions of Word, PowerPoint, and Outlook to accomplish similar tasks. 
-
-However, you can achieve even more with [Copilot for Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365), in which Microsoft Copilot is integrated into Windows and Microsoft Office productivity applications, providing highly contextualized help with common tasks. Microsoft 365 enables you to bring the power of generative AI to your business data and processes, while integrating into your existing IT infrastructure to ensure a manageable, secure solution.
+In this exercise, you've used [Copilot for Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365) to find information and generate content. Hopefully you've seen how using generative AI in a copilot can help with productivity and creativity. Microsoft 365 enables you to bring the power of generative AI to your business data and processes, while integrating into your existing IT infrastructure to ensure a manageable, secure solution.
