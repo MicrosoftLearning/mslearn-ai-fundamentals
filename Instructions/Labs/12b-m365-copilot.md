@@ -33,7 +33,6 @@ To start your exploration of generative AI, let's use Copilot for Word to examin
 
     ![Screenshot of the Copilot pane in Word with a response.](./media/generative-ai/copilot-response-word.png)
 
-    > [!NOTE]
     > The specific response you receive may vary due to the nature of generative AI.
 
 1. Return to the Copilot pane to ask Copilot the following question:
@@ -77,14 +76,16 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
     ![Screenshot of a Word document with a Copilot-generated business plan.](./media/generative-ai/copilot-draft-business-plan-response.png)
 
-1. Save the Word document and close it.
+1. If the financial projections in the business plan is not formatted as a table, select it and use Copilot to visualize the projections as a table.
+1. Select the table of financial projections and copy it to the clipboard.
+1. Save the Word document.
 
 ## Visualize financial projections in Copilot for Excel
 
 With a business plan in hand, let's take some of that data on financial projections and ask Copilot in Excel to visualize that data for us, so we can include it in emails or presentations to investors.
 
 1. On your PC with Microsoft 365 apps installed, open **Excel** and create a new blank workbook. Immediately save the workbook as **Financial Projetions.xlsx** to OneDrive, or Copilot won't work.
-1. Copy the table of sales projection from **Business Idea.docx** into the Excel spreadsheet and **format it as a table**. If Copilot didn't include that information in the previous exercise, ask Copilot to add that data to the bottom of your business plan.
+1. Copy the table of sales projection from **Business Idea.docx** into the Excel spreadsheet and **format it as a table**. To do this:
     1. Select a **cell** within your data.
     1. Select **Home** and choose **Format as Table** under Styles. 
     1. Choose a style for your table.
@@ -141,41 +142,34 @@ You've created some collateral to help you get your business started. Now it's t
 
 1. You can send the email to yourself if you wish!
 
-<!-- ## Use Copilot to create content for a presentation
+## Use Copilot to create content for a presentation
 
-With Copilot's help, you've created a draft of a business plan for the cleaning business idea. Now you'll need an effective presentation to convince an investor to lend you the funding to start the business.
+With Copilot's help, you've created a draft of a business plan for the cleaning business idea, prepared some financial projections, and sent an email to request a meeting with a potential investor. Now you'll need an effective presentation to communicate the benefits of your business.
 
 1. Open **PowerPoint** and create a new **blank presentation**. If the **Designer** pane opens automatically, close it.
 
     ![Screenshot of creating a new blank presentation in PowerPoint.](./media/generative-ai/powerpoint-create-blank-presentation.png)
 
-1. Select the **Copilot button** in the **Home tab** of the ribbon, select **Create presentation from file...**, then choose **Business Idea.docx** from your OneDrive Documents folder and send the prompt to Copilot.
-
-    ![Screenshot of Copilot creating a presentation from a Word document.](./media/generative-ai/copilot-powerpoint-create-presentation-from-file.png)
-
-1. Copilot in PowerPoint will comb through the Word document and create an outline for the presentation before creating the slides.  The process may take several minutes and your output should look something like this with a different theme:
-
-    ![Screenshot of PowerPoint presentation created by Copilot from a Word document.](./media/generative-ai/copilot-powerpoint-create-results.png)
-
-1. In the Copilot pane, ask to add a new slide using this prompt:
+1. Save the presentation as **Cleaning Company.pptx** in your OneDrive folder.
+1. Select the **Copilot button** in the **Home tab** of the ribbon, select **Create presentation about...**, then complete the prompt in the Copilot pane as follows:
 
     ```
-    Create a new slide with a summary of the benefits of using a corporate cleaning company for your business. 
+    Create a presentation about a corporate cleaning service in New York City.
+    ```
+
+1. Copilot will generate slides in the presentation.  The process may take several minutes and your output should look something like this with a different theme:
+
+    ![Screenshot of PowerPoint presentation created by Copilot from a Word document.](./media/generative-ai/copilot-powerpoint-create-image.png)
+
+1. Select the second last slide in the presentation. Then, in the Copilot pane, ask to add a new slide using this prompt:
+
+    ```
+    Add a slide that describes the benefits of an eco-friendly approach to cleaning. 
     ```
 
     ![Screenshot of PowerPoint presentation create a new slide.](./media/generative-ai/copilot-powerpoint-add-new-slide.png)
 
-1. In the Copilot pane on the same slide you just created, enter the following prompt:
-
-    ```
-    Create a photorealistic image of a clean office and add it to this slide.
-    ```
-
-    ![Screenshot of Copilot generating a new image and adding it to the slide.](./media/generative-ai/copilot-powerpoint-create-image.png)
-
-1. Save the presentation and close PowerPoint.
-
--->
+1. Save the presentation.
 
 ## Challenge
 
