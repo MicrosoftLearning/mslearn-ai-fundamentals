@@ -30,7 +30,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     - **Name**: *A unique name of your choice*
     - **Pricing tier**: Standard S0
 
-    > \* Different regions have different availability and quota for models. In this exercise, you'll be using a GPT-35-Turbo model for text generation and a DALL-E model for image generation, both of which are suppoprted in East US. 
+    > \* Different regions have different availability and quota for models. In this exercise, you'll be using a GPT-35-Turbo model for text generation and a DALL-E model for image generation, both of which are supported in East US.
 
 3. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 

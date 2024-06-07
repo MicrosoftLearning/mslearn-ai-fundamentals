@@ -24,7 +24,7 @@ You can use many Azure AI Language features with either a **Language** or **Azur
 1. On the page **Create Language**, configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select or create a resource group with a unique name*.
-    - **Region**: East US.
+    - **Region**: *Select the closest geographical region. If in eastern US, use "East US 2"*.
     - **Name**: *Enter a unique name*.
     - **Pricing tier**: *Free F0 or S if Free F0 is not available*
     - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.

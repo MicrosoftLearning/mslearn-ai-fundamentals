@@ -31,7 +31,7 @@ To use question answering, you need a **Language** resource.
         - **Subscription**: *Your Azure subscription*.
         - **Resource group**: *Select an existing resource group or create a new one*.
     - **Instance Details**
-        - **Region**: *Select a region*      
+        - **Region**: *Select a region. If in eastern US, use "East US 2"*      
         - **Name**: *A unique name for your Language resource*.
         - **Pricing tier**: S (1K Calls per minute)
     - **Custom question answering**

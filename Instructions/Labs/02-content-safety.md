@@ -40,7 +40,7 @@ Before using the studio, you need to associate an Azure AI services resource wit
 3. On the *Create Content Safety* page in the [Azure Portal](https://portal.azure.com?azure-portal=true), you need to configure several details to create your resource. Configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select or create a resource group with a unique name*.
-    - **Region**: *Choose any available region*.
+    - **Region**: *Choose any available region. If in eastern US, use "East US 2"*.
     - **Name**: *Enter a unique name*.
     - **Pricing tier**: Free F0
 
