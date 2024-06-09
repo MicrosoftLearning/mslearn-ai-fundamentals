@@ -93,10 +93,12 @@ Select **Sentence 1** again to close.
 
 1. Select **Clear text** box again, and copy and paste the following review:
 
-    >Very noisy and rooms are tiny
+    ```
+    Very noisy and rooms are tiny
     The Lombard Hotel, San Francisco, USA
     9/5/2018
     Hotel is located on Lombard street which is a very busy SIX lane street directly off the Golden Gate Bridge. Traffic from early morning until late at night especially on weekends. Noise would not be so bad if rooms were better insulated but they are not. Had to put cotton balls in my ears to be able to sleep--was too tired to enjoy the city the next day. Rooms are TINY. I picked the room because it had two queen size beds--but the room barely had space to fit them. With family of four in the room it was tight. With all that said, rooms are clean and they've made an effort to update them. The hotel is in Marina district with lots of good places to eat, within walking distance to Presidio. May be good hotel for young stay-up-late adults on a budget
+    ```
 
 1. Select **Run** and review the sentiment together with the confidence level. Have a look at the text and compare the text to the sentiment analysis that the service returned.
 
