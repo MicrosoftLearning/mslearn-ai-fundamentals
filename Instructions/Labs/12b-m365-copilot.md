@@ -40,7 +40,7 @@ To start your exploration of generative AI, let's use Copilot for Word to examin
     How do I setup a new business in New York?
     ```
 
-1. Review the response and follow up with additional questions as needed. When you're happy with the response, use the **Copy** (&#128461;) icon under the response to copy it to the clipboard. Paste it into the Word document, select all the text and then select the Copilot icon to visualize the text as a table.
+1. Review the response and follow up with additional questions as needed. When you're happy with the response, use the **Copy** (&#128461;) icon under the response to copy it to the clipboard. Paste it into the Word document, select all the text and then select the Copilot icon (at the bottom of the selected text) to visualize the text as a table.
 
     ![Screenshot asking Copilot to visualize in a table format.](./media/generative-ai/copilot-rewrite-as-table.png)
 
@@ -75,44 +75,36 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
     ![Screenshot of a Word document with a Copilot-generated business plan.](./media/generative-ai/copilot-draft-business-plan-response.png)
 
-1. If the financial projections in the business plan is not formatted as a table, select it and use Copilot to visualize the projections as a table.
+1. If the financial projections in the business plan are not formatted as a table, select them and use Copilot to visualize the projections as a table.
 1. Select the table of financial projections and copy it to the clipboard.
-1. Save the Word document.
+1. Save the Word document, then close it.
 
 ## Visualize financial projections in Copilot for Excel
 
 With a business plan in hand, let's take some of that data on financial projections and ask Copilot in Excel to visualize that data for us, so we can include it in emails or presentations to investors.
 
-1. On your PC with Microsoft 365 apps installed, open **Excel** and create a new blank workbook. Immediately save the workbook as **Financial Projetions.xlsx** to OneDrive, or Copilot won't work.
+1. Open **Excel** and create a new blank workbook. Immediately save the workbook as **Financial Projections.xlsx** to OneDrive, or Copilot won't work.
 1. Paste the table of sales projection from **Business Idea.docx** into the Excel spreadsheet and **format it as a table**. To do this:
     1. Select a **cell** within your data.
     1. Select **Home** and choose **Format as Table** under Styles. 
     1. Choose a style for your table.
     1. In the **Create Table** dialog box, confirm or set your cell range.
     1. Mark if your table has headers, and select **OK**.
-1. With your sales projections formatted as a table, open the Copilot pane from the Excel ribbon and enter the following prompt:
+1. With your sales projections formatted as a table, open the Copilot pane from the **Home** tab of the Excel ribbon and enter the following prompt:
 
     ```
     Suggest ways to visualize these financial projections.
     ```
     
-1. Copilot should suggest 1 or 2 ways to visualize your data and offer to add a pivot chart to a new sheet.
+1. Copilot should suggest a way to visualize your data and offer to add a pivot chart to a new sheet.
 
     ![Screenshot of Copilot in Excel visualizing financial projections.](./media/generative-ai/copilot-excel-visualize-projections.png)
-
-1. However, you may want to see more data in the chart to show year-over-year changes, so enter the following prompt to add more:
-
-    ```
-    Visualize these financial projections in a line chart to show year-over-year revenue and profits.
-    ```
-
-    ![Screenshot of Copilot in Excel visualizing financial projections.](./media/generative-ai/copilot-excel-visualize-more.png)
 
 1. Add the pivot chart to a new sheet and open it. Select the chart and then select **Design** to apply styles, change the chart type and other actions. At the end, you should have something that resembles this:
 
     ![Screenshot of Copilot in Excel adding a PivotChart.](./media/generative-ai/copilot-excel-chart-design.png)
 
-1. Save the file to OneDrive and close Excel.
+1. Save the workbook and close Excel.
 
 You have just used data created from Copilot in Word to visualize it in Excel. In the next exercise, you'll move onto using Copilot in Outlook to compose and send emails about the work you've done.
 
@@ -120,14 +112,20 @@ You have just used data created from Copilot in Word to visualize it in Excel. I
 
 You've created some collateral to help you get your business started. Now it's time to reach out to an investor seeking some startup funding.
 
-1. On your PC with Microsoft 365 apps installed, open **Outlook**. If you haven't setup Outlook with your Microsoft 365 account, see [Set up and use Outlook - Microsoft Support](https://support.microsoft.com/office/set-up-and-use-outlook-4636f361-d5e3-4a87-9cd4-382858de55fa).
-1. Turn on the **new Outlook** experience. To get the latest Copilot features in Outlook, you should be using the "New Outlook" experience. To see which version you're using, see [What version of Outlook do I have? - Microsoft Support](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c).
+1. Open **Outlook**. If you haven't setup Outlook with your Microsoft 365 account, do so.
+
+    > **Tip**: See [Set up and use Outlook - Microsoft Support](https://support.microsoft.com/office/set-up-and-use-outlook-4636f361-d5e3-4a87-9cd4-382858de55fa) for help with this.
+
+1. On the toolbar, switch to the **new Outlook** experience if it not already active.
+
+    > **Note**: To get the latest Copilot features in Outlook, you should be using the "New Outlook" experience. To see which version you're using, see [What version of Outlook do I have? - Microsoft Support](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c).
+
 1. Create a new email, and fill in the **To** box with your own email address.
 1. You can start drafting your email from the Copilot pane or right from within the body of the email:
 
     ![Screenshot of Outlook and the options to draft an email with Copilot.](./media/generative-ai/copilot-draft-email-outlook.png)
     
-1. Enter the following prompt and adjust the tone to "Formal" and the length to "Medium":
+1. Enter the following prompt and adjust the options to set the tone to "Formal" and the length to "Medium":
 
     ```
     Request a meeting with an investment bank to discuss funding for a commercial cleaning business.
@@ -160,11 +158,7 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 
     ![Screenshot of PowerPoint presentation created by Copilot from a Word document.](./media/generative-ai/copilot-powerpoint-create-image.png)
 
-1. Select the second last slide in the presentation. Then, in the Copilot pane, ask to add a new slide using this prompt:
-
-    ```
-    Add a slide that describes the benefits of an eco-friendly approach to cleaning. 
-    ```
+1. Select the second last slide in the presentation. Then, in the Copilot pane, use the **Add a slide about...** prompt to create a new slide about `the benefits of an eco-friendly approach to cleaning.`
 
     ![Screenshot of PowerPoint presentation create a new slide.](./media/generative-ai/copilot-powerpoint-add-new-slide.png)
 
