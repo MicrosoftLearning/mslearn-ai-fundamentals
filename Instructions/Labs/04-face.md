@@ -18,7 +18,7 @@ You can use Azure AI Face service with an **Azure AI services** multi-service re
 1. Click the **&#65291;Create a resource** button and search for *Azure AI services*. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select or create a resource group with a unique name*.
-    - **Region**: East US.
+    - **Region**: *Select the closest geographical region. If in eastern US, use "East US 2"*.
     - **Name**: *Enter a unique name*.
     - **Pricing tier**: *Standard S0.*
     - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.

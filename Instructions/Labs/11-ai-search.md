@@ -37,7 +37,7 @@ The solution you'll create for Fourth Coffee requires the following resources in
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select or create a resource group with a unique name*.
     - **Service name**: *A unique name*.
-    - **Location**: *Choose any available region*.
+    - **Location**: *Choose any available region. If in eastern US, use "East US 2"*.
     - **Pricing tier**: Basic
 
 1. Select **Review + create**, and after you see the response **Validation Success**, select **Create**.

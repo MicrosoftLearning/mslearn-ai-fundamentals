@@ -24,7 +24,7 @@ You can use Azure AI Document Intelligence by creating either a *Document Intell
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select or create a resource group with a unique name*.
     - **New resource name**: *Enter a unique name*.
-    - **Location**: *Select a region*.
+    - **Location**: *Select a region. If in eastern US, use "East US 2"*.
     - **Pricing tier**: *Free FO (if available, otherwise select Standard SO)*.
 1. Select **Continue** and then **Finish**. Wait for the resource to be deployed.
 
