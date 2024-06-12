@@ -242,11 +242,11 @@ Let's see the power of the knowledge store in action. When you ran the *Import d
 
 1. In the Azure portal, navigate back to your Azure storage account.
 
-2. In the left-hand menu pane, select **Containers**. Select the **knowledge-store** container.
+2. In the left-hand menu pane, select **Containers**. Select the **knowledge-store** container. 
 
     ![Screenshot of the knowledge-store container.](media/create-cognitive-search-solution/knowledge-store-blob-0.png)
 
-3. Select any of the items, and then click the **objectprojection.json** file.
+3. You will see a list of folders. **Select any of the folders**. Within the folder, click the **objectprojection.json** file.
 
     ![Screenshot of the objectprojection.json.](media/create-cognitive-search-solution/knowledge-store-blob-1.png)
 
