@@ -246,7 +246,7 @@ Let's see the power of the knowledge store in action. When you ran the *Import d
 
     ![Screenshot of the knowledge-store container.](media/create-cognitive-search-solution/knowledge-store-blob-0.png)
 
-3. You will see a list of folders. **Select any of the folders**. Within the folder, click the **objectprojection.json** file.
+3. You will see a list of folders. There is one folder for all of the metadata for each review document. **Select any of the folders**. Within the folder, click the **objectprojection.json** file.
 
     ![Screenshot of the objectprojection.json.](media/create-cognitive-search-solution/knowledge-store-blob-1.png)
 
