@@ -169,7 +169,7 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 
 1. Ensure that the **Key** is set to **metadata_storage_path**. Leave **Suggester name** blank and **Search mode** autopopulated.
 
-1. Review the index fields' default settings. Select **filterable** for all the fields that are already selected by default.
+1. Review the index fields' default settings. Select **filterable** for all the fields that are already selected by default. The field names that need to be marked *filterable* include: content, locations, keyphrases, sentiment, merged_content, text, layoutText, imageTags, imageCaption.
 
     ![Screenshot that shows the customize index pane with the index name entered and 'Filterable' selected for a default index field.](media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)
 
