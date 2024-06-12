@@ -155,11 +155,12 @@ After you have the documents in storage, you can use Azure AI Search to extract 
     - Image references
 
     > **Note**
-    > If a warning asking for a **Storage Account Connection String** appears.
+    > A warning asking for a **Storage Account Connection String** appears.
     >
     > ![Screenshot that shows the Storage account connection screen warning with 'Choose an existing connection' selected.](media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)
     >
-    > 1. Select **Choose an existing connection**. Choose the storage account you created earlier.
+
+1. Select **Choose an existing connection**. Choose the storage account you created earlier.
     > 1. Click on **+ Container** to create a new container called **knowledge-store** with the privacy level set to **Private**, and select **Create**.
     > 1. Select the **knowledge-store** container, and then click **Select** at the bottom of the screen.
 
