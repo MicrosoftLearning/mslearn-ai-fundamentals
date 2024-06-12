@@ -125,7 +125,7 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 
 1. Select **Next: Add cognitive skills (Optional)**.
 
-1. In the **Attach Cognitive Services** section, select your Azure AI services resource.  
+1. In the **Attach AI Services** section, select your Azure AI services resource.  
 
 1. In the **Add enrichments** section:
     - Change the **Skillset name** to **coffee-skillset**.
