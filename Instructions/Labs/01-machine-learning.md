@@ -9,6 +9,9 @@ In this exercise, you'll use the automated machine learning feature in Azure Mac
 
 This exercise should take approximately **30** minutes to complete.
 
+>**Important**
+>At this time, it is possible to author and deploy a model as a web service in the Azure Machine Learning Studio, but not to test it in the Studio. Therefore, all but the last section of steps before clean-up are possible to complete. We will update as this changes.
+
 ## Create an Azure Machine Learning workspace
 
 To use Azure Machine Learning, you need to provision an Azure Machine Learning workspace in your Azure subscription. Then you'll be able to use Azure Machine Learning studio to work with the resources in your workspace.
