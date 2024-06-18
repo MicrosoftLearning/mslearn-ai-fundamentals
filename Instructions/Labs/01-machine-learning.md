@@ -142,6 +142,9 @@ When the automated machine learning job has completed, you can review the best m
 
 ## Test the deployed service
 
+>**Important**
+>The Azure Machine Learning Studio currently does not support the type of dataset creation needed to use the deployment testing. We will update you when there is a resolution. 
+
 Now you can test your deployed service.
 
 1. In Azure Machine Learning studio, on the left hand menu, select **Endpoints** and open the **predict-rentals** real-time endpoint.
