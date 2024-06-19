@@ -121,17 +121,20 @@ When the automated machine learning job has completed, you can review the best m
   
 1. Select the text under **Algorithm name** for the best model to view its details.
 
-1. Select the **Metrics** tab and select the **residuals** and **predicted_true** charts if they are not already selected. 
+1. Select the **Metrics** tab and select the **residuals** and **predicted_true** charts if they are not already selected.
 
-    Review the charts which show the performance of the model. The **residuals** chart shows the *residuals* (the differences between predicted and actual values) as a histogram. The **predicted_true** chart compares the predicted values against the true values. 
+    Review the charts which show the performance of the model. The **residuals** chart shows the *residuals* (the differences between predicted and actual values) as a histogram. The **predicted_true** chart compares the predicted values against the true values.
 
 ## Deploy and test the model
 
-1. On the **Model** tab for the best model trained by your automated machine learning job, select **Deploy** and use the **Web service** option to deploy the model with the following settings:
-    - **Name**: `predict-rentals`
-    - **Description**: `Predict cycle rentals`
-    - **Compute type**: Azure Container Instance
-    - **Enable authentication**: *Selected*
+1. On the **Model** tab for the best model trained by your automated machine learning job, select **Deploy** and use the **Real-time endpoint** option to deploy the model with the following settings:
+    - **Virtual machine**: Standard_DS3_v2
+    - **Instance count**: 3
+    - **Endpoint**: New
+    - **Endpoint name**: *Leave the default or make sure it's globally unique*
+    - **Deployment name**: *Leave default*
+    - **Inferencing data collection**: *Disabled*
+    - **Package Model**: *Disabled*
 
 1. Wait for the deployment to start - this may take a few seconds. The **Deploy status** for the **predict-rentals** endpoint will be indicated in the main part of the page as *Running*.
 1. Wait for the **Deploy status** to change to *Succeeded*. This may take 5-10 minutes.
