@@ -48,8 +48,8 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
     **Basic settings**:
 
-    - **Job name**: mslearn-bike-automl
-    - **New experiment name**: mslearn-bike-rental
+    - **Job name**: `mslearn-bike-automl`
+    - **New experiment name**: `mslearn-bike-rental`
     - **Description**: Automated machine learning for bike rental prediction
     - **Tags**: *none*
 
@@ -58,24 +58,16 @@ Automated machine learning enables you to try multiple algorithms and parameters
     - **Select task type**: Regression
     - **Select dataset**: Create a new dataset with the following settings:
         - **Data type**:
-            - **Name**: bike-rentals
-            - **Description**: Historic bike rental data
-            - **Type**: Tabular
+            - **Name**: `bike-rentals`
+            - **Description**: `Historic bike rental data`
+            - **Type**: Table (mltable)
         - **Data source**:
-            - Select **From web files**
-        - **Web URL**:
-            - **Web URL**: `https://aka.ms/bike-rentals`
-            - **Skip data validation**: *do not select*
-        - **Settings**:
-            - **File format**: Delimited
-            - **Delimiter**: Comma
-            - **Encoding**: UTF-8
-            - **Column headers**: Only first file has headers
-            - **Skip rows**: None
-            - **Dataset contains multi-line data**: *do not select*
-        - **Schema**:
-            - Include all columns other than **Path**
-            - Review the automatically detected types
+            - Select **From local files**
+        - **Destination storage type**:
+            - **Datastore type**: Azure Blob Storage
+            - **Name**: workspaceblobstore
+        - **MLtable selection**:
+            - **Upload folder**: *Download the folder that contains the two files you need to upload from* `https://aka.ms/bike-rentals`
 
         Select **Create**. After the dataset is created, select the **bike-rentals** dataset to continue to submit the Automated ML job.
 
@@ -83,19 +75,20 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
     - **Task type**: Regression
     - **Dataset**: bike-rentals
-    - **Target column**: Rentals (integer)
+    - **Target column**: rentals (integer)
     - **Additional configuration settings**:
-        - **Primary metric**: Normalized root mean squared error
+        - **Primary metric**: NormalizedRootMeanSquaredError
         - **Explain best model**: *Unselected*
+        - **Enable ensemble stacking**: *Unselected*
         - **Use all supported models**: <u>Un</u>selected. *You'll restrict the job to try only a few specific algorithms.*
         - **Allowed models**: *Select only **RandomForest** and **LightGBM** — normally you'd want to try as many as possible, but each model added increases the time it takes to run the job.*
     - **Limits**: *Expand this section*
-        - **Max trials**: 3
-        - **Max concurrent trials**: 3
-        - **Max nodes**: 3
-        - **Metric score threshold**: 0.085 (*so that if a model achieves a normalized root mean squared error metric score of 0.085 or less, the job ends.*)
-        - **Timeout**: 15
-        - **Iteration timeout**: 15
+        - **Max trials**: `3`
+        - **Max concurrent trials**: `3`
+        - **Max nodes**: `3`
+        - **Metric score threshold**: `0.085` (*so that if a model achieves a normalized root mean squared error metric score of 0.085 or less, the job ends.*)
+        - **eXPERIMENT Timeout**: `15`
+        - **Iteration timeout**: `15`
         - **Enable early termination**: *Selected*
     - **Validation and test**:
         - **Validation type**: Train-validation split
@@ -135,8 +128,8 @@ When the automated machine learning job has completed, you can review the best m
 ## Deploy and test the model
 
 1. On the **Model** tab for the best model trained by your automated machine learning job, select **Deploy** and use the **Web service** option to deploy the model with the following settings:
-    - **Name**: predict-rentals
-    - **Description**: Predict cycle rentals
+    - **Name**: `predict-rentals`
+    - **Description**: `Predict cycle rentals`
     - **Compute type**: Azure Container Instance
     - **Enable authentication**: *Selected*
 
@@ -144,9 +137,6 @@ When the automated machine learning job has completed, you can review the best m
 1. Wait for the **Deploy status** to change to *Succeeded*. This may take 5-10 minutes.
 
 ## Test the deployed service
-
->**Important**
->The Azure Machine Learning Studio currently does not support the type of dataset creation needed to use the deployment testing. We will update you when there is a resolution. 
 
 Now you can test your deployed service.
 
