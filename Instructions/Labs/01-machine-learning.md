@@ -64,7 +64,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
             - **Datastore type**: Azure Blob Storage
             - **Name**: workspaceblobstore
         - **MLtable selection**:
-            - **Upload folder**: *Download the folder that contains the two files you need to upload from* `https://aka.ms/bike-rentals`
+            - **Upload folder**: *Download and unzip the folder that contains the two files you need to upload* `https://aka.ms/bike-rentals`
 
         Select **Create**. After the dataset is created, select the **bike-rentals** dataset to continue to submit the Automated ML job.
 
