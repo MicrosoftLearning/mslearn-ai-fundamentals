@@ -3,6 +3,8 @@ lab:
     title: 'Explore Azure OpenAI Service'
 ---
 
+**Important: We are retiring this lab. It has been replaced by https://microsoftlearning.github.io/mslearn-ai-studio/Instructions/01-Explore-ai-studio.html.**
+
 # Explore Azure OpenAI
 
 Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform.
