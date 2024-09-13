@@ -39,11 +39,11 @@ We can explore the capabilities of the Translator service in the Azure Portal.
 
 1. In the *Try it* section of the Overview page, under the *From: Auto detect* section, type the text `Welcome to Azure AI Fundamentals`. Notice the JSON that appears in correspondence in the *View request* section. 
 
-1. In the *View response* section, view the JSON. Behind the scenes, a request has been sent to the Translator service. The response includes the detected source language with a confidence score, a translation using the alphabet of the output language, and an output language code. 
+1. In the *View response* section, view the JSON. Behind the scenes, a *request* has been sent to the Translator service. The *response* includes the detected source language with a confidence score, a translation using the alphabet of the output language, and an output language code. 
 
-1. The demo in the *Try it* section shows what it would look like if you created a simple translation application with a user interface. In the case of the demo, as soon as you typed in text, a call was made to the Translator service. How could you make this call? Check out the *Sample Code* tab. Here you see examples of code that could be used.
+1. The demo in the *Try it* section shows what it would look like if you created a simple translation application with a user interface. In the case of the demo, as soon as you type in text, a request is made to the Translator service. How could you make this request? Check out the *Sample Code* tab. Here you see examples of code in different programming languages that could be used to make the request. 
 
-1. Notice in the code samples that there are lines for your Translator service's **Key** and **Endpoint**. Using the code and your key and endpoint, you would be able to call the Translator service, and receive a response like you saw in the demo. 
+1. Identify the lines in the code samples where you need to include your Translator service's **Key** and **Endpoint**. With your key and endpoint, you would be able to send a request to the Translator service, and receive a response like you saw in the demo. 
 
 1. Navigate to the left hand menu. Under *Resource Management*, select *Keys and Endpoint*. If you were to build an application, you would find your key and endpoint here. 
 
@@ -53,4 +53,4 @@ We can explore the capabilities of the Translator service in the Azure Portal.
 
 ## Learn more
 
-To learn more about what you can do with this service, see the [Translator page](https://docs.microsoft.com/azure/cognitive-services/translator/translator-overview).
+To learn more about what you can do with this service, see the [Translator page](https://learn.microsoft.com/en-us/azure/ai-services/translator/translator-overview).
