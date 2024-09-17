@@ -45,7 +45,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
     **Basic settings**:
 
-    - **Job name**: `mslearn-bike-automl`
+    - **Job name**: Job name field should already be prepopulated with a unique name. Keep it as is.
     - **New experiment name**: `mslearn-bike-rental`
     - **Description**: Automated machine learning for bike rental prediction
     - **Tags**: *none*
