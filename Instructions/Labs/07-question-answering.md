@@ -3,7 +3,7 @@ lab:
     title: 'Use Question Answering with Language Studio'
 ---
 
-# Use Question Answering model with Language Studio
+# Use Question Answering with the Language Studio
 
 In this exercise you will use Language Studio to create and train a knowledge base of question and answers. Content for the knowledge base will come from an existing FAQ page from the web site of Margie’s Travel, a fictitious travel agency. You will then use Language Studio to see how it would work when used by customers.
 
