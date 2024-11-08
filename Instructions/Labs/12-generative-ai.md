@@ -24,7 +24,6 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
 
     ![Screenshot of the Copilot pane in Microsoft Edge.](./media/generative-ai/edge-copilot.png)
 
-1. In the Copilot pane, scroll down to see all of the contents as necessary, and ensure that the **Chat** tab is selected and that the conversational style is set to **More Balanced** - this will ensure that Copilot responds with a balance of creativity and factual precision.
 1. In the chat box at the bottom of the Copilot pane, enter following the prompt:
 
     ```
@@ -66,7 +65,8 @@ Now that you've done some initial research, let's have Copilot help you develop 
     Write a business plan for "Contoso Cleaning" based on the information in this document. Include an executive summary, market overview, and financial projections.
     ```
 
-1. Review the response, and under the output use the **Copy** (&#128461;) icon to copy it to the clipboard. Then select all of the text in the **Business Ideas.docx** document and paste the copied text into the document to replace it. Finally, tidy up the pasted text by replacing the initial text in the response (in which Copilot acknowledged the instruction) with a heading for your cleaning company name. You should end up with a business plan document, similar to this:
+1. Review the response. Then in the Microsoft Word pane, in the **File** menu, create a new blank document. Close the **Designer** pane if it opens and change the name of the new document from *Document* to `Business Plan`.
+1. In the **Business Plan** document, add a heading with your chosen name for your cleaning company. Then copy the buisness plan that was generated in the Copilot pane and paste it into the document. You should end up with a business plan document, similar to this:
 
     ![Screenshot of a Word document with a Copilot-generated business plan.](./media/generative-ai/generated-content.png)
 
@@ -78,22 +78,20 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
 1. Review the response, which should present four options for a logo created by Microsoft Designer.
 1. Use more prompts to iterate on the design (for example, `Make it green and blue`) until you have a logo with which you are happy.
-1. Right-click the logo design you prefer and copy it to the clipboard. Then paste it into the top of the business plan document, like this:
+1. Right-click the generated logo and copy it to the clipboard. Then paste it into the top of the business plan document, like this:
 
     ![Screenshot of a Word document with a Copilot-generated image.](./media/generative-ai/generated-image.png)
 
-1. Close the Microsoft Word tab and return to the **Documents** folder in your OneDrive.
+1. Close the Microsoft Word tabs and return to the **Documents** folder in your OneDrive.
 
 ## Use Copilot to create content for a presentation
 
 With Copilot's help, you've created a draft of a business plan for the cleaning business idea. Now you'll need an effective presentation to convince an investor to lend you the funding to start the business.
 
-1. In the **Documents** folder in OneDrive, add a new **PowerPoint presentation**.
-
-    If the **Designer** pane opens automatically, close it.
+1. In the **Documents** folder in OneDrive, add a new **PowerPoint presentation**. If the **Designer** pane opens automatically, close it. Then change the name of the presentation from *Presentation* to `Business Presentation`.
 
 1. On the title slide for the presentation, enter the the name of your cleaning company as the title, and `Investor Opportunity` as the subtitle.
-1. Add a new slide, using the **Two Content** slide layout (which includes a title and two placeholders for content).
+1. Insert a new slide, using the **Two Content** slide layout (which includes a title and two placeholders for content).
 1. Change the slide title to `Benefits of Hiring a Commercial Cleaner`.
 1. In the Copilot pane, enter the following prompt:
 
@@ -101,7 +99,7 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
     Write a summary of the benefits of using a corporate cleaning company for your business. The summary should consist of five short bullet points.
     ```
 
-1. Copy Copilot's response to the clipboard, and paste it into the left content placeholder. Then delete the initial sentence acknowledging the request and reformat the text in the placeholder until you are satisfied.
+1. Copy Copilot's response to the clipboard, and paste it into the left content placeholder. Then edit and reformat the text in the placeholder until you are satisfied.
 1. In the Copilot pane, enter the following prompt:
 
     ```
@@ -112,11 +110,10 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 
     If the **Designer** pane opens automatically, select a slide design you like. Then close the **Designer** pane.
 
-1. Apply any additional reformatting you think is required until you have a slide that looks similar to this:
+1. Apply any additional reformatting you think is required until you have a slide that you're happy with:
 
     ![Screenshot of a PowerPoint presentation with Copilot-generated content.](./media/generative-ai/powerpoint-slide.png)
 
-1. On the PowerPoint title bar, select the default presentation name (**Presentation**) and rename it to `Business Presentation.pptx`.
 1. Close the PowerPoint tab and return to the **Documents** folder in your OneDrive.
 
 ## Use Copilot to compose an email
@@ -124,13 +121,13 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 You've created some collateral to help you get your business started. Now it's time to reach out to an investor seeking some startup funding.
 
 1. Use the **App Launcher** at the left end of the OneDrive title bar to open **Outlook**.
-1. Create a new email, and fill in the **To** box with your own email address.
-1. In the Copilot pane, select the **Compose** tab. Then set the following options to compose new content:
-    - **Write about**: `Request a meeting with an investment bank to discuss funding for a commercial cleaning business.`
-    - **Tone**: Professional
-    - **Format**: Email
-    - **Length**: Medium
-1. Select **Generate draft**, and review the output that is generated.
+1. Create a new email, and fill in the **To** box with your own email address and set the **Subject** to `Business funding meeting request`.
+1. In the Copilot pane, enter the following prompt:
+
+    ```
+    Write an email to a bank manager requesting a meeting to discuss funding for a commercial cleaning business. The email should be concise and the tone should be professional.
+    ```
+    
 1. Use the generated content to complete your email, as shown here:
 
     ![Screenshot of an email message generated by Copilot.](./media/generative-ai/generated-email.png)
@@ -148,9 +145,8 @@ Now you've seen how to use Copilot to research ideas and generate content, why n
 
 Be as inventive as you like, and explore how Copilot can help you by finding information, generating and refining text, creating images, and answering questions.
 
-
 ## Conclusion
 
 In this exercise, you've used Copilot in Microsoft Edge to find information and generate content. Hopefully you've seen how using generative AI in a copilot can help with productivity and creativity.
 
-While the free services used in this exercises are undoubtedly very powerful, you can achieve even more with services like [Copilot for Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365), in which Microsoft Copilot is integrated into Windows and Microsoft Office productivity applications, providing highly contextualized help with common tasks. Microsoft 365 enables you to bring the power of generative AI to your business data and processes, while integrating into your existing IT infrastructure to ensure a manageable, secure solution.
+While the free services used in this exercises are undoubtedly very powerful, you can achieve even more with services like [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365), in which Microsoft Copilot is integrated into Windows and Microsoft Office productivity applications, providing highly contextualized help with common tasks. Microsoft 365 enables you to bring the power of generative AI to your business data and processes, while integrating into your existing IT infrastructure to ensure a manageable, secure solution.
