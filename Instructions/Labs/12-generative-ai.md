@@ -19,7 +19,7 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
 
     > **Tip**: If you don't see the option to save a copy of the file to OneDrive, download it to your local computer. Then, in OneDrive, open the **Documents** folder and use the **+ Add new** button to upload the **Business Idea.docx** file from your local computer to OneDrive.
 
-1. View the text in **Business Idea.docx**, which describe some high -level ideas for a cleaning business in New York City.
+1. View the text in the **Business Idea** document, which describe some high -level ideas for a cleaning business in New York City.
 1. Use the **Copilot** icon on the Edge toolbar to open the Copilot pane, as shown here:
 
     ![Screenshot of the Copilot pane in Microsoft Edge.](./media/generative-ai/edge-copilot.png)
@@ -55,14 +55,14 @@ Now that you've done some initial research, let's have Copilot help you develop 
 1. With the **Business Idea.docx** document still open in Microsoft Edge, in the Copilot pane, enter the following prompt:
 
     ```
-    Suggest a name for my cleaning business
+    Suggest a name for my cleaning business.
     ```
 
-1. Review the suggestions and select a name for your cleaning company (or continue prompting to find a name you like).
-1. Enter the following prompt, replacing *Contoso Cleaning* with the company name of your choice:
+1. Review the suggestions and select a name for your cleaning company (or continue prompting for more suggestions find a name you like). When you have chosen one, let Copilot know which one - for example, enter `Let's go with the first one.`.
+1. Ensure that the **Business Idea** document is still open in the main browser page, then enter the following prompt:
 
     ```
-    Write a business plan for "Contoso Cleaning" based on the information in this document. Include an executive summary, market overview, and financial projections.
+    Based on the contents of this document, create a business plan for my cleaning business.
     ```
 
 1. Review the response. Then in the Microsoft Word pane, in the **File** menu, create a new blank document. Close the **Designer** pane if it opens and change the name of the new document from *Document* to `Business Plan`.
