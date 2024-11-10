@@ -135,7 +135,21 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 
     ![Screenshot of PowerPoint presentation create a new slide.](./media/generative-ai/copilot-powerpoint-add-new-slide.png)
 
-1. Save the presentation.
+1. Download the [mopping.png](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/mopping.png) image from `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/mopping.png` to your local computer, saving it in any folder.
+1. In Microsoft PowerPoint, in the Copilot pane, use the **Add an image** button next to the chat box to upload the **mopping.png** image to Copilot, and add the prompt `What does this image show?`.
+1. Review the response, which should be similar to this:
+
+    ![Screenshot of a Copilot description of an image.](./media/generative-ai/copilot-powerpoint-image-analysis.png)
+
+1. Follow up with the following prompt, and review the response:
+
+    ```
+    Would this image be helpful to promote a commercial cleaning business?
+    ```
+
+    Copilot has analyzed the image and assessed its usefulness for your specific business scenario in the same way you might ask a colleague's opinion.
+
+1. Save the presentation and close PowerPoint.
 
 ## Use Copilot to compose an email
 

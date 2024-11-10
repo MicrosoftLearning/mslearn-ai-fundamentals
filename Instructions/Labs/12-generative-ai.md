@@ -94,7 +94,7 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
 With Copilot's help, you've created a draft of a business plan for the cleaning business idea. Now let's use Copilot to perform some calculations that will help further refine the business plan.
 
-1. In the **Documents** folder in OneDrive, add a new **Excel workbook**. Then change the name of the workbook to `Financial Projections`.
+1. In the **Documents** folder in OneDrive, use the **(+)** button to add a new **Excel workbook**. Then change the name of the workbook to `Financial Projections`.
 1. In the Copilot pane, enter the following prompt:
 
     ```
@@ -145,13 +145,27 @@ Thanks to Copilot, you've created a business plan for the cleaning business and 
 
     ![Screenshot of a PowerPoint presentation with Copilot-generated content.](./media/generative-ai/powerpoint-slide.png)
 
+1. Open a new browser tab and use it to download the [mopping.png](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/mopping.png) image from `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/mopping.png` to your local computer, saving it in any folder.
+1. Return to the browser tab containing your PowerPoint presentation, and in the Copilot pane, use the **+** button next to the chat box to upload the **mopping.png** image to Copilot, and add the prompt `What does this image show?`.
+1. Review the response, which should be similar to this:
+
+    ![Screenshot of a Copilot description of an image.](./media/generative-ai/copilot-image-analysis.png)
+
+1. Follow up with the following prompt, and review the response:
+
+    ```
+    Would this image be helpful to promote a commercial cleaning business?
+    ```
+
+    Copilot has analyzed the image and assessed its usefulness for your specific business scenario in the same way you might ask a colleague's opinion.
+
 1. Close the PowerPoint browser tab and return to the **Documents** folder in your OneDrive.
 
 ## Use Copilot to compose an email
 
 You've created some collateral to help you get your business started. Now it's time to reach out to an investor seeking some startup funding.
 
-1. Use the **App Launcher** at the left end of the OneDrive title bar to open **Outlook**.
+1. Use the **App Launcher** (&#8759;) at the left end of the OneDrive title bar to open **Outlook**.
 1. Create a new email, and fill in the **To** box with your own email address and set the **Subject** to `Business funding meeting request`.
 1. In the Copilot pane, enter the following prompt:
 
