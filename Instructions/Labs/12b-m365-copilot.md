@@ -25,7 +25,7 @@ To start your exploration of generative AI, let's use Copilot for Word to examin
 1. In the Copilot pane, enter following the prompt in the text area at the bottom:
 
     ```
-    What is this document about?
+    Summarize this document into 5 key points, and suggest next steps.
     ```
 
 1. Review the response from Copilot, which should summarize the main points in the document, as shown here:
@@ -34,13 +34,15 @@ To start your exploration of generative AI, let's use Copilot for Word to examin
 
     > The specific response you receive may vary due to the nature of generative AI.
 
+    Hopefully, Copilot has provided some useful guidance. However if you have additional questions, you can just ask for more specific information.
+
 1. Return to the Copilot pane to ask Copilot the following question:
 
     ```
-    How do I setup a new business in New York?
+    How do I setup a new business in New York? Answer with a numbered list.
     ```
 
-1. Review the response and follow up with additional questions as needed. When you're happy with the response, use the **Copy** (&#128461;) icon under the response to copy it to the clipboard. Paste it into the Word document. Then select any text that provides a list of things to do when setting up a business in New York and use the Copilot icon (at the bottom of the selected text) to visualize the text as a table.
+1. Review the response and follow up with additional questions as needed. When you're happy with the response, use the **Copy** (&#128461;) icon under the response to copy it to the clipboard. Paste it into the Word document. Then select the text that provides a list of things to do when setting up a business in New York and use the Copilot icon (at the bottom of the selected text) to visualize the text as a table.
 
     ![Screenshot asking Copilot to visualize in a table format.](./media/generative-ai/copilot-rewrite-as-table.png)
 

@@ -8,7 +8,7 @@ In this exercise you will explore some of the ways in which Microsoft Copilot ca
 
 This exercise should take approximately **40** minutes to complete.
 
-> **Note**: This exercise assumes that you have a [personal Microsoft Account](https://signup.live.com) (such as an outlook.com account) with which you are signed into [Microsoft Edge](https://www.microsoft.com/edge/download) on your computer.
+> **Note**: This exercise assumes that you have a [personal Microsoft Account](https://signup.live.com) (such as an outlook.com account) with which you are signed into [Microsoft Edge](https://www.microsoft.com/edge/download) on your computer. If you have both a work account and a personal account, be sure to select your *personal* account in the account settings at the top left of Microsoft Edge.
 
 ## Use Copilot to explore a document and research an idea
 
@@ -27,16 +27,18 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
 1. In the chat box at the bottom of the Copilot pane, enter following the prompt:
 
     ```
-    What is this document about?
+    Summarize this document into 5 key points, and suggest next steps.
     ```
 
     If prompted, confirm that you want to allow Copilot to access the page.
 
-1. Review the response from Copilot, which should summarize the main points in the document, as shown here:
+1. Review the response from Copilot, which should summarize the main points in the document and suggest some follow up actions for you to take, as shown here:
 
     ![Screenshot of the Copilot pane with a response.](./media/generative-ai/copilot-response.png)
 
     > **Note**: The specific response may vary.
+
+    Hopefully, Copilot has provided some useful guidance. However if you have additional questions, you can just ask for more specific information.
 
 1. Enter the following prompt:
 
@@ -44,7 +46,7 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
     How do I go about setting up a business in New York?
     ```
 
-1. Review the response, which should contain some advice and links to resource to help you get started setting up a business in New York, and may include some suggested follow-up prompts to get more information.
+1. Review the response, which should contain some advice and links to resource to help you get started setting up a business in New York.
 
     > **Important**: The AI-generated response is based on information publicly on the Web. While it may be useful to help you understand the steps required to set up a business, it is not guaranteed to be 100% accurate and does not replace the need for professional advice!
 
@@ -77,7 +79,11 @@ Now that you've done some initial research, let's have Copilot help you develop 
     ```
 
 1. Review the image that Copilot generated.
-1. Use more prompts to iterate on the design (for example, `Make it green and blue`) until you have a logo with which you are happy.
+
+1. Use more prompts to iterate on the design (for example, `Make it green and blue`) until you have a logo you like.
+
+    > **Tip**: When Coplot generates images that contain text, you may notice some spelling errors. Try different prompts until you're happy with the results.
+
 1. Right-click the generated logo and copy it to the clipboard. Then paste it into the top of the business plan document, like this:
 
     ![Screenshot of a Word document with a Copilot-generated image.](./media/generative-ai/generated-image.png)
