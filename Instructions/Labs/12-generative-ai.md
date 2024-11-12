@@ -68,7 +68,7 @@ Now that you've done some initial research, let's have Copilot help you develop 
     ```
 
 1. Review the response. Then in the Microsoft Word pane, in the **File** menu, create a new blank document. Close the **Designer** pane if it opens and change the name of the new document from *Document* to `Business Plan`.
-1. In the **Business Plan** document, add a heading with your chosen name for your cleaning company. Then copy the business plan that was generated in the Copilot pane and paste it into the document. You should end up with a business plan document, similar to this:
+1. Copy the business plan that was generated in the Copilot pane and paste it into the business plan document:
 
     ![Screenshot of a Word document with a Copilot-generated business plan.](./media/generative-ai/generated-content.png)
 
