@@ -110,8 +110,21 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 
     ![Screenshot of an Excel workbook with Copilot-generated data.](./media/generative-ai/generated-financials.png)
 
-1. Select the table of financial projections in Excel and on the **Insert** tab, select a **Line** chart.
-1. Select the chart in the spreadsheet, and on the **Chart** tab, select **Select Data**. Then in the **Chart** pane, on the **Data** tab, modify the setup so that the **year** field is the horizontal label and only the **Projected Profit** field is used as a line value:
+1. In the Copilot pane, enter the following prompt:
+
+    ```text
+    What's a good way to visualize these projections in a chart?
+    ```
+
+1. Review the response, which should recommend a few ways to visualize the projections data. Then enter the following prompt:
+
+    ```text
+    How do I create a line chart in Excel?
+    ```
+
+1. Follow the guidance provided by Copilot to create a line chart.
+
+    > **Tip**: You may need to adjust the default data axis selected by Excel. Select the chart in the spreadsheet, and on the **Chart** tab, select **Select Data**. Then in the **Chart** pane, on the **Data** tab, modify the setup so that the **Year** field is the horizontal label and only the **Projected Profit** field is used as a line value:
 
     ![Screenshot of an Excel workbook with a line chart.](./media/generative-ai/line-chart.png)
 
