@@ -94,7 +94,7 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
 1. Close the Microsoft Word browser tabs and return to the **Documents** folder in your OneDrive.
 
-## Use Copilot to generate financial projections
+## Use Copilot to generate and visualize financial projections
 
 With Copilot's help, you've created a draft of a business plan for the cleaning business idea. Now let's use Copilot to perform some calculations that will help further refine the business plan.
 
