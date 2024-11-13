@@ -234,8 +234,6 @@ You've created some collateral to help you get your business started. Now it's t
 
     You can send the email to yourself if you wish!
 
-
-
 ## Challenge
 
 Now you've seen how to use Copilot to research ideas and generate content, why not try exploring further? To start a new Copilot session, enter the prompt `Let's start over`. Then, based on what you've learned in this exercise, try using Copilot to plan a meeting in which you'll propose the adoption of generative AI in your organization. Here are a few ideas to get you started:
