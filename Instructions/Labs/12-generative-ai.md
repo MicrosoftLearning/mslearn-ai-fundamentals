@@ -176,6 +176,25 @@ Thanks to Copilot, you've created a business plan for the cleaning business and 
 
     Copilot has analyzed the image and assessed its usefulness for your specific business scenario in the same way you might ask a colleague's opinion.
 
+1. In PowerPoint, add a new slide with the same **Two Content** layout as before. Then in one of the content placeholders, upload the **mopping.png** image to add it to the slide.
+
+1. In the Copilot pane, enter the following prompt:
+
+    ```
+    Write a short paragraph to accompany this image, emphasizing the professionalism of the cleaning staff we employ.
+    ```
+
+1. Review the resulting text, and then copy it to the empty content placeholder on the slide, editing and formatting it as you think necessary.
+1. In the Copilot pane, enter the following prompt:
+
+    ```
+    Suggest a good title for a slide that contains the image and text.
+    ```
+
+1. Use the suggested title for the slide, and then use the Designer in PowerPoint to format the slide. You should end up with a slide similar to this:
+
+    ![Screenshot of a slide created using suggestions from Copilot.](./media/generative-ai/powerpoint-new-slide.png)
+
 1. Close the PowerPoint browser tab and return to the **Documents** folder in your OneDrive.
 
 ## Use Copilot to compose an email
