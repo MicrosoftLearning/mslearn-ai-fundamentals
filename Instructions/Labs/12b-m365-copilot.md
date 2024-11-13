@@ -24,7 +24,7 @@ To start your exploration of generative AI, let's use Copilot for Word to examin
 
 1. In the Copilot pane, enter following the prompt in the text area at the bottom:
 
-    ```
+    ```text
     Summarize this document into 5 key points, and suggest next steps.
     ```
 
@@ -38,7 +38,7 @@ To start your exploration of generative AI, let's use Copilot for Word to examin
 
 1. Return to the Copilot pane to ask Copilot the following question:
 
-    ```
+    ```text
     How do I setup a new business in New York? Answer with a numbered list.
     ```
 
@@ -60,14 +60,14 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
 1. With the **Business Idea.docx** document still open, in the Copilot pane, enter the following prompt:
 
-    ```
+    ```text
     Can you suggest a name for my cleaning business?
     ```
 
 1. Review the suggestions and select a name for your cleaning company (or continue prompting for more suggestions find a name you like).
 1. Create a new blank document. Then, in the new document, select the Copilot icon in the margin to draft new content. Enter the following prompt, replacing **Contoso Cleaning** with the company name of your choice:
 
-    ```
+    ```text
     Write a business plan for "Contoso Cleaning" based on the information in /Business Idea.docx. Include an executive summary, market overview, and financial projections.
     ```
 
@@ -85,7 +85,7 @@ With a business plan in hand, let's take some of that data on financial projecti
 
 1. With the **Business Plan** document open in Microsoft Word, in the Copilot pane, enter the following prompt:
 
-    ```
+    ```text
     Create a table of projected profits for the next 5 years, starting with this year. The profit this year should be $10,000 and it should increase by 12% each year.
     ```
 
@@ -99,7 +99,7 @@ With a business plan in hand, let's take some of that data on financial projecti
     1. Mark if your table has headers, and select **OK**.
 1. With your sales projections formatted as a table, open the Copilot pane from the **Home** tab of the Excel ribbon and enter the following prompt:
 
-    ```
+    ```text
     Suggest ways to visualize these financial projections.
     ```
     
@@ -123,7 +123,7 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 1. Save the presentation as **Cleaning Company.pptx** in your OneDrive **Documents** folder.
 1. Select the **Copilot button** in the **Home tab** of the ribbon, select **Create presentation about...**, then complete the prompt in the Copilot pane as follows:
 
-    ```
+    ```text
     Create a presentation about a corporate cleaning service named "Contoso Cleaning" in New York City. The presentation should include the benefits of using a professional cleaning business.
     ```
 
@@ -143,7 +143,7 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 
 1. Follow up with the following prompt, and review the response:
 
-    ```
+    ```text
     Would this image be helpful to promote a commercial cleaning business?
     ```
 
@@ -170,7 +170,7 @@ You've created some collateral to help you get your business started. Now it's t
     
 1. Enter the following prompt to generate a draft email:
 
-    ```
+    ```text
     Write an email to a bank manager requesting a meeting to discuss funding for a commercial cleaning business. The email should be concise and the tone should be professional.
     ```
 
