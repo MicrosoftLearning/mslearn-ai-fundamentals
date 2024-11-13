@@ -4,7 +4,11 @@ lab:
 ---
 # Explore Microsoft 365 Copilot
 
-In this exercise you will explore some of the ways in which Microsoft 365 Copilot can use generative AI to help you be more productive when creating new content. In the scenario for this exercise, you will start with some high-level notes for a business idea, and use Microsoft 365 Copilot for across multiple apps such as Word, PowerPoint, and Excel to help you develop a business plan and a presentation for potential investors.
+Welcome to the world of Microsoft 365 Copilot! In this exercise, you'll harness the power of Copilot to explore a new business idea: starting a corporate cleaning company.
+
+Imagine this: you're about to launch a top-notch cleaning service that will revolutionize office spaces everywhere. With Microsoft Copilot by your side, you'll research market trends and develop a solid business plan. But that's not all! You'll also create compelling documents, eye-catching presentations, and persuasive emails to help get your idea off the ground and attract investors.
+
+Get ready to unleash your creativity and business acumen as you navigate through this engaging and interactive lab. By the end of this exercise, you'll have a comprehensive set of materials that will set you on the path to entrepreneurial success. Let's get started and make your corporate cleaning company a reality!
 
 This exercise should take approximately **40** minutes to complete.
 
