@@ -4,7 +4,9 @@ lab:
 ---
 # Explore Microsoft Copilot in Microsoft Edge
 
-Welcome to the world of Microsoft Copilot! In this exercise, you'll harness the power of Copilot to explore a new business idea: starting a corporate cleaning company.
+Welcome to the exciting world of Microsoft Copilot!
+
+In this exercise, you'll harness the power of Copilot to explore a new business idea: starting a corporate cleaning company.
 
 Imagine this: you're about to launch a top-notch cleaning service that will revolutionize office spaces everywhere. With Microsoft Copilot by your side, you'll research market trends and develop a solid business plan. But that's not all! You'll also create compelling documents, eye-catching presentations, and persuasive emails to help get your idea off the ground and attract investors.
 
