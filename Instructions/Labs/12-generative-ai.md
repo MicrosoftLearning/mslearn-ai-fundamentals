@@ -221,7 +221,9 @@ You've created some collateral to help you get your business started. Now it's t
     What's my availability for a meeting this week?
     ```
 
-    Copilot should provide a summary of your availability based on the calendar information in the Outlook web app.
+    Copilot should provide a summary of your availability based on the calendar information in the Outlook web page.
+
+    > **Note**: Microsoft Copilot can read the calendar page that is open in the browser (and may "remember" details during the current session), but it cannot access your calendar data directly. In a corporate environment, your organization can use Microsoft 365 Copilot, which *does* have access to your calendar and email in Outlook, as well as information in other enterprise apps like Microsoft Teams.
 
 1. Switch to the **Mail** page, and create a new email. Fill in the **To** box with your own email address and set the **Subject** to `Business funding meeting request`.
 1. In the Copilot pane, enter the following prompt:
