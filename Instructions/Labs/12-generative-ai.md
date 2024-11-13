@@ -211,7 +211,7 @@ You've created some collateral to help you get your business started. Now it's t
     What events do I have scheduled in this calendar?
     ```
     
-    Copilot should be able to read the web page and identify events in your calendar:
+    Copilot should be able to read the web page and identify events in your calendar on the Outlook web page:
 
     ![Screenshot of an Outlook calendar with Copilot identifying events.](./media/generative-ai/calendar-events.png)
 
@@ -220,6 +220,10 @@ You've created some collateral to help you get your business started. Now it's t
     ```
     What's my availability for a meeting this week?
     ```
+
+    Copilot should provide a summary of your availability based on the calendar information visible in the Outlook web page.
+
+    > **Note**: Microsoft Copilot is reading the calendar information from the web page - it does <u>not</u> have access to your calendar, and can't identify events that are not visible on the page. In a corporate environment, your organization could use Microsoft 365 Copilot, which *does* have access to your Outlook calendar and email, as well as other sources of information such as Microsoft Teams. 
 
 1. Switch to the **Mail** page, and create a new email. Fill in the **To** box with your own email address and set the **Subject** to `Business funding meeting request`.
 1. In the Copilot pane, enter the following prompt:
