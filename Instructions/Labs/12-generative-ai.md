@@ -211,7 +211,7 @@ You've created some collateral to help you get your business started. Now it's t
     What events do I have scheduled in this calendar?
     ```
     
-    Copilot should be able to read the web page and identify events in your calendar:
+    Copilot should be able to read the calendar in the web page and identify events in your calendar:
 
     ![Screenshot of an Outlook calendar with Copilot identifying events.](./media/generative-ai/calendar-events.png)
 
