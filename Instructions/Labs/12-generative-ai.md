@@ -23,7 +23,7 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
 
     > **Tip**: If you don't see the option to save a copy of the file to OneDrive, download it to your local computer. Then, in OneDrive, open the **Documents** folder and use the **+ Add new** button to upload the **Business Idea.docx** file from your local computer to OneDrive.
 
-1. View the text in the **Business Idea** document, which describe some high -level ideas for a cleaning business in New York City.
+1. View the text in the **Business Idea** document, which describe some high-level ideas for a cleaning business in New York City.
 1. Use the **Copilot** icon on the Edge toolbar to open the Copilot pane, as shown here:
 
     ![Screenshot of the Copilot pane in Microsoft Edge.](./media/generative-ai/edge-copilot.png)
