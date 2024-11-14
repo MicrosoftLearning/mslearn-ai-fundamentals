@@ -240,7 +240,7 @@ You've created some collateral to help you get your business started. Now it's t
 
 ## Challenge
 
-Now you've seen how to use Copilot to research ideas and generate content, why not try exploring further? To start a new Copilot session, enter the prompt `Let's start over`. Then, based on what you've learned in this exercise, try using Copilot to plan a meeting in which you'll propose the adoption of generative AI in your organization. Here are a few ideas to get you started:
+Now you've seen how to use Copilot to research ideas and generate content, why not try exploring further? To start a new Copilot session, in the **+** menu next to the chat box, select **Start new chat**. Then, based on what you've learned in this exercise, try using Copilot to plan a meeting in which you'll propose the adoption of generative AI in your organization. Here are a few ideas to get you started:
 
 - Research the benefits of generative AI and Microsoft Copilot for businesses, finding information about productivity benefits, cost-savings, and examples of organizations that have already successfully adopted AI.
 - Create a discussion document that you can circulate as pre-reading before the meeting.
