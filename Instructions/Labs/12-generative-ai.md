@@ -21,9 +21,9 @@ This exercise should take approximately **40** minutes to complete.
 To start your exploration of generative AI, let's use Microsoft Copilot in Edge to examine an existing document and extract some insights from it.
 
 1. In Microsoft Edge, browse to [OneDrive](https://onedrive.live.com) at `https://onedrive.live.com` and sign in using your personal Microsoft account - closing any welcome messages or offers that are displayed.
-1. In another browser tab, open the document [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) from `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. Then, when the document opens in Edge, select the option to **Save a copy to OneDrive** and save the document in your **Documents** folder in OneDrive. The document should then open in Microsoft Word online automatically.
+1. In another browser tab, open the document [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) from `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. Then, when the document opens in Edge, select the option to **Edit a copy** to copy the document to your OneDrive. The document should then open in Microsoft Word online automatically.
 
-    > **Tip**: If you don't see the option to save a copy of the file to OneDrive, download it to your local computer. Then, in OneDrive, open the **Documents** folder and use the **+ Add new** button to upload the **Business Idea.docx** file from your local computer to OneDrive.
+    > **Tip**: If you don't see the option to edit a copy, download it to your local computer. Then, in OneDrive, use the **+ Add new** button to upload the **Business Idea.docx** file from your local computer to OneDrive.
 
 1. View the text in the **Business Idea** document, which describe some high-level ideas for a cleaning business in New York City.
 1. Use the **Copilot** icon on the Edge toolbar to open the Copilot pane, as shown here:
@@ -94,13 +94,13 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
     ![Screenshot of a Word document with a Copilot-generated image.](./media/generative-ai/generated-image.png)
 
-1. Close the Microsoft Word browser tabs and return to the **Documents** folder in your OneDrive.
+1. Close the Microsoft Word browser tabs and return to your OneDrive.
 
 ## Use Copilot to generate and visualize financial projections
 
 With Copilot's help, you've created a draft of a business plan for the cleaning business idea. Now let's use Copilot to perform some calculations that will help further refine the business plan.
 
-1. In the **Documents** folder in OneDrive, use the **(+)** button to add a new **Excel workbook**. Then change the name of the workbook to `Financial Projections`.
+1. In OneDrive, use the **(+)** button to add a new **Excel workbook**. Then change the name of the workbook to `Financial Projections`.
 1. In the Copilot pane, enter the following prompt:
 
     ```
@@ -132,13 +132,13 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 
 1. Close the **Chart** tab to see the chart in the spreadsheet.
 
-1. Close the Microsoft Excel browser tab and return to the **Documents** folder in your OneDrive.
+1. Close the Microsoft Excel browser tab and return to your OneDrive.
 
 ## Use Copilot to create content for a presentation
 
 Thanks to Copilot, you've created a business plan for the cleaning business and generated some financial projections. Now you'll need an effective presentation to convince an investor to lend you the funding to start the business.
 
-1. In the **Documents** folder in OneDrive, add a new **PowerPoint presentation**. If the **Designer** pane opens automatically, close it. Then change the name of the presentation from *Presentation* to `Business Presentation`.
+1. In OneDrive, add a new **PowerPoint presentation**. If the **Designer** pane opens automatically, close it. Then change the name of the presentation from *Presentation* to `Business Presentation`.
 
 1. On the title slide for the presentation, enter the the name of your cleaning company as the title, and `Investor Opportunity` as the subtitle.
 1. Insert a new slide, using the **Two Content** slide layout (which includes a title and two placeholders for content).
@@ -197,7 +197,7 @@ Thanks to Copilot, you've created a business plan for the cleaning business and 
 
     ![Screenshot of a slide created using suggestions from Copilot.](./media/generative-ai/powerpoint-new-slide.png)
 
-1. Close the PowerPoint browser tab and return to the **Documents** folder in your OneDrive.
+1. Close the PowerPoint browser tab and return to your OneDrive.
 
 ## Use Copilot to arrange a funding meeting
 
