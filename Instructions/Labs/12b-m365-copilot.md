@@ -20,10 +20,13 @@ This exercise should take approximately **40** minutes to complete.
 
 To start your exploration of generative AI, let's use Copilot for Word to examine an existing document and extract some insights from it.
 
-1. In your web browser, open the document [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) at `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. 
-1. Select **Download** to save the file to your PC's **Downloads** folder.
+1. In a web browser, open the document [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) at `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. 
+1. Download the file to your **Downloads** folder. Then close the web browser.
 1. **Move** or **Copy & Paste** the document you just downloaded to the **OneDrive** folder.
 1. From your **OneDrive** folder, open **Business Idea.docx** in Microsoft Word (closing any welcome messages or notifications of new features) and review the document, which describes some high-level ideas for a cleaning business in New York City. If prompted, select **Enable editing** at the top.
+
+    > **Tip**: You can close the **Navigation** pane if it is open to see more of the document.
+
 1. Find and select the **Copilot** icon on the Word toolbar to open the Copilot pane, as shown here (your visual theme may vary):
 
     ![Screenshot of the Copilot pane in Microsoft Word.](./media/generative-ai/copilot-word-pane.png)
@@ -31,7 +34,7 @@ To start your exploration of generative AI, let's use Copilot for Word to examin
 1. In the Copilot pane, enter following the prompt in the text area at the bottom:
 
     ```text
-    Summarize this document into 5 key points, and suggest next steps.
+    Summarize this document.
     ```
 
 1. Review the response from Copilot, which should summarize the main points in the document, as shown here:
@@ -48,11 +51,11 @@ To start your exploration of generative AI, let's use Copilot for Word to examin
     How do I setup a new business in New York? Answer with a numbered list.
     ```
 
-1. Review the response and follow up with additional questions as needed. When you're happy with the response, use the **Copy** (&#128461;) icon under the response to copy it to the clipboard. Paste it into the Word document. Then select the text that provides a list of things to do when setting up a business in New York and use the Copilot icon (at the bottom of the selected text) to visualize the text as a table.
+1. Review the response and follow up with additional questions as needed. When you're happy with the response, use the **Copy** (&#128461;) icon under the response to copy it to the clipboard. Paste it into the Word document after the existing text. Then select the text that provides a list of things to do when setting up a business in New York and use the Copilot icon (at the bottom of the selected text) to visualize the text as a table.
 
     ![Screenshot asking Copilot to visualize in a table format.](./media/generative-ai/copilot-rewrite-as-table.png)
 
-1. Review the table and ask Copilot to add more information, such as references for more details.  Your response should look something like this (you may need to use the **Regenerate** button):
+1. Review the table and ask Copilot to add more information, such as a column with references for more details.  Your response should look something like this (you may need to use the **Regenerate** button):
 
     ![Screenshot of the response from Copilot in a table format.](./media/generative-ai/copilot-rewrite-as-table-response.png)
 
@@ -79,9 +82,9 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
     ![Screenshot of the Copilot drafting a business plan.](./media/generative-ai/copilot-draft-business-plan-prompt.png)
 
-    > **Tip**: Type the prompt, and when you type "/" Copilot shuld enable you to browse the documents in your **Documents** folder.
+    > **Tip**: Type the prompt, and when you type "/" Copilot should enable you to browse the documents in your **Documents** folder. If Copilot does not suggest any documents, it may be because your OneDrive has not yet been fully indexed. In this case, modify the prompt to `Write a business plan for "Contoso Cleaning", a commercial cleaning buisness in New York. Include an executive summary, market overview, and financial projections.`.
 
-1. Review the response drafted by Copilot and keep it, adjust the tone, length, or ask Copilot to rewrite it with a new prompt. Apply appropriate headings and styling to your document to make it look professional before saving it as **Business Plan.docx** in your **Documents** folder. Your document should look something like this:
+1. Generate and review a response. Then keep it, adjust the tone, length, or ask Copilot to rewrite it with a new prompt. Apply appropriate headings and styling to your document to make it look professional before saving it as **Business Plan.docx** in your OneDrive folder. Your document should look something like this:
 
     ![Screenshot of a Word document with a Copilot-generated business plan.](./media/generative-ai/copilot-draft-business-plan-response.png)
 
@@ -96,7 +99,7 @@ With a business plan in hand, let's take some of that data on financial projecti
     ```
 
 1. Copy the table of projected profits to the clipboard.
-1. Open **Excel** and create a new blank workbook. Immediately save the workbook as **Financial Projections.xlsx** to your **Documents** folder in OneDrive.
+1. Open **Excel** and create a new blank workbook. Immediately save the workbook as **Financial Projections.xlsx** to your OneDrive folder.
 1. Paste the table of profit projections into the Excel spreadsheet and **format it as a table**. To do this:
     1. Select a **cell** within your data.
     1. Select **Home** and choose **Format as Table** under Styles. 
@@ -113,6 +116,8 @@ With a business plan in hand, let's take some of that data on financial projecti
 
     ![Screenshot of Copilot in Excel visualizing financial projections.](./media/generative-ai/copilot-excel-visualize-projections.png)
 
+    > **Tip**: If Copilot suggests a different format for the data, enter the follow-on prompt `Visualize the data as a line chart.`.
+
 1. Select the option in the Copilot response to add the pivot chart to a new sheet and open it. Select the chart and then select **Design** to apply styles, change the chart type and other actions. At the end, you should have something that resembles this:
 
     ![Screenshot of Copilot in Excel adding a PivotChart.](./media/generative-ai/copilot-excel-chart-design.png)
@@ -126,7 +131,7 @@ You have just used data created from Copilot in Word to visualize it in Excel. I
 With Copilot's help, you've created a draft of a business plan for the cleaning business idea and prepared some financial projections. Now you'll need an effective presentation to communicate the benefits of your business.
 
 1. Open **PowerPoint** and create a new **blank presentation**. If the **Designer** pane opens automatically, close it.
-1. Save the presentation as **Cleaning Company.pptx** in your OneDrive **Documents** folder.
+1. Save the presentation as **Cleaning Company.pptx** in your OneDrive folder.
 1. Select the **Copilot button** in the **Home tab** of the ribbon, select **Create presentation about...**, then complete the prompt in the Copilot pane as follows:
 
     ```text
@@ -137,40 +142,28 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 
     ![Screenshot of PowerPoint presentation created by Copilot from a Word document.](./media/generative-ai/copilot-powerpoint-create-image.png)
 
-1. Select the last slide in the presentation. Then, in the Copilot pane, in the chat box, select the **Show prompts** icon and select the **Add a slide about...** prompt to create a new slide using the prompt `Add a slide about the benefits of an eco-friendly approach to cleaning.`
+1. Select the last slide in the presentation. Then, in the Copilot pane, in the chat box, select the **View prompts** icon and select the **Add a slide about...** prompt to create a new slide using the prompt `Add a slide about the benefits of an eco-friendly approach to cleaning.`
 
     ![Screenshot of PowerPoint presentation create a new slide.](./media/generative-ai/copilot-powerpoint-add-new-slide.png)
 
-1. Download the [mopping.png](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/mopping.png) image from `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/mopping.png` to your local computer, saving it in any folder.
-1. In Microsoft PowerPoint, in the Copilot pane, use the **Add an image** button next to the chat box to upload the **mopping.png** image to Copilot, and add the prompt `What does this image show?`.
-1. Review the response, which should be similar to this:
-
-    ![Screenshot of a Copilot description of an image.](./media/generative-ai/copilot-powerpoint-image-analysis.png)
-
-1. Follow up with the following prompt, and review the response:
-
-    ```text
-    Would this image be helpful to promote a commercial cleaning business?
-    ```
-
-    Copilot has analyzed the image and assessed its usefulness for your specific business scenario in the same way you might ask a colleague's opinion.
-
 1. Save the presentation and close PowerPoint.
 
-## Use Copilot to compose an email
+## Use Copilot to arrange a funding meeting
 
 You've created some collateral to help you get your business started. Now it's time to reach out to an investor seeking some startup funding.
 
-1. Open **Outlook**. If you haven't setup Outlook with your Microsoft 365 account, do so.
+1. Open **Outlook**, and on the title bar, use the **Copilot** icon to open the Copilot pane.
+1. Switch to the **Calendar** page and change the view to **Work week**. If you don't already have any scheduled events in your calendar for this week, you can add a couple so that Copilot has some information to work with.
+1. In the Copilot pane, enter the following prompt:
 
-    > **Tip**: See [Set up and use Outlook - Microsoft Support](https://support.microsoft.com/office/set-up-and-use-outlook-4636f361-d5e3-4a87-9cd4-382858de55fa) for help with this.
+    ```
+    What events do I have scheduled this week?
+    ```
 
-1. On the toolbar, switch to the **new Outlook** experience if it not already active.
+    Copilot should respond with a summary of your scheduled events for the week - helping you identify availability for a meeting with a bank manager to arrange startup funding.
 
-    > **Note**: To get the latest Copilot features in Outlook, you should be using the "New Outlook" experience. To see which version you're using, see [What version of Outlook do I have? - Microsoft Support](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c).
-
-1. Create a new email, and fill in the **To** box with your own email address.
-1. In the **Copilot** menu on the toolbar, select the option to **Draft with Copilot**:
+1. Switch to the **Mail** page and create a new email, and fill in the **To** box with your own email address.
+1. Select the option to **Draft with Copilot**:
 
     ![Screenshot of Outlook and the option to draft an email with Copilot.](./media/generative-ai/copilot-draft-email-outlook.png)
     
