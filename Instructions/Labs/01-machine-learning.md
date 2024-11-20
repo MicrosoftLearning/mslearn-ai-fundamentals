@@ -21,7 +21,7 @@ To use Azure Machine Learning, you need to provision an Azure Machine Learning w
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Create or select a resource group*.
     - **Name**: *Enter a unique name for your workspace*.
-    - **Region**: *Select the closest geographical region*.
+    - **Region**: East US.
     - **Storage account**: *Note the default new storage account that will be created for your workspace*.
     - **Key vault**: *Note the default new key vault that will be created for your workspace*.
     - **Application insights**: *Note the default new application insights resource that will be created for your workspace*.
