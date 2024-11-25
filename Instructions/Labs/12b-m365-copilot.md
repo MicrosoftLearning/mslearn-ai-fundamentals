@@ -33,8 +33,8 @@ To start your exploration of generative AI, let's use Copilot for Word to examin
 
 1. In the Copilot pane, enter following the prompt in the text area at the bottom:
 
-    ```text
-    Summarize this document.
+    ```prompt
+    Summarize this document into 5 key points, and suggest next steps.
     ```
 
 1. Review the response from Copilot, which should summarize the main points in the document, as shown here:
@@ -47,7 +47,7 @@ To start your exploration of generative AI, let's use Copilot for Word to examin
 
 1. Return to the Copilot pane to ask Copilot the following question:
 
-    ```text
+    ```prompt
     How do I setup a new business in New York? Answer with a numbered list.
     ```
 
@@ -69,20 +69,20 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
 1. With the **Business Idea.docx** document still open, in the Copilot pane, enter the following prompt:
 
-    ```text
+    ```prompt
     Can you suggest a name for my cleaning business?
     ```
 
 1. Review the suggestions and select a name for your cleaning company (or continue prompting for more suggestions find a name you like).
 1. Create a new blank document. Then, in the new document, select the Copilot icon in the margin to draft new content. Enter the following prompt, replacing **Contoso Cleaning** with the company name of your choice:
 
-    ```text
+    ```prompt
     Write a business plan for "Contoso Cleaning" based on the information in /Business Idea.docx. Include an executive summary, market overview, and financial projections.
     ```
 
     ![Screenshot of the Copilot drafting a business plan.](./media/generative-ai/copilot-draft-business-plan-prompt.png)
 
-    > **Tip**: Type the prompt, and when you type "/" Copilot should enable you to browse the documents in your **Documents** folder. If Copilot does not suggest any documents, it may be because your OneDrive has not yet been fully indexed. In this case, modify the prompt to `Write a business plan for "Contoso Cleaning", a commercial cleaning buisness in New York. Include an executive summary, market overview, and financial projections.`.
+    > **Tip**: Type the prompt, and when you type "/" Copilot should enable you to browse the documents in your OneDrive folder. If Copilot does not suggest any documents, it may be because your OneDrive has not yet been fully indexed. In this case, modify the prompt to `Write a business plan for "Contoso Cleaning", a commercial cleaning buisness in New York. Include an executive summary, market overview, and financial projections.`.
 
 1. Generate and review a response. Then keep it, adjust the tone, length, or ask Copilot to rewrite it with a new prompt. Apply appropriate headings and styling to your document to make it look professional before saving it as **Business Plan.docx** in your OneDrive folder. Your document should look something like this:
 
@@ -92,9 +92,16 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
 With a business plan in hand, let's take some of that data on financial projections and ask Copilot in Excel to visualize that data for us, so we can include it in emails or presentations to investors.
 
-1. With the **Business Plan** document open in Microsoft Word, in the Copilot pane, enter the following prompt:
+1. With the **Business Plan** document open in Microsoft Word, open the Copilot pane.
+1. If the business plan that was generated included a list of projected profits, enter the following prompt:
 
-    ```text
+    ```prompt
+    Create a table of the projected profits in this document.
+    ```
+
+    Otherwise, enter this prompt:
+
+    ```prompt
     Create a table of projected profits for the next 5 years, starting with this year. The profit this year should be $10,000 and it should increase by 12% each year.
     ```
 
@@ -108,7 +115,7 @@ With a business plan in hand, let's take some of that data on financial projecti
     1. Mark if your table has headers, and select **OK**.
 1. With your sales projections formatted as a table, open the Copilot pane from the **Home** tab of the Excel ribbon and enter the following prompt:
 
-    ```text
+    ```prompt
     Suggest ways to visualize these financial projections.
     ```
     
@@ -134,7 +141,7 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 1. Save the presentation as **Cleaning Company.pptx** in your OneDrive folder.
 1. Select the **Copilot button** in the **Home tab** of the ribbon, select **Create presentation about...**, then complete the prompt in the Copilot pane as follows:
 
-    ```text
+    ```prompt
     Create a presentation about a corporate cleaning service named "Contoso Cleaning" in New York City. The presentation should include the benefits of using a professional cleaning business.
     ```
 
@@ -142,7 +149,7 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 
     ![Screenshot of PowerPoint presentation created by Copilot from a Word document.](./media/generative-ai/copilot-powerpoint-create-image.png)
 
-1. Select the last slide in the presentation. Then, in the Copilot pane, in the chat box, select the **View prompts** icon and select the **Add a slide about...** prompt to create a new slide using the prompt `Add a slide about the benefits of an eco-friendly approach to cleaning.`
+1. Select the second-last slide in the presentation (before the final *Conclusion* slide if Copilot generated one). Then, in the Copilot pane, in the chat box, select the **View prompts** icon and select the **Add a slide about...** prompt to create a new slide using the prompt `Add a slide about the benefits of an eco-friendly approach to cleaning.`
 
     ![Screenshot of PowerPoint presentation create a new slide.](./media/generative-ai/copilot-powerpoint-add-new-slide.png)
 
@@ -169,7 +176,7 @@ You've created some collateral to help you get your business started. Now it's t
     
 1. Enter the following prompt to generate a draft email:
 
-    ```text
+    ```prompt
     Write an email to a bank manager requesting a meeting to discuss funding for a commercial cleaning business. The email should be concise and the tone should be professional.
     ```
 

@@ -32,7 +32,7 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
 
 1. In the chat box at the bottom of the Copilot pane, enter following the prompt:
 
-    ```
+    ```prompt
     Summarize this document into 5 key points, and suggest next steps.
     ```
 
@@ -48,7 +48,7 @@ To start your exploration of generative AI, let's use Microsoft Copilot in Edge 
 
 1. Enter the following prompt:
 
-    ```
+    ```prompt
     How do I go about setting up a business in New York?
     ```
 
@@ -62,14 +62,14 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
 1. With the **Business Idea.docx** document still open in Microsoft Edge, in the Copilot pane, enter the following prompt:
 
-    ```
+    ```prompt
     Suggest a name for my cleaning business.
     ```
 
 1. Review the suggestions and select a name for your cleaning company (or continue prompting for more suggestions find a name you like). When you have chosen one, let Copilot know which one - for example, enter `Let's go with the first one.`.
 1. Ensure that the **Business Idea** document is still open in the main browser page, then enter the following prompt:
 
-    ```
+    ```prompt
     Based on the contents of this document, create a business plan for my cleaning business.
     ```
 
@@ -80,7 +80,7 @@ Now that you've done some initial research, let's have Copilot help you develop 
 
 1. In the Copilot pane, enter the following prompt:
 
-    ```
+    ```prompt
     Create a corporate logo for the cleaning company. The logo should be round and include an iconic New York landmark.
     ```
 
@@ -103,7 +103,7 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 1. In OneDrive, use the **(+)** button to add a new **Excel workbook**. Then change the name of the workbook to `Financial Projections`.
 1. In the Copilot pane, enter the following prompt:
 
-    ```
+    ```prompt
     Create a table of projected profits for the next 5 years, starting with this year. The profit this year should be $10,000 and it should increase by 12% each year.
     ```
 
@@ -114,13 +114,13 @@ With Copilot's help, you've created a draft of a business plan for the cleaning 
 
 1. In the Copilot pane, enter the following prompt:
 
-    ```text
+    ```prompt
     What's a good way to visualize these projections in a chart?
     ```
 
 1. Review the response, which should recommend a few ways to visualize the projections data. Then enter the following prompt:
 
-    ```text
+    ```prompt
     How do I create a line chart in Excel?
     ```
 
@@ -145,14 +145,14 @@ Thanks to Copilot, you've created a business plan for the cleaning business and 
 1. Change the slide title to `Benefits of Hiring a Commercial Cleaner`.
 1. In the Copilot pane, enter the following prompt:
 
-    ```
+    ```prompt
     Write a summary of the benefits of using a corporate cleaning company for your business. The summary should consist of five short bullet points.
     ```
 
 1. Copy Copilot's response to the clipboard, and paste it into the left content placeholder. Then edit and reformat the text in the placeholder until you are satisfied.
 1. In the Copilot pane, enter the following prompt:
 
-    ```
+    ```prompt
     Create a photorealistic image of a clean office.
     ```
 
@@ -172,7 +172,7 @@ Thanks to Copilot, you've created a business plan for the cleaning business and 
 
 1. Follow up with the following prompt, and review the response:
 
-    ```
+    ```prompt
     Would this image be helpful to promote a commercial cleaning business?
     ```
 
@@ -182,14 +182,14 @@ Thanks to Copilot, you've created a business plan for the cleaning business and 
 
 1. In the Copilot pane, enter the following prompt:
 
-    ```
+    ```prompt
     Write a short paragraph to accompany this image, emphasizing the professionalism of the cleaning staff we employ.
     ```
 
 1. Review the resulting text, and then copy it to the empty content placeholder on the slide, editing and formatting it as you think necessary.
 1. In the Copilot pane, enter the following prompt:
 
-    ```
+    ```prompt
     Suggest a good title for a slide that contains the image and text.
     ```
 
@@ -207,7 +207,7 @@ You've created some collateral to help you get your business started. Now it's t
 1. Switch to the **Calendar** page and change the view to **Work week**. If you don't already have any scheduled events in your calendar, you can add a couple so that Copilot has some information to work with.
 1. In the Copilot pane, enter the following prompt:
 
-    ```
+    ```prompt
     What events do I have scheduled in this calendar?
     ```
     
@@ -217,7 +217,7 @@ You've created some collateral to help you get your business started. Now it's t
 
 1. Try using this prompt to check your availability for a meeting with a a bank manager to seek funding for the business:
 
-    ```
+    ```prompt
     What's my availability for a meeting this week?
     ```
 
@@ -228,7 +228,7 @@ You've created some collateral to help you get your business started. Now it's t
 1. Switch to the **Mail** page, and create a new email. Fill in the **To** box with your own email address and set the **Subject** to `Business funding meeting request`.
 1. In the Copilot pane, enter the following prompt:
 
-    ```
+    ```prompt
     Write an email to a bank manager requesting a meeting to discuss funding for a commercial cleaning business. The email should be concise and the tone should be professional.
     ```
     
