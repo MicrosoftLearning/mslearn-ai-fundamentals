@@ -7,7 +7,7 @@ lab:
 
 In this exercise, you'll use the automated machine learning feature in Azure Machine Learning to train and evaluate a machine learning model. You'll then deploy and test the trained model.
 
-This exercise should take approximately **30** minutes to complete.
+This exercise should take approximately **35** minutes to complete.
 
 ## Create an Azure Machine Learning workspace
 
@@ -29,7 +29,25 @@ To use Azure Machine Learning, you need to provision an Azure Machine Learning w
 
 1. Select **Review + create**, then select **Create**. Wait for your workspace to be created (it can take a few minutes), and then go to the deployed resource.
 
-1. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account). Close any messages that are displayed.
+1. In the *Overview* of your deployed resource, select **Resource Group**. You will need to update the resource access permissions to complete the exercise. In the menu on the left, select **Access control (IAM)**.
+
+#### Update role assignments
+
+1. In the *Access control (IAM)* pane, select **Add role assignment**. Then, copy and paste **Microsoft.MachineLearningServices/workspaces/datastores/listsecrets/action** into the search bar. 
+
+1. Select **Azure AI Administrator** and select **Next**. 
+
+1. Under *Members*, click on **+ Select Members**. Search for the email address assoicated with your Azure subscription. *Note: If you hover your mouse over the top right corner of the portal, you should see the email address used with your subscription.*
+
+1. Click on the email associated with your Azure subscription. It should appear in the *Selected members* list. Then click on **Select**. 
+
+1. In the *Members* pane, you should see a member added. Then select **Review + Assign** twice to update the settings. 
+
+1. Return to the *Overview* pane of your resource group. In the list of resources, select your Azure Machine Learning workspace resource. 
+
+#### Launch studio 
+
+1. In your Azure Machine Learning owrkspace resource, select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account). Close any messages that are displayed.
 
 1. In Azure Machine Learning studio, you should see your newly created workspace. If not, select **All workspaces** in the left-hand menu and then select the workspace you just created.
 
