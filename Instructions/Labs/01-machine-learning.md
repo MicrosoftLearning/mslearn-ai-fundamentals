@@ -29,8 +29,6 @@ To use Azure Machine Learning, you need to provision an Azure Machine Learning w
 
 1. Select **Review + create**, then select **Create**. Wait for your workspace to be created (it can take a few minutes), and then go to the deployed resource.
 
-1. In the *Overview* of your deployed resource, select your Azure Machine Learning workspace resource. 
-
 #### Launch studio 
 
 1. In your Azure Machine Learning workspace resource, select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account). Close any messages that are displayed.
