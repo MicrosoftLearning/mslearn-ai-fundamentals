@@ -29,21 +29,7 @@ To use Azure Machine Learning, you need to provision an Azure Machine Learning w
 
 1. Select **Review + create**, then select **Create**. Wait for your workspace to be created (it can take a few minutes), and then go to the deployed resource.
 
-1. In the *Overview* of your deployed resource, select **Resource Group**. You will need to update the resource access permissions to complete the exercise. In the menu on the left, select **Access control (IAM)**.
-
-#### Update role assignments
-
-1. In the *Access control (IAM)* pane, select **Add role assignment**. Then, copy and paste **Microsoft.MachineLearningServices/workspaces/datastores/listsecrets/action** into the search bar. 
-
-1. Select **Azure AI Administrator** and select **Next**. 
-
-1. Under *Members*, click on **+ Select Members**. Search for the email address assoicated with your Azure subscription. *Note: If you hover your mouse over the top right corner of the portal, you should see the email address used with your subscription.*
-
-1. Click on the email associated with your Azure subscription. It should appear in the *Selected members* list. Then click on **Select**. 
-
-1. In the *Members* pane, you should see a member added. Then select **Review + Assign** twice to update the settings. 
-
-1. Return to the *Overview* pane of your resource group. In the list of resources, select your Azure Machine Learning workspace resource. 
+1. In the *Overview* of your deployed resource, select your Azure Machine Learning workspace resource. 
 
 #### Launch studio 
 
@@ -130,9 +116,6 @@ When the automated machine learning job has completed, you can review the best m
 
 1. On the **Overview** tab of the automated machine learning job, note the best model summary.
     ![Screenshot of the best model summary of the automated machine learning job with a box around the algorithm name.](./media/use-automated-machine-learning/complete-run.png)
-
-    > **Note**
-    > You may see a message under the status "Warning: User specified exit score reached...". This is an expected message. Please continue to the next step.
   
 1. Select the text under **Algorithm name** for the best model to view its details.
 
@@ -150,6 +133,9 @@ When the automated machine learning job has completed, you can review the best m
     - **Deployment name**: *Leave default*
     - **Inferencing data collection**: *Disabled*
     - **Package Model**: *Disabled*
+
+    > **Note**
+    > If you receive a message that there is not enough quota to select the virtual machine *Standard_DS3_v2*, please select a different one.
 
 1. Wait for the deployment to start - this may take a few seconds. The **Deploy status** for the **predict-rentals** endpoint will be indicated in the main part of the page as *Running*.
 1. Wait for the **Deploy status** to change to *Succeeded*. This may take 5-10 minutes.
