@@ -17,8 +17,8 @@ You can use Azure AI Vision's image analysis capabilities with an **Azure AI ser
 
 1. Click the **&#65291;Create a resource** button and search for *Azure AI services* Select the option *Azure services only* under the search bar to narrow down your search.
 
-1. Select the instance of *Azure AI services* that has the description *Azure AI services*, **not** *Connect powerful AI to your apps*.
-    ![A screenshot of the two Azure AI services resources in the marketplace, with an indication to select the one with a purple logo.](./media/analyze-images-vision/azure-ai-services-resource.png)
+1. Select the instance of *Azure AI services* that has the description *Connect powerful AI to your apps*.
+    ![A screenshot of the two Azure AI services resources in the marketplace, with an indication to select the one with a blue logo.](./media/analyze-images-vision/azure-ai-services-resource.png)
    
 1. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
     - **Subscription**: *Your Azure subscription*.
