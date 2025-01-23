@@ -1,49 +1,65 @@
 ---
 lab:
-    title: 'Analyze text with Language Studio'
+    title: 'Analyze text in Azure AI Foundry portal'
 ---
 
-# Analyze text with Language Studio
-
-In this exercise you will explore the capabilities of Azure AI Language by analyzing some example hotel reviews. You'll use Language Studio to understand whether the reviews are mostly positive or negative.
+# Analyze text in Azure AI Foundry portal
 
 Natural Language Processing (NLP) is a branch of AI that deals with written and spoken language. You can use NLP to build solutions that extract semantic meaning from text or speech, or that formulate meaningful responses in natural language.
 
-For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to identify key phrases, determine which reviews are positive and which are negative, or analyze the review text for mentions of known entities such as locations or people.
+Azure AI Language Service includes text analysis and NLP capabilities. These include the identification of key phrases in text, and the classification of text based on sentiment. For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to identify key phrases, determine which reviews are positive and which are negative, or analyze the review text for mentions of known entities such as locations or people.
 
-Azure AI Language Service includes text analysis and NLP capabilities. These include the identification of key phrases in text, and the classification of text based on sentiment.
+In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. You'll use the Language service to understand whether the reviews are mostly positive or negative.
 
-## Create a *Language* resource
+## Create a project in Azure AI Foundry portal
 
-You can use many Azure AI Language features with either a **Language** or **Azure AI services** resource. There are some instances where only a Language resource can be used. For the exercise below, we will use a **Language** resource. If you haven't already done so, create a **Language** resource in your Azure subscription.
+1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
-1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
+1. Sign in with your account. 
 
-1. Click the **&#65291;Create a resource** button and search for *Language service*. Select **create** a **Language service** plan. You will be taken to a page to **Select additional features**. Keep the default selection and click **Continue to create your resource**. 
+1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
-1. On the page **Create Language**, configure it with the following settings:
-    - **Subscription**: *Your Azure subscription*.
-    - **Resource group**: *Select or create a resource group with a unique name*.
-    - **Region**: *Select the closest geographical region. If in eastern US, use "East US 2"*.
-    - **Name**: *Enter a unique name*.
-    - **Pricing tier**: *Free F0 or S if Free F0 is not available*
-    - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
+    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-home-page.png)
 
-1. Select **Review + create** then **Create** and wait for deployment to complete.
+1. On the *Create a project* pane, you will see a generated project name, which you can keep as-is. Depending on whether you have created a hub in the past, you will either see a list of *new* Azure resources to be created or a drop-down list of existing hubs. If you see the drop-down list of existing hubs, select *Create new hub*, create a unique name for your hub, and select *Next*.  
+ 
+    ![Screenshot of the create a project pane with automaticly generated names for hub and project.](./media/azure-ai-foundry-create-project.png)
 
-## Configure your resource in Azure AI Language Studio
+> **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
 
-1. In another browser tab, open **Language Studio** at [https://language.cognitive.azure.com](https://language.cognitive.azure.com?azure-portal=true) and sign in.
+1. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: East US, France Central, Korea Central, West Europe, or West US to complete the rest of the lab. Then select **create**. 
+
+1. Take note of the resources that are created: 
+- Azure AI services
+- Azure AI hub
+- Azure AI project
+- Storage account
+- Key vault
+- Resource group  
+ 
+1. After the resources are created, you will be brought to your project's *Overview* page. On the left-hand menu on the screen, select **AI Services**.
+ 
+    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/azure-ai-foundry-ai-services.png)  
+
+1. On the *AI Services* page, select the *Language + Translator* tile to try out Azure AI Language and Translator capabilities.
+
+    ![Screenshot of the Language and Translator tile selected on the AI Services page.](./media/language-translator-tile.png)   
+
+## Analyze reviews with Azure AI Language
+
+Let's use the information extraction functionality of Azure AI Language to analyze reviews.
+
+1. On the *Language + Translator* page, scroll down and select **Extract information** under *Explore Language capabilities*. Then select the **Other language capabilities** tile.
+
+1. You will be taken to the **Language Studio** at [https://language.cognitive.azure.com](https://language.cognitive.azure.com?azure-portal=true) and need to sign in.
 
 1. When prompted with **Select an Azure resource**, make the following configurations:
     - **Azure directory**: *Default Directory, the directory you are using*
     - **Azure subscription**: *Select the subscription you are using*
-    - **Resource type**: Language
-    - **Resource name**: *select the Language service resource you just created*
+    - **Resource type**: Azure AI services
+    - **Resource name**: *select the resource you just created*
 
 Then select **Done**.
-
-> **Important**: As of July 2023, Azure AI services encompass all of what were previously known as Cognitive Services and Azure Applied AI Services. Some user interfaces are still updating their reference from `Cognitive Services` to `Azure AI services`. The two names refer to the same type of resource.
 
 > **Note**: If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
 > 1. On the bar at the top if the page, select **Settings (&#9881;)**. 
@@ -52,11 +68,7 @@ Then select **Done**.
 > ![Enable language resource.](media/analyze-text-language-service/language-resource-enabled.png)
 > 1. At the top of the page, select **Language Studio** to return to the Language Studio home page.
 
-## Analyze reviews in Language Studio
-
-1. In a web browser, navigate to **Language Studio** at [https://language.cognitive.azure.com](https://language.cognitive.azure.com?azure-portal=true).
-
-1. On the **Welcome to Language Studio** landing page, select the **Classify text** tab, then select the **Analyze sentiment and mine opinions** tile.
+1. On the **Welcome to Language Studio** landing page of the [Language Studio](https://language.cognitive.azure.com?azure-portal=true), select the **Classify text** tab, then select the **Analyze sentiment and mine opinions** tile. 
 
 1. Under *Select text language*, select **English**.
 
