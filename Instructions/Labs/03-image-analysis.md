@@ -1,54 +1,42 @@
 ---
 lab:
-    title: 'Analyze images in Vision Studio'
+    title: 'Analyze images in Azure AI Foundry portal'
 ---
 
-# Analyze images in Vision Studio 
+# Analyze images in Azure AI Foundry portal
 
-**Azure AI Vision** includes numerous capabilities for understanding image content and context and extracting information from images. Azure AI Vision Studio allows you to try out many of the capabilities of image analysis. 
+**Azure AI Vision** includes numerous capabilities for understanding image content and context and extracting information from images. Azure AI Foundry portal is Microsoft's platform for creating intelligent applications. In this exercise, you will use Azure AI Foundry portal to analyze images using the built-in try-it-out experiences. 
 
-In this exercise, you will use Vision Studio to analyze images using the built-in try-it-out experiences. Suppose the fictitious retailer *Northwind Traders* has decided to implement a "smart store", in which AI services monitor the store to identify customers requiring assistance, and direct employees to help them. By using Azure AI Vision, images taken by cameras throughout the store can be analyzed to provide meaningful descriptions of what they depict.
+Suppose the fictitious retailer *Northwind Traders* has decided to implement a "smart store", in which AI services monitor the store to identify customers requiring assistance, and direct employees to help them. By using Azure AI Vision, images taken by cameras throughout the store can be analyzed to provide meaningful descriptions of what they depict.
 
-## Create an *Azure AI services* resource
+## Create a project in Azure AI Foundry portal
 
-You can use Azure AI Vision's image analysis capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
-
-1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
-
-1. Click the **&#65291;Create a resource** button and search for *Azure AI services* Select the option *Azure services only* under the search bar to narrow down your search.
-
-1. Select the instance of *Azure AI services* that has the description *Connect powerful AI to your apps*.
-    ![A screenshot of the two Azure AI services resources in the marketplace, with an indication to select the one with a blue logo.](./media/analyze-images-vision/azure-ai-services-resource.png)
-   
-1. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
-    - **Subscription**: *Your Azure subscription*.
-    - **Resource group**: *Select or create a resource group with a unique name*.
-    - **Region**: *Select the closest geographical region. If in eastern US, use "East US 2"*.
-    - **Name**: *Enter a unique name*.
-    - **Pricing tier**: *Standard S0.*
-    - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
-
-1. Select **Review + create** then **Create** and wait for deployment to complete.
-
-## Connect your Azure AI service resource to Vision Studio
-
-Next, connect the Azure AI service resource you provisioned above to Vision Studio.
-
-1. In another browser tab, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
+1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
 1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource.
 
-1. On the Vision Studio home page, select **View all resources** under the **Getting started with Vision** heading.
+1. On the Azure AI Foundry portal home page, select **Create a project**.
+![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-home-page.png)
 
-    ![The View all resource link is highlighted under Getting started with Vision in Vision Studio.](./media/analyze-images-vision/vision-resources.png)
+1. On the *Create a project* pane, you will see a generated project name, which you can keep as-is. Depending on whether you have created another hub in the past, you will either see a list of *new* Azure resources to be created or a drop-down list of existing hubs. If you see the drop-down list of existing hubs, select *Create new hub*, create a unique name for your hub, and select *Next*.  
+ 
+![Screenshot of the create a project pane with automaticly generated names for hub and project.](./media/azure-ai-foundry-create-project.png)
 
-1. On the **Select a resource to work with** page, hover your mouse cursor over the resource you created above in the list and then check the box to the left of the resource name, then select **Select as default resource**.
+> **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
 
-    > **Note** : If your resource is not listed, you may need to **Refresh** the page.
+1. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: East US, France Central, Korea Central, West Europe, or West US to complete the rest of the lab. Then select **create**. 
 
-    ![The Select a resource to work with dialog is displayed with the cog-ms-learn-vision-SUFFIX Cognitive Services resource highlighted and checked. The Select as default resource button is highlighted.](./media/analyze-images-vision/default-resource.png)
-
-1. Close the settings page by selecting the "x" at the top right of the screen.
+1. Take note of the resources that are created: 
+- Azure AI services
+- Azure AI hub
+- Azure AI project
+- Storage account
+- Key vault
+- Resource group  
+-  
+1. After the resources are created, you will be brought to your project's *Overview* page. On the left-hand menu on the screen, select **AI Services**.
+. 
+![Screenshot fo the left-hand menu on the project screen with AI Services selected.](./media/azure-ai-foundry-ai-services.png)  
 
 ## Generate captions for an image
 
@@ -56,13 +44,9 @@ Now you are ready to use Vision Studio to analyze images taken by a camera in th
 
 Let's look at the image captioning functionality of Azure AI Vision. Image captions are available through the **Caption** and **Dense Captions** features.
 
-1. In a web browser, navigate to [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
+1. On the *Vision + Document* page, scroll down and select **Image** under *View all other vision capabilities*. Then select the **Image captioning** tile.
 
-1. On the **Getting started with Vision** landing page, select the **Image analysis** tab and then select the **Add captions to images** tile.
-
-    ![On the Vision Studio home page, the Image analysis tab is selected and highlighted. The Add captions to images tile is highlighted.](./media/analyze-images-vision/add-captions.png)
-
-1. Under the **Try It Out** subheading, acknowledge the resource usage policy by reading and checking the box.  
+1. Under the **Try It Out** subheading, note the resource you are connected to. You should not have to make changes.  
 
 1. Select [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) to download **image-analysis.zip**. Open the folder on your computer and locate the file named **store-camera-1.jpg**; which contains the following image:
 
@@ -74,7 +58,7 @@ Let's look at the image captioning functionality of Azure AI Vision. Image capti
 
     The **Caption** functionality provides a single, human-readable English sentence describing the image's content.
 
-1. Next, use the same image to perform **Dense captioning**. Return to the **Vision Studio** home page, and as you did before, select the **Image analysis** tab, then select the **Dense captioning** tile.
+1. Next, use the same image to perform **Dense captioning**. Return to the **Vision + Document** home page, and as you did before, select the **Image** tab, then select the **Dense captioning** tile.
 
     The **Dense Captions** feature differs from the **Caption** capability in that it provides multiple human-readable captions for an image, one describing the image's content and others, each covering the essential objects detected in the picture. Each detected object includes a bounding box, which defines the pixel coordinates within the image associated with the object.
 
@@ -132,3 +116,5 @@ If you don’t intend to do more exercises, delete any resources that you no lon
 ## Learn more
 
 To learn more about what you can do with this service, see the [Azure AI Vision page](https://learn.microsoft.com/azure/ai-services/computer-vision/overview).
+
+
