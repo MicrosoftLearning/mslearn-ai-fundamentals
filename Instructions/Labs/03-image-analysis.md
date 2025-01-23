@@ -17,11 +17,11 @@ Suppose the fictitious retailer *Northwind Traders* has decided to implement a "
 
 1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
-![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-home-page.png)
+    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-home-page.png)
 
 1. On the *Create a project* pane, you will see a generated project name, which you can keep as-is. Depending on whether you have created a hub in the past, you will either see a list of *new* Azure resources to be created or a drop-down list of existing hubs. If you see the drop-down list of existing hubs, select *Create new hub*, create a unique name for your hub, and select *Next*.  
  
-![Screenshot of the create a project pane with automaticly generated names for hub and project.](./media/azure-ai-foundry-create-project.png)
+    ![Screenshot of the create a project pane with automaticly generated names for hub and project.](./media/azure-ai-foundry-create-project.png)
 
 > **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
 
@@ -37,11 +37,11 @@ Suppose the fictitious retailer *Northwind Traders* has decided to implement a "
  
 1. After the resources are created, you will be brought to your project's *Overview* page. On the left-hand menu on the screen, select **AI Services**.
  
-![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/azure-ai-foundry-ai-services.png)  
+    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/azure-ai-foundry-ai-services.png)  
 
 1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
 
-![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/vision-document-tile.png)
+    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/vision-document-tile.png)
 
 ## Generate captions for an image
 
