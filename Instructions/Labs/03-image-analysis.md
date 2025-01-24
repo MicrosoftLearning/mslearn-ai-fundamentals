@@ -23,17 +23,17 @@ Suppose the fictitious retailer *Northwind Traders* has decided to implement a "
  
     ![Screenshot of the create a project pane with automaticly generated names for hub and project.](./media/azure-ai-foundry-create-project.png)
 
-> **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
+    > **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
 
 1. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: East US, France Central, Korea Central, West Europe, or West US to complete the rest of the lab. Then select **create**. 
 
 1. Take note of the resources that are created: 
-- Azure AI services
-- Azure AI hub
-- Azure AI project
-- Storage account
-- Key vault
-- Resource group  
+    - Azure AI services
+    - Azure AI hub
+    - Azure AI project
+    - Storage account
+    - Key vault
+    - Resource group  
  
 1. After the resources are created, you will be brought to your project's *Overview* page. On the left-hand menu on the screen, select **AI Services**.
  
@@ -49,7 +49,7 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
 1. On the *Vision + Document* page, scroll down and select **Image** under *View all other vision capabilities*. Then select the **Image captioning** tile.
 
-![Screenshot of the image captioning tile in the image section of the Vision and Document page.](./media/vision-image-captioning-tile.png)
+    ![Screenshot of the image captioning tile in the image section of the Vision and Document page.](./media/vision-image-captioning-tile.png)
 
 1. On the **Add captions to images** page, review the resource you are connected to which is listed under the **Try It Out** subheading. You should not have to make changes. (*Note*: if you did not customize a valid resource location earlier during resource creation, you may be asked to create a new Azure AI services resource that is in a valid region. You will need to create the new resource to continue with the lab.)  
 
