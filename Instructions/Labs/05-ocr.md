@@ -1,57 +1,53 @@
 ---
 lab:
-    title: 'Read text in Vision Studio​'
+    title: 'Read text in Azure AI Foundry portal​'
 ---
 
-# Read text in Vision Studio
+# Read text in Azure AI Foundry portal
 
 In this exercise you'll use Azure AI service to explore the optical character recognition capabilities of Azure AI Vision. You'll use Vision Studio to experiment with extracting text from images, without having to write any code.
 
-A common computer vision challenge is to detect and interpret text embedded within an image. This is known as optical character recognition (OCR). In this exercise you’ll use an Azure AI services resource, which includes Azure AI Vision services. You'll then use Vision Studio to try out OCR with different types of images.
+A common computer vision challenge is to detect and interpret text embedded within an image. This is known as optical character recognition (OCR). In this exercise you’ll use an Azure AI services resource, which includes Azure AI Vision services. 
 
-## Create an *Azure AI services* resource
+In this exercise, you will use Azure AI Vision in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to extract text from images. 
 
-You can use Azure AI Vision's OCR capabilities with an **Azure AI services** multi-service resource. If you haven't already done so, create an **Azure AI services** resource in your Azure subscription.
+## Create a project in Azure AI Foundry portal
 
-1. In another browser tab, open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
+1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
-1. Click the **&#65291;Create a resource** button and search for *Azure AI services*. Select **create** an **Azure AI services** plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:
-    - **Subscription**: *Your Azure subscription*.
-    - **Resource group**: *Select or create a resource group with a unique name*.
-    - **Region**: *Select the closest geographical region. If in eastern US, use "East US 2"*.
-    - **Name**: *Enter a unique name*.
-    - **Pricing tier**: *Standard S0.*
-    - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
+1. Sign in with your account. 
 
-1. Select **Review + create** then **Create** and wait for deployment to complete.
+1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
-## Connect your Azure AI service resource to Vision Studio
+    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-home-page.png)
 
-Next, connect the Azure AI services resource you provisioned above to Vision Studio.
+1. On the *Create a project* pane, you will see a generated project name, which you can keep as-is. Depending on whether you have created a hub in the past, you will either see a list of *new* Azure resources to be created or a drop-down list of existing hubs. If you see the drop-down list of existing hubs, select *Create new hub*, create a unique name for your hub, and select *Next*.  
+ 
+    ![Screenshot of the create a project pane with automaticly generated names for hub and project.](./media/azure-ai-foundry-create-project.png)
 
-1. In another browser tab, navigate to **Vision Studio** at [https://portal.vision.cognitive.azure.com](https://portal.vision.cognitive.azure.com?azure-portal=true).
+> **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
 
-1. Sign in with your account and making sure you are using the same directory as the one where you have created your Azure AI services resource.
+1. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: East US, France Central, Korea Central, West Europe, or West US to complete the rest of the lab. Then select **create**. 
 
-1. On the Vision Studio home page, select **View all resources** under the **Getting started with Vision** heading.
+1. Take note of the resources that are created: 
+- Azure AI services
+- Azure AI hub
+- Azure AI project
+- Storage account
+- Key vault
+- Resource group  
+ 
+1. After the resources are created, you will be brought to your project's *Overview* page. On the left-hand menu on the screen, select **AI Services**.
+ 
+    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/azure-ai-foundry-ai-services.png)  
 
-    ![The View all resource link is highlighted under Getting started with Vision in Vision Studio.](./media/analyze-images-vision/vision-resources.png)
+1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
 
-1. On the **Select a resource to work with** page, hover your mouse cursor over the resource you created above in the list and then check the box to the left of the resource name, then select **Select as default resource**.
+    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/vision-document-tile.png)
 
-    > **Note** : If your resource is not listed, you may need to **Refresh** the page.
-
-    ![The Select a resource to work with dialog is displayed with the cog-ms-learn-vision-SUFFIX Cognitive Services resource highlighted and checked. The Select as default resource button is highlighted.](./media/analyze-images-vision/default-resource.png)
-
-1. Close the settings page by selecting the "x" at the top right of the screen.
-
-## Extract text from images in the Vision Studio
+## Extract text from images 
     
-1. In a web browser, navigate to **Vision Studio** at [https://portal.vision.cognitive.azure.com](https://portal.vision.cognitive.azure.com?azure-portal=true).
-
-1. On the **Getting started with Vision** landing page, select **Optical character recognition**, and then the **Extract text from images** tile.
-
-1. Under the **Try It Out** subheading, acknowledge the resource usage policy by reading and checking the box.  
+1. On the *Vision + Document* page, scroll down and select **Image** and then select the **Optical character recognition** tile. 
 
 1. Select [**https://aka.ms/mslearn-ocr-images**](https://aka.ms/mslearn-ocr-images) to download **ocr-images.zip**. Then open the folder.
 
