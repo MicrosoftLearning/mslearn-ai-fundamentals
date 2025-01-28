@@ -137,7 +137,7 @@ Let's use the named entity extraction functionality of Azure AI Language to iden
     Clean rooms, good service, great location near Buckingham Palace and Westminster Abbey, and so on. We thoroughly enjoyed our stay. The courtyard is very peaceful and we went to a restaurant which is part of the same group and is Indian ( West coast so plenty of fish) with a Michelin Star. We had the taster menu which was fabulous. The rooms were very well appointed with a kitchen, lounge, bedroom and enormous bathroom. Thoroughly recommended.
     ```
 
-1. Select **Run**. Review the output and review the sentiment and confidence level.
+1. Select the acknowledgement checkbox and then select **Run**. Review the output and review the sentiment and confidence level.
 
 1. Notice that the *document* is analyzed for sentiment, as well as each *sentence*. Select **Sentence 1** to show the sentiment analysis for that sentence. 
 
