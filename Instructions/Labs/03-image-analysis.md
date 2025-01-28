@@ -25,7 +25,7 @@ Suppose the fictitious retailer *Northwind Traders* has decided to implement a "
 
     > **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
 
-1. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: East US, France Central, Korea Central, West Europe, or West US to complete the rest of the lab. Then select **create**. 
+1. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: *East US, France Central, Korea Central, West Europe, or West US* to complete the rest of the lab. Then select **create**. 
 
 1. Take note of the resources that are created: 
     - Azure AI services

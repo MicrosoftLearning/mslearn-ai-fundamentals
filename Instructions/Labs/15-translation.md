@@ -1,41 +1,51 @@
 ---
 lab:
-    title: 'Explore Azure AI Translator'
+    title: 'Explore Azure AI Translator in Azure AI Foundry'
 ---
 
-# Explore Azure AI Translator
-
-> **Note**
-> To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
+# Explore Azure AI Translator in Azure AI Foundry
 
 Artificial Intelligence (AI) can help simplify translation between languages, helping to remove barriers to communication across countries and cultures.
 
-To test the capabilities of Azure AI Translator service, we'll take a look at it in action in the Azure Portal. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
+To test the capabilities of Azure AI Translator service, we'll take a look at it in action in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
-## Create a *Translator* resource
+## Create a project in Azure AI Foundry portal
 
-You can use the Translator service by creating either a **Translator** resource or an **Azure AI services** resource.
+1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
-For this exercise, create an **Translator** resource in your Azure subscription.
+1. Sign in with your account. 
 
-1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
+1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
-1. Click the **&#65291;Create a resource** button and search for *Translator*. Select **create**. You will be taken to a page to create a Translator resource. Configure it with the following settings:
-    - **Subscription**: *Your Azure subscription*.
-    - **Resource group**: *Select or create a resource group with a unique name*.
-    - **Region**: *Choose any available region*.
-    - **Name**: *Enter a unique name*.
-    - **Pricing tier**: Standard S0
+    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-home-page.png)
 
-1. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
+1. On the *Create a project* pane, you will see a generated project name, which you can keep as-is. Depending on whether you have created a hub in the past, you will either see a list of *new* Azure resources to be created or a drop-down list of existing hubs. If you see the drop-down list of existing hubs, select *Create new hub*, create a unique name for your hub, and select *Next*.  
+ 
+    ![Screenshot of the create a project pane with automaticly generated names for hub and project.](./media/azure-ai-foundry-create-project.png)
 
-## Explore Translator service 
+    > **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
 
-We can explore the capabilities of the Translator service in the Azure Portal. 
+1. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: *East US, France Central, Korea Central, West Europe, or West US* to complete the rest of the lab. Then select **create**. 
 
-1. In the Azure portal, in the deployed resource, review the *Overview* page.
+1. Take note of the resources that are created: 
+    - Azure AI services
+    - Azure AI hub
+    - Azure AI project
+    - Storage account
+    - Key vault
+    - Resource group  
+ 
+1. After the resources are created, you will be brought to your project's *Overview* page. On the left-hand menu on the screen, select **AI Services**.
+ 
+    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/azure-ai-foundry-ai-services.png)  
 
-    ![Screenshot of the overview page for the Translator resource.](media/use-translator/translator-azure-portal.png)
+1. On the *AI Services* page, select the *Language + Translator* tile to try out Azure AI Translator capabilities.
+
+    ![Screenshot of the language and translator tile selected on the AI Services page.](./media/language-translator-tile.png)
+
+## Generate captions for an image
+
+1. On the *Language + Translator* page, scroll down and select **Translation** under *Explore Language capabilities*. Then select the **Text translation** tile.
 
 1. In the *Try it* section of the Overview page, under the *From: Auto detect* section, type the text `Welcome to Azure AI Fundamentals`. Notice the JSON that appears in correspondence in the *View request* section. 
 
