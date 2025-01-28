@@ -124,7 +124,11 @@ Let's use the named entity extraction functionality of Azure AI Language to iden
     > **Note**
     > If you have already provisioned a free-tier **Azure Cognitive Search** resource, your quota may not allow you to create another one. In which case, select a tier other than **Free F**.
 
-1. copy and paste the following review:
+1. Return to the Language Studio. Refresh the resources and select the resource you just created. Select **Done**.
+ 
+1. In the Language Studio, select *Classify Text* and then select the **Analyze sentiment and mine opinions** tile.
+
+1. Copy and paste the following review:
 
     ```
     Good Hotel and staff
@@ -132,6 +136,7 @@ Let's use the named entity extraction functionality of Azure AI Language to iden
     3/2/2018
     Clean rooms, good service, great location near Buckingham Palace and Westminster Abbey, and so on. We thoroughly enjoyed our stay. The courtyard is very peaceful and we went to a restaurant which is part of the same group and is Indian ( West coast so plenty of fish) with a Michelin Star. We had the taster menu which was fabulous. The rooms were very well appointed with a kitchen, lounge, bedroom and enormous bathroom. Thoroughly recommended.
     ```
+
 1. Select **Run**. Review the output and review the sentiment and confidence level.
 
 1. Notice that the *document* is analyzed for sentiment, as well as each *sentence*. Select **Sentence 1** to show the sentiment analysis for that sentence. 
