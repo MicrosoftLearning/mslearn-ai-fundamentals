@@ -9,7 +9,7 @@ Natural Language Processing (NLP) is a branch of AI that deals with written and 
 
 Azure AI Language service includes Text Analytics, with capabilities such as entity recognition, key phrase extraction, summarization, and sentiment analysis. For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to identify key phrases, determine which reviews are positive and which are negative, or analyze the review text for mentions of known entities such as locations or people.
 
-In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. You'll also use the Language Studio to understand the sentiment of the reviews.
+In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. 
 
 ## Create a project in Azure AI Foundry portal
 
@@ -80,70 +80,6 @@ Let's use the named entity extraction functionality of Azure AI Language to iden
     ```
 
 1. Select **Run**. Review the output. The *extractive summary* provides rank scores for salient sentences.   
-
-## Get sentiment with Azure AI Language in Language Studio
-
-1. You can try out other capabilities in [https://language.cognitive.azure.com](https://language.cognitive.azure.com?portal-azure=true) 
-
-1. In a new browser tab, open the Language Studio portal at [https://language.azure.com](https://language.azure.com?azure-portal=true) and sign in using the Microsoft account associated with your Azure subscription.
-
-1. If prompted to choose a Language resource, select the following settings:
-    - **Azure directory**: *The Azure directory containing your subscription*.
-    - **Azure subscription**: *Your Azure subscription*.
-    - **Language resource**: *Skip and select **Create a new language resource in the Azure Portal***. 
-
-    >**Note**
-    >If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
-    >1. On the bar at the top if the page, select **Settings (&#9881;)**.      
-    >1. On the **Settings** page, view the **Resources** tab.
-    >1. Select the language resource you just created, and select **Switch resource**.
-    >1. At the top of the page, select **Language Studio** to return to the Language Studio home page.
-
-1. Click the **&#65291;Create a resource** button and search for *Language service*. Select **create** a **Language service** plan. You will be taken to a page to **Select additional features**. Use the following settings:
-    - **Select Additional Features**:
-        - **Default features**: *Keep the default features*.
-        - **Custom features**: *Keep the default features*.
-     - Select **Continue to create your resource**
-
-1. On the **Create Language** page, specify the following settings:
-    - **Project Details**
-        - **Subscription**: *Your Azure subscription*.
-        - **Resource group**: *Select an existing resource group or create a new one*.
-    - **Instance Details**
-        - **Region**: *Select a region. If in eastern US, use "East US 2"*      
-        - **Name**: *A unique name for your Language resource*.
-        - **Pricing tier**: S (1K Calls per minute)
-    - **Custom question answering**
-        - **Azure search region**: *Any available location*.
-        - **Azure search pricing tier**: Free F (3 Indexes) - (*If this tier is not available, select Basic*)
-    - **Responsible AI Notice**
-        - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice**: *Selected*.
-
-1. Select **Review and Create** and then select **Create**. Wait for the deployment of the Language service.
-
-    > **Note**
-    > If you have already provisioned a free-tier **Azure Cognitive Search** resource, your quota may not allow you to create another one. In which case, select a tier other than **Free F**.
-
-1. Return to the Language Studio. Refresh the resources and select the resource you just created. Select **Done**.
- 
-1. In the Language Studio, select *Classify Text* and then select the **Analyze sentiment and mine opinions** tile.
-
-1. Copy and paste the following review:
-
-    ```
-    Good Hotel and staff
-    The Royal Hotel, London, UK
-    3/2/2018
-    Clean rooms, good service, great location near Buckingham Palace and Westminster Abbey, and so on. We thoroughly enjoyed our stay. The courtyard is very peaceful and we went to a restaurant which is part of the same group and is Indian ( West coast so plenty of fish) with a Michelin Star. We had the taster menu which was fabulous. The rooms were very well appointed with a kitchen, lounge, bedroom and enormous bathroom. Thoroughly recommended.
-    ```
-
-1. Select the acknowledgement checkbox and then select **Run**. Review the output and review the sentiment and confidence level.
-
-1. Notice that the *document* is analyzed for sentiment, as well as each *sentence*. Select **Sentence 1** to show the sentiment analysis for that sentence. 
-
-Notice that there is an overall sentiment followed by scores next to three categories, *positive score*, *neutral score*, *negative score*. In each of the categories, a score between 0 and 1 is provided. These confidence scores indicate how likely the provided text is a particular sentiment. 
-
-1. In this exercise you used Azure AI Foundry portal to try out named entity extraction and text summarization, and used the Language Studio to try out sentiment analysis. 
 
 ## Clean up
 
