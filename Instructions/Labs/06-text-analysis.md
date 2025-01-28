@@ -9,7 +9,7 @@ Natural Language Processing (NLP) is a branch of AI that deals with written and 
 
 Azure AI Language service includes Text Analytics, with capabilities such as entity recognition, key phrase extraction, summarization, and sentiment analysis. For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to identify key phrases, determine which reviews are positive and which are negative, or analyze the review text for mentions of known entities such as locations or people.
 
-In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. You'll use the Language service to understand whether the reviews are mostly positive or negative.
+In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. You'll also use the Language Studio to understand the sentiment of the reviews.
 
 ## Create a project in Azure AI Foundry portal
 
@@ -45,7 +45,7 @@ In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Mic
 
     ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/language-translator-tile.png)
 
-## Extract named entities with Azure AI Language
+## Extract named entities with Azure AI Language in Azure AI Foundry portal
 
 Let's use the named entity extraction functionality of Azure AI Language to identify types of information in reviews.
 
@@ -62,7 +62,7 @@ Let's use the named entity extraction functionality of Azure AI Language to iden
 
 1. Select **Run**. Review the output. 
 
-## Summarize text with Azure AI Language
+## Summarize text with Azure AI Language in Azure AI Foundry portal
  
 1. On the left-hand menu on the screen, select **Playgroumds**.
  
@@ -81,7 +81,7 @@ Let's use the named entity extraction functionality of Azure AI Language to iden
 
 1. Select **Run**. Review the output. The *extractive summary* provides rank scores for salient sentences.   
 
-## Get sentiment with Azure AI Language
+## Get sentiment with Azure AI Language in Language Studio
 
 1. You can try out other capabilities in [https://language.cognitive.azure.com](https://language.cognitive.azure.com?portal-azure=true) 
 
