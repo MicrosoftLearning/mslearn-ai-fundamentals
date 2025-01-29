@@ -51,7 +51,7 @@ Let's use the named entity extraction functionality of Azure AI Language to iden
 
 1. On the *Language + Translator* page, scroll down and select **Extract information** under *Explore Language capabilities*. Then select the **Extract named entities** tile.
 
-1. Under *Enter your own text, upload a file, or use one of our sample texts*, copy and paste the following review:
+1. In the **Try it out** section, select the **Try with your own** tab. Then, under *Enter your own text, upload a file, or use one of our sample texts*, copy and paste the following review:
 
     ```
     Tired hotel with poor service
@@ -68,7 +68,7 @@ Let's use the named entity extraction functionality of Azure AI Language to iden
  
     ![Screenshot of the left-hand menu on the project screen with playgrounds selected.](./media/azure-ai-foundry-playgrounds.png)  
 
-1. On the *Playgrounds* page, select the *Language playground* tile to try out other Azure AI Language capabilities.Select the **Summarize text** tile.
+1. On the *Playgrounds* page, select the *Language playground* tile to try out other Azure AI Language capabilities. Select the **Summarize text** tile.
 
 1. Under *Sample*, copy and paste the following review:
     
