@@ -14,21 +14,21 @@ Azure AI Content Safety enables you to moderate text and image content. In this 
 
 ## Create a project in Azure AI Foundry portal
 
-1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+1. In a browser tab, navigate to the [Azure AI Foundry portal](https://ai.azure.com?azure-portal=true).
 
-1. Sign in with your account. 
+2. Sign in with your account. 
 
-1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
+3. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
     ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-home-page.png)
 
-1. On the *Create a project* pane, you will see a generated project name, which you can keep as-is. Depending on whether you have created a hub in the past, you will either see a list of *new* Azure resources to be created or a drop-down list of existing hubs. If you see the drop-down list of existing hubs, select *Create new hub*, create a unique name for your hub, and select *Next*.  
+4. On the *Create a project* pane, you will see a generated project name, which you can keep as-is. Depending on whether you have created a hub in the past, you will either see a list of *new* Azure resources to be created or a drop-down list of existing hubs. If you see the drop-down list of existing hubs, select *Create new hub*, create a unique name for your hub, and select *Next*.  
  
     ![Screenshot of the create a project pane with automaticly generated names for hub and project.](./media/azure-ai-foundry-create-project.png)
 
 > **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
 
-1. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: East US, France Central, Korea Central, West Europe, or West US to complete the rest of the lab. Then select **create**. 
+5. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: East US, France Central, Korea Central, West Europe, or West US to complete the rest of the lab. Then select **create**. 
 
 1. Take note of the resources that are created: 
 - Azure AI services
@@ -37,17 +37,44 @@ Azure AI Content Safety enables you to moderate text and image content. In this 
 - Storage account
 - Key vault
 - Resource group  
- 
-1. After the resources are created, you will be brought to your project's *Overview* page. On the left-hand menu on the screen, select **AI Services**.
+
+6. After the resources are created, you will be brought to your project's *Overview* page. 
+
+>**Note**: If you are using a Cloud Slice subscription, you can skip steps #7-12 and go to step #13. Otherwise, continue with step #7.
+
+7. Under *Project details*, select **Open in management center**. 
+
+![Screenshot of the open in management center button.](./media/content-safety/project-management-center-button.png)
+
+8. In the project management center, under *connected resources* select the *AI services* resource you just created. Then select the resource under *Connection details*. You will be taken to your resource in the Azure portal. 
+
+![Screenshot of the connected resources list in the management center.](./media/content-safety/management-center-connected-resources.png)
+  
+9. In the Azure portal, on the left-hand pane, select **Access Control (IAM)**. Then on the open pane, select **Add** next to the plus sign, and select **Add role assignment**. 
+
+![Screenshot of where to select add role assignment in the Access Control pane.](./media/content-safety/access-control-step-one.png)
+
+10. Search for **Cognitive Services User** in the list of roles, and select it. Then select **Next**. 
+
+11. Use the following settings to assign yourself to the role: 
+    - **Assign access to**: select *user, group, or service principal*
+    - **Members**: click on *select members*
+        - On the open *Select members* pane, find your name. Click on the plus icon next to your name. Then click **Select**.
+    - **Description**: *leave blank*
+
+12. Select **Review and Assign**, then select **Review and Assign** again to add the role assignment.    
+
+13. In your browser, return to the [Azure AI Foundry portal](https://ai.azure.com?azure-portal=true). Select your project. 
+
+14. On the left-hand menu on the screen, select **AI Services**.
  
     ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/azure-ai-foundry-ai-services.png)  
 
-1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
+15. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
     
     ![Screenshot of the Content Safety tile.](./media/content-safety-tile.png)
 
 ## Try out text moderation with Content Safety in Azure AI Foundry portal 
-
 
 1. On the *Content Safety* page, under *Filter text content*, select **Moderate text content**.
 
