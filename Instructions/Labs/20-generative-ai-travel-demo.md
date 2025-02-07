@@ -68,7 +68,7 @@ In this exercise, you will use Microsoft Copilot to generate travel plans.
 1. Now try setting clear expectations for the response. Enter the following prompt:
     
     ```prompt
-    What are the top 10 sights to see in Paris. Answer with a numbered list in order of popularity.
+    What are the top 10 sights to see in Paris? Answer with a numbered list in order of popularity.
     ```
 
 1. Review the response, which should provide a numbered list of sights to see in Paris.
