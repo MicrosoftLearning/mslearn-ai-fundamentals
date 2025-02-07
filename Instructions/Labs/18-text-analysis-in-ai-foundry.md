@@ -45,7 +45,7 @@ In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Mic
 
 ## Extract named entities with Azure AI Language in Azure AI Foundry portal
 
-*Named entities* are words that describe people, places, and objects with proper names. Let's use the named entity extraction capability of Azure AI Language to identify types of information a review.
+*Named entities* are words that describe people, places, and objects with proper names. Let's use the named entity extraction capability of Azure AI Language to identify types of information in a review.
 
 1. In the Language playground, select **Extract information**. Then select the **Extract named entities** tile. 
 
