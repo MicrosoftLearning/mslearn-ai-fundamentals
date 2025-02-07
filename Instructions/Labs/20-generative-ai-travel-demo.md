@@ -16,7 +16,7 @@ In this exercise, you will use Microsoft Copilot to generate travel plans.
 
     >**Note**: You may be prompted to continue with your **Work** or  **Personal** account. Select **Personal** and sign in. 
 
-1. Consider the following ways you can improve responses from generative AI:
+1. Consider the following ways you can improve responses from a generative AI assistant:
     - Start with a specific goal for what you want the assistant to do
     - Iterate based on previous prompts and responses to refine the result
     - Provide a source to ground the response in a specific scope of information
