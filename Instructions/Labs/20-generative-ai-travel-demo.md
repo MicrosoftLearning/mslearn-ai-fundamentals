@@ -16,14 +16,14 @@ In this exercise, you will use Microsoft Copilot to generate travel plans.
 
     >**Note**: You may be prompted to continue with your **Work** or  **Personal** account. Select **Personal** and sign in. 
 
-> Consider the following ways you can improve the response a generative AI assistant provides:
-> - Start with a specific goal for what you want the assistant to do
-> - Iterate based on previous prompts and responses to refine the result
-> - Provide a source to ground the response in a specific scope of information
-> - Add context to maximize response appropriateness and relevance
-> - Set clear expectations for the response
+1. Consider the following ways you can improve responses from generative AI:
+    - Start with a specific goal for what you want the assistant to do
+    - Iterate based on previous prompts and responses to refine the result
+    - Provide a source to ground the response in a specific scope of information
+    - Add context to maximize response appropriateness and relevance
+    - Set clear expectations for the response
 
-1. Let's start with a specific goal. In the chat box at the bottom of the Copilot pane, enter following the prompt:
+1. Let's try generating a resonse from Microsoft Copilot using a prompt with a specific goal. In the chat box at the bottom of the Copilot pane, enter the following prompt:
 
     ```prompt
     I'm planning a trip to Paris in September. Can you help me?
