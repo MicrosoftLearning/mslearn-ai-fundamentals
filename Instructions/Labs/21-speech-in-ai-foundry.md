@@ -51,7 +51,7 @@ Let's try out *real time speech to text* in Azure AI Foundry's Speech Playground
 
 1. Select [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) to download **speech.zip**. Open the folder. 
 
-1. Under *Choose audio files*, select **Upload files** and navigate to the folder where you saved the file. Select **WhatAICanDo.m4a** and then **Open**.
+1. Under *Upload files*, select **Browse files** and navigate to the folder where you saved the file. Select **WhatAICanDo.m4a** and then **Open**.
 
     ![Browse files](media/recognize-synthesize-speech/browse-files-speech.png)
 
