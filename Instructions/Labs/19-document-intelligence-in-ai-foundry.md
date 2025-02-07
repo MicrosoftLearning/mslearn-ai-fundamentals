@@ -5,11 +5,11 @@ lab:
 
 # Extract data from documents in Azure AI Foundry portal
 
-**Azure AI Document Intelligence** is able to analyze and extract information from forms and documents, then identify field names and data. 
+**Azure AI Document Intelligence** service enables you to analyze and extract information from forms and documents, then identify field names and data. 
 
 How does Document Intelligence build upon optical character recognition (OCR)? While OCR can read printed or handwritten documents, OCR extracts text in an unstructured format which is difficult to store in a database or analyze. Document intelligence makes sense of the unstructured data by capturing the structure of the text, such as key/value pairs and information in tables. 
 
-In this exercise, you will use Azure AI Document Intelligence's prebuilt models in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to recognize data from receipts. 
+In this exercise, you will use Azure AI Document Intelligence's prebuilt models in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to recognize data from a receipt. 
 
 ## Create a project in Azure AI Foundry portal
 
@@ -41,11 +41,11 @@ In this exercise, you will use Azure AI Document Intelligence's prebuilt models 
  
     ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/azure-ai-foundry-ai-services.png)  
 
-1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
+1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Document Intelligence capabilities.
 
     ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/vision-document-tile.png)
 
-## Analyze a receipt in Document Intelligence Studio
+## Analyze a receipt with Azure AI Document Intelligence in Azure AI Foundry 
 
 You are now ready to analyze a receipt for the fictitious Northwind Traders retail company.
 
@@ -53,9 +53,9 @@ You are now ready to analyze a receipt for the fictitious Northwind Traders reta
 
 1. In the drop-down list under *Try it out*, note that your Azure AI services resource is selected. Leave it as-is.
 
-1. Select [**https://aka.ms/mslearn-receipt**](https://aka.ms/mslearn-receipt) to download a sample document to your computer. Open the folder. 
-1. 
-1. Select **Browse for files** and navigate to the folder where you saved the picture. Select the picture of the receipt and then **Open**. The image appears on the left side of the screen.
+1. On your computer, use [**https://aka.ms/mslearn-receipt**](https://aka.ms/mslearn-receipt) to open a sample image of a receipt. Save it in your Downloads folder or to your Desktop. 
+ 
+1. In Azure AI Foundry, on the *Receipts* page, select **Browse for files** and navigate to the folder where you saved the picture. Select the picture of the receipt and then **Open**. The image appears on the left side of the screen.
 
     ![Screenshot of a northwind receipt.](media/document-intelligence/receipt.jpg)
 
