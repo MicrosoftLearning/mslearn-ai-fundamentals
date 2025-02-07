@@ -7,7 +7,7 @@ lab:
 
 Natural Language Processing (NLP) is a branch of AI that deals with written and spoken language. You can use NLP to build solutions that extract semantic meaning from text or speech, or that formulate meaningful responses in natural language.
 
-Azure AI Language service includes Text Analytics, with capabilities such as entity recognition, key phrase extraction, summarization, and sentiment analysis. For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to identify key phrases, determine which reviews are positive and which are negative, or analyze the review text for mentions of known entities such as locations or people.
+Azure AI Language service includes Text Analytics, with capabilities such as entity recognition, key phrase extraction, summarization, and sentiment analysis. For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to extract named entities, identify key phrases, summarize text, and more.
 
 In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. 
 
@@ -37,21 +37,19 @@ In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Mic
 - Key vault
 - Resource group  
  
-1. After the resources are created, you will be brought to your project's *Overview* page. On the left-hand menu on the screen, select **AI Services**.
+1. After the resources are created, you will be brought to your project's *Overview* page. On the left-hand menu on the screen, select **Playgrounds**.
  
-    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/azure-ai-foundry-ai-services.png)  
+    ![Screenshot of the left-hand menu on the project screen with playgrounds selected.](./media/azure-ai-foundry-playgrounds.png)  
 
-1. On the *AI Services* page, select the *Language + Translator* tile to try out Azure AI Language and Translator capabilities.
-
-    ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/language-translator-tile.png)
+1. On the *Playgrounds* page, select the *Language playground* tile to try out some Azure AI Language capabilities.
 
 ## Extract named entities with Azure AI Language in Azure AI Foundry portal
 
-Let's use the named entity extraction functionality of Azure AI Language to identify types of information in reviews.
+*Named entities* are words that describe people, places, and objects with proper names. Let's use the named entity extraction capability of Azure AI Language to identify types of information a review.
 
-1. On the *Language + Translator* page, scroll down and select **Extract information** under *Explore Language capabilities*. Then select the **Extract named entities** tile.
+1. In the Language playground, select **Extract information**. Then select the **Extract named entities** tile. 
 
-1. In the **Try it out** section, select the **Try with your own** tab. Then, under *Enter your own text, upload a file, or use one of our sample texts*, copy and paste the following review:
+1. Under *Sample*, copy and paste the following review:
 
     ```
     Tired hotel with poor service
@@ -60,15 +58,28 @@ Let's use the named entity extraction functionality of Azure AI Language to iden
     This is an old hotel (has been around since 1950's) and the room furnishings are average - becoming a bit old now and require changing. The internet didn't work and had to come to one of their office rooms to check in for my flight home. The website says it's close to the British Museum, but it's too far to walk.
     ```
 
-1. Select **Run**. Review the output. 
+1. Select **Run**. Review the output. Notice in the *Details* section how the extracted entities come with additional information such as type and a confidence score. The confidence score represents the likelihood that the type identified actually belongs to that category.
+
+## Extract key phrases with Azure AI Language in Azure AI Foundry portal
+
+*Key phrases* are the most important pieces of information in text. Let's use the key phrase extraction capability of Azure AI Language to pull important information from a review.
+
+1. In the Language playground, select **Extract information**. Then select the **Extract key phrases** tile. 
+
+1. Under *Sample*, copy and paste the following review:
+
+    ```
+    Good Hotel and staff
+    The Royal Hotel, London, UK
+    3/2/2018
+    Clean rooms, good service, great location near Buckingham Palace and Westminster Abbey, and so on. We thoroughly enjoyed our stay. The courtyard is very peaceful and we went to a restaurant which is part of the same group and is Indian ( West coast so plenty of fish) with a Michelin Star. We had the taster menu which was fabulous. The rooms were very well appointed with a kitchen, lounge, bedroom and enormous bathroom. Thoroughly recommended.
+    ```
+
+1. Select **Run**. Review the output. Notice the different phrases extracted in the *Details* section. These phrases contribute most to the text's meaning.
 
 ## Summarize text with Azure AI Language in Azure AI Foundry portal
  
-1. On the left-hand menu on the screen, select **Playgroumds**.
- 
-    ![Screenshot of the left-hand menu on the project screen with playgrounds selected.](./media/azure-ai-foundry-playgrounds.png)  
-
-1. On the *Playgrounds* page, select the *Language playground* tile to try out other Azure AI Language capabilities. Select the **Summarize text** tile.
+1. Next, let's look at Azure AI Language's summarization capabilities. In the Language playground, select *Summarize information*, then select the **Summarize text** tile.
 
 1. Under *Sample*, copy and paste the following review:
     
@@ -79,7 +90,7 @@ Let's use the named entity extraction functionality of Azure AI Language to iden
     Hotel is located on Lombard street which is a very busy SIX lane street directly off the Golden Gate Bridge. Traffic from early morning until late at night especially on weekends. Noise would not be so bad if rooms were better insulated but they are not. Had to put cotton balls in my ears to be able to sleep--was too tired to enjoy the city the next day. Rooms are TINY. I picked the room because it had two queen size beds--but the room barely had space to fit them. With family of four in the room it was tight. With all that said, rooms are clean and they've made an effort to update them. The hotel is in Marina district with lots of good places to eat, within walking distance to Presidio. May be good hotel for young stay-up-late adults on a budget
     ```
 
-1. Select **Run**. Review the output. The *extractive summary* provides rank scores for salient sentences.   
+1. Select **Run**. Review the output. Notice the *Extractive summary* in *Details* provides rank scores for the most salient sentences.   
 
 ## Clean up
 
