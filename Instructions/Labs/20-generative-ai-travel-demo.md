@@ -32,8 +32,6 @@ In this exercise, you will use Microsoft Copilot to generate travel plans.
 1. Review the response from Copilot, which should ask for what specifics you would like to know. 
 
     >**Note**: Keep in mind that the specific response you receive may vary due to the nature of generative AI.
-
-    ![A screenshot of a response generated from Microsoft Copilot.](./media/copilot-response-paris-in-september.png)
  
 1. Let's try another prompt. Enter the following:
 
@@ -58,8 +56,6 @@ In this exercise, you will use Microsoft Copilot to generate travel plans.
     ```
 
 1. Review the response, which should provide information based on the provided website. 
-
-    ![A screenshot of a response generated from Microsoft Copilot using context from the provided Wikipedia page.](./media/copilot-response-in-context.png)
 
 1. Let's try to add context to maximize the relevance of the response. Enter the following prompt: 
 
