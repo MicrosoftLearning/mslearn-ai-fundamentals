@@ -1,68 +1,55 @@
 ---
 lab:
-    title: 'Analyze text with Language Studio'
+    title: 'Analyze text in Azure AI Foundry portal'
 ---
 
-# Analyze text with Language Studio
-
-In this exercise you will explore the capabilities of Azure AI Language by analyzing some example hotel reviews. You'll use Language Studio to understand whether the reviews are mostly positive or negative.
+# Analyze text in Azure AI Foundry portal
 
 Natural Language Processing (NLP) is a branch of AI that deals with written and spoken language. You can use NLP to build solutions that extract semantic meaning from text or speech, or that formulate meaningful responses in natural language.
 
-For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to identify key phrases, determine which reviews are positive and which are negative, or analyze the review text for mentions of known entities such as locations or people.
+Azure AI Language service includes Text Analytics, with capabilities such as entity recognition, key phrase extraction, summarization, and sentiment analysis. For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to extract named entities, identify key phrases, summarize text, and more.
 
-Azure AI Language Service includes text analysis and NLP capabilities. These include the identification of key phrases in text, and the classification of text based on sentiment.
+In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. 
 
-## Create a *Language* resource
+## Create a project in Azure AI Foundry portal
 
-You can use many Azure AI Language features with either a **Language** or **Azure AI services** resource. There are some instances where only a Language resource can be used. For the exercise below, we will use a **Language** resource. If you haven't already done so, create a **Language** resource in your Azure subscription.
+1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
 
-1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with the Microsoft account associated with your Azure subscription.
+1. Sign in with your account. 
 
-1. Click the **&#65291;Create a resource** button and search for *Language service*. Select **create** a **Language service** plan. You will be taken to a page to **Select additional features**. Keep the default selection and click **Continue to create your resource**. 
+1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
 
-1. On the page **Create Language**, configure it with the following settings:
-    - **Subscription**: *Your Azure subscription*.
-    - **Resource group**: *Select or create a resource group with a unique name*.
-    - **Region**: *Select the closest geographical region. If in eastern US, use "East US 2"*.
-    - **Name**: *Enter a unique name*.
-    - **Pricing tier**: *Free F0 or S if Free F0 is not available*
-    - **By checking this box I acknowledge that I have read and understood all the terms below**: *Selected*.
+    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-home-page.png)
 
-1. Select **Review + create** then **Create** and wait for deployment to complete.
+1. On the *Create a project* pane, you will see a generated project name, which you can keep as-is. Depending on whether you have created a hub in the past, you will either see a list of *new* Azure resources to be created or a drop-down list of existing hubs. If you see the drop-down list of existing hubs, select *Create new hub*, create a unique name for your hub, and select *Next*.  
+ 
+    ![Screenshot of the create a project pane with automaticly generated names for hub and project.](./media/azure-ai-foundry-create-project.png)
 
-## Configure your resource in Azure AI Language Studio
+> **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
 
-1. In another browser tab, open **Language Studio** at [https://language.cognitive.azure.com](https://language.cognitive.azure.com?azure-portal=true) and sign in.
+1. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: East US, France Central, Korea Central, West Europe, or West US to complete the rest of the lab. Then select **create**. 
 
-1. When prompted with **Select an Azure resource**, make the following configurations:
-    - **Azure directory**: *Default Directory, the directory you are using*
-    - **Azure subscription**: *Select the subscription you are using*
-    - **Resource type**: Language
-    - **Resource name**: *select the Language service resource you just created*
+1. Take note of the resources that are created: 
+- Azure AI services
+- Azure AI hub
+- Azure AI project
+- Storage account
+- Key vault
+- Resource group  
+ 
+1. After the resources are created, you will be brought to your project's *Overview* page. On the left-hand menu on the screen, select **Playgrounds**.
+ 
+    ![Screenshot of the left-hand menu on the project screen with playgrounds selected.](./media/azure-ai-foundry-playgrounds.png)  
 
-Then select **Done**.
+1. On the *Playgrounds* page, select the **Language playground** tile to try out some Azure AI Language capabilities.
 
-> **Important**: As of July 2023, Azure AI services encompass all of what were previously known as Cognitive Services and Azure Applied AI Services. Some user interfaces are still updating their reference from `Cognitive Services` to `Azure AI services`. The two names refer to the same type of resource.
+## Extract named entities with Azure AI Language in Azure AI Foundry portal
 
-> **Note**: If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
-> 1. On the bar at the top if the page, select **Settings (&#9881;)**. 
-> 1. On the **Settings** page, view the **Resources** tab.
-> 1. Select the resource you just created, and select **Switch resource**. Ensure Managed identity is **Enabled**.
-> ![Enable language resource.](media/analyze-text-language-service/language-resource-enabled.png)
-> 1. At the top of the page, select **Language Studio** to return to the Language Studio home page.
+*Named entities* are words that describe people, places, and objects with proper names. Let's use the named entity extraction capability of Azure AI Language to identify types of information in a review.
 
-## Analyze reviews in Language Studio
+1. In the Language playground, select **Extract information**. Then select the **Extract named entities** tile. 
 
-1. In a web browser, navigate to **Language Studio** at [https://language.cognitive.azure.com](https://language.cognitive.azure.com?azure-portal=true).
-
-1. On the **Welcome to Language Studio** landing page, select the **Classify text** tab, then select the **Analyze sentiment and mine opinions** tile.
-
-1. Under *Select text language*, select **English**.
-
-1. Under *Select your Azure resource*, select your resource.
-
-1. Under *Enter your own text, upload a file, or use one of our sample texts*, copy and paste the following review:
+1. Under *Sample*, copy and paste the following review:
 
     ```
     Tired hotel with poor service
@@ -71,15 +58,15 @@ Then select **Done**.
     This is an old hotel (has been around since 1950's) and the room furnishings are average - becoming a bit old now and require changing. The internet didn't work and had to come to one of their office rooms to check in for my flight home. The website says it's close to the British Museum, but it's too far to walk.
     ```
 
-1. Check the box to acknowledge that the demo will incur usage and may incur costs, and then select **Run**.
+1. Select **Run**. Review the output. Notice in the *Details* section how the extracted entities come with additional information such as type and confidence scores. The confidence score represents the likelihood that the type identified actually belongs to that category.
 
-1. Review the output. Notice that the *document* is analyzed for sentiment, as well as each *sentence*. Select **Sentence 1** to show the sentiment analysis for that sentence. 
+## Extract key phrases with Azure AI Language in Azure AI Foundry portal
 
-Notice that there is an overall sentiment followed by scores next to three categories, *positive score*, *neutral score*, *negative score*. In each of the categories, a score between 0 and 1 is provided. These confidence scores indicate how likely the provided text is a particular sentiment. 
+*Key phrases* are the most important pieces of information in text. Let's use the key phrase extraction capability of Azure AI Language to pull important information from a review.
 
-Select **Sentence 1** again to close.
+1. In the Language playground, select **Extract information**. Then select the **Extract key phrases** tile. 
 
-1. Scroll up to select **Clear text box**, and copy and paste the following review:
+1. Under *Sample*, copy and paste the following review:
 
     ```
     Good Hotel and staff
@@ -87,27 +74,31 @@ Select **Sentence 1** again to close.
     3/2/2018
     Clean rooms, good service, great location near Buckingham Palace and Westminster Abbey, and so on. We thoroughly enjoyed our stay. The courtyard is very peaceful and we went to a restaurant which is part of the same group and is Indian ( West coast so plenty of fish) with a Michelin Star. We had the taster menu which was fabulous. The rooms were very well appointed with a kitchen, lounge, bedroom and enormous bathroom. Thoroughly recommended.
     ```
-    
-    
-1. Select **Run**. Review the output and review the sentiment and confidence level.
 
-1. Select **Clear text** box again, and copy and paste the following review:
+1. Select **Run**. Review the output. Notice the different phrases extracted in the *Details* section. These phrases should contribute most to the text's meaning.
 
-    >Very noisy and rooms are tiny
+## Summarize text with Azure AI Language in Azure AI Foundry portal
+ 
+1. Let's look at Azure AI Language's summarization capabilities. In the Language playground, select *Summarize information*, then select the **Summarize text** tile.
+
+1. Under *Sample*, copy and paste the following review:
+    
+    ```
+    Very noisy and rooms are tiny
     The Lombard Hotel, San Francisco, USA
     9/5/2018
     Hotel is located on Lombard street which is a very busy SIX lane street directly off the Golden Gate Bridge. Traffic from early morning until late at night especially on weekends. Noise would not be so bad if rooms were better insulated but they are not. Had to put cotton balls in my ears to be able to sleep--was too tired to enjoy the city the next day. Rooms are TINY. I picked the room because it had two queen size beds--but the room barely had space to fit them. With family of four in the room it was tight. With all that said, rooms are clean and they've made an effort to update them. The hotel is in Marina district with lots of good places to eat, within walking distance to Presidio. May be good hotel for young stay-up-late adults on a budget
+    ```
 
-1. Select **Run** and review the sentiment together with the confidence level. Have a look at the text and compare the text to the sentiment analysis that the service returned.
-
-In this exercise you used Language Studio to either create a new Language resource or use an existing Language resource. You enabled the resource in Settings before trying out the Sentiment and opinion mining service. You then tested the service with three pieces of text.
+1. Select **Run**. Review the output. Notice the *Extractive summary* in *Details* provides rank scores for the most salient sentences.   
 
 ## Clean up
 
 If you don’t intend to do more exercises, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
 
-1. Open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com) and select the resource group that contains the resource you created.
-1. Select the resource and select **Delete** and then **Yes** to confirm. The resource is then deleted.
+1. Open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com) and select the resource group that contains the resources you created.
+
+1. Select the resources and select **Delete** and then **Yes** to confirm. The resources are then deleted.
 
 ## Learn more
 
