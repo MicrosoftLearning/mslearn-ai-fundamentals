@@ -79,15 +79,13 @@ The next feature you will try is the *Extract Tags* functionality. Extract tags 
 
 1. Return to the *Vision + Document* page of Azure AI Foundry, then select the **Image** tab, and select the **Common tag extraction** tile.
 
-2. In the **Choose the model you want to try out**, leave **Prebuilt product vs. gap model** selected. In the **Choose your language**, select **English** or a language of your preference.
-
-3. Open the folder containing the images you downloaded and locate the file named **store-image-2.jpg**, which looks like this:
+1. Open the folder containing the images you downloaded and locate the file named **store-image-2.jpg**, which looks like this:
 
     ![An image of person with a shopping basket in a supermarket](./media/analyze-images-vision/store-camera-2.jpg)
 
-4. Upload the **store-camera-2.jpg** file.
+1. Upload the **store-camera-2.jpg** file.
 
-5. Review the list of tags extracted from the image and the confidence score for each in the detected attributes panel. Here the confidence score is the likelihood that the text for the detected attribute describes what is actually in the image. Notice in the list of tags that it includes not only objects, but actions, such as *shopping*, *selling*, and *standing*.
+1. Review the list of tags extracted from the image and the confidence score for each in the detected attributes panel. Here the confidence score is the likelihood that the text for the detected attribute describes what is actually in the image. Notice in the list of tags that it includes not only objects, but actions, such as *shopping*, *selling*, and *standing*.
 
     ![A screenshot of the detect attributes panel in the Vision Studio with text and confidence scores displayed next to the original image.](./media/analyze-images-vision/detect-attributes.png)
 
@@ -96,8 +94,6 @@ The next feature you will try is the *Extract Tags* functionality. Extract tags 
 In this task, you use the **Object detection** feature of Image Analysis. Object detection detects and extracts bounding boxes based on thousands of recognizable objects and living beings.
 
 1. Return to the *Vision + Document* page of Azure AI Foundry, then select the **Image** tab, and select the **Common object detection** tile.
-
-1. In the **Choose the model you want to try out**, leave **Prebuilt product vs. gap model** selected.
 
 1. Open the folder containing the images you downloaded and locate the file named **store-camera-3.jpg**, which looks like this:
 
