@@ -21,7 +21,7 @@ Generative AI describes a category of capabilities within AI that create content
  
     ![Screenshot of the create a project pane with automaticly generated names for hub and project.](./media/azure-ai-foundry-create-project.png)
 
-> **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
+    > **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
 
 1. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: East US, France Central, Korea Central, West Europe, or West US to complete the rest of the lab. Then select **create**. 
 
