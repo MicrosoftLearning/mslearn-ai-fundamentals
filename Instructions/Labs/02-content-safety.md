@@ -62,7 +62,7 @@ Before using the studio, you need to associate an Azure AI services resource wit
         <li>Under <b>Assign access to</b>, choose <b>User, group, or service principal</b>, <b>+ Select members</b>, select your name. Leave the description blank.</li>
         <li>Select <b>Next</b>. In the <b>Assignment type</b> page, select <b>Assignment type: Active</b>. Select <b>Assignment duration: Permanent</b>. Select <b>Next</b>.</li>
         <li>Select <b>Review and assign</b>, then <b>Review and assign</b> to add the role assignment.</li>
-        <li>Return to the Content Safety Studio at [https://contentsafety.cognitive.azure.com](https://contentsafety.cognitive.azure.com). Then select the <b>Settings</b> icon on the top right of the screen. Select the Content Safety resource you created. Check to make sure the <em>Current role assignments</em> includes <b>Cognitive Services User</b>. You may need to wait a moment and refresh the page to see the role assignment show up.</li>
+        <li>Return to the Content Safety Studio at https://contentsafety.cognitive.azure.com. Then select the <b>Settings</b> icon on the top right of the screen. Select the Content Safety resource you created. Check to make sure the <em>Current role assignments</em> includes <b>Cognitive Services User</b>. You may need to wait a moment and refresh the page to see the role assignment show up.</li>
     </ul>
 </details>
 
