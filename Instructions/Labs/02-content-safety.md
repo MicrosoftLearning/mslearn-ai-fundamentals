@@ -54,7 +54,7 @@ Before using the studio, you need to associate an Azure AI services resource wit
 
 <details>  
     <summary><b>Troubleshooting tip</b>: Permissions for self-paced learners</summary>
-    <p><em>If you are using a lab environment provided by an instructor, you can skip steps.</em> Otherwise, continue with these steps:</p>
+    <p><em>If you are using a lab environment provided by an instructor, you can skip these steps.</em> Otherwise, continue with these steps:</p>
     <ul>
         <li>Select <em>View all properties in Azure portal</em> at the bottom of the *Settings* screen.</li>
         <li>In the Azure portal, select the *Content Safety* resource you just created. Then on the left-hand pane, select <em>Access Control (IAM)</em>. Then on the open pane, select <em>Add</em> next to the plus sign, and select <em>Add role assignment</em>.</li>
