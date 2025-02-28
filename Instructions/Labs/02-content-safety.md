@@ -52,7 +52,7 @@ Before using the studio, you need to associate an Azure AI services resource wit
 
 6. Select the **Settings** icon on the top right of the screen again. This time you should see that your newly created resource has been added to the list.  
 
->**Note**: If you are using a Cloud Slice subscription, you can skip steps #7-12 and go to step #13. Otherwise, continue with step #7.
+>**Note**: If you are using a lab environment provided by an instructor, you can skip steps #7-12 and go to step #13. Otherwise, continue with step #7.
 
 7. Select **View all properties in Azure portal** at the bottom of the *Settings* screen. 
 
