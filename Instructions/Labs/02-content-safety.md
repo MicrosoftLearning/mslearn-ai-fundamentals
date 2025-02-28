@@ -76,9 +76,7 @@ Before using the studio, you need to associate an Azure AI services resource wit
 
 ![A screenshot of the settings icon on the top right of the screen, next to the bell, question mark, and smile icons.](./media/content-safety/settings-toggle.png)
  
-13. Select the Azure AI service resource you just created. Make sure under *Current role assignments* you see both *Cognitive services user*, and *Owner*.
-
-![A screenshot of the current role assignments.](./media/content-safety/access-control-check-step.png)
+13. Select the Azure AI service resource you just created. 
 
 14. Click **Use resource** on the bottom of the screen. You will be taken back to the studio home page. Now you can begin using the studio with your newly created resource.
 
