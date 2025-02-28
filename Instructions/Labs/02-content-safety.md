@@ -53,7 +53,7 @@ Before using the studio, you need to associate an Azure AI services resource wit
 6. Select the **Settings** icon on the top right of the screen again. This time you should see that your newly created resource has been added to the list.  
 
 <details>  
-    <summary><b>Troubleshooting tip</b>: Permissions for self-paced learners</summary>
+    <summary><b>Troubleshooting</b>: Permissions for self-paced learners</summary>
     <p><em>If you are using a lab environment provided by an instructor, you can skip these steps.</em> Otherwise, continue with these steps:</p>
     <ul>
         <li>Select <em>View all properties in Azure portal</em> at the bottom of the *Settings* screen.</li>
@@ -62,11 +62,11 @@ Before using the studio, you need to associate an Azure AI services resource wit
         <li>Under <strong>Assign access to</strong>, choose <strong>User, group, or service principal</strong>, <strong>+ Select members</strong>, select your name. Leave the description blank.</li>
         <li>Select <em>Next</em>. In the <em>Assignment type</em> page, select <em>Assignment type: Active</em>. Select <em>Assignment duration: Permanent</em>. Select <em>Next</em>.</li>
         <li>Select <em>Review and assign</em>, then <em>Review and assign</em> to add the role assignment.</li>
-        <li>Return to the Content Safety Studio at [https://contentsafety.cognitive.azure.com](https://contentsafety.cognitive.azure.com). Then select the <em>Settings</em> icon on the top right of the screen.</li>
+        <li>Return to the Content Safety Studio at [https://contentsafety.cognitive.azure.com](https://contentsafety.cognitive.azure.com). Then select the <em>Settings</em> icon on the top right of the screen. Select the Azure AI service resource you just created. Check to make sure the *Current role assignments* includes *Cognitive Services User*. You may need to wait a moment and refresh the page.</li>
     </ul>
 </details>
 
-7. Select the Azure AI service resource you just created. 
+7. If you haven't done so already, select the Azure AI service resource you just created. 
 
 8. Click **Use resource** on the bottom of the screen. You will be taken back to the studio home page. Now you can begin using the studio with your newly created resource.
 
