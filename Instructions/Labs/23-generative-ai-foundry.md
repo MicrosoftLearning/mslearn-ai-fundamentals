@@ -9,7 +9,7 @@ Generative AI describes a category of capabilities within AI that create content
 
 ## Create a project in Azure AI Foundry portal
 
-1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+1. In a browser tab, navigate to the [Azure AI Foundry](https://ai.azure.com?azure-portal=true) portal.
 
 1. Sign in with your account. 
 
