@@ -6,5 +6,5 @@ lab:
 # Explore Azure AI Services
 
 >**Important**
->This lab has been removed for maintenence. 
+>This lab has been removed for maintenance. 
 
