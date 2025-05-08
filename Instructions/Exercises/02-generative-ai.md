@@ -1,7 +1,4 @@
----
-lab:
-    title: 'Explore generative AI in Azure AI Foundry portal'
----
+
 
 # Explore generative AI in Azure AI Foundry Portal
 

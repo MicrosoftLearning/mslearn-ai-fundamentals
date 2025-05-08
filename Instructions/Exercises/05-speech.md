@@ -1,7 +1,4 @@
----
-lab:
-    title: 'Explore Speech in Azure AI Foundry portal'
----
+
 
 # Explore Speech in Azure AI Foundry portal
 

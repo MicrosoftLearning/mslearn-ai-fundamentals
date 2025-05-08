@@ -1,7 +1,4 @@
----
-lab:
-    title: 'Analyze images in Azure AI Foundry portal'
----
+
 
 # Analyze images in Azure AI Foundry portal
 

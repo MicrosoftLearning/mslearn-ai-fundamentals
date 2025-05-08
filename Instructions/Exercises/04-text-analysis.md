@@ -1,7 +1,4 @@
----
-lab:
-    title: 'Analyze text in Azure AI Foundry portal'
----
+
 
 # Analyze text in Azure AI Foundry portal
 

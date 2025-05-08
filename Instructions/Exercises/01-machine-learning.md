@@ -1,7 +1,4 @@
----
-lab:
-    title: 'Explore Automated Machine Learning in Azure Machine Learning'
----
+
 
 # Explore Automated Machine Learning in Azure Machine Learning
 
