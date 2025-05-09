@@ -5,7 +5,7 @@ lab:
 
 # Explore Azure AI Services
 
-Azure AI services help users create AI applications with out-of-the-box and pre-built and customizable APIs and models. In this exercise you will create a resource in the Azure portal. The goal of this exercise is to get a general sense of how Azure AI services are provisioned and used.
+Azure AI services help users create AI applications with out-of-the-box and pre-built and customizable APIs and models. In this exercise you will create a resource in the Azure portal and try out Azure AI services. The goal of this exercise is to get a general sense of how Azure AI services are provisioned and used.
 
 ## Create an *Azure AI services* resource in the Azure portal
 
