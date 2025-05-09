@@ -51,6 +51,8 @@ In order to incorporate Azure AI services into applications, developers need a s
 
 1. Try out the Face service, which is one of many Azure AI services. Click on an image and check out the detected attributes. 
 
+    ![Screenshot of the detect faces demo in Azure AI Foundry portal.](./media/detect-faces-demo.png)
+
 1. Scroll down to the **Run the code** section. Select **View Code**. Sroll down to the section that starts with *import os*. In the sample code provided, you'll see placeholders where you could put a key and endpoint.
 
     ![Screenshot of the view code screen with a view of the code placeholders for key and endpoint.](./media/view-code-example.png) 
