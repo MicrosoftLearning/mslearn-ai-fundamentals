@@ -1,7 +1,3 @@
----
-lab:
-    title: 'Extract data with Content Understanding in Azure AI Foundry portal​'
----
 
 # Extract data with Content Understanding in Azure AI Foundry portal
 
