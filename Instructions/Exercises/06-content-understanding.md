@@ -52,8 +52,7 @@ Suppose you want to extract data from many invoices and put the data into a data
 1. Select **+ Create** and use the following settings to create a content understanding task:
     - **Task name**: contoso-invoice
     - **Description**: An invoice analysis task
-    - **Azure AI services connection**: *Use the default*
-    - **Azure Blob Storage account**: *Use the default*
+    - **Advanced settings**: *keep the default*
 
 1. Select **Create**, then wait for your task to be created. 
 1. Select your **contoso-invoice** task. 
