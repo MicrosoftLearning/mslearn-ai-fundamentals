@@ -10,33 +10,36 @@ In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Mic
 
 ## Create a project in Azure AI Foundry portal
 
-1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+Let's start by creating an Azure AI Foundry project.
 
-1. Sign in with your account. 
-
-1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
+1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
     ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-home-page.png)
 
-1. On the *Create a project* pane, you will see a generated project name, which you can keep as-is. Depending on whether you have created a hub in the past, you will either see a list of *new* Azure resources to be created or a drop-down list of existing hubs. If you see the drop-down list of existing hubs, select *Create new hub*, create a unique name for your hub, and select *Next*.  
- 
-    ![Screenshot of the create a project pane with automaticly generated names for hub and project.](./media/azure-ai-foundry-create-project.png)
+1. In the home page, select **+ Create project**.
 
-> **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
+1. In the **Create a project** wizard, enter a valid name for your project and if an existing hub is suggested, choose the option to create a new one. Then review the Azure resources that will be automatically created to support your hub and project.
 
-1. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: East US, France Central, Korea Central, West Europe, or West US to complete the rest of the lab. Then select **create**. 
+1. Select **Customize** and specify the following settings for your hub:
+    - **Hub name**: *A valid name for your hub*
+    - **Subscription**: *Your Azure subscription*
+    - **Resource group**: *Create or select a resource group*
+    - **Location**: Select one of the following locations:
+        * East US
+        * France Central
+        * Korea Central
+        * West Europe
+        * West US
+    - **Connect Azure AI Services or Azure OpenAI**: *Create a new AI Services resource*
+    - **Connect Azure AI Search**: Skip connecting
 
-1. Take note of the resources that are created: 
-- Azure AI services
-- Azure AI hub
-- Azure AI project
-- Storage account
-- Key vault
-- Resource group  
- 
-1. After the resources are created, you will be brought to your project's *Overview* page. On the left-hand menu on the screen, select **Playgrounds**.
- 
-    ![Screenshot of the left-hand menu on the project screen with playgrounds selected.](./media/azure-ai-foundry-playgrounds.png)  
+1. Select **Next** and review your configuration. Then select **Create** and wait for the process to complete.
+
+1. When your project is created, close any tips that are displayed and review the project page in Azure AI Foundry portal, which should look similar to the following image:
+
+    ![Screenshot of a Azure AI project details in Azure AI Foundry portal.](./media/ai-foundry-project-2.png)
+
+1. On the left-hand menu on the screen, select **Playgrounds**.
 
 1. On the *Playgrounds* page, select the **Language playground** tile to try out some Azure AI Language capabilities.
 
