@@ -39,7 +39,7 @@ Let's start by creating an Azure AI Foundry project.
 
     ![Screenshot of a Azure AI project details in Azure AI Foundry portal.](./media/ai-foundry-project-2.png)
 
-1. After the resources are created, you will be brought to your project's *Overview* page. On the left-hand menu on the screen, select **Playgrounds**.
+1. On the left-hand menu on the screen, select **Playgrounds**.
 
 1. On the *Playgrounds* page, select the **Language playground** tile to try out some Azure AI Language capabilities.
 
