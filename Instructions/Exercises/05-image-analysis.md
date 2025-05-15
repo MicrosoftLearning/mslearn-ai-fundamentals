@@ -49,7 +49,9 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
     ![Screenshot of the image captioning tile in the image section of the Vision and Document page.](./media/vision-image-captioning-tile.png)
 
-1. On the **Add captions to images** page, review the resource you are connected to which is listed under the **Try It Out** subheading. You should not have to make changes. (*Note*: if you did not customize a valid resource location earlier during resource creation, you may be asked to create a new Azure AI services resource that is in a valid region. You will need to create the new resource to continue with the lab.)  
+1. On the **Add captions to images** page, review the resource you are connected to which is listed under the **Try It Out** subheading. You should not have to make changes.
+
+> **Note**: If you did not customize a valid resource location earlier during resource creation, you may be asked to create a new Azure AI services resource that is in a valid region. You will need to create the new resource to continue with the lab.
 
 1. Download [**image-analysis.zip**](https://aka.ms/mslearn-images-for-analysis) from `https://aka.ms/mslearn-images-for-analysis`. Open the folder on your computer and locate the file named **store-camera-1.jpg**; which contains the following image:
 
