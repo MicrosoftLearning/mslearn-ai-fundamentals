@@ -50,8 +50,8 @@ Suppose you want to extract data from many invoices and put the data into a data
 1. Select **Custom analyzer**. 
 
 1. Select **+ Create** and use the following settings to create a content understanding task:
-    - **Task name**: contoso-invoice
-    - **Description**: An invoice analysis task
+    - **Task name**: `contoso-invoice`
+    - **Description**: `An invoice analysis task`
     - **Advanced settings**: *keep the default*
 
 1. Select **Create**, then wait for your task to be created. 
@@ -88,8 +88,8 @@ Suppose you want to extract data from many invoices and put the data into a data
 Now that you have trained a model to extract fields from your sample invoice, you can build an analyzer to use with similar forms. By building an analyzer, you can deploy the model and use it to automate other invoice tasks.
 
 1. In the *Build Analyzer* tab, select **+ Build Analyzer**. Enter the following: 
-    - **Name**: invoice-analyzer
-    - **Description**: An invoice analyzer
+    - **Name**: `invoice-analyzer`
+    - **Description**: `An invoice analyzer`
 
     ![Screenshot of the build analzyer page.](./media/content-understanding/build-analyzer.png)
 
