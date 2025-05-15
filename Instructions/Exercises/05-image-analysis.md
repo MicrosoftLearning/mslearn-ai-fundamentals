@@ -53,7 +53,7 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
 > **Note**: If you did not customize a valid resource location earlier during resource creation, you may be asked to create a new Azure AI services resource that is in a valid region. You will need to create the new resource to continue with the lab.
 
-1. Download [**image-analysis.zip**](https://aka.ms/mslearn-images-for-analysis) from `https://aka.ms/mslearn-images-for-analysis`. Open the folder on your computer and locate the file named **store-camera-1.jpg**; which contains the following image:
+1. Download [**image-analysis.zip**](https://aka.ms/mslearn-images-for-analysis) by opening the URL `https://aka.ms/mslearn-images-for-analysis` in a new browser tab. Using the URL should automatically download a folder on your computer. Open the folder by navigating to the *Downloads* on your computer. Then locate the file named **store-camera-1.jpg**; which contains the following image:
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/analyze-images-vision/store-camera-1.jpg)
 
