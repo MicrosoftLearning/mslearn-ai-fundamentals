@@ -33,13 +33,15 @@ In order to incorporate Azure AI services into applications, developers need a s
 
 ## See Azure AI services in action
 
-1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+Let's start by creating an Azure AI Foundry project.
 
-1. Sign in with your account. 
+1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
-1. Under *Work outside a project*, select the **View AI Services** tile.
+    ![Screenshot of Azure AI Foundry home page with create an agent selected.](./media/azure-ai-foundry-home-page.png)
  
-    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/view-ai-foundry-outside-project.png)  
+1. In a new browser window, open the [Azure AI services exploration page](https://ai.azure.com/explore/aiservices).
+
+1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
 
 1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
 
@@ -65,12 +67,4 @@ In order to incorporate Azure AI services into applications, developers need a s
 ## Clean up 
 
 After you have finished, you can delete the Azure AI services resource from the Azure Portal. Deleting the resource is a way to reduce costs that accrue when the resource exists in the subscription. To do this, navigate to the **Overview** page of your Azure AI services resource. Select **Delete** at the top of the screen.
-
-
-
-
-
-
-
-
 

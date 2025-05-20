@@ -9,33 +9,34 @@ Generative AI describes a category of capabilities within AI that create content
 
 ## Create a project in Azure AI Foundry portal
 
-1. In a browser tab, navigate to [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+Let's start by creating an Azure AI Foundry project.
 
-1. Sign in with your account. 
+1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
-1. On the Azure AI Foundry portal home page, select **Create a project**. In Azure AI Foundry, projects are containers that help organize your work.  
+    ![Screenshot of Azure AI Foundry home page with create an agent selected.](./media/azure-ai-foundry-home-page.png)
 
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-home-page.png)
+1. In the home page, select **+ Create an agent**.
 
-1. On the *Create a project* pane, you will see a generated project name, which you can keep as-is. Depending on whether you have created a hub in the past, you will either see a list of *new* Azure resources to be created or a drop-down list of existing hubs. If you see the drop-down list of existing hubs, select *Create new hub*, create a unique name for your hub, and select *Next*.  
- 
-    ![Screenshot of the create a project pane with automaticly generated names for hub and project.](./media/azure-ai-foundry-create-project.png)
+1. In the **Create an agent** wizard, enter a valid name for your project. 
 
-    > **Important**: You will need an Azure AI services resouce provisioned in a specific location to complete the rest of the lab.
+1. Select **Advanced options** and specify the following settings:
+    - **Azure AI Foundry resource**: *Keep the default name*
+    - **Subscription**: *Your Azure subscription*
+    - **Resource group**: *Create or select a resource group*
+    - **Region**: Select one of the following locations:
+        * East US
+        * France Central
+        * Korea Central
+        * West Europe
+        * West US
 
-1. In the same *Create a project* pane, select **Customize** and select one of the following **Locations**: East US, France Central, Korea Central, West Europe, or West US to complete the rest of the lab. Then select **create**. 
+1. Select **Create** and review your configuration. Wait for the set up process to complete.
 
-1. Take note of the resources that are created: 
-- Azure AI services
-- Azure AI hub
-- Azure AI project
-- Storage account
-- Key vault
-- Resource group  
- 
-1. After the resources are created, you will be brought to your project's *Overview* page. On the left-hand menu on the screen, select **Playgrounds**.
- 
-    ![Screenshot of the left-hand menu on the project screen with AI Services selected.](./media/azure-ai-foundry-playgrounds.png)  
+1. When your project is created, you will be brought by default to the Agents playfround in Azure AI Foundry portal, which should look similar to the following image:
+
+    ![Screenshot of a Azure AI project details in Azure AI Foundry portal.](./media/ai-foundry-project-2.png)
+
+1. On the left-hand menu on the screen, select **Playgrounds**.
 
 ## Explore generative AI in Azure AI Foundry's chat playground
 
