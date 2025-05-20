@@ -29,6 +29,8 @@ Let's start by creating an Azure AI Foundry project.
 
 1. Select **Create** and review your configuration. Wait for the set up process to complete.
 
+    >**Note**: If you receive a permissions error, select the **Fix it** button to add the appropriate permissions to continue.
+
 1. When your project is created, you will be brought by default to the Agents playfround in Azure AI Foundry portal, which should look similar to the following image:
 
     ![Screenshot of a Azure AI project details in Azure AI Foundry portal.](./media/ai-foundry-project-2.png)

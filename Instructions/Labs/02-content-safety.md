@@ -43,8 +43,6 @@ Let's start by creating an Azure AI Foundry project.
 
 1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
 
-1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
-
     ![Screenshot of the Vision and Document tile selected on the AI Services page.](./media/vision-document-tile.png)
 
 1. Under *View all Vision capabilities* select the **Face** tab. 

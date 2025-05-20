@@ -23,9 +23,9 @@ This exercise takes approximately **25** minutes.
 
 1. Select **Select or create a project to start**. 
 
-1. In the home page, select **+ Create an agent**.
+1. Select **+ Create a project**.
 
-1. In the **Create an agent** wizard, enter a valid name for your project. 
+1. In the wizard, enter a valid name for your project. 
 
 1. Select **Advanced options** and specify the following settings:
     - **Azure AI Foundry resource**: *Keep the default name*
@@ -37,6 +37,8 @@ This exercise takes approximately **25** minutes.
         * Australia East
 
 1. Select **Create** and review your configuration. Wait for the set up process to complete.
+
+    >**Note**: If you receive a permissions error, select the **Fix it** button to add the appropriate permissions to continue.
 
 1. When your project is created, you will be brought by default to the content understanding task creation window. Use the following settings to create a content understanding task:
     - **Task name**: `contoso-invoice`
