@@ -11,51 +11,47 @@ In this exercise, you will use Azure AI Content Understanding in Azure AI Foundr
 
 This exercise takes approximately **25** minutes.
 
-## Create an Azure AI Foundry project
-
-Let's start by creating an Azure AI Foundry project.
+## Create an Azure AI Foundry project and content understanding task
 
 1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
-    ![Screenshot of Azure AI Foundry home page with create a project selected.](./media/azure-ai-foundry-home-page.png)
+    ![Screenshot of Azure AI Foundry home page with create an agent selected.](./media/azure-ai-foundry-home-page.png)
 
-1. In the home page, select **+ Create project**.
+1. In a new browser window, open the [Azure AI services exploration page](https://ai.azure.com/explore/aiservices).
 
-1. In the **Create a project** wizard, enter a valid name for your project and if an existing hub is suggested, choose the option to create a new one. Then review the Azure resources that will be automatically created to support your hub and project.
+1. On the *AI Services* page, select the *Try Content Understanding* tile.
 
-1. Select **Customize** and specify the following settings for your hub:
-    - **Hub name**: *A valid name for your hub*
+1. Select **Select or create a project to start**. 
+
+1. In the home page, select **+ Create an agent**.
+
+1. In the **Create an agent** wizard, enter a valid name for your project. 
+
+1. Select **Advanced options** and specify the following settings:
+    - **Azure AI Foundry resource**: *Keep the default name*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
-    - **Location**: West US 
-    - **Connect Azure AI Services or Azure OpenAI**: *Create a new AI Services resource*
-    - **Connect Azure AI Search**: Skip connecting
+    - **Region**: Select one of the following locations:
+        * West US
+        * Sweden Central
+        * Australia East
 
-1. Select **Next** and review your configuration. Then select **Create** and wait for the process to complete.
+1. Select **Create** and review your configuration. Wait for the set up process to complete.
 
-1. When your project is created, close any tips that are displayed and review the project page in Azure AI Foundry portal, which should look similar to the following image:
-
-    ![Screenshot of a Azure AI project details in Azure AI Foundry portal.](./media/ai-foundry-project.png)
- 
-1. Navigate to the left-hand menu on the screen. Then select **AI Services**.
-
-1. On the *AI Services* page, select the *Content Understanding* tile to try out Azure AI Content Understanding capabilities.
-
-## Analyze an invoice with Azure AI Content Understanding in Azure AI Foundry 
-
-Suppose you want to extract data from many invoices and put the data into a database. You can use Azure AI Content Understanding to analyze one invoice and build your own analyzer that can analyze other similar invoices. Let's start by creating a content understanding task.
-
-![Screenshot of the content understanding main page.](./media/content-understanding/content-understanding-1.png)
-
-1. Select **Custom analyzer**. 
-
-1. Select **+ Create** and use the following settings to create a content understanding task:
+1. When your project is created, you will be brought by default to the content understanding task creation window. Use the following settings to create a content understanding task:
     - **Task name**: `contoso-invoice`
     - **Description**: `An invoice analysis task`
     - **Advanced settings**: *keep the default*
 
 1. Select **Create**, then wait for your task to be created. 
+
+![Screenshot of the content understanding main page.](./media/content-understanding/content-understanding-1.png)
+
 1. Select your **contoso-invoice** task. 
+
+## Analyze an invoice with Azure AI Content Understanding in Azure AI Foundry 
+
+Suppose you want to extract data from many invoices and put the data into a database. You can use Azure AI Content Understanding to analyze one invoice and build your own analyzer that can analyze other similar invoices. Let's start by defining your schema.
 
 #### Define your schema 
 
