@@ -9,38 +9,13 @@ lab:
 
 Suppose the fictitious retailer *Northwind Traders* has decided to implement a "smart store", in which AI services monitor the store to identify customers requiring assistance, and direct employees to help them. By using Azure AI Vision, images taken by cameras throughout the store can be analyzed to provide meaningful descriptions of what they depict.
 
-## Create a project in Azure AI Foundry portal
+## Get started in Azure AI Foundry portal
 
-Let's start by creating an Azure AI Foundry project.
+1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in. 
 
-1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
+1. Scroll down to the bottom of the home page and select the **Explore Azure AI services** tile. 
 
-    ![Screenshot of Azure AI Foundry home page with create an agent selected.](./media/azure-ai-foundry-home-page.png)
-
-1. In the home page, select **+ Create an agent**.
-
-1. In the **Create an agent** wizard, enter a valid name for your project. 
-
-1. Select **Advanced options** and specify the following settings:
-    - **Azure AI Foundry resource**: *Keep the default name*
-    - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Create or select a resource group*
-    - **Region**: Select one of the following locations:
-        * East US
-        * France Central
-        * Korea Central
-        * West Europe
-        * West US
-
-1. Select **Create** and review your configuration. Wait for the set up process to complete.
-
-    >**Note**: If you receive a permissions error, select the **Fix it** button to add the appropriate permissions to continue.
-
-1. When your project is created, you will be brought by default to the Agents playground in Azure AI Foundry portal, which should look similar to the following image:
-
-    ![Screenshot of a Azure AI project details in Azure AI Foundry portal.](./media/ai-foundry-project-2.png)
- 
-1. In a new browser window, open the [Azure AI services exploration page](https://ai.azure.com/explore/aiservices).
+    ![Screenshot of Azure AI Foundry home page with explore Azure AI services selected.](./media/azure-ai-foundry-ai-services.png)
 
 1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
 
@@ -51,6 +26,31 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 1. On the *Vision + Document* page, scroll down and select **Image** under *View all other vision capabilities*. Then select the **Image captioning** tile.
 
     ![Screenshot of the image captioning tile in the image section of the Vision and Document page.](./media/vision-image-captioning-tile.png)
+
+1. You need an Azure AI Foundry **Hub** to get started. Click on **Select a hub**. Then select **Create a new hub**. 
+
+1. In the *Create a new hub* window, configure your hub with the following settings:  
+    - **Hub name**: *Keep the default or create a unique name*
+    - **Subscription**: *Your Azure subscription*
+    - **Resource group**: *Create or select a resource group*
+    - **Region**: Select one of the following locations:
+        * East US
+        * France Central
+        * Korea Central
+        * West Europe
+        * West US
+    - **Connect Azure AI services**: *Keep default*
+    - **Connect Azure AI services**: Skip connecting
+
+1. Select **Next**. Then select **Create**. 
+
+1. When the hub is created, you will be prompted to create a *project*. Projects help organize what you build with Azure AI and are organized inside hubs. Keep the default project name or fill in a unique name. Then select **Create project**.  
+
+    ![Screenshot of create project prompt that appears after the hub is created.](./media/azure-ai-foundry-create-project.png)
+
+1. When the project is created, you will be taken to an *Overview* page of the project details. Navigate back to the vision demo by selecting **AI services** on the left-hand menu. Then select the *Vision + Document* tile. On the *Vision + Document* page, scroll down and select **Image** under *View all other vision capabilities*. Then select the **Image captioning** tile.
+
+1. On the **Add captions to images** page, select the *Azure AI services* resource you created. 
 
 1. On the **Add captions to images** page, review the resource you are connected to which is listed under the **Try It Out** subheading. You should not have to make changes. (*Note*: if you did not customize a valid resource location earlier during resource creation, you may be asked to create a new Azure AI services resource that is in a valid region. You will need to create the new resource to continue with the lab.)  
 
