@@ -13,11 +13,27 @@ Suppose the fictitious retailer *Northwind Traders* has decided to implement a "
 
 1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in. 
 
-1. Scroll down to the bottom of the home page and select the **Explore Azure AI services** tile. 
+1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create**. Then choose the option to create a *new AI hub resource*.
 
-    ![Screenshot of Azure AI Foundry home page with explore Azure AI services selected.](./media/azure-ai-foundry-ai-services.png)
+1. In the *Create a project* wizard, enter a valid name for your project, and if an existing hub is suggested, select the option to create a *new* one. 
+
+1. Expand *Advanced options* to specify the following settings for your project:
+    - **Subscription**: Your Azure subscription
+    - **Resource group**: Create or select a resource group
+    - **Region**: Select one of the following locations:
+        * East US
+        * France Central
+        * Korea Central
+        * West Europe
+        * West US
+
+    Wait for your project and hub to be created.
+
+1. When the project is created, you will be taken to an *Overview* page of the project details. Select **AI services** on the left-hand menu. 
 
 1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
+
+    ![Screenshot of the Vision + Document tile in Azure AI Foundry.](./media/vision-document-tile.png)
 
 ## Generate captions for an image
 
@@ -26,29 +42,6 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 1. On the *Vision + Document* page, scroll down and select **Image** under *View all other vision capabilities*. Then select the **Image captioning** tile.
 
     ![Screenshot of the image captioning tile in the image section of the Vision and Document page.](./media/vision-image-captioning-tile.png)
-
-1. You need an Azure AI Foundry **Hub** to get started. Click on **Select a hub**. Then select **Create a new hub**. 
-
-1. In the *Create a new hub* window, configure your hub with the following settings:  
-    - **Hub name**: *Keep the default or create a unique name*
-    - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Create or select a resource group*
-    - **Region**: Select one of the following locations:
-        * East US
-        * France Central
-        * Korea Central
-        * West Europe
-        * West US
-    - **Connect Azure AI services**: *Keep default*
-    - **Connect Azure AI services**: Skip connecting
-
-1. Select **Next**. Then select **Create**. 
-
-1. When the hub is created, you will be prompted to create a *project*. Projects help organize what you build with Azure AI and are organized inside hubs. Keep the default project name or fill in a unique name. Then select **Create project**.  
-
-    ![Screenshot of create project prompt that appears after the hub is created.](./media/azure-ai-foundry-create-project.png)
-
-1. When the project is created, you will be taken to an *Overview* page of the project details. Navigate back to the vision demo by selecting **AI services** on the left-hand menu. Then select the *Vision + Document* tile. On the *Vision + Document* page, scroll down and select **Image** under *View all other vision capabilities*. Then select the **Image captioning** tile.
 
 1. On the **Add captions to images** page, select the *Azure AI services* resource you created. 
 
