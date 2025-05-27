@@ -1,9 +1,9 @@
 ---
 lab:
-    title: 'Explore Speech in Azure AI Foundry portal'
+    title: 'Explore speech in Azure AI Foundry portal'
 ---
 
-# Explore Speech in Azure AI Foundry portal
+# Explore speech in Azure AI Foundry portal
 
 The **Azure AI Speech** service transcribes speech into text, and text into audible speech. You might use AI Speech to create an application that can transcribe meeting notes or generate text from the recording of interviews.
 
