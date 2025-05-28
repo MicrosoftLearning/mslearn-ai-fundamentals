@@ -1,10 +1,10 @@
 ---
-title: Microsoft Learn - Azure AI Fundamentals Exercises
+title: Microsoft Learn - Introduction to AI in Azure Exercises
 permalink: index.html
 layout: home
 ---
 
-# Azure AI Fundamentals Exercises
+# AI-900: Introduction to AI in Azure Exercises
 
 These hands-on exercises are designed to support training content on [Microsoft Learn](https://docs.microsoft.com/training/).
 
