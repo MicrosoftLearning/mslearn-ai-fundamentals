@@ -46,7 +46,7 @@ Generative AI describes a category of capabilities within AI that create content
     - Add context to maximize response appropriateness and relevance
     - Set clear expectations for the response
 
-1. Let's try generating a resonse using a prompt with a specific goal. In the chat box, enter the following prompt:
+1. Let's try generating a response using a prompt with a specific goal. In the chat box, enter the following prompt:
 
     ```prompt
     I'm planning a trip to Paris in September. Can you help me?
