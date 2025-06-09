@@ -11,9 +11,9 @@ Generative AI describes a category of capabilities within AI that create content
 
 1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in. 
 
-1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create**. Then choose the option to create a *new AI hub resource*.
+1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create**. Then choose the option to create a *new Azure AI Foundry resource*.
 
-1. In the *Create a project* wizard, enter a valid name for your project, and if an existing hub is suggested, select the option to create a *new* one. 
+1. In the *Create a project* wizard, enter a valid name for your project.
 
 1. Expand *Advanced options* to specify the following settings for your project:
     - **Subscription**: Your Azure subscription
@@ -35,7 +35,7 @@ Generative AI describes a category of capabilities within AI that create content
 
 1. In Azure AI Foundry's Playgrounds page, select **Try the Chat playground**. The Chat playground is a user interface that enables you to try out building a chat application with different generative AI models.  
 
-1. In order to use Chat playground, you need to associate it with a deployed model. In the Chat playground, you should see **gpt-4o** selected. 
+1. In order to use Chat playground, you need to associate it with a deployed model. In the Chat playground, you need to have **gpt-4o** selected. If you do not see any deployments, you need to select **+ Create a deployment**, search for **gpt-4o**, and then select **Confirm** and finally **Deploy**.
 
 1. In the chat playground, you can use your deployed model when it appears in the *Deployment* selection menu. Importantly, you need to select **Apply changes** after you make any changes to the *Setup*. 
 

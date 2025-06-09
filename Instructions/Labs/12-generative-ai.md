@@ -11,9 +11,9 @@ Generative AI describes a category of capabilities within AI that create content
 
 1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in. 
 
-1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create**. Then choose the option to create a *new AI hub resource*.
+1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create**. Then choose the option to create a *new Azure AI Foundry resource*.
 
-1. In the *Create a project* wizard, enter a valid name for your project, and if an existing hub is suggested, select the option to create a *new* one. 
+1. In the *Create a project* wizard, enter a valid name for your project.
 
 1. Expand *Advanced options* to specify the following settings for your project:
     - **Subscription**: Your Azure subscription
@@ -35,10 +35,9 @@ Generative AI describes a category of capabilities within AI that create content
 
 1. In Azure AI Foundry's Playgrounds page, select **Try the Chat playground**. The Chat playground is a user interface that enables you to try out building a chat application with different generative AI models.  
 
-1. In order to use Chat playground, you need to associate it with a deployed model. In the Chat playground, select **Create a deployment**. Search for and select **gpt-4**. 
+1. In order to use Chat playground, you need to associate it with a deployed model. In the Chat playground, you need to have **gpt-4o** selected. If you do not see any deployments, you need to select **+ Create a deployment**, search for **gpt-4o**, and then select **Confirm** and finally **Deploy**.
 
-1. In the *Deploy model* window, keep the default naming and selection and select **Deploy**. It may take a moment for the model to deploy. You can check on the status of your deployment by selecting *Models and endpoints* in left-hand menu under *My assets*.
-1. In the chat playground, you can use your deployed model when it appears in the *Deployment* selection menu. Make sure the model you deployed is selected. Importantly, you need to select **Apply changes** after you make any changes to the *Setup*. 
+1. In the chat playground, you can use your deployed model when it appears in the *Deployment* selection menu. Importantly, you need to select **Apply changes** after you make any changes to the *Setup*. 
 
 1. Consider the following ways you can improve responses from a generative AI assistant:
     - Start with a specific goal for what you want the assistant to do
@@ -96,3 +95,11 @@ Generative AI describes a category of capabilities within AI that create content
 1. Review the response, which should provide a numbered list of sights to see in Paris.
 
 1. When you are done, you can close the browser window.
+
+## Clean up
+
+If you don’t intend to do more exercises, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
+
+1. Open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com) and select the resource group that contains the resources you created.
+
+1. Select the resources and select **Delete** and then **Yes** to confirm. The resources are then deleted.
