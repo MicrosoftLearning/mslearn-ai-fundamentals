@@ -43,11 +43,9 @@ This exercise takes approximately **25** minutes.
 1. When your project is created, you will be brought by default to the content understanding task creation window. Use the following settings to create a content understanding task:
     - **Task name**: `contoso-invoice`
     - **Description**: `An invoice analysis task`
-    - **Advanced settings**: *keep the default*
+    - *Select Single-file content analysis*
 
 1. Select **Create**, then wait for your task to be created. 
-
-![Screenshot of the content understanding main page.](./media/content-understanding/content-understanding-1.png)
 
 1. Select your **contoso-invoice** task. 
 
@@ -79,13 +77,13 @@ Suppose you want to extract data from many invoices and put the data into a data
 
     ![Screenshot of the test analzyer page with the result tab highlighted.](./media/content-understanding/test-analyzer-result.png)
 
-1. The Content Understanding service should have correctly identified the text that corresponds to the fields in the schema. If it had not done so, you could use the *Label data* page to upload another sample form and explicitly identify the correct text for each field. When you are satisfied with how well the analyzer is able to detect the data in the invoice, select the **Build Analyzer** tab. 
+1. The Content Understanding service should have correctly identified the text that corresponds to the fields in the schema. If it had not done so, you could use the *Label data* page to upload another sample form and explicitly identify the correct text for each field. When you are satisfied with how well the analyzer is able to detect the data in the invoice, select the **Analyzer list** tab. 
 
 #### Build your analyzer 
 
 Now that you have trained a model to extract fields from your sample invoice, you can build an analyzer to use with similar forms. By building an analyzer, you can deploy the model and use it to automate other invoice tasks.
 
-1. In the *Build Analyzer* tab, select **+ Build Analyzer**. Enter the following: 
+1. In the *Analyzer list* tab, select **+ Build Analyzer**. Enter the following: 
     - **Name**: `invoice-analyzer`
     - **Description**: `An invoice analyzer`
 
@@ -93,7 +91,7 @@ Now that you have trained a model to extract fields from your sample invoice, yo
 
 1. Select **Build**. Wait for the new analyzer to be ready (use the Refresh button to check). Your analyzer uses a predictive model that is based on the schema you have defined and tested in previous steps. 
 1. Now let's try testing the analyzer you built. Download a different invoice from Contoso [contoso-invoice-2.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-2.pdf) from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-2.pdf`.
-1. Return to the *Build analyzer* page and select the invoice-analyzer link. The fields defined in the analyzer’s schema will be displayed.
+1. Return to the *Analyzer list* page and select the invoice-analyzer link. The fields defined in the analyzer’s schema will be displayed.
 1. In the invoice-analyzer page, select *Test*.
 1. Use the **+ Upload test files** button to upload *contoso-receipt-2.pdf*. Select **Run analysis** to extract field data from the test form. Review the results of the test.
 
