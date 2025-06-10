@@ -29,7 +29,7 @@ Suppose the fictitious retailer *Northwind Traders* has decided to implement a "
 
     Wait for your project and hub to be created.
 
-1. When the project is created, you will be taken to an *Overview* page of the project details. Select **AI services** on the left-hand menu. 
+1. When the project is created, you will be taken to an *Overview* page of the project details. Select **AI services** on the left-hand menu (you may need to expand the menu by clicking on the top icon to read its contents). 
 
 1. On the *AI Services* page, select the *Vision + Document* tile to try out Azure AI Vision and Document capabilities.
 
