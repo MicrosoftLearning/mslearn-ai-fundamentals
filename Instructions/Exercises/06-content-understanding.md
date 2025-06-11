@@ -44,6 +44,7 @@ This exercise takes approximately **25** minutes.
     - **Task name**: `contoso-invoice`
     - **Description**: `An invoice analysis task`
     - *Select Single-file content analysis*
+    - **Advanced settings**: *keep the default*.
 
 1. Select **Create**, then wait for your task to be created. 
 
@@ -57,7 +58,7 @@ Suppose you want to extract data from many invoices and put the data into a data
 
 1. On the *Define Schema* page, you can add test files. Download [contoso-invoice-1.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/contoso-invoice-1.pdf) from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-1.pdf`. 
 
-1. Upload the file to the *define schema* page. Select the *Invoice analysis* template. The invoice template has pre-selected data fields that the analyzer will try to detect. 
+1. Upload the file to the *define schema* page. Select the *Invoice data extraction* template. The invoice data extraction template has pre-selected data fields that the analyzer will try to detect. 
 
     ![Screenshot of the define schema page in the content understanding tool.](./media/content-understanding/define-schema.png)
 
