@@ -51,7 +51,7 @@ Let's start by creating an Azure AI Foundry project.
 
     ![Screenshot of the detect faces demo in Azure AI Foundry portal.](./media/detect-faces-demo.png)
 
-1. Scroll down to the **Run the code** section. Select **View Code**. Sroll down to the section that starts with *import os*. In the sample code provided, you'll see placeholders where you could put a key and endpoint.
+1. Scroll down to the **Run the code** section. Select **View Code**. Scroll down to the section that starts with *import os*. In the sample code provided, you'll see placeholders where you could put a key and endpoint.
 
     ![Screenshot of the view code screen with a view of the code placeholders for key and endpoint.](./media/view-code-example.png) 
 
