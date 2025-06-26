@@ -180,8 +180,6 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 
 1. Leave the **Schedule** set to **Once**.
 
-1. Expand the **Advanced options**. Ensure that the **Base-64 Encode Keys** option is selected, as encoding keys can make the index more efficient.
-
 1. Select **Submit** to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
     - Extracts the document metadata fields and content from the data source.
     - Runs the skillset of cognitive skills to generate more enriched fields.
