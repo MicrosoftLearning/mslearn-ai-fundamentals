@@ -11,7 +11,7 @@ Generative AI describes a category of capabilities within AI that create content
 
 1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in. 
 
-1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create**. Then choose the option to create a *new Azure AI Foundry resource*.
+1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create new**. Then choose the option to create a *new Azure AI Foundry resource*.
 
 1. In the *Create a project* wizard, enter a valid name for your project.
 
@@ -35,9 +35,17 @@ Generative AI describes a category of capabilities within AI that create content
 
 1. In Azure AI Foundry's Playgrounds page, select **Try the Chat playground**. The Chat playground is a user interface that enables you to try out building a chat application with different generative AI models.  
 
-1. In order to use Chat playground, you need to associate it with a deployed model. In the Chat playground, you need to have **gpt-4o** selected. If you do not see any deployments, you need to select **+ Create a deployment**, search for **gpt-4o**, and then select **Confirm** and finally **Deploy**.
+    >*Note*: If you do not see the *Setup* pane appear on the Chat playground screen, expand the window size.  
 
-1. In the chat playground, you can use your deployed model when it appears in the *Deployment* selection menu. Importantly, you need to select **Apply changes** after you make any changes to the *Setup*. 
+1. In order to use Chat playground, you need to associate it with a deployed model. In the Chat playground's *Setup* pane, select **+ Create a deployment**. If prompted, select *From base models*, otherwise continue to the next step. 
+
+1. Search for the **gpt-4o** model, then select **Confirm**. Keep the default model name, deployment type, and deployment details. Then select **Deploy**.
+
+1. In the chat playground, you can use your deployed model when it appears in the *Deployment* selection menu. 
+
+    >*Note*: You need to select **Apply changes** after you make any changes to the *Setup*. 
+
+1. Navigate to the *Chat history* pane. You will use the query box to enter your prompts. 
 
 1. Consider the following ways you can improve responses from a generative AI assistant:
     - Start with a specific goal for what you want the assistant to do
