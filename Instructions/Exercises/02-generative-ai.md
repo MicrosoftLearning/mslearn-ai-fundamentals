@@ -43,9 +43,9 @@ Generative AI describes a category of capabilities within AI that create content
 
 1. Search for the **gpt-4o** model, then select **Confirm**. Keep the default model name, deployment type, and deployment details. Then select **Deploy**.
 
-1. In the chat playground, you can use your deployed model when it appears in the *Deployment* selection menu. 
+1. In the chat playground, you can use your deployed model when it appears in the *Deployment* selection menu. Close any tips or quick start panes that are opened. 
 
-    >*Note*: You need to select **Apply changes** after you make any changes to the *Setup*. 
+    >*Note*: You need to select **Apply changes** anytime you make changes to *Setup*. 
 
 1. Navigate to the *Chat history* pane. You will use the query box to enter your prompts. 
 
