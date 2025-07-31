@@ -15,7 +15,7 @@ In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Mic
 
 1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in. 
 
-1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create**. Then choose the option to create a *new Azure AI Foundry resource*.
+1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create new**. Then choose the option to create an **Azure AI Foundry resource**.
 
 1. In the *Create a project* wizard, enter a valid name for your project.
 
@@ -29,11 +29,13 @@ In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Mic
         * West Europe
         * West US
 
-    Wait for your project and hub to be created.
+    Wait for your project to be created.
 
 1. When the project is created, you will be taken to an *Overview* page of the project details.
 
-1. On the left-hand menu on the screen, select **Playgrounds**.
+1. On the left-hand menu on the screen, select **Playgrounds**. 
+
+    >*Note*: You may need to expand the menu to make your selection.
 
 1. On the *Playgrounds* page, select the **Language playground** tile to try out some Azure AI Language capabilities.
 
