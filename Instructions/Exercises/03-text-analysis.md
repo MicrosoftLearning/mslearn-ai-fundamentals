@@ -11,6 +11,8 @@ Azure AI Language service includes Text Analytics, with capabilities such as ent
 
 In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. 
 
+This exercise takes approximately **20** minutes.
+
 ## Create a project in Azure AI Foundry portal
 
 1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in. 

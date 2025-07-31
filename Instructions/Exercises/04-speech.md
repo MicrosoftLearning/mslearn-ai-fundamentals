@@ -9,6 +9,8 @@ The **Azure AI Speech** service transcribes speech into text, and text into audi
 
 In this exercise, you will use Azure AI Speech in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to transcribe audio using the built-in try-it-out experiences. 
 
+This exercise takes approximately **15** minutes.
+
 ## Create a project in Azure AI Foundry portal
 
 1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in. 
