@@ -27,7 +27,7 @@ Suppose the fictitious retailer *Northwind Traders* has decided to implement a "
         * West Europe
         * West US
 
-    Select **Create**. Wait for your project and hub to be created.
+    Select **Create**. Wait for your project and hub to be created. It may take a few minutes.
 
 1. When the project is created, you will be taken to an *Overview* page of the project details. Select **AI services** on the left-hand menu (you may need to expand the menu by clicking on the top icon to read its contents). 
 
@@ -43,11 +43,15 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
     ![Screenshot of the image captioning tile in the image section of the Vision and Document page.](./media/vision-image-captioning-tile.png)
 
-1. On the **Add captions to images** page, select the *Azure AI services* resource you created. 
+1. On the **Add captions to images** page, under the *Connected Azure AI services* selection menu, notice the *Azure AI services* resource you created has been selected. You should not have to make changes. 
 
-1. On the **Add captions to images** page, review the resource you are connected to which is listed under the **Try It Out** subheading. You should not have to make changes. (*Note*: if you did not customize a valid resource location earlier during resource creation, you may be asked to create a new Azure AI services resource that is in a valid region. You will need to create the new resource to continue with the lab.)  
+    >*Note*: if you did not customize a valid resource location earlier during resource creation, you may be asked to create a new Azure AI services resource that is in a valid region. You will need to create the new resource to continue with the lab.  
 
-1. Select [**https://aka.ms/mslearn-images-for-analysis**](https://aka.ms/mslearn-images-for-analysis) to download **image-analysis.zip**. Open the folder on your computer and locate the file named **store-camera-1.jpg**; which contains the following image:
+1. Download **image-analysis.zip** by opening the URL `https://aka.ms/mslearn-images-for-analysis` in a new browser tab. Using the URL should automatically download a folder on your computer. 
+
+1. Navigate to the *Downloads* folder on your computer, then identify the downloaded folder. Right-click on the downloaded folder. Select *Extract All...*. Then select *Extract* to unzip its contents. The unzipped folder will appear on the screen.  
+
+1. In the unzipped folder, locate the file named **store-camera-1.jpg**; which contains the following image:
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/analyze-images-vision/store-camera-1.jpg)
 
@@ -105,8 +109,8 @@ In this task, you use the **Object detection** feature of Image Analysis. Object
 
 If you don’t intend to do more exercises, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
 
-1.	Open the [Azure portal]( https://portal.azure.com) and select the resource group that contains the resources you created. 
-1.	Select the resource and select **Delete** and then **Yes** to confirm. The resource is then deleted.
+1. Open the [Azure portal]( https://portal.azure.com) and select the resource group that contains the resources you created. 
+1. Select the resource and select **Delete** and then **Yes** to confirm. The resource is then deleted.
 
 ## Learn more
 

@@ -27,7 +27,7 @@ In this exercise, you will use Azure AI Speech in Azure AI Foundry portal, Micro
         * West Europe
         * West US
 
-    Select **Create**. Wait for your project to be created.
+    Select **Create**. Wait for your project to be created. It may take a few minutes.
 
 1. When the project is created, you will be taken to an *Overview* page of the project details.
  
@@ -43,7 +43,7 @@ Let's try out *speech to text* in Azure AI Foundry's Speech Playground.
 
 1. On the *Speech* page, scroll down and select **Real-time transcription**.
 
-1.  Download **speech.zip** by opening the URL `https://aka.ms/mslearn-speech-files` in a new browser tab. Using the URL should automatically download a folder on your computer. 
+1. Download **speech.zip** by opening the URL `https://aka.ms/mslearn-speech-files` in a new browser tab. Using the URL should automatically download a folder on your computer. 
 
 1. Navigate to the *Downloads* folder on your computer, then identify the downloaded folder. Right-click on the downloaded folder. Select *Extract All...*. Then select *Extract* to unzip its contents. The unzipped folder will appear on the screen. Close the unzipped folder. Notice that the unzipped folder is now also in your *Downloads* folder.    
 

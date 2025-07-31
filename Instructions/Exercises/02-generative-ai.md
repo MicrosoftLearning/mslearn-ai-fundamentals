@@ -25,7 +25,7 @@ Generative AI describes a category of capabilities within AI that create content
         * West Europe
         * West US
 
-    Select **Create**. Wait for your project to be created.
+    Select **Create**. Wait for your project to be created. It may take a few minutes.
 
 1. When the project is created, you will be taken to an *Overview* page of the project details.
 
