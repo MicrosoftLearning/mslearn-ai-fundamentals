@@ -41,7 +41,7 @@ In this exercise, you will use Azure AI Speech in Azure AI Foundry portal, Micro
 
 Let's try out *speech to text* in Azure AI Foundry's Speech Playground. 
 
-1. On the *Speech* page, scroll down and select **Real-time transcription** under *Try out Speech capabilities*. You will be taken to the *Speech Playground*. 
+1. On the *Speech* page, scroll down and select **Real-time transcription**.
 
 1.  Download **speech.zip** by opening the URL `https://aka.ms/mslearn-speech-files` in a new browser tab. Using the URL should automatically download a folder on your computer. 
 
