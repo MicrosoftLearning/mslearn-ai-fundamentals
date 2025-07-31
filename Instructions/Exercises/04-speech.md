@@ -45,15 +45,19 @@ Let's try out *speech to text* in Azure AI Foundry's Speech Playground.
 
 1.  Download **speech.zip** by opening the URL `https://aka.ms/mslearn-speech-files` in a new browser tab. Using the URL should automatically download a folder on your computer. 
 
-1. Navigate to the *Downloads* folder on your computer, then identify the downloaded folder. Right-click on the downloaded folder to unzip its contents by selecting *Extract all...*. The unzipped folder will appear on the screen. Close the unzipped folder. Notice that the unzipped folder is now also in your *Downloads* folder.    
+1. Navigate to the *Downloads* folder on your computer, then identify the downloaded folder. Right-click on the downloaded folder to unzip its contents by selecting *Extract All...*. Then select *Extract*. The unzipped folder will appear on the screen. Close the unzipped folder. Notice that the unzipped folder is now also in your *Downloads* folder.    
 
-1. In the Azure AI Foundry Speech portal, under *Upload files*, select **Browse files** and navigate to the folder where you saved the file. Select **WhatAICanDo.m4a** and then **Open**.
+1. In the Azure AI Foundry Speech portal, under *Upload files*, select **Browse files**. Navigate unzipped folder. Select **WhatAICanDo.m4a** and then **Open**.
 
     ![Browse files](media/recognize-synthesize-speech/browse-files-speech.png)
 
 1. The Speech service transcribes and displays the text in real time. If you have audio on your computer, you can listen to the recording as the text is being transcribed.
 
-1. Review the output, which should have successfully recognized and transcribed the audio into text. Click the text below playback to see the translation. *Note*: you may need to minimize windows to see the full text.
+1. Review the output. 
+
+    >*Note*: To see the full output, you may need to minimize the *Configure* pane. To minimize, select the icon to the right of the *Configure* heading.
+
+1. Under *Text*, you can see the audio transcibed into text. 
 
 In this exercise you tried out Azure AI Speech services in Azure AI Foundry's Speech Playground. You then used Real-time transcription to transcribe an audio recording. You were able to see the text transcription being generated as the audio file was played.
 
