@@ -45,7 +45,7 @@ Let's try out *speech to text* in Azure AI Foundry's Speech Playground.
 
 1.  Download **speech.zip** by opening the URL `https://aka.ms/mslearn-speech-files` in a new browser tab. Using the URL should automatically download a folder on your computer. 
 
-1. Navigate to the *Downloads* folder on your computer, then identify the downloaded folder. Right-click on the downloaded folder to unzip its contents by selecting *Extract All...*. Then select *Extract*. The unzipped folder will appear on the screen. Close the unzipped folder. Notice that the unzipped folder is now also in your *Downloads* folder.    
+1. Navigate to the *Downloads* folder on your computer, then identify the downloaded folder. Right-click on the downloaded folder. Select *Extract All...*. Then select *Extract* to unzip its contents. The unzipped folder will appear on the screen. Close the unzipped folder. Notice that the unzipped folder is now also in your *Downloads* folder.    
 
 1. In the Azure AI Foundry Speech portal, under *Upload files*, select **Browse files**. Navigate unzipped folder. Select **WhatAICanDo.m4a** and then **Open**.
 
