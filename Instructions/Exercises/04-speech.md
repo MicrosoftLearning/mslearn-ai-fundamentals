@@ -57,7 +57,7 @@ Let's try out *speech to text* in Azure AI Foundry's Speech Playground.
 
     >*Note*: To see the full output, you may need to minimize the *Configure* pane. To minimize, select the icon to the right of the *Configure* heading.
 
-1. Under *Text*, you can see the audio transcibed into text. 
+1. In the output, under *Text*, you can see the audio transcibed into text. 
 
 In this exercise you tried out Azure AI Speech services in Azure AI Foundry's Speech Playground. You then used Real-time transcription to transcribe an audio recording. You were able to see the text transcription being generated as the audio file was played.
 
