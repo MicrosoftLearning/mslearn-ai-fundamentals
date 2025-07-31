@@ -11,7 +11,7 @@ Generative AI describes a category of capabilities within AI that create content
 
 1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in. 
 
-1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create new**. Then choose the option to create a *new Azure AI Foundry resource*.
+1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create new**. Then choose the option to create an **Azure AI Foundry resource**.
 
 1. In the *Create a project* wizard, enter a valid name for your project.
 
@@ -25,7 +25,7 @@ Generative AI describes a category of capabilities within AI that create content
         * West Europe
         * West US
 
-    Wait for your project and hub to be created.
+    Wait for your project to be created.
 
 1. When the project is created, you will be taken to an *Overview* page of the project details.
 
