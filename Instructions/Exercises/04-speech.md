@@ -27,7 +27,7 @@ In this exercise, you will use Azure AI Speech in Azure AI Foundry portal, Micro
         * West Europe
         * West US
 
-    Wait for your project to be created.
+    Select **Create**. Wait for your project to be created.
 
 1. When the project is created, you will be taken to an *Overview* page of the project details.
  

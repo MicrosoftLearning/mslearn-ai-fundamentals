@@ -13,7 +13,7 @@ Suppose the fictitious retailer *Northwind Traders* has decided to implement a "
 
 1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in. 
 
-1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create**. Then choose the option to create a *new AI hub resource*.
+1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create new**. Then choose the option to create an **AI hub resource**.
 
 1. In the *Create a project* wizard, enter a valid name for your project, and if an existing hub is suggested, select the option to create a *new* one. 
 
@@ -27,7 +27,7 @@ Suppose the fictitious retailer *Northwind Traders* has decided to implement a "
         * West Europe
         * West US
 
-    Wait for your project and hub to be created.
+    Select **Create**. Wait for your project and hub to be created.
 
 1. When the project is created, you will be taken to an *Overview* page of the project details. Select **AI services** on the left-hand menu (you may need to expand the menu by clicking on the top icon to read its contents). 
 
