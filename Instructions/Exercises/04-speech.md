@@ -35,7 +35,7 @@ This exercise takes approximately **15** minutes.
  
 1. On the left-hand menu on the screen, select **Playgrounds**.
 
-    >*Note*: You may need to expand the menu to make your selection.
+    >*Note*: Expand the menu to read its contents by clicking on the top 'expand' icon.
 
 1. In Azure AI Foundry's Playgrounds page, select **Try the Speech playground**. The Speech playground is a user interface that enables you to try out some Azure AI Speech capabilities.
 

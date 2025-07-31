@@ -33,7 +33,7 @@ This exercise takes approximately **20** minutes.
 
 1. On the left-hand menu on the screen, select **Playgrounds**. 
 
-    >*Note*: You may need to expand the menu to make your selection.
+    >*Note*: Expand the menu to read its contents by clicking on the top 'expand' icon.
 
 ## Explore generative AI in Azure AI Foundry's chat playground
 
