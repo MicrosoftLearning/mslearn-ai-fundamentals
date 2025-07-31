@@ -55,7 +55,7 @@ Let's use the image captioning functionality of Azure AI Vision to analyze image
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/analyze-images-vision/store-camera-1.jpg)
 
-1. Upload the **store-camera-1.jpg** image by dragging it to the **Drag and drop files here** box, or by browsing to it on your file system.
+1. Upload the **store-camera-1.jpg** image by selecting *Browse for a file*. You can find image in your file system's *Downloads* folder.
 
 1. Observe the generated caption text, visible in the **Detected attributes** panel to the right of the image.
 
