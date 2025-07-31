@@ -29,7 +29,9 @@ Generative AI describes a category of capabilities within AI that create content
 
 1. When the project is created, you will be taken to an *Overview* page of the project details.
 
-1. On the left-hand menu on the screen, select **Playgrounds**.
+1. On the left-hand menu on the screen, select **Playgrounds**. 
+
+    >*Note*: You may need to expand the menu to make your selection.
 
 ## Explore generative AI in Azure AI Foundry's chat playground
 
