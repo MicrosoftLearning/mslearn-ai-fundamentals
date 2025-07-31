@@ -37,7 +37,7 @@ In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Mic
 
     >*Note*: You may need to expand the menu to make your selection.
 
-1. On the *Playgrounds* page, select the **Language playground** tile to try out some Azure AI Language capabilities.
+1. In Azure AI Foundry's Playgrounds page, select **Try the Language playground**. The Language playground is a user interface that enables you to try out some Azure AI Language capabilities.  
 
 ## Extract named entities with Azure AI Language in Azure AI Foundry portal
 
