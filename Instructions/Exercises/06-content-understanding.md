@@ -36,7 +36,7 @@ This exercise takes approximately **25** minutes.
         * Sweden Central
         * Australia East
 
-1. Select **Create** and review your configuration. Wait for the set up process to complete.
+1. Select **Create**. Wait for the set up process to complete. It may take a few minutes.
 
     >**Note**: If you receive a permissions error, select the **Fix it** button to add the appropriate permissions to continue.
 
@@ -58,7 +58,7 @@ Suppose you want to extract data from many invoices and put the data into a data
 
 1. On the *Define Schema* page, you can add test files. Download [contoso-invoice-1.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-1.pdf) from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-1.pdf`. 
 
-1. Upload the file to the *define schema* page. Select the *Invoice data extraction* template. The invoice data extraction template has pre-selected data fields that the analyzer will try to detect. 
+1. Upload the file to the **define schema** page. Select the **Invoice data extraction** template. The invoice data extraction template has pre-selected data fields that the analyzer will try to detect. 
 
     ![Screenshot of the define schema page in the content understanding tool.](./media/content-understanding/define-schema.png)
 
@@ -70,7 +70,7 @@ Suppose you want to extract data from many invoices and put the data into a data
 
 #### Test the analyzer 
 
-1. When the analysis is finished, you will be able to see how the analyzer has done in the *Test Analyzer* page. Review the *Fields* tab. Does this data align with what you see on the invoice? 
+1. When the analysis is finished, you will be able to see how the analyzer has done in the *Test Analyzer* page. Review the *Fields* tab (*Note*: you may need to expand the window to see the full results). Does this data align with what you see on the invoice? 
     ![Screenshot of the test analzyer page with the field results tab highlighted.](./media/content-understanding/test-analyzer-fields.png)
 
 1. Notice the *confidence score* next to each field. The confidence score represents how confident the model is that its result is accurate. Results with confidence scores closer to 100% indicate greater confidence in the prediction.
