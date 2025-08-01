@@ -74,7 +74,8 @@ Suppose you want to extract data from many invoices and put the data into a data
     ![Screenshot of the test analzyer page with the field results tab highlighted.](./media/content-understanding/test-analyzer-fields.png)
 
 1. Notice the *confidence score* next to each field. The confidence score represents how confident the model is that its result is accurate. Results with confidence scores closer to 100% indicate greater confidence in the prediction.
-1. Review the *Results* tab. The same information that you see rendered in the fields tab is in the results tab in JSON. The JSON shows how the information looks when it is sent to and from a client application. 
+
+1. Review the *Result* tab. The same information that you see rendered in the fields tab is in the results tab in JSON. The JSON shows how the information looks when it is sent to and from a client application. 
 
     ![Screenshot of the test analzyer page with the result tab highlighted.](./media/content-understanding/test-analyzer-result.png)
 
