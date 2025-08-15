@@ -17,15 +17,17 @@ This exercise takes approximately **25** minutes.
 
     ![Screenshot of Azure AI Foundry home page with create an agent selected.](./media/azure-ai-foundry-home-page.png)
 
-1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources`.
+1. In a new browser window, open the [Azure AI services exploration page](https://ai.azure.com/explore/aiservices).
 
-1. On the resource management page, select **Create new**. 
+1. On the *AI Services* page, select the *Try Content Understanding* tile.
 
-1. Choose the option to create an **AI hub resource**.
+1. Select **Select or create a project to start**. 
+
+1. Select **+ Create a project**.
 
 1. In the wizard, enter a valid name for your project. 
 
-1. Expand *Advanced options* to specify the following settings for your project:
+1. Select **Advanced options** and specify the following settings:
     - **Azure AI Foundry resource**: *Keep the default name*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
@@ -34,13 +36,7 @@ This exercise takes approximately **25** minutes.
         * Sweden Central
         * Australia East
 
-    Select **Create**. Wait for your project and hub to be created. It may take a few minutes.
-
-1. When the project is created, you will be taken to an *Overview* page of the project details. Select **AI services** on the left-hand menu. 
-
-    >*Note*: Expand the menu to read its contents by clicking on the top 'expand' icon. 
-
-1. On the *AI Services* page, select the *Try Content Understanding* tile.
+1. Select **Create**. Wait for the set up process to complete. It may take a few minutes.
 
 1. On the Content Understanding page, select the **Custom Task** tab. 
 
