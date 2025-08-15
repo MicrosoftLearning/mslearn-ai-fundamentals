@@ -17,9 +17,13 @@ This exercise takes approximately **25** minutes.
 
     ![Screenshot of Azure AI Foundry home page with create an agent selected.](./media/azure-ai-foundry-home-page.png)
 
-1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create new**. Then choose the option to create an **AI hub resource**.
+1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources`.
 
-1. In the Create a new project wizard, enter a valid name for your project, and if an existing hub is suggested, select the option to create a new one.
+1. On the resource management page, select **Create new**. 
+
+1. Choose the option to create an **AI hub resource**.
+
+1. In the wizard, enter a valid name for your project. 
 
 1. Expand *Advanced options* to specify the following settings for your project:
     - **Azure AI Foundry resource**: *Keep the default name*
