@@ -17,17 +17,11 @@ This exercise takes approximately **25** minutes.
 
     ![Screenshot of Azure AI Foundry home page with create an agent selected.](./media/azure-ai-foundry-home-page.png)
 
-1. In a new browser window, open the [Azure AI services exploration page](https://ai.azure.com/explore/aiservices).
+1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create new**. Then choose the option to create an **AI hub resource**.
 
-1. On the *AI Services* page, select the *Try Content Understanding* tile.
+1. In the Create a new project wizard, enter a valid name for your project, and if an existing hub is suggested, select the option to create a new one.
 
-1. Select **Select or create a project to start**. 
-
-1. Select **+ Create a project**.
-
-1. In the wizard, enter a valid name for your project. 
-
-1. Select **Advanced options** and specify the following settings:
+1. Expand *Advanced options* to specify the following settings for your project:
     - **Azure AI Foundry resource**: *Keep the default name*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
@@ -36,11 +30,21 @@ This exercise takes approximately **25** minutes.
         * Sweden Central
         * Australia East
 
-1. Select **Create**. Wait for the set up process to complete. It may take a few minutes.
+    Select **Create**. Wait for your project and hub to be created. It may take a few minutes.
 
-    >**Note**: If you receive a permissions error, select the **Fix it** button to add the appropriate permissions to continue.
+1. When the project is created, you will be taken to an *Overview* page of the project details. Select **AI services** on the left-hand menu. 
 
-1. When your project is created, you will be brought by default to the content understanding task creation window. Use the following settings to create a content understanding task:
+    >*Note*: Expand the menu to read its contents by clicking on the top 'expand' icon. 
+
+1. On the *AI Services* page, select the *Try Content Understanding* tile.
+
+1. On the Content Understanding page, select the **Custom Task** tab. 
+
+    ![Screenshot of the Content Understanding Portal with a red box around the custom task tab.](./media/content-understanding/custom-task.png)
+
+1. In the custom task tab, select **+ Create**.
+
+1. In the wizard, use the following settings to create a content understanding task:
     - **Task name**: `contoso-invoice`
     - **Description**: `An invoice analysis task`
     - *Select Single-file content analysis*
