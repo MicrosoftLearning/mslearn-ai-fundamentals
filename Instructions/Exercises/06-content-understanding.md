@@ -21,7 +21,7 @@ This exercise takes approximately **25** minutes.
 
 1. On the *AI Services* page, select the *Try Content Understanding* tile.
 
-1. Select **Select or create a project to start**. 
+1. Select **Create a project to start**. 
 
 1. Select **+ Create a project**.
 
