@@ -62,11 +62,11 @@ Suppose you want to extract data from many invoices and put the data into a data
 
     >**Note**: To download the file, open a new web browser window and enter in the link. Selecting enter should automatically download the file to the computer's *Downloads* folder.  
 
-1. On Azure AI Foundry's Content Understanding's *Define Schema* page, you can add test files. Upload the *contoso-invoice-1.pdf* file to the **define schema** page. Select the **Invoice data extraction** template. The invoice data extraction template has pre-selected data fields that the analyzer will try to detect. 
+1. On Azure AI Foundry's Content Understanding's *Define Schema* page, you can add test files. Upload the *contoso-invoice-1.pdf* file to the **define schema** page.
 
     ![Screenshot of the define schema page in the content understanding tool.](./media/content-understanding/define-schema.png)
 
-1. Select **Create**.
+1. Select the **Invoice data extraction** template. The invoice data extraction template has pre-selected data fields that the analyzer will try to detect. Then select **Create**.
  
 1. Now you have the ability to modify the schema by adding or deleting fields. When you are done reviewing the fields, select **Save**.
 
