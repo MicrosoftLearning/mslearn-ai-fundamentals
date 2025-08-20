@@ -99,11 +99,11 @@ Now that you have trained a model to extract fields from your sample invoice, yo
 
 1. Select **Build**. Wait for the new analyzer to be ready (use the Refresh button to check). Your analyzer uses a predictive model that is based on the schema you have defined and tested in previous steps. 
 
-1. Once your new analyzer is ready, select its invoice-analyzer link. 
+1. Once your new analyzer is ready, select its name: invoice-analyzer. 
 
 1. In the invoice-analyzer page, select *Test*.
 
-1. Download a different invoice from Contoso [contoso-invoice-2.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-2.pdf) from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-2.pdf`.
+1. In a separate tab, download a different invoice from Contoso [contoso-invoice-2.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-2.pdf) from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-2.pdf`.
 
 1. On Azure AI Foundry Content Understanding's *Analyzer list* page, use the **+ Upload test files** button to upload *contoso-receipt-2.pdf*. 
 
