@@ -47,7 +47,7 @@ This exercise takes approximately **25** minutes.
 1. In the wizard, use the following settings to create a content understanding task:
     - **Task name**: `contoso-invoice`
     - **Description**: `An invoice analysis task`
-    - **Select Standard mode - Single-file analysis**
+    - Select **Standard mode - Single-file analysis**
     - **Advanced settings**: *keep the default*.
 
 1. Select **Create**, then wait for your task to be created. You should be taken to your **contoso-invoice** task when it is created.
