@@ -47,7 +47,7 @@ This exercise takes approximately **25** minutes.
 1. In the wizard, use the following settings to create a content understanding task:
     - **Task name**: `contoso-invoice`
     - **Description**: `An invoice analysis task`
-    - *Select Single-file content analysis*
+    - **Select Standard mode - Single-file analysis**
     - **Advanced settings**: *keep the default*.
 
 1. Select **Create**, then wait for your task to be created. You should be taken to your **contoso-invoice** task when it is created.
@@ -62,11 +62,13 @@ Suppose you want to extract data from many invoices and put the data into a data
 
     >**Note**: To download the file, open a new web browser window and enter in the link. Selecting enter should automatically download the file to the computer's *Downloads* folder.  
 
-1. On the *Define Schema* page, you can add test files. Upload the *contoso-invoice-1.pdf* file to the **define schema** page. Select the **Invoice data extraction** template. The invoice data extraction template has pre-selected data fields that the analyzer will try to detect. 
+1. On Azure AI Foundry's Content Understanding's *Define Schema* page, you can add test files. Upload the *contoso-invoice-1.pdf* file to the **define schema** page. Select the **Invoice data extraction** template. The invoice data extraction template has pre-selected data fields that the analyzer will try to detect. 
 
     ![Screenshot of the define schema page in the content understanding tool.](./media/content-understanding/define-schema.png)
 
-1. Select **Create**. Now you have the ability to modify the schema by adding or deleting fields. When you are done reviewing the fields, select **Save**.
+1. Select **Create**.
+ 
+1. Now you have the ability to modify the schema by adding or deleting fields. When you are done reviewing the fields, select **Save**.
 
     ![Sceenshot of the define schema page after selecing create.](./media/content-understanding/define-schema-2.png)
 
@@ -96,9 +98,15 @@ Now that you have trained a model to extract fields from your sample invoice, yo
     ![Screenshot of the build analzyer page.](./media/content-understanding/build-analyzer.png)
 
 1. Select **Build**. Wait for the new analyzer to be ready (use the Refresh button to check). Your analyzer uses a predictive model that is based on the schema you have defined and tested in previous steps. 
-1. Now let's try testing the analyzer you built. Download a different invoice from Contoso [contoso-invoice-2.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-2.pdf) from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-2.pdf`.
-1. Return to the *Analyzer list* page and select the invoice-analyzer link. The fields defined in the analyzer’s schema will be displayed.
+
+1. Once your new analyzer is ready, select its invoice-analyzer link. 
+
+1. Download a different invoice from Contoso [contoso-invoice-2.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-2.pdf) from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-2.pdf`.
+
+1. Return to the *Analyzer list* page.
+
 1. In the invoice-analyzer page, select *Test*.
+
 1. Use the **+ Upload test files** button to upload *contoso-receipt-2.pdf*. Select **Run analysis** to extract field data from the test form. Review the results of the test.
 
     ![Screenshot of the results of the test for the analyzer you have built.](./media/content-understanding/build-analyzer-2.png)
