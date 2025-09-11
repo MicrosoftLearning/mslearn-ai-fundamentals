@@ -185,7 +185,14 @@ Now you can test your deployed service.
 
     The test pane took the input data and used the model you trained to return the predicted number of rentals.
 
-Let's review what you have done. You used a dataset of historical bicycle rental data to train a model. The model predicts the number of bicycle rentals expected on a given day, based on seasonal and meteorological *features*.
+## View code to consume the service
+
+Now that you have a predictive service endpoint, developers can build applications that consume it.
+
+1. On the real-time endpoint page view the **Consume** tab.
+1. Review the sample code to consume your endpoint, which is provided for multiple programming languages.
+
+Let's review what you have done. You used a dataset of historical bicycle rental data to train a model. The model predicts the number of bicycle rentals expected on a given day, based on seasonal and meteorological *features*. Finally, you tested the model and reviewed code that a developer can use to build an application to consume it.
 
 ## Clean-up
 
