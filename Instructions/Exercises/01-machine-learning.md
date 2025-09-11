@@ -31,7 +31,7 @@ To use Azure Machine Learning, you need to provision an Azure Machine Learning w
 
 #### Launch studio 
 
-1. In your Azure Machine Learning workspace resource, select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account). Close any messages that are displayed.
+1. In your Azure Machine Learning workspace resource, select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com), and sign into Azure Machine Learning studio using your Microsoft account). Close any messages that are displayed.
 
 1. In Azure Machine Learning studio, you should see your newly created workspace. If not, select **All workspaces** in the left-hand menu and then select the workspace you just created.
 
@@ -49,26 +49,27 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
     - **Job name**: Job name field should already be prepopulated with a unique name. Keep it as is.
     - **New experiment name**: `mslearn-bike-rental`
-    - **Description**: Automated machine learning for bike rental prediction
+    - **Description**: `Automated machine learning for bike rental prediction`
     - **Tags**: *none*
 
    **Task type & data**:
 
     - **Select task type**: Regression
-    - **Select dataset**: Create a new dataset with the following settings:
-        - **Data type**:
-            - **Name**: `bike-rentals`
-            - **Description**: `Historic bike rental data`
-            - **Type**: Table (mltable)
-        - **Data source**:
-            - Select **From local files**
-        - **Destination storage type**:
-            - **Datastore type**: Azure Blob Storage
-            - **Name**: workspaceblobstore
-        - **MLtable selection**:
-            - **Upload folder**: *Download and unzip the folder that contains the two files you need to upload* `https://aka.ms/bike-rentals`
-
-        Select **Create**. After the dataset is created, select the **bike-rentals** dataset to continue to submit the Automated ML job.
+    - **Select data**:
+        - Create a new data asset with the following settings:
+            - **Data type**:
+                - **Name**: `bike-rentals`
+                - **Description**: `Historic bike rental data`
+                - **Type**: Table (mltable)
+            - **Data source**:
+                - Select **From local files**
+            - **Destination storage type**:
+                - **Datastore type**: Azure Blob Storage
+                - **Name**: workspaceblobstore
+            - **MLtable selection**:
+                - *Download and unzip the [bike-data folder](https://aka.ms/bike-rentals) from `https://aka.ms/bike-rentals`.*
+                - **Upload folder**: *Upload the extracted **bike-data** folder, which contains the data and table definition files you need for your training dataset.*
+        - Select the newly created **bike-rentals** data asset and continue defining the Automated ML job on the next page (**Task settings**).
 
     **Task settings**:
 
@@ -77,8 +78,8 @@ Automated machine learning enables you to try multiple algorithms and parameters
     - **Target column**: rentals (integer)
     - **Additional configuration settings**:
         - **Primary metric**: NormalizedRootMeanSquaredError
-        - **Explain best model**: *Unselected*
-        - **Enable ensemble stacking**: *Unselected*
+        - **Explain best model**: *<u>Un</u>selected*
+        - **Enable ensemble stacking**: *<u>Un</u>selected*
         - **Use all supported models**: <u>Un</u>selected. *You'll restrict the job to try only a few specific algorithms.*
         - **Allowed models**: *Select only **RandomForest** and **LightGBM** — normally you'd want to try as many as possible, but each model added increases the time it takes to run the job.*
     - **Limits**: *Expand this section*
@@ -135,16 +136,16 @@ When the automated machine learning job has completed, you can review the best m
     > **Note**
     > If you receive a message that there is not enough quota to select the virtual machine *Standard_DS3_v2*, please select a different one.
 
-1. Wait for the deployment to start - this may take a few seconds. The **Deploy status** for the **predict-rentals** endpoint will be indicated in the main part of the page as *Running*.
+1. Wait for the deployment to start - this may take a few seconds. The **Deploy status** for the endpoint will be indicated in the main part of the page as *Running*.
 1. Wait for the **Deploy status** to change to *Succeeded*. This may take 5-10 minutes.
 
 ## Test the deployed service
 
 Now you can test your deployed service.
 
-1. In Azure Machine Learning studio, on the left hand menu, select **Endpoints** and open the **predict-rentals** real-time endpoint.
+1. In Azure Machine Learning studio, on the left hand menu, select **Endpoints** and open the real-time endpoint you created.
 
-1. On the **predict-rentals** real-time endpoint page view the **Test** tab.
+1. On the real-time endpoint page view the **Test** tab.
 
 1. In the **Input data to test endpoint** pane, replace the template JSON with the following input data:
 
@@ -190,11 +191,11 @@ Let's review what you have done. You used a dataset of historical bicycle rental
 
 The web service you created is hosted in an *Azure Container Instance*. If you don't intend to experiment with it further, you should delete the endpoint to avoid accruing unnecessary Azure usage.
 
-1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), on the **Endpoints** tab, select the **predict-rentals** endpoint. Then select **Delete** and confirm that you want to delete the endpoint.
+1. In [Azure Machine Learning studio](https://ml.azure.com), on the **Endpoints** tab, select the endpoint you deployed. Then select **Delete** and confirm that you want to delete the endpoint.
 
     Deleting your compute ensures your subscription won't be charged for compute resources. You will however be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription. If you have finished exploring Azure Machine Learning, you can delete the Azure Machine Learning workspace and associated resources.
 
 To delete your workspace:
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), in the **Resource groups** page, open the resource group you specified when creating your Azure Machine Learning workspace.
+1. In the [Azure portal](https://portal.azure.com), in the **Resource groups** page, open the resource group you specified when creating your Azure Machine Learning workspace.
 2. Click **Delete resource group**, type the resource group name to confirm you want to delete it, and select **Delete**.
