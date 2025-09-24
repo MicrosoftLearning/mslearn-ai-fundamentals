@@ -87,7 +87,9 @@ Azure AI Language offers a wide range of text analysis capabilities.
 
 ### Summarize text with Azure AI Language in Azure AI Foundry portal
  
-1. Let's look at Azure AI Language's summarization capabilities. In the Language playground, select **Summarize information**, then select the **Summarize text** tile.
+Let's look at Azure AI Language's summarization capabilities.
+
+1. In the Language playground, select **Summarize information**, then select the **Summarize text** tile.
 
 1. Under *Sample*, enter the following review:
     
@@ -105,6 +107,8 @@ Azure AI Language offers a wide range of text analysis capabilities.
     Notice the *Extractive summary* in *Details* provides rank scores for the most salient sentences.
 
 ### Analyze sentiment in text
+
+Sentiment analysis is a common task when analyzing text like hotel reviews.
 
 1. In the Language playground, select **Classify text**. Then select the **Analyze sentiment** tile.
 
@@ -129,6 +133,8 @@ Azure AI Language enables you to detect the language in which text is written. A
 
 ### Detect language
 
+Let's start by detecting the language a review is written in.
+
 1. In the **Classify Text** pane, select the **Detect language** tile.
 
 1. Under *Sample*, enter the following review:
@@ -144,9 +150,11 @@ Azure AI Language enables you to detect the language in which text is written. A
 
     ![Screenshot of the Detect language interface in the Language playground.](./media/detect-language.png)
 
-    Notice that the language is detected as French. Now let's translate that to English.
+    Notice that the language is detected as French. 
 
 ### Translate text
+
+Now let's translate the French review to English.
 
 1. At the top of the page, use the **&larr;** (back) link next to eht **Language playground** page title to view all available playgrounds.
 1. In the list of playgrounds, open the **Translator playground**.
