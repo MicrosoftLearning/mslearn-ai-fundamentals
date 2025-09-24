@@ -64,6 +64,10 @@ This exercise takes approximately **25** minutes.
 
     Note that the Content Understanding analyzer is able to extract information from this invoice, even though it is formatted diffferently from the sample.
 
+1. In the pane pn the right where the extracted fields are displayed, view the **Result** tab to see the JSON response that would be sent to a client application. A developer would write code to process this response and do something with the extracted fields.
+
+    ![Screenshot of the results of analysing the Contoso invoice.](./media/invoice-analysis-json.png)
+
 ## Clean up
 
 If you’ve finished working with the Content Understanding service, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs.
