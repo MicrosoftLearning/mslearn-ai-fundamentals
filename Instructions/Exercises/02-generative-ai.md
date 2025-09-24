@@ -107,7 +107,14 @@ This exercise takes approximately **20** minutes.
 
 1. Review the response, which should provide a numbered list of sights to see in Paris.
 
-1. When you are done, you can close the browser window.
+## View client code
+
+1. At the top of the Chat playground page, select **View code**.
+1. Review the code samples, which are provided for multiple programming languages, SDKs, and authentication options.
+
+    These code samples can help developers get started quickly when building client applications that chat with your deployed model.
+
+1. Close the sample code window.
 
 ## Clean up
 
