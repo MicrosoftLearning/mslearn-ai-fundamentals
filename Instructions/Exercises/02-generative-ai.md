@@ -121,5 +121,4 @@ This exercise takes approximately **20** minutes.
 If you don’t intend to do more exercises, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
 
 1. Open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com) and select the resource group that contains the resources you created.
-
-1. Select the resources and select **Delete** and then **Yes** to confirm. The resources are then deleted.
+1. Select **Delete resource group** and then **enter the resource group name** to confirm. The resource group is then deleted.
