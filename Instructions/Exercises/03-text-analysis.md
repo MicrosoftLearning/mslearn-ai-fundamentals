@@ -39,7 +39,11 @@ This exercise takes approximately **20** minutes.
 
     The Language playground is a user interface that enables you to try out some Azure AI Language capabilities.  
 
-## Extract named entities with Azure AI Language in Azure AI Foundry portal
+## Use Azure AI Language to analyze text
+
+Azure AI Language offers a wide range of text analysis capabilities.
+
+### Extract named entities with Azure AI Language in Azure AI Foundry portal
 
 *Named entities* are words that describe people, places, and objects with proper names. Let's use the named entity extraction capability of Azure AI Language to identify types of information in a review.
 
@@ -60,7 +64,7 @@ This exercise takes approximately **20** minutes.
 
     Notice in the *Details* section how the extracted entities come with additional information such as type and confidence scores. The confidence score represents the likelihood that the type identified actually belongs to that category.
 
-## Extract key phrases with Azure AI Language in Azure AI Foundry portal
+### Extract key phrases with Azure AI Language in Azure AI Foundry portal
 
 *Key phrases* are the most important pieces of information in text. Let's use the key phrase extraction capability of Azure AI Language to pull important information from a review.
 
@@ -81,7 +85,7 @@ This exercise takes approximately **20** minutes.
 
     Notice the different phrases extracted in the *Details* section. These phrases should contribute most to the text's meaning.
 
-## Summarize text with Azure AI Language in Azure AI Foundry portal
+### Summarize text with Azure AI Language in Azure AI Foundry portal
  
 1. Let's look at Azure AI Language's summarization capabilities. In the Language playground, select **Summarize information**, then select the **Summarize text** tile.
 
@@ -100,7 +104,7 @@ This exercise takes approximately **20** minutes.
 
     Notice the *Extractive summary* in *Details* provides rank scores for the most salient sentences.
 
-## Analyze sentiment in text
+### Analyze sentiment in text
 
 1. In the Language playground, select **Classify text**. Then select the **Analyze sentiment** tile.
 
@@ -121,6 +125,10 @@ This exercise takes approximately **20** minutes.
 
 ## Detect language and translate text
 
+Azure AI Language enables you to detect the language in which text is written. Additionally, Azure AI Translator enables you to easily translate text from one language to another.
+
+### Detect language
+
 1. In the **Classify Text** pane, select the **Detect language** tile.
 
 1. Under *Sample*, enter the following review:
@@ -137,6 +145,8 @@ This exercise takes approximately **20** minutes.
     ![Screenshot of the Detect language interface in the Language playground.](./media/detect-language.png)
 
     Notice that the language is detected as French. Now let's translate that to English.
+
+### Translate text
 
 1. At the top of the page, use the **&larr;** (back) link next to eht **Language playground** page title to view all available playgrounds.
 1. In the list of playgrounds, open the **Translator playground**.
