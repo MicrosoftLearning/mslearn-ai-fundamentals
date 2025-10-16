@@ -54,7 +54,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
 
    **Task type & data**:
     
-    >**NOTE**: Some subscriptions have permissions that do not allow the *bike-data* to be added to *workspaceblobstore*. If you encounter this issue, currently you need to either switch to a personal subscription, or adjust your subscription's permissions. 
+    >**NOTE**: Some subscriptions have permissions that do not allow the *bike-data* to be added to *workspaceblobstore*. If you encounter this issue, you need to switch to a another subscription.
 
     - **Select task type**: Regression
     - **Select data**:
