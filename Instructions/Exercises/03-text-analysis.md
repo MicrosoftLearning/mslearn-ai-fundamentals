@@ -156,7 +156,7 @@ Let's start by detecting the language a review is written in.
 
 Now let's translate the French review to English.
 
-1. At the top of the page, use the **&larr;** (back) link next to eht **Language playground** page title to view all available playgrounds.
+1. At the top of the page, use the **&larr;** (back) link next to the **Language playground** page title to view all available playgrounds.
 1. In the list of playgrounds, open the **Translator playground**.
 1. In the Translator playground, select **Text translation**.
 1. In the **Configure** pane, select the following language options:
