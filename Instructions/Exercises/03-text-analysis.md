@@ -123,7 +123,7 @@ Sentiment analysis is a common task when analyzing text like hotel reviews.
 
 1. Select **Run**. Review the output.
 
-    ![Screenshot of the Seniment analysis interface in the Language playground.](./media/sentiment-analysis.png)
+    ![Screenshot of the sentiment analysis interface in the Language playground.](./media/sentiment-analysis.png)
 
     Notice that the analysis produces an overall sentiment score and individual scores for each sentence.
 
@@ -173,7 +173,7 @@ Now let's translate the French review to English.
 
 1. Select **Translate**. Review the output.
 
-    ![Screenshot of the Text trabslation interface in the Translator playground.](./media/text-translation.png)
+    ![Screenshot of the Text translation interface in the Translator playground.](./media/text-translation.png)
 
     Notice that the French review is translated to English.
 
