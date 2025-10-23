@@ -53,6 +53,8 @@ Automated machine learning enables you to try multiple algorithms and parameters
     - **Tags**: *none*
 
    **Task type & data**:
+    
+    >**NOTE**: Some subscriptions have permissions that do not allow the *bike-data* to be added to *workspaceblobstore*. If you encounter this issue, you need to switch to a another subscription.
 
     - **Select task type**: Regression
     - **Select data**:
@@ -69,6 +71,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
             - **MLtable selection**:
                 - *Download and unzip the [bike-data folder](https://aka.ms/bike-rentals) from `https://aka.ms/bike-rentals`.*
                 - **Upload folder**: *Upload the extracted **bike-data** folder, which contains the data and table definition files you need for your training dataset.*
+                - **Note**: *if you encounter a message to skip data validation in order to proceed, select the option to skip data validation.*
         - Select the newly created **bike-rentals** data asset and continue defining the Automated ML job on the next page (**Task settings**).
 
     **Task settings**:
