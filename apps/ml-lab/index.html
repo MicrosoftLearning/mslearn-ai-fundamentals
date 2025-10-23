@@ -1,0 +1,2508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Lab - AutoML Interface</title>
+    <meta name="description" content="Automated Machine Learning interface for training and deploying ML models">
+    <link rel="stylesheet" href="styles.css?v=12">
+    
+    <!-- PyScript CSS and JS (2024.1.1) -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    
+    <!-- Hide PyScript warnings and output -->
+    <style>
+        /* Hide PyScript terminal and output elements */
+        py-terminal,
+        py-output,
+        .py-terminal,
+        .py-output,
+        .pyscript-terminal,
+        .pyscript-output,
+        .py-console,
+        .pyscript-console,
+        [data-testid="py-terminal"],
+        [data-testid="py-output"],
+        py-script + .py-terminal,
+        py-script + .py-output,
+        /* Hide any PyScript warning elements */
+        .py-warning,
+        .pyscript-warning,
+        .py-error,
+        .pyscript-error,
+        /* Hide stderr output from PyScript */
+        .py-stderr,
+        .pyscript-stderr,
+        /* Hide PyScript loading messages */
+        .py-loading,
+        .pyscript-loading {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            width: 0 !important;
+            overflow: hidden !important;
+        }
+    </style>
+    
+    <!-- PyScript Configuration -->
+    <py-config>
+        packages = ["pandas", "numpy", "scikit-learn"]
+    </py-config>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header-left">
+            <div class="header-title">
+                <h1>Machine Learning Lab</h1>
+            </div>
+        </div>
+        <div class="header-right">
+            <div id="global-pyscript-status" class="status-loading" role="status" aria-live="polite" aria-label="PyScript loading status">
+                <div class="loading-spinner" aria-hidden="true"></div>
+                <span>Loading PyScript ML libraries...</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" role="main">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar" role="navigation" aria-label="Main navigation">
+            <div class="sidebar-header">
+                <button class="hamburger-menu" onclick="toggleSidebar()" data-tooltip="Toggle navigation menu" aria-label="Toggle navigation menu" aria-expanded="true" aria-controls="sidebar">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+            <nav class="nav-menu" role="navigation" aria-label="Application sections">
+                <div class="nav-section">
+                    <div class="nav-item active" onclick="showMyAccountPage()" data-tooltip="ML App" role="button" tabindex="0" aria-label="Go to ML App page" onkeydown="handleKeyPress(event, showMyAccountPage)">
+                        <span class="nav-icon" aria-hidden="true">&#128470;</span>
+                        <span class="nav-text">ML App</span>
+                    </div>
+                </div>
+                
+                <div class="nav-section" id="home-nav-section" style="display: none;">
+                    <div class="nav-item" onclick="showHomePage()" data-tooltip="Home" role="button" tabindex="0" aria-label="Go to Home page" onkeydown="handleKeyPress(event, showHomePage)">
+                        <span class="nav-icon" aria-hidden="true">⌂</span>
+                        <span class="nav-text">Home</span>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <h3>Authoring</h3>
+                    <div class="nav-item" onclick="showAutoMLPage()" data-tooltip="Automated ML" role="button" tabindex="0" aria-label="Go to Automated ML page" onkeydown="handleKeyPress(event, showAutoMLPage)">
+                        <span class="nav-icon" aria-hidden="true">⚙</span>
+                        <span class="nav-text">Automated ML</span>
+                    </div>
+                </div>
+
+                <div class="nav-section">
+                <div class="nav-section">
+                    <h3>Assets</h3>
+                    <div class="nav-item" onclick="showDataPage()" data-tooltip="Data" role="button" tabindex="0" aria-label="Go to Data page to manage datasets" onkeydown="handleKeyPress(event, showDataPage)">
+                        <span class="nav-icon" aria-hidden="true">▤</span>
+                        <span class="nav-text">Data</span>
+                    </div>
+                    <div class="nav-item" onclick="showJobsPage()" data-tooltip="Jobs" role="button" tabindex="0" aria-label="Go to Jobs page to view training jobs" onkeydown="handleKeyPress(event, showJobsPage)">
+                        <span class="nav-icon" aria-hidden="true">&#128710;</span>
+                        <span class="nav-text">Jobs</span>
+                    </div>
+                    <div class="nav-item" onclick="showModelsPage()" data-tooltip="Models" role="button" tabindex="0" aria-label="Go to Models page to view trained models" onkeydown="handleKeyPress(event, showModelsPage)">
+                        <span class="nav-icon" aria-hidden="true">◻</span>
+                        <span class="nav-text">Models</span>
+                    </div>
+                    <div class="nav-item" onclick="showEndpointsPage()" data-tooltip="Endpoints" role="button" tabindex="0" aria-label="Go to Endpoints page to manage model deployments" onkeydown="handleKeyPress(event, showEndpointsPage)">
+                        <span class="nav-icon" aria-hidden="true">&#9928;</span>
+                        <span class="nav-text">Endpoints</span>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Content Area -->
+        <div class="content-area" role="main">
+            <!-- ML App Page -->
+            <div id="my-account-page" class="page-content" style="display: block;" role="region" aria-labelledby="welcome-heading">
+                <div class="ml-app-content">
+                    <div class="ml-app-header">
+                        <h1 id="welcome-heading" class="welcome-heading">Welcome</h1>
+                    </div>
+                    <div class="workspaces-section">
+                        <div class="workspaces-header">
+                            <h2 class="workspaces-subtitle">Workspaces</h2>
+                            <button class="create-workspace-btn" onclick="createWorkspace()" aria-label="Create new workspace">Create workspace</button>
+                        </div>
+                        <div id="workspaces-list" class="workspaces-list" role="list" aria-label="Available workspaces">
+                            <!-- Workspace buttons will be dynamically added here -->
+                        </div>
+                    </div>
+                    <div class="home-gallery" role="list" aria-label="Learning resources">
+                        <div class="learning-card" onclick="window.open('https://azure.microsoft.com/resources/cloud-computing-dictionary/what-is-machine-learning-platform/', '_blank')" role="listitem" tabindex="0" aria-label="Learn what is machine learning - opens in new tab" onkeydown="handleKeyPress(event, () => window.open('https://azure.microsoft.com/resources/cloud-computing-dictionary/what-is-machine-learning-platform/', '_blank'))">
+                            <div class="learning-icon">
+                                <div class="icon-circle" aria-hidden="true">
+                                    &#128442;
+                                </div>
+                            </div>
+                            <div class="learning-label">What is machine learning?</div>
+                        </div>
+                        <div class="learning-card" onclick="window.open('https://learn.microsoft.com/training/modules/fundamentals-machine-learning/', '_blank')" role="listitem" tabindex="0" aria-label="Introduction to machine learning concepts - opens in new tab" onkeydown="handleKeyPress(event, () => window.open('https://learn.microsoft.com/training/modules/fundamentals-machine-learning/', '_blank'))">
+                            <div class="learning-icon">
+                                <div class="icon-circle" aria-hidden="true">
+                                    &#128442;
+                                </div>
+                            </div>
+                            <div class="learning-label">Introduction to machine learning concepts</div>
+                        </div>
+                        <div class="learning-card" onclick="window.open('https://learn.microsoft.com/training/paths/create-machine-learn-models/', '_blank')" role="listitem" tabindex="0" aria-label="Create machine learning models - opens in new tab" onkeydown="handleKeyPress(event, () => window.open('https://learn.microsoft.com/training/paths/create-machine-learn-models/', '_blank'))">
+                            <div class="learning-icon">
+                                <div class="icon-circle" aria-hidden="true">
+                                    &#128442;
+                                </div>
+                            </div>
+                            <div class="learning-label">Create machine learning models</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Home Page -->
+            <div id="home-page" class="page-content" style="display: none;" role="region" aria-labelledby="workspace-title">
+                <div class="home-content">
+                    <h1 id="workspace-title" class="workspace-title">Workspace</h1>
+                    <div class="home-gallery" role="list" aria-label="Workspace capabilities">
+                        <div class="home-card" role="listitem">
+                            <div class="card-icon data-icon" aria-hidden="true">
+                                <div class="database-symbol">
+                                    <div class="db-disk"></div>
+                                    <div class="db-disk"></div>
+                                    <div class="db-disk"></div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Manage your data</h3>
+                                <p class="card-description">Upload, organize, and explore your datasets</p>
+                            </div>
+                        </div>
+                        <div class="home-card" role="listitem">
+                            <div class="card-icon model-icon" aria-hidden="true">
+                                <div class="training-symbol">
+                                    <div class="training-line"></div>
+                                    <div class="training-points">
+                                        <div class="point"></div>
+                                        <div class="point"></div>
+                                        <div class="point"></div>
+                                        <div class="point"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Train predictive models</h3>
+                                <p class="card-description">Build and train machine learning models</p>
+                            </div>
+                        </div>
+                        <div class="home-card" role="listitem">
+                            <div class="card-icon ai-icon" aria-hidden="true">
+                                <div class="ai-symbol">
+                                    <div class="brain-outline">
+                                        <div class="neural-node"></div>
+                                        <div class="neural-node"></div>
+                                        <div class="neural-node"></div>
+                                        <div class="neural-connection"></div>
+                                        <div class="neural-connection"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Build AI solutions</h3>
+                                <p class="card-description">Deploy and integrate your AI models</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Page -->
+            <div id="data-page" class="page-content" style="display: none;" role="region" aria-labelledby="data-page-heading">
+                <div class="page-header">
+                    <h1 id="data-page-heading">Data</h1>
+                    <p>Manage your uploaded datasets and explore their contents.</p>
+                </div>
+
+                <div class="data-section">
+                    <div id="data-files-list" class="data-files-list" role="list" aria-label="Uploaded datasets">
+                        <div class="empty-state" role="status" aria-live="polite">
+                            <div class="empty-state-content">
+                                <h3>No data files uploaded yet.</h3>
+                                <p>Upload CSV files through the Automated ML job wizard to see them here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dataset Details Page -->
+            <div id="dataset-details-page" class="page-content" style="display: none;" role="region" aria-labelledby="dataset-details-title">
+                <div class="page-header">
+                    <div class="page-header-with-back">
+                        <button class="back-btn" onclick="showDataPage()" data-tooltip="Back to Data" aria-label="Go back to Data page">
+                            ← Back
+                        </button>
+                        <div class="page-header-content">
+                            <h1 id="dataset-details-title">Dataset Details</h1>
+                            <p id="dataset-details-description">Preview of the first 10 rows from your dataset.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dataset-details-section">
+                    <div class="dataset-info-cards" role="list" aria-label="Dataset information">
+                        <div class="info-card" role="listitem">
+                            <div class="info-card-header">Dataset Information</div>
+                            <div class="info-card-content">
+                                <div class="info-item">
+                                    <span class="info-label">Name:</span>
+                                    <span class="info-value" id="dataset-info-name" aria-label="Dataset name">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Rows:</span>
+                                    <span class="info-value" id="dataset-info-rows" aria-label="Number of rows">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Columns:</span>
+                                    <span class="info-value" id="dataset-info-columns" aria-label="Number of columns">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dataset-preview">
+                        <div class="dataset-preview-header">
+                            <h3>Data Preview (First 10 rows)</h3>
+                        </div>
+                        <div class="dataset-preview-content">
+                            <div id="dataset-preview-table" class="dataset-table-container" role="region" aria-label="Dataset preview table">
+                                <!-- Table will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jobs Page -->
+            <div id="jobs-page" class="page-content" style="display: none;" role="region" aria-labelledby="jobs-page-heading">
+                <div class="page-header">
+                    <h1 id="jobs-page-heading">Jobs</h1>
+                    <p>Monitor and manage all your machine learning training jobs.</p>
+                </div>
+
+                <div class="jobs-section">
+                    <div id="jobs-page-list" class="jobs-list" role="list" aria-label="Training jobs">
+                        <div class="empty-state" role="status" aria-live="polite">
+                            <div class="empty-state-content">
+                                <h3>No jobs yet.</h3>
+                                <p>Create jobs from the Automated ML page to see them here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Models Page -->
+            <div id="models-page" class="page-content" style="display: none;" role="region" aria-labelledby="models-page-heading">
+                <div class="page-header">
+                    <h1 id="models-page-heading">Models</h1>
+                    <p>Manage your registered machine learning models and view their details.</p>
+                </div>
+
+                <div class="models-section">
+                    <div id="deployed-models-list" class="models-table-container" role="list" aria-label="Registered models">
+                        <div class="empty-state" role="status" aria-live="polite">
+                            <div class="empty-state-content">
+                                <h3>No models registered yet.</h3>
+                                <p>Register models from training results to see them here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Endpoints Page -->
+            <div id="endpoints-page" class="page-content" style="display: none;" role="region" aria-labelledby="endpoints-page-heading">
+                <div class="page-header">
+                    <h1 id="endpoints-page-heading">Endpoints</h1>
+                    <p>Manage your deployed model endpoints and monitor their status.</p>
+                </div>
+
+                <div class="endpoints-section">
+                    <div id="endpoints-list" class="endpoints-table-container" role="list" aria-label="Deployed endpoints">
+                        <div class="empty-state" role="status" aria-live="polite">
+                            <div class="empty-state-content">
+                                <h3>No endpoints deployed yet.</h3>
+                                <p>Deploy models to create endpoints for real-time inference.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Endpoint Details Page -->
+            <div id="endpoint-details-page" class="page-content" style="display: none;" role="region" aria-labelledby="endpoint-details-title">
+                <!-- Endpoint Details Header -->
+                <div class="endpoint-details-header">
+                    <div class="endpoint-header-info">
+                        <div class="endpoint-title-section">
+                            <h1 id="endpoint-details-title">Endpoint Name</h1>
+                            <div class="endpoint-status" role="status" aria-live="polite" aria-label="Endpoint status">Active</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endpoint Actions Toolbar -->
+                <div class="endpoint-actions-toolbar" role="toolbar" aria-label="Endpoint actions">
+                    <button class="btn btn-secondary" aria-label="Refresh endpoint details">
+                        ↻ Refresh
+                    </button>
+                    <button class="btn btn-secondary" onclick="backToEndpointsList()" aria-label="Go back to endpoints list">
+                        ← Back to Endpoints
+                    </button>
+                </div>
+
+                <!-- Endpoint Tabs -->
+                <div class="endpoint-tabs">
+                    <div class="tab-navigation" role="tablist" aria-label="Endpoint information tabs">
+                        <button class="tab-button active" onclick="showEndpointTab('details')" role="tab" aria-selected="true" aria-controls="endpoint-details-tab" id="details-tab-button">Details</button>
+                        <button class="tab-button" onclick="showEndpointTab('test')" role="tab" aria-selected="false" aria-controls="endpoint-test-tab" id="test-tab-button">Test</button>
+                        <button class="tab-button" onclick="showEndpointTab('consume')" role="tab" aria-selected="false" aria-controls="endpoint-consume-tab" id="consume-tab-button">Consume</button>
+                    </div>
+
+                    <!-- Details Tab -->
+                    <div id="endpoint-details-tab" class="tab-content active" role="tabpanel" aria-labelledby="details-tab-button">
+                        <div class="endpoint-details-section">
+                            <h3>Endpoint Information</h3>
+                            <div class="details-grid" role="list" aria-label="Endpoint details">
+                                <div class="detail-item" role="listitem">
+                                    <label>Endpoint Name:</label>
+                                    <span id="endpoint-name-display" aria-label="Endpoint name">-</span>
+                                </div>
+                                <div class="detail-item" role="listitem">
+                                    <label>Deployment Name:</label>
+                                    <span id="deployment-name-display" aria-label="Deployment name">-</span>
+                                </div>
+                                <div class="detail-item" role="listitem">
+                                    <label>Model:</label>
+                                    <span id="deployed-model-display" aria-label="Deployed model">-</span>
+                                </div>
+                                <div class="detail-item" role="listitem">
+                                    <label>Created On:</label>
+                                    <span id="endpoint-created-display" aria-label="Creation date">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Test Tab -->
+                    <div id="endpoint-test-tab" class="tab-content" style="display: none;" role="tabpanel" aria-labelledby="test-tab-button">
+                        <div class="endpoint-test-section">
+                            <h3>Test Endpoint</h3>
+                            <p>Send test requests to your deployed model endpoint.</p>
+                            <div class="test-input-section">
+                                <label for="test-input-data">Input Data (JSON):</label>
+                                <textarea id="test-input-data" rows="8" placeholder='{"feature1": value1, "feature2": value2, ...}' aria-describedby="input-data-help"></textarea>
+                                <div id="input-data-help" class="sr-only">Enter test data in JSON format with feature names as keys and values corresponding to your model's expected input</div>
+                                <button class="btn btn-primary" onclick="testEndpoint()" aria-describedby="test-button-help">Send Test Request</button>
+                                <div id="test-button-help" class="sr-only">Sends the input data to the endpoint and displays the prediction results</div>
+                            </div>
+                            <div id="test-results" class="test-results-section" style="display: none;" role="region" aria-live="polite" aria-label="Test results">
+                                <h4>Response:</h4>
+                                <div id="test-response"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Consume Tab -->
+                    <div id="endpoint-consume-tab" class="tab-content" style="display: none;" role="tabpanel" aria-labelledby="consume-tab-button">
+                        <div class="endpoint-consume-section">
+                            <h3>Consume Model</h3>
+                            <p>To consume this model, download it and use Python code like this to use it.</p>
+                            
+                            <!-- Keep the endpoint URL element that JavaScript expects -->
+                            <div style="display: none;">
+                                <code id="endpoint-url" aria-label="REST endpoint URL">https://your-endpoint.azureml.net/score</code>
+                            </div>
+                            
+                            <div class="consume-download-section">
+                                <button class="btn btn-primary" id="download-model-btn" onclick="downloadEndpointModel()" aria-describedby="download-help">
+                                    <i class="icon-download"></i> Download model
+                                </button>
+                                <div id="download-help" class="sr-only">Downloads the trained scikit-learn model as a .pkl file</div>
+                            </div>
+                            <div class="consume-code-section">
+                                <h4>Example Python Code:</h4>
+                                <pre><code id="example-python-code" class="language-python">
+import joblib
+import pandas as pd
+import numpy as np
+
+# Load the downloaded model
+model = joblib.load('your_model.pkl')
+
+# Prepare sample data (replace with your actual feature values)
+sample_data = {
+    'feature1': [1.0],
+    'feature2': [2.5],
+    'feature3': [0.8]
+}
+
+# Convert to DataFrame
+df = pd.DataFrame(sample_data)
+
+# Make prediction
+prediction = model.predict(df)
+print(f"Prediction: {prediction[0]}")
+
+# Get prediction probability (for classification models)
+if hasattr(model, 'predict_proba'):
+    probabilities = model.predict_proba(df)
+    print(f"Probabilities: {probabilities[0]}")
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Model Details Page -->
+            <div id="model-details-page" class="page-content" style="display: none;" role="region" aria-labelledby="model-details-title">
+                <!-- Model Details Header -->
+                <div class="model-details-header">
+                    <div class="model-header-info">
+                        <div class="model-title-section">
+                            <h1 id="model-details-title">Model1</h1>
+                            <div class="model-type" role="status" aria-label="Model type">Custom model</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model Actions Toolbar -->
+                <div class="model-actions-toolbar" role="toolbar" aria-label="Model actions">
+                    <button class="btn btn-secondary" onclick="refreshModelDetails()" aria-label="Refresh model details">
+                        ↻ Refresh
+                    </button>
+                    <button class="btn btn-secondary" onclick="useThisModel()" aria-label="Use this model for predictions">
+                        &#9655; Use this model
+                    </button>
+                    <button class="btn btn-secondary" onclick="downloadModel()" aria-label="Download model file">
+                        ⬇ Download
+                    </button>
+                </div>
+
+                <!-- Main Content -->
+                <div class="model-content">
+                    <!-- Attributes Card -->
+                    <div class="attributes-card">
+                        <h3>Attributes</h3>
+                        
+                        <div class="attribute-row" role="listitem">
+                            <div class="attribute-label">Name</div>
+                            <div class="attribute-value" id="model-attr-name" aria-label="Model name">Model1</div>
+                        </div>
+                        
+                        <div class="attribute-row" role="listitem">
+                            <div class="attribute-label">Created on</div>
+                            <div class="attribute-value" id="model-attr-created" aria-label="Creation date">Oct 17, 2025 4:52 PM</div>
+                        </div>
+                        
+                        <div class="attribute-row" role="listitem">
+                            <div class="attribute-label">Type</div>
+                            <div class="attribute-value" id="model-attr-type" aria-label="Model type">scikit-learn</div>
+                        </div>
+                        
+                        <div class="attribute-row" role="listitem">
+                            <div class="attribute-label">Created by job</div>
+                            <div class="attribute-value">
+                                <a href="#" class="job-link" id="model-attr-job" onclick="navigateToSourceJob()" aria-label="Go to source training job">ML_Job_1</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Job Details Page -->
+            <div id="job-details-page" class="page-content" style="display: none;">
+                <div class="page-header">
+                    <div class="job-header-content">
+                        <div class="job-title-section">
+                            <div class="job-title-row">
+                                <h1 id="job-details-title">ML Job 1</h1>
+                                <div class="job-status-badge" id="job-status-badge">
+                                    <span class="status-icon">●</span>
+                                    <span id="job-status-text">Running</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-details-content">
+                    <div class="job-tabs">
+                        <button class="tab-button active" onclick="showJobTab('overview')" data-tooltip="Job overview and status">Overview</button>
+                        <button class="tab-button" onclick="showJobTab('data-guardrails')" data-tooltip="Data quality checks">Data guardrails</button>
+                        <button class="tab-button" onclick="showJobTab('models')" data-tooltip="Trained models and results">Models + child jobs</button>
+                        <button class="tab-button" onclick="showJobTab('outputs')" data-tooltip="Job outputs and artifacts">Outputs + logs</button>
+                        <button class="tab-button" onclick="showJobTab('child-jobs')" data-tooltip="Individual model training runs">Child jobs</button>
+                    </div>
+
+                    <!-- Job Actions Toolbar -->
+                    <div class="job-actions-toolbar">
+                        <button class="btn btn-secondary" onclick="refreshJob()" data-tooltip="Refresh job status">
+                            <span class="icon">↻</span> Refresh
+                        </button>
+                        <button class="btn btn-secondary" onclick="registerModel()" data-tooltip="Register best model">
+                            + Register model
+                        </button>
+                    </div>
+
+                    <div class="job-tab-content">
+                        <!-- Overview Tab -->
+                        <div id="overview-tab" class="tab-panel active">
+                            <div class="job-overview-layout">
+                                <div class="job-overview-left">
+                                    <div class="properties-section">
+                                        <h3>Properties</h3>
+                                        <div class="property-grid">
+                                            <div class="property-item">
+                                                <label>Status</label>
+                                                <div class="status-with-icon" id="properties-status">
+                                                    <span class="status-icon">●</span>
+                                                    <span>Running</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-item">
+                                                <label>Job type</label>
+                                                <span id="properties-job-type">Automated ML</span>
+                                            </div>
+                                            <div class="property-item">
+                                                <label>Created on</label>
+                                                <span id="properties-created-on">Oct 15, 2025 6:51 PM</span>
+                                            </div>
+                                            <div class="property-item">
+                                                <label>Start time</label>
+                                                <span id="properties-start-time">Oct 15, 2025 6:51 PM</span>
+                                            </div>
+                                            <div class="property-item">
+                                                <label>Name</label>
+                                                <span id="properties-name">loving_farm_xd1wx3tyn6</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="job-overview-right">
+                                    <div class="inputs-section">
+                                        <h3>Inputs</h3>
+                                        <div class="input-item">
+                                            <div class="input-header">
+                                                <span class="input-label">Input name: training_data</span>
+                                            </div>
+                                            <div class="input-details">
+                                                <span class="input-type">Data asset: </span>
+                                                <span id="input-data-asset">penguin-data:1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="best-model-section">
+                                        <h3>Best model summary</h3>
+                                        <div id="best-model-content">
+                                            <div class="no-data-message">
+                                                <span class="no-data-icon">ℹ</span>
+                                                <span>No data</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="run-summary-section">
+                                        <h3>Run summary</h3>
+                                        <div class="summary-grid">
+                                            <div class="summary-item">
+                                                <label>Task type</label>
+                                                <div class="task-type-content">
+                                                    <span id="summary-task-type">Classification</span>
+                                                    <a href="#" onclick="viewConfigSettings()" class="config-link">⚙ View configuration settings</a>
+                                                </div>
+                                            </div>
+                                            <div class="summary-item">
+                                                <label>Featurization</label>
+                                                <span id="summary-featurization">Auto</span>
+                                            </div>
+                                            <div class="summary-item">
+                                                <label>Primary metric</label>
+                                                <span id="summary-primary-metric">AUC weighted</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other tabs would go here -->
+                        <div id="data-guardrails-tab" class="tab-panel" style="display: none;">
+                            <!-- Content will be populated by updateDataGuardrailsTabContent() -->
+                        </div>
+
+                        <div id="models-tab" class="tab-panel" style="display: none;">
+                            <div id="models-results-content">
+                                <h4>Model Results</h4>
+                                <div id="job-model-results"></div>
+                            </div>
+                        </div>
+
+                        <div id="outputs-tab" class="tab-panel" style="display: none;">
+                            <div id="outputs-content">
+                                <div class="logs-placeholder">
+                                    <div class="logs-placeholder-icon">ℹ</div>
+                                    <div class="logs-placeholder-text">No logs available</div>
+                                    <div class="logs-placeholder-subtext">Training logs will appear here after job completion</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="child-jobs-tab" class="tab-panel" style="display: none;">
+                            <div class="tab-content-placeholder">
+                                <h4>Child jobs</h4>
+                                <p>Individual model training runs will appear here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Child Job Details Page -->
+            <div id="child-job-details-page" class="page-content" style="display: none;">
+                <div class="page-header">
+                    <div class="job-header-content">
+                        <div class="job-title-section">
+                            <div class="job-title-row">
+                                <button class="btn btn-link back-button" onclick="backToParentJob()" data-tooltip="Back to parent job">
+                                    ← Back to parent job
+                                </button>
+                                <h1 id="child-job-details-title">ML-Job-1-Child1</h1>
+                                <div class="job-status-badge" id="child-job-status-badge">
+                                    <span class="status-icon">●</span>
+                                    <span id="child-job-status-text">Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-details-content">
+                    <div class="job-tabs">
+                        <button class="tab-button active" onclick="showChildJobTab('overview')" data-tooltip="Job overview and status">Overview</button>
+                        <button class="tab-button" onclick="showChildJobTab('model')" data-tooltip="Model details and metrics">Model</button>
+                        <button class="tab-button" onclick="showChildJobTab('metrics')" data-tooltip="Performance metrics">Metrics</button>
+                        <button class="tab-button" onclick="showChildJobTab('outputs')" data-tooltip="Job outputs and logs">Outputs + logs</button>
+                    </div>
+
+                    <!-- Child Job Actions Toolbar -->
+                    <div class="job-actions-toolbar">
+                        <button class="btn btn-secondary" onclick="refreshChildJob()" data-tooltip="Refresh job status">
+                            <span class="icon">↻</span> Refresh
+                        </button>
+                        <button class="btn btn-secondary" onclick="deployChildModel()" data-tooltip="Deploy this model">
+                            &#9655; Deploy
+                        </button>
+                        <button class="btn btn-secondary" onclick="downloadChildModel()" data-tooltip="Download this model">
+                            &#8595; Download
+                        </button>
+                        <button class="btn btn-secondary" onclick="registerChildModel()" data-tooltip="Register this model">
+                            + Register model
+                        </button>
+                    </div>
+
+                    <div class="job-tab-content">
+                        <!-- Child Job Overview Tab -->
+                        <div id="child-overview-tab" class="tab-panel active">
+                            <div class="job-overview-layout">
+                                <div class="job-overview-left">
+                                    <div class="properties-section">
+                                        <h3>Properties</h3>
+                                        <div class="property-grid">
+                                            <div class="property-item">
+                                                <label>Status</label>
+                                                <div class="status-with-icon" id="child-properties-status">
+                                                    <span class="status-icon">●</span>
+                                                    <span>Completed</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-item">
+                                                <label>Created on</label>
+                                                <span id="child-properties-created-on">Oct 17, 2025 2:19 PM</span>
+                                            </div>
+                                            <div class="property-item">
+                                                <label>Duration</label>
+                                                <span id="child-properties-duration">28.84s</span>
+                                            </div>
+                                            <div class="property-item">
+                                                <label>Compute target</label>
+                                                <span id="child-properties-compute-target">Serverless</span>
+                                            </div>
+                                            <div class="property-item">
+                                                <label>Name</label>
+                                                <span id="child-properties-name">ML-Job-1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="job-overview-right">
+                                    <div class="inputs-section">
+                                        <h3>Inputs</h3>
+                                        <div class="input-item">
+                                            <div class="input-header">
+                                                <span class="input-label">Input name: training_data</span>
+                                            </div>
+                                            <div class="input-details">
+                                                <span class="input-type">Data asset: </span>
+                                                <span id="child-input-data-asset">Seeds</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="outputs-section">
+                                        <h3>Outputs</h3>
+                                        <div class="output-item">
+                                            <div class="output-header">
+                                                <span class="output-label" id="child-output-name">Output name: model_12345</span>
+                                            </div>
+                                            <div class="output-details">
+                                                <span class="output-type">Model asset: </span>
+                                                <span id="child-output-model-asset">model_12345</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Child Job Model Tab -->
+                        <div id="child-model-tab" class="tab-panel" style="display: none;">
+                            <div id="child-model-content">
+                                <h4>Model Details</h4>
+                                <div id="child-model-info"></div>
+                            </div>
+                        </div>
+
+                        <!-- Child Job Metrics Tab -->
+                        <div id="child-metrics-tab" class="tab-panel" style="display: none;">
+                            <div id="child-metrics-content">
+                                <h4>Model Performance Metrics</h4>
+                                <div id="child-metrics-display"></div>
+                            </div>
+                        </div>
+
+                        <!-- Child Job Outputs Tab -->
+                        <div id="child-outputs-tab" class="tab-panel" style="display: none;">
+                            <div id="child-outputs-content">
+                                <div class="logs-placeholder">
+                                    <div class="logs-placeholder-icon">ℹ</div>
+                                    <div class="logs-placeholder-text">No logs available</div>
+                                    <div class="logs-placeholder-subtext">Training logs will appear here after job completion</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Automated ML Page -->
+            <div id="automl-page" class="page-content" style="display: none;" role="region" aria-labelledby="automl-page-heading">
+                <div class="page-header">
+                    <h1 id="automl-page-heading">Automated ML</h1>
+                    <p>Let Automated ML train and find the best model based on your data without writing a single line of code. <a href="https://aka.ms/mslearn-azure-ml-intro" target="_blank" class="learn-more-link" aria-label="Learn more about Automated ML - opens in new tab">Learn more about Automated ML</a></p>
+                </div>
+                
+                <div class="job-actions-toolbar" role="toolbar" aria-label="AutoML actions">
+                    <button class="btn btn-secondary" onclick="openNewJobWizard()" data-tooltip="Start a new Automated ML training job" aria-label="Create new Automated ML training job">
+                        + New Automated ML job
+                    </button>
+                    <button class="btn btn-secondary" onclick="refreshJobs()" data-tooltip="Refresh the list of jobs" aria-label="Refresh jobs list">
+                        <span class="icon" aria-hidden="true">↻</span> Refresh
+                    </button>
+                </div>
+
+                <div class="jobs-section">
+                    <div id="jobs-list" class="jobs-list" role="list" aria-label="Automated ML jobs">
+                        <div class="empty-state" role="status" aria-live="polite">
+                            <div class="empty-state-content">
+                                <h3>No recent Automated ML jobs to display.</h3>
+                                <p>Click "New Automated ML job" to create your first job.</p>
+                                <a href="https://aka.ms/mslearn-azure-ml-intro" target="_blank" class="learn-more-link" aria-label="Learn more about creating Automated ML jobs - opens in new tab">📚 Learn more about creating Automated ML jobs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="documentation-section">
+                    <h3>Documentation</h3>
+                    <div class="doc-links" role="list" aria-label="Documentation resources">
+                        <a href="https://aka.ms/mslearn-ml-concepts" target="_blank" class="doc-link" role="listitem" aria-label="Concept: What is Machine Learning? - opens in new tab">
+                            <span class="doc-icon" aria-hidden="true">📖</span>
+                            <span>Concept: What is Machine Learning?</span>
+                        </a>
+                        <a href="https://aka.ms/mslearn-azure-ml-intro" target="_blank" class="doc-link" role="listitem" aria-label="Tutorial: Get started with Machine Learning on Azure - opens in new tab">
+                            <span class="doc-icon" aria-hidden="true">🎓</span>
+                            <span>Tutorial: Get started with Machine Learning on Azure</span>
+                        </a>
+                        <a href="https://azure.microsoft.com/products/machine-learning/" target="_blank" class="doc-link" role="listitem" aria-label="On the web: Microsoft Azure Machine Learning - opens in new tab">
+                            <span class="doc-icon" aria-hidden="true">📝</span>
+                            <span>On the web: Microsoft Azure Machine Learning</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New AutoML Job Wizard Page -->
+            <div id="automl-wizard-page" class="page-content" style="display: none;" role="region" aria-labelledby="wizard-title">
+                <div class="wizard-page-container">
+                    <div class="wizard-header">
+                        <h1 id="wizard-title">Submit an Automated ML job</h1>
+                        <button class="close-wizard" onclick="closeJobWizard()" data-tooltip="Cancel job creation" aria-label="Cancel and close job wizard">&times;</button>
+                    </div>
+                    
+                    <div class="wizard-main">
+                        <div class="wizard-sidebar">
+                            <div class="wizard-steps-vertical" role="list" aria-label="Wizard steps">
+                                <div class="step-vertical active" data-step="1" role="listitem">
+                                    <div class="step-indicator" aria-hidden="true">
+                                        <span class="step-number">1</span>
+                                    </div>
+                                    <div class="step-info">
+                                        <div class="step-title">Basic settings</div>
+                                    </div>
+                                </div>
+                                <div class="step-vertical" data-step="2" role="listitem">
+                                    <div class="step-indicator" aria-hidden="true">
+                                        <span class="step-number">2</span>
+                                    </div>
+                                    <div class="step-info">
+                                        <div class="step-title">Task type & data</div>
+                                    </div>
+                                </div>
+                                <div class="step-vertical" data-step="3" role="listitem">
+                                    <div class="step-indicator" aria-hidden="true">
+                                        <span class="step-number">3</span>
+                                    </div>
+                                    <div class="step-info">
+                                        <div class="step-title">Task settings</div>
+                                    </div>
+                                </div>
+                                <div class="step-vertical" data-step="4" role="listitem">
+                                    <div class="step-indicator" aria-hidden="true">
+                                        <span class="step-number">4</span>
+                                    </div>
+                                    <div class="step-info">
+                                        <div class="step-title">Compute</div>
+                                    </div>
+                                </div>
+                                <div class="step-vertical" data-step="5" role="listitem">
+                                    <div class="step-indicator" aria-hidden="true">
+                                        <span class="step-number">5</span>
+                                    </div>
+                                    <div class="step-info">
+                                        <div class="step-title">Review</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="wizard-content-area">
+                            <!-- Step 1: Basic Settings -->
+                            <div id="step-1" class="wizard-step active" role="group" aria-labelledby="step1-heading">
+                                <div class="step-header">
+                                    <h2 id="step1-heading">Basic settings</h2>
+                                    <p>Let's start with some basic information about your training job.</p>
+                                </div>
+                                <div class="step-content">
+                                    <div class="form-section">
+                                        <div class="form-group">
+                                            <label for="job-name">Job name *</label>
+                                            <input type="text" id="job-name" placeholder="Enter job name" required aria-describedby="job-name-help">
+                                            <div id="job-name-help" class="sr-only">Enter a unique name for your machine learning training job</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="job-description">Description</label>
+                                            <textarea id="job-description" rows="4" placeholder="Enter description (optional)" aria-describedby="job-description-help"></textarea>
+                                            <div id="job-description-help" class="sr-only">Optional description to help you identify this training job later</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Task & Data -->
+                            <div id="step-2" class="wizard-step" role="group" aria-labelledby="step2-heading">
+                                <div class="step-header">
+                                    <h2 id="step2-heading">Task type & data</h2>
+                                    <p>Select the machine learning task type and upload your data.</p>
+                                </div>
+                                <div class="step-content">
+                                    <div class="form-section">
+                                        <div class="form-group">
+                                            <label for="task-type">Task type *</label>
+                                            <div class="custom-dropdown" data-tooltip="Choose the type of machine learning task" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="task-type">
+                                                <div class="dropdown-selected" id="task-type-selected" onclick="toggleTaskTypeDropdown()" tabindex="0" onkeydown="handleDropdownKeyDown(event)" aria-describedby="task-type-help">
+                                                    <span class="placeholder">Select task type</span>
+                                                    <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                                                </div>
+                                                <div class="dropdown-options" id="task-type-options" role="listbox" aria-labelledby="task-type">
+                                                    <div class="task-type-option" data-value="classification" onclick="selectTaskType('classification')" role="option" tabindex="0" onkeydown="handleOptionKeyDown(event)" aria-describedby="classification-help">
+                                                        <div class="task-type-icon chart" aria-hidden="true"></div>
+                                                        <span>Classification</span>
+                                                    </div>
+                                                    <div class="task-type-option" data-value="regression" onclick="selectTaskType('regression')" role="option" tabindex="0" onkeydown="handleOptionKeyDown(event)" aria-describedby="regression-help">
+                                                        <div class="task-type-icon layers" aria-hidden="true"></div>
+                                                        <span>Regression</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <input type="hidden" id="task-type" value="">
+                                            <div class="help-text" id="task-type-help">
+                                                <small id="classification-help"><strong>Classification:</strong> Predict categories (e.g., spam/not spam, pass/fail)</small><br>
+                                                <small id="regression-help"><strong>Regression:</strong> Predict continuous values (e.g., price, temperature)</small>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Create Dataset Button -->
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-primary" onclick="showCreateDatasetInterface()" data-tooltip="Create a new tabular dataset" aria-describedby="create-dataset-help">
+                                                Create (Tabular)
+                                            </button>
+                                            <div id="create-dataset-help" class="sr-only">Upload a CSV file to create a new tabular dataset for training</div>
+                                        </div>
+                                        
+                                        <!-- Existing Datasets List -->
+                                        <div class="form-group">
+                                            <label>Select existing dataset</label>
+                                            <div id="dataset-list" class="dataset-list" role="list" aria-label="Available datasets">
+                                                <div class="no-datasets" role="status">
+                                                    <p>No datasets available. Create a dataset using the button above.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- File Upload (Hidden initially, shown when Create button is clicked) -->
+                                        <div class="form-group" id="file-upload-group" style="display: none;">
+                                            <label for="dataset-name">Dataset name *</label>
+                                            <input type="text" id="dataset-name" placeholder="Enter dataset name" oninput="validateDatasetName()" aria-describedby="dataset-name-help">
+                                            <div id="dataset-name-help" class="sr-only">Enter a unique name for your dataset</div>
+                                            <div id="dataset-name-error" class="error-message" style="display: none;" role="alert" aria-live="polite"></div>
+                                            
+                                            <label for="data-file" style="margin-top: 15px;">Upload CSV file *</label>
+                                            <input type="file" id="data-file" accept=".csv" onchange="handleFileUpload(this)" aria-describedby="file-upload-help">
+                                            <div id="file-upload-help" class="sr-only">Select a CSV file containing your training data with headers in the first row</div>
+                                            <div id="uploaded-files" role="status" aria-live="polite"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Task Settings -->
+                            <div id="step-3" class="wizard-step" role="group" aria-labelledby="step3-heading">
+                                <div class="step-header">
+                                    <h2 id="step3-heading">Task settings</h2>
+                                    <p>Configure additional settings for your machine learning task.</p>
+                                </div>
+                                <div class="step-content">
+                                    <div class="form-section">
+                                        <div class="form-group" id="target-column-group" style="display: none;">
+                                            <label for="target-column">Target column *</label>
+                                            <select id="target-column" aria-describedby="target-column-help">
+                                                <option value="">Select target column</option>
+                                            </select>
+                                            <div id="target-column-help" class="sr-only">Choose the column you want to predict from your dataset</div>
+                                        </div>
+                                        <div class="config-section horizontal">
+                                            <div class="config-item">
+                                                <button type="button" class="config-btn" onclick="openConfigFlyout()" data-tooltip="Configure primary metrics and algorithms" aria-describedby="config-btn-help">
+                                                    <span class="config-icon" aria-hidden="true">⚙️</span>
+                                                    <div>
+                                                        <div class="config-title">Additional configuration settings</div>
+                                                        <div class="config-desc">Primary metric and algorithms</div>
+                                                    </div>
+                                                </button>
+                                                <div id="config-btn-help" class="sr-only">Opens configuration panel to select evaluation metrics and machine learning algorithms</div>
+                                            </div>
+                                            <div class="config-item">
+                                                <button type="button" class="config-btn" onclick="openFeaturizationFlyout()" data-tooltip="Configure data preprocessing options" aria-describedby="featurization-btn-help">
+                                                    <span class="config-icon" aria-hidden="true">🔧</span>
+                                                    <div>
+                                                        <div class="config-title">Featurization settings</div>
+                                                        <div class="config-desc">Data preprocessing options</div>
+                                                    </div>
+                                                </button>
+                                                <div id="featurization-btn-help" class="sr-only">Opens featurization panel to configure how data is preprocessed before training</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Limits expandable section -->
+                                        <div class="expandable-section">
+                                            <button type="button" class="expandable-header" onclick="toggleLimitsSection()" aria-expanded="false" aria-controls="limits-content">
+                                                <span class="expand-icon" aria-hidden="true">▶</span>
+                                                <span>Limits</span>
+                                            </button>
+                                            <div id="limits-content" class="expandable-content">
+                                                <div class="form-group">
+                                                    <label for="metric-threshold">Metric score threshold</label>
+                                                    <input type="number" id="metric-threshold" name="metric-threshold" 
+                                                           placeholder="e.g., 0.85" step="0.01" min="0" max="1" aria-describedby="metric-threshold-help">
+                                                    <small class="form-help" id="metric-threshold-help">Stop training when this metric score is reached (range depends on selected primary metric)</small>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="experiment-timeout">Experiment timeout (minutes)</label>
+                                                    <input type="number" id="experiment-timeout" name="experiment-timeout" 
+                                                           placeholder="e.g., 60" min="15" max="1440" aria-describedby="experiment-timeout-help">
+                                                    <small class="form-help" id="experiment-timeout-help">Maximum time to run the experiment (minimum 15 minutes)</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 4: Compute -->
+                            <div id="step-4" class="wizard-step" role="group" aria-labelledby="step4-heading">
+                                <div class="step-header">
+                                    <h2 id="step4-heading">Compute</h2>
+                                    <p>Select the compute target for training your machine learning model.</p>
+                                </div>
+                                <div class="step-content">
+                                    <div class="form-section">
+                                        <div class="form-group">
+                                            <label for="compute-type">Select compute type</label>
+                                            <select id="compute-type" class="form-control" aria-describedby="compute-type-help">
+                                                <option value="serverless" selected>Serverless</option>
+                                            </select>
+                                            <div class="form-help" id="compute-type-help">
+                                                <small>Serverless compute is the recommended option for getting started with automated ML.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 5: Review -->
+                            <div id="step-5" class="wizard-step" role="group" aria-labelledby="step5-heading">
+                                <div class="step-header">
+                                    <h2 id="step5-heading">Review and submit</h2>
+                                    <p>Review your configuration and submit the training job.</p>
+                                </div>
+                                <div class="step-content">
+                                    <div class="form-section">
+                                        <div id="job-summary" role="region" aria-label="Job configuration summary"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wizard-footer" role="toolbar" aria-label="Wizard navigation">
+                        <div class="footer-left">
+                            <button type="button" class="btn btn-secondary" onclick="previousStep()" id="prev-btn" style="display: none;" data-tooltip="Go to previous step" aria-label="Go to previous wizard step">Back</button>
+                            <button type="button" class="btn btn-primary" onclick="nextStep()" id="next-btn" data-tooltip="Continue to next step" aria-label="Continue to next wizard step">Next</button>
+                            <button type="button" class="btn btn-primary" onclick="submitJob()" id="submit-btn" style="display: none;" data-tooltip="Start training the models" aria-label="Submit the training job">Submit</button>
+                        </div>
+                        <div class="footer-right">
+                            <button type="button" class="btn btn-secondary" onclick="closeJobWizard()" data-tooltip="Cancel job creation" aria-label="Cancel and close wizard">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job Wizard Modal -->
+            <div id="job-wizard-modal" class="modal full-page-modal" style="display: none;">
+                <div class="full-page-wizard">
+                    <div class="wizard-header">
+                        <h1>Submit an Automated ML job</h1>
+                        <button class="close-wizard" onclick="closeJobWizard()" data-tooltip="Cancel job creation">&times;</button>
+                    </div>
+                    
+                    <div class="wizard-main">
+                        <div class="wizard-sidebar">
+                            <div class="wizard-steps-vertical">
+                                <div class="step-vertical active" data-step="1">
+                                    <div class="step-indicator">
+                                        <span class="step-number">1</span>
+                                    </div>
+                                    <div class="step-info">
+                                        <div class="step-title">Basic settings</div>
+                                    </div>
+                                </div>
+                                <div class="step-vertical" data-step="2">
+                                    <div class="step-indicator">
+                                        <span class="step-number">2</span>
+                                    </div>
+                                    <div class="step-info">
+                                        <div class="step-title">Task type & data</div>
+                                    </div>
+                                </div>
+                                <div class="step-vertical" data-step="3">
+                                    <div class="step-indicator">
+                                        <span class="step-number">3</span>
+                                    </div>
+                                    <div class="step-info">
+                                        <div class="step-title">Task settings</div>
+                                    </div>
+                                </div>
+                                <div class="step-vertical" data-step="4">
+                                    <div class="step-indicator">
+                                        <span class="step-number">4</span>
+                                    </div>
+                                    <div class="step-info">
+                                        <div class="step-title">Compute</div>
+                                    </div>
+                                </div>
+                                <div class="step-vertical" data-step="5">
+                                    <div class="step-indicator">
+                                        <span class="step-number">5</span>
+                                    </div>
+                                    <div class="step-info">
+                                        <div class="step-title">Review</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="wizard-content-area">
+                            <!-- Step 1: Basic Settings -->
+                            <div id="step-1" class="wizard-step active">
+                                <div class="step-header">
+                                    <h2>Basic settings</h2>
+                                    <p>Let's start with some basic information about your training job.</p>
+                                </div>
+                                <div class="step-content">
+                                    <div class="form-section">
+                                        <div class="form-group">
+                                            <label for="job-name">Job name *</label>
+                                            <input type="text" id="job-name" placeholder="Enter job name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="job-description">Description</label>
+                                            <textarea id="job-description" rows="4" placeholder="Enter description (optional)"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Task & Data -->
+                            <div id="step-2" class="wizard-step">
+                                <div class="step-header">
+                                    <h2>Task type & data</h2>
+                                    <p>Select the machine learning task type and upload your data.</p>
+                                </div>
+                                <div class="step-content">
+                                    <div class="form-section">
+                                        <div class="form-group">
+                                            <label for="task-type">Task type *</label>
+                                            <div class="custom-dropdown" data-tooltip="Choose the type of machine learning task">
+                                                <div class="dropdown-selected" id="task-type-selected" onclick="toggleTaskTypeDropdown()">
+                                                    <span class="placeholder">Select task type</span>
+                                                    <span class="dropdown-arrow">▼</span>
+                                                </div>
+                                                <div class="dropdown-options" id="task-type-options">
+                                                    <div class="task-type-option" data-value="classification" onclick="selectTaskType('classification')">
+                                                        <div class="task-type-icon chart"></div>
+                                                        <span>Classification</span>
+                                                    </div>
+                                                    <div class="task-type-option" data-value="regression" onclick="selectTaskType('regression')">
+                                                        <div class="task-type-icon layers"></div>
+                                                        <span>Regression</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <input type="hidden" id="task-type" value="">
+                                            <div class="help-text">
+                                                <small><strong>Classification:</strong> Predict categories (e.g., spam/not spam, pass/fail)</small><br>
+                                                <small><strong>Regression:</strong> Predict continuous values (e.g., price, temperature)</small>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Create Dataset Button -->
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-primary" onclick="showCreateDatasetInterface()" data-tooltip="Create a new tabular dataset">
+                                                Create (Tabular)
+                                            </button>
+                                        </div>
+                                        
+                                        <!-- Existing Datasets List -->
+                                        <div class="form-group">
+                                            <label>Select existing dataset</label>
+                                            <div id="dataset-list" class="dataset-list">
+                                                <div class="no-datasets">
+                                                    <p>No datasets available. Create a dataset using the button above.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- File Upload (Hidden initially, shown when Create button is clicked) -->
+                                        <div class="form-group" id="file-upload-group" style="display: none;">
+                                            <label for="dataset-name">Dataset name *</label>
+                                            <input type="text" id="dataset-name" placeholder="Enter dataset name" oninput="validateDatasetName()">
+                                            <div id="dataset-name-error" class="error-message" style="display: none;"></div>
+                                            
+                                            <label for="data-file" style="margin-top: 15px;">Upload CSV file *</label>
+                                            <input type="file" id="data-file" accept=".csv" onchange="handleFileUpload(this)">
+                                            <div id="uploaded-files"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Task Settings -->
+                            <div id="step-3" class="wizard-step">
+                                <div class="step-header">
+                                    <h2>Task settings</h2>
+                                    <p>Configure additional settings for your machine learning task.</p>
+                                </div>
+                                <div class="step-content">
+                                    <div class="form-section">
+                                        <div class="form-group" id="target-column-group" style="display: none;">
+                                            <label for="target-column">Target column *</label>
+                                            <select id="target-column">
+                                                <option value="">Select target column</option>
+                                            </select>
+                                        </div>
+                                        <div class="config-section horizontal">
+                                            <div class="config-item">
+                                                <button type="button" class="config-btn" onclick="openConfigFlyout()" data-tooltip="Configure primary metrics and algorithms">
+                                                    <span class="config-icon">⚙️</span>
+                                                    <div>
+                                                        <div class="config-title">Additional configuration settings</div>
+                                                        <div class="config-desc">Primary metric and algorithms</div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                            <div class="config-item">
+                                                <button type="button" class="config-btn" onclick="openFeaturizationFlyout()" data-tooltip="Configure data preprocessing options">
+                                                    <span class="config-icon">🔧</span>
+                                                    <div>
+                                                        <div class="config-title">Featurization settings</div>
+                                                        <div class="config-desc">Data preprocessing options</div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Limits expandable section -->
+                                        <div class="expandable-section">
+                                            <button type="button" class="expandable-header" onclick="toggleLimitsSection()">
+                                                <span class="expand-icon">▶</span>
+                                                <span>Limits</span>
+                                            </button>
+                                            <div id="limits-content" class="expandable-content">
+                                                <div class="form-group">
+                                                    <label for="metric-threshold">Metric score threshold</label>
+                                                    <input type="number" id="metric-threshold" name="metric-threshold" 
+                                                           placeholder="e.g., 0.85" step="0.01" min="0" max="1">
+                                                    <small class="form-help">Stop training when this metric score is reached (range depends on selected primary metric)</small>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="experiment-timeout">Experiment timeout (minutes)</label>
+                                                    <input type="number" id="experiment-timeout" name="experiment-timeout" 
+                                                           placeholder="e.g., 60" min="15" max="1440">
+                                                    <small class="form-help">Maximum time to run the experiment (minimum 15 minutes)</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 4: Compute -->
+                            <div id="step-4" class="wizard-step">
+                                <div class="step-header">
+                                    <h2>Compute</h2>
+                                    <p>Select the compute target for training your machine learning model.</p>
+                                </div>
+                                <div class="step-content">
+                                    <div class="form-section">
+                                        <div class="form-group">
+                                            <label for="compute-type">Select compute type</label>
+                                            <select id="compute-type" class="form-control">
+                                                <option value="serverless" selected>Serverless</option>
+                                            </select>
+                                            <div class="form-help">
+                                                <small>Serverless compute is the recommended option for getting started with automated ML.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 5: Review -->
+                            <div id="step-5" class="wizard-step">
+                                <div class="step-header">
+                                    <h2>Review and submit</h2>
+                                    <p>Review your configuration and submit the training job.</p>
+                                </div>
+                                <div class="step-content">
+                                    <div class="form-section">
+                                        <div id="job-summary"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wizard-footer-full">
+                        <div class="footer-left">
+                            <button type="button" class="btn btn-secondary" onclick="previousStep()" id="prev-btn" style="display: none;" data-tooltip="Go to previous step">Back</button>
+                        </div>
+                        <div class="footer-right">
+                            <button type="button" class="btn btn-secondary" onclick="closeJobWizard()" data-tooltip="Cancel job creation">Cancel</button>
+                            <button type="button" class="btn btn-primary" onclick="nextStep()" id="next-btn" data-tooltip="Continue to next step">Next</button>
+                            <button type="button" class="btn btn-primary" onclick="submitJob()" id="submit-btn" style="display: none;" data-tooltip="Start training the models">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Configuration Flyout -->
+    <div id="config-flyout" class="flyout" role="dialog" aria-labelledby="config-flyout-title" aria-modal="true">
+        <div class="flyout-header">
+            <h3 id="config-flyout-title">Additional Configuration Settings</h3>
+            <span class="flyout-close" onclick="closeConfigFlyout()" aria-label="Close configuration settings">&times;</span>
+        </div>
+        <div class="flyout-content">
+            <div class="form-group">
+                <label for="primary-metric">Primary metric</label>
+                <select id="primary-metric" aria-describedby="primary-metric-help">
+                    <!-- Options will be populated based on task type -->
+                </select>
+                <div id="primary-metric-help" class="sr-only">Choose the metric used to evaluate and compare model performance</div>
+            </div>
+            <div class="form-group">
+                <label>Algorithms to try</label>
+                <div id="algorithms-list" class="checkbox-group" role="group" aria-labelledby="algorithms-label" aria-describedby="algorithms-help">
+                    <!-- Checkboxes will be populated based on task type -->
+                </div>
+                <div id="algorithms-help" class="sr-only">Select which machine learning algorithms to train and compare</div>
+            </div>
+        </div>
+        <div class="flyout-actions" style="margin-top: 24px; padding: 0 24px 24px 24px;">
+            <button type="button" class="btn btn-secondary" onclick="closeConfigFlyout()" data-tooltip="Cancel and close configuration" aria-label="Cancel configuration changes">Cancel</button>
+            <button type="button" class="btn btn-primary" id="config-save-btn" onclick="saveConfig()" data-tooltip="Save configuration settings" aria-label="Save configuration settings" style="background-color: #0078d4 !important; color: white !important; cursor: pointer !important; pointer-events: auto !important;">Save</button>
+        </div>
+    </div>
+
+    <!-- Featurization Flyout -->
+    <div id="featurization-flyout" class="flyout" role="dialog" aria-labelledby="featurization-flyout-title" aria-modal="true">
+        <div class="flyout-header">
+            <h3 id="featurization-flyout-title">Featurization Settings</h3>
+            <span class="flyout-close" onclick="closeFeaturizationFlyout()" aria-label="Close featurization settings">&times;</span>
+        </div>
+        <div class="flyout-content">
+            <div class="form-group">
+                <label class="checkbox-label-horizontal">
+                    <input type="checkbox" id="normalize-features" aria-describedby="normalize-features-help"> 
+                    <span>Normalize numeric features</span>
+                </label>
+                <div id="normalize-features-help" class="sr-only">Scale numeric features to have similar ranges for better model performance</div>
+            </div>
+            <div class="form-group">
+                <label>Handle missing data</label>
+                <div class="radio-group-vertical" role="radiogroup" aria-labelledby="missing-data-label" aria-describedby="missing-data-help">
+                    <label>
+                        <input type="radio" name="missing-data-strategy" value="remove" checked aria-describedby="remove-strategy-help">
+                        <span>Remove rows with missing values (default)</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="missing-data-strategy" value="impute" aria-describedby="impute-strategy-help">
+                        <span>Fill missing values (mean for numeric, most frequent for categorical)</span>
+                    </label>
+                </div>
+                <div id="missing-data-help" class="sr-only">Choose how to handle rows with missing values in your dataset</div>
+                <div id="remove-strategy-help" class="sr-only">Removes entire rows that contain any missing values</div>
+                <div id="impute-strategy-help" class="sr-only">Fills missing values with calculated replacements</div>
+            </div>
+            <div class="form-group" id="categorical-columns-group" style="display: none;">
+                <label>Non-numeric columns</label>
+                <div class="categorical-table-container">
+                    <table class="categorical-table" role="table" aria-label="Non-numeric columns configuration">
+                        <thead>
+                            <tr>
+                                <th scope="col">Column Name</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="categorical-columns">
+                            <!-- Non-numeric columns will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="flyout-actions" style="margin-top: 24px;">
+                <button type="button" class="btn btn-secondary" onclick="closeFeaturizationFlyout()" data-tooltip="Cancel and close featurization settings" aria-label="Cancel featurization changes">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="saveFeaturization()" data-tooltip="Save featurization settings" aria-label="Save featurization settings">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Configuration Settings Flyout -->
+    <div id="config-settings-flyout" class="flyout">
+        <div class="flyout-header">
+            <h3>Configuration Settings</h3>
+            <span class="flyout-close" onclick="closeAllFlyouts()">&times;</span>
+        </div>
+        <div class="flyout-content">
+            <div id="config-settings-content">
+                <!-- Configuration details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Flyout Overlay -->
+    <div id="flyout-overlay" class="flyout-overlay" onclick="closeAllFlyouts()"></div>
+
+    <!-- PyScript Training Module -->
+    <py-script>
+        # PyScript initialization and CSV parsing
+        import pandas as pd
+        import numpy as np
+        from io import StringIO
+        import json
+        import js
+        
+        print("PyScript starting...")
+        print("✓ Basic libraries imported")
+        
+        # Global storage for trained models
+        trained_models_storage = {}
+        
+        def list_stored_models():
+            """Debug function to list all stored models"""
+            print("📋 Stored models in trained_models_storage:")
+            for key, model_info in trained_models_storage.items():
+                print(f"  • {key}: {model_info['algorithm']} (job: {model_info['job_id']})")
+            return list(trained_models_storage.keys())
+        
+        # Test DataFrame creation
+        test_df = pd.DataFrame({'a': [1, 2, 3], 'b': [4, 5, 6]})
+        print(f"✓ Test DataFrame created: {test_df.shape}")
+        
+        # CSV parsing function
+        def parse_csv_with_pyscript(csv_content, file_name, use_first_row_as_headers=True):
+            print(f"PyScript parsing CSV: {file_name}, use_headers: {use_first_row_as_headers}")
+            try:
+                # Parse CSV
+                csv_data = StringIO(csv_content)
+                
+                if use_first_row_as_headers:
+                    df = pd.read_csv(csv_data)
+                else:
+                    # Parse without headers, first row becomes data
+                    df = pd.read_csv(csv_data, header=None)
+                    # Generate column names
+                    df.columns = [f'Column{i+1}' for i in range(len(df.columns))]
+                
+                print(f"DataFrame shape: {df.shape}")
+                print(f"Columns: {list(df.columns)}")
+                
+                # Basic validation
+                if df.empty:
+                    raise ValueError("CSV file appears to be empty")
+                
+                # Get original data types before cleaning
+                original_dtypes = df.dtypes.to_dict()
+                
+                # Detect numeric columns more intelligently
+                numeric_columns = []
+                for col in df.columns:
+                    if pd.api.types.is_numeric_dtype(df[col]):
+                        numeric_columns.append(col)
+                    else:
+                        # Check if it could be numeric but has string NaN values
+                        non_null_values = df[col].dropna()
+                        if len(non_null_values) > 0:
+                            try:
+                                pd.to_numeric(non_null_values, errors='raise')
+                                numeric_columns.append(col)
+                            except (ValueError, TypeError):
+                                pass
+                
+                # Convert dtypes to JSON-serializable format with proper detection
+                column_info = {}
+                for col in df.columns:
+                    if col in numeric_columns:
+                        # Check if it's integer or float
+                        non_null_values = pd.to_numeric(df[col], errors='coerce').dropna()
+                        if len(non_null_values) > 0:
+                            if non_null_values.equals(non_null_values.astype(int)):
+                                column_info[col] = 'int64'
+                            else:
+                                column_info[col] = 'float64'
+                        else:
+                            column_info[col] = 'float64'
+                    else:
+                        column_info[col] = 'object'
+                
+                # Clean DataFrame for preview (replace NaN with empty strings only for display)
+                df_for_preview = df.fillna('')
+                
+                # Get column information
+                columns = df.columns.tolist()
+                print(f"Columns: {columns}")
+                print(f"Detected types: {column_info}")
+                
+                # Get preview data (first 5 rows) with NaN handling
+                preview_data = df_for_preview.head().to_dict('records')
+                print(f"Preview rows: {len(preview_data)}")
+                
+                # Return column information to JavaScript
+                column_data = {
+                    'columns': columns,
+                    'dtypes': column_info,  # Use our improved detection
+                    'shape': list(df.shape),  # Convert numpy array to list
+                    'filename': file_name,
+                    'preview': preview_data,
+                    'success': True,
+                    'parser': 'pandas'
+                }
+                
+                # Store the original DataFrame globally for training
+                globals()['current_dataframe'] = df
+                globals()['current_filename'] = file_name
+                
+                # Convert to JSON string with proper handling
+                json_data = json.dumps(column_data, default=str)
+                js.handleParsedData(json_data)
+                print(f"✓ Successfully parsed CSV: {df.shape[0]} rows, {df.shape[1]} columns")
+                
+            except Exception as e:
+                print(f"✗ PyScript CSV parsing error: {str(e)}")
+                error_data = {
+                    'success': False,
+                    'error': str(e),
+                    'filename': file_name,
+                    'parser': 'pandas'
+                }
+                json_data = json.dumps(error_data, default=str)
+                js.handleParsedData(json_data)
+                print(f"✗ CSV parsing failed: {e}")
+        
+        # Function to update DataFrame with custom headers
+        def update_dataframe_headers(custom_headers):
+            """Update the stored DataFrame with custom column headers"""
+            if 'current_dataframe' in globals():
+                df = globals()['current_dataframe']
+                if len(custom_headers) == len(df.columns):
+                    print(f"Updating DataFrame headers from {list(df.columns)} to {custom_headers}")
+                    df.columns = custom_headers
+                    globals()['current_dataframe'] = df
+                    print("✓ DataFrame headers updated successfully")
+                    return True
+                else:
+                    print(f"✗ Header count mismatch: {len(custom_headers)} vs {len(df.columns)}")
+                    return False
+            return False
+        
+        # Make function available to JavaScript
+        js.window.parse_csv_with_pyscript = parse_csv_with_pyscript
+        js.window.update_dataframe_headers = update_dataframe_headers
+        
+        # Function to filter DataFrame by selected columns
+        def filter_dataframe_columns(selected_columns):
+            """Filter the stored DataFrame to only include selected columns"""
+            if 'current_dataframe' in globals():
+                df = globals()['current_dataframe']
+                if selected_columns and len(selected_columns) > 0:
+                    # Verify all selected columns exist
+                    missing_columns = [col for col in selected_columns if col not in df.columns]
+                    if missing_columns:
+                        print(f"✗ Selected columns not found: {missing_columns}")
+                        return False
+                    
+                    # Filter DataFrame
+                    filtered_df = df[selected_columns]
+                    globals()['current_dataframe'] = filtered_df
+                    print(f"✓ DataFrame filtered from {df.shape[1]} to {filtered_df.shape[1]} columns")
+                    print(f"  Selected columns: {selected_columns}")
+                    return True
+                else:
+                    print("✗ No columns selected")
+                    return False
+            print("✗ No DataFrame available")
+            return False
+        
+        js.window.filter_dataframe_columns = filter_dataframe_columns
+        
+        # Training function for ML models - Full implementation with all metrics
+        def train_ml_models_pyscript(job_data_json, data_info):
+            from datetime import datetime
+            import numpy as np
+            from sklearn.model_selection import train_test_split
+            from sklearn.preprocessing import StandardScaler, LabelEncoder
+            from sklearn.linear_model import LogisticRegression, LinearRegression, Lasso
+            from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
+            from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
+            from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+            from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+            from sklearn.metrics import roc_auc_score
+            from sklearn.impute import SimpleImputer
+            
+            # Initialize comprehensive logging system
+            training_logs = []
+            
+            def log_message(message, level="info"):
+                """Add a timestamped log entry"""
+                # Create timestamp using Python datetime instead of js.Date()
+                from datetime import datetime
+                timestamp = datetime.now().strftime("%H:%M:%S")
+                log_entry = {
+                    'timestamp': timestamp,
+                    'message': str(message),
+                    'level': level
+                }
+                training_logs.append(log_entry)
+                print(f"[{timestamp}] {message}")
+            
+            log_message("🚀 STARTING AUTOML TRAINING JOB")
+            log_message("=" * 50)
+            
+            try:
+                # Parse job data
+                job_data = json.loads(job_data_json)
+                log_message("📄 Parsing job configuration...")
+                
+                # Log all job settings with details
+                log_message("🔍 JOB CONFIGURATION:")
+                log_message(f"  • Target column: {job_data.get('targetColumn')}")
+                log_message(f"  • Task type: {job_data.get('taskType')}")
+                log_message(f"  • Algorithms: {job_data.get('algorithms', [])}")
+                log_message(f"  • Primary metric: {job_data.get('primaryMetric')}")
+                log_message(f"  • Normalize features: {job_data.get('normalizeFeatures', False)}")
+                log_message(f"  • Categorical settings: {job_data.get('categoricalSettings', {})}")
+                
+                # Check if we have the DataFrame stored globally
+                if 'current_dataframe' not in globals():
+                    raise ValueError("No dataframe available for training. Please upload a CSV file first.")
+                
+                df = globals()['current_dataframe']
+                log_message(f"📊 Dataset loaded successfully:")
+                log_message(f"  • Original shape: {df.shape[0]} rows × {df.shape[1]} columns")
+                log_message(f"  • Original columns: {list(df.columns)}")
+                
+                # Filter DataFrame to only include selected columns
+                selected_columns = job_data.get('selectedColumns', [])
+                if selected_columns and len(selected_columns) > 0:
+                    log_message(f"🔍 Filtering dataset to selected columns:")
+                    log_message(f"  • Selected columns: {selected_columns}")
+                    
+                    # Verify all selected columns exist in the DataFrame
+                    missing_columns = [col for col in selected_columns if col not in df.columns]
+                    if missing_columns:
+                        raise ValueError(f"Selected columns not found in dataset: {missing_columns}")
+                    
+                    # Filter DataFrame to only selected columns
+                    df = df[selected_columns]
+                    log_message(f"  • Filtered shape: {df.shape[0]} rows × {df.shape[1]} columns")
+                    log_message(f"  • Filtered columns: {list(df.columns)}")
+                else:
+                    log_message("⚠️  No column selection provided, using all columns")
+                    log_message(f"  • Using all {df.shape[1]} columns: {list(df.columns)}")
+                
+                # Get training parameters
+                target_column = job_data['targetColumn']
+                task_type = job_data['taskType']
+                algorithms = job_data.get('algorithms', [])
+                primary_metric = job_data.get('primaryMetric', 'accuracy' if task_type == 'classification' else 'mae')
+                normalize_features = job_data.get('normalizeFeatures', False)
+                categorical_settings = job_data.get('categoricalSettings', {})
+                
+                # Get timeout settings and initialize timing
+                experiment_timeout = job_data.get('experimentTimeout')  # in minutes
+                import time
+                start_time = time.time()
+                timed_out = False
+                
+                if experiment_timeout:
+                    timeout_seconds = experiment_timeout * 60  # Convert to seconds
+                    log_message(f"  • Experiment timeout: {experiment_timeout} minutes ({timeout_seconds} seconds)")
+                else:
+                    log_message("  • No experiment timeout set")
+                
+                # Get early stopping threshold if set
+                metric_threshold = job_data.get('metricThreshold')
+                early_stop_triggered = False
+                
+                log_message("🔄 Preparing training data with pipelines...")
+                
+                # Prepare features and target
+                X = df.drop(columns=[target_column])
+                y = df[target_column]
+                log_message(f"  • Features: {X.shape[1]} columns")
+                log_message(f"  • Target values: {len(y)} samples")
+                log_message(f"  • Target column: '{target_column}'")
+                
+                # Store original column names for user-friendly input
+                original_columns = list(X.columns)
+                log_message(f"  • Original feature columns: {original_columns}")
+                
+                # Identify categorical and numeric columns for pipeline
+                log_message("📋 Analyzing column types for pipeline...")
+                categorical_cols = []
+                numeric_cols = []
+                columns_to_ignore = []
+                
+                for col in X.columns:
+                    if col in categorical_settings:
+                        if categorical_settings[col] == 'ignore':
+                            columns_to_ignore.append(col)
+                            continue
+                        elif categorical_settings[col] == 'categorize':
+                            if X[col].dtype == 'object':
+                                categorical_cols.append(col)
+                            else:
+                                numeric_cols.append(col)
+                    else:
+                        # Auto-detect based on data type
+                        if X[col].dtype == 'object':
+                            categorical_cols.append(col)
+                        else:
+                            numeric_cols.append(col)
+                
+                log_message(f"  • Categorical columns: {len(categorical_cols)} - {categorical_cols}")
+                log_message(f"  • Numeric columns: {len(numeric_cols)} - {numeric_cols}")
+                log_message(f"  • Ignored columns: {len(columns_to_ignore)} - {columns_to_ignore}")
+                
+                # Remove ignored columns
+                if columns_to_ignore:
+                    X = X.drop(columns=columns_to_ignore)
+                    original_columns = [col for col in original_columns if col not in columns_to_ignore]
+                    log_message(f"  • Dropped ignored columns, remaining: {X.shape[1]} features")
+                
+                # Handle missing data in target before split
+                if y.isna().sum() > 0:
+                    log_message(f"🧹 Handling {y.isna().sum()} missing values in target...")
+                    if task_type == 'classification':
+                        y = y.fillna(y.mode()[0] if len(y.mode()) > 0 else 0)
+                    else:  # regression
+                        y = y.fillna(y.mean())
+                    log_message("  • Target missing values handled")
+                
+                log_message(f"🔧 Creating preprocessing pipeline for {task_type}...")
+                
+                # Import pipeline components
+                from sklearn.pipeline import Pipeline
+                from sklearn.compose import ColumnTransformer
+                from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
+                from sklearn.impute import SimpleImputer
+                
+                # Create preprocessing steps
+                missing_data_strategy = job_data.get('missingDataStrategy', 'impute')  # Default to impute for pipelines
+                
+                # Numeric pipeline
+                numeric_pipeline = Pipeline([
+                    ('imputer', SimpleImputer(strategy='median')),
+                    ('scaler', StandardScaler() if normalize_features else 'passthrough')
+                ])
+                
+                # Categorical pipeline  
+                categorical_pipeline = Pipeline([
+                    ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
+                    ('encoder', OneHotEncoder(drop='first', sparse_output=False, handle_unknown='ignore'))
+                ])
+                
+                # Create column transformer
+                preprocessor = ColumnTransformer([
+                    ('num', numeric_pipeline, numeric_cols),
+                    ('cat', categorical_pipeline, categorical_cols)
+                ])
+                
+                log_message(f"  • Numeric preprocessing: {len(numeric_cols)} columns - impute + {'scale' if normalize_features else 'no scaling'}")
+                log_message(f"  • Categorical preprocessing: {len(categorical_cols)} columns - impute + one-hot encode")
+                
+                # Create dynamic random state based on job ID and settings
+                job_id = job_data.get('id', 1)
+                settings_hash = hash(str(normalize_features) + str(categorical_settings) + str(algorithms))
+                random_state = abs((job_id + settings_hash) % 10000)
+                log_message(f"🎲 Random state: {random_state} (based on job {job_id} and settings)")
+                
+                # Split data BEFORE preprocessing to avoid data leakage
+                log_message("✂️ Splitting data into train/test sets...")
+                X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=random_state)
+                log_message(f"  • Training set: {X_train.shape[0]} samples ({X_train.shape[0]/(X_train.shape[0]+X_test.shape[0])*100:.1f}%)")
+                log_message(f"  • Test set: {X_test.shape[0]} samples ({X_test.shape[0]/(X_train.shape[0]+X_test.shape[0])*100:.1f}%)")
+                
+                # Define base models (pipelines will be created for each)
+                log_message(f"🤖 Initializing {task_type} models with pipelines...")
+                if task_type == 'classification':
+                    base_models = {
+                        'logistic_regression': LogisticRegression(random_state=random_state, max_iter=1000),
+                        'decision_tree': DecisionTreeClassifier(random_state=random_state),
+                        'random_forest': RandomForestClassifier(random_state=random_state, n_estimators=10)
+                    }
+                else:
+                    base_models = {
+                        'linear_regression': LinearRegression(),
+                        'lasso': Lasso(random_state=random_state),
+                        'decision_tree': DecisionTreeRegressor(random_state=random_state),
+                        'random_forest': RandomForestRegressor(random_state=random_state, n_estimators=10)
+                    }
+                
+                log_message(f"  • Available models: {list(base_models.keys())}")
+                log_message(f"  • Selected algorithms: {algorithms}")
+                
+                # Create full pipelines (preprocessor + model) for each algorithm
+                model_map = {}
+                for algo in algorithms:
+                    if algo in base_models:
+                        model_map[algo] = Pipeline([
+                            ('preprocessor', preprocessor),
+                            ('classifier' if task_type == 'classification' else 'regressor', base_models[algo])
+                        ])
+                        log_message(f"  • Created pipeline for {algo.replace('_', ' ').title()}")
+                
+                # Train models
+                model_results = []
+                
+                # Initialize best_score based on whether higher or lower is better for the primary metric
+                higher_is_better_metrics = ['accuracy', 'precision', 'recall', 'f1', 'r2']
+                lower_is_better_metrics = ['mae', 'mse', 'rmse']
+                
+                if primary_metric in higher_is_better_metrics:
+                    best_score = float('-inf')  # Start with negative infinity for metrics where higher is better
+                elif primary_metric in lower_is_better_metrics:
+                    best_score = float('inf')   # Start with positive infinity for metrics where lower is better
+                else:
+                    # Default: assume higher is better for unknown metrics
+                    best_score = float('-inf')
+                    
+                best_model_name = None
+                log_message(f"🎯 Primary metric: '{primary_metric}' (initialized best_score to {best_score})")
+                if metric_threshold is not None:
+                    log_message(f"⏰ Early stopping threshold: {metric_threshold} (will stop if any model meets or beats this score)")
+                else:
+                    log_message("⏰ No early stopping threshold set - will train all algorithms")
+                log_message("=" * 50)
+                log_message("🏋️ STARTING MODEL TRAINING...")
+                
+                for algo in algorithms:
+                    # Check for timeout before training each algorithm
+                    if experiment_timeout:
+                        elapsed_time = time.time() - start_time
+                        if elapsed_time > timeout_seconds:
+                            timed_out = True
+                            elapsed_minutes = elapsed_time / 60
+                            log_message(f"⏰ EXPERIMENT TIMEOUT REACHED after {elapsed_minutes:.1f} minutes")
+                            log_message(f"   Timeout limit was {experiment_timeout} minutes")
+                            log_message(f"   Stopping training before algorithm: {algo}")
+                            break
+                    
+                    if algo in model_map:
+                        try:
+                            log_message(f"\n🚀 Training {algo.replace('_', ' ').title()}...")
+                            
+                            # Train model
+                            model = model_map[algo]
+                            log_message(f"  • Model parameters: {model.get_params()}")
+                            model.fit(X_train, y_train)
+                            log_message(f"  • ✅ Model training completed")
+                            
+                            # Make predictions
+                            log_message(f"  • Making predictions on test set...")
+                            y_pred = model.predict(X_test)
+                            log_message(f"  • ✅ Predictions completed ({len(y_pred)} predictions)")
+                            
+                            # Calculate ALL metrics for this task type
+                            log_message(f"  • Calculating metrics...")
+                            metrics = {}
+                            
+                            if task_type == 'classification':
+                                # Calculate all classification metrics
+                                try:
+                                    metrics['accuracy'] = float(accuracy_score(y_test, y_pred))
+                                    log_message(f"    ✓ Accuracy: {metrics['accuracy']:.6f}")
+                                except Exception as e:
+                                    metrics['accuracy'] = 0.0
+                                    log_message(f"    ✗ Accuracy calculation failed: {e}", "warning")
+                                    
+                                try:
+                                    metrics['precision'] = float(precision_score(y_test, y_pred, average='weighted', zero_division=0))
+                                    log_message(f"    ✓ Precision: {metrics['precision']:.6f}")
+                                except Exception as e:
+                                    metrics['precision'] = 0.0
+                                    log_message(f"    ✗ Precision calculation failed: {e}", "warning")
+                                    
+                                try:
+                                    metrics['recall'] = float(recall_score(y_test, y_pred, average='weighted', zero_division=0))
+                                    log_message(f"    ✓ Recall: {metrics['recall']:.6f}")
+                                except Exception as e:
+                                    metrics['recall'] = 0.0
+                                    log_message(f"    ✗ Recall calculation failed: {e}", "warning")
+                                    
+                                try:
+                                    metrics['f1'] = float(f1_score(y_test, y_pred, average='weighted', zero_division=0))
+                                    log_message(f"    ✓ F1-Score: {metrics['f1']:.6f}")
+                                except Exception as e:
+                                    metrics['f1'] = 0.0
+                                    log_message(f"    ✗ F1-Score calculation failed: {e}", "warning")
+                                    
+                                # Calculate AUC metrics for binary and multiclass classification
+                                try:
+                                    # Get unique classes to determine if binary or multiclass
+                                    unique_classes = len(np.unique(y_test))
+                                    
+                                    if unique_classes == 2:
+                                        # Binary classification - use predict_proba for AUC
+                                        if hasattr(model, 'predict_proba'):
+                                            y_prob = model.predict_proba(X_test)[:, 1]  # Get probability of positive class
+                                            metrics['auc'] = float(roc_auc_score(y_test, y_prob))
+                                            log_message(f"    ✓ AUC (binary): {metrics['auc']:.6f}")
+                                        else:
+                                            # Fallback to decision function if available
+                                            if hasattr(model, 'decision_function'):
+                                                y_scores = model.decision_function(X_test)
+                                                metrics['auc'] = float(roc_auc_score(y_test, y_scores))
+                                                log_message(f"    ✓ AUC (binary, decision function): {metrics['auc']:.6f}")
+                                            else:
+                                                metrics['auc'] = 0.5  # Random classifier baseline
+                                                log_message(f"    ⚠️ AUC: Model doesn't support probability prediction, using baseline: {metrics['auc']:.6f}", "warning")
+                                    else:
+                                        # Multiclass classification - use one-vs-rest approach
+                                        if hasattr(model, 'predict_proba'):
+                                            y_prob = model.predict_proba(X_test)
+                                            metrics['auc'] = float(roc_auc_score(y_test, y_prob, multi_class='ovr', average='weighted'))
+                                            log_message(f"    ✓ AUC (multiclass, weighted): {metrics['auc']:.6f}")
+                                        else:
+                                            metrics['auc'] = 0.5  # Random classifier baseline
+                                            log_message(f"    ⚠️ AUC: Model doesn't support probability prediction for multiclass, using baseline: {metrics['auc']:.6f}", "warning")
+                                            
+                                except Exception as e:
+                                    metrics['auc'] = 0.5  # Random classifier baseline
+                                    log_message(f"    ✗ AUC calculation failed: {e}, using baseline: {metrics['auc']:.6f}", "warning")
+                            else:
+                                # Calculate all regression metrics
+                                try:
+                                    metrics['mae'] = float(mean_absolute_error(y_test, y_pred))
+                                    log_message(f"    ✓ MAE: {metrics['mae']:.6f}")
+                                except Exception as e:
+                                    metrics['mae'] = float('inf')
+                                    log_message(f"    ✗ MAE calculation failed: {e}", "warning")
+                                    
+                                try:
+                                    metrics['mse'] = float(mean_squared_error(y_test, y_pred))
+                                    log_message(f"    ✓ MSE: {metrics['mse']:.6f}")
+                                except Exception as e:
+                                    metrics['mse'] = float('inf')
+                                    log_message(f"    ✗ MSE calculation failed: {e}", "warning")
+                                    
+                                try:
+                                    metrics['rmse'] = float(np.sqrt(mean_squared_error(y_test, y_pred)))
+                                    log_message(f"    ✓ RMSE: {metrics['rmse']:.6f}")
+                                except Exception as e:
+                                    metrics['rmse'] = float('inf')
+                                    log_message(f"    ✗ RMSE calculation failed: {e}", "warning")
+                                    
+                                try:
+                                    metrics['r2'] = float(r2_score(y_test, y_pred))
+                                    log_message(f"    ✓ R²: {metrics['r2']:.6f}")
+                                except Exception as e:
+                                    metrics['r2'] = -float('inf')
+                                    log_message(f"    ✗ R² calculation failed: {e}", "warning")
+                            
+                            # Verify the primary metric exists
+                            if primary_metric not in metrics:
+                                log_message(f"  ⚠️ WARNING: Primary metric '{primary_metric}' not found!", "warning")
+                                primary_metric = list(metrics.keys())[0] if metrics else 'accuracy'
+                                log_message(f"  → Using '{primary_metric}' as primary metric instead", "warning")
+                            
+                            current_score = metrics[primary_metric]
+                            log_message(f"  🎯 Primary metric '{primary_metric}': {current_score:.6f}")
+                            
+                            # Define which metrics are better when higher vs lower
+                            higher_is_better = ['accuracy', 'precision', 'recall', 'f1', 'r2', 'auc']
+                            lower_is_better = ['mae', 'mse', 'rmse']
+                            
+                            if primary_metric in higher_is_better:
+                                is_better = current_score > best_score
+                                comparison = f"{current_score:.6f} > {best_score:.6f}"
+                            elif primary_metric in lower_is_better:
+                                is_better = current_score < best_score
+                                comparison = f"{current_score:.6f} < {best_score:.6f}"
+                            else:
+                                # Default: assume higher is better for unknown metrics
+                                is_better = current_score > best_score
+                                comparison = f"{current_score:.6f} > {best_score:.6f}"
+                            
+                            log_message(f"  📈 Best model comparison: {comparison} = {is_better}")
+                            
+                            if is_better:
+                                best_score = current_score
+                                best_model_name = algo
+                                log_message(f"  🏆 New best model: {algo.replace('_', ' ').title()}")
+                            
+                            # Store results and trained model pipeline with precise identifiers
+                            model_key = f"{job_data.get('id', 'unknown')}_{algo}"
+                            trained_models_storage[model_key] = {
+                                'model': model,  # This is now a full pipeline including preprocessing
+                                'feature_columns': original_columns,  # Store original column names for user input
+                                'target_column': target_column,
+                                'task_type': task_type,
+                                'scaler': None,  # Scaling is now part of the pipeline
+                                'job_id': job_data.get('id', 'unknown'),
+                                'algorithm': algo,
+                                'model_key': model_key,  # Store the key for exact matching
+                                'job_name': job_data.get('name', 'unknown'),
+                                'display_name': algo.replace('_', ' ').title(),
+                                'categorical_columns': categorical_cols,
+                                'numeric_columns': numeric_cols
+                            }
+                            
+                            model_results.append({
+                                'name': algo,
+                                'display_name': algo.replace('_', ' ').title(),
+                                'metrics': metrics,
+                                'primary_score': current_score,
+                                'created_at': datetime.now().isoformat(),
+                                'is_best': False,  # Will be updated later
+                                'model_key': model_key
+                            })
+                            
+                            log_message(f"  ✅ {algo.replace('_', ' ').title()} completed successfully")
+                            
+                            # Check for early stopping condition
+                            if metric_threshold is not None:
+                                # Determine if threshold has been met based on metric direction
+                                threshold_met = False
+                                if primary_metric in higher_is_better:
+                                    threshold_met = current_score >= metric_threshold
+                                    comparison_op = ">="
+                                elif primary_metric in lower_is_better:
+                                    threshold_met = current_score <= metric_threshold
+                                    comparison_op = "<="
+                                else:
+                                    # Default: assume higher is better for unknown metrics
+                                    threshold_met = current_score >= metric_threshold
+                                    comparison_op = ">="
+                                
+                                log_message(f"  🎯 Threshold check: {current_score:.6f} {comparison_op} {metric_threshold} = {threshold_met}")
+                                
+                                if threshold_met:
+                                    early_stop_triggered = True
+                                    log_message(f"  🛑 EARLY STOPPING TRIGGERED!")
+                                    log_message(f"     Model '{algo.replace('_', ' ').title()}' achieved {primary_metric}={current_score:.6f}")
+                                    log_message(f"     This meets the threshold of {metric_threshold}")
+                                    log_message(f"     Stopping training - remaining algorithms will not be trained")
+                                    break  # Exit the training loop
+                            
+                        except Exception as e:
+                            log_message(f"  ❌ Failed to train {algo.replace('_', ' ').title()}: {str(e)}", "error")
+                    else:
+                        log_message(f"  ⚠️ Algorithm '{algo}' not available", "warning")
+                
+                # Mark best model
+                for result in model_results:
+                    result['is_best'] = result['name'] == best_model_name
+                
+                log_message("=" * 50)
+                log_message("🏆 TRAINING SUMMARY:")
+                log_message(f"  • Total models trained: {len(model_results)}")
+                if early_stop_triggered:
+                    remaining_algorithms = len(algorithms) - len(model_results)
+                    log_message(f"  • Early stopping triggered after {len(model_results)} model(s)")
+                    log_message(f"  • Skipped {remaining_algorithms} remaining algorithm(s)")
+                    log_message(f"  • Threshold met: {primary_metric} {'≥' if primary_metric in higher_is_better else '≤'} {metric_threshold}")
+                log_message(f"  • Primary metric used: {primary_metric}")
+                if best_model_name:
+                    log_message(f"  • Best model: {best_model_name.replace('_', ' ').title()}")
+                    log_message(f"  • Best score: {best_score:.6f}")
+                else:
+                    log_message("  • No models completed successfully", "warning")
+                
+                if timed_out:
+                    if len(model_results) > 0:
+                        log_message("⏰ TRAINING COMPLETED WITH TIMEOUT!")
+                        log_message(f"   Experiment exceeded {experiment_timeout} minute limit")
+                        log_message(f"   However, {len(model_results)} model(s) completed successfully")
+                    else:
+                        log_message("⏰ TRAINING FAILED - TIMEOUT REACHED!")
+                        log_message(f"   Experiment exceeded {experiment_timeout} minute limit")
+                        log_message("   No models were completed before timeout")
+                elif early_stop_triggered:
+                    log_message("🛑 TRAINING COMPLETED WITH EARLY STOP!")
+                else:
+                    log_message("🎉 TRAINING COMPLETED SUCCESSFULLY!")
+                log_message("=" * 50)
+                
+                # Return results to JavaScript with comprehensive logs  
+                if timed_out and len(model_results) > 0:
+                    job_status = 'Completed (timed out)'
+                elif timed_out and len(model_results) == 0:
+                    job_status = 'Failed (timed out)'
+                elif early_stop_triggered:
+                    job_status = 'Completed (stopped early)'
+                else:
+                    job_status = 'Completed'
+                training_results = {
+                    'success': not (timed_out and len(model_results) == 0),  # Success unless timed out with no results
+                    'results': model_results,
+                    'job_id': job_data.get('id', 'unknown'),
+                    'early_stop_triggered': early_stop_triggered,
+                    'timed_out': timed_out,
+                    'job_info': {
+                        'id': job_data.get('id', 'unknown'),
+                        'name': job_data.get('name', 'ML Training Job'),
+                        'training_logs': training_logs,
+                        'status': job_status,
+                        'models_count': len(model_results),
+                        'best_model': best_model_name.replace('_', ' ').title() if best_model_name else None,
+                        'best_score': best_score if best_model_name else None,
+                        'primary_metric': primary_metric,
+                        'early_stop_triggered': early_stop_triggered,
+                        'timed_out': timed_out,
+                        'experiment_timeout': experiment_timeout,
+                        'metric_threshold': metric_threshold
+                    }
+                }
+                
+                js.handleTrainingComplete(json.dumps(training_results))
+                print("✓ Training completed successfully with comprehensive logs")
+                
+            except Exception as e:
+                import traceback
+                error_msg = str(e)
+                log_message(f"❌ TRAINING FAILED: {error_msg}", "error")
+                log_message(f"📋 Traceback: {traceback.format_exc()}", "error")
+                
+                error_results = {
+                    'success': False,
+                    'error': error_msg,
+                    'job_id': job_data.get('id', 'error') if 'job_data' in locals() else 'error',
+                    'job_info': {
+                        'id': job_data.get('id', 'error') if 'job_data' in locals() else 'error',
+                        'name': 'Failed Training Job',
+                        'training_logs': training_logs,
+                        'status': 'failed',
+                        'error': error_msg
+                    }
+                }
+                js.handleTrainingComplete(json.dumps(error_results))
+        
+        # Prediction function
+        def predict_with_model_pyscript(model_key, input_data_json):
+            """Make predictions using a trained model with exact model key"""
+            try:
+                print(f"🔮 Making prediction with model key: {model_key}")
+                
+                # Parse input data
+                input_data = json.loads(input_data_json)
+                
+                # Validate input format
+                if 'input_data' not in input_data:
+                    raise ValueError("Missing 'input_data' in request")
+                
+                data_info = input_data['input_data']
+                if not all(key in data_info for key in ['columns', 'data']):
+                    raise ValueError("Missing 'columns' or 'data' in input_data")
+                
+                # Find the model in storage using exact key
+                model_found = None
+                model_info = None
+                
+                # First try exact key match
+                if model_key and model_key in trained_models_storage:
+                    model_found = trained_models_storage[model_key]['model']
+                    model_info = trained_models_storage[model_key]
+                    print(f"  ✓ Found model by exact key: {model_key}")
+                else:
+                    # Fallback: Look for the model by checking if model_key contains identifiers
+                    print(f"  ⚠️ Exact key '{model_key}' not found, trying fuzzy match...")
+                    for key, stored_model in trained_models_storage.items():
+                        # Check if this is the right model (by job_id and algorithm)
+                        if (model_key and (model_key in key or key in model_key)) or \
+                           (stored_model['algorithm'] in (model_key or '').lower()):
+                            model_found = stored_model['model']
+                            model_info = stored_model
+                            print(f"  ✓ Found model by fuzzy match: {key}")
+                            break
+                
+                if model_found is None:
+                    # If not found by algorithm, try finding the best model from the most recent training
+                    if trained_models_storage:
+                        # Get the most recently stored model (last one added)
+                        latest_key = list(trained_models_storage.keys())[-1]
+                        model_found = trained_models_storage[latest_key]['model']
+                        model_info = trained_models_storage[latest_key]
+                        print(f"  ✓ Using latest model: {latest_key}")
+                    else:
+                        raise ValueError(f"No trained model found for '{model_name}'")
+                
+                # Prepare input features for pipeline
+                import pandas as pd
+                import numpy as np
+                
+                print(f"  • Expected feature columns: {model_info['feature_columns']}")
+                print(f"  • Input columns provided: {data_info['columns']}")
+                
+                # Validate column match
+                if list(data_info['columns']) != model_info['feature_columns']:
+                    raise ValueError(f"Column mismatch! Model expects: {model_info['feature_columns']}, but got: {data_info['columns']}")
+                
+                # Create DataFrame with original column names and data types
+                feature_df = pd.DataFrame(data_info['data'], columns=data_info['columns'])
+                print(f"  • Input shape: {feature_df.shape}")
+                print(f"  • Input data types: {dict(feature_df.dtypes)}")
+                print(f"  • Raw input sample: {feature_df.iloc[0].to_dict() if len(feature_df) > 0 else 'No data'}")
+                
+                # The pipeline handles all preprocessing (imputation, encoding, scaling)
+                print("  • Using complete pipeline for preprocessing and prediction...")
+                predictions = model_found.predict(feature_df)
+                print(f"  • Generated {len(predictions)} predictions")
+                
+                # Convert numpy types to Python types for JSON serialization
+                predictions_list = [float(p) if hasattr(p, 'item') else p for p in predictions]
+                
+                print(f"  ✓ Predictions: {predictions_list}")
+                return json.dumps(predictions_list)
+                
+            except Exception as e:
+                error_msg = f"Prediction error: {str(e)}"
+                print(f"  ❌ {error_msg}")
+                return json.dumps({"error": error_msg})
+        
+        # Model serialization function
+        def serialize_model_pyscript(model_key):
+            """Serialize a trained model to base64 for download using exact model key"""
+            try:
+                print(f"📦 Serializing model with key: {model_key}")
+                
+                # Find the model in storage using exact key
+                model_found = None
+                model_info = None
+                
+                # First try exact key match
+                if model_key and model_key in trained_models_storage:
+                    model_found = trained_models_storage[model_key]['model']
+                    model_info = trained_models_storage[model_key]
+                    print(f"  ✓ Found model by exact key: {model_key}")
+                else:
+                    # Fallback: fuzzy matching
+                    print(f"  ⚠️ Exact key '{model_key}' not found, trying fuzzy match...")
+                    for key, stored_model in trained_models_storage.items():
+                        if (model_key and (model_key in key or key in model_key)) or \
+                           (stored_model['algorithm'] in (model_key or '').lower()):
+                            model_found = stored_model['model']
+                            model_info = stored_model
+                            print(f"  ✓ Found model by fuzzy match: {key}")
+                            break
+                
+                if model_found is None:
+                    if trained_models_storage:
+                        latest_key = list(trained_models_storage.keys())[-1]
+                        model_found = trained_models_storage[latest_key]['model']
+                        model_info = trained_models_storage[latest_key]
+                        print(f"  ✓ Using latest model: {latest_key}")
+                    else:
+                        raise ValueError(f"No trained model found for '{model_name}'")
+                
+                # Serialize the model using pickle
+                import pickle
+                import base64
+                
+                # Create a complete model package
+                model_package = {
+                    'model': model_found,
+                    'feature_columns': model_info['feature_columns'],
+                    'target_column': model_info['target_column'],
+                    'task_type': model_info['task_type'],
+                    'scaler': model_info['scaler'],
+                    'algorithm': model_info['algorithm'],
+                    'job_id': model_info['job_id'],
+                    'sklearn_version': '1.3.0',
+                    'serialization_date': pd.Timestamp.now().isoformat()
+                }
+                
+                # Serialize to bytes
+                model_bytes = pickle.dumps(model_package)
+                
+                # Encode as base64 for transfer
+                model_b64 = base64.b64encode(model_bytes).decode('utf-8')
+                
+                print(f"  ✓ Model serialized ({len(model_bytes)} bytes)")
+                return model_b64
+                
+            except Exception as e:
+                error_msg = f"Serialization error: {str(e)}"
+                print(f"  ❌ {error_msg}")
+                return json.dumps({"error": error_msg})
+        
+        # Make functions available to JavaScript
+        js.window.train_ml_models_pyscript = train_ml_models_pyscript
+        js.window.predict_with_model_pyscript = predict_with_model_pyscript
+        js.window.serialize_model_pyscript = serialize_model_pyscript
+        js.window.list_stored_models = list_stored_models
+        
+        # Set ready flag
+        js.window.pyScriptReady = True
+        print("✓ PyScript ready flag set")
+        
+        # Try to notify JavaScript
+        try:
+            js.notifyPyScriptReady()
+            print("✓ JavaScript notification successful")
+        except Exception as e:
+            print(f"JavaScript notification failed: {e}")
+            
+        print("PyScript initialization complete")
+    </py-script>
+
+    <!-- Hide PyScript output elements with JavaScript -->
+    <script>
+        // Function to hide PyScript output elements
+        function hidePyScriptElements() {
+            const selectors = [
+                'py-terminal',
+                'py-output', 
+                '.py-terminal',
+                '.py-output',
+                '.pyscript-terminal',
+                '.pyscript-output',
+                '.py-console',
+                '.pyscript-console',
+                '[data-testid="py-terminal"]',
+                '[data-testid="py-output"]',
+                '.py-warning',
+                '.pyscript-warning',
+                '.py-error',
+                '.pyscript-error',
+                '.py-stderr',
+                '.pyscript-stderr'
+            ];
+            
+            selectors.forEach(selector => {
+                const elements = document.querySelectorAll(selector);
+                elements.forEach(element => {
+                    element.style.display = 'none';
+                    element.style.visibility = 'hidden';
+                    element.style.height = '0';
+                    element.style.width = '0';
+                    element.style.overflow = 'hidden';
+                });
+            });
+        }
+        
+        // Hide elements immediately
+        hidePyScriptElements();
+        
+        // Hide elements after DOM is ready
+        document.addEventListener('DOMContentLoaded', hidePyScriptElements);
+        
+        // Hide elements periodically in case PyScript creates them dynamically
+        setInterval(hidePyScriptElements, 1000);
+        
+        // Also hide when PyScript finishes loading
+        window.addEventListener('py:ready', hidePyScriptElements);
+        window.addEventListener('py:all-done', hidePyScriptElements);
+    </script>
+
+    <script src="script.js?v=2"></script>
+
+    <!-- Create Workspace Flyout Panel -->
+    <div id="create-workspace-flyout" class="flyout-panel" role="dialog" aria-labelledby="create-workspace-title" aria-modal="true">
+        <div class="flyout-header">
+            <h2 id="create-workspace-title">Create a new workspace</h2>
+            <button class="flyout-close-btn" onclick="closeCreateWorkspaceFlyout()" aria-label="Close create workspace dialog">×</button>
+        </div>
+        <div class="flyout-content">
+            <div class="form-group">
+                <label for="workspace-name">Name</label>
+                <input type="text" id="workspace-name" class="form-input" placeholder="Enter workspace name" aria-describedby="workspace-name-help">
+                <div id="workspace-name-help" class="sr-only">Enter a unique name for your machine learning workspace</div>
+                <div id="workspace-name-error" class="error-message" style="display: none; color: #d32f2f; font-size: 12px; margin-top: 4px;" role="alert" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+                <label for="resource-group">Resource group</label>
+                <input type="text" id="resource-group" class="form-input" value="ResourceGroup1" aria-describedby="resource-group-help">
+                <div id="resource-group-help" class="sr-only">Azure resource group that will contain the workspace resources</div>
+            </div>
+            <div class="flyout-actions">
+                <button class="btn-secondary" onclick="closeCreateWorkspaceFlyout()" aria-label="Cancel workspace creation">Cancel</button>
+                <button class="btn-primary" onclick="createNewWorkspace()" aria-label="Create the new workspace">Create</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Model Registration Modal -->
+    <div id="registerModelModal" class="modal" style="display: none;" role="dialog" aria-labelledby="register-model-title" aria-modal="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="register-model-title">Register model</h2>
+                <span class="close" onclick="closeRegisterModelModal()" aria-label="Close registration dialog">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="registerModelForm">
+                    <div class="form-group">
+                        <label for="modelName">Name *</label>
+                        <input type="text" id="modelName" name="modelName" required placeholder="Enter model name" aria-describedby="model-name-help">
+                        <div id="model-name-help" class="sr-only">Enter a unique name for the registered model</div>
+                        <div id="modelNameError" class="error-message" style="display: none; color: #d73a49; font-size: 12px; margin-top: 4px;" role="alert" aria-live="polite"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="modelSelection">Model *</label>
+                        <select id="modelSelection" name="modelSelection" required aria-describedby="model-selection-help">
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                        <div id="model-selection-help" class="sr-only">Choose which trained model to register</div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeRegisterModelModal()" aria-label="Cancel model registration">Cancel</button>
+                <button type="button" class="btn btn-primary" id="registerModelButton" onclick="completeModelRegistration()" aria-label="Complete model registration">Register</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Deploy Model Flyout -->
+    <div id="deployModelFlyout" class="flyout" role="dialog" aria-labelledby="deploy-model-title" aria-modal="true">
+        <div class="flyout-header">
+            <h3 id="deploy-model-title">Deploy model</h3>
+            <div class="flyout-close" onclick="closeDeployModelFlyout()" aria-label="Close deployment dialog">&times;</div>
+        </div>
+        <div class="flyout-content">
+            <form id="deployModelForm">
+                <div class="form-group">
+                    <label for="instanceCount">Instance count</label>
+                    <input type="text" id="instanceCount" name="instanceCount" value="1" readonly aria-describedby="instance-count-help">
+                    <div id="instance-count-help" class="sr-only">Number of compute instances for the deployment</div>
+                </div>
+                <div class="form-group">
+                    <label for="virtualMachine">Virtual machine</label>
+                    <input type="text" id="virtualMachine" name="virtualMachine" value="In-browser" readonly aria-describedby="virtual-machine-help">
+                    <div id="virtual-machine-help" class="sr-only">Type of compute environment for model deployment</div>
+                </div>
+                <div class="form-group">
+                    <label for="endpointName">Endpoint name *</label>
+                    <input type="text" id="endpointName" name="endpointName" required placeholder="Enter endpoint name" aria-describedby="endpoint-name-help">
+                    <div id="endpoint-name-help" class="sr-only">Enter a unique name for the deployment endpoint</div>
+                </div>
+                <div class="form-group">
+                    <label for="deploymentName">Deployment name *</label>
+                    <input type="text" id="deploymentName" name="deploymentName" required placeholder="Enter deployment name" aria-describedby="deployment-name-help">
+                    <div id="deployment-name-help" class="sr-only">Enter a name for this specific deployment configuration</div>
+                </div>
+            </form>
+        </div>
+        <div class="flyout-footer">
+            <button type="button" class="btn btn-secondary" onclick="closeDeployModelFlyout()" aria-label="Cancel model deployment">Cancel</button>
+            <button type="button" class="btn btn-primary" id="deployModelButton" onclick="completeModelDeployment()" aria-label="Complete model deployment">Deploy</button>
+        </div>
+    </div>
+</body>
+</html>
