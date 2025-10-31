@@ -15,7 +15,7 @@ This exercise takes approximately **20** minutes.
 
     ![Screenshot of Azure AI Foundry portal home page.](./media/ai-foundry-portal.png)
 
-1. In the **Explore models and capablities** section, search for `gpt-4o`. Then, in the search results, select the **gpt-4o** model to view its details.
+1. In the **Explore models and capabilities** section, search for `gpt-4o`. Then, in the search results, select the **gpt-4o** model to view its details.
 
     ![Screenshot of the gpt-4o detals page.](./media/gpt-4o-details.png)
 
