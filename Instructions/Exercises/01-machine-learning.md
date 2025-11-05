@@ -55,7 +55,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
     - Set the task type to **Regression**.
     - Create a new ***tabular*** data asset named **ice-cream**
         - Upload the local **ice-cream.csv** file to the default workspace storage.
-        - Include <u>only</u> the following columns (*Date* is unique for each row, and adds predictive capability on its own):
+        - Include <u>only</u> the following columns (*Date* is unique for each row, and adds little predictive capability on its own):
             - **DayOfWeek**
             - **Month**
             - **Temperature**
