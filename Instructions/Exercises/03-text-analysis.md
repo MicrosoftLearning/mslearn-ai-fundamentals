@@ -30,8 +30,8 @@ This exercise takes approximately **20** minutes.
     - **Advanced settings**:
         - **Subscription**: *Your Azure subscription*
         - **Resource group**: *Create or select a resource group*
-        - **Region**: *Select any **AI Foundry recommended** region*
-        - **AI Foundry or Azure OpenAI** *Create a new Azure AI Foundry resource with a valid name*
+        - **Region**: *Select any **Foundry recommended** region*
+        - **AI Foundry or Azure OpenAI** *Create a new Foundry resource with a valid name*
 
 1. Select **Create**. Wait for your project to be created. It may take a few minutes.
 
