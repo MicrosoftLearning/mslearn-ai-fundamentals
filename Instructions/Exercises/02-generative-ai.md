@@ -1,19 +1,19 @@
 ---
 lab:
-    title: 'Explore generative AI in Azure AI Foundry portal'
+    title: 'Explore generative AI in Microsoft Foundry'
 ---
 
-# Explore generative AI in Azure AI Foundry Portal
+# Explore generative AI in Microsoft Foundry
 
-Generative AI describes a category of capabilities within AI that create content. People often interact with generative AI that has been built into chat applications. In this exercise, you try out generative AI in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications. 
+Generative AI describes a category of capabilities within AI that create content. People often interact with generative AI that has been built into chat applications. In this exercise, you try out generative AI in Microsoft Foundry portal, Microsoft's platform for creating intelligent applications. 
 
 This exercise takes approximately **20** minutes.
 
-## Create a project in Azure AI Foundry portal
+## Create a project in Microsoft Foundry
 
-1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
+1. In a web browser, open [Microsoft Foundry](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
-    ![Screenshot of Azure AI Foundry portal home page.](./media/ai-foundry-portal.png)
+    ![Screenshot of Microsoft Foundry portal home page.](./media/ai-foundry-portal.png)
 
 1. In the **Explore models and capabilities** section, search for `gpt-4o`. Then, in the search results, select the **gpt-4o** model to view its details.
 
@@ -22,7 +22,7 @@ This exercise takes approximately **20** minutes.
 1. Select **Use this model**.
 
 1. In the **Create a project** wizard, enter a valid name for your project. Then expand **Advanced options** to specify the following settings for your project:
-    - **Azure AI Foundry resource**: *Enter a valid name for your AI Foundry resource.*
+    - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select any of the **AI Foundry recommended** regions\*
@@ -33,13 +33,13 @@ This exercise takes approximately **20** minutes.
 
     If you are prompted to deploy the model to a different region, use the default settings to do so.
 
-## Explore generative AI in Azure AI Foundry's chat playground
+## Explore generative AI in Foundry's chat playground
 
 1. After the project has been created, in the task pane on the left, select **Playgrounds**. 
 
     >*Tip*: If necessary, expand the menu to read its contents by clicking on the top 'expand' icon.
 
-1. In Azure AI Foundry's Playgrounds page, select **Try the Chat playground**. Close any tips or quick start panes that are opened.
+1. In Foundry's Playgrounds page, select **Try the Chat playground**. Close any tips or quick start panes that are opened.
 
     The Chat playground is a user interface that enables you to try out building a chat application with different generative AI models.
 
@@ -73,7 +73,7 @@ This exercise takes approximately **20** minutes.
     Where's a good location in the city to stay?
     ```
 
-1. Review the response, which should provide some places to stay in Paris. ote that the chat session retains the context from previous prompts, so it knows that "the city" in question is Paris.
+1. Review the response, which should provide some places to stay in Paris. Note that the chat session retains the context from previous prompts, so it knows that "the city" in question is Paris.
 
 1. Let's iterate based on previous prompts and responses to refine the result. Enter the following prompt:
 
