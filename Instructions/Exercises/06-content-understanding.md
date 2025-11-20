@@ -5,9 +5,9 @@ lab:
 
 # Extract data with Content Understanding in Microsoft Foundry
 
-Azure AI Content Understanding provides multi-modal analysis of documents, audio files, video, and images to extract information.
+Azure Content Understanding provides multi-modal analysis of documents, audio files, video, and images to extract information.
 
-In this exercise, you will use Azure AI Content Understanding in Foundry, Microsoft's platform for creating intelligent applications, to extract information from invoices. 
+In this exercise, you will use Azure Content Understanding in Foundry, Microsoft's platform for creating intelligent applications, to extract information from invoices. 
 
 This exercise takes approximately **25** minutes.
 
@@ -25,12 +25,12 @@ This exercise takes approximately **25** minutes.
 
     ![Screenshot of the Try COntent Understanding button.](./media/try-content-understanding.png)
 
-1. In the Content Understanding page, select **Create a project to start**. Then in the **Create project** dialog, select the recommended resource type (**Azure AI Foundry resource**):
+1. In the Content Understanding page, select **Create a project to start**. Then in the **Create project** dialog, select the recommended resource type (**Foundry resource**):
 
     ![Screenshot of analysis results.](./media/resource-type.png)
 
 1. On the **Next** page, enter a valid name for your project. Then Select **Advanced options** and specify the following settings:
-    - **Azure AI Foundry resource**: *A valid name for your Azure AI Foundry resource*
+    - **Foundry resource**: *A valid name for your Foundry resource*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select one of the following locations\*:
