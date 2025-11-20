@@ -7,7 +7,7 @@ lab:
 
 Azure AI Language includes Text Analytics, with capabilities such as entity recognition, key phrase extraction, summarization, and sentiment analysis. For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to extract named entities, identify key phrases, summarize text, and more.
 
-In this exercise, you will use Azure AI Language in Foundry portal, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. 
+In this exercise, you will use Azure AI Language in Foundry, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. 
 
 This exercise takes approximately **20** minutes.
 
