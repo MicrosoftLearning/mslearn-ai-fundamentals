@@ -1,11 +1,11 @@
 ---
 lab:
-    title: 'Analyze images in Azure AI Foundry portal'
+    title: 'Analyze images in Microsoft Foundry'
 ---
 
-# Analyze images in Azure AI Foundry portal
+# Analyze images in Microsoft Foundry
 
-**Azure AI Vision** includes numerous capabilities for understanding image content and context and extracting information from images. In this exercise, you will use Azure AI Vision in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to analyze images using the built-in try-it-out experiences. 
+**Azure AI Vision** includes numerous capabilities for understanding image content and context and extracting information from images. In this exercise, you will use Azure AI Vision in Microsoft Foundry, Microsoft's platform for creating intelligent applications, to analyze images using the built-in try-it-out experiences. 
 
 Suppose the fictitious retailer *Northwind Traders* has decided to implement a "smart store", in which AI services monitor the store to identify customers requiring assistance, and direct employees to help them. By using Azure AI Vision, images taken by cameras throughout the store can be analyzed to provide meaningful descriptions of what they depict.
 
@@ -16,11 +16,11 @@ This exercise takes approximately **20** minutes.
 1. Download **[image-analysis.zip](https://aka.ms/mslearn-images-for-analysis)** from `https://aka.ms/mslearn-images-for-analysis`.
 1. Extract the downloaded .zip file to a folder on your computer.
 
-## Create a project in Azure AI Foundry portal
+## Create a project in Microsoft Foundry
 
-1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
+1. In a web browser, open [Microsoft Foundry](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
-    ![Screenshot of Azure AI Foundry portal home page.](./media/ai-foundry-portal.png)
+    ![Screenshot of Foundry home page.](./media/ai-foundry-portal.png)
 
 1. Scroll to the bottom of the page, and select the **Explore Azure AI Services** tile.
 
