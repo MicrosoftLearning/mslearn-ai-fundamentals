@@ -1,21 +1,21 @@
 ---
 lab:
-    title: 'Explore speech in Azure AI Foundry portal'
+    title: 'Explore speech in Microsoft Foundry'
 ---
 
-# Explore speech in Azure AI Foundry portal
+# Explore speech in Microsoft Foundry
 
 Azure AI Speech transcribes speech into text, and turns text into audible speech. You might use AI Speech to create an application that can transcribe meeting notes or generate text from the recording of interviews, or to support an interactive AI assistant that can respond to spoken commands and queries.
 
-In this exercise, you will use Azure AI Speech in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to explore core Azure AI Speech capabilities. 
+In this exercise, you will use Azure AI Speech in Foundry, Microsoft's platform for creating intelligent applications, to explore core Azure AI Speech capabilities. 
 
 This exercise takes approximately **15** minutes.
 
-## Create a project in Azure AI Foundry portal
+## Create a project in Microsoft Foundry
 
-1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
+1. In a web browser, open the [Microsoft Foundry](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
-    ![Screenshot of Azure AI Foundry portal home page.](./media/ai-foundry-portal.png)
+    ![Screenshot of Microsoft Foundry home page.](./media/ai-foundry-portal.png)
 
 1. Scroll to the bottom of the page, and select the **Explore Azure AI Services** tile.
 
