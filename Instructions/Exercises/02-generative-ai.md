@@ -13,7 +13,7 @@ This exercise takes approximately **20** minutes.
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
-    ![Screenshot of Microsoft Foundry portal home page.](./media/ai-foundry-portal.png)
+    ![Screenshot of Microsoft Foundry home page.](./media/ai-foundry-portal.png)
 
 1. In the **Explore models and capabilities** section, search for `gpt-4o`. Then, in the search results, select the **gpt-4o** model to view its details.
 
