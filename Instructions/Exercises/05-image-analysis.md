@@ -5,9 +5,9 @@ lab:
 
 # Analyze images in Microsoft Foundry
 
-**Azure AI Vision** includes numerous capabilities for understanding image content and context and extracting information from images. In this exercise, you will use Azure AI Vision in Microsoft Foundry, Microsoft's platform for creating intelligent applications, to analyze images using the built-in try-it-out experiences. 
+**Azure Vision** includes numerous capabilities for understanding image content and context and extracting information from images. In this exercise, you will use Azure Vision in Microsoft Foundry, Microsoft's platform for creating intelligent applications, to analyze images using the built-in try-it-out experiences. 
 
-Suppose the fictitious retailer *Northwind Traders* has decided to implement a "smart store", in which AI services monitor the store to identify customers requiring assistance, and direct employees to help them. By using Azure AI Vision, images taken by cameras throughout the store can be analyzed to provide meaningful descriptions of what they depict.
+Suppose the fictitious retailer *Northwind Traders* has decided to implement a "smart store", in which AI services monitor the store to identify customers requiring assistance, and direct employees to help them. By using Azure Vision, images taken by cameras throughout the store can be analyzed to provide meaningful descriptions of what they depict.
 
 This exercise takes approximately **20** minutes.
 
@@ -47,13 +47,13 @@ This exercise takes approximately **20** minutes.
     - **Connect Azure AI Services**: *Create a new Azure AI Services resource with a valid name*
     - **Connect Azure AI Search**: Skip connecting
 
-    \**At the time of writing, Azure AI Vision is supported in hubs in these regions*.
+    \**At the time of writing, Azure Vision is supported in hubs in these regions*.
 
 1. When the hub is created, you will be prompted to create a project. Enter a suitable project name and select **Create project**.
 
 ## Generate captions for an image
 
-Let's use the image captioning functionality of Azure AI Vision to analyze images taken by a camera in the *Northwind Traders* store. Image captions are available through the **Caption** and **Dense Captions** features.
+Let's use the image captioning functionality of Azure Vision to analyze images taken by a camera in the *Northwind Traders* store. Image captions are available through the **Caption** and **Dense Captions** features.
 
 1. In the task pane on the left, select **AI Services**.
 
@@ -114,4 +114,4 @@ If you don’t intend to do more exercises, delete any resources that you no lon
 
 ## Learn more
 
-To learn more about what you can do with this service, see the [Azure AI Vision page](https://learn.microsoft.com/azure/ai-services/computer-vision/overview).
+To learn more about what you can do with this service, see the [Azure Vision page](https://learn.microsoft.com/azure/ai-services/computer-vision/overview).
