@@ -1,21 +1,21 @@
 ---
 lab:
-    title: 'Extract data with Content Understanding in Azure AI Foundry portal​'
+    title: 'Extract data with Content Understanding in Microsoft Foundry​'
 ---
 
-# Extract data with Content Understanding in Azure AI Foundry portal
+# Extract data with Content Understanding in Microsoft Foundry
 
 Azure AI Content Understanding provides multi-modal analysis of documents, audio files, video, and images to extract information.
 
-In this exercise, you will use Azure AI Content Understanding in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to extract information from invoices. 
+In this exercise, you will use Azure AI Content Understanding in Foundry, Microsoft's platform for creating intelligent applications, to extract information from invoices. 
 
 This exercise takes approximately **25** minutes.
 
-## Create an Azure AI Foundry project for content understanding
+## Create a Microsoft Foundry project for content understanding
 
-1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
+1. In a web browser, open [Microsoft Foundry](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
-    ![Screenshot of Azure AI Foundry portal home page.](./media/ai-foundry-portal.png)
+    ![Screenshot of Foundry home page.](./media/ai-foundry-portal.png)
 
 1. Scroll to the bottom of the page, and select the **Explore Azure AI Services** tile.
 
