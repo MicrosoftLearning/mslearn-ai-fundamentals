@@ -5,9 +5,9 @@ lab:
 
 # Analyze text in Microsoft Foundry
 
-Azure AI Language includes Text Analytics, with capabilities such as entity recognition, key phrase extraction, summarization, and sentiment analysis. For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to extract named entities, identify key phrases, summarize text, and more.
+Azure Language includes Text Analytics, with capabilities such as entity recognition, key phrase extraction, summarization, and sentiment analysis. For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to extract named entities, identify key phrases, summarize text, and more.
 
-In this exercise, you will use Azure AI Language in Foundry, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. 
+In this exercise, you will use Azure Language in Foundry, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. 
 
 This exercise takes approximately **20** minutes.
 
@@ -37,15 +37,15 @@ This exercise takes approximately **20** minutes.
 
 1. When the project is created, you will be taken to an **Language** playground (if not, in the task pane on the left, select **Playgrounds** and open the Language playground from there.)
 
-    The Language playground is a user interface that enables you to try out some Azure AI Language capabilities.  
+    The Language playground is a user interface that enables you to try out some Azure Language capabilities.  
 
-## Use Azure AI Language to analyze text
+## Use Azure Language to analyze text
 
-Azure AI Language offers a wide range of text analysis capabilities.
+Azure Language offers a wide range of text analysis capabilities.
 
-### Extract named entities with Azure AI Language in Azure AI Foundry portal
+### Extract named entities with Azure Language in Foundry
 
-*Named entities* are words that describe people, places, and objects with proper names. Let's use the named entity extraction capability of Azure AI Language to identify types of information in a review.
+*Named entities* are words that describe people, places, and objects with proper names. Let's use the named entity extraction capability of Azure Language to identify types of information in a review.
 
 1. In the Language playground, select **Extract information**. Then select the **Extract named entities** tile. 
 
@@ -64,9 +64,9 @@ Azure AI Language offers a wide range of text analysis capabilities.
 
     Notice in the *Details* section how the extracted entities come with additional information such as type and confidence scores. The confidence score represents the likelihood that the type identified actually belongs to that category.
 
-### Extract key phrases with Azure AI Language in Azure AI Foundry portal
+### Extract key phrases with Azure Language in Foundry
 
-*Key phrases* are the most important pieces of information in text. Let's use the key phrase extraction capability of Azure AI Language to pull important information from a review.
+*Key phrases* are the most important pieces of information in text. Let's use the key phrase extraction capability of Azure Language to pull important information from a review.
 
 1. In the Language playground, select **Extract information**. Then select the **Extract key phrases** tile. 
 
@@ -85,9 +85,9 @@ Azure AI Language offers a wide range of text analysis capabilities.
 
     Notice the different phrases extracted in the *Details* section. These phrases should contribute most to the text's meaning.
 
-### Summarize text with Azure AI Language in Azure AI Foundry portal
+### Summarize text with Azure Language in Foundry
  
-Let's look at Azure AI Language's summarization capabilities.
+Let's look at Azure Language's summarization capabilities.
 
 1. In the Language playground, select **Summarize information**, then select the **Summarize text** tile.
 
@@ -129,7 +129,7 @@ Sentiment analysis is a common task when analyzing text like hotel reviews.
 
 ## Detect language and translate text
 
-Azure AI Language enables you to detect the language in which text is written. Additionally, Azure AI Translator enables you to easily translate text from one language to another.
+Azure Language enables you to detect the language in which text is written. Additionally, Azure Translator enables you to easily translate text from one language to another.
 
 ### Detect language
 
