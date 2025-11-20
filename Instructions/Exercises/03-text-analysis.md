@@ -1,21 +1,21 @@
 ---
 lab:
-    title: 'Analyze text in Azure AI Foundry portal'
+    title: 'Analyze text in Microsoft Foundry'
 ---
 
-# Analyze text in Azure AI Foundry portal
+# Analyze text in Microsoft Foundry
 
 Azure AI Language includes Text Analytics, with capabilities such as entity recognition, key phrase extraction, summarization, and sentiment analysis. For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to extract named entities, identify key phrases, summarize text, and more.
 
-In this exercise, you will use Azure AI Language in Azure AI Foundry portal, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. 
+In this exercise, you will use Azure AI Language in Foundry portal, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. 
 
 This exercise takes approximately **20** minutes.
 
-## Create a project in Azure AI Foundry portal
+## Create a project in Microsoft Foundry
 
-1. In a web browser, open the [Azure AI Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Azure AI Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
+1. In a web browser, open the [Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Microsoft Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
-    ![Screenshot of Azure AI Foundry portal home page.](./media/ai-foundry-portal.png)
+    ![Screenshot of Foundry home page.](./media/ai-foundry-portal.png)
 
 1. Scroll to the bottom of the page, and select the **Explore Azure AI Services** tile.
 
