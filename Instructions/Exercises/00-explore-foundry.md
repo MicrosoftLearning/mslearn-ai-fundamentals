@@ -45,7 +45,7 @@ This exercise takes approximately **20** minutes.
 
 1. On the **gpt-4o** page, you can find more information about the model's capabilities. In order to use the model, you need to deploy it. Select **Deploy** with **Default settings**. 
 
-    ![Screenshot of the new Foundry with the model type selected for deployment.](./media/new-foundry-models-page.png) 
+    ![Screenshot of the new Foundry with the model type selected for deployment.](./media/new-foundry-deploy-model.png) 
 
 ## Test the model in a Playground
 
