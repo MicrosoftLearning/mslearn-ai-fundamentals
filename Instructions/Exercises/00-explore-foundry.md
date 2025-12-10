@@ -49,7 +49,11 @@ This exercise takes approximately **20** minutes.
 
 ## Test the model in a Playground
 
-1. You can test and customize the deployed model's capabilities in a **Playground** setting. Notice the model you are working with is selected at the top of the screen. Let's try chatting with the model. In the chat screen, enter the following (*note*: this is known as a *prompt*): 
+1. You can test and customize the deployed model's capabilities in a **Playground** setting. Notice the model you are working with is selected at the top of the screen. 
+
+    ![Screenshot of the new Foundry chat playground page set to test the gpt-4o model.](./media/new-foundry-chat-playground.png)
+
+1. Let's try chatting with the model. In the chat screen, enter the following prompt:
 
     ```prompt
     I'm getting started with AI. Can you summarize the relationship between a model and AI application?
