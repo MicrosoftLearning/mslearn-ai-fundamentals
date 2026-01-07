@@ -1,9 +1,9 @@
 ---
 lab:
-    title: 'Explore speech in Microsoft Foundry'
+    title: 'Explore speech in the new Microsoft Foundry portal'
 ---
 
-# Explore speech in Microsoft Foundry
+# Explore speech in the new Microsoft Foundry portal
 
 In this exercise, use Microsoft's platform for creating AI applications, Microsoft Foundry, to interact with a generative AI model using speech. You'll explore Azure Speech' speech-to-text (STT) and text-to-speech (TTS) functionalities through an agentic application.
 
