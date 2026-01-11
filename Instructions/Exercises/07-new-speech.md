@@ -136,7 +136,11 @@ Now let's review the code that makes this web experience possible!
 
 ## Try it out 
 
-1. Now you have reviewed the code, the next step is to try and implement it yourself. We suggest you explore running it in Visual Studio Code (VS Code) on your own if you have the necessary access. Those with a work or school account can click on **Open in VS Code for the Web** at the top of the code window and follow along with the instructions.  
+Now you have reviewed the code, the next step is to try and implement it yourself. 
+
+1. Those with a work or school account can click on **Open in VS Code for the Web** at the top of the code window and follow along with the instructions.  
+    
+    ![Screenshot of the open button at the top of the code window.](./media/open-in-vs-code-location.png)
 
     ![Screenshot of VS Code for the Web starting page.](./media/0126-vscode-for-web.png)
 
