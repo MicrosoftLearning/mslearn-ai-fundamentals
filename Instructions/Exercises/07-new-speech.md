@@ -5,37 +5,25 @@ lab:
 
 # Explore speech in the new Microsoft Foundry portal
 
-In this exercise, use Microsoft's platform for creating AI applications, Microsoft Foundry, to interact with a generative AI model using speech. You'll explore Azure Speech' speech-to-text (STT) and text-to-speech (TTS) functionalities through an agentic application.
+The two fundamental speech capabilities that power voice-enabled applications are speech recognition (converting spoken words to text) and speech synthesis (converting text to natural-sounding speech). Voice live in the Speech Playground supports both speech recognition and speech synthesis, enabling you to have a voice-based conversation with the model. Azure Speech Voice Live is a service used to build real-time voice-based agents. Voice live combines several Azure Speech capabilities. 
 
-> **Note**: This exercise is designed to take you through the steps to train and test a model using the new Foundry portal. If you have an Azure subscription with sufficient permissions, you can provision a Foundry project and use that for the exercise. However, Foundry is designed for enterprise-scale machine learning solutions that involve huge volumes of data and cloud-based compute. If you don’t have access to Azure, or if you have limited time to complete the exercise, a browser-based Lab app that includes the core functionality of Azure Speech used in this exercise is also provided at `https://aka.ms/speech-playground`. While the user interface in web-based Lab is not identical to Foundry, it’s similar enough to make the transition to Foundry intuitive. Note that the web-based Lab app runs in the browser, so refreshing the page at any point will restart the app!
+In this exercise, use Microsoft's platform for creating AI applications, Microsoft Foundry, to interact with a generative AI model using speech. You'll explore Azure Speech' speech-to-text (STT) and text-to-speech (TTS) functionalities through a voice live agentic application.
 
-This exercise takes approximately **20** minutes.
+This exercise takes approximately **25** minutes.
 
-## Create a project in Microsoft Foundry
+## Create a Microsoft Foundry project
 
-1. In a web browser, open [Microsoft Foundry](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
+Microsoft Foundry uses projects to organize models, resources, data, and other assets used to develop an AI solution.
 
-    ![Screenshot of Microsoft Foundry home page with the new Foundry toggle highlighted.](./media/foundry-home-page-classic.png)
+1. In a web browser, open Microsoft Foundry at https://ai.azure.com and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the Foundry logo at the top left to navigate to the home page.
 
-1. At the top of the screen, select the **New Foundry** toggle. 
+1. If it is not already enabled, in the tool bar the top of the page, enable the New Foundry option. Then, if prompted, create a new project with a unique name of your choice, using the default options. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
-1. To utilize the new Foundry user interface, you will need to create a project in a supported region. In the dropdown menu, select **Create a new project**. (*Note*: If other projects have been created in the subscription, and they are deployed in a supported region, then they will also appear in the drop down list.)
-
-    ![Screenshot of project selection menu to access the new Foundry UI.](./media/create-project-new-foundry.png)
-
-1. In the **Create a project** wizard, enter a valid name for your project. Then expand **Advanced options** to specify the following settings for your project:
-    - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
-    - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Create or select a resource group*
-    - **Region**: Select any of the **Foundry recommended** regions\*
-    
-    \**Model deployments are restricted by regional quotas. If you select a region in which you have insufficient available quota, you may need to select an alternative region for a new resource later.*
-
-1. Select **Create**. Wait for your project to be created. It may take a few minutes.
+    ![Screenshot of the New Foundry Home Page](./media/0126-new-foundry-project.png)
 
 ## Navigate to Azure Speech - Voice Live 
 
-1. Once your project is created, you are taken to the new Foundry home page. On the home page, navigate to the top right menu (you may need to expand the screen to see the menu options). Select **Build**. 
+1. On the new Foundry home page, navigate to the top right menu (you may need to expand the screen to see the menu options). Select **Build**. 
 
     ![Screenshot of how to navigate to the Build menu option.](./media/0126-new-foundry-home-build-selected.png)
   
@@ -43,19 +31,17 @@ This exercise takes approximately **20** minutes.
 
     ![Screenshot of how to navigate to Speech Playground to test Azure Speech - Voice Live.](./media/0126-new-foundry-ai-services-voice-live.png)
 
-The two fundamental speech capabilities that power voice-enabled applications are speech recognition (converting spoken words to text) and speech synthesis (converting text to natural-sounding speech). Voice live in the Speech Playground supports both speech recognition and speech synthesis, enabling you to have a voice-based conversation with the model. Voice live combines several Azure Speech capabilities. 
-
 ## Open the Speech Playground App
 
-Let's start by chatting with a generative AI model. In this exercise, we’ll use a browser-based application to chat with the **Microsoft Phi 4 Mini** model; a small language model that is useful for general chat solutions in low bandwidth scenarios. 
+Let's start by chatting with a generative AI model. In this exercise, we'll use a browser-based application to chat with the **GPT-4.1 Mini** model; a small language model that is useful for general chat solutions.
 
 1. In a web browser, the Azure Speech - Voice Live Speech Playground should be open. In the playground settings pane,  click through the samples and select **Start with Blank** to create your own assistant. 
  
-1. In the playground settings pane, modify the **Generative AI model** the assistant uses. Select **Phi4 Mini (preview)** to use the *Microsoft Phi 4 mini* model. Select **Apply changes** to save the updates. 
+1. In the playground settings pane, modify the **Generative AI model** the assistant uses. Select **GPT-4.1 Mini**. Select **Apply changes** to save the updates. 
 
 1. View the Speech Playground app, which should look like this:
 
-    ![Screenshot of Voice Live with Phi4 Mini and blanck chat selected.](./media/0126-new-foundry-blank-start.png) 
+    ![Screenshot of Voice Live with GPT-4.1 Mini and blanck chat selected.](./media/0126-new-foundry-blank-start.png) 
 
 ## Select a voice 
 
@@ -85,13 +71,33 @@ The app supports both speech recognition and speech synthesis, enabling you to h
 
     ![Screenshot of the selected cc button to see the closed captions.](./media/0126-new-foundry-voice-show-text.png)
 
-Azure Speech Voice Live is a service used to build real-time voice-based agents. The Azure Speech Voice Live capabilities in Microsoft Foundry include multi-turn real-time conversations with support for interruptions and background noise suppression.
+    >**Tip**: The follow-on prompt is submitted just by speaking. You can even interrupt the agent to keep the interaction focused on what you need done. 
 
 1. To continue the conversation, submit a second spoken prompt, such as `"How does speech synthesis work?"`, and review the response.
 
-    >**Tip**: Review the generative AI model's *Advanced settings*. Another way you can affect the model's responses is by configuring the *Temperature* of the response. The *temperature*, is a parameter that controls the randomness or creativity of the model's responses. When the model is set to a lower temperature, its responses are more predictable and factual. As the temperature increases, more variability and creativity are added. The higher temperature setting is useful for brainstorming, its conversational tone, and generating varied examples. If the temperature is too high however, it can result in responses that do not make much sense and aren't reliable.
+## Experiment with system prompts
 
-## Review the code 
+A system prompt is used to provide the model with instructions that guide its responses. You can use the system prompt to provide guidelines about format, style, and constraints about what the model should and should not include in its responses.
+
+1. In the pane on the left, in the **Instructions** text area, change the system prompt to: `You are an AI assistant that provides short and concise answers using simple language. Limit responses to a single sentence.`
+
+    >**Tip**: Remember to select **Apply changes** before testing any changes. 
+
+1. Now try the same prompt as before (`How does speech synthesis work?`) and review the output.
+
+1. Continue to experiment with different system prompts to try to influence the kinds of response returned by the model.
+
+## Experiment with model parameters
+
+Model parameters control how the model works, and can be useful for restricting the size of its responses (measured in tokens) and controlling how "creative" its responses can be.
+
+1. Review the generative AI model's *Advanced settings*. One way you can affect the model's responses is by configuring the *Temperature* of the response. The *temperature* is a parameter that controls the randomness or creativity of the model's responses. When the model is set to a lower temperature, its responses are more predictable and factual. As the temperature increases, more variability and creativity are added. The higher temperature setting is useful for brainstorming, its conversational tone, and generating varied examples. If the temperature is too high however, it can result in responses that do not make much sense and aren't reliable.
+
+1. Experiment by changing the parameter values and repeating the same prompt. You may see some differences in behavior from the model. 
+
+    >**Tip**: You can use the Stop generation button in the chat pane to stop long-running responses.
+
+## View the client code 
 
 Now let's review the code that makes this web experience possible!
 
@@ -128,8 +134,18 @@ Now let's review the code that makes this web experience possible!
 
     ![Screenshot of the main function](./media/0126-voice-live-main-function.png)
 
-Now you have reviewed the code, the next step is to try and implement it yourself. We suggest you explore running it in VS Code on your own if you have the necessary access. 
+## Try it out 
 
+1. Now you have reviewed the code, the next step is to try and implement it yourself. We suggest you explore running it in Visual Studio Code (VS Code) on your own if you have the necessary access. Those with a work or school account can click on **Open in VS Code for the Web** at the top of the code window and follow along with the instructions.  
+
+    ![Screenshot of VS Code for the Web starting page.](./media/0126-vscode-for-web.png)
+
+1. If you cannot access the web version, but have access to VS Code on your local machine, you can try out the code locally by downloading the [voice-live]() folder. The folder contains the instructions,`codeSample.py` and `example.env` file needed to try the code in your local VS Code environment. 
+
+    >**Tip**: Copy and paste the *.env variables* that you reviewed in the previous steps into the `example.env` file. 
+
+    >**Tip**: You will need a terminal to set up your environment. The terminal is a text‑based interface where you run commands to interact with your system and your project, such as installing packages, running scripts, or using Git. In Visual Studio Code, select *Terminal → New Terminal* from the top menu and use the *Bash* shell.
+    
 ## Clean up
 
 If you don’t intend to do more exercises, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
