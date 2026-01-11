@@ -9,7 +9,7 @@ The two fundamental speech capabilities that power voice-enabled applications ar
 
 In this exercise, use Microsoft's platform for creating AI applications, Microsoft Foundry, to interact with a generative AI model using speech. You'll explore Azure Speech' speech-to-text (STT) and text-to-speech (TTS) functionalities through a voice live agentic application.
 
-This exercise takes approximately **25** minutes.
+This exercise takes approximately **30** minutes.
 
 ## Create a Microsoft Foundry project
 
@@ -140,7 +140,7 @@ Now let's review the code that makes this web experience possible!
 
     ![Screenshot of VS Code for the Web starting page.](./media/0126-vscode-for-web.png)
 
-1. If you cannot access the web version, but have access to VS Code on your local machine, you can try out the code locally by downloading the [voice-live]() folder. The folder contains the instructions,`codeSample.py` and `example.env` file needed to try the code in your local VS Code environment. 
+1. If you cannot access the web version, but have access to VS Code on your local machine, you can try out the code locally by downloading the files from the [voice-live](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/tree/main/data/voice-live) folder. Open the files in VS Code. The folder contains the instructions,`codeSample.py` and `example.env` file needed to try the code in your local VS Code environment. 
 
     >**Tip**: Copy and paste the *.env variables* that you reviewed in the previous steps into the `example.env` file. 
 
