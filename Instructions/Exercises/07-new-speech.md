@@ -27,7 +27,11 @@ Microsoft Foundry uses projects to organize models, resources, data, and other a
 
     ![Screenshot of how to navigate to the Build menu option.](./media/0126-new-foundry-home-build-selected.png)
   
-1. On the *Build* page, select **Models**, then select **AI-services**. Note that the list of AI services is a small subset of all the AI capabilities available with Foundry Tools. From the list, select **Azure Speech - Voice Live** to try out *Voice Live* capabilities in the Speech Playground. 
+1. On the *Build* page, select **Models**, then select **AI-services**. Note that the list of AI services is a small subset of all the AI capabilities available with Foundry Tools. Several Speech-related services are available for testing, including: 
+    - *Azure Speech - Speech to Text*: capabilities used to generate text transcriptions from speech audio. For example, to transcribe calls or meetings, or to create captions for hearing-impaired users.
+    - *Azure Speech - Text to Speech*: capabilities used to generate audio from text. For example, to create audio to help people with visual-impairments, or enable bots with natural-sounding speech.
+
+1. From the list, select **Azure Speech - Voice Live** to try out *Voice Live* capabilities in the Speech Playground. 
 
     ![Screenshot of how to navigate to Speech Playground to test Azure Speech - Voice Live.](./media/0126-new-foundry-ai-services-voice-live.png)
 
@@ -70,6 +74,7 @@ The app supports both speech recognition and speech synthesis, enabling you to h
 1. When the status changes to **Speaking…**, the app uses text-to-speech to vocalize the response from the model. To see the original prompt and the response as text, select the **cc** button on the bottom of the chat screen.
 
     >**Tip**: The follow-on prompt is submitted just by speaking. You can even interrupt the agent to keep the interaction focused on what you need done. 
+    >**Tip**: You can also use the Stop generation button in the chat pane to stop long-running responses. The button will end the conversation. You will need to start a new conversation to continue using the agent. 
 
     ![Screenshot of the selected cc button to see the closed captions.](./media/0126-new-foundry-voice-show-text.png)
 
@@ -85,17 +90,32 @@ A system prompt is used to provide the model with instructions that guide its re
 
 1. Now try the same prompt as before (`How does speech synthesis work?`) and review the output.
 
-1. Continue to experiment with different system prompts to try to influence the kinds of response returned by the model.
-
 ## Experiment with model parameters
 
 Model parameters control how the model works, and can be useful for restricting the size of its responses (measured in tokens) and controlling how "creative" its responses can be.
 
-1. Review the generative AI model's *Advanced settings*. One way you can affect the model's responses is by configuring the *Temperature* of the response. The *temperature* is a parameter that controls the randomness or creativity of the model's responses. When the model is set to a lower temperature, its responses are more predictable and factual. As the temperature increases, more variability and creativity are added. The higher temperature setting is useful for brainstorming, its conversational tone, and generating varied examples. If the temperature is too high however, it can result in responses that do not make much sense and aren't reliable.
+#### Generative AI model parameters
 
-1. Experiment by changing the parameter values and repeating the same prompt. You may see some differences in behavior from the model. 
+1. Review the generative AI model's *Advanced settings*. One way you can affect the model's responses is by configuring the **temperature** of the response. The *temperature* is a parameter that controls the randomness or creativity of the model's responses. When the model is set to a lower temperature, its responses are more predictable and factual. As the temperature increases, more variability and creativity are added. The higher temperature setting is useful for brainstorming, its conversational tone, and generating varied examples. If the temperature is too high however, it can result in responses that do not make much sense and aren't reliable.
 
-    >**Tip**: You can use the Stop generation button in the chat pane to stop long-running responses.
+1. Experiment by changing the temperature and repeating the same prompt as before (`How does speech synthesis work?`). 
+
+1. Another setting for the model is **proactive engagement**. Activating the toggle **on** means the agent initiates the conversation. Try turning the proactive engagement *on* and starting a new conversation with the agent.  
+
+#### Speech input parameters 
+
+1. Review the speech input's *Advanced settings*. 
+- **End of utterance (EOU)**: Detects the end of speaking and stops speech recognition processing, returning results promptly. Currently does not support GPT-4o Realtime or GPT-4o Mini Realtime models.
+- **Audio enhancement**: Improves sound quality by reducing noise and boosting clarity, ensuring more accurate and clear speech recognition.
+
+#### Speech output parameters
+
+1. Review the speech output's advanced settings. 
+- **Voice temperature**: Controls the style and expressiveness of the spoken audio including intonation, prosody, emphasis, pacing, and emotional variance. 
+- **Playback speed**: The speed at which the voice is speaking.
+- **Custom lexicon**: Define the pronunciation of specific words, such as company names, medical terms, or emojis. Create a custom lexicon file using the Audio Content Creation tool, and copy its link here to use
+
+1. If you have time, you can also try out an Azure avatar. Activating the avatar toggle will allow you to select a prebuilt avatar or create a custom avatar that visualizes the agent's audio output as an avatar speaking.
 
 ## View the client code 
 
