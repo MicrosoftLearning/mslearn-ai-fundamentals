@@ -3,7 +3,7 @@ lab:
     title: 'Explore speech in the new Microsoft Foundry portal'
 ---
 
-# Explore speech in the new Microsoft Foundry portal
+# Explore speech in the new Microsoft Foundry portal 
 
 The two fundamental speech capabilities that power voice-enabled applications are speech recognition (converting spoken words to text) and speech synthesis (converting text to natural-sounding speech). Voice live in the Speech Playground supports both speech recognition and speech synthesis, enabling you to have a voice-based conversation with the model. Azure Speech Voice Live is a service used to build real-time voice-based agents. Voice live combines several Azure Speech capabilities. 
 
