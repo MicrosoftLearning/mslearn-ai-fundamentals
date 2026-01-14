@@ -5,9 +5,9 @@ lab:
 
 # Explore speech in the new Microsoft Foundry portal 
 
-The two fundamental speech capabilities that power voice-enabled applications are speech recognition (converting spoken words to text) and speech synthesis (converting text to natural-sounding speech). Voice live in the Speech Playground supports both speech recognition and speech synthesis, enabling you to have a voice-based conversation with the model. Azure Speech Voice Live is a service used to build real-time voice-based agents. Voice live combines several Azure Speech capabilities. 
+The two fundamental speech capabilities that power voice-enabled applications are speech recognition (converting spoken words to text) and speech synthesis (converting text to natural-sounding speech). 
 
-In this exercise, use Microsoft's platform for creating AI applications, Microsoft Foundry, to interact with a generative AI model using speech. You'll explore Azure Speech' speech-to-text (STT) and text-to-speech (TTS) functionalities through a voice live agentic application.
+In this exercise, use Microsoft Foundry, Microsoft's platform for creating AI applications, to interact with a generative AI model using speech. You'll explore speech-to-text (STT) and text-to-speech (TTS) with Azure Speech Voice Live, a service used to build real-time voice-based agents. Voice live in the Speech Playground supports both speech recognition and speech synthesis, enabling you to have a voice-based conversation with the model.
 
 This exercise takes approximately **30** minutes.
 
