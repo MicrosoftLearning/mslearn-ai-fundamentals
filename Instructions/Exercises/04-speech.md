@@ -3,7 +3,7 @@ lab:
     title: 'Explore speech in Microsoft Foundry'
 ---
 
-# Explore speech in Microsoft Foundry -- Updated 
+# Explore speech in Microsoft Foundry 
 
 The two fundamental speech capabilities that power voice-enabled applications are speech recognition (converting spoken words to text) and speech synthesis (converting text to natural-sounding speech). 
 
