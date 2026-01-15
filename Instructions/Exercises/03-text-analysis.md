@@ -88,8 +88,6 @@ This exercise takes approximately **20** minutes.
 
 1. Repeat the analysis for **document-2.txt** and **document-3.txt**.
 
-#### Review the sample code
-
 ## Summarize text
 
 **Summarization** is a way to distill the main points in a document into a shorter amount of text.
