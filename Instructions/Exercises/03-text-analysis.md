@@ -54,9 +54,7 @@ This exercise takes approximately **20** minutes.
 
     ![Screenshot of the sentiment analysis interface in the Language playground.](./media/sentiment-analysis.png)
 
-1. Repeat the analysis for **document-2.txt** and **document-3.txt**.
-
-#### Review the sample code
+1. Select the pencil icon to edit the text. Repeat the analysis for **document-2.txt** and **document-3.txt**.
 
 ## Extract key phrases
 
@@ -70,7 +68,7 @@ This exercise takes approximately **20** minutes.
 
     ![Screenshot of the Extract key phrases interface in the Language playground.](./media/key-phrases.png)
 
-1. Repeat the analysis for **document-2.txt** and **document-3.txt**.
+1. Select the pencil icon to edit the text. Repeat the analysis for **document-2.txt** and **document-3.txt**.
 
 #### Review the sample code
 
@@ -86,7 +84,9 @@ This exercise takes approximately **20** minutes.
 
     ![Screenshot of the Extract named entities interface in the Language playground.](./media/entity-extraction.png)
 
-1. Repeat the analysis for **document-2.txt** and **document-3.txt**.
+1. Select the pencil icon to edit the text. Repeat the analysis for **document-2.txt** and **document-3.txt**.
+
+#### Review the sample code
 
 ## Summarize text
 
@@ -100,7 +100,7 @@ This exercise takes approximately **20** minutes.
 
     ![Screenshot of the Summarize text interface in the Language playground.](./media/summarize-text.png)
 
-1. Repeat the analysis for **document-2.txt** and **document-3.txt**.
+1. Select the pencil icon to edit the text. Repeat the analysis for **document-2.txt** and **document-3.txt**.
 
 #### Review the sample code
 

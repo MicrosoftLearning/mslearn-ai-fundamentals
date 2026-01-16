@@ -27,7 +27,7 @@ Microsoft Foundry uses projects to organize models, resources, data, and other a
 
     ![Screenshot of how to navigate to the Build menu option.](./media/0126-new-foundry-home-build-selected.png)
   
-1. On the *Build* page, select **Models**, then select **AI-services**. Note that the list of AI services is a small subset of all the AI capabilities available with Foundry Tools. Several Speech-related services are available for testing, including: 
+1. On the *Build* page, navigate to the left-hand menu (you may need to expand it to see its options). From the menu, select **Models**. On the Models page, select **AI-services**. Note that the list of AI services is a small subset of all the AI capabilities available with Foundry Tools. Several Speech-related services are available for testing, including: 
     - *Azure Speech - Speech to Text*: capabilities used to generate text transcriptions from speech audio. For example, to transcribe calls or meetings, or to create captions for hearing-impaired users.
     - *Azure Speech - Text to Speech*: capabilities used to generate audio from text. For example, to create audio to help people with visual-impairments, or enable bots with natural-sounding speech.
 
