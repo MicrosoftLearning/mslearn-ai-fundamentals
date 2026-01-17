@@ -260,7 +260,7 @@ Now that you have an agent, you can power client applications that enable employ
     print(f"Response output: {response.output_text}")
     ```
 
-    > **Tip**: As with the previous code sample, if you are using a work or school account to sign into Azure, and you have sufficient permissions in the Azure subscription, you can open the sample code in VS Code for Web to run it, and experiment with editing it.
+    > **Tip**: If you are using a work or school account to sign into Azure, and you have sufficient permissions in the Azure subscription, you can open the sample code in VS Code for Web to run it, and experiment with editing it.
 
 ## Summary
 

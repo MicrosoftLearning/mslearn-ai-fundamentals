@@ -3,11 +3,13 @@ lab:
     title: 'Analyze text in Microsoft Foundry'
 ---
 
-# Analyze text in Microsoft Foundry - NEW
+# Analyze text in Microsoft Foundry
 
 Azure Language includes Text Analytics, with capabilities such as entity recognition, key phrase extraction, summarization, and sentiment analysis. In this exercise, use Microsoft Foundry, Microsoft's platform for creating AI applications, to use AI to analyze text. You'll use Azure Language's natural language processing functionalities to analyze text. The goal of this exercise is to explore common applications of text analysis techniques.
 
 This exercise takes approximately **20** minutes.
+
+>**Note**: This lab uses the **classic** Foundry interface. If you are in the new Foundry interface, you need to toggle back to the classic Foundry interface.  
 
 ## Create a project in Microsoft Foundry
 
@@ -100,6 +102,8 @@ This exercise takes approximately **20** minutes.
 
 #### Review the sample code
 
+1. Select the **View code** tab to view sample code for text summarization. Below is the same sample code in Python for your reference:
+
 ```python
 
 # This example requires environment variables named "AZURE_AI_KEY" and "ENDPOINT_TO_CALL_LANGUAGE_API"
@@ -158,6 +162,8 @@ def sample_extractive_summarization(client):
 sample_extractive_summarization(client)
 
 ```
+
+> **Tip**: If you are using a work or school account to sign into Azure, and you have sufficient permissions in the Azure subscription, you can open the sample code in VS Code for Web to run it, and experiment with editing it.
 
 ## Clean up
 
