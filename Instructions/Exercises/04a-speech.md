@@ -1,9 +1,10 @@
 ---
 lab:
-    title: 'Explore speech in Microsoft Foundry'
+    title: 'Get started with speech in Microsoft Foundry'
+    description: 'Use Microsoft Foundry to try out Azure Speech - Voice Live.'
 ---
 
-# Explore speech in Microsoft Foundry 
+# Get started with speech in Microsoft Foundry
 
 The two fundamental speech capabilities that power voice-enabled applications are speech recognition (converting spoken words to text) and speech synthesis (converting text to natural-sounding speech). 
 
