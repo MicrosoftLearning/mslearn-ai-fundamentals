@@ -23,7 +23,7 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
 Computer vision models enable AI systems to interpret image-based data, such as photographs, videos, and other visual elements. In this exercise, you'll explore how the developer of an AI agent to help aspiring chefs could use a vision-enabled model to interpret images of ingredients and suggest relevant recipes.
 
-1. In a new browser tab, download **[images.zip](https://graememalcolm.github.io/ai-labs/data/images.zip){:target="_blank"}** to your local computer.
+1. In a new browser tab, download **[images.zip](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip){:target="_blank"}** to your local computer.
 1. Extract the downloaded archive in a local folder to see the files it contains. These files are the images you will use AI to analyze.
 1. Return to the browser tab containing your Microsoft Foundry project. Then, in the **Start building** menu, select **Browse models** to view the Microsoft Foundry model catalog.
 1. Search for and deploy the `gpt-4.1-mini` model using the default settings. Deployment may take a minute or so.
@@ -85,7 +85,7 @@ To develop a client app or agent that can use the model to interpret images, you
     print(f"answer: {response.output[0]}")
     ```
 
-    > **Tip**: If you are using a work or school account to sign into Azure, and you have sufficient permissions in the Azure subscription, you can open the sample code in VS Code for Web to experiment with image-based input content. You can obtain the **key** for your service in the **Code** tab of the model playground (above the sample code) and you can use the image at `https://graememalcolm.github.io/ai-labs/data/orange.jpg`. To learn more about using rhe OpenAI API to analyze images, see the [OpenAI documentation](https://platform.openai.com/docs/guides/images-vision#analyze-images).
+    > **Tip**: If you are using a work or school account to sign into Azure, and you have sufficient permissions in the Azure subscription, you can open the sample code in VS Code for Web to experiment with image-based input content. You can obtain the **key** for your service in the **Code** tab of the model playground (above the sample code) and you can use the image at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/orange.jpg`. To learn more about using rhe OpenAI API to analyze images, see the [OpenAI documentation](https://platform.openai.com/docs/guides/images-vision#analyze-images).
 
 ## Use a generative AI model to create new images
 

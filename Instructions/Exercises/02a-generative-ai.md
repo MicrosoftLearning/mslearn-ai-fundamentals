@@ -177,7 +177,7 @@ While you can implement generative AI apps using a standalone model, to create a
 
 Agents use *tools* to perform tasks or find information. You can use a general web search tool or a simple file search tool to provide a source of knowledge; or for more comprehensive agentic solutions, you can create a *Microsoft Foundry IQ* knowledge store that connects the agent to a data source within your enterprise. In this exercise, we'll use a simple file search tool.
 
-1. Open a new browser tab, and view the **[expenses_policy.docx](https://graememalcolm.github.io/ai-labs/data/expenses_policy.docx){:target="_blank"}** at `https://graememalcolm.github.io/ai-labs/data/expenses_policy.docx`. We'll use this to provide a knowledge source that the agent can use to answer questions about expense claims.
+1. Open a new browser tab, and view the **[expenses_policy.docx](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx){:target="_blank"}** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx`. We'll use this to provide a knowledge source that the agent can use to answer questions about expense claims.
 1. Download **expenses_policy.docx** to your local computer.
 1. Return to the tab containing the agent playground, and in the pane on the left, expand the **Tools** section if it's not already expanded.
 1. Upload the **expenses_policy.docx** file, creating a new index with the default index name. When the index has been created, attach it to the agent.
