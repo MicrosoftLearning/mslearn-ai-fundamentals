@@ -155,21 +155,7 @@ Now let's review the code that makes this web experience possible!
 
     ![Screenshot of the main function](./media/0126-voice-live-main-function.png)
 
-## Try it out 
-
-Now you have reviewed the code, the next step is to try and implement it yourself. 
-
-1. Those with a work or school account can click on **Open in VS Code for the Web** at the top of the code window and follow along with the instructions.  
-    
-    ![Screenshot of the open button at the top of the code window.](./media/open-in-vs-code-location.png)
-
-    ![Screenshot of VS Code for the Web starting page.](./media/0126-vscode-for-web.png)
-
-1. If you cannot access the web version, but have access to VS Code on your local machine, you can try out the code locally by downloading the files from the [voice-live](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/tree/main/data/voice-live) folder. Open the files in VS Code. The folder contains the instructions,`codeSample.py` and `example.env` file needed to try the code in your local VS Code environment. 
-
-    >**Tip**: Copy and paste the *.env variables* that you reviewed in the previous steps into the `example.env` file. 
-
-    >**Tip**: You will need a terminal to set up your environment. The terminal is a text‑based interface where you run commands to interact with your system and your project, such as installing packages, running scripts, or using Git. In Visual Studio Code, select *Terminal → New Terminal* from the top menu and use the *Bash* shell.
+>**Try it out**: Those with a work or school account can click on **Open in VS Code for the Web** at the top of the code window and follow along with the instructions.  
     
 ## Clean up
 
