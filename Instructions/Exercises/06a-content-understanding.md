@@ -47,7 +47,7 @@ This exercise takes approximately **25** minutes.
 
 ## Extract information from an invoice
 
-1. Download [contoso-invoice-1.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-1.pdf) from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-1.pdf`. 
+1. Download **[contoso-invoice-1.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-1.pdf){:target="_blank"}** from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-1.pdf`. 
 
 1. On the Content Understanding page, select the **Try it out** tab, and then select the **Invoice Data Extraction** tile.
 
@@ -65,7 +65,7 @@ This exercise takes approximately **25** minutes.
 
     Note that the Content Understanding analyzer is able to extract information from this invoice, even though it is formatted diffferently from the sample.
 
-1. In the pane pn the right where the extracted fields are displayed, view the **Result** tab to see the JSON response that would be sent to a client application. A developer would write code to process this response and do something with the extracted fields.
+1. In the pane on the right where the extracted fields are displayed, view the **Result** tab to see the JSON response that would be sent to a client application. A developer would write code to process this response and do something with the extracted fields.
 
     ![Screenshot of the results of analysing the Contoso invoice.](./media/invoice-analysis-json.png)
 
