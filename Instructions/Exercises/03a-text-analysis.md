@@ -10,9 +10,9 @@ Azure Language includes Text Analytics, with capabilities such as entity recogni
 
 This exercise takes approximately **20** minutes.
 
->**Note**: This lab uses the **classic** Foundry interface. If you are in the new Foundry interface, you need to toggle back to the classic Foundry interface.  
-
 ## Create a project in Microsoft Foundry
+
+>**Note**: This exercise uses the **classic** Foundry interface. If you are using the new Foundry interface, you need to toggle back to the classic Foundry interface.  
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
@@ -164,11 +164,11 @@ sample_extractive_summarization(client)
 
 ```
 
-> **Tip**: If you are using a work or school account to sign into Azure, and you have sufficient permissions in the Azure subscription, you can open the sample code in VS Code for Web to run it, and experiment with editing it.
+> **Tip**: You can copy the code and run it in your preferred Python development environment - for example Visual Studio Code. You will need to create environment variables for your Azure Language endpoint and key; which you can find in the code sample window.
 
 ## Clean up
 
-If you don’t intend to do more exercises, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
+If you have finished exploring Microsoft Foundry, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
 
 1. Open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com) and select the resource group that contains the resources you created.
 1. Select **Delete resource group** and then **enter the resource group name** to confirm. The resource group is then deleted.
