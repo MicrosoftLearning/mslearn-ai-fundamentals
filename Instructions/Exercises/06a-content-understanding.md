@@ -35,11 +35,9 @@ This exercise takes approximately **40** minutes.
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select one of the following locations\*:
-        * East US 
         * West US
         * Sweden Central
         * Australia East
-        * Southeast Asia
 
     \**At the time of writing, Content Understanding is supported in these regions.*
 
