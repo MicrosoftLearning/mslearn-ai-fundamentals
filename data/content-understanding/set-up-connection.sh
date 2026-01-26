@@ -1,10 +1,6 @@
 #!/bin/bash
 set -a
 [ -f .env ] && source .env
-set +a
-
-API_KEY is $API_KEY
-ENDPOINT_URL is $ENDPOINT_URL
 
 # Below, replace {myGPT41Deployment} with the name of your GPT-4.1 deployment (eg. "gpt-4-1")
 # Below, replace {myGPT41MiniDeployment} with the name of your GPT-4.1 Mini deployment (eg. "gpt-4-1-mini")

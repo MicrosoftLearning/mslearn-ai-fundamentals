@@ -1,10 +1,6 @@
 #!/bin/bash
 set -a
 [ -f .env ] && source .env
-set +a
-
-API_KEY is $API_KEY
-ENDPOINT_URL is $ENDPOINT_URL
 
 # Below, note that the url points to the sample invoice document in the GitHub repository
 
