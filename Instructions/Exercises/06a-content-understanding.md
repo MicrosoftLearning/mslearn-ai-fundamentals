@@ -75,7 +75,7 @@ To develop a client app or agent that extracts information, you can use several 
 
 >**Note**: This section of the exercise requires you to have access to Visual Studio Code (VS Code).  
 
-1. Identify your Foundry resource key and endpoint. In the Foundry portal, in the left-side menu, select **Overview** to navigate to your Foundry project's home page. On the project home page, you will either be able to copy and paste a project API key, or see a note that your subscription does not have those permissions. Keep the page open for your reference. 
+1. Identify your Foundry resource key and endpoint. In the (classic) Foundry portal, in the left-side menu, select **Overview** to navigate to your Foundry project's home page. On the project home page, you will either be able to copy and paste a project API key, or see a note that your subscription does not have those permissions. Keep the page open for your reference. 
 
 >**Note**: To execute this section of the exercise, you will need an Azure subscription with permission to use the API Key. If you do not have permission, you will not be able to test out the models yourself. However, you can still read through the rest of the exercise to review the steps. 
 
