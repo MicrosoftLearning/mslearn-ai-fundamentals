@@ -98,8 +98,7 @@ To develop a client app or agent that extracts information, you can use several 
 
 1. Let's set up a connection between Content Understanding and Foundry models in your Foundry resource. Return to VS Code. From the VS Code file explorer, open the **set-up-connection.sh** file. Note where variables for your project endpoint, key, and model deployment names are included in the script. The script should look similar to this:
 
-    ```bash
-    curl -i -X PATCH "{endpoint}/contentunderstanding/defaults?api-version=2025-11-01" \
+    `curl -i -X PATCH "{endpoint}/contentunderstanding/defaults?api-version=2025-11-01" \
       -H "Ocp-Apim-Subscription-Key: {key}" \
       -H "Content-Type: application/json" \
       -d '{
@@ -109,7 +108,7 @@ To develop a client app or agent that extracts information, you can use several 
               "text-embedding-3-large": "{myEmbeddingDeployment}"
             }
           }'
-    ```
+    `
 
     >**Note**: Your .sh files also include script at the top that exports everything from .env into the script’s environment. You will see the information following ` #!/bin/bash` at the top of your .sh files. Do not edit this portion of the files.  
     
@@ -137,14 +136,13 @@ To develop a client app or agent that extracts information, you can use several 
 
 1. From the VS Code file explorer, open the **extract-data.sh** file. Note where variables for your project endpoint and key are included in the script. Identify where the document url is included in the inputs. The script should look similar to this:
 
-    ```bash
-    curl -i -X POST "{endpoint}/contentunderstanding/analyzers/prebuilt-invoice:analyze?api-version=2025-11-01" \
+    `curl -i -X POST "{endpoint}/contentunderstanding/analyzers/prebuilt-invoice:analyze?api-version=2025-11-01" \
       -H "Ocp-Apim-Subscription-Key: {key}" \
       -H "Content-Type: application/json" \
       -d '{
             "inputs":[{"url": "https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf"}]
           }'
-    ```
+    `
 
 1. Run the script by copy and pasting the following into the terminal: 
 
@@ -156,8 +154,7 @@ To develop a client app or agent that extracts information, you can use several 
 
 1. The POST response should look something like this: 
 
-    ```bash
-    HTTP/1.1 202 Accepted
+    `HTTP/1.1 202 Accepted
     Transfer-Encoding: chunked
     Content-Type: application/json
     request-id: aaa-bbb-ccc-ddd
@@ -170,18 +167,18 @@ To develop a client app or agent that extracts information, you can use several 
     x-content-type-options: nosniff
     x-ms-region: West US
     Date: Fri, 31 Oct 2025 05:30:17 GMT
-    Connection: close
-    ```    
+    Connection: close`
 
 1. Copy the `request-id` from the POST response. 
 
-1. From the VS Code file explorer, open **get-results.sh** and review the file. Note where variables for your project endpoint and key are included in the script. In the file, delete `{request-id}` and paste the `request-id` from the POST response. Remember to save the file. 
+1. From the VS Code file explorer, open **get-results.sh** and review the file. Note where variables for your project endpoint and key are included in the script. The script should look similar to this: 
 
-    ```bash
-    curl -i -X GET "{endpoint}/contentunderstanding/analyzerResults/{request-id}?api-version=2025-11-01" \
+    `curl -i -X GET "{endpoint}/contentunderstanding/analyzerResults/{request-id}?api-version=2025-11-01" \
       -H "Ocp-Apim-Subscription-Key: {key}"
-    ```
+    `
 
+1. In the *get-results.sh* file, delete `{request-id}` and paste the `request-id` from the POST response. Remember to save the file.  
+    
 1. Run the script by copy and pasting the following into the terminal: 
 
     ```bash
