@@ -88,6 +88,7 @@ To develop a client app or agent that extracts information, you can use several 
 1. In the *content-understanding* folder, open the **.env** file. Copy and paste your Foundry project API key. Copy and paste your Foundry project endpoint. Edit the endpoint by deleting the text after *ai.azure.com*. Your endpoint should look like this `https://...ai.azure.com`. Save the file. 
 
 1. Return to Foundry portal to create Foundry Model deployments of GPT-4.1, GPT-4.1-mini, and text-embedding-3-large in your Foundry resource. In the (classic) Foundry portal, select **Models and endpoints** from the menu on your left (note: you may need to select the first icon at the top to expand the menu and see the names of the items). In the **Model deployments** screen, select **+ Deploy a model**, then select **Deploy base model**. Search for and select **GPT-4.1**, then select **Confirm**. Keep the default name and default deployment type. Select **Deploy**. 
+
 1. Return to the **Model deployments** page by selecting **Models and endpoints** from the left-side menu. Repeat for **GPT-4.1-mini** and **text-embedding-3-large**. Once the models are deployed, note the names of the models (they should be GPT-4.1, GPT-4.1-mini, and text-embedding-3-large unless you customized the names). 
 
 1. To extract information from content using Content Understanding, you can use the *curl* command to call the REST endpoint. You will need to make three calls: 
@@ -95,7 +96,7 @@ To develop a client app or agent that extracts information, you can use several 
     - To analyze the content 
     - To retrieve the result of the analysis  
 
-1. Set up a connection between Content Understanding and Foundry models in your Foundry resource. From the VS Code file explorer, open the **set-up-connection.sh** file. Note where variables for your project endpoint, key, and model deployment names are included in the script. The script should look similar to this:
+1. Let's set up a connection between Content Understanding and Foundry models in your Foundry resource. Return to VS Code. From the VS Code file explorer, open the **set-up-connection.sh** file. Note where variables for your project endpoint, key, and model deployment names are included in the script. The script should look similar to this:
 
     ```bash
     curl -i -X PATCH "{endpoint}/contentunderstanding/defaults?api-version=2025-11-01" \
@@ -122,7 +123,7 @@ To develop a client app or agent that extracts information, you can use several 
     cd data/content-understanding
     ```
     
-    Then press *enter* to run the command.
+    Then press *enter* to run the command and navigate to the appropriate folder.
  
 1. Run the script by copy and pasting the following into the terminal: 
 
