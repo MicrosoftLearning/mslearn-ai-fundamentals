@@ -81,22 +81,31 @@ To develop a client app or agent that extracts information, you can use several 
 
 >**Note**: To execute this section of the exercise, you will need an Azure subscription with permission to use the API Key. If you do not have permission, you will not be able to test out the models yourself. However, you can still read through the rest of the exercise to review the steps. 
 
-1. Open Visual Studio Code (VS Code). In VS Code, press **Ctrl + Shift + P** (Windows/Linux) or **Cmd + Shift + P** (Mac) to open the command palette. Type **Git: Clone** and select it. Paste the repo URL `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals.git` and press **Enter**.  
+1. Open Visual Studio Code (VS Code). In VS Code, press **Ctrl + Shift + P** (Windows/Linux) or (or Command Palette from View menu) to open the command palette. Type **Git: Clone** and select it. Paste the repo URL `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals.git` and press **Enter**.  
 
-1. Select a local folder where the repository will be cloned. When prompted, click **Open** to start working on the cloned project in VS code. In the VS Code file explorer, select **data**, then select **content-understanding**. 
+1. Select a local folder where the repository will be cloned. When prompted, click **Open** to start working on the cloned project in VS code. 
 
-1. In the content-understanding folder, open the **.env** file. Copy and paste your Foundry project API key. Copy and paste your Foundry project endpoint. Edit the endpoint by deleting the text after *ai.azure.com*. Your endpoint should look like this `https://...ai.azure.com`. Save the file. 
+1. In the VS Code file explorer, select the **data** folder, then select the **content-understanding** folder. 
 
-1. Create Foundry Model deployments of GPT-4.1, GPT-4.1-mini, and text-embedding-3-large in your Foundry resource. In the (classic) Foundry portal, select **Models and endpoints** from the menu on your left. In the **Model deployments** screen, select **+ Deploy a model**, then select **Deploy base model**. Search for and select **GPT-4.1**, then select **Confirm**. Keep the default name and default deployment type. Select **Deploy**. Repeat for **GPT-4.1-mini** and **text-embedding-3-large**. Once the models are deployed, note the names of the models (they should be GPT-4.1, GPT-4.1-mini, and text-embedding-3-large unless you customized the names). 
+1. In the *content-understanding* folder, open the **.env** file. Copy and paste your Foundry project API key. Copy and paste your Foundry project endpoint. Edit the endpoint by deleting the text after *ai.azure.com*. Your endpoint should look like this `https://...ai.azure.com`. Save the file. 
+
+1. Return to Foundry portal to create Foundry Model deployments of GPT-4.1, GPT-4.1-mini, and text-embedding-3-large in your Foundry resource. In the (classic) Foundry portal, select **Models and endpoints** from the menu on your left. In the **Model deployments** screen, select **+ Deploy a model**, then select **Deploy base model**. Search for and select **GPT-4.1**, then select **Confirm**. Keep the default name and default deployment type. Select **Deploy**. Repeat for **GPT-4.1-mini** and **text-embedding-3-large**. Once the models are deployed, note the names of the models (they should be GPT-4.1, GPT-4.1-mini, and text-embedding-3-large unless you customized the names). 
 
 1. To extract information from content using Content Understanding, you can use the *curl* command to call the REST endpoint. You will need to make three calls: 
-    a. To set up a connection between Content Understanding and your Foundry models 
-    b. To analyze the content 
-    c. To retrieve the result of the analysis  
+    - To set up a connection between Content Understanding and your Foundry models 
+    - To analyze the content 
+    - To retrieve the result of the analysis  
 
 1. In VS Code, open a new bash terminal. Press **Ctrl+Shift+P** (or Command Palette from View menu). Type: **Terminal: Create New Terminal (With Profile)**. Choose the **Git Bash** profile from the list. Your terminal will appear at the bottom of the VS Code screen. 
 
-1. Set up a connection between Content Understanding and Foundry models in your Foundry resource. Open the **set-up-connection.sh** file. Note where variables for your project endpoint, key, and model deployment names are included in the script. The script should look similar to this:
+1. In the terminal, navigate to the content-understanding folder. Copy and paste the following into the terminal. Then press *enter*. 
+
+    ```bash
+    cd data/content-understanding
+    ```
+     
+
+1. Set up a connection between Content Understanding and Foundry models in your Foundry resource. From the VS Code file explorer, open the **set-up-connection.sh** file. Note where variables for your project endpoint, key, and model deployment names are included in the script. The script should look similar to this:
 
     ```bash
     curl -i -X PATCH "{endpoint}/contentunderstanding/defaults?api-version=2025-11-01" \
@@ -111,18 +120,8 @@ To develop a client app or agent that extracts information, you can use several 
           }'
     ```
 
-    >**Note**: Your .sh files also include script at the top that exports everything from .env into the script’s environment. You will see the following at the top of your .sh files:  
-    ```bash
-        #!/bin/bash
-        set -a
-        [ -f .env ] && source .env
-        set +a
-        
-        API_KEY is $API_KEY
-        ENDPOINT_URL is $ENDPOINT_URL
-    ```
+    >**Note**: Your .sh files also include script at the top that exports everything from .env into the script’s environment. You will see the information following ` #!/bin/bash` at the top of your .sh files. Do not edit this portion of the files.  
     
-
 1. Update the script by replacing the placeholders `{myGPT41Deployment}`, `{myGPT41MiniDeployment}`, `{myEmbeddingDeployment}` with the names of your deployed models. Unless you made changes, the names should be `gpt-4.1`, `gpt-4.1-mini`, and `text-embedding-3-large`, respectively. Save your changes.
  
 1. Run the script by entering `bash set-up-connection.sh` in the Git Bash terminal. 
