@@ -47,8 +47,6 @@ This exercise takes approximately **40** minutes.
 
 ## Extract information from an invoice in Foundry portal (classic)
 
-1. Download **[contoso-invoice-1.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf){:target="_blank"}** from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf`. 
-
 1. On the Content Understanding page, select the **Try it out** tab, and then select the **Invoice Data Extraction** tile.
 
     ![Screenshot of the Content Understanding "Try it out" page.](./media/content-understanding-invoice.png)
@@ -59,7 +57,9 @@ This exercise takes approximately **40** minutes.
 
     ![Screenshot of the results of analysing the sample invoice.](./media/sample-invoice-analysis.png)
 
-1. Use the **Browse for files** link to upload the **contoso-invoice-1.pdf** document you downloaded previously, and run analysis on that file.
+1. Download **[contoso-invoice-1.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf){:target="_blank"}** from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf`. 
+
+1. In Foundry, use the **Browse for files** link to upload the **contoso-invoice-1.pdf** document you downloaded previously, and run analysis on that file.
 
     ![Screenshot of the results of analysing the Contoso invoice.](./media/contoso-invoice-analysis.png)
 
