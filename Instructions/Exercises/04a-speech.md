@@ -72,7 +72,7 @@ The app supports both speech recognition and speech synthesis, enabling you to h
 
 1. In the Chat pane, use the **Start** button to start a conversation with the model. If prompted, allow access to the system microphone. The agent will introduce itself. 
 
-    >**Tip**: If you are not prompted for microphone access, and your microphone is not detected, try the following steps to allow microphone access. In the browser window, navigate to the page url. Click on the *lock icon* next to the url. Select *Permissions*, *Microphone*, and *Allow*. Then refresh the page and try again.
+    >**Tip**: If you are not prompted for microphone access, and your microphone is not detected, try the following steps to allow microphone access. In the browser window, navigate to the page url. Click on the *lock icon* next to the url. Select *Permissions*, *Microphone*, and *Allow*. Then refresh the page and try again. If your browser is still unable to access the microphone, you can try a simulation of the exercise [here](https://microsoftlearning.github.io/mslearn-ai-concepts/Instructions/exercises/04-speech.html) that allows for text input if the microphone is not working.
 
 1. When the app status is **Listening…**, say something like `"How does speech recognition work?"` and wait for a response.
 
