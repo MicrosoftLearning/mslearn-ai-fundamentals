@@ -132,7 +132,7 @@ To develop a client app or agent that extracts information, you can use several 
 
     Then press *enter* to run the script that forms a connection between Content Understanding and the deployed models in your profile.
 
-1. Next, let's analyze our content using the prebuilt-invoice analyzer to extract structured data from an invoice document. We will analyze the same document as we did with the portal earlier in the exercise from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf`. 
+1. Next, let's analyze our content using the prebuilt-invoice analyzer to extract structured data from an invoice document. We will analyze the same document as we did with the portal earlier: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf`. 
 
 1. From the VS Code file explorer, open the **extract-data.sh** file. Note where variables for your project endpoint and key are included in the script. Identify where the *document url* is included in the inputs. The script should look similar to this:
 
