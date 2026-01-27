@@ -72,13 +72,13 @@ The app supports both speech recognition and speech synthesis, enabling you to h
 
 1. In the Chat pane, use the **Start** button to start a conversation with the model. If prompted, allow access to the system microphone. The agent will introduce itself. 
 
-1. When the app status is **Listening…**, say something like `"How does speech recognition work?"` and wait for a response.
+    >**Tip**: If you are not prompted for microphone access, and your microphone is not detected, try the following steps to allow microphone access. In the browser window, navigate to the page url. Click on the *lock icon* next to the url. Select *Permissions*, *Microphone*, and *Allow*. Then refresh the page and try again.
 
-    >**Tip**: If an error occurs or the app can’t detect any speech input, you can enter a text-based prompt. 
+1. When the app status is **Listening…**, say something like `"How does speech recognition work?"` and wait for a response.
 
 1. Verify that the app status changes to **Processing…**. The app will process the spoken input, using speech-to-text to convert your speech to text and submit it to the model as a prompt. 
 
-    >**Tip**: the processing speed may be so fast that you do not actually see the status before it changes back to *Speaking*.
+    >**Tip**: The processing speed may be so fast that you do not actually see the status before it changes back to *Speaking*.
 
 1. When the status changes to **Speaking…**, the app uses text-to-speech to vocalize the response from the model. To see the original prompt and the response as text, select the **cc** button on the bottom of the chat screen.
 
