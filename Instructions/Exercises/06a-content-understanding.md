@@ -77,11 +77,13 @@ To develop a client app or agent that extracts information, you can use several 
 
 >**Note**: This section of the exercise requires you to have access to Visual Studio Code (VS Code).  
 
-1. Identify your Foundry resource key and endpoint. In the (classic) Foundry portal, navigate to the left-side menu. Click on the top icon to *expand* the menu and see the options. Select **Overview** to navigate to your Foundry project's home page. On the project home page, you will either be able to copy and paste a project API key, or see a note that your subscription does not have those permissions. Keep the page open for your reference. 
+1. Identify your Foundry resource key and endpoint. In the (classic) Foundry portal, navigate to the left-side menu. Click on the top icon to *expand* the menu. Select **Overview** to navigate to your Foundry project's home page. On the project home page, you will either be able to copy and paste a project API key, or see a note that your subscription does not have those permissions. Keep the page open for your reference. 
 
 >**Note**: To execute this section of the exercise, you will need an Azure subscription with permission to use the API Key. If you do not have permission, you will not be able to test out the models yourself. However, you can still read through the rest of the exercise to review the steps. 
 
-1. Open Visual Studio Code (VS Code). In VS Code, press **Ctrl + Shift + P** (Windows/Linux) or Command Palette from View menu to open the command palette. Type **Git: Clone** and select it. Paste the repo URL `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals.git` and press **Enter**.  
+1. Open VS Code, then press **Ctrl + Shift + P** (Windows/Linux) to open the command palette (alternatively, you can select *View* from the menu, then *Command palette*). 
+
+1. In the command palette, type **Git: Clone** and select it. Paste the repo URL `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals.git` and press **Enter**.  
 
 1. Select a local folder where the repository will be cloned. When prompted, click **Open** to start working on the cloned project in VS code. 
 
@@ -91,11 +93,13 @@ To develop a client app or agent that extracts information, you can use several 
 
 1. In the *content-understanding* folder, open the **.env** file. Copy and paste your Foundry project API key. Copy and paste your Foundry project endpoint. Edit the endpoint by deleting the text after *ai.azure.com*. Your endpoint should look like this `https://...ai.azure.com`. Save the file. 
 
-1. Return to Foundry portal to create Foundry Model deployments of GPT-4.1, GPT-4.1-mini, and text-embedding-3-large in your Foundry resource. In the (classic) Foundry portal, select **Models and endpoints** from the menu on your left (note: you may need to select the first icon at the top to expand the menu and see the names of the items). In the **Model deployments** screen, select **+ Deploy a model**, then select **Deploy base model**. Search for and select **GPT-4.1**, then select **Confirm**. Keep the default name and default deployment type. Select **Deploy**. 
+1. Return to Foundry portal to create Foundry Model deployments of *GPT-4.1*, *GPT-4.1-mini*, and *text-embedding-3-large* in your Foundry resource. In the (classic) Foundry portal, select **Models and endpoints** from the menu on your left.
+
+1. From the **Model deployments** screen, select **+ Deploy a model**. Then select **Deploy base model**. Search for and select **GPT-4.1**, then select **Confirm**. Keep the default name and default deployment type. Select **Deploy**. 
 
     >**Tip**: Once the model deploys, you are taken to the model details page. Navigate back to the left-side menu to continue deploying more models.
 
-1. Return to the **Model deployments** page by selecting **Models and endpoints** from the left-side menu. Repeat for **GPT-4.1-mini** and **text-embedding-3-large**. Once the models are deployed, note the names of the models (they should be GPT-4.1, GPT-4.1-mini, and text-embedding-3-large unless you customized the names). 
+1. Return to the **Model deployments** page by selecting **Models and endpoints** from the left-side menu. Repeat for **GPT-4.1-mini** and **text-embedding-3-large**. Once the models are deployed, note the names of the models. 
 
     ![Screenshot of model names.](./media/0-content-understanding-model-names.png)
 
@@ -104,15 +108,15 @@ To develop a client app or agent that extracts information, you can use several 
     - To analyze the content 
     - To retrieve the result of the analysis  
 
-1. Let's set up a connection between Content Understanding and Foundry models in your Foundry resource. Return to VS Code. From the VS Code file explorer, open the **set-up-connection.sh** file. Note where variables for your project endpoint, key, and model deployment names are included in the script. The script should look similar to this:
+1. Set up a connection between Content Understanding and Foundry models in your Foundry resource. Return to VS Code. From the VS Code file explorer, open the **set-up-connection.sh** file. Note where variables for your project endpoint, key, and model deployment names are included in the script. The script should look similar to this:
 
     ![Screenshot of the set-up-connection script.](./media/0-setup-curl-1.png)
 
     >**Note**: Your .sh files also include script at the top that exports everything from .env into the script’s environment. You will see the information following **#!/bin/bash** at the top of your **.sh** files. Do not edit this portion of the files.  
     
-1. Update the curl script by replacing the placeholders `{myGPT41Deployment}`, `{myGPT41MiniDeployment}`, `{myEmbeddingDeployment}` with the names of your deployed models. 
+1. Update the curl script by replacing the placeholders `{myGPT41Deployment}`, `{myGPT41MiniDeployment}`, `{myEmbeddingDeployment}` with the names of your deployed models. Save your changes.
 
-    >**Tip**: Unless you made changes, the model names should be `gpt-4.1`, `gpt-4.1-mini`, and `text-embedding-3-large`, respectively. Save your changes.
+    >**Tip**: Unless you made changes, the model names should be `gpt-4.1`, `gpt-4.1-mini`, and `text-embedding-3-large`, respectively. 
 
 1. In VS Code, open a new bash terminal. Press **Ctrl+Shift+P** (or Command Palette from View menu). Type: **Terminal: Create New Terminal (With Profile)**. Choose the **Git Bash** profile from the list. Your terminal will appear at the bottom of the VS Code screen. 
 
@@ -132,7 +136,7 @@ To develop a client app or agent that extracts information, you can use several 
 
     Then press *enter* to run the script that forms a connection between Content Understanding and the deployed models in your profile.
 
-1. Next, let's analyze our content using the prebuilt-invoice analyzer to extract structured data from an invoice document. We will analyze the same document as we did with the portal earlier: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf`. 
+1. Next, use the prebuilt-invoice analyzer to extract structured data from an invoice document. We will analyze the same document as we did with the portal earlier: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf`. 
 
 1. From the VS Code file explorer, open the **extract-data.sh** file. Note where variables for your project endpoint and key are included in the script. Identify where the *document url* is included in the inputs. The script should look similar to this:
 
