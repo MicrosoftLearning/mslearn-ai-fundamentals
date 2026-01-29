@@ -17,27 +17,17 @@ This exercise takes approximately **15** minutes.
 
     ![Screenshot of Microsoft Foundry home page.](./media/ai-foundry-portal.png)
 
-1. Select **Create an agent**. Then create a new project with the following settings:
-    - **Project name**: *Enter a valid name for your project.*
-    - **Advanced settings**:
-        - **Subscription**: *Your Azure subscription*
-        - **Resource group**: *Create or select a resource group*
-        - **Region**: *Select any **Foundry recommended** region*
-        - **Microsoft Foundry resource** *Give the resource a valid name*
+1. Scroll down to the bottom of the home page and select **Explore Azure AI services**. 
 
-1. Select **Create**. Wait for your project to be created. It may take a few minutes.
+1. On the Azure AI services page, select the **Speech** tile. You will be taken to the *Azure-AI-Speech* page.
 
-1. When the project is created, you will be taken to the project home page. Navigate to the left-side menu (you may need to expand it by clicking on its top icon). Click on **Playgrounds**. 
+## Explore speech to text in Foundry
 
-1. Select **Speech Playground**. The Speech playground is a user interface that enables you to try out some Azure Speech capabilities.  
-
-## Explore speech to text in Foundry's Speech Playground
-
-Let's try out *speech to text* in Foundry's Speech Playground.
+Let's try out *speech to text* in Foundry.
 
 1. In a new browser tab, download **[speech.zip](https://aka.ms/mslearn-speech-files)** from `https://aka.ms/mslearn-speech-files` in a new browser tab. After downloading the file, extract it to a local folder. 
 
-1. Back in Foundry, on the Speech page, select **Real-time transcription**.
+1. Back in Foundry, on the *Azure-AI-Speech* page, select **Real-time transcription**.
 
 1. Under **Upload files**, select **Browse files** and upload **WhatAICanDo.m4a** from the folder to downloaded and extracted.
 
@@ -51,7 +41,7 @@ Let's try out *speech to text* in Foundry's Speech Playground.
 
     In the output, under **Text**, you can see the audio transcibed into text.
 
-## Explore text to speech in Foundry's Speech Playground
+## Explore text to speech in Foundry
 
 Now let's see how Azure Speech can generate audible speech from text.
 

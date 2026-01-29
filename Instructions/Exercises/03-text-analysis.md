@@ -17,7 +17,13 @@ This exercise takes approximately **20** minutes.
 
     ![Screenshot of Foundry home page.](./media/ai-foundry-portal.png)
 
-1. Select **Create an agent**. Then create a new project with the following settings:
+1. Scroll down to the bottom of the home page and select **Explore Azure AI services**. 
+
+1. On the Azure AI services page, select the **Language + Translator** tile. 
+
+1. Select **Try the Language Playground**. Then in the dialog box click on **Create a new project**. 
+
+1. Create a new project with the following settings:
     - **Project name**: *Enter a valid name for your project.*
     - **Advanced settings**:
         - **Subscription**: *Your Azure subscription*
@@ -27,9 +33,9 @@ This exercise takes approximately **20** minutes.
 
 1. Select **Create**. Wait for your project to be created. It may take a few minutes.
 
-1. When the project is created, you will be taken to the project home page. Navigate to the left-side menu (you may need to expand it by clicking on its top icon). Click on **Playgrounds**. 
+1. When the project is created, you will be taken to the **Language Playground**. The Language playground is a user interface that enables you to try out some Azure Language capabilities. 
 
-1. Select **Language Playground**. The Language playground is a user interface that enables you to try out some Azure Language capabilities.    
+>**Tip**: You can always navigate to the left-side menu (you may need to expand the menu by clicking on its top icon) from any page in Foundry in order to return to the Playgrounds.
 
 ## Use Azure Language to analyze text
 
