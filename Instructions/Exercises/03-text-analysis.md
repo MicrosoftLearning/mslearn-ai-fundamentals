@@ -17,27 +17,19 @@ This exercise takes approximately **20** minutes.
 
     ![Screenshot of Foundry home page.](./media/ai-foundry-portal.png)
 
-1. Scroll to the bottom of the page, and select the **Explore Azure AI Services** tile.
-
-    ![Screenshot of the Explore Azure AI Services tile.](./media/ai-services.png)
-
-1. On the Azure AI Services page, select the **Language + Translator** tile.
-
-    ![Screenshot of the Language + Translator tile.](./media/language-tile.png)
-
-1. On the **Language + Translator** page, select **Try the Language playground**. Then, when prompted, create a new project with the following settings:
+1. Select **Create an agent**. Then create a new project with the following settings:
     - **Project name**: *Enter a valid name for your project.*
     - **Advanced settings**:
         - **Subscription**: *Your Azure subscription*
         - **Resource group**: *Create or select a resource group*
         - **Region**: *Select any **Foundry recommended** region*
-        - **AI Foundry or Azure OpenAI** *Create a new Foundry resource with a valid name*
+        - **Microsoft Foundry resource** *Give the resource a valid name*
 
 1. Select **Create**. Wait for your project to be created. It may take a few minutes.
 
-1. When the project is created, you will be taken to an **Language** playground (if not, in the task pane on the left, select **Playgrounds** and open the Language playground from there.)
+1. When the project is created, you will be taken to the project home page. Navigate to the left-side menu (you may need to expand it by clicking on its top icon). Click on **Playgrounds**. 
 
-    The Language playground is a user interface that enables you to try out some Azure Language capabilities.  
+1. Select **Language Playground**. The Language playground is a user interface that enables you to try out some Azure Language capabilities.    
 
 ## Use Azure Language to analyze text
 

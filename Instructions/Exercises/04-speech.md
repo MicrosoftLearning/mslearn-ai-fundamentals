@@ -17,27 +17,19 @@ This exercise takes approximately **15** minutes.
 
     ![Screenshot of Microsoft Foundry home page.](./media/ai-foundry-portal.png)
 
-1. Scroll to the bottom of the page, and select the **Explore Azure AI Services** tile.
-
-    ![Screenshot of the Explore Azure AI Services tile.](./media/ai-services.png)
-
-1. On the Azure AI Services page, select the **Speech** tile.
-
-    ![Screenshot of the Speech tile.](./media/speech.png)
-
-1. On the **Speech** page, select **Go to Speech playground**. Then, when prompted, create a new project with the following settings:
+1. Select **Create an agent**. Then create a new project with the following settings:
     - **Project name**: *Enter a valid name for your project.*
     - **Advanced settings**:
         - **Subscription**: *Your Azure subscription*
         - **Resource group**: *Create or select a resource group*
         - **Region**: *Select any **Foundry recommended** region*
-        - **AI Foundry or Azure OpenAI** *Create a new Foundry resource with a valid name*
+        - **Microsoft Foundry resource** *Give the resource a valid name*
 
 1. Select **Create**. Wait for your project to be created. It may take a few minutes.
 
-1. When the project is created, you will be taken to an **Speech** playground (if not, in the task pane on the left, select **Playgrounds** and open the Speech playground from there.)
+1. When the project is created, you will be taken to the project home page. Navigate to the left-side menu (you may need to expand it by clicking on its top icon). Click on **Playgrounds**. 
 
-    The Speech playground is a user interface that enables you to try out some Azure Speech capabilities.  
+1. Select **Speech Playground**. The Speech playground is a user interface that enables you to try out some Azure Speech capabilities.  
 
 ## Explore speech to text in Foundry's Speech Playground
 
