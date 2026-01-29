@@ -37,7 +37,7 @@ Let's try out *speech to text* in Foundry's Speech Playground.
 
 1. In a new browser tab, download **[speech.zip](https://aka.ms/mslearn-speech-files)** from `https://aka.ms/mslearn-speech-files` in a new browser tab. After downloading the file, extract it to a local folder. 
 
-1. Back in Foundry, on the Speech page, on the **Speech to text** tab, select **Real-time transcription**.
+1. Back in Foundry, on the Speech page, select **Real-time transcription**.
 
 1. Under **Upload files**, select **Browse files** and upload **WhatAICanDo.m4a** from the folder to downloaded and extracted.
 
@@ -55,7 +55,7 @@ Let's try out *speech to text* in Foundry's Speech Playground.
 
 Now let's see how Azure Speech can generate audible speech from text.
 
-1. In the Speech playground, select the **Text to speech** tab and ensure **Voice gallery** is selected.
+1. In the Speech playground, select the **Voice gallery**.
 1. View the available voices, and select one (such as *Ava Multilingual*).
 1. In the **Voice details** pane, select the **Try it out** tab. Then enter some text (for example, `The rain in Spain stays mainly in the plain`) and use the **Play** button to synthesize speech from the text.
 
