@@ -19,7 +19,7 @@ This exercise takes approximately **20** minutes.
 
     ![Screenshot of the gpt-4.1 details page.](./media/gpt-41-details.png)
 
-1. Select **Use this model**.
+1. Select **Use this model**. Then in the **Select your project** window, click on the options and select **+ Create a new project**. 
 
 1. In the **Create a project** wizard, enter a valid name for your project. Then expand **Advanced options** to specify the following settings for your project:
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
@@ -35,11 +35,9 @@ This exercise takes approximately **20** minutes.
 
 ## Explore generative AI in Foundry's chat playground
 
-1. After the project has been created, in the task pane on the left, select **Playgrounds**. 
+1. After the project has been created, you can deploy the model. Select **Deploy**.  
 
-    >*Tip*: If necessary, expand the menu to read its contents by clicking on the top 'expand' icon.
-
-1. In Foundry's Playgrounds page, select **Try the Chat playground**. Close any tips or quick start panes that are opened.
+1. Once the model has deployed, select **Open in playground**. Close any tips or quick start panes that are opened.
 
     The Chat playground is a user interface that enables you to try out building a chat application with different generative AI models.
 
