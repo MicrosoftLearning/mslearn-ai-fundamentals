@@ -36,8 +36,6 @@ This exercise takes approximately **20** minutes.
 
 1. When the project is created, you will be taken to the **Language Playground**. The Language playground is a user interface that enables you to try out some Azure Language capabilities. 
 
->**Tip**: You can always navigate to the left-side menu (you may need to expand the menu by clicking on its top icon) from any page in Foundry in order to return to the Playgrounds.
-
 ## Prepare for text analysis
 
 1. Download and extract **[text.zip](https://aka.ms/ai-text){:target="_blank"}** at `https://aka.ms/ai-text`. This archive contains multiple text documents that you'll use in this exercise.

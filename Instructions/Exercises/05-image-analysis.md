@@ -51,13 +51,11 @@ This exercise takes approximately **20** minutes.
 
 1. When the hub is created, you will be prompted to create a project. Enter a suitable project name and select **Create project**.
 
+1. After the project is created, you will be taken to the project home page. Navigate to the left-side menu (you may need to expand the menu by clicking on its top icon) and select **AI Services**.
+
 ## Generate captions for an image
 
 Let's use the image captioning functionality of Azure Vision to analyze images taken by a camera in the *Northwind Traders* store. Image captions are available through the **Caption** and **Dense Captions** features.
-
-1. In the task pane on the left, select **AI Services**.
-
-    *Now you need to repeat the steps you used previously to get back to the image captioning interface and use your new hub-based project.*
 
 1. On the **AI Services** page, select the **Vision + Document** tile. Then on the **Vision + Document** page, on the **Image** tab, select the **Image captioning** tile.
 

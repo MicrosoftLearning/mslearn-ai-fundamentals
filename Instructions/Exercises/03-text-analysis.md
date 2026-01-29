@@ -35,8 +35,6 @@ This exercise takes approximately **20** minutes.
 
 1. When the project is created, you will be taken to the **Language Playground**. The Language playground is a user interface that enables you to try out some Azure Language capabilities. 
 
->**Tip**: You can always navigate to the left-side menu (you may need to expand the menu by clicking on its top icon) from any page in Foundry in order to return to the Playgrounds.
-
 ## Use Azure Language to analyze text
 
 Azure Language offers a wide range of text analysis capabilities.
