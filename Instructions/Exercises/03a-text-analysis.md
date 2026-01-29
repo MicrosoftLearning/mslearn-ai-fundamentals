@@ -55,7 +55,7 @@ This exercise takes approximately **20** minutes.
 
     >**Tip**: Notice that the analysis produces an overall sentiment score and individual scores for each sentence.
 
-    ![Screenshot of the sentiment analysis interface in the Language playground.](./media/sentiment-analysis.png)
+    ![Screenshot of the sentiment analysis interface in the Language playground.](./media/0-sentiment-analysis.png)
 
 1. Select the pencil icon to edit the text. Repeat the analysis for **document-2.txt** and **document-3.txt**.
 
@@ -69,7 +69,7 @@ This exercise takes approximately **20** minutes.
 
     >**Tip**: Notice the different phrases extracted in the *Details* section. These phrases should contribute most to the text's meaning.
 
-    ![Screenshot of the Extract key phrases interface in the Language playground.](./media/key-phrases.png)
+    ![Screenshot of the Extract key phrases interface in the Language playground.](./media/0-key-phrases.png)
 
 1. Select the pencil icon to edit the text. Repeat the analysis for **document-2.txt** and **document-3.txt**.
 
@@ -83,7 +83,7 @@ This exercise takes approximately **20** minutes.
 
     >**Tip**: Notice in the *Details* section how the extracted entities come with additional information such as type and confidence scores. The confidence score represents the likelihood that the type identified actually belongs to that category.
 
-    ![Screenshot of the Extract named entities interface in the Language playground.](./media/entity-extraction.png)
+    ![Screenshot of the Extract named entities interface in the Language playground.](./media/0-extract-entities.png)
 
 1. Select the pencil icon to edit the text. Repeat the analysis for **document-2.txt** and **document-3.txt**.
 
@@ -97,7 +97,7 @@ This exercise takes approximately **20** minutes.
 
     >**Tip**: Notice the *Extractive summary* in *Details* provides rank scores for the most salient sentences.
 
-    ![Screenshot of the Summarize text interface in the Language playground.](./media/summarize-text.png)
+    ![Screenshot of the Summarize text interface in the Language playground.](./media/0-summarize-text.png)
 
 1. Select the pencil icon to edit the text. Repeat the analysis for **document-2.txt** and **document-3.txt**.
 
