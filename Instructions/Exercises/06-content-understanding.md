@@ -27,8 +27,6 @@ This exercise takes approximately **25** minutes.
 
 1. In the Content Understanding page, select **Create a project to start**. Then in the **Create project** dialog, select the recommended resource type (**Foundry resource**):
 
-    ![Screenshot of analysis results.](./media/resource-type.png)
-
 1. On the **Next** page, enter a valid name for your project. Then Select **Advanced options** and specify the following settings:
     - **Foundry resource**: *A valid name for your Foundry resource*
     - **Subscription**: *Your Azure subscription*
@@ -39,8 +37,6 @@ This exercise takes approximately **25** minutes.
         * Australia East
 
     \**At the time of writing, Content Understanding is supported in these regions.*
-
-    ![Screenshot of project settings.](./media/content-project-settings.png)
 
 1. Select **Create**. Wait for the set up process to complete. It may take a few minutes.
 
@@ -64,7 +60,7 @@ This exercise takes approximately **25** minutes.
 
     Note that the Content Understanding analyzer is able to extract information from this invoice, even though it is formatted diffferently from the sample.
 
-1. In the pane pn the right where the extracted fields are displayed, view the **Result** tab to see the JSON response that would be sent to a client application. A developer would write code to process this response and do something with the extracted fields.
+1. In the pane on the right where the extracted fields are displayed, view the **Result** tab to see the JSON response that would be sent to a client application. A developer would write code to process this response and do something with the extracted fields.
 
     ![Screenshot of the results of analysing the Contoso invoice.](./media/invoice-analysis-json.png)
 
