@@ -9,7 +9,7 @@ Azure Speech transcribes speech into text, and turns text into audible speech. Y
 
 In this exercise, you will use Azure Speech in Foundry, Microsoft's platform for creating intelligent applications, to explore core Azure Speech capabilities. 
 
-This exercise takes approximately **15** minutes.
+This exercise takes approximately **10** minutes.
 
 ## Create a project in Microsoft Foundry
 
