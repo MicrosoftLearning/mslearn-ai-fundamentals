@@ -15,9 +15,9 @@ This exercise takes approximately **20** minutes.
 
     ![Screenshot of Microsoft Foundry home page.](./media/ai-foundry-portal.png)
 
-1. In the **Explore models and capabilities** section, search for `gpt-4o`. Then, in the search results, select the **gpt-4o** model to view its details.
+1. In the **Explore models and capabilities** section, search for `gpt-4.1`. Then, in the search results, select the **gpt-4.1** model to view its details.
 
-    ![Screenshot of the gpt-4o detals page.](./media/gpt-4o-details.png)
+    ![Screenshot of the gpt-4.1 details page.](./media/gpt-41-details.png)
 
 1. Select **Use this model**.
 
@@ -43,11 +43,11 @@ This exercise takes approximately **20** minutes.
 
     The Chat playground is a user interface that enables you to try out building a chat application with different generative AI models.
 
-    ![Screenshot of the gpt-4o detals page.](./media/chat-playground.png)
+    ![Screenshot of the gpt-4.1 details page.](./media/chat-playground.png)
 
     >*Tip*: If you do not see the **Setup** pane in the Chat playground screen, expand the window size.  
 
-1. In order to use Chat playground, you need to associate it with a deployed model. In the Chat playground's **Setup** pane, ensure that the **gpt-4o** model you deployed previously is selected. 
+1. In order to use Chat playground, you need to associate it with a deployed model. In the Chat playground's **Setup** pane, ensure that the **gpt-4.1** model you deployed previously is selected. 
 
     >*Note*: You need to select **Apply changes** anytime you make changes in the **Setup** pane.
 
