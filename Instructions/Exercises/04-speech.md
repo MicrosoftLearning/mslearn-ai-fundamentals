@@ -11,7 +11,7 @@ In this exercise, you will use Azure Speech in Foundry, Microsoft's platform for
 
 This exercise takes approximately **10** minutes.
 
-## Create a project in Microsoft Foundry
+## Navigate Microsoft Foundry
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
