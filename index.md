@@ -12,6 +12,8 @@ To complete these exercises, you'll need a Microsoft Azure subscription. You can
 <hr>
 ### [{{ activity.lab.title }}]({{ site.github.url }}{{ activity.url }})
 
+Level: {{activity.lab.level}}&#9;{{activity.lab.duration}}
+
 {{activity.lab.description}}
 
 {% endfor %}
