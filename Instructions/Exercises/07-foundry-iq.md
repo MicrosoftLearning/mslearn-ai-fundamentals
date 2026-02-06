@@ -38,10 +38,10 @@ Let's start by setting up an enterprise data source for HR policy and procedure 
 
     ```
 
-1. After the repo has been cloned, navigate to the folder containing the chat application code files and view them:
+1. After the repo has been cloned, enter the following command to run a setup script that deploys the necessary resources:
 
     ```
-   bash ./setup/deploy-search.sh
+   bash ./labfiles/setup/deploy-search.sh
     
     ```
 
