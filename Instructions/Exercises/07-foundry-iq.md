@@ -165,9 +165,7 @@ Now you're ready to use the new knowledge store in the HR agent.
 
 1. When you've saved the knowledge store, in the **use in an agent** drop-down list, select your HR agent.
 
-## Test the knowledge base
-
-Now you're ready to test your agent's knowledge of HR policies and procedures!
+    The agent is opened in the agent playground, with the knowedge store attached.
 
 1. In the chat pane, enter the following query:
 
