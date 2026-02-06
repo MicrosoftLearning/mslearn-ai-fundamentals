@@ -73,108 +73,43 @@ This exercise takes approximately **40** minutes.
 
     ![Screenshot of the results of analysing the Contoso invoice.](./media/invoice-analysis-json.png)
 
-## Extract information with the REST API
-
-To develop a client app or agent that extracts information, you can use several Foundry models and the REST API.
-
->**Note**: This section of the exercise requires you to have access to Visual Studio Code (VS Code).  
-
-1. Identify your Foundry resource key and endpoint. In the (classic) Foundry portal, navigate to the left-side menu. Click on the top icon to *expand* the menu. Select **Overview** to navigate to your Foundry project's home page. On the project home page, you will either be able to copy and paste a project API key, or see a note that your subscription does not have those permissions. Keep the page open for your reference. 
-
->**Note**: To execute this section of the exercise, you will need an Azure subscription with permission to use the API Key. If you do not have permission, you will not be able to test out the models yourself. However, you can still read through the rest of the exercise to review the steps. 
-
-1. Open VS Code, then press **Ctrl + Shift + P** (Windows/Linux) to open the command palette (alternatively, you can select *View* from the menu, then *Command palette*). 
-
-1. In the command palette, type **Git: Clone** and select it. Paste the repo URL `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals.git` and press **Enter**.  
-
-1. Select a local folder where the repository will be cloned. When prompted, click **Open** to start working on the cloned project in VS code. 
-
-1. In the VS Code file explorer, select the **data** folder, then select the **content-understanding** folder. 
-
-    ![Screenshot of the file explorer in VS Code.](./media/0-content-understanding-file-navigation.png)
-
-1. In the *content-understanding* folder, open the **.env** file. Copy and paste your Foundry project API key. Copy and paste your Foundry project endpoint. Edit the endpoint by deleting the text after *ai.azure.com*. Your endpoint should look like this `https://...ai.azure.com`. Save the file. 
-
-1. Return to Foundry portal to create Foundry Model deployments of *GPT-4.1*, *GPT-4.1-mini*, and *text-embedding-3-large* in your Foundry resource. In the (classic) Foundry portal, select **Models and endpoints** from the menu on your left.
-
-1. From the **Model deployments** screen, select **+ Deploy a model**. Then select **Deploy base model**. Search for and select **GPT-4.1**, then select **Confirm**. Keep the default name and default deployment type. Select **Deploy**. 
-
-    >**Tip**: Once the model deploys, you are taken to the model details page. Navigate back to the left-side menu to continue deploying more models.
-
-1. Return to the **Model deployments** page by selecting **Models and endpoints** from the left-side menu. Repeat for **GPT-4.1-mini** and **text-embedding-3-large**. Once the models are deployed, note the names of the models. 
-
-    ![Screenshot of model names.](./media/0-content-understanding-model-names.png)
-
-1. To extract information from content using Content Understanding, you can use the *curl* command to call the REST endpoint. You will need to make three calls: 
-    - To set up a connection between Content Understanding and your Foundry models 
-    - To analyze the content 
-    - To retrieve the result of the analysis  
-
-1. Set up a connection between Content Understanding and Foundry models in your Foundry resource. Return to VS Code. From the VS Code file explorer, open the **set-up-connection.sh** file. Note where variables for your project endpoint, key, and model deployment names are included in the script. The script should look similar to this:
-
-    ![Screenshot of the set-up-connection script.](./media/0-setup-curl-1.png)
-
-    >**Note**: Your .sh files also include script at the top that exports everything from .env into the script’s environment. You will see the information following **#!/bin/bash** at the top of your **.sh** files. Do not edit this portion of the files.  
-    
-1. Update the curl script by replacing the placeholders `{myGPT41Deployment}`, `{myGPT41MiniDeployment}`, `{myEmbeddingDeployment}` with the names of your deployed models. Save your changes.
-
-    >**Tip**: Unless you made changes, the model names should be `gpt-4.1`, `gpt-4.1-mini`, and `text-embedding-3-large`, respectively. 
-
-1. In VS Code, open a new bash terminal. Press **Ctrl+Shift+P** (or Command Palette from View menu). Type: **Terminal: Create New Terminal (With Profile)**. Choose the **Git Bash** profile from the list. Your terminal will appear at the bottom of the VS Code screen. 
-
-1. In the terminal, navigate to the content-understanding folder. Copy and paste the following into the terminal. 
+    Developers can use the REST API to build an app that submits a document for analysis using a POST operation. For example, the following cUrl command could be used to analyze an invoice:
 
     ```bash
-    cd data/content-understanding
+   curl -i -X POST "{endpoint}/contentunderstanding/analyzers/{analyzerId}:analyze?api-version=2025-11-01" \
+      -H "Ocp-Apim-Subscription-Key: {key}" \
+      -H "Content-Type: application/json" \
+      -d '{
+            "inputs":[
+              {
+                "url": "https://{url_path}/invoice.png"
+              }          
+            ]
+          }'
     ```
-    
-    Then press *enter* to run the command and navigate to the appropriate folder.
- 
-1. Run the script by copy and pasting the following into the terminal: 
+
+    The analysis is performed asynchronously, so the response includes an **id** value that can be used to poll for the results:
+
+    ```json
+   {
+      "id": {resultId},
+      "status": "Running",
+      "result": {
+        "analyzerId": {analyzerId},
+        "apiVersion": "2025-11-01",
+        "createdAt": "YYYY-MM-DDTHH:MM:SSZ",
+        "warnings": [],
+        "contents": []
+      }
+    }
+    ```
+
+    To retrieve the results using the ID, the client must submit a GET request:
 
     ```bash
-    bash set-up-connection.sh
+   curl -i -X GET "{endpoint}/contentunderstanding/analyzerResults/{resultId}?api-version=2025-11-01" \
+      -H "Ocp-Apim-Subscription-Key: {key}"
     ```
-
-    Then press *enter* to run the script that forms a connection between Content Understanding and the deployed models in your profile.
-
-1. Next, use the prebuilt-invoice analyzer to extract structured data from an invoice document. We will analyze the same document as we did with the portal earlier: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf`. 
-
-1. From the VS Code file explorer, open the **extract-data.sh** file. Note where variables for your project endpoint and key are included in the script. Identify where the *document url* is included in the inputs. The script should look similar to this:
-
-    ![Screenshot of the extract-data script.](./media/0-extract-data-curl-1.png)
-
-1. Run the script by copy and pasting the following into the terminal: 
-
-    ```bash
-    bash extract-data.sh
-    ```
-
-    Then press *enter* to run the script that makes a POST request to analyze the content.
-
-1. The POST response should look something like this: 
-
-    ![Screenshot of the the POST response with the request-id highlighted.](./media/0-content-post-response-1.png)
-
-1. Copy the `request-id` from the POST response. 
-
-1. From the VS Code file explorer, open **get-results.sh** and review the file. Note where variables for your project endpoint and key are included in the script. The script should look similar to this: 
-
-    ![Screenshot of the the get-results script with the placeholder for request-id highlighted.](./media/0-get-results-curl-1.png)
-
-
-1. In the *get-results.sh* file, delete `{request-id}` and paste the `request-id` from the POST response. Remember to save the file.  
-    
-1. Run the script by copy and pasting the following into the terminal: 
-
-    ```bash
-    bash get-results.sh
-    ```
-
-    Then press *enter* to run the GET results script. By using the `request-id` from the POST response, you are able to retrieve the result of the analysis.
- 
-1. Review the JSON returned. See how it provides the same information you saw from the *Results* tab in the Foundry portal after analyzing the same document.
-
 ## Clean up
 
 If you’ve finished working with the Content Understanding service, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs.

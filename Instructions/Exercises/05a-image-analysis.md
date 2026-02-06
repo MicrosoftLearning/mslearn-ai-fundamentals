@@ -17,7 +17,11 @@ This exercise should take approximately **30** minutes to complete.
 Microsoft Foundry uses *projects* to organize models, resources, data, and other assets used to develop an AI solution.
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
-1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name of your choice, using the default options. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
+1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
+    - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
+    - **Subscription**: *Your Azure subscription*
+    - **Resource group**: *Create or select a resource group*
+    - **Region**: Select any of the **AI Foundry recommended** regions
 
     ![Screenshot of the AI Foundry project home page.](./media/0-foundry-project.png)
 

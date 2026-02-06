@@ -1,11 +1,3 @@
----
-lab:
-    title: 'Explore Automated Machine Learning'
-    description: 'Train a machine learning model in Azure Machine Learning'
-    level: 100
-    duration: 35 minutes
----
-
 # Explore Automated Machine Learning
 
 In this exercise, you'll use the automated machine learning to train and evaluate a machine learning model. You'll then deploy and test the trained model.
