@@ -30,11 +30,12 @@ Let's start by setting up an enterprise data source for HR policy and procedure 
 
     > **Note**: If you have previously created a cloud shell that uses a *PowerShell* environment, switch it to ***Bash***.
 
-1. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise (type the command, or copy it to the clipboard and then right-click in the command line and paste as plain text):
+1. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise (type the commands, or copy them to the clipboard and then right-click in the command line and paste as plain text):
 
     ```
    rm -r labfiles -f
    git clone https://github.com/microsoftlearning/mslearn-ai-fundamentals labfiles
+   cd labfiles/setup
 
     ```
 
@@ -195,6 +196,8 @@ Employees will consume the agent through a web application in the company's inte
     When prompted, approve access to the tool, and then review the response.
 
     ![Screenshot of the agent preview.](./media/preview-hr-agent.png)
+
+1. Try asking about other HR topics (such as remote or hybrid work policy, or employee benefits).
 
 ## Summary
 
