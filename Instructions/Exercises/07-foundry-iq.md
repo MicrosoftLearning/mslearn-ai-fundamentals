@@ -44,7 +44,7 @@ Let's start by setting up an enterprise data source for HR policy and procedure 
 1. After the repo has been cloned, enter the following command to run a setup script that deploys the necessary resources:
 
     ```
-   bash ./labfiles/setup/deploy-search.sh
+   bash ./deploy-search.sh
     
     ```
 
@@ -74,7 +74,7 @@ Now that you have the necessary infrastructure in place, you're ready to create 
 
     ![Screenshot of the agent playground.](./media/hr-agent.png)
 
-1. In the model drop-down list, ensure that a **gpt-41** model has been deployed and selected for your agent.
+1. In the model drop-down list, ensure that a **gpt-4.1** model has been deployed and selected for your agent.
 1. Assign your agent the following **Instructions**:
 
     ```
