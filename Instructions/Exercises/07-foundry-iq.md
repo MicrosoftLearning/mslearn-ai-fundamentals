@@ -14,7 +14,7 @@ In this exercise, you'll use Microsoft Foundry IQ to create an AI agent that use
 
 This exercise should take approximately **20** minutes to complete.
 
-> **Note** > To complete this exercise, you need credentials for an Azure subscription in which you have sufficient permissions to create the required  resources.
+> **Note**: To complete this exercise, you need credentials for an Azure subscription in which you have sufficient permissions to create the required  resources.
 
 ## Set up a data source
 
