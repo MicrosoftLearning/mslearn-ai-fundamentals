@@ -13,12 +13,13 @@ To complete these exercises, you'll need a Microsoft Azure subscription. You can
 {% for activity in labs  %}
 {% if activity.lab.title %}
 ### [{{ activity.lab.title }}]({{ site.github.url }}{{ activity.url }})
-{% endif %}
 
-{% if activity.lab.level %}**Level**: {{activity.lab.level}} |{% endif %}{% if activity.lab.duration %}**Duration**: {{activity.lab.duration}}{% endif %}
+
+{% if activity.lab.level %}**Level**: {{activity.lab.level}} \| {% endif %}{% if activity.lab.duration %}**Duration**: {{activity.lab.duration}}{% endif %}
 
 {% if activity.lab.description %}
 *{{activity.lab.description}}*
 {% endif %}
-{% endfor %}
 <hr>
+{% endif %}
+{% endfor %}
