@@ -8,10 +8,11 @@ These hands-on exercises are designed to support training content on [Microsoft 
 To complete these exercises, you'll need a Microsoft Azure subscription. You can sign up for a free trial at [https://azure.microsoft.com](https://azure.microsoft.com).
 
 <hr>
+
 {% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Exercises'" %}
 {% for activity in labs  %}
 {% if activity.lab.title %}
-**[{{ activity.lab.title }}]({{ site.github.url }}{{ activity.url }})**
+### [{{ activity.lab.title }}]({{ site.github.url }}{{ activity.url }})
 {% endif %}
 
 {% if activity.lab.level %}**Level**: {{activity.lab.level}} |{% endif %}{% if activity.lab.duration %}**Duration**: {{activity.lab.duration}}{% endif %}
@@ -19,5 +20,5 @@ To complete these exercises, you'll need a Microsoft Azure subscription. You can
 {% if activity.lab.description %}
 *{{activity.lab.description}}*
 {% endif %}
-<hr>
 {% endfor %}
+<hr>
