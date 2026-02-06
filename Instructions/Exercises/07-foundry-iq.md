@@ -10,7 +10,7 @@ lab:
 
 The HR department at Contoso Corp wants to reduce employee support effort and empower employees by providing a self-service solution for queries about HR polices and procedures.
 
-In this exercise, you'll use Microsoft Microsoft Foundry IQ to create an AI agent that uses knowledge contained in HR documentation to advise employees on HR-related issues.
+In this exercise, you'll use Microsoft Foundry IQ to create an AI agent that uses knowledge contained in HR documentation to advise employees on HR-related issues.
 
 This exercise should take approximately **20** minutes to complete.
 
