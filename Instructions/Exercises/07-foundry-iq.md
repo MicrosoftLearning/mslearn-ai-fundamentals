@@ -2,6 +2,8 @@
 lab:
     title: 'Get started with Foundry IQ in Microsoft Foundry'
     description: 'Use Foundry IQ to connect an agent to knowledge.'
+    level: 100
+    Duration: 20 minutes
 ---
 
 # Get started with Foundry IQ in Microsoft Foundry
@@ -10,7 +12,7 @@ The HR department at Contoso Corp wants to reduce employee support effort and em
 
 In this exercise, you'll use Microsoft Microsoft Foundry IQ to create an AI agent that uses knowledge contained in HR documentation to advise employees on HR-related issues.
 
-This exercise should take approximately **15** minutes to complete.
+This exercise should take approximately **20** minutes to complete.
 
 > **Note** > To complete this exercise, you need credentials for an Azure subscription in which you have sufficient permissions to create the required  resources.
 
