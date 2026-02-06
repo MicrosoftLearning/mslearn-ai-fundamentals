@@ -11,7 +11,7 @@ To complete these exercises, you'll need a Microsoft Azure subscription. You can
 {% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Exercises'" %}
 {% for activity in labs  %}
 {% if activity.lab.title %}
-### [{{ activity.lab.title }}]({{ site.github.url }}{{ activity.url }})
+**[{{ activity.lab.title }}]({{ site.github.url }}{{ activity.url }})**
 {% endif %}
 
 {% if activity.lab.level %}**Level**: {{activity.lab.level}} |{% endif %}{% if activity.lab.duration %}**Duration**: {{activity.lab.duration}}{% endif %}
