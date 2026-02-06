@@ -15,4 +15,4 @@ markdown: kramdown
 kramdown:
    syntax_highlighter_opts:
       disable : true
-title: Get started with AI in Azure
+title: Get started with AI apps and agents in Azure

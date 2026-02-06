@@ -1,8 +1,3 @@
----
-lab:
-    title: 'Extract data with Content Understanding in Microsoft Foundry​'
----
-
 # Extract data with Content Understanding in Microsoft Foundry
 
 Azure Content Understanding provides multi-modal analysis of documents, audio files, video, and images to extract information.

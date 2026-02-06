@@ -1,8 +1,3 @@
----
-lab:
-    title: 'Explore speech in Microsoft Foundry'
----
-
 # Explore speech in Microsoft Foundry
 
 Azure Speech transcribes speech into text, and turns text into audible speech. You might use Speech to create an application that can transcribe meeting notes or generate text from the recording of interviews, or to support an interactive AI assistant that can respond to spoken commands and queries.

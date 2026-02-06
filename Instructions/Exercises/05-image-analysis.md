@@ -1,8 +1,3 @@
----
-lab:
-    title: 'Analyze images in Microsoft Foundry'
----
-
 # Analyze images in Microsoft Foundry
 
 **Azure Vision** includes numerous capabilities for understanding image content and context and extracting information from images. In this exercise, you will use Azure Vision in Microsoft Foundry, Microsoft's platform for creating intelligent applications, to analyze images using the built-in try-it-out experiences. 

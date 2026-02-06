@@ -1,6 +1,9 @@
 ---
 lab:
     title: 'Explore Automated Machine Learning'
+    description: 'Train a machine learning model in Azure Machine Learning'
+    level: 100
+    duration: 35 minutes
 ---
 
 # Explore Automated Machine Learning

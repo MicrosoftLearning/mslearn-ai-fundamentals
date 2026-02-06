@@ -1,8 +1,3 @@
----
-lab:
-    title: 'Explore generative AI in Microsoft Foundry'
----
-
 # Explore generative AI in Microsoft Foundry
 
 Generative AI describes a category of capabilities within AI that create content. People often interact with generative AI that has been built into chat applications. In this exercise, you try out generative AI in Microsoft Foundry portal, Microsoft's platform for creating intelligent applications. 
