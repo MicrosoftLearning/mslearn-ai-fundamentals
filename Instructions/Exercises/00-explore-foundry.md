@@ -121,11 +121,61 @@ As you would expect in a platform for developing cutting edge AI solutions, Micr
 
 1. Enter a prompt such as `What can I do with Microsoft Foundry?` and review the response.
 
-    If you have any questions about some of the things you've explored in this exercise, this is the place to ask them!
+    If you have any questions about some of the things you've explored so far in this exercise, this is the place to ask them!
+
+## Deploy a model
+
+Your Microsoft Foundry resource provides an endpoint in which you can deploy models and use them from applications and agents.
+
+1. In the **Start building** menu, select **Browse models** to view the Microsoft Foundry model catalog.
+
+    Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
+
+    ![Screenshot of the AI Foundry model catalog.](./media/0-foundry-models.png)
+
+1. Search for and select the `gpt-4.1-mini` model, and view the page for this model, which describes its features and capabilities.
+
+    ![Screenshot of the gpt-4.1-mini model page.](./media/0-gpt-4.1-mini.png)
+
+1. Use the **Deploy** button to deploy the model using the default settings. Deployment may take a minute or so.
+
+    > **Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different model - such as gpt-4.1-nano, or gpt-4o-mini. Alternatively, you can create a new project in a different region.
+
+1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
+
+    ![Screenshot of the model playground.](./media/0-model-playground.png)
+
+1. Ensure your model deployment (which should be named **gpt-4.1-mini**) is selected in the playground.
+1. In the **Chat** pane, test your model by entering a message like `What is AI?`
+
+## Use your Foundry resource endpoint
+
+Now that you have a Microsoft Foundry resource in Azure, you can use its models and tools from client applications.
+
+1. In the toolbar at the top of the Foundry portal, select your project to return to the home page.
+1. Note the following details for your project:
+    - **Project endpoint**: The URL where your project resource can be accessed.
+    - **Project API key**: The authentication key used to access your resource.
+    - **Project region**: The region where your project is deployed.
+1. Open a second browser tab, and navigate to the [Ask Andrew (Azure)](https://aka.ms/ask-andrew-azure){:target="_blank"} app at `https://aka.ms/ask-andrew-azure`.
+
+    The Ask Andrew app should look like this:
+
+    ![Screenshot of the Ask Andrew app.](./media/ask-andrew.png)
+
+1. In the chat pane header, select **Configure**, and then copy your model deployment name and the project values from the Foundry portal home page to the Foundry configuration settings page.
+
+    ![Screenshot of the Ask Andrew app configuration page.](./media/configure-andrew.png)
+
+1. Save the configuration (you may need to scroll down).
+
+    > **Note**: The configuration values other than the API key will be stored in your local browser. If you close and re-open the app, you will need to re-enter the APi key.
+
+1. Use the app to chat with Andrew and ask questions about AI concepts. The app will use your deployed model in Microsoft Foundry. If you use the speech functionality, the app will use Azure Speech in Foundry tools in your resource to recognize and synthesize speech.
 
 ## Summary
 
-in this exercise, you explored a Microsoft Foundry project and familiarized yourself with the Microsoft Foundry portal.
+in this exercise, you explored a Microsoft Foundry project and familiarized yourself with the Microsoft Foundry portal. You then deployed a model and connected a client application to your Foundry resource.
 
 ## Clean Up
 

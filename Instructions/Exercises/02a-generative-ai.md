@@ -43,6 +43,9 @@ At the heart of every generative AI app or agent, there's a language model - usu
     ![Screenshot of the gpt-4.1-mini model page.](./media/0-gpt-4.1-mini.png)
 
 1. Use the **Deploy** button to deploy the model using the default settings. Deployment may take a minute or so.
+
+    > **Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different model - such as gpt-4.1-nano, or gpt-4o-mini. Alternatively, you can create a new project in a different region.
+
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
     ![Screenshot of the model playground.](./media/0-model-playground.png)
