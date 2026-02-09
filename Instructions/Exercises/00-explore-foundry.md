@@ -157,13 +157,14 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
     - **Project endpoint**: The URL where your project resource can be accessed.
     - **Project API key**: The authentication key used to access your resource.
     - **Project region**: The region where your project is deployed.
+
 1. Open a second browser tab, and navigate to the [Ask Andrew (Azure)](https://aka.ms/ask-andrew-azure){:target="_blank"} app at `https://aka.ms/ask-andrew-azure`.
 
     The Ask Andrew app should look like this:
 
     ![Screenshot of the Ask Andrew app.](./media/ask-andrew.png)
 
-1. In the chat pane header, select **Configure**, and then copy your model deployment name and the project values from the Foundry portal home page to the Foundry configuration settings page.
+1. In the chat pane header, select **Configure**, and then enter the project values from the Foundry portal home page and your model deployment name into the Foundry configuration settings page.
 
     ![Screenshot of the Ask Andrew app configuration page.](./media/configure-andrew.png)
 
