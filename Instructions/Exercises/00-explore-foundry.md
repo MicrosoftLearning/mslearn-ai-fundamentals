@@ -168,7 +168,7 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
     ![Screenshot of the Ask Andrew app configuration page.](./media/configure-andrew.png)
 
-1. Save the configuration (you may need to scroll down).
+1. Save the configuration.
 
     > **Note**: The configuration values other than the API key will be stored in your local browser. If you close and re-open the app, you will need to re-enter the APi key.
 
