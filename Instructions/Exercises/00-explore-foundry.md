@@ -150,7 +150,7 @@ Your Microsoft Foundry resource provides an endpoint in which you can deploy mod
 
 ## Use your Foundry resource endpoint
 
-Now that you have a Microsoft Foundry resource in Azure, you can use its models and tools from client applications.
+Now that you have a Microsoft Foundry resource in Azure, you can use its models and tools from client applications. In this exercise, we'll use a simple AI chat application that has been provided for you.
 
 1. In the toolbar at the top of the Foundry portal, select your project to return to the home page.
 1. Note the following details for your project:
