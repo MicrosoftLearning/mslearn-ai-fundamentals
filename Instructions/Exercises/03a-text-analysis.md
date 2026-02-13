@@ -8,7 +8,7 @@ lab:
 
 # Get started with text analysis in Microsoft Foundry
 
-Azure Language includes Text Analytics, with capabilities such as entity recognition, key phrase extraction, summarization, and sentiment analysis. In this exercise, use Microsoft Foundry, Microsoft's platform for creating AI applications, to use AI to analyze text. You'll use Azure Language's natural language processing functionalities to analyze text. The goal of this exercise is to explore common applications of text analysis techniques.
+In this exercise, use Azure Language's text analysis features in Microsoft Foundry, Microsoft's platform for creating AI applications. The goal of this exercise is to explore common applications of text analysis techniques.
 
 This exercise takes approximately **20** minutes.
 
