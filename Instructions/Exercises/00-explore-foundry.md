@@ -41,7 +41,7 @@ Microsoft Foundry projects are based on resources in your Azure subscription. Le
     Each project has a *parent* resource, in which services and configuration can be applied to multiple child projects.
 
 1. Note the name of the parent resource for your project. Then, open a new browser tab and navigate to the [Azure portal](https://portal.azure.com){:target="_blank"} at `https://portal.azure.com` and if prompted, sign in using your Azure credentials.
-1. In the Azure poral home page, in the search box at the top of the page, search for your Microsoft Foundry parent resource.
+1. In the Azure portal home page, in the search box at the top of the page, search for your Microsoft Foundry parent resource.
 
     ![Screenshot of Azure portal search results.](./media/0-azure-portal-search.png)
 
