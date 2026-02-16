@@ -3,7 +3,7 @@ lab:
     title: 'Get started with information extraction in Microsoft Foundry​'
     description: 'Use AI models to extract information from visual data.'
     level: 100
-    duration: 40 minutes
+    duration: 25 minutes
 ---
 
 # Get started with information extraction in Microsoft Foundry
@@ -12,7 +12,7 @@ Azure Content Understanding provides multi-modal analysis of documents, audio fi
 
 In this exercise, you will use Azure Content Understanding in Foundry, Microsoft's platform for creating intelligent applications, to extract information from invoices. Then you will try out using Azure Content Understanding in Foundry Tools with the REST API.
 
-This exercise takes approximately **40** minutes.
+This exercise takes approximately **25** minutes.
 
 >**Note**: This exercise utilizes the classic Foundry portal experience. If you are using the new Foundry portal, you need to toggle back to classic. 
 

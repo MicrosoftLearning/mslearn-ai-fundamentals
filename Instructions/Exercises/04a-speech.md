@@ -3,7 +3,7 @@ lab:
     title: 'Get started with speech in Microsoft Foundry'
     description: 'Use Microsoft Foundry to try out Azure Speech - Voice Live.'
     level: 100
-    duration: 30 minutes
+    duration: 25 minutes
 ---
 
 # Get started with speech in Microsoft Foundry
@@ -12,7 +12,7 @@ The two fundamental speech capabilities that power voice-enabled applications ar
 
 In this exercise, use Microsoft Foundry, Microsoft's platform for creating AI applications, to interact with a generative AI model using speech. You'll explore speech-to-text (STT) and text-to-speech (TTS) with Azure Speech Voice Live, a service used to build real-time voice-based agents. Voice live in the Speech Playground supports both speech recognition and speech synthesis, enabling you to have a voice-based conversation with the model.
 
-This exercise takes approximately **30** minutes.
+This exercise takes approximately **25** minutes.
 
 ## Create a Microsoft Foundry project
 
