@@ -2,7 +2,7 @@
 lab:
     title: 'Get started with text analysis in Microsoft Foundry'
     description: 'Use Microsoft Foundry to try out different types of text analysis.'
-    level: 100
+    level: 200
     duration: 20 minutes
 ---
 

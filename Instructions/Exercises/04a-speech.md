@@ -2,7 +2,7 @@
 lab:
     title: 'Get started with speech in Microsoft Foundry'
     description: 'Use Microsoft Foundry to try out Azure Speech - Voice Live.'
-    level: 100
+    level: 200
     duration: 25 minutes
 ---
 

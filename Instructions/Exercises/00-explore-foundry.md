@@ -2,7 +2,7 @@
 lab:
     title: 'Get started with Microsoft Foundry'
     description: 'Create and explore a Microsoft Foundry project.'
-    level: 100
+    level: 200
     duration: 30 minutes
 ---
 

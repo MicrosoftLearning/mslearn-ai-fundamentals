@@ -2,7 +2,7 @@
 lab:
     title: 'Get started with information extraction in Microsoft Foundry​'
     description: 'Use AI models to extract information from visual data.'
-    level: 100
+    level: 200
     duration: 25 minutes
 ---
 
