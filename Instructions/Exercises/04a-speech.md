@@ -53,7 +53,7 @@ Let's start by configuring the core settings needed to use Azure Speech - Voice 
 
     ![Screenshot of how to navigate to Speech Playground to test Azure Speech - Voice Live.](./media/0126-new-foundry-ai-services-voice-live.png)
 
-1. In the Azure Speech - Voice Live Speech Playground settings pane,  click through the samples and select **Start with Blank** to create your own assistant.
+1. In the Azure Speech - Voice Live Speech Playground settings pane,  click through the samples and select **Start from Blank** to create your own assistant.
 
 1. In the playground settings pane, modify the **Generative AI model** the assistant uses. Select **GPT-4.1 Mini**. Select **Apply changes** to save the updates. 
 
