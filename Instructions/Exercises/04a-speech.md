@@ -8,9 +8,9 @@ lab:
 
 # Get started with speech in Microsoft Foundry
 
-The two fundamental speech capabilities that power voice-enabled applications are speech recognition (converting spoken words to text) and speech synthesis (converting text to natural-sounding speech).
+Speech-capable AI agents enable users to interact conversationally - using spoken command and questions that generate vocal responses.
 
-In this exercise, use Microsoft Foundry, Microsoft's platform for creating AI applications, to interact with a generative AI model using speech. You'll explore speech-to-text (STT) and text-to-speech (TTS) with Azure Speech Voice Live, a service used to build real-time voice-based agents. Voice live in the Speech Playground supports both speech recognition and speech synthesis, enabling you to have a voice-based conversation with the model.
+In this exercise, use Azure Speech in Microsoft Foundry Tools to create a speech-capable agent. You'll use Azure Speech Voice Live, a service used to build real-time voice-based agents.
 
 This exercise takes approximately **25** minutes.
 
@@ -30,122 +30,75 @@ Microsoft Foundry uses projects to organize models, resources, data, and other a
 
     ![Screenshot of the New Foundry Home Page](./media/0126-new-foundry-project.png)
 
-## Explore Azure Speech in Foundry Tools
+## Create an agent
 
-1. On the new Foundry home page, navigate to the top right menu (you may need to expand the screen to see the menu options). Select **Build**. 
+Now let's create an agent.
 
-    ![Screenshot of how to navigate to the Build menu option.](./media/0126-new-foundry-home-build-selected.png)
-  
-1. On the *Build* page, navigate to the left-hand menu (you may need to expand it to see its options). From the menu, select **Models**. On the Models page, select **AI-services**. Note that the list of AI services is a small subset of all the AI capabilities available with Foundry Tools. Several Speech-related services are available for testing, including: 
-    - *Azure Speech - Voice Live*: a speech service for interactive, real-time conversational interactions between a user and an AI agent.
-    - *Azure Speech - Speech to Text*: capabilities used to generate text transcriptions from speech audio. For example, to transcribe calls or meetings, or to create captions for hearing-impaired users.
-    - *Azure Speech - Text to Speech*: capabilities used to generate audio from text. For example, to create audio to help people with visual-impairments, or enable bots with natural-sounding speech.
+1. In the **Start building** menu, select **Create agent**; and when prompted, name the agent **speech-Agent**.
 
-## Experiment with Azure Speech - Voice Live
+     When ready, your agent opens in the agent playground.
 
-Let's start by chatting with a generative AI model. In this exercise, we'll use a browser-based application to chat with the **GPT-4.1 Mini** model; a small language model that is useful for general chat solutions.
+    ![Screenshot of the agent playground.](./media/speech-agent.png)
 
-## Configure Azure Speech - Voice Live settings
+1. In the model drop-down list, ensure that a **gpt-4.1** model has been deployed and selected for your agent.
+1. Assign your agent the following **Instructions**:
 
-Let's start by configuring the core settings needed to use Azure Speech - Voice Live.
+    ```
+   You are an AI agent that provides information about AI and related topics. You answer questions concisely and precisely.
+    ```
 
-1. From the list of tools, select **Azure Speech - Voice Live** to try out *Voice Live* capabilities in the Speech Playground. 
+1. Use the **Save** button to save the changes.
+1. Test the agent by entering the following prompt in the **Chat** pane:
 
-    ![Screenshot of how to navigate to Speech Playground to test Azure Speech - Voice Live.](./media/0126-new-foundry-ai-services-voice-live.png)
+    ```
+   What can you help me with?
+    ```
 
-1. In the Azure Speech - Voice Live Speech Playground settings pane,  click through the samples and select **Start from Blank** to create your own assistant.
+    The agent should respond with an appropriate answer based on its instructions.
 
-1. In the playground settings pane, modify the **Generative AI model** the assistant uses. Select **GPT-4.1 Mini**. Select **Apply changes** to save the updates. 
+## Configure Azure Speech Voice live
 
-1. View the Speech Playground app, which should look like this:
+Enabling speech mode for a Foundry agent integrates Azure Speech Voice Live - adding speech capabilities to the agent.
 
-    ![Screenshot of Voice Live with GPT-4.1 Mini and blanck chat selected.](./media/0126-new-foundry-blank-start.png) 
+1. In the pane on the left, under the model selection list, enable **Speech mode**.
 
-### Select a voice 
+    If the **Configuration** pane does not open automatically, use the "cog" icon above the chat interface to open it.
 
-Text-to-speech solutions use voices to control the cadence, pronunciation, timbre, and other aspects of generated speech. The available voices depend on your browser and operating system.
+1. In the **Configuration** pane, under **Voice Live**, review the default speech input and output configuration. You can try different voices, previewing them until you decide which one to use.
+1. Close the **Configuration** pane and use the **Save** button to save the agent.
 
-1. In the configuration pane on the left, view the voices in the **Speech output** drop-down list.
- 
-1. Select any of the available voices, and use the Preview selected voice (▷) button to hear a sample of the voice.
- 
-1. When you have selected the voice you want to use, use the **Apply changes** button to activate it.
+## Use speech to interact with the agent
 
-### Use speech to interact with the model
+Now you're ready to chat with the agent.
 
-The app supports both speech recognition and speech synthesis, enabling you to have a voice-based conversation with the model.
+1. In the Chat pane, use the **Start session** button to start a conversation with the agent. If prompted, allow access to the system microphone.
 
-1. In the Chat pane, use the **Start** button to start a conversation with the model. If prompted, allow access to the system microphone. The agent will introduce itself. 
+    The agent will start a speech session, and listen for your prompt.
 
-    >**Tip**: If you are not prompted for microphone access, and your microphone is not detected, try the following steps to allow microphone access. In the browser window, navigate to the page url. Click on the *lock icon* next to the url. Select *Permissions*, *Microphone*, and *Allow*. Then refresh the page and try again. If your browser is still unable to access the microphone, you can try a simulation of the exercise [here](https://microsoftlearning.github.io/mslearn-ai-concepts/Instructions/exercises/04-speech.html) that allows for text input if the microphone is not working.
+    ![Screenshot of the selected cc button to see the closed captions.](./media/speech-session.png)
 
 1. When the app status is **Listening…**, say something like `"How does speech recognition work?"` and wait for a response.
 
-1. Verify that the app status changes to **Processing…**. The app will process the spoken input, using speech-to-text to convert your speech to text and submit it to the model as a prompt. 
+1. Verify that the app status changes to **Processing…**. The app will process the spoken input.
 
     >**Tip**: The processing speed may be so fast that you do not actually see the status before it changes back to *Speaking*.
 
 1. When the status changes to **Speaking…**, the app uses text-to-speech to vocalize the response from the model. To see the original prompt and the response as text, select the **cc** button on the bottom of the chat screen.
 
-    >**Tip**: The follow-on prompt is submitted just by speaking. You can even interrupt the agent to keep the interaction focused on what you need done. 
-    >**Tip**: You can also use the Stop generation button in the chat pane to stop long-running responses. The button will end the conversation. You will need to start a new conversation to continue using the agent. 
+    >**Tip**: The follow-on prompt is submitted just by speaking. You can even interrupt the agent to keep the interaction focused on what you need done. You can also use the **Stop generation** button in the chat pane to stop long-running responses. The button will end the conversation. You will need to start a new conversation to continue using the agent. 
 
-    ![Screenshot of the selected cc button to see the closed captions.](./media/0126-new-foundry-voice-show-text.png)
+1. To continue the conversation, just ask another question, such as `"How does speech synthesis work?"`, and review the response.
+1. When you have finished chatting with the agent, use the **X** icon to end the session. A transcript of the conversation will be displayed.
 
-1. To continue the conversation, submit a second spoken prompt, such as `"How does speech synthesis work?"`, and review the response.
+## View client code
 
-### Explore speech settings
+To use your agent in a custom application, you need to write code that uses the Azure Speech Voice Live SDK to handle streaming audio input and output.
 
-Voice Live provides advanced settings that you can use to customize the behavior of your voice agent.
-
-1. In the pane on the left, expand **Advanced settings** and review the following settings:
-    - **Proactive engagement**: Configures the agent to proactively start a conversation instead of waiting for user input.
-    - **End of utterance (EOU)**:  Detects the end of speaking and stops speech recognition processing, returning results promptly. Currently does not support GPT-4o Realtime or GPT-4o Mini Realtime models.
-    - **Audio enhancement**: Improves sound quality by reducing noise and boosting clarity, ensuring more accurate and clear speech recognition.
-    - **Voice temperature**: Controls the style and expressiveness of the spoken audio including intonation, prosody, emphasis, pacing, and emotional variance. 
-    - **Playback speed**: The speed at which the voice is speaking.
-    - **Custom lexicon**: Define the pronunciation of specific words, such as company names, medical terms, or emojis. Create a custom lexicon file using the Audio Content Creation tool, and copy its link here to use
-
-1. If you have time, you can also try out an Azure avatar. Activating the avatar toggle will allow you to select a prebuilt avatar or create a custom avatar that visualizes the agent's audio output as an avatar speaking.
-
-### View the client code 
-
-Now let's review the code that makes this web experience possible!
-
-1. Select **Code** at the top of the chat screen. You should see Python code like this:  
-
-    ![Screenshot of the start of the python code for the voice live app.](./media/0126-voice-live-code-start.png)
-
-1. In lines `17-32` you can see the specific Azure Speech packages imported. Imported packages provide additional functionality and tools - in this case, additional functions and models that compliment the language model used to respond to the conversation text itself. By importing these packages, you can leverage prebuilt, optimized solutions instead of writing everything from scratch, making code more efficient, readable, and maintainable.  
-
-    ![Screenshot of the imported packages.](./media/0126-voice-live-azure-imports.png)
- 
-1. The web live voice assistant is composed of two major functionalities: the Audio Processor and the Voice Assistant.  In lines `63-238`, you can review the code for the `AudioProcessor` class to see how it handles real-time audio capture and playback. 
-
-    ![Screenshot of the Audio Processor class.](./media/0126-voice-live-audio-processor.png)
-
-1. The `BasicVoiceAssistant` class begins on line `240`. The code in this class uses the VoiceLive Python SDK to handle the events from the VoiceLive connection. Notice how the `BasicVoiceAssistant` has a dependency on the `AudioProcessor` class (such as in line `258`).   
-
-    ![Screenshot of the Voice Assistant class.](./media/0126-voice-live-basic-voice-assistant.png)
-
-1. The configurations from the playground settings and your credentials (such as AI voice, model, and instructions) are handled by the global `parse_arguments` function that starts on line `417`.
-
-    ![Screenshot of parse arguments function.](./media/0126-voice-live-parse-arguments.png)
-
-1. Click on **{X}.env variables** at the top of the code screen to your VoiceLive credentials.
-
-    ![Screenshot of the env variables.](./media/0126-voice-live-env.png)
-
-1. Stitched all together, we can understand what is executed with the `main` function that starts on line `472`: 
-    - Your Azure credentials are validated (*notice how parse_arguments() is saved to the variable `args`*)
-    - Your client is created
-    - The voice assistant is created (*notice how the assistant is created on line `497` by calling the `BasicVoiceAssistant`*)
-    - The voice assistant is given code for proper shutdown
-    - The voice assistant is started 
-
-    ![Screenshot of the main function](./media/0126-voice-live-main-function.png)
-
->**Try it out**: Those with a work or school account can click on **Open in VS Code for the Web** at the top of the code window and follow along with the instructions.  
+1. Select **Code** at the top of the chat screen to view sample code for an agent client.
+1. Review the code; noting that it handles:
+    - Connectivity to your project to access the agent.
+    - Audio streaming for input and output.
+    - Use of audio devices, such as microphones and speakers.
 
 ## Clean up
 
