@@ -34,7 +34,7 @@ Microsoft Foundry uses projects to organize models, resources, data, and other a
 
 Now let's create an agent.
 
-1. In the **Start building** menu, select **Create agent**; and when prompted, name the agent **speech-Agent**.
+1. In the **Start building** menu, select **Create agent**; and when prompted, name the agent **speech-agent**.
 
      When ready, your agent opens in the agent playground.
 
