@@ -23,12 +23,16 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select any of the **AI Foundry recommended** regions
- 
+
+    > **Tip**: Make a note of the region you selected. You'll need it later!
+
 1. Select **Create**. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
     ![Screenshot of the AI Foundry project home page.](./media/0-foundry-project.png)
 
-    The project has an *endpoint* and *key*, which can be used to securely access models, agents, and other assets in the project from client applications. The project is also associated with a specific *region*, which may affect the specific models and services available to it.
+    The project has an *endpoint* and *key*, which can be used to securely access models, agents, and other assets in the project from client applications.
+
+    > **TIP**: You're going to need the project key and endpoint later!
 
 ## View Azure resources for Microsoft Foundry
 
@@ -106,7 +110,7 @@ The Microsoft Foundry portal is where you create and manage agents and AI servic
     - Perform *admin* tasks to manage your projects.
 
 1. View the **Docs** page.
-    
+
     ![Screenshot of the Docs page.](./media/0-docs.png)
 
     This page provides access to Microsoft Foundry documentation.
@@ -146,6 +150,9 @@ Your Microsoft Foundry resource provides an endpoint in which you can deploy mod
     ![Screenshot of the model playground.](./media/0-model-playground.png)
 
 1. Ensure your model deployment (which should be named **gpt-4.1-mini**) is selected in the playground.
+
+    > **Tip**: Remember the model deployment name. You'll need it later.
+
 1. In the **Chat** pane, test your model by entering a message like `What is AI?`
 
 ## Use your Foundry resource endpoint
@@ -156,7 +163,10 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 1. Note the following details for your project:
     - **Project endpoint**: The URL where your project resource can be accessed.
     - **Project API key**: The authentication key used to access your resource.
-    - **Project region**: The region where your project is deployed.
+
+    You can also select your project name in the toolabr (next to the Microsoft Foundry logo) to remind yourself which region you deployed it in.
+
+    You'll need these values to configure the Computing History application.
 
 1. Open a second browser tab, and navigate to the [Ask Andrew (Azure)](https://aka.ms/ask-andrew-azure){:target="_blank"} app at `https://aka.ms/ask-andrew-azure`.
 
