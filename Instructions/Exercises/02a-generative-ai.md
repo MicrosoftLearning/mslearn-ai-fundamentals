@@ -153,7 +153,29 @@ While you can implement generative AI apps using a standalone model, to create a
 
 1. Change the **Instructions** to `You are a helpful AI assistant who supports employees with expense claims.`
 1. At the top of the agent playground, select **Save**.
-1. In the **Chat** tab, enter the prompt `What can you do?`
+1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Note that its definition includes the model, its parameter settings, and the instructions you specified - similar to this:
+
+    ```yml
+    metadata:
+      logo: Avatar_Default.svg
+      description: ""
+      modified_at: "1767997310"
+    object: agent.version
+    id: expenses-agent:2
+    name: expenses-agent
+    version: "2"
+    description: ""
+    created_at: 1767997284
+    definition:
+      kind: prompt
+      model: gpt-4.1-mini
+      instructions: You are a helpful AI assistant who supports employees with expense claims.
+      temperature: 0.98
+      top_p: 1
+      tools: []
+    ```
+
+1. Switch back to the **Chat** tab, and enter the prompt `What can you do?`
 
     The response should indicate that the agent is "aware" of its role as an expense claims advisor.
 
