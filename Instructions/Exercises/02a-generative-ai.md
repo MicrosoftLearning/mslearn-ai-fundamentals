@@ -153,29 +153,7 @@ While you can implement generative AI apps using a standalone model, to create a
 
 1. Change the **Instructions** to `You are a helpful AI assistant who supports employees with expense claims.`
 1. At the top of the agent playground, select **Save**.
-1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Note that its definition includes the model, its parameter settings, and the instructions you specified - similar to this:
-
-    ```yml
-    metadata:
-      logo: Avatar_Default.svg
-      description: ""
-      modified_at: "1767997310"
-    object: agent.version
-    id: expenses-agent:2
-    name: expenses-agent
-    version: "2"
-    description: ""
-    created_at: 1767997284
-    definition:
-      kind: prompt
-      model: gpt-4.1-mini
-      instructions: You are a helpful AI assistant who supports employees with expense claims.
-      temperature: 0.98
-      top_p: 1
-      tools: []
-    ```
-
-1. Switch back to the **Chat** tab, and enter the prompt `What can you do?`
+1. In the **Chat** tab, enter the prompt `What can you do?`
 
     The response should indicate that the agent is "aware" of its role as an expense claims advisor.
 
@@ -237,7 +215,7 @@ Now that you have an agent, you can power client applications that enable employ
 1. Explore the agent preview by submitting some more prompts. When you're finished, close the browser tab containing the preview app and return to the agent playground.
 1. In the agent playground, note that the **Publish** button can be used to publish your agent as an enterprise application in Azure so it can be consumed within Microsoft 365 and Teams.
 
-    In many cases, publishing an expense claim support agent for use in the enterprise application ecosystem would be an ideal way to implement an agentic solution. However, in other cases you may want to consume the agent from a custom application. 
+    In many cases, publishing an expense claim support agent for use in the enterprise application ecosystem would be an ideal way to implement an agentic solution. However, in other cases you may want to consume the agent from a custom application.
 
 1. Switch from the **Chat** tab to the **Code** tab, and view the sample code for consuming the agent. The code uses the OpenAI Responses API; but has some agent-specific differences from the code you previously examined to chat with the model.
 
