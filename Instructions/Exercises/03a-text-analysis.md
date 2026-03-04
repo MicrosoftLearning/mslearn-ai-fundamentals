@@ -16,15 +16,17 @@ This exercise takes approximately **20** minutes.
 
 >**Note**: This exercise uses the **classic** Foundry interface. If you are using the new Foundry interface, you need to toggle back to the classic Foundry interface.  
 
-1. In a web browser, open [Microsoft Foundry](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
+1. In a web browser, open [Microsoft Foundry](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open).
+
+    Ensure the **New Foundry** option is <u>not</u> selected.
 
     ![Screenshot of Foundry home page.](./media/ai-foundry-portal.png)
 
-1. Scroll down to the bottom of the home page and select **Explore Azure AI services**. 
+1. Scroll down to the bottom of the home page and select **Explore Azure AI services**.
 
-1. On the Azure AI services page, select the **Language + Translator** tile. 
+1. On the Azure AI services page, select the **Language + Translator** tile.
 
-1. Select **Try the Language Playground**. Then in the dialog box click on **Create a new project**. 
+1. Select **Try the Language Playground**. Then in the dialog box click on **Create a new project**.
 
 1. Create a new project with the following settings:
     - **Project name**: *Enter a valid name for your project.*
@@ -36,7 +38,7 @@ This exercise takes approximately **20** minutes.
 
 1. Select **Create**. Wait for your project to be created. It may take a few minutes.
 
-1. When the project is created, you will be taken to the **Language Playground**. The Language playground is a user interface that enables you to try out some Azure Language capabilities. 
+1. When the project is created, you will be taken to the **Language Playground**. The Language playground is a user interface that enables you to try out some Azure Language capabilities.
 
 ## Prepare for text analysis
 
@@ -61,7 +63,7 @@ This exercise takes approximately **20** minutes.
 
 **Key phrases** are the most important pieces of information in text. Let's use the key phrase extraction capability of Azure Language to pull important information from a review.
 
-1. In the Language playground, select **Extract information**. Then select the **Extract key phrases** tile. 
+1. In the Language playground, select **Extract information**. Then select the **Extract key phrases** tile.
 1. Upload **document-1.txt** from the folder where you extracted the downloaded text files.
 1. Select **Run**. Review the output.
 
@@ -75,7 +77,7 @@ This exercise takes approximately **20** minutes.
 
 **Named entities** are words that describe people, places, and objects with proper names. Let's use the named entity extraction capability of Azure Language to identify types of information in a review.
 
-1. In the Language playground, select **Extract information**. Then select the **Extract named entities** tile. 
+1. In the Language playground, select **Extract information**. Then select the **Extract named entities** tile.
 1. Upload **document-1.txt** from the folder where you extracted the downloaded text files.
 1. Select **Run**. Review the output.
 

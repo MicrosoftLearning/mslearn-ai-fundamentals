@@ -14,11 +14,13 @@ In this exercise, you will use Azure Content Understanding in Foundry, Microsoft
 
 This exercise takes approximately **25** minutes.
 
->**Note**: This exercise utilizes the classic Foundry portal experience. If you are using the new Foundry portal, you need to toggle back to classic. 
+>**Note**: This exercise utilizes the classic Foundry portal experience. If you are using the new Foundry portal, you need to toggle back to classic.
 
 ## Create a Microsoft Foundry project for content understanding
 
-1. In a web browser, open [Microsoft Foundry](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
+1. In a web browser, open [Microsoft Foundry](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open).
+
+    Ensure the **New Foundry** option is <u>not</u> selected.
 
     ![Screenshot of Foundry home page.](./media/ai-foundry-portal.png)
 
@@ -39,9 +41,9 @@ This exercise takes approximately **25** minutes.
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select one of the following locations\*:
-        * West US
-        * Sweden Central
-        * Australia East
+        - West US
+        - Sweden Central
+        - Australia East
 
     \**At the time of writing, Content Understanding is supported in these regions.*
 
@@ -61,7 +63,7 @@ This exercise takes approximately **25** minutes.
 
     ![Screenshot of the results of analysing the sample invoice.](./media/sample-invoice-analysis.png)
 
-1. Download **[contoso-invoice-1.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf){:target="_blank"}** from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf`. 
+1. Download **[contoso-invoice-1.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf){:target="_blank"}** from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf`.
 
 1. In Foundry, use the **Browse for files** link to upload the **contoso-invoice-1.pdf** document you downloaded previously, and run analysis on that file.
 
@@ -110,6 +112,7 @@ This exercise takes approximately **25** minutes.
    curl -i -X GET "{endpoint}/contentunderstanding/analyzerResults/{resultId}?api-version=2025-11-01" \
       -H "Ocp-Apim-Subscription-Key: {key}"
     ```
+
 ## Clean up
 
 If you’ve finished working with the Content Understanding service, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs.
