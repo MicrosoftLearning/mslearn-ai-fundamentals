@@ -1,3 +1,15 @@
+---
+lab:
+  title: Extract data with Content Understanding in Microsoft Foundry
+  description: If you’ve finished working with the Content Understanding service, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs.
+  duration: 25 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Azure
+    - Microsoft Foundry
+---
+
 # Extract data with Content Understanding in Microsoft Foundry
 
 Azure Content Understanding provides multi-modal analysis of documents, audio files, video, and images to extract information.
