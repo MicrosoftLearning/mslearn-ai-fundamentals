@@ -1,3 +1,20 @@
+---
+lab:
+  title: Analyze text in Microsoft Foundry
+  description: Azure Language includes Text Analytics, with capabilities such as entity
+    recognition, key phrase extraction, summarization, and sentiment analysis. For
+    example, suppose the fictitious travel agent Margie's Travel encourages customers
+    to submit reviews for hotel stays. You could use the Language service to extract
+    named entities, identify key phrases, summarize text, and more.
+  duration: 20 minutes
+  level: 100
+  islab: true
+  primarytopics:
+  - Azure
+  - Microsoft Foundry
+  - Azure Language
+---
+
 # Analyze text in Microsoft Foundry
 
 Azure Language includes Text Analytics, with capabilities such as entity recognition, key phrase extraction, summarization, and sentiment analysis. For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to extract named entities, identify key phrases, summarize text, and more.
