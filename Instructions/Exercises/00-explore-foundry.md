@@ -1,9 +1,12 @@
 ---
 lab:
-    title: 'Get started with Microsoft Foundry'
-    description: 'Create and explore a Microsoft Foundry project.'
-    level: 200
-    duration: 30 minutes
+  title: Get started with Microsoft Foundry
+  description: Create and explore a Microsoft Foundry project.
+  level: 200
+  duration: 30 minutes
+  islab: true
+  primarytopics:
+    - Microsoft Foundry
 ---
 
 # Get started with Microsoft Foundry
