@@ -1,3 +1,14 @@
+---
+lab:
+  title: Analyze images in Microsoft Foundry
+  description: The next feature you will try is the Extract Tags functionality. Extract tags is based on thousands of recognizable objects, including living beings, scenery, and actions.
+  duration: 20 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Microsoft Foundry
+---
+
 # Analyze images in Microsoft Foundry
 
 **Azure Vision** includes numerous capabilities for understanding image content and context and extracting information from images. In this exercise, you will use Azure Vision in Microsoft Foundry, Microsoft's platform for creating intelligent applications, to analyze images using the built-in try-it-out experiences. 
