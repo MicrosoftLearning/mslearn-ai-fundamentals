@@ -1,9 +1,13 @@
 ---
 lab:
-    title: 'Get started with speech in Microsoft Foundry'
-    description: 'Use Microsoft Foundry to try out Azure Speech - Voice Live.'
-    level: 200
-    duration: 25 minutes
+  title: Get started with speech in Microsoft Foundry
+  description: Use Microsoft Foundry to try out Azure Speech - Voice Live.
+  level: 200
+  duration: 25 minutes
+  islab: true
+  primarytopics:
+    - Azure
+    - Microsoft Foundry
 ---
 
 # Get started with speech in Microsoft Foundry
