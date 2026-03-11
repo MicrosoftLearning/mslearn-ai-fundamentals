@@ -1,9 +1,13 @@
 ---
 lab:
-    title: 'Get started with generative AI and agents in Microsoft Foundry'
-    description: 'Use Microsoft Foundry to deploy a generative AI model and create an agent.'
-    level: 200
-    duration: 35 minutes
+  title: Get started with generative AI and agents in Microsoft Foundry
+  description: Use Microsoft Foundry to deploy a generative AI model and create an
+    agent.
+  level: 200
+  duration: 35 minutes
+  islab: true
+  primarytopics:
+  - Microsoft Foundry
 ---
 
 # Get started with generative AI and agents in Microsoft Foundry
