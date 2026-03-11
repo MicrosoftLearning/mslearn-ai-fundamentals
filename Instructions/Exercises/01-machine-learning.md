@@ -1,3 +1,14 @@
+---
+lab:
+  title: Explore Automated Machine Learning
+  description: In this exercise, you'll use the automated machine learning to train
+    and evaluate a machine learning model. You'll then deploy and test the trained
+    model.
+  duration: 35 minutes
+  level: 300
+  islab: true
+---
+
 # Explore Automated Machine Learning
 
 In this exercise, you'll use the automated machine learning to train and evaluate a machine learning model. You'll then deploy and test the trained model.
