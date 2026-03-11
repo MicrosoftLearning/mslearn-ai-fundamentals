@@ -1,9 +1,12 @@
 ---
 lab:
-    title: 'Get started with computer vision in Microsoft Foundry'
-    description: 'Use generative AI models to interpret and generate visual data.'
-    level: 200
-    duration: 30 minutes
+  title: Get started with computer vision in Microsoft Foundry
+  description: Use generative AI models to interpret and generate visual data.
+  level: 200
+  duration: 30 minutes
+  islab: true
+  primarytopics:
+  - Microsoft Foundry
 ---
 
 # Get started with computer vision in Microsoft Foundry
