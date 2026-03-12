@@ -4,7 +4,7 @@ lab:
   description: The next feature you will try is the Extract Tags functionality. Extract tags is based on thousands of recognizable objects, including living beings, scenery, and actions.
   duration: 20 minutes
   level: 100
-  islab: true
+  islab: false
   primarytopics:
     - Microsoft Foundry
 ---

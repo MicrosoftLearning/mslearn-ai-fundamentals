@@ -4,7 +4,7 @@ lab:
   description: In this exercise, you will use Azure Language in Foundry, Microsoft's platform for creating intelligent applications, to analyze hotel reviews.
   duration: 20 minutes
   level: 100
-  islab: true
+  islab: false
   primarytopics:
     - Azure
     - Microsoft Foundry

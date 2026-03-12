@@ -4,7 +4,7 @@ lab:
   description: If you’ve finished working with the Content Understanding service, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs.
   duration: 25 minutes
   level: 100
-  islab: true
+  islab: false
   primarytopics:
     - Azure
     - Microsoft Foundry

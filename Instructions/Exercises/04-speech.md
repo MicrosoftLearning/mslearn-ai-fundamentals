@@ -4,7 +4,7 @@ lab:
   description: In this exercise, you will use Azure Speech in Foundry, Microsoft's platform for creating intelligent applications, to explore core Azure Speech capabilities.
   duration: 10 minutes
   level: 100
-  islab: true
+  islab: false
   primarytopics:
     - Azure
     - Microsoft Foundry
