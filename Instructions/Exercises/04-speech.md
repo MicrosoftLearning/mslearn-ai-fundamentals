@@ -1,3 +1,15 @@
+---
+lab:
+  title: Explore speech in Microsoft Foundry
+  description: In this exercise, you will use Azure Speech in Foundry, Microsoft's platform for creating intelligent applications, to explore core Azure Speech capabilities.
+  duration: 10 minutes
+  level: 100
+  islab: false
+  primarytopics:
+    - Azure
+    - Microsoft Foundry
+---
+
 # Explore speech in Microsoft Foundry
 
 Azure Speech transcribes speech into text, and turns text into audible speech. You might use Speech to create an application that can transcribe meeting notes or generate text from the recording of interviews, or to support an interactive AI assistant that can respond to spoken commands and queries.

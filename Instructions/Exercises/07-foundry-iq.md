@@ -1,9 +1,12 @@
 ---
 lab:
-    title: 'Get started with Foundry IQ in Microsoft Foundry'
-    description: 'Use Foundry IQ to connect an agent to knowledge.'
-    level: 200
-    duration: 20 minutes
+  title: Get started with Foundry IQ in Microsoft Foundry
+  description: Use Foundry IQ to connect an agent to knowledge.
+  level: 200
+  duration: 20 minutes
+  islab: true
+  primarytopics:
+    - Microsoft Foundry
 ---
 
 # Get started with Foundry IQ in Microsoft Foundry
