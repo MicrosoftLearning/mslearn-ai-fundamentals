@@ -169,9 +169,9 @@ In addition to static images, you may want to include video content on the AI Ch
 
     > **Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availabilty and quota.
 
-1. Select the **Sora** model and deploy it.
+1. Select any available **Sora** model and deploy it.
 
-    *If you are unable to deploy the model in your subscription, try one of the other video-generation models.*
+    *If no Sora models are available in your subscription, you may need to request access to the latest avaiiable model.*
 
 1. When the model has been deployed, it opens in the video playground.
 1. Enter a prompt describing a desired video; for example `A chef in a busy kitchen.` Then review the generated image.
