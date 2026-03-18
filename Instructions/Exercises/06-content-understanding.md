@@ -1,6 +1,6 @@
 ---
 lab:
-  title: Extract data with Content Understanding in Microsoft Foundry
+  title: Extract data with Content Understanding in Microsoft Foundry (deprecated)
   description: If you’ve finished working with the Content Understanding service, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs.
   duration: 25 minutes
   level: 100
@@ -10,11 +10,13 @@ lab:
     - Microsoft Foundry
 ---
 
-# Extract data with Content Understanding in Microsoft Foundry
+# Extract data with Content Understanding in Microsoft Foundry (deprecated)
+
+> **Note**: This exercise is deprecated, and will be deleted soon. Consider completing the replacement exercise at <https://go.microsoft.com/fwlink/?linkid=2347369>.
 
 Azure Content Understanding provides multi-modal analysis of documents, audio files, video, and images to extract information.
 
-In this exercise, you will use Azure Content Understanding in Foundry, Microsoft's platform for creating intelligent applications, to extract information from invoices. 
+In this exercise, you will use Azure Content Understanding in Foundry, Microsoft's platform for creating intelligent applications, to extract information from invoices.
 
 This exercise takes approximately **25** minutes.
 
@@ -39,9 +41,9 @@ This exercise takes approximately **25** minutes.
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select one of the following locations\*:
-        * West US
-        * Sweden Central
-        * Australia East
+        - West US
+        - Sweden Central
+        - Australia East
 
     \**At the time of writing, Content Understanding is supported in these regions.*
 
@@ -49,7 +51,7 @@ This exercise takes approximately **25** minutes.
 
 ## Extract information from an invoice
 
-1. Download [contoso-invoice-1.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-1.pdf) from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-1.pdf`. 
+1. Download [contoso-invoice-1.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-1.pdf) from `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/contoso-invoice-1.pdf`.
 
 1. On the Content Understanding page, select the **Try it out** tab, and then select the **Invoice Data Extraction** tile.
 

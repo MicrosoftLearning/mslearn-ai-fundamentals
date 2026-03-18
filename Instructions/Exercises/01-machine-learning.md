@@ -1,13 +1,15 @@
 ---
 lab:
-  title: Explore Automated Machine Learning
+  title: Explore Automated Machine Learning (deprecated)
   description: In this exercise, you'll use the automated machine learning to train and evaluate a machine learning model. You'll then deploy and test the trained model.
   duration: 35 minutes
   level: 100
   islab: false
 ---
 
-# Explore Automated Machine Learning
+# Explore Automated Machine Learning (deprecated)
+
+> **Note**: This exercise is deprecated, and will be deleted soon. Consider completing the replacement exercise at <https://go.microsoft.com/fwlink/?linkid=2339456>.
 
 In this exercise, you'll use the automated machine learning to train and evaluate a machine learning model. You'll then deploy and test the trained model.
 
@@ -82,7 +84,7 @@ Automated machine learning enables you to try multiple algorithms and parameters
         - Use the limits to end the training job early based on specific criteria. In this exercise, set the following limits:
             - **Metric score threshold**: 0.9
             - **Experiment timeout (minutes)**: 15
-        
+
         > **Note** It's important to set these limits when using Azure Machine Learning, as running training jobs for every possible algorithm and featurization combination could potentially take hours!
 
     **Compute**:

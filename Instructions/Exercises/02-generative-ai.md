@@ -1,6 +1,6 @@
 ---
 lab:
-  title: Explore generative AI in Microsoft Foundry
+  title: Explore generative AI in Microsoft Foundry (deprecated)
   description: Generative AI describes a category of capabilities within AI that create content. People often interact with generative AI that has been built into chat applications. In this exercise, you try out generative AI in Microsoft Foundry portal, Microsoft's platform for creating intelligent applications.
   duration: 20 minutes
   level: 100
@@ -9,9 +9,11 @@ lab:
     - Microsoft Foundry
 ---
 
-# Explore generative AI in Microsoft Foundry
+# Explore generative AI in Microsoft Foundry (deprecated)
 
-Generative AI describes a category of capabilities within AI that create content. People often interact with generative AI that has been built into chat applications. In this exercise, you try out generative AI in Microsoft Foundry portal, Microsoft's platform for creating intelligent applications. 
+> **Note**: This exercise is deprecated, and will be deleted soon. Consider completing the replacement exercise at <https://go.microsoft.com/fwlink/?linkid=2347367>.
+
+Generative AI describes a category of capabilities within AI that create content. People often interact with generative AI that has been built into chat applications. In this exercise, you try out generative AI in Microsoft Foundry portal, Microsoft's platform for creating intelligent applications.
 
 This exercise takes approximately **20** minutes.
 
@@ -25,14 +27,14 @@ This exercise takes approximately **20** minutes.
 
     ![Screenshot of the gpt-4.1 details page.](./media/gpt-41-details.png)
 
-1. Select **Use this model**. Then in the **Select your project** window, click on the options and select **+ Create a new project**. 
+1. Select **Use this model**. Then in the **Select your project** window, click on the options and select **+ Create a new project**.
 
 1. In the **Create a project** wizard, enter a valid name for your project. Then expand **Advanced options** to specify the following settings for your project:
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select any of the **AI Foundry recommended** regions\*
-    
+
     \**Model deployments are restricted by regional quotas. If you select a region in which you have insufficient available quota, you may need to select an alternative region for a new resource later.*
 
 1. Select **Create**. Wait for your project to be created. It may take a few minutes.
@@ -51,7 +53,7 @@ This exercise takes approximately **20** minutes.
 
     >*Tip*: If you do not see the **Setup** pane in the Chat playground screen, expand the window size.  
 
-1. In order to use Chat playground, you need to associate it with a deployed model. In the Chat playground's **Setup** pane, ensure that the **gpt-4.1** model you deployed previously is selected. 
+1. In order to use Chat playground, you need to associate it with a deployed model. In the Chat playground's **Setup** pane, ensure that the **gpt-4.1** model you deployed previously is selected.
 
     >*Note*: You need to select **Apply changes** anytime you make changes in the **Setup** pane.
 
@@ -61,7 +63,7 @@ This exercise takes approximately **20** minutes.
 
     These kinds of instructions are commonly referred to as a *system prompt*, and are used to provide guidance and constraints for the model's responses.
 
-1. Review the *Chat history* pane, which contains some sample prompts to help you get started and a query box to enter your own prompts. 
+1. Review the *Chat history* pane, which contains some sample prompts to help you get started and a query box to enter your own prompts.
 
 1. Let's try generating a response using a prompt with a specific goal. In the chat box, enter the following prompt:
 
@@ -85,17 +87,17 @@ This exercise takes approximately **20** minutes.
     Can you give me more information about dining options near the first location?
     ```
 
-1. Review the response, which should provide dining options near a location from the previous response. 
+1. Review the response, which should provide dining options near a location from the previous response.
 
-1. Now, let's provide a source to ground the response in a specific scope of information. Enter the following: 
+1. Now, let's provide a source to ground the response in a specific scope of information. Enter the following:
 
     ```prompt
     Based on the information at https://en.wikipedia.org/wiki/History_of_Paris, what were the key events in the city's history?
     ```
 
-1. Review the response, which should provide information based on the provided website. 
+1. Review the response, which should provide information based on the provided website.
 
-1. Let's try to add context to maximize the relevance of the response. Enter the following prompt: 
+1. Let's try to add context to maximize the relevance of the response. Enter the following prompt:
 
     ```prompt
     What three places do you recommend I stay in Paris to be within walking distance to historical attractions? Explain your reasoning.

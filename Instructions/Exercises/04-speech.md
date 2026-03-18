@@ -1,6 +1,6 @@
 ---
 lab:
-  title: Explore speech in Microsoft Foundry
+  title: Explore speech in Microsoft Foundry (deprecated)
   description: In this exercise, you will use Azure Speech in Foundry, Microsoft's platform for creating intelligent applications, to explore core Azure Speech capabilities.
   duration: 10 minutes
   level: 100
@@ -10,11 +10,13 @@ lab:
     - Microsoft Foundry
 ---
 
-# Explore speech in Microsoft Foundry
+# Explore speech in Microsoft Foundry (deprecated)
+
+> **Note**: This exercise is deprecated, and will be deleted soon. Consider completing the replacement exercise at <https://go.microsoft.com/fwlink/?linkid=2347368>.
 
 Azure Speech transcribes speech into text, and turns text into audible speech. You might use Speech to create an application that can transcribe meeting notes or generate text from the recording of interviews, or to support an interactive AI assistant that can respond to spoken commands and queries.
 
-In this exercise, you will use Azure Speech in Foundry, Microsoft's platform for creating intelligent applications, to explore core Azure Speech capabilities. 
+In this exercise, you will use Azure Speech in Foundry, Microsoft's platform for creating intelligent applications, to explore core Azure Speech capabilities.
 
 This exercise takes approximately **10** minutes.
 
@@ -24,7 +26,7 @@ This exercise takes approximately **10** minutes.
 
     ![Screenshot of Microsoft Foundry home page.](./media/ai-foundry-portal.png)
 
-1. Scroll down to the bottom of the home page and select **Explore Azure AI services**. 
+1. Scroll down to the bottom of the home page and select **Explore Azure AI services**.
 
 1. On the Azure AI services page, select the **Speech** tile. You will be taken to the *Azure-AI-Speech* page.
 
@@ -32,7 +34,7 @@ This exercise takes approximately **10** minutes.
 
 Let's try out *speech to text* in Foundry.
 
-1. In a new browser tab, download **[speech.zip](https://aka.ms/mslearn-speech-files)** from `https://aka.ms/mslearn-speech-files` in a new browser tab. After downloading the file, extract it to a local folder. 
+1. In a new browser tab, download **[speech.zip](https://aka.ms/mslearn-speech-files)** from `https://aka.ms/mslearn-speech-files` in a new browser tab. After downloading the file, extract it to a local folder.
 
 1. Back in Foundry, on the *Azure-AI-Speech* page, select **Real-time transcription**.
 
@@ -42,7 +44,7 @@ Let's try out *speech to text* in Foundry.
 
     ![Screenshot of the Real-time transcription interface in the Speech playground.](./media/real-time-transcription.png)
 
-1. Review the output. 
+1. Review the output.
 
     >*Tip*: To see the full output, you may need to minimize the *Configure* pane. To minimize, select the icon to the right of the *Configure* heading.
 

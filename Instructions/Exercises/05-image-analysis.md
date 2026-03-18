@@ -1,6 +1,6 @@
 ---
 lab:
-  title: Analyze images in Microsoft Foundry
+  title: Analyze images in Microsoft Foundry (deprecated)
   description: The next feature you will try is the Extract Tags functionality. Extract tags is based on thousands of recognizable objects, including living beings, scenery, and actions.
   duration: 20 minutes
   level: 100
@@ -9,9 +9,11 @@ lab:
     - Microsoft Foundry
 ---
 
-# Analyze images in Microsoft Foundry
+# Analyze images in Microsoft Foundry (deprecated)
 
-**Azure Vision** includes numerous capabilities for understanding image content and context and extracting information from images. In this exercise, you will use Azure Vision in Microsoft Foundry, Microsoft's platform for creating intelligent applications, to analyze images using the built-in try-it-out experiences. 
+> **Note**: This exercise is deprecated, and will be deleted soon. Consider completing the replacement exercise at <https://go.microsoft.com/fwlink/?linkid=2347912>.
+
+**Azure Vision** includes numerous capabilities for understanding image content and context and extracting information from images. In this exercise, you will use Azure Vision in Microsoft Foundry, Microsoft's platform for creating intelligent applications, to analyze images using the built-in try-it-out experiences.
 
 Suppose the fictitious retailer *Northwind Traders* has decided to implement a "smart store", in which AI services monitor the store to identify customers requiring assistance, and direct employees to help them. By using Azure Vision, images taken by cameras throughout the store can be analyzed to provide meaningful descriptions of what they depict.
 
@@ -85,7 +87,7 @@ Let's use the image captioning functionality of Azure Vision to analyze images t
 
     Hover over any of the captions in the **Detected attributes** list and observe that a caption is generated for each object detected in the image.
 
-## Tagging images 
+## Tagging images
 
 The next feature you will try is the *Extract Tags* functionality. Extract tags is based on thousands of recognizable objects, including living beings, scenery, and actions.
 
@@ -113,7 +115,7 @@ In this task, you use the **Object detection** feature of Image Analysis. Object
 
 If you don’t intend to do more exercises, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
 
-1. Open the [Azure portal]( https://portal.azure.com) and select the resource group that contains the resources you created. 
+1. Open the [Azure portal]( https://portal.azure.com) and select the resource group that contains the resources you created.
 1. Select **Delete resource group** and then **enter the resource group name** to confirm. The resource group is then deleted.
 
 ## Learn more

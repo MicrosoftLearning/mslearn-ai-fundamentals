@@ -1,6 +1,6 @@
 ---
 lab:
-  title: Analyze text in Microsoft Foundry
+  title: Analyze text in Microsoft Foundry (deprecated)
   description: In this exercise, you will use Azure Language in Foundry, Microsoft's platform for creating intelligent applications, to analyze hotel reviews.
   duration: 20 minutes
   level: 100
@@ -11,11 +11,13 @@ lab:
     - Azure Language
 ---
 
-# Analyze text in Microsoft Foundry
+# Analyze text in Microsoft Foundry (deprecated)
+
+> **Note**: This exercise is deprecated, and will be deleted soon. Consider completing the replacement exercise at <https://go.microsoft.com/fwlink/?linkid=2347911>.
 
 Azure Language includes Text Analytics, with capabilities such as entity recognition, key phrase extraction, summarization, and sentiment analysis. For example, suppose the fictitious travel agent Margie's Travel encourages customers to submit reviews for hotel stays. You could use the Language service to extract named entities, identify key phrases, summarize text, and more.
 
-In this exercise, you will use Azure Language in Foundry, Microsoft's platform for creating intelligent applications, to analyze hotel reviews. 
+In this exercise, you will use Azure Language in Foundry, Microsoft's platform for creating intelligent applications, to analyze hotel reviews.
 
 This exercise takes approximately **20** minutes.
 
@@ -25,11 +27,11 @@ This exercise takes approximately **20** minutes.
 
     ![Screenshot of Foundry home page.](./media/ai-foundry-portal.png)
 
-1. Scroll down to the bottom of the home page and select **Explore Azure AI services**. 
+1. Scroll down to the bottom of the home page and select **Explore Azure AI services**.
 
-1. On the Azure AI services page, select the **Language + Translator** tile. 
+1. On the Azure AI services page, select the **Language + Translator** tile.
 
-1. Select **Try the Language Playground**. Then in the dialog box click on **Create a new project**. 
+1. Select **Try the Language Playground**. Then in the dialog box click on **Create a new project**.
 
 1. Create a new project with the following settings:
     - **Project name**: *Enter a valid name for your project.*
@@ -41,7 +43,7 @@ This exercise takes approximately **20** minutes.
 
 1. Select **Create**. Wait for your project to be created. It may take a few minutes.
 
-1. When the project is created, you will be taken to the **Language Playground**. The Language playground is a user interface that enables you to try out some Azure Language capabilities. 
+1. When the project is created, you will be taken to the **Language Playground**. The Language playground is a user interface that enables you to try out some Azure Language capabilities.
 
 ## Use Azure Language to analyze text
 
@@ -51,7 +53,7 @@ Azure Language offers a wide range of text analysis capabilities.
 
 *Named entities* are words that describe people, places, and objects with proper names. Let's use the named entity extraction capability of Azure Language to identify types of information in a review.
 
-1. In the Language playground, select **Extract information**. Then select the **Extract named entities** tile. 
+1. In the Language playground, select **Extract information**. Then select the **Extract named entities** tile.
 
 1. Under *Sample*, enter the following review:
 
@@ -72,7 +74,7 @@ Azure Language offers a wide range of text analysis capabilities.
 
 *Key phrases* are the most important pieces of information in text. Let's use the key phrase extraction capability of Azure Language to pull important information from a review.
 
-1. In the Language playground, select **Extract information**. Then select the **Extract key phrases** tile. 
+1. In the Language playground, select **Extract information**. Then select the **Extract key phrases** tile.
 
 1. Under *Sample*, enter the following review:
 
@@ -90,13 +92,13 @@ Azure Language offers a wide range of text analysis capabilities.
     Notice the different phrases extracted in the *Details* section. These phrases should contribute most to the text's meaning.
 
 ### Summarize text with Azure Language in Foundry
- 
+
 Let's look at Azure Language's summarization capabilities.
 
 1. In the Language playground, select **Summarize information**, then select the **Summarize text** tile.
 
 1. Under *Sample*, enter the following review:
-    
+
     ```
     Very noisy and rooms are tiny
     The Lombard Hotel, San Francisco, USA
@@ -117,7 +119,7 @@ Sentiment analysis is a common task when analyzing text like hotel reviews.
 1. In the Language playground, select **Classify text**. Then select the **Analyze sentiment** tile.
 
 1. Under *Sample*, enter the following review:
-    
+
     ```
     Disappointing Stay at The City Hotel
     The City Hotel, London
@@ -142,7 +144,7 @@ Let's start by detecting the language a review is written in.
 1. In the **Classify Text** pane, select the **Detect language** tile.
 
 1. Under *Sample*, enter the following review:
-    
+
     ```
     Un séjour mémorable à l’Hôtel d’Ville
     l’Hôtel d’Ville, Paris
@@ -154,7 +156,7 @@ Let's start by detecting the language a review is written in.
 
     ![Screenshot of the Detect language interface in the Language playground.](./media/detect-language.png)
 
-    Notice that the language is detected as French. 
+    Notice that the language is detected as French.
 
 ### Translate text
 
@@ -167,7 +169,7 @@ Now let's translate the French review to English.
     - **Translate from**: French
     - **Translate to**: English
 1. Under *Sample*, enter the French-language review:
-    
+
     ```
     Un séjour mémorable à l’Hôtel d’Ville
     l’Hôtel d’Ville, Paris
