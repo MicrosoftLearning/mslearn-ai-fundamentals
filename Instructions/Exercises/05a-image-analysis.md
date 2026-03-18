@@ -103,6 +103,8 @@ To develop a client app or agent that can use the model to interpret images, you
 
 So far you've explored the ability of a generative AI model to process visual input. Now let's suppose we want some appropriate images on a web site to support the AI chef agent. Let's see how a model can generate visual output.
 
+> **Note**: This task requires a subscription that has access to image-generation models.
+
 1. Use the "back" arrow next to the **gpt-4.1-mini** header (or select the **Models** page in the navigation pane) to view the model deployments in your project.
 1. Select **Deploy a base model** to open the model catalog.
 1. In the **Collections** drop-down list, select **Direct from Azure**, and in the **Inference tasks** drop-down list, select **Text to image**. Then view the available models for image generation.
@@ -160,6 +162,8 @@ If you want to develop a client app or agent that generates images using your mo
 ## Use a generative AI model to create video
 
 In addition to static images, you may want to include video content on the AI Chef agent web site.
+
+> **Note**: This task requires a subscription that has access to video-generation models.
 
 1. Use the "back" arrow next to the image-generation model header (or select the **Models** page in the navigation pane) to view the model deployments in your project.
 1. Select **Deploy a base model** to open the model catalog.
