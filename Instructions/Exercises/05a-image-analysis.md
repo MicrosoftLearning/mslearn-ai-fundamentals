@@ -174,7 +174,7 @@ In addition to static images, you may want to include video content on the AI Ch
     *If no Sora models are available in your subscription, you may need to request access to the latest avaiiable model.*
 
 1. When the model has been deployed, it opens in the video playground.
-1. Enter a prompt describing a desired video; for example `A chef in a busy kitchen.` Then review the generated image.
+1. Enter a prompt describing a desired video; for example `A chef in a busy kitchen.` Then review the generated video.
 
    ![Screenshot of the video playground with a generated video.](./media/0-generated-video.png)
 
