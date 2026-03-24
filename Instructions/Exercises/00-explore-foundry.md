@@ -171,21 +171,21 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
     You'll need these values to configure the Computing History application.
 
-1. Open a second browser tab, and navigate to the [Ask Andrew (Azure)](https://aka.ms/ask-andrew-azure){:target="_blank"} app at `https://aka.ms/ask-andrew-azure`.
+1. Open a second browser tab, and navigate to the [Ask Anton (Azure)](https://aka.ms/ask-andrew-azure){:target="_blank"} app at `https://aka.ms/ask-andrew-azure`.
 
-    The Ask Andrew app should look like this:
+    The Ask Anton app should look like this:
 
-    ![Screenshot of the Ask Andrew app.](./media/ask-andrew.png)
+    ![Screenshot of the Ask Anton app.](./media/ask-anton.png)
 
 1. In the chat pane header, select **Configure**, and then enter the project values from the Foundry portal home page and your model deployment name into the Foundry configuration settings page.
 
-    ![Screenshot of the Ask Andrew app configuration page.](./media/configure-andrew.png)
+    ![Screenshot of the Ask Anton app configuration page.](./media/configure-anton.png)
 
 1. Save the configuration.
 
     > **Note**: The configuration values other than the API key will be stored in your local browser. If you close and re-open the app, you will need to re-enter the APi key.
 
-1. Use the app to chat with Andrew and ask questions about AI concepts. The app will use your deployed model in Microsoft Foundry. If you use the speech functionality, the app will use Azure Speech in Foundry tools in your resource to recognize and synthesize speech.
+1. Use the app to chat with Anton and ask questions about AI concepts. The app will use your deployed model in Microsoft Foundry. If you use the speech functionality, the app will use Azure Speech in Foundry tools in your resource to recognize and synthesize speech.
 
 ## Summary
 
