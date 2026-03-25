@@ -171,7 +171,7 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
     You'll need these values to configure the Computing History application.
 
-1. Open a second browser tab, and navigate to the [Ask Anton (Azure)](https://aka.ms/ask-andrew-azure){:target="_blank"} app at `https://aka.ms/ask-andrew-azure`.
+1. Open a second browser tab, and navigate to the [Ask Anton (Azure)](https://aka.ms/azk-anton){:target="_blank"} app at `https://aka.ms/azk-anton`.
 
     The Ask Anton app should look like this:
 
