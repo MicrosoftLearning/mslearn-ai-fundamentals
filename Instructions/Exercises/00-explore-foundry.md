@@ -78,8 +78,7 @@ The Microsoft Foundry portal is where you create and manage agents and AI servic
     You can use this menu to:
 
     - Create *agents* that use a generative AI model, instructions, and tools to intelligently automate tasks and information gathering.
-    - Create *workflows* that combine multiple agents in an orchestrated process.
-    - Browse *models* in the Foundry model catalog.
+    - Find *models* in the Foundry model catalog.
 1. View the **Discover** page.
 
     ![Screenshot of the Discover page.](./media/0-discover.png)
@@ -92,8 +91,7 @@ The Microsoft Foundry portal is where you create and manage agents and AI servic
 
     This page is where you develop AI solutions. Here you can:
 
-    - View and manage the *agents* in your project.
-    - View and manage the *workflows* in your project.
+    - View and manage the *agents* and *workflows* in your project.
     - View and manage the *models* in your project.
     - *Fine-tune* base models to respond to queries based on your application's specific needs.
     - Add and configure *tools* that agents can use to perform tasks.
