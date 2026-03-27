@@ -68,9 +68,9 @@ Now that you have the necessary infrastructure in place, you're ready to create 
 
      After creating a project in the new Foundry portal, it should open in a page similar to the following image:
 
-    ![Screenshot of the AI Foundry project home page.](./media/0-foundry-project.png)
+    ![Screenshot of the AI Foundry project home page.](./media/foundry-portal-home.png)
 
-1. In the **Start building** menu, select **Create agent**; and when prompted, name the agent **hr-Agent**.
+1. On the home page, select **Create agents** (or on the **Build** page, select the **Agents** tab); and create a new agent named `hr-agent`.
 
      When ready, your agent opens in the agent playground.
 
@@ -136,13 +136,13 @@ Foundry IQ is a central connection point for data sources that agents can use as
 
 ### Create a knowledge base
 
-1. Select **Create a knowledge base**, and view the available knowledge base types. These represent the different kinds of data source you can use for knowledge bases in Foundry IQ. 
+1. Select **Create a knowledge base**, and view the available knowledge base types. These represent the different kinds of data source you can use for knowledge bases in Foundry IQ.
 
     ![Screenshot of knowledge bases types.](./media/knowledge-base-types.png)
 
 1. Select **Azure AI Search index** and **connect**.
 
-1. When prompted, create a knowledge source named `hr-documentation` with an appropriate description, based on the **hr-index** in your Azure AI Search resource. 
+1. When prompted, create a knowledge source named `hr-documentation` with an appropriate description, based on the **hr-index** in your Azure AI Search resource.
 
     ![Screenshot of the create knowledge source page.](./media/create-knowledge-source.png)
 
@@ -175,7 +175,7 @@ Now you're ready to use the new knowledge store in the HR agent.
    How many vacation days do employees get?
     ```
 
-    If the agent determines that it should use Foundry IQ to find context for its answer, you will be prompted to approve access. You can choose how to control tool access for the agent (once, always, or approve all tools). 
+    If the agent determines that it should use Foundry IQ to find context for its answer, you will be prompted to approve access. You can choose how to control tool access for the agent (once, always, or approve all tools).
 
     ![Screenshot of the Approve prompt.](./media/allow-foundry-iq.png)
 
