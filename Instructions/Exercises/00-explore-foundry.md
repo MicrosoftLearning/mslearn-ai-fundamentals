@@ -27,15 +27,13 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select any of the **AI Foundry recommended** regions
 
-    > **Tip**: Make a note of the region you selected. You'll need it later!
-
 1. Select **Create**. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
-    ![Screenshot of the AI Foundry project home page.](./media/0-foundry-project.png)
+    ![Screenshot of the AI Foundry project home page.](./media/0126-new-foundry-project.png)
 
-    The project has an *endpoint* and *key*, which can be used to securely access models, agents, and other assets in the project from client applications.
+    The project has an *API key*, *Project endpoint*, and *Azure openAI endpoint*, which can be used to securely access models, agents, and other assets in the project from client applications.
 
-    > **TIP**: You're going to need the project key and endpoint later!
+    > **TIP**: You're going to need the project key and project endpoint later!
 
 ## View Azure resources for Microsoft Foundry
 
@@ -165,9 +163,9 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
     - **Project endpoint**: The URL where your project resource can be accessed.
     - **Project API key**: The authentication key used to access your resource.
 
-    You can also select your project name in the toolabr (next to the Microsoft Foundry logo) to remind yourself which region you deployed it in.
+    You'll need these values to configure the chat application.
 
-    You'll need these values to configure the Computing History application.
+    > **Tip**: Make sure you use the **Project endpoint**, and <u>not</u> the Azure openAI endpoint!
 
 1. Open a second browser tab, and navigate to the [Ask Anton (Azure)](https://aka.ms/azk-anton){:target="_blank"} app at `https://aka.ms/azk-anton`.
 
