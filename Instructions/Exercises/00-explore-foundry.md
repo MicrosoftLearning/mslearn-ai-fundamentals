@@ -15,6 +15,8 @@ In this exercise, you'll create and explore a Microsoft Foundry project.
 
 This exercise should take approximately **30** minutes to complete.
 
+> **Note**: Many components of Microsoft Foundry, including the Microsoft Foundry portal, are subject to continual development. This reflects the fast-moving nature of artificial intelligence technology. Some elements of your user experience may differ from the images and descriptions in this exercise!
+
 ## Create a Microsoft Foundry project
 
 Microsoft Foundry uses *projects* to organize models, resources, data, and other assets used to develop an AI solution. Projects are associated with an Azure *Microsoft Foundry* resource, which provides the cloud services required to support AI app and agent development on Azure.
@@ -29,11 +31,7 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
 1. Select **Create**. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
-    ![Screenshot of the AI Foundry project home page.](./media/0126-new-foundry-project.png)
-
-    The project has an *API key*, *Project endpoint*, and *Azure openAI endpoint*, which can be used to securely access models, agents, and other assets in the project from client applications.
-
-    > **TIP**: You're going to need the project key and project endpoint later!
+    ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
 ## View Azure resources for Microsoft Foundry
 
@@ -69,14 +67,14 @@ The Microsoft Foundry portal is where you create and manage agents and AI servic
 
 > **Note**: The Microsoft Foundry portal is subject to continual improvement and expansion. The interface shown in this exercise may not match the interface of your portal exactly.
 
-1. On the **Home** page for your project, note the **Start building** menu.
+1. View the **Home** page for your project.
 
-    ![Screenshot of the Start building menu.](./media/0-start-building.png)
+    ![Screenshot of the Start building menu.](./media/foundry-portal-home.png)
 
-    You can use this menu to:
+    The project has an *API key*, *Project endpoint*, and *Azure OpenAI endpoint*, which can be used to securely access models, agents, and other assets in the project from client applications.
 
-    - Create *agents* that use a generative AI model, instructions, and tools to intelligently automate tasks and information gathering.
-    - Find *models* in the Foundry model catalog.
+    > **TIP**: You're going to need the project key and project endpoint later!
+
 1. View the **Discover** page.
 
     ![Screenshot of the Discover page.](./media/0-discover.png)
@@ -130,7 +128,7 @@ As you would expect in a platform for developing cutting edge AI solutions, Micr
 
 Your Microsoft Foundry resource provides an endpoint in which you can deploy models and use them from applications and agents.
 
-1. In the **Start building** menu, select **Browse models** to view the Microsoft Foundry model catalog.
+1. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
 
     Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
 
@@ -158,7 +156,7 @@ Your Microsoft Foundry resource provides an endpoint in which you can deploy mod
 
 Now that you have a Microsoft Foundry resource in Azure, you can use its models and tools from client applications. In this exercise, we'll use a simple AI chat application that has been provided for you.
 
-1. In the toolbar at the top of the Foundry portal, select your project to return to the home page.
+1. In the menu at the top of the Foundry portal, select **Home** to return to the home page.
 1. Note the following details for your project:
     - **Project endpoint**: The URL where your project resource can be accessed.
     - **Project API key**: The authentication key used to access your resource.
@@ -192,6 +190,8 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
     - `Can I implement an AI speech solution using Foundry Tools?`
 
     - `Find me an example of using the OpenAI SDK for Python to submit a prompt via the Responses API.`
+
+    > **Note**: Some of these prompts will cause the agent to use an MCP tool that connects to the Microsoft Learn documentation site. If you're not sure what an MCP tool is, ask Anton!
 
 ## Summary
 

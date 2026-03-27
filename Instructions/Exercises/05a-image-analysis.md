@@ -26,7 +26,9 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select any of the **AI Foundry recommended** regions
 
-    ![Screenshot of the AI Foundry project home page.](./media/0-foundry-project.png)
+1. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
+
+    ![Screenshot of the AI Foundry project home page.](./media/foundry-portal-home.png)
 
 ## Use a generative AI model to analyze images
 
@@ -161,6 +163,8 @@ If you want to develop a client app or agent that generates images using your mo
 
 ## Use a generative AI model to create video
 
+#### *If available in your subscription*
+
 In addition to static images, you may want to include video content on the AI Chef agent web site.
 
 > **Note**: This task requires a subscription that has access to video-generation models.
@@ -173,9 +177,9 @@ In addition to static images, you may want to include video content on the AI Ch
 
     > **Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availabilty and quota.
 
-1. Select any available **Sora** model and deploy it.
+1. Select the **Sora-2** model and deploy it.
 
-    *If no Sora models are available in your subscription, you may need to request access to the latest avaiiable model.*
+    *If the Sora-2 model is available in your subscription, you may need to request access to the latest avaiiable model.*
 
 1. When the model has been deployed, it opens in the video playground.
 1. Enter a prompt describing a desired video; for example `A chef in a busy kitchen.` Then review the generated video.
