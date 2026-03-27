@@ -183,7 +183,17 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
     > **Note**: The configuration values other than the API key will be stored in your local browser. If you close and re-open the app, you will need to re-enter the APi key.
 
-1. Use the app to chat with Anton and ask questions about AI concepts. The app will use your deployed model in Microsoft Foundry. If you use the speech functionality, the app will use Azure Speech in Foundry tools in your resource to recognize and synthesize speech.
+1. Use the app to chat with Anton and ask questions about AI concepts. The app will use your deployed model in Microsoft Foundry.
+
+    If you use the speech functionality, the app will use Azure Speech in Foundry tools in your resource to recognize and synthesize speech.
+
+    Start with the provided sample prompts, then enter your own questions and requests. The app can provide information on conceptual AI topics as well as Foundry-specific information. For example:
+
+    - `What's the difference between a LLM and an SLM?`
+
+    - `Can I implement an AI speech solution using Foundry Tools?`
+
+    - `Find me an example of using the OpenAI SDK for Python to submit a prompt via the Responses API.`
 
 ## Summary
 
