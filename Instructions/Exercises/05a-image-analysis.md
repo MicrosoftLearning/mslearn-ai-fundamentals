@@ -36,7 +36,7 @@ Computer vision models enable AI systems to interpret image-based data, such as 
 
 1. In a new browser tab, download **[images.zip](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip){:target="_blank"}** `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip` to your local computer.
 1. Extract the downloaded archive in a local folder to see the files it contains. These files are the images you will use AI to analyze.
-1. Return to the browser tab containing your Microsoft Foundry project. Then, in the **Start building** menu, select **Browse models** to view the Microsoft Foundry model catalog.
+1. Return to the browser tab containing your Microsoft Foundry project. Then, in the **Start building** menu, select **Find models** to view the Microsoft Foundry model catalog.
 1. Search for and deploy the `gpt-4.1-mini` model using the default settings. Deployment may take a minute or so.
 
     > **Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different model - such as gpt-4.1, or gpt-4o. Alternatively, you can create a new project in a different region.

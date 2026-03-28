@@ -69,7 +69,7 @@ The Microsoft Foundry portal is where you create and manage agents and AI servic
 
 1. View the **Home** page for your project.
 
-    ![Screenshot of the Start building menu.](./media/foundry-portal-home.png)
+    ![Screenshot of the project home page.](./media/foundry-portal-home.png)
 
     The project has an *API key*, *Project endpoint*, and *Azure OpenAI endpoint*, which can be used to securely access models, agents, and other assets in the project from client applications.
 

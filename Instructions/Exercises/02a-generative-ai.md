@@ -37,7 +37,7 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
 At the heart of every generative AI app or agent, there's a language model - usually a large language model (LLM), though in some cases a more compact small language model (SLM) may be used.
 
-1. On the home page, select **Find models** (or on the **Discover** page, select the **Models** tab) to view the Microsoft Foundry model catalog.
+1. In the **Start building** menu, select **Find models** (or on the **Discover** page, select the **Models** tab) to view the Microsoft Foundry model catalog.
 
     Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
 
