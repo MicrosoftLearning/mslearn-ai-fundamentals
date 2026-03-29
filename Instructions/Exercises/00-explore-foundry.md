@@ -158,7 +158,10 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
 1. In the menu at the top of the Foundry portal, select **Home** to return to the home page.
 1. Note the following details for your project:
-    - **Project endpoint**: The URL where your project resource can be accessed (*Make sure you use the **Project endpoint**, and <u>not</u> the Azure OpenAI endpoint!*)
+    - **Project endpoint**: The URL where your project resource can be accessed.
+
+        *Make sure you use the **Project endpoint**, and <u>not</u> the Azure OpenAI endpoint!*
+
     - **Project API key**: The authentication key used to access your resource\*.
 
     You'll need these values to configure the chat application.
