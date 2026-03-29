@@ -159,11 +159,13 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 1. In the menu at the top of the Foundry portal, select **Home** to return to the home page.
 1. Note the following details for your project:
     - **Project endpoint**: The URL where your project resource can be accessed.
-    - **Project API key**: The authentication key used to access your resource.
+    - **Project API key**: The authentication key used to access your resource\*.
 
     You'll need these values to configure the chat application.
 
-    > **Tip**: Make sure you use the **Project endpoint**, and <u>not</u> the Azure openAI endpoint!
+    > **Tip**: Make sure you use the **Project endpoint**, and <u>not</u> the Azure OpenAI endpoint!
+
+    *\* If you are using a corporate or school Azure subscription that has a policy preventing key-based authentication, you will not be able to use the chat app in this exercise. An alternative, browser-based version of the app is available at [https://aka.ms/ask-anton](https://aka.ms/azk-anton){:target="_blank"}.*
 
 1. Open a second browser tab, and navigate to the [Ask Anton (Azure)](https://aka.ms/azk-anton){:target="_blank"} app at `https://aka.ms/azk-anton`.
 
