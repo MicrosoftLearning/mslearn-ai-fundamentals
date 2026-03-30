@@ -192,7 +192,7 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
     - `Can I implement an AI speech solution using Foundry Tools?`
 
-    - `Find me the steps to create a new project in Foundry.`
+    - `Find me an overview of AI app development on Azure.`
 
     > **Note**: Some of these prompts will cause the agent to use an MCP tool that connects to the Microsoft Learn documentation site. If you're not sure what an MCP tool is, ask Anton!
 
