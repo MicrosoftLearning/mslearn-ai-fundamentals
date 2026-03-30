@@ -180,7 +180,7 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
 1. Save the configuration.
 
-    > **Note**: The configuration values other than the API key will be stored in your local browser. If you close and re-open the app, you will need to re-enter the APi key.
+    > **Note**: The configuration values other than the API key will be stored in your local browser. If you close and re-open the app, you will need to re-enter the API key.
 
 1. Use the app to chat with Anton and ask questions about AI concepts. The app will use your deployed model in Microsoft Foundry.
 
