@@ -188,11 +188,11 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
     Start with the provided sample prompts, then enter your own questions and requests. The app can provide information on conceptual AI topics as well as Foundry-specific information. For example:
 
-    - `Tell me about Foundry Models`
+    - `Tell me about Microsoft Foundry.`
 
     - `Can I implement an AI speech solution using Foundry Tools?`
 
-    - `Find me an example of using the OpenAI SDK for Python to submit a prompt via the Responses API.`
+    - `Find me the steps to create a new project in Foundry.`
 
     > **Note**: Some of these prompts will cause the agent to use an MCP tool that connects to the Microsoft Learn documentation site. If you're not sure what an MCP tool is, ask Anton!
 
