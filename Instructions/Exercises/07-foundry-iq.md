@@ -70,7 +70,7 @@ Now that you have the necessary infrastructure in place, you're ready to create 
 
     ![Screenshot of the AI Foundry project home page.](./media/foundry-portal-home.png)
 
-1. In the **Start building** menu, select **Create agents** (or on the **Build** page, select the **Agents** tab); and create a new agent named `hr-agent`.
+1. Now you're ready to **Start building**. Select **Create agents** (or on the **Build** page, select the **Agents** tab); and create a new agent named `hr-agent`.
 
      When ready, your agent opens in the agent playground.
 
