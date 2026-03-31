@@ -161,13 +161,11 @@ If you want to develop a client app or agent that generates images using your mo
         f.write(image_bytes)
     ```
 
-## Use a generative AI model to create video
-
-#### *If available in your subscription*
-
-In addition to static images, you may want to include video content on the AI Chef agent web site.
+## Use a generative AI model to create video (*if available*)
 
 > **Note**: This task requires a subscription that has access to video-generation models.
+
+In addition to static images, you may want to include video content on the AI Chef agent web site.
 
 1. Use the "back" arrow next to the image-generation model header (or select the **Models** page in the navigation pane) to view the model deployments in your project.
 1. Select **Deploy a base model** to open the model catalog.
@@ -179,7 +177,7 @@ In addition to static images, you may want to include video content on the AI Ch
 
 1. Select the **Sora-2** model and deploy it.
 
-    *If the Sora-2 model is available in your subscription, you may need to request access to the latest avaiiable model.*
+    *If the Sora-2 model is available in your subscription, you may need to request access to the latest available model.*
 
 1. When the model has been deployed, it opens in the video playground.
 1. Enter a prompt describing a desired video; for example `A chef in a busy kitchen.` Then review the generated video.
