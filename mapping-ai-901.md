@@ -1,6 +1,6 @@
 # AI-901 trainer lab selection
 
-This course, AI-901: Introduction to AI in Azure, has a subset of labs designated for instructor-led training adapted to fit a 1-day course.
+This course, [AI-901: Introduction to AI in Azure](https://learn.microsoft.com/training/courses/ai-901t00), has a subset of labs designated for instructor-led training adapted to fit a 1-day course.
 
 > Note: Instructors may choose to add additional labs from the full set of AI-901 labs to their modules when teaching.
 
