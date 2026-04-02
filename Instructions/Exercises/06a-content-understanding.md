@@ -1,6 +1,6 @@
 ---
 lab:
-  title: Get started with information extraction in Microsoft Foundry​
+  title: Get started with Content Understanding in Microsoft Foundry​
   description: Use AI models to extract information from visual data.
   level: 200
   duration: 25 minutes
