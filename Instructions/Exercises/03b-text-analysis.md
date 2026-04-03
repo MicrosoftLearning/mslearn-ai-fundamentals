@@ -15,9 +15,7 @@ In this exercise, you'll use Microsoft Foundry, Microsoft's platform for creatin
 
 Foundry offers two approaches to text analysis: general-purpose AI models that handle a broad range of tasks through natural language prompts, and purpose-built language tools that return structured, deterministic results for specific tasks. By exploring both, you'll gain a clearer understanding of when to use each approach.
 
-In the first part of this exercise, you'll use a general purpose AI model in the *new* Foundry portal's chat playground.
-
-In the second part of this exercise, you'll explore Azure Language in Foundry tools in the *classic* Foundry portal. 
+In the first part of this exercise, you'll use a general purpose AI model in the *new* Foundry portal's chat playground. In the second part of this exercise, you'll explore some features of Azure Language in Foundry tools. 
 
 This exercise takes approximately **20** minutes.
 
@@ -129,12 +127,11 @@ Summarization is a way to distill the main points in a document into a shorter a
 
 While a large language model that's trained for general generative AI workloads can often do a great job of text analysis, sometimes a more specialized tool can be used by an agent to get more predictable results.
 
->**Note**: This section uses a standalone language analysis tool associated with the **classic** Foundry portal. The Azure Language service provides purpose-built analyzers that use statistical techniques to return structured, deterministic results — ideal for consistent output in automated pipelines.
+The Azure Language service provides purpose-built analyzers that use statistical techniques to return structured, deterministic results — ideal for consistent output in automated pipelines.
 
-1. Navigate to the **classic** Foundry portal by changing the toggle at the top of the screen. If asked for feedback, select *continue without feedback*.  
-2. In the *classic* Foundry portal, navigate to the left-side menu and select **Playgrounds**. Then select **Try the Language playground**. 
+1. Make sure you are still in the **new** Foundry portal. In the *new* Foundry portal, navigate to the left-side menu and select **Build**. Then select **Models**, and **AI Services**. 
 
-    ![Screenshot of the Language playground in the classic Foundry playground.](./media/language-playground.png)
+    ![Screenshot of the Language features listed on the new Foundry models page.](./media/foundry-ai-services.png)
 
 The Language Playground app uses statistical text analysis techniques to perform two common NLP tasks: language detection and personally identifiable information (PII) redaction.
 
@@ -142,12 +139,12 @@ The Language Playground app uses statistical text analysis techniques to perform
 
 In scenarios where text could potentially be in one of multiple languages, the first step in an analysis workflow is often to determine the primary language so the text can be routed to the most appropriate model or agent for the subsequent processing.
 
-1. In the Language Playground, select the **Language detection** analyzer.
+1. From the list of AI services, select the **Azure Language - Language detection** analyzer.
 2. In the **Input text** list, select one of the provided sample documents. Then use the **Detect** button to detect the language in which the sample is written.
 
-    ![Screenshot of a detected language in the Language Playground](./media/text-04.png)
+    ![Screenshot of a detected language in the Playground](./media/text-04.png)
 
-3. After reviewing the detected language details, click on the **Edit** pencil icon to make the input text editable again. Now you can:
+3. After reviewing the detected language details, click on the **Edit** button icon to make the input text editable again. Now you can:
     - Select another sample.
     - Type your own text.
     - Upload a text file.
@@ -174,16 +171,18 @@ In scenarios where text could potentially be in one of multiple languages, the f
 
     > **Tip**: You can use the [Bing Translator](https://www.bing.com/translator){:target="_blank"} at `https://www.bing.com/translator` to generate text in languages you don't speak!
 
+5. Return to the list of AI services when you are done experimenting. You can click on the back button at the top of the playground screen.
+
 ### Identify PII in text
 
 To comply with privacy policies and laws, organizations often need to detect and redact personally identifiable information (PII) such as names, addresses, phone numbers, email addresses, and other personal details.
 
-1. In the Language Playground, select the **Text PII extraction** analyzer.
+1. In the list of AI services, select the **Azure Language - Text PII extraction** analyzer.
 2. In the **Input text** list, select one of the provided sample documents. Then use the **Detect** button to detect PII values in the text.
 
-    ![Screenshot of a detected PII in the Language Playground](./media/text-05.png)
+    ![Screenshot of a detected PII in the Playground](./media/text-05.png)
 
-3. After reviewing the detected PII details, click on the **Edit** pencil icon to make the input text editable again. Now you can:
+3. After reviewing the detected PII details, click on the **Edit** button to make the input text editable again. Now you can:
     - Select another sample.
     - Type your own text.
     - Upload a text file.
@@ -203,52 +202,54 @@ To comply with privacy policies and laws, organizations often need to detect and
 
     > **Note**: The Language Playground app uses a combination of statistical analysis and regular expression matching to detect potential PII fields. It's <u>not</u> designed as a production-level tool and is likely to detect false positives and fail to detect PII fields in some cases.
 
+
 ### Review the sample code
 
 Foundry often provides sample code for many Azure Language capabilities. You can use the sample code to begin creating your own client application. 
 
-1. Select the **View code** tab to view sample code for PII identification. Below is the same sample code in Python for your reference:
+1. Select the **Code** tab to the  to view sample code for PII identification. 
+
+    ![Screenshot of the Code tab open in the Playground.](./media/text-05-code.png)
+
+>**Tip**: Below is the same sample code in Python for your reference. You can copy the code and run it in your preferred Python development environment - for example Visual Studio Code. You will need to create environment variables for your Azure Language endpoint and key; which you can find in the code sample window.
 
 ```python
 
-key = "paste-your-key-here"
-endpoint = "paste-your-endpoint-here"
+    key = "paste-your-key-here"
+    endpoint = "paste-your-endpoint-here"
 
-from azure.ai.textanalytics import TextAnalyticsClient
-from azure.core.credentials import AzureKeyCredential
+    from azure.ai.textanalytics import TextAnalyticsClient
+    from azure.core.credentials import AzureKeyCredential
 
-# Authenticate the client using your key and endpoint 
-def authenticate_client():
-    ta_credential = AzureKeyCredential(key)
-    text_analytics_client = TextAnalyticsClient(
-            endpoint=endpoint, 
-            credential=ta_credential)
-    return text_analytics_client
+    # Authenticate the client using your key and endpoint 
+    def authenticate_client():
+        ta_credential = AzureKeyCredential(key)
+        text_analytics_client = TextAnalyticsClient(
+                endpoint=endpoint, 
+                credential=ta_credential)
+        return text_analytics_client
 
-client = authenticate_client()
+    client = authenticate_client()
 
-# Example method for detecting sensitive information (PII) from text 
-def pii_recognition_example(client):
-    documents = [
-        "The employee's SSN is 859-98-0987.",
-        "The employee's phone number is 555-555-5555."
-    ]
-    response = client.recognize_pii_entities(documents, language="en")
-    result = [doc for doc in response if not doc.is_error]
-    for doc in result:
-        print("Redacted Text: {}".format(doc.redacted_text))
-        for entity in doc.entities:
-            print("Entity: {}".format(entity.text))
-            print("	Category: {}".format(entity.category))
-            print("	Confidence Score: {}".format(entity.confidence_score))
-            print("	Offset: {}".format(entity.offset))
-            print("	Length: {}".format(entity.length))
-pii_recognition_example(client)
+    # Example method for detecting sensitive information (PII) from text 
+    def pii_recognition_example(client):
+        documents = [
+            "$documents"
+        ]
+        response = client.recognize_pii_entities(documents, language="en")
+        result = [doc for doc in response if not doc.is_error]
+        for doc in result:
+            print("Redacted Text: {}".format(doc.redacted_text))
+            for entity in doc.entities:
+                print("Entity: {}".format(entity.text))
+                print("	Category: {}".format(entity.category))
+                print("	Confidence Score: {}".format(entity.confidence_score))
+                print("	Offset: {}".format(entity.offset))
+                print("	Length: {}".format(entity.length))
+    pii_recognition_example(client)
 
 
 ```
-
-> **Tip**: You can copy the code and run it in your preferred Python development environment - for example Visual Studio Code. You will need to create environment variables for your Azure Language endpoint and key; which you can find in the code sample window.
 
 ## Clean up
 
