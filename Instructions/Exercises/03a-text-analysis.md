@@ -11,108 +11,208 @@ lab:
 
 # Get started with text analysis in Microsoft Foundry
 
-In this exercise, use Azure Language's text analysis features in Microsoft Foundry, Microsoft's platform for creating AI applications. The goal of this exercise is to explore common applications of text analysis techniques.
+In this exercise, you'll use Microsoft Foundry, Microsoft's platform for creating AI applications, to explore common text analysis techniques. 
+
+Foundry offers two approaches to text analysis: general-purpose AI models that handle a broad range of tasks through natural language prompts, and purpose-built language tools that return structured, deterministic results for specific tasks. By exploring both, you'll gain a clearer understanding of when to use each approach.
+
+In the first part of this exercise, you'll use a general purpose AI model in the *new* Foundry portal's chat playground.
+
+In the second part of this exercise, you'll explore Azure Language in Foundry tools in the *classic* Foundry portal. 
 
 This exercise takes approximately **20** minutes.
 
 ## Create a project in Microsoft Foundry
 
->**Note**: This exercise uses the **classic** Foundry interface. If you are using the new Foundry interface, you need to toggle back to the classic Foundry interface.  
+1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
 
-1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open).
+2. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
+    - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
+    - **Subscription**: *Your Azure subscription*
+    - **Resource group**: *Create or select a resource group*
+    - **Region**: Select any of the **AI Foundry recommended** regions
 
-    Ensure the **New Foundry** option is <u>not</u> selected.
+3. Select **Create**. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
-    ![Screenshot of Foundry home page.](./media/ai-foundry-portal.png)
+    ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
-1. Scroll down to the bottom of the home page and select **Explore Azure AI services**.
+## Part 1: Explore Foundry model text analysis capabilities
 
-1. On the Azure AI services page, select the **Language + Translator** tile.
+In this part of the exercise, you'll use the **new** Foundry portal and a general-purpose large language model (LLM) to perform text analysis through natural language prompts. An LLM can handle a wide variety of tasks through prompting alone.
 
-1. Select **Try the Language Playground**. Then in the dialog box click on **Create a new project**.
+1. From the Foundry home page in the **new** Foundry portal interface, select **Start building**. Then select **Find models** to view the Microsoft Foundry model catalog.
 
-1. Create a new project with the following settings:
-    - **Project name**: *Enter a valid name for your project.*
-    - **Advanced settings**:
-        - **Subscription**: *Your Azure subscription*
-        - **Resource group**: *Create or select a resource group*
-        - **Region**: *Select any **Foundry recommended** region*
-        - **Microsoft Foundry resource** *Give the resource a valid name*
+    ![Screenshot of the AI Foundry model catalog.](./media/0-foundry-models.png)
 
-1. Select **Create**. Wait for your project to be created. It may take a few minutes.
+2. Search for and select the `gpt-4.1-mini` model, and view the page for this model, which describes its features and capabilities.
 
-1. When the project is created, you will be taken to the **Language Playground**. The Language playground is a user interface that enables you to try out some Azure Language capabilities.
+    ![Screenshot of the gpt-4.1-mini model page.](./media/0-gpt-4.1-mini.png)
 
-## Prepare for text analysis
+3. Use the **Deploy** button to deploy the model using the default settings. Wait for the deployment to complete. After the deployment is complete, you are taken to a chat playground.
 
-1. Download and extract **[text.zip](https://aka.ms/ai-text){:target="_blank"}** at `https://aka.ms/ai-text`. This archive contains multiple text documents that you'll use in this exercise.
-1. Return to the Language Playground to try out some of Azure Language's text analysis capabilities.
+### Analyze sentiment
 
-## Analyze sentiment
+Sentiment analysis is a common NLP task. It's used to determine whether text conveys a positive, neutral or negative sentiment; which makes it useful for categorizing reviews, social media posts, and other subjective documents.
 
-**Sentiment analysis** is a common NLP task. It's used to determine whether text conveys a positive, neutral or negative sentiment; which makes it useful for categorizing reviews, social media posts, and other subjective documents.
+1. In the chat playground, enter the following prompt:
 
-1. In the Language playground, select **Classify text**. Then select the **Analyze sentiment** tile.
-1. Upload **document-1.txt** from the folder where you extracted the downloaded text files.
-1. Select **Run**. Review the output.
+    ```
+    Analyze the following review, and determine whether the sentiment is positive or negative:
+    ---
+    I stayed at the Hudson View Hotel in New York for four nights in November, and it exceeded every expectation. From the moment I arrived, the staff made the experience memorable.
+    Overall, the Hudson View Hotel made my trip to New York feel effortless and enjoyable. Highly recommended for anyone wanting friendly service and a great location.
+    ---
+    ```
 
-    >**Tip**: Notice that the analysis produces an overall sentiment score and individual scores for each sentence.
+1. Review the response, which should include an analysis of the text's sentiment.
 
-    ![Screenshot of the sentiment analysis interface in the Language playground.](./media/0-sentiment-analysis.png)
+    ![Screenshot of sentiment analysis results in the chat playground.](./media/text-01.png)
 
-1. Select the pencil icon to edit the text. Repeat the analysis for **document-2.txt** and **document-3.txt**.
+1. Enter the following prompt to analyze a different review:
 
-## Extract key phrases
+    ```
 
-**Key phrases** are the most important pieces of information in text. Let's use the key phrase extraction capability of Azure Language to pull important information from a review.
+    What about this one?
+    ---
+    I had a terrible stay at the Sunset Palms Hotel in September. Check‑in was slow, and most of the staff seemed overwhelmed and uninterested. Between the thin walls, unreliable Wi‑Fi, and general lack of cleanliness, I wouldn’t stay at Sunset Palms again.
+    ---
+    ```
 
-1. In the Language playground, select **Extract information**. Then select the **Extract key phrases** tile.
-1. Upload **document-1.txt** from the folder where you extracted the downloaded text files.
-1. Select **Run**. Review the output.
+    You can experiment further by creating your own prompts. The results may vary due to the small language model used in this lightweight app.
 
-    >**Tip**: Notice the different phrases extracted in the *Details* section. These phrases should contribute most to the text's meaning.
+### Extract named entities
 
-    ![Screenshot of the Extract key phrases interface in the Language playground.](./media/0-key-phrases.png)
+Named entities are the people, places, dates, and other important items mentioned in text.
 
-1. Select the pencil icon to edit the text. Repeat the analysis for **document-2.txt** and **document-3.txt**.
+1. At the top of the chat pane, use the **New chat** (&#128172;) button to restart the conversation. This removes all conversation history.
 
-## Extract named entities
+2. Enter the following prompt, and review the results:
 
-**Named entities** are words that describe people, places, and objects with proper names. Let's use the named entity extraction capability of Azure Language to identify types of information in a review.
+    ```
+    List the places mentioned in this text:
+    ---
+    Welcome to the AI Tour!
+    We're looking forward to seeing you in New York, Boston, Seattle, or San Francisco in July!
+    See the website for dates and venue details!
+    ```
 
-1. In the Language playground, select **Extract information**. Then select the **Extract named entities** tile.
-1. Upload **document-1.txt** from the folder where you extracted the downloaded text files.
-1. Select **Run**. Review the output.
+    The model should identify the specific places mentioned in the text.
 
-    >**Tip**: Notice in the *Details* section how the extracted entities come with additional information such as type and confidence scores. The confidence score represents the likelihood that the type identified actually belongs to that category.
+    ![Screenshot of named entity recognition results in the chat playground.](./media/text-02.png)
 
-    ![Screenshot of the Extract named entities interface in the Language playground.](./media/0-extract-entities.png)
+### Summarize text
 
-1. Select the pencil icon to edit the text. Repeat the analysis for **document-2.txt** and **document-3.txt**.
+Summarization is a way to distill the main points in a document into a shorter amount of text.
 
-## Summarize text
+1. At the top of the chat pane, use the **New chat** (&#128172;) button to restart the conversation. This removes all conversation history.
+1. Enter the following prompt, and review the results:
 
-**Summarization** is a way to distill the main points in a document into a shorter amount of text.
+    ```
 
-1. In the Language playground, select **Summarize information**, then select the **Summarize text** tile.
-1. Upload **document-1.txt** from the folder where you extracted the downloaded text files.
-1. Select **Run**. Review the output.
+    Summarize the following meeting transcript in a single paragraph
+    ---
+    Alex Chen: “We need an offsite location that’s easy to reach—Denver and Austin were my first thoughts.”
+    Priya Nair: “Austin’s appealing, but I’m worried about hotel availability and overall cost.”
+    Miguel Torres: “I checked a few options, and Las Vegas consistently comes out easier for flights and venues.”
+    Alex Chen: “That’s true—Vegas also gives us more flexibility than Denver or San Diego.”
+    Priya Nair: “San Diego would be nice, but when we compare logistics, Vegas clearly wins.”
+    Miguel Torres: “Exactly—it’s simpler and more scalable than the other options.”
+    Alex Chen: “Sounds like we’re aligned that Las Vegas is the best choice overall.”
+    Priya Nair: “Yes, I’m comfortable choosing Vegas over the other locations.”
+    Miguel Torres: “Agreed—let’s lock in Las Vegas for the offsite.”
+    ```
 
-    >**Tip**: Notice the *Extractive summary* in *Details* provides rank scores for the most salient sentences.
+    The model should generate a summary of the text.
 
-    ![Screenshot of the Summarize text interface in the Language playground.](./media/0-summarize-text.png)
+    ![Screenshot of summarization results in the chat playground.](./media/text-03.png)
 
-1. Select the pencil icon to edit the text. Repeat the analysis for **document-2.txt** and **document-3.txt**.
+## Part 2: Use a specialized language analysis tool
+
+While a large language model that's trained for general generative AI workloads can often do a great job of text analysis, sometimes a more specialized tool can be used by an agent to get more predictable results.
+
+>**Note**: This section uses a standalone language analysis tool associated with the **classic** Foundry portal. The Azure Language service provides purpose-built analyzers that use statistical techniques to return structured, deterministic results — ideal for consistent output in automated pipelines.
+
+1. Navigate to the **classic** Foundry portal by changing the toggle at the top of the screen. If asked for feedback, select *continue without feedback*.  
+2. In the *classic* Foundry portal, navigate to the left-side menu and select **Playgrounds**. Then select **Try the Language playground**. 
+
+    ![Screenshot of the Language playground in the classic Foundry playground.](./media/language-playground.png)
+
+The Language Playground app uses statistical text analysis techniques to perform two common NLP tasks: language detection and personally identifiable information (PII) redaction.
+
+### Detect language
+
+In scenarios where text could potentially be in one of multiple languages, the first step in an analysis workflow is often to determine the primary language so the text can be routed to the most appropriate model or agent for the subsequent processing.
+
+1. In the Language Playground, select the **Language detection** analyzer.
+2. In the **Input text** list, select one of the provided sample documents. Then use the **Detect** button to detect the language in which the sample is written.
+
+    ![Screenshot of a detected language in the Language Playground](./media/text-04.png)
+
+3. After reviewing the detected language details, click on the **Edit** pencil icon to make the input text editable again. Now you can:
+    - Select another sample.
+    - Type your own text.
+    - Upload a text file.
+
+    For example, enter the following input text and detect the language it is written in:
+
+    ```
+    ¡Hola! Me llamo Josefina y vivo en Madrid, España. Soy doctora en un hospital, ¡lo que me mantiene muy ocupada!
+    ```
+
+4. Experiment with input of your own. The Language Playground app is designed to support detection of the following languages:
+
+    - English
+    - French
+    - Spanish
+    - Portuguese
+    - German
+    - Italian
+    - Simplified Chinese
+    - Japanese
+    - Hindi
+    - Arabic
+    - Russian
+
+    > **Tip**: You can use the [Bing Translator](https://www.bing.com/translator){:target="_blank"} at `https://www.bing.com/translator` to generate text in languages you don't speak!
+
+### Identify PII in text
+
+To comply with privacy policies and laws, organizations often need to detect and redact personally identifiable information (PII) such as names, addresses, phone numbers, email addresses, and other personal details.
+
+1. In the Language Playground, select the **Text PII extraction** analyzer.
+2. In the **Input text** list, select one of the provided sample documents. Then use the **Detect** button to detect PII values in the text.
+
+    ![Screenshot of a detected PII in the Language Playground](./media/text-05.png)
+
+3. After reviewing the detected PII details, click on the **Edit** pencil icon to make the input text editable again. Now you can:
+    - Select another sample.
+    - Type your own text.
+    - Upload a text file.
+
+    For example, enter the following input text and detect any PII it contains:
+
+    ```
+    Maria Garcia called from 020 7946 0958 and asked to send documents to 42 Market Road, London, UK, SW1A 1AA.
+    ```
+
+4. Experiment with input of your own. The Language Playground app is designed to support detection of the following types of PII:
+
+    - People names
+    - Email addresses
+    - Phone numbers
+    - Street addresses
+
+    > **Note**: The Language Playground app uses a combination of statistical analysis and regular expression matching to detect potential PII fields. It's <u>not</u> designed as a production-level tool and is likely to detect false positives and fail to detect PII fields in some cases.
 
 #### Review the sample code
 
-1. Select the **View code** tab to view sample code for text summarization. Below is the same sample code in Python for your reference:
+Foundry often provides sample code for many Azure Language capabilities. You can use the sample code to begin creating your own client application. 
+
+1. Select the **View code** tab to view sample code for PII identification. Below is the same sample code in Python for your reference:
 
 ```python
 
-# This example requires environment variables named "AZURE_AI_KEY" and "ENDPOINT_TO_CALL_LANGUAGE_API"
-key = os.environ.get('AZURE_AI_KEY')
-endpoint = os.environ.get('ENDPOINT_TO_CALL_LANGUAGE_API')
+key = "paste-your-key-here"
+endpoint = "paste-your-endpoint-here"
 
 from azure.ai.textanalytics import TextAnalyticsClient
 from azure.core.credentials import AzureKeyCredential
@@ -127,43 +227,24 @@ def authenticate_client():
 
 client = authenticate_client()
 
-# Example method for summarizing text
-def sample_extractive_summarization(client):
-    from azure.core.credentials import AzureKeyCredential
-    from azure.ai.textanalytics import (
-        TextAnalyticsClient,
-        ExtractiveSummaryAction
-    ) 
-
-    document = [
-        "The extractive summarization feature uses natural language processing techniques to locate key sentences in an unstructured text document. "
-        "These sentences collectively convey the main idea of the document. This feature is provided as an API for developers. " 
-        "They can use it to build intelligent solutions based on the relevant information extracted to support various use cases. "
-        "Extractive summarization supports several languages. It is based on pretrained multilingual transformer models, part of our quest for holistic representations. "
-        "It draws its strength from transfer learning across monolingual and harness the shared nature of languages to produce models of improved quality and efficiency. "
+# Example method for detecting sensitive information (PII) from text 
+def pii_recognition_example(client):
+    documents = [
+        "The employee's SSN is 859-98-0987.",
+        "The employee's phone number is 555-555-5555."
     ]
+    response = client.recognize_pii_entities(documents, language="en")
+    result = [doc for doc in response if not doc.is_error]
+    for doc in result:
+        print("Redacted Text: {}".format(doc.redacted_text))
+        for entity in doc.entities:
+            print("Entity: {}".format(entity.text))
+            print("	Category: {}".format(entity.category))
+            print("	Confidence Score: {}".format(entity.confidence_score))
+            print("	Offset: {}".format(entity.offset))
+            print("	Length: {}".format(entity.length))
+pii_recognition_example(client)
 
-    poller = client.begin_analyze_actions(
-        document,
-        actions=[
-            ExtractiveSummaryAction(max_sentence_count=4)
-        ],
-    )
-
-    document_results = poller.result()
-    for result in document_results:
-        extract_summary_result = result[0]  # first document, first result
-        if extract_summary_result.is_error:
-            print("...Is an error with code '{}' and message '{}'".format(
-                extract_summary_result.code, extract_summary_result.message
-            ))
-        else:
-            print("Summary extracted: 
-{}".format(
-                " ".join([sentence.text for sentence in extract_summary_result.sentences]))
-            )
-
-sample_extractive_summarization(client)
 
 ```
 
@@ -176,6 +257,3 @@ If you have finished exploring Microsoft Foundry, delete any resources that you 
 1. Open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com) and select the resource group that contains the resources you created.
 1. Select **Delete resource group** and then **enter the resource group name** to confirm. The resource group is then deleted.
 
-## Learn more
-
-To learn more about what you can do with this service, see the [Language service page](https://learn.microsoft.com/azure/ai-services/language-service/overview).
