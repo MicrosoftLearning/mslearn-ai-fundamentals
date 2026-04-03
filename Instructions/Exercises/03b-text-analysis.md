@@ -155,19 +155,7 @@ In scenarios where text could potentially be in one of multiple languages, the f
     ¡Hola! Me llamo Josefina y vivo en Madrid, España. Soy doctora en un hospital, ¡lo que me mantiene muy ocupada!
     ```
 
-4. Experiment with input of your own. The Language Playground app is designed to support detection of the following languages:
-
-    - English
-    - French
-    - Spanish
-    - Portuguese
-    - German
-    - Italian
-    - Simplified Chinese
-    - Japanese
-    - Hindi
-    - Arabic
-    - Russian
+4. Experiment with input of your own. 
 
     > **Tip**: You can use the [Bing Translator](https://www.bing.com/translator){:target="_blank"} at `https://www.bing.com/translator` to generate text in languages you don't speak!
 
