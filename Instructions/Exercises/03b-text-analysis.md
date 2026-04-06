@@ -33,6 +33,8 @@ This exercise takes approximately **20** minutes.
 
     ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
+    >**Note**: Close any quick start panes that are opened in order to access your project's Foundry home page. 
+
 ## Part 1: Explore Foundry model text analysis capabilities
 
 In this part of the exercise, you'll use the **new** Foundry portal and a general-purpose large language model (LLM) to perform text analysis through natural language prompts. An LLM can handle a wide variety of tasks through prompting alone.
@@ -75,7 +77,7 @@ Sentiment analysis is a common NLP task. It's used to determine whether text con
     ---
     ```
 
-    You can experiment further by creating your own prompts. The results may vary due to the small language model used in this lightweight app.
+    You can experiment further by creating your own prompts. 
 
 ### Extract named entities
 
@@ -129,11 +131,10 @@ While a large language model that's trained for general generative AI workloads 
 
 The Azure Language service provides purpose-built analyzers that use statistical techniques to return structured, deterministic results — ideal for consistent output in automated pipelines.
 
-1. Make sure you are still in the **new** Foundry portal. In the *new* Foundry portal, navigate to the menu at the top of the screen and select **Build**. Then select **Models**, and **AI Services**. 
+1. Make sure you are still in the **new** Foundry portal. In the *new* Foundry portal, navigate to the menu at the top of the screen and select **Build**. 
+2. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it by clicking on the expand icon at the bottom of the menu to see all the options). From the left-side menu, select **Models**. Then, at the top of the *Models* page, select **AI Services**. 
 
     ![Screenshot of the Language features listed on the new Foundry models page.](./media/foundry-ai-services.png)
-
-The Language Playground app uses statistical text analysis techniques to perform two common NLP tasks: language detection and personally identifiable information (PII) redaction.
 
 ### Detect language
 
