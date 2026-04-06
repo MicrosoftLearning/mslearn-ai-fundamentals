@@ -129,7 +129,7 @@ While a large language model that's trained for general generative AI workloads 
 
 The Azure Language service provides purpose-built analyzers that use statistical techniques to return structured, deterministic results — ideal for consistent output in automated pipelines.
 
-1. Make sure you are still in the **new** Foundry portal. In the *new* Foundry portal, navigate to the left-side menu and select **Build**. Then select **Models**, and **AI Services**. 
+1. Make sure you are still in the **new** Foundry portal. In the *new* Foundry portal, navigate to the menu at the top of the screen and select **Build**. Then select **Models**, and **AI Services**. 
 
     ![Screenshot of the Language features listed on the new Foundry models page.](./media/foundry-ai-services.png)
 
@@ -181,15 +181,12 @@ To comply with privacy policies and laws, organizations often need to detect and
     Maria Garcia called from 020 7946 0958 and asked to send documents to 42 Market Road, London, UK, SW1A 1AA.
     ```
 
-4. Experiment with input of your own. The Language Playground app is designed to support detection of the following types of PII:
+4. Experiment with input of your own. Azure Language can recognize an extensive list of PII. You can see the full list [here](https://learn.microsoft.com/azure/ai-services/language-service/personally-identifiable-information/concepts/entity-categories-list). A few of those entities include: 
 
     - People names
     - Email addresses
     - Phone numbers
     - Street addresses
-
-    > **Note**: The Language Playground app uses a combination of statistical analysis and regular expression matching to detect potential PII fields. It's <u>not</u> designed as a production-level tool and is likely to detect false positives and fail to detect PII fields in some cases.
-
 
 ### Review the sample code
 
