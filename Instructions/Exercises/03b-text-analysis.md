@@ -245,5 +245,5 @@ If you have finished exploring Microsoft Foundry, delete any resources that you 
 ## Learn more
 
 - Review the [evolution of Foundry](https://learn.microsoft.com/azure/foundry/what-is-foundry#evolution-of-foundry) 
-- [What is Azure Language in Foundry Tools?](https://learn.microsoft.com/azure/ai-services/language-service/overview)
+- Read more about [Azure Language in Foundry Tools](https://learn.microsoft.com/azure/ai-services/language-service/overview)
 - Learn more about [Personally identifiable information (PII) detection](https://learn.microsoft.com/azure/ai-services/language-service/personally-identifiable-information/overview)
