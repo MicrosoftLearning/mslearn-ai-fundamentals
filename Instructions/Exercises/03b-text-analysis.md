@@ -8,9 +8,9 @@ lab:
 
 # Get started with text analysis in Microsoft Foundry
 
-In this exercise, you'll use Microsoft Foundry, Microsoft's platform for creating AI applications, to explore common text analysis techniques. 
+In this exercise, you'll use **Microsoft Foundry**, Microsoft's platform for creating AI applications, to explore common *text analysis techniques*. 
 
-Foundry offers two approaches to text analysis: general-purpose AI models that handle a broad range of tasks through natural language prompts, and purpose-built language tools that return structured, deterministic results for specific tasks. By exploring both, you'll gain a clearer understanding of when to use each approach.
+Foundry offers *two approaches* to text analysis: **general-purpose AI models** that handle a broad range of tasks through natural language prompts, and **purpose-built language tools** that return structured, deterministic results for specific tasks. By exploring both, you'll gain a clearer understanding of when to use each approach.
 
 In the first part of this exercise, you'll use a general purpose AI model in the *new* Foundry portal's chat playground. In the second part of this exercise, you'll explore some features of Azure Language in Foundry tools. 
 
@@ -20,7 +20,7 @@ This exercise takes approximately **20** minutes.
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
 
-2. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
+2. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the **Advanced options** area to specify the following settings for your project:
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
@@ -30,33 +30,32 @@ This exercise takes approximately **20** minutes.
 
     ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
-    >**Note**: Close any quick start panes that are opened in order to access your project's Foundry home page. 
+    >**Note**: Close any quick start panes in order to access your project's Foundry home page. 
 
 ## Part 1: Explore Foundry model text analysis capabilities
 
-In this part of the exercise, you'll use the **new** Foundry portal and a general-purpose large language model (LLM) to perform text analysis through natural language prompts. An LLM can handle a wide variety of tasks through prompting alone.
+In this part of the exercise, you'll use the *new* Foundry portal and a general-purpose language model to perform text analysis through natural language prompts. A language model can handle a wide variety of tasks through prompting alone.
 
-1. From the Foundry home page in the **new** Foundry portal interface, select **Start building**. Then select **Find models** to view the Microsoft Foundry model catalog.
+1. From the Foundry home page in the *new* Foundry portal interface, select **Start building**. Then select **Find models** to view the Microsoft Foundry model catalog.
 
-    ![Screenshot of the AI Foundry model catalog.](./media/0-foundry-models.png)
+    ![Screenshot of the AI Foundry model catalog.](./media/0-foundry-model-catalog.png)
 
-2. Search for and select the `gpt-4.1-mini` model, and view the page for this model, which describes its features and capabilities.
+2. Search for and select the `gpt-4.1` model, and view the page for this model, which describes its features and capabilities.
 
-    ![Screenshot of the gpt-4.1-mini model page.](./media/0-gpt-4.1-mini.png)
+    ![Screenshot of the gpt-4.1 model page with the default settings deployment option highlighted.](./media/0-gpt-4.1.png)
 
-3. Use the **Deploy** button to deploy the model using the default settings. Wait for the deployment to complete. After the deployment is complete, you are taken to a chat playground.
+3. Use the **Deploy** button to deploy the model using the *default settings*. Wait for the deployment to complete. After the deployment is complete, you are taken to a chat playground, where you can test out the model's capabilities. 
 
 ### Analyze sentiment
 
-Sentiment analysis is a common NLP task. It's used to determine whether text conveys a positive, neutral or negative sentiment; which makes it useful for categorizing reviews, social media posts, and other subjective documents.
+**Sentiment analysis** is a common *natural language processing* (NLP) task. It's used to determine whether text conveys a positive, neutral or negative sentiment; which makes it useful for categorizing reviews, social media posts, and other subjective documents.
 
 1. In the chat playground, enter the following prompt:
 
     ```
-    Analyze the following review, and determine whether the sentiment is positive or negative:
+    Analyze the following review, and determine whether the sentiment is positive, neutral, or negative:
     ---
-    I stayed at the Hudson View Hotel in New York for four nights in November, and it exceeded every expectation. From the moment I arrived, the staff made the experience memorable.
-    Overall, the Hudson View Hotel made my trip to New York feel effortless and enjoyable. Highly recommended for anyone wanting friendly service and a great location.
+    I spent several nights at the Riverside Heights Hotel during a fall trip, and the experience was outstanding from start to finish. The welcome at arrival was warm and attentive, and the staff consistently went out of their way to be helpful. The overall atmosphere made my stay smooth and relaxing, and the location was extremely convenient for getting around the city. I left with a very positive impression and would confidently recommend this hotel to others looking for a pleasant and stress‑free stay.
     ---
     ```
 
@@ -70,7 +69,7 @@ Sentiment analysis is a common NLP task. It's used to determine whether text con
 
     What about this one?
     ---
-    I had a terrible stay at the Sunset Palms Hotel in September. Check‑in was slow, and most of the staff seemed overwhelmed and uninterested. Between the thin walls, unreliable Wi‑Fi, and general lack of cleanliness, I wouldn’t stay at Sunset Palms again.
+    I was disappointed with my visit to the Harbor View Inn earlier this year. The front desk process took much longer than expected, and staff responses to questions felt rushed and unhelpful. The room had ongoing maintenance issues, inconsistent internet access, and noticeable noise from the hallway throughout the night. Overall, the experience fell short of expectations, and I would not choose to stay there again.        
     ---
     ```
 
@@ -78,18 +77,19 @@ Sentiment analysis is a common NLP task. It's used to determine whether text con
 
 ### Extract named entities
 
-Named entities are the people, places, dates, and other important items mentioned in text.
+**Named entities** are the people, places, dates, and other important items mentioned in text.
 
 1. At the top of the chat pane, use the **New chat** (&#128172;) button to restart the conversation. This removes all conversation history.
 
 2. Enter the following prompt, and review the results:
 
     ```
-    List the places mentioned in this text:
+    List the named entities mentioned in this text:
     ---
-    Welcome to the AI Tour!
-    We're looking forward to seeing you in New York, Boston, Seattle, or San Francisco in July!
-    See the website for dates and venue details!
+    Welcome to the Global Innovation Workshop!
+    We’re excited to host sessions in London, Toronto, Chicago, and Austin this spring.
+    Visit our event page for specific dates, venues, and city details.
+    ---
     ```
 
     The model should identify the specific places mentioned in the text.
@@ -98,7 +98,7 @@ Named entities are the people, places, dates, and other important items mentione
 
 ### Summarize text
 
-Summarization is a way to distill the main points in a document into a shorter amount of text.
+**Summarization** is a way to distill the main points in a document into a shorter amount of text.
 
 1. At the top of the chat pane, use the **New chat** (&#128172;) button to restart the conversation. This removes all conversation history.
 1. Enter the following prompt, and review the results:
@@ -107,15 +107,15 @@ Summarization is a way to distill the main points in a document into a shorter a
 
     Summarize the following meeting transcript in a single paragraph
     ---
-    Alex Chen: “We need an offsite location that’s easy to reach—Denver and Austin were my first thoughts.”
-    Priya Nair: “Austin’s appealing, but I’m worried about hotel availability and overall cost.”
-    Miguel Torres: “I checked a few options, and Las Vegas consistently comes out easier for flights and venues.”
-    Alex Chen: “That’s true—Vegas also gives us more flexibility than Denver or San Diego.”
-    Priya Nair: “San Diego would be nice, but when we compare logistics, Vegas clearly wins.”
-    Miguel Torres: “Exactly—it’s simpler and more scalable than the other options.”
-    Alex Chen: “Sounds like we’re aligned that Las Vegas is the best choice overall.”
-    Priya Nair: “Yes, I’m comfortable choosing Vegas over the other locations.”
-    Miguel Torres: “Agreed—let’s lock in Las Vegas for the offsite.”
+    Jordan Lee: “We should pick a retreat location that’s convenient for most people—Chicago and Nashville came to mind first.”
+    Anika Sharma: “Chicago is central, but the venue costs there can add up quickly.”
+    Carlos Ramirez: “I looked into a few alternatives, and Phoenix seems much easier when it comes to flights and space.”
+    Jordan Lee: “That makes sense—Phoenix does offer more flexibility than Chicago or Portland.”
+    Anika Sharma: “Portland would be enjoyable, but from a planning standpoint, Phoenix is simpler.”
+    Carlos Ramirez: “Exactly. It scales better and avoids some of the pricing issues.”
+    Jordan Lee: “So it sounds like Phoenix is our strongest option overall.”
+    Anika Sharma: “Yes, I’m comfortable choosing Phoenix over the other cities.”
+    Carlos Ramirez: “Agreed—let’s move forward with Phoenix for the retreat.”
     ```
 
     The model should generate a summary of the text.
@@ -124,12 +124,13 @@ Summarization is a way to distill the main points in a document into a shorter a
 
 ## Part 2: Use a specialized language analysis tool
 
-While a large language model that's trained for general generative AI workloads can often do a great job of text analysis, sometimes a more specialized tool can be used by an agent to get more predictable results.
+While a language model that's trained for general generative AI workloads can often do a great job of text analysis, sometimes a more specialized tool can be used by an agent to get more predictable results.
 
-The Azure Language service provides purpose-built analyzers that use statistical techniques to return structured, deterministic results — ideal for consistent output in automated pipelines.
+The **Azure Language in Foundry Tools** provides purpose-built analyzers that use statistical techniques to return structured, deterministic results — ideal for consistent output in automated pipelines.
 
-1. Make sure you are still in the **new** Foundry portal. In the *new* Foundry portal, navigate to the menu at the top of the screen and select **Build**. 
-2. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it by clicking on the expand icon at the bottom of the menu to see all the options). From the left-side menu, select **Models**. Then, at the top of the *Models* page, select **AI Services**. 
+1. In the *new* Foundry portal, navigate to the menu at the top of the screen and select **Build**. 
+
+2. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it by clicking on the expand icon at the bottom of the menu). From the left-side menu, select **Models**. Then, at the top of the *Models* page, select **AI Services**. 
 
     ![Screenshot of the Language features listed on the new Foundry models page.](./media/foundry-ai-services.png)
 
@@ -161,7 +162,7 @@ In scenarios where text could potentially be in one of multiple languages, the f
 
 ### Identify PII in text
 
-To comply with privacy policies and laws, organizations often need to detect and redact personally identifiable information (PII) such as names, addresses, phone numbers, email addresses, and other personal details.
+To comply with privacy policies and laws, organizations often need to detect and redact **personally identifiable information (PII)** such as names, addresses, phone numbers, email addresses, and other personal details.
 
 1. In the list of AI services, select the **Azure Language - Text PII extraction** analyzer.
 2. In the **Input text** list, select one of the provided sample documents. Then use the **Detect** button to detect PII values in the text.
@@ -188,9 +189,9 @@ To comply with privacy policies and laws, organizations often need to detect and
 
 ### Review the sample code
 
-Foundry often provides sample code for many Azure Language capabilities. You can use the sample code to begin creating your own client application. 
+Foundry provides sample code for some Azure Language capabilities. You can use the sample code to begin creating your own client application. 
 
-1. Select the **Code** tab to the  to view sample code for PII identification. 
+1. Select the **Code** tab on the right to view sample code for PII identification. 
 
     ![Screenshot of the Code tab open in the Playground.](./media/text-05-code.png)
 
@@ -241,3 +242,8 @@ If you have finished exploring Microsoft Foundry, delete any resources that you 
 1. Open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com) and select the resource group that contains the resources you created.
 1. Select **Delete resource group** and then **enter the resource group name** to confirm. The resource group is then deleted.
 
+## Learn more
+
+- Review the [evolution of Foundry](https://learn.microsoft.com/azure/foundry/what-is-foundry#evolution-of-foundry) 
+- [What is Azure Language in Foundry Tools?](https://learn.microsoft.com/azure/ai-services/language-service/overview)
+- Learn more about [Personally identifiable information (PII) detection](https://learn.microsoft.com/azure/ai-services/language-service/personally-identifiable-information/overview)
