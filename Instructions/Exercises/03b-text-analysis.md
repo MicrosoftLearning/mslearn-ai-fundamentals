@@ -32,7 +32,7 @@ This exercise takes approximately **20** minutes.
 
     >**Note**: Close any quick start panes in order to access your project's Foundry home page. 
 
-## Part 1: Explore Foundry model text analysis capabilities
+## Part 1: Explore a general-purpose AI model's text analysis capabilities 
 
 In this part of the exercise, you'll use the *new* Foundry portal and a general-purpose language model to perform text analysis through natural language prompts. A language model can handle a wide variety of tasks through prompting alone.
 
