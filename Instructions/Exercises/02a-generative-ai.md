@@ -69,34 +69,8 @@ You can use the playground to explore the model by chatting with it and observin
     > **Note**: Generative AI chat applications often include the conversation history in the prompt; so the context of the conversation is retained between messages. In this case, "her" is interpreted as referring to Ada Lovelace.
 
 1. At the top-right of the chat pane, use the **New chat** button to restart the conversation. This removes all conversation history.
-1. Enter a new prompt, such as `Who was Alan Turing?` and view the response.
-1. Continue the conversation with prompts such as `What is the Turing test?` or `What is a Turing machine?`.
-
-## Experiment with system prompts
-
-A system prompt is used to provide the model with instructions that guide its responses. You can use the system prompt to provide guidelines about format, style, and constraints about what the model should and should not include in its responses.
-
-1. At the top of the chat pane, use the **New chat** button to restart the conversation. Then enter a new prompt, such as `What was ENIAC?` and view the response.
-1. In the pane on the left, in the **Instructions** text area, change the system prompt to `You are an AI assistant that provides short and concise answers using simple language. Limit responses to a single sentence.`
-1. Now try the same prompt as before (`What was ENIAC?`) and review the output.
-1. Continue to experiment with different system prompts to try to influence the kinds of response returned by the model.
-1. When you have finished experimenting, change the system prompt back to `You are an AI assistant that helps people find information.`
-
-## Experiment with model parameters
-
-Model parameters control how the model works, and can be useful for restricting the size of its responses (measured in *tokens*) and controlling how "creative" its responses can be.
-
-1. Use the **New chat** button to restart the conversation.
-1. In the pane on the left, next to the model name, select **Parameters**.
-
-    ![Screenshot of where to find the Parameters icon.](./media/0-chat-parameters.png)
-
-1. Review the parameter settings, using the *(i)* links to view their description. Then, without changing them, enter a prompt like `What is Moore's law?` and review the response
-1. Experiment by changing the parameter values and repeating the same prompt. You may see some differences in behavior from the model. For example, changing the **Temperature** modifies the randomness of the model's "next word" selection, with lower temperatures resulting in less "creative" response construction.
-
-    ***Tip**: You can use the **Stop generation** button in the chat pane to stop long-running responses.*
-
-1. When you've finished experimenting, reset the parameters to their original values.
+1. Enter a new prompt, such as `Tell me about the ELIZA chatbot.` and view the response.
+1. Continue the conversation with prompts such as `How does it compare with modern LLMs?`.
 
 ## View client code to chat with a model
 
@@ -123,7 +97,7 @@ When you're satisfied with the responses a model returns in the playground, you 
     ```python
     from openai import OpenAI
     
-    endpoint = "https://your-project-resource.openai.azure.com/openai/v1/"
+    endpoint = "https://{your-foundry-resource}.openai.azure.com/openai/v1/"
     deployment_name = "gpt-4.1-mini"
     api_key = "<your-api-key>"
     
@@ -140,15 +114,46 @@ When you're satisfied with the responses a model returns in the playground, you 
     print(f"answer: {response.output[0]}")
     ```
 
-    The code connects to the resource endpoint for your Microsoft Foundry project, using its secret authentication key (which you would need to copy into the code to set the **api_key** variable). It then uses your deployed model to generate a response from an input prompt (in this case, the hard-coded question "What is the capital of France?") and prints the response to the output console.
+    The code connects to the **OpenAI** endpoint for your Microsoft Foundry resource, using its secret authentication key (which you would need to copy into the code to set the **api_key** variable). It then uses your deployed model to generate a response from an input prompt (in this case, the hard-coded question "What is the capital of France?") and prints the response to the output console.
 
-    > **Tip**: If you are using a work or school account to sign into Azure, and you have sufficient permissions in the Azure subscription, you can open the sample code in VS Code for Web to run it, and experiment with editing it.
+## Specify instructions in a *system prompt*
 
-1. When you have finished reviewing the code, switch back to the **Chat** tab.
+So far, you've used the model to provide general information. To support specific use cases, you should use a *system prompt* to provide the model with instructions that guide its responses. You can use the system prompt to give the model a specific focus or role, and provide guidelines about format, style, and constraints about what the model should and should not include in its responses.
+
+For example, suppose an organization wants to use a generative AI model to power an AI agent that assists employees with expense claims.
+
+1. In the model playground, switch back to the **Chat** tab. Then, at the top-right of the chat pane, use the **New chat** button to restart the conversation and removes the conversation history.
+1. In the pane on the left, in the **Instructions** text area, change the system prompt to:
+
+    ```
+   You are a helpful AI assistant who supports employees with expense claims. Provide concise, accurate information only on topics related to expenses. Do not provide any information about topics that are not directly related to expenses.
+    ```
+
+1. Now enter a new user prompt related to expense claims, such as `What kinds of business expense are typically reimbursed by employers?`
+
+    Review the response, which should provide some general guidance about expense claims.
+
+1. Try re-asking a previously-asked question that is unrelated to expenses, such as `Tell me about the ELIZA chatbot`; and compare the response now that the system prompt has changed.
+
+    So far, we've specified instructions in the *playground*; but they're not saved outside of that environment. In a client application, you would need to include the system prompt as an **instructions** parameter, like this:
+
+    ```python
+    response = client.responses.create(
+            model=deployment_name,
+            instructions="""
+                You are a helpful AI assistant who supports employees with expense claims.
+                Provide concise, accurate information only on topics related to expenses.
+                Do not provide any information about topics that are not directly related to expenses.
+            """
+            input="What kinds of business expense are typically reimbursed by employers?",
+        )
+    ```
+
+    To encapsulate the instructions and model in a single AI entity, we need to save the configuration as an *agent*.
 
 ## Save the model configuration as an agent
 
-While you can implement generative AI apps using a standalone model, to create a fully agentic AI experience, you need to encapsulate the model, its instructions, and tool configuration that provides additional functionality, in an *agent*. In this exercise, we'll use the model to power an agent that helps employees with expense claims.
+While you can implement generative AI apps using a standalone model, to create a fully agentic AI experience, you need to encapsulate the model, its instructions, and any tool configuration that provides additional functionality, in an *agent*.
 
 1. In the model playground, at the top right select **Save as agent**. Then, when prompted, name your new agent `expenses-agent`.
 
@@ -156,35 +161,31 @@ While you can implement generative AI apps using a standalone model, to create a
 
     ![Screenshot of the agent playground.](./media/0-agent-playground.png)
 
-1. Change the **Instructions** to `You are a helpful AI assistant who supports employees with expense claims.`
-1. At the top of the agent playground, select **Save**.
 1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Note that its definition includes the model, its parameter settings, and the instructions you specified - similar to this:
 
     ```yml
     metadata:
       logo: Avatar_Default.svg
-      description: ""
-      modified_at: "1767997310"
+      microsoft.voice-live.enabled: "false"
     object: agent.version
-    id: expenses-agent:2
+    id: expenses-agent:1
     name: expenses-agent
-    version: "2"
+    version: "1"
     description: ""
-    created_at: 1767997284
+    created_at: 1776115196
     definition:
       kind: prompt
       model: gpt-4.1-mini
-      instructions: You are a helpful AI assistant who supports employees with expense claims.
-      temperature: 0.98
+      instructions: You are a helpful AI assistant who supports employees with expense claims. Provide concise, accurate information only on topics related to expenses. Do not provide any information about topics that are not directly related to expenses.
+      temperature: 1
       top_p: 1
       tools: []
+    status: active
     ```
 
-1. Switch back to the **Chat** tab, and enter the prompt `What can you do?`
+1. Switch back to the **Chat** tab, and enter the prompt `Who are you?`
 
     The response should indicate that the agent is "aware" of its role as an expense claims advisor.
-
-    ![Screenshot of the agent's response describing its capabilities.](./media/0-agent-capabilities.png)
 
 1. Enter an expenses-related prompt, such as `How much can I claim for a taxi?`
 
@@ -192,36 +193,38 @@ While you can implement generative AI apps using a standalone model, to create a
 
 ## Add a knowledge tool to the agent
 
-Agents use *tools* to perform tasks or find information. You can use a general web search tool or a simple file search tool to provide a source of knowledge; or for more comprehensive agentic solutions, you can create a *Microsoft Foundry IQ* knowledge store that connects the agent to a data source within your enterprise. In this exercise, we'll use a simple file search tool.
+Agents use *tools* to perform tasks or find information. You can use a general web search tool or a simple file search tool to provide a source of knowledge; or for more comprehensive agentic solutions, you can create a *Microsoft Foundry IQ* knowledge store that connects the agent to one or more data sources within your enterprise. In this exercise, we'll use a simple file search tool.
 
 1. Open a new browser tab, and view the **[expenses_policy.docx](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx){:target="_blank"}** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx`. We'll use this to provide a knowledge source that the agent can use to answer questions about expense claims.
 1. Download **expenses_policy.docx** to your local computer.
 1. Return to the tab containing the agent playground, and in the pane on the left, expand the **Tools** section if it's not already expanded.
 1. Upload the **expenses_policy.docx** file, creating a new index with the default index name. When the index has been created, attach it to the agent.
 1. At the top of the agent playground, use the **Save** button to update the agent definition.
-1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Note that its definition now includes the file search tool you added:
+1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Note that its definition now includes the file search tool you added (in the **tools** section):
 
     ```yml
     metadata:
       logo: Avatar_Default.svg
       description: ""
-      modified_at: "1767999261"
+      modified_at: "1776115781"
+      microsoft.voice-live.enabled: "false"
     object: agent.version
-    id: expenses-agent:3
+    id: expenses-agent:2
     name: expenses-agent
-    version: "3"
+    version: "2"
     description: ""
-    created_at: 1767999232
+    created_at: 1776115782
     definition:
       kind: prompt
       model: gpt-4.1-mini
-      instructions: You are a helpful AI assistant who supports employees with expense claims.
-      temperature: 0.98
+      instructions: You are a helpful AI assistant who supports employees with expense claims. Provide concise, accurate information only on topics related to expenses. Do not provide any information about topics that are not directly related to expenses.
+      temperature: 1
       top_p: 1
       tools:
         - type: file_search
           vector_store_ids:
-            - vs_sYs3SP17fUcc3E7eJqWfgxBW
+            - vs_tmwFZKmfVB3rZJoeaJAcgdy9
+    status: active
     ```
 
 1. Switch back to the **Chat** tab, and enter the same expenses-related prompt as before (for example, `How much can I claim for a taxi?`) and view the response.
@@ -230,54 +233,124 @@ Agents use *tools* to perform tasks or find information. You can use a general w
 
 1. Try a few more expenses-related prompts, like `What about a hotel?` or `Can I claim the cost of my dinner?`
 
-## Explore options to use the agent
+    Congratulations! We have a working agent with access to the knowledge it needs. Now we're ready to develop apps that use it.
 
-Now that you have an agent, you can power client applications that enable employees to get expense claims guidance.
+## View client code to access the agent in your project
 
-1. At the top of the agent playground, in the **Preview** drop-down list, select **Preview agent**.
-1. In the preview web page that opens in a new tab, enter a prompt such as `How do I submit an expense claim?` and review the response.
+The agent is defined within your Foundry project, and there's a convenient way to develop apps that connect to it there; allowing you to iteratively refine both the agent and the client app to create the solution you need.
 
-    ![Screenshot of the agent preview page.](./media/0-agent-preview.png)
-
-1. Explore the agent preview by submitting some more prompts. When you're finished, close the browser tab containing the preview app and return to the agent playground.
-1. In the agent playground, note that the **Publish** button can be used to publish your agent as an enterprise application in Azure so it can be consumed within Microsoft 365 and Teams.
-
-    In many cases, publishing an expense claim support agent for use in the enterprise application ecosystem would be an ideal way to implement an agentic solution. However, in other cases you may want to consume the agent from a custom application.
-
-1. Switch from the **Chat** tab to the **Code** tab, and view the sample code for consuming the agent. The code uses the OpenAI Responses API; but has some agent-specific differences from the code you previously examined to chat with the model.
+1. In the agent playground, switch from the **Chat** tab to the **Code** tab, and view the sample code for consuming the agent; which should be similar to this:
 
     ```python
     # Before running the sample:
-    #    pip install --pre azure-ai-projects>=2.0.0b1
-    #    pip install azure-identity
+    # pip install azure-ai-projects>=2.0.0
     
     from azure.identity import DefaultAzureCredential
     from azure.ai.projects import AIProjectClient
     
-    myEndpoint = "https://your-project-resource.services.ai.azure.com/api/projects/ai-project-123"
+    my_endpoint = "https://{your-foundry-resource}}.services.ai.azure.com/api/projects/{your-project}"
     
     project_client = AIProjectClient(
-        endpoint=myEndpoint,
+        endpoint=my_endpoint,
         credential=DefaultAzureCredential(),
     )
     
-    myAgent = "expenses-agent"
-    # Get an existing agent
-    agent = project_client.agents.get(agent_name=myAgent)
-    print(f"Retrieved agent: {agent.name}")
+    my_agent = "expenses-agent"
+    my_version = "2"
     
     openai_client = project_client.get_openai_client()
     
     # Reference the agent to get a response
+    
     response = openai_client.responses.create(
         input=[{"role": "user", "content": "Tell me what you can help with."}],
-        extra_body={"agent": {"name": agent.name, "type": "agent_reference"}},
+        extra_body={"agent_reference": {"name": my_agent, "version": my_version, "type": "agent_reference"}},
     )
     
     print(f"Response output: {response.output_text}")
     ```
 
-    > **Tip**: If you are using a work or school account to sign into Azure, and you have sufficient permissions in the Azure subscription, you can open the sample code in VS Code for Web to run it, and experiment with editing it.
+    The code to connect to your agent uses the **Azure.AI.Projects** library to create an **AIProjectClient** object connected to your Foundry project. Since this involves connecting to a project, which may contain priveleged resources, key-based authentication is <u>not</u> supported, and the application must use an Entra ID identity to be authenticated.
+
+    After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we peviously saw being used to chat with a model.
+
+1. In the **Code** tab, use the **Open in VS Code for the web** button to open Visual Studio Code for the Web in a new browser tab.
+
+    Wait for the environment to be set up.
+
+    > **Tip**: It can take a few minutes to set the envionment up!
+
+    ![Screenshot of VS Code for the Web.](./media/vs-code-web.png)
+
+1. After VS Code for the web has opened and the environment has been set up, close the GitHib Copilot **Chat** pane on the right side to give you more room, and note that the **Instructions.md** file contains the instructions you need to run the sample code (which is in the **run_agent.py** file in the VS Code Explorer pane on the left.)
+1. In the terminal pane at the bottom, enter the following command to run the code:
+
+    ```python
+   python run_agent.py
+    ```
+
+    The output should inlude a response to the prompt *Tell me what you can help with.*
+
+    ![Screenshot of VS Code for the Web with output from the agent.](./media/vs-code-output.png)
+
+    > **Tip**: If an authentication issue occurs, you may need to sign into Azure in the VS Code terminal by using the Azure CLI `az login` command. See the [Azure CLI documentation](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively){:target="_blank"} for details.
+
+## Publish the agent and use it in a client app
+
+When you're satisfied with your agentic solution, you can *publish* the agent to its own dedicated endpoint, and adapt client applications to use it from there. Publishing the agent makes it available independently from the project, making it a more suitable way to deploy the agent in production.
+
+1. Keep the VS Code for the Web tab open, but switch back to the Foundry portal tab.
+1. In the agent playground, in the **Publish** drop-down list, select **Publish agent**.
+
+    When prompted, comfirm you want to publish the agent to production, and after a few seconds, view the published agent details. In particular, note the Responses API endpoint that clients apps can use to cnnect to your agent.
+
+    ![Screenshot of the agent publishing confirmation message.](./media/published-agent.png)
+
+1. Note that you can perform additional steps to publish your agent for integration with Teams and Microsoft 365 Copilot. However, in this exercise, select **Close**.
+
+    > **Tip**: You can use the **View details** option in the **Publish** drop-down list to re-open the agent details.
+
+1. Switch back to the VS Code for the Web tab, and in the Explorer pane, add a new file named `expenses-client.py`.
+1. Add the following code to the new **expenses-client.py** file.
+
+    ```python
+   from openai import OpenAI
+   from azure.identity import DefaultAzureCredential, get_bearer_token_provider
+    
+   # Replace with your agent endpoint
+   AGENT_ENDPOINT = "YOUR_AGENT_ENDPOINT"
+    
+   # Create OpenAI client authenticated with Azure credentials
+   openai = OpenAI(
+        api_key=get_bearer_token_provider(DefaultAzureCredential(), "https://ai.azure.com/.default"),
+        base_url=AGENT_ENDPOINT,
+        default_query={"api-version": "2025-11-15-preview"}
+   )
+    
+   # Send a request to the published agent
+   response = openai.responses.create(
+        input=input("Prompt:\n"),
+   )
+   print(f"Response output:\n{response.output_text}")
+    ```
+
+1. Replace the **YOUR_AGENT_ENDPOINT** placeholder with the Responses API endpoint for your agent (copied from the published agent details in the Foundry portal).
+1. Save the changes to the **expenses-client.py** code file (CTRL+S).
+1. In the VS Code terminal pane, enter the following command to run the code.
+
+    ```
+   python expenses-client.py
+    ```
+
+1. When prompted, enter the following prompt:
+
+    ```
+   How do I submit an expense claim?
+    ```
+
+    The code uses our published agent to get a response, and displays it.
+
+    ![Screenshot of the agent publishing confirmation message.](./media/vs-code-agent-client.png)
 
 ## Summary
 
@@ -292,3 +365,5 @@ If you have finished exploring Microsoft Foundry, you should delete the resource
 1. Open the [Azure portal](https://portal.azure.com){:target="_blank"} at `https://portal.azure.com` and view the contents of the resource group where you deployed the project used in this exercise.
 1. On the toolbar, select **Delete resource group**.
 1. Enter the resource group name and confirm that you want to delete it.
+
+> **Tip**: If you want to keep the Foundry project, but avoid being charged for the published agent, use the **&vellip;** menu next to the **Publish** drop-down list to delete the agent.
