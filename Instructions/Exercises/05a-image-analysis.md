@@ -116,9 +116,9 @@ So far you've explored the ability of a generative AI model to process visual in
 
     > **Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availabilty and quota.
 
-1. Select the **FLUX-1-Kontext-pro** model and deploy it.
+1. Select an available text-to-image model, such as **FLUX.2-pro** or **FLUX-1-Kontext-pro**, and deploy it.
 
-    *If you are unable to deploy the model in your subscription, try one of the other image-generation models.*
+    *If one of these models is unavailable in your subscription or region, deploy another text-to-image model that is available.*
 
 1. When the model has been deployed, it opens in the image playground.
 1. Enter a prompt describing a desired image; for example `A chef preparing a meal.` Then review the generated image.
@@ -129,7 +129,10 @@ So far you've explored the ability of a generative AI model to process visual in
 
 If you want to develop a client app or agent that generates images using your model, you can use the OpenAI API.
 
-1. In the **Chat** pane, select the **Code** tab to view sample code.
+> **Note**: Model availability and playground features can vary. Some image-generation models might not show a **Code** tab or **View code** option. If your selected model doesn't include code samples, you can still complete the exercise by generating an image in the playground, or use another deployed text-to-image model that does expose code samples.
+
+
+1. If your deployed model includes code samples, in the **Chat** pane, select the **Code** tab to view sample code.
 1. Select the following code options:
     - **Language**: Python
     - **SDK**: OpenAI SDK
@@ -142,7 +145,7 @@ If you want to develop a client app or agent that generates images using your mo
     from openai import OpenAI
     
     endpoint = "https://your-project-resource.openai.azure.com/openai/v1/"
-    deployment_name = "FLUX.1-Kontext-pro"
+    deployment_name = "your-text-to-image-model-deployment"
     api_key = "<your-api-key>"
     
     client = OpenAI(
@@ -210,3 +213,10 @@ If you want to develop a client app or agent that generates videos using your mo
 ## Summary
 
 in this exercise, you explored the use of vision-enabled models in Microsoft Foundry, including models that can accept vision data as input, models that can generate static images based on text descriptions, and models that can generate video.
+
+## Clean up
+
+If you've finished working with Microsoft Foundry, delete the resources you created in this exercise to avoid incurring unnecessary Azure costs.
+
+1. Open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com) and select the resource group that contains the resources you created.
+1. Select **Delete resource group** and then **enter the resource group name** to confirm. The resource group is then deleted.
