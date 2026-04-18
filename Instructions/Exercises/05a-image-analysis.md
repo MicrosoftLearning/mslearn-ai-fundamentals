@@ -59,6 +59,8 @@ Computer vision models enable AI systems to interpret image-based data, such as 
 
    ![Screenshot of the chat app with the response to an image-based prompt.](./media/0-image-analysis.png)
 
+    > **NOTE**: If the error *ERR_BAD_REQUEST: The provided data does not match the expected schema* is returned, try switching to the *Classic* portal by de-selecting the **New Foundry** option. In the classic portal, open the **Chat playground** in the **Playgrounds** page.
+
 1. Submit prompts that include the other images, such as `How should I cook this?` or `What desserts could I make with this?`
 
 ### View code
@@ -130,7 +132,6 @@ So far you've explored the ability of a generative AI model to process visual in
 If you want to develop a client app or agent that generates images using your model, you can use the OpenAI API.
 
 > **Note**: Model availability and playground features can vary. Some image-generation models might not show a **Code** tab or **View code** option. If your selected model doesn't include code samples, you can still complete the exercise by generating an image in the playground, or use another deployed text-to-image model that does expose code samples.
-
 
 1. If your deployed model includes code samples, in the **Chat** pane, select the **Code** tab to view sample code.
 1. Select the following code options:
