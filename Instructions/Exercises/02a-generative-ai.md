@@ -302,7 +302,7 @@ When you're satisfied with your agentic solution, you can *publish* the agent to
 1. Keep the VS Code for the Web tab open, but switch back to the Foundry portal tab.
 1. In the agent playground, in the **Publish** drop-down list, select **Publish agent**.
 
-    When prompted, comfirm you want to publish the agent to production, and after a few seconds, view the published agent details. In particular, note the Responses API endpoint that clients apps can use to cnnect to your agent.
+    When prompted, confirm you want to publish the agent to production, and after a few seconds, view the published agent details. In particular, note the Responses API endpoint that clients apps can use to connect to your agent.
 
     ![Screenshot of the agent publishing confirmation message.](./media/published-agent.png)
 
