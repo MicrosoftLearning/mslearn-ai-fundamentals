@@ -295,6 +295,7 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
     > **Tip**: If an authentication issue occurs, you may need to sign into Azure in the VS Code terminal by using the Azure CLI `az login` command. See the [Azure CLI documentation](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively){:target="_blank"} for details.
 
+<!-- TEMPORARY REMOVAL DUE TO KNOWN ISSUE
 ## Publish the agent and use it in a client app
 
 When you're satisfied with your agentic solution, you can *publish* the agent to its own dedicated endpoint, and adapt client applications to use it from there. Publishing the agent makes it available independently from the project, making it a more suitable way to deploy the agent in production.
@@ -353,6 +354,7 @@ When you're satisfied with your agentic solution, you can *publish* the agent to
     The code uses our published agent to get a response, and displays it.
 
     ![Screenshot of the agent publishing confirmation message.](./media/vs-code-agent-client.png)
+-->
 
 ## Summary
 
