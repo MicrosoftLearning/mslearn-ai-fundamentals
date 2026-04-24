@@ -178,7 +178,7 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
 1. Enter your project endpoint, model deployment name, and API key from the Foundry portal into the configuration settings, and save the configuration.
 
-    > **Note**: The configuration values other than the API key will be stored in your local browser. If you close and re-open the app, you will need to re-enter the API key.
+    > **Note**: The configuration values other than the API key will be stored in your local browser cache. If you close and re-open the app, you will need to re-enter the API key.
 
     Now you can the app to chat with the Computing History agent. The app will use your deployed model in Microsoft Foundry. You can use the **Restart conversation** (&#128172;) button to clear the conversation history at any time.
 
@@ -242,7 +242,7 @@ Foundry Models by default are configured with guardrails that enforce content sa
 
 in this exercise, you explored a Microsoft Foundry project and familiarized yourself with the Microsoft Foundry portal. You then deployed a model and connected a client application to your Foundry resource.
 
-> ![Anton avatar.](./media/anton-icon.png)<br/>**[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>Another app that you can connect to a model in your Foundry project is *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}*, a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just another example of an AI agent for you to explore as you learn about what's possible with AI.*
+> **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>Another app that you can connect to a model in your Foundry project is *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}*, a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just another example of an AI agent for you to explore as you learn about what's possible with AI.*
 
 ## Clean Up
 
