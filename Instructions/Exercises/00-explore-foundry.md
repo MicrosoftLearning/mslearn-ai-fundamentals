@@ -242,7 +242,7 @@ Foundry Models by default are configured with guardrails that enforce content sa
 
 in this exercise, you explored a Microsoft Foundry project and familiarized yourself with the Microsoft Foundry portal. You then deployed a model and connected a client application to your Foundry resource.
 
-> <table>>tr><td>![Anton avatar.](./media/anton-icon.png)<br>**[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**</td><td>> Another app that you can connect to a model in your Foundry project is *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}*, a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Use the **Configure** button to enter your Foundry project and model details</td></tr><tr colspan="2"><td>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just another example of an AI agent for you to explore as you learn about what's possible with AI.*</td></tr></table>
+> <table><tr><td>![Anton avatar.](./media/anton-icon.png)<br/>**[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**</td><td>Another app that you can connect to a model in your Foundry project is *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}*, a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry.<br/>Use the **Configure** button to enter your Foundry project and model details</td></tr><tr><td colspan="2">*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just another example of an AI agent for you to explore as you learn about what's possible with AI.*</td></tr></table>
 
 ## Clean Up
 
