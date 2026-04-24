@@ -227,7 +227,7 @@ Try the following prompts. The agent will answer based on its training data, or 
 
     > **Tip**: You can also search for your own images on [Bing](https://www.bing.com/images/search?q=vintage-computer-component-serial-numbers){:target="_blank"}. Try searching for serial number labels from specific vintage computers
 
-1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `Try to identify details about this based on any text printed on it.`
+1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `Extract the text from this printed circuit board, and search for information that might help identify the computer it came from.`
 
 ### Explore safety guardrails
 
