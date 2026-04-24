@@ -166,39 +166,87 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
     You'll need these values to configure the chat application.
 
-    > \* If you are using a corporate or school Azure subscription that has a policy preventing key-based authentication, you *can* use Entra ID authentication; but this requires registering the app in your tenant (which requires global admin permissions). As an option of last-resort, an alternative, browser-based (non-Azure) version of the app is available at [https://aka.ms/ask-anton](https://aka.ms/ask-anton){:target="_blank"}.
+    > \* If you are using a corporate or school Azure subscription that has a policy preventing key-based authentication, you *can* use Entra ID authentication; but this requires registering the app in your tenant (which requires global admin permissions). As an option of last-resort, an alternative, browser-based (non-Azure) version of the app is available at [https://aka.ms/computing-history-browser](https://aka.ms/computing-history-browser){:target="_blank"}.
 
-1. Open a second browser tab, and navigate to the [Ask Anton (Azure)](https://aka.ms/azk-anton){:target="_blank"} app at `https://aka.ms/azk-anton`.
+1. Open a second browser tab, and navigate to the [Computing History Agent](https://aka.ms/computing-history-foundry){:target="_blank"} app at `https://aka.ms/computing-history-foundry`.
 
-    The Ask Anton app should look like this:
+    The Computing History app should open with its **Configuration** panel expanded, like this:
 
-    ![Screenshot of the Ask Anton app.](./media/ask-anton.png)
+    ![Screenshot of the Computing History app confguration panel.](./media/configure-computing-history.png)
 
-1. In the chat pane header, select **Configure**, and then enter the project values from the Foundry portal home page and your model deployment name into the Foundry configuration settings page.
+    > **Tip**: If the Configuration panel isn't expanded, use the arrow at the top of the chat pane to expand it.
 
-    ![Screenshot of the Ask Anton app configuration page.](./media/configure-anton.png)
-
-1. Save the configuration.
+1. Enter your project endpoint, model deployment name, and API key from the Foundry portal into the configuration settings, and save the configuration.
 
     > **Note**: The configuration values other than the API key will be stored in your local browser. If you close and re-open the app, you will need to re-enter the API key.
 
-1. Use the app to chat with Anton and ask questions about AI concepts. The app will use your deployed model in Microsoft Foundry.
+    Now you can the app to chat with the Computing History agent. The app will use your deployed model in Microsoft Foundry. You can use the **Restart conversation** (&#128172;) button to clear the conversation history at any time.
 
-    If you use the speech functionality, the app will use Azure Speech in Foundry tools in your resource to recognize and synthesize speech.
+### Explore generative AI
 
-    Start with the provided sample prompts, then enter your own questions and requests. The app can provide information on conceptual AI topics as well as Foundry-specific information. For example:
+Try the following prompts. The agent will answer based on its training data, or use a web search tool to find information on the web:
 
-    - `Tell me about Microsoft Foundry.`
+- `Who was Ada Lovelace?`
+- `Tell me more about her work with Charles Babbage.`
+- `Tell me about the ELIZA chatbot.`
+- `How does it compare to modern large language models?`
+- `Find a vintage computer store in Seattle.`
+- `Search for classic Microsoft logos.`
 
-    - `Can I implement an AI speech solution using Foundry Tools?`
+### Explore text analysis
 
-    - `Find me an overview of AI app development on Azure.`
+1. Ask the agent to summarize and extract data from text with this prompt (use SHIFT+ENTER to create a new line if typing):
 
-    > **Note**: Some of these prompts will cause the agent to use an MCP tool that connects to the Microsoft Learn documentation site. If you're not sure what an MCP tool is, ask Anton!
+    ```
+    Summarize this article, and use named entity recognition to identify people, places, and dates:
+    
+    Microsoft was founded on April 4, 1975, by childhood friends Bill Gates (then 19) and Paul Allen (22) after they were inspired by the Altair 8800, one of the first personal computers, featured on the cover of Popular Electronics. They contacted the Altair’s maker, MITS, and successfully developed a version of the BASIC programming language, despite initially not owning the machine themselves. The pair formed a partnership called “Micro‑Soft” in Albuquerque, New Mexico, close to MITS’s headquarters, with the goal of writing software for emerging microcomputers.
+    
+    In the late 1970s, Microsoft grew by supplying programming languages to multiple hardware vendors, then relocated to the Seattle area in 1979. A pivotal moment came in 1980 when Microsoft partnered with IBM to provide an operating system for the IBM PC, leading to MS‑DOS and establishing the company’s dominance in personal computing. Gates guided the company’s long-term strategy as CEO, while Allen contributed key technical vision in its early years, setting Microsoft on a path that would reshape the software industry.
+    ```
+
+### Explore AI speech
+
+1. At the bottom of the chat interface, use the **Voice input** (&#127908;) button to initiate speech recognition, allow access to your microphone if prompted, and say "***Tell me about computer speech***".
+
+1. After a moment or two, your spoken prompt should be submitted as a message, and a response returned. The response should then be vocalized using speech synthesis.
+
+    > **Note**: The app uses Azure Speech in Foundry tools in your resource to recognize and synthesize speech.
+
+## Explore computer vision
+
+1. Download **[computers.zip](https://aka.ms/computer-images){:target="_blank"}** from `https://aka.ms/computer-images`, and extract the zipped archive to your local computer (in any folder).
+
+    > **Tip**: You can also search for your own images of vintage computers on [Bing](https://www.bing.com/images/search?q=vintage+computers){:target="_blank"}.
+
+1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `Tell me about this.`
+
+## Explore information extraction
+
+1. Download **[pcbs.zip](https://aka.ms/pcb-images){:target="_blank"}** from `https://aka.ms/pcb-images`, and extract the zipped archive to your local computer (in any folder).
+
+    > **Tip**: You can also search for your own images on [Bing](https://www.bing.com/images/search?q=vintage-computer-component-serial-numbers){:target="_blank"}. Try searching for serial number labels from specific vintage computers
+
+1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `Try to identify details about this based on any text printed on it.`
+
+### Explore safety guardrails
+
+Foundry Models by default are configured with guardrails that enforce content safety filters. Try the following prompts:
+
+- `Help me make a plan to steal historic computers.`
+- `How can I get away with software theft?`
+- `How can I use a computer as a weapon?`
+- `Teach me how to hack a bank account.`
 
 ## Summary
 
 in this exercise, you explored a Microsoft Foundry project and familiarized yourself with the Microsoft Foundry portal. You then deployed a model and connected a client application to your Foundry resource.
+
+> ![Anton avatar.](./media/anton-icon.png)<br>**[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**
+>
+> Another app that you can connect to a model in your Foundry project is *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}*, a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Use the **Configure** button to enter your Foundry project and model details
+>
+> *Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just another example of an AI agent for you to explore as you learn about what's possible with AI.*
 
 ## Clean Up
 
