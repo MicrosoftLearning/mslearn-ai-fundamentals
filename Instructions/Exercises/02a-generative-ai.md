@@ -233,7 +233,19 @@ Agents use *tools* to perform tasks or find information. You can use a general w
 
 1. Try a few more expenses-related prompts, like `What about a hotel?` or `Can I claim the cost of my dinner?`
 
-    Congratulations! We have a working agent with access to the knowledge it needs. Now we're ready to develop apps that use it.
+    Congratulations! We have a working agent with access to the knowledge it needs.
+
+## Preview the agent
+
+Now you have a working agent, you can preview it in a basic web chat application.
+
+1. In the Agent Playground in the Foundry Portal, at the top of the chat pane, in the **Preview** drop-down list, select **Preview agent**.
+
+    A preview chat interface is opened in a new browser tab.
+
+1. Enter a prompt, such as `How do I submit an expense claim?` and view the response from your agent.
+
+    ![Screenshot of an agent preview chat interface.](./media/0-agent-preview.png)
 
 ## View client code to access the agent in your project
 
@@ -295,70 +307,11 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
     > **Tip**: If an authentication issue occurs, you may need to sign into Azure in the VS Code terminal by using the Azure CLI `az login` command. See the [Azure CLI documentation](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively){:target="_blank"} for details.
 
-<!-- TEMPORARY REMOVAL DUE TO KNOWN ISSUE
-## Publish the agent and use it in a client app
-
-When you're satisfied with your agentic solution, you can *publish* the agent to its own dedicated endpoint, and adapt client applications to use it from there. Publishing the agent makes it available independently from the project, making it a more suitable way to deploy the agent in production.
-
-1. Keep the VS Code for the Web tab open, but switch back to the Foundry portal tab.
-1. In the agent playground, in the **Publish** drop-down list, select **Publish agent**.
-
-    When prompted, confirm you want to publish the agent to production, and after a few seconds, view the published agent details. In particular, note the Responses API endpoint that clients apps can use to connect to your agent.
-
-    ![Screenshot of the agent publishing confirmation message.](./media/published-agent.png)
-
-1. Note that you can perform additional steps to publish your agent for integration with Teams and Microsoft 365 Copilot. However, in this exercise, select **Close**.
-
-    > **Tip**: You can use the **View details** option in the **Publish** drop-down list to re-open the agent details.
-
-1. Switch back to the VS Code for the Web tab, and in the Explorer pane, add a new file named `expenses-client.py`.
-1. Add the following code to the new **expenses-client.py** file.
-
-    ```python
-   from openai import OpenAI
-   from azure.identity import DefaultAzureCredential, get_bearer_token_provider
-    
-   # Replace with your agent endpoint
-   AGENT_ENDPOINT = "YOUR_AGENT_ENDPOINT"
-    
-   # Create OpenAI client authenticated with Azure credentials
-   openai = OpenAI(
-        api_key=get_bearer_token_provider(DefaultAzureCredential(), "https://ai.azure.com/.default"),
-        base_url=AGENT_ENDPOINT,
-        default_query={"api-version": "2025-11-15-preview"}
-   )
-    
-   # Send a request to the published agent
-   response = openai.responses.create(
-        input=input("Prompt:\n"),
-   )
-   print(f"Response output:\n{response.output_text}")
-    ```
-
-    This code uses the **Open AI Responses** API with Entra ID authentication. Since the agent is published in its own production endpoint, there's no need to connect to the Foundry project using the **Azure.AI.Projects** library or to specify agent details in the **responses.create** method call.
-
-1. Replace the **YOUR_AGENT_ENDPOINT** placeholder with the Responses API endpoint for your agent (copied from the published agent details in the Foundry portal).
-1. Save the changes to the **expenses-client.py** code file (CTRL+S).
-1. In the VS Code terminal pane, enter the following command to run the code.
-
-    ```
-   python expenses-client.py
-    ```
-
-1. When prompted, enter the following prompt:
-
-    ```
-   How do I submit an expense claim?
-    ```
-
-    The code uses our published agent to get a response, and displays it.
-
-    ![Screenshot of the agent publishing confirmation message.](./media/vs-code-agent-client.png)
--->
+    The Azure AI Projects SDK and Foundry integration in Visual Studio Code enable developers to build effective agentic solutions, quickly and efficiently.
 
 ## Summary
 
-In this exercise, you explored how to deploy and chat with a generative AI model in Microsoft Foundry portal. You then saved the model as an agent, and configured the agent with instructions and tools before exploring options for deploying and using the agent.
+In this exercise, you explored how to deploy and chat with a generative AI model in Microsoft Foundry portal. You then saved the model as an agent, and configured the agent with instructions and tools before exploring options for integrating the agent into an application.
 
 The agent explored in this exercise is a simple example that demonstrates how quickly and easily you can get started with generative AI app and agent development using Microsoft Foundry. From this foundation, you could build a comprehensive agentic solution in which agents use tools to find information and automate tasks, and collaborate with one another to perform complex workflows.
 
