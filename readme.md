@@ -1,3 +1,5 @@
+**This course will be retired on 2026-4-30. Once course is retired, all GitHub repos will be removed. Thank you!**
+
 # Microsoft Azure AI Fundamentals Exercises
 
 This repository contains instructions and assets for hands-on exercises in the Microsoft Official Courseware to support the [Microsoft Certified: Azure AI Fundamentals](https://learn.microsoft.com/credentials/certifications/azure-ai-fundamentals/) certification. The exercises are designed to complement the associated training modules on [Microsoft Learn](https://learn.microsoft.com/training), and a <u>subset</u> of these exercises comprises the hands-on labs in the official [AI-901: Microsoft Azure AI Fundamentals](https://learn.microsoft.com/en-us/training/courses/ai-901t00) instructor-led training course.
