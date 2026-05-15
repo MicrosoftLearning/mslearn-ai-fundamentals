@@ -96,7 +96,7 @@ This exercise takes approximately **25** minutes.
 
     ![Screenshot of the results of using the document fields analzyer to analyze the Contoso invoice.](./media/contoso-invoice-analysis-document-fields.png)
 
-7. In the pane on the right where the extracted fields are displayed, view the **Result** tab to see the raw results in JSON. Identify the **analyzerID** field, which contains the type of analyzer used.  
+7. In the pane on the right where the extracted fields are displayed, view the **Result** tab to see the raw results in JSON. Identify the **analyzerID** field, which contains the type of analyzer used. You can find a list of prebuilt Content Understanding analyzers [here](https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/prebuilt-analyzers). 
 
      ![Screenshot of the JSON results of using the document analyzer on the invoice.](./media/content-understanding-layout-json.png)
 
@@ -125,7 +125,7 @@ This exercise takes approximately **25** minutes.
    - *key*
    - *url_path* to the document
 
-1. When you run the command, you receive a response in JSON. The analysis is performed asynchronously, so the response includes an **id** value that can be used to poll for the results:
+1. When you run the command, you receive a response in JSON. The analysis is performed asynchronously, so the response includes an **id** value specific to the analysis job that can be used to poll for the results:
 
     ```json
    {
@@ -163,7 +163,13 @@ This exercise takes approximately **25** minutes.
 
 ## Summary
 
-Consider the three analyzers we tried out: *read*, *layout*, and *document fields* analyzer, one of many full analyzers offered by Azure Content Understanding.
+In this exercise, you explored Azure Content Understanding in Foundry and learned how it transforms unstructured content into structured, usable data. You tried out three analyzers, each building on the previous one in capability:
+
+- **Read**: Extracts raw text from documents without interpreting structure or meaning—answering, "What text is here?"
+- **Layout**: Goes a step further by capturing structure, hierarchy, and positioning—including tables—answering, "How is this content organized?"
+- **Document fields**: an analyzer that uses a combination of capabilities to extract fields, organize them into cohesive categories, and generate insights—answering, "What does this content mean and what should I do with it?" Content Understanding analyzers like this one sometimes require deploying additional AI models (such as chat completion and embedding models) to handle complex extraction needs.
+
+You also learned how developers can integrate Content Understanding into applications using the **REST API** (submitting documents via a POST request and polling for results with a GET request) or the **Python SDK**, both of which enable programmatic analysis of documents outside the Foundry playground.
 
 > **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just an example of an AI agent for you to explore as you learn about what's possible with AI.*
 
