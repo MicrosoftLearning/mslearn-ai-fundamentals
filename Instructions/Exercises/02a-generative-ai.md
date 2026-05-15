@@ -260,7 +260,7 @@ The agent is defined within your Foundry project, and there's a convenient way t
     from azure.identity import DefaultAzureCredential
     from azure.ai.projects import AIProjectClient
     
-    my_endpoint = "https://{your-foundry-resource}}.services.ai.azure.com/api/projects/{your-project}"
+    my_endpoint = "https://{your-foundry-resource}.services.ai.azure.com/api/projects/{your-project}"
     
     project_client = AIProjectClient(
         endpoint=my_endpoint,
@@ -314,6 +314,8 @@ The agent is defined within your Foundry project, and there's a convenient way t
 In this exercise, you explored how to deploy and chat with a generative AI model in Microsoft Foundry portal. You then saved the model as an agent, and configured the agent with instructions and tools before exploring options for integrating the agent into an application.
 
 The agent explored in this exercise is a simple example that demonstrates how quickly and easily you can get started with generative AI app and agent development using Microsoft Foundry. From this foundation, you could build a comprehensive agentic solution in which agents use tools to find information and automate tasks, and collaborate with one another to perform complex workflows.
+
+> **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just another example of an AI agent for you to explore as you learn about what's possible with AI.*
 
 ## Clean Up
 

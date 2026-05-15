@@ -116,6 +116,12 @@ This exercise takes approximately **25** minutes.
       -H "Ocp-Apim-Subscription-Key: {key}"
     ```
 
+## Summary
+
+In this exercise, you explored Microsoft Content Understanding and how to use it to extract information from documents. The Content Understanding tool supports *multimodal* information extraction, enabling you to build AI applications that analyze and extract insights from documents, images, videos, and audio recordings.
+
+> **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just another example of an AI agent for you to explore as you learn about what's possible with AI.*
+
 ## Clean up
 
 If you’ve finished working with the Content Understanding service, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs.

@@ -11,7 +11,7 @@ lab:
 
 # Get started with information extraction in Microsoft Foundry
 
-In this exercise, you will use Azure Content Understanding in Foundry, Microsoft's platform for creating intelligent applications. 
+In this exercise, you will use Azure Content Understanding in Foundry, Microsoft's platform for creating intelligent applications.
 
 Azure Content Understanding is a Foundry service that uses AI models to turn unstructured, multimodal content (documents, images, video, audio) into structured, usable outputs like JSON. It processes content by extracting, classifying, and generating fields with confidence scores and source grounding.
 
@@ -29,7 +29,7 @@ This exercise takes approximately **25** minutes.
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select *West US*, *Sweden Central*, *Australia East*, or any of the regions in **[this list](https://learn.microsoft.com/azure/ai-services/content-understanding/language-region-support)**{:target="_blank"}
 
-3. Deselect the option to *Set up recommended resources...*. Then select **Create**. 
+3. Deselect the option to *Set up recommended resources...*. Then select **Create**.
 
     ![Screenshot of the create a project page with the set up recommended resources option deselected.](./media/create-new-project.png)
 
@@ -47,14 +47,14 @@ This exercise takes approximately **25** minutes.
 
     ![Screenshot of the content understanding features listed on the new Foundry models page.](./media/new-portal-content-understanding-1.png)
 
-3. Identify the **Content Understanding** capabilities you can try out in a Foundry playground setting: 
+3. Identify the **Content Understanding** capabilities you can try out in a Foundry playground setting:
    - *Content Understanding - Read*: Raw text extraction only. Answers the question, "What text is here?"
    - *Content Understanding - Layout*: Adds structure, hierarchy, and positioning. Answers the question, "How is this content organized?"
-   - *Content Understanding*: offers the full analyzer capability by extracting fields and structure and generating insights. Answers the question, "What does this content mean and what should I do with it?"   
+   - *Content Understanding*: offers the full analyzer capability by extracting fields and structure and generating insights. Answers the question, "What does this content mean and what should I do with it?"
 
-#### Try out Content Understanding's *Read* capabilities 
+#### Try out Content Understanding's *Read* capabilities
 
-1. Select **Content Understanding - Read**. The *Read* capability is the first step in content understanding—it reads and extracts text, but doesn’t try to understand structure or meaning yet. 
+1. Select **Content Understanding - Read**. The *Read* capability is the first step in content understanding—it reads and extracts text, but doesn’t try to understand structure or meaning yet.
 
 2. Select the sample **read_barcode.pdf** and use the **Run analysis** button to extract information from the document. When analysis is complete, view the results.
 
@@ -62,33 +62,33 @@ This exercise takes approximately **25** minutes.
 
 3. Select the back button to return to the previous page to test out other capabilities.
 
-#### Try out Content Understanding's *Layout* capabilities 
+#### Try out Content Understanding's *Layout* capabilities
 
-1. From the *Build - Models* page and *AI Services* tab, select **Content Understanding - Layout**. 
+1. From the *Build - Models* page and *AI Services* tab, select **Content Understanding - Layout**.
 
 2. Select the sample **layout_checklist.jpg** and use the **Run analysis** button to extract information from it. When analysis is complete, view the results.
 
     ![Screenshot of the results of analysing the layout checklist.](./media/content-understanding-layout-analysis.png)
 
-3. In the content output, select the **Tables** tab. Review how the *Layout* analyzer is able to capture both the text and structure of the content. 
+3. In the content output, select the **Tables** tab. Review how the *Layout* analyzer is able to capture both the text and structure of the content.
 
     ![Screenshot of the table results of analysing the layout checklist.](./media/content-understanding-layout-table.png)
 
 4. Select the back button to return to the previous page to test out other capabilities.
 
-#### Try out Content Understanding's other analyzer capabilities 
+#### Try out Content Understanding's other analyzer capabilities
 
-1. From the *Build - Models* page and *AI Services* tab, select **Content Understanding** to test another one of Azure Content Understanding analyzers. 
+1. From the *Build - Models* page and *AI Services* tab, select **Content Understanding** to test another one of Azure Content Understanding analyzers.
 
-2. On the *Content Understanding* page, select the **Document** modality. 
+2. On the *Content Understanding* page, select the **Document** modality.
 
     ![Screenshot of the full analzyer with the document modality selected.](./media/full-content-analzyer-document.png)
 
-3. Next to the *Document* modality, select *Document fields* from the dropdown menu. If asked to deploy models that aren't configured yet, select **Deploy models**. 
+3. Next to the *Document* modality, select *Document fields* from the dropdown menu. If asked to deploy models that aren't configured yet, select **Deploy models**.
 
-    >**Tip**: *document fields* and other complex extraction needs require deploying multiple AI models, since each deployment is tied to a specific model version or capability. Using multiple models in Azure AI Foundry lets you handle different types of processing tasks more effectively, with flexibility to choose the right model for each need. 
+    >**Tip**: *document fields* and other complex extraction needs require deploying multiple AI models, since each deployment is tied to a specific model version or capability. Using multiple models in Azure AI Foundry lets you handle different types of processing tasks more effectively, with flexibility to choose the right model for each need.
 
-4. Select a recommended *Chat completion model* and *Embedding model* from the drop-down menus. Then select **Apply changes**. Once the changes are applied, you can close the *Configure* panel. 
+4. Select a recommended *Chat completion model* and *Embedding model* from the drop-down menus. Then select **Apply changes**. Once the changes are applied, you can close the *Configure* panel.
 
 5. Let's try to use the full analyzer with our own invoice. Open a new browser window. Enter the following URL: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf` to download **[contoso-invoice-1.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf){:target="_blank"}** .
 
@@ -97,12 +97,12 @@ This exercise takes approximately **25** minutes.
     ![Screenshot of the results of using the document fields analzyer to analyze the Contoso invoice.](./media/contoso-invoice-analysis-document-fields.png)
 
 7. In the pane on the right where the extracted fields are displayed, view the **Result** tab to see the raw results in JSON. Identify the **analyzerID** field, which contains the type of analyzer used.  
-    
+
      ![Screenshot of the JSON results of using the document analyzer on the invoice.](./media/content-understanding-layout-json.png)
 
->**Tip**: Consider this: the *Fields* tab displays the information from the raw JSON in the *Results* tab in a user-friendly way. 
+>**Tip**: Consider this: the *Fields* tab displays the information from the raw JSON in the *Results* tab in a user-friendly way.
 
-## Understand how to extract content with the REST API 
+## Understand how to extract content with the REST API
 
 1. Developers can use the REST API to build an app that submits a document for analysis with Content Understanding analyzers using a POST operation. For example, the following cUrl command could be used to analyze an invoice:
 
@@ -119,11 +119,11 @@ This exercise takes approximately **25** minutes.
           }'
     ```
 
-1. Consider what you would need to specify in the cUrl command: 
+1. Consider what you would need to specify in the cUrl command:
    - *analzyerID*
    - *endpoint*
    - *key*
-   - *url_path* to the document 
+   - *url_path* to the document
 
 1. When you run the command, you receive a response in JSON. The analysis is performed asynchronously, so the response includes an **id** value that can be used to poll for the results:
 
@@ -141,7 +141,7 @@ This exercise takes approximately **25** minutes.
     }
     ```
 
->**Tip**: Polling for results in an asynchronous call means repeatedly checking the status of a request at intervals until the operation is complete and the final result is available. The final result in this case is that the analysis is complete. After the result is returned, another call should be made to retrieve the results. 
+>**Tip**: Polling for results in an asynchronous call means repeatedly checking the status of a request at intervals until the operation is complete and the final result is available. The final result in this case is that the analysis is complete. After the result is returned, another call should be made to retrieve the results.
 
 1. In order to retrieve the results using the ID, the client must submit a GET request:
 
@@ -150,20 +150,22 @@ This exercise takes approximately **25** minutes.
       -H "Ocp-Apim-Subscription-Key: {key}"
     ```
 
-1. Consider what you would need to specify in the cUrl command: 
+1. Consider what you would need to specify in the cUrl command:
    - *resultID*
    - *endpoint*
    - *key*
 
 ## Understand how to extract content with the Python SDK
 
-1. Alternatively, as a developer, you can also use code to submit a document for analysis to the *Document Fields* analyzer. The Foundry playground provides code samples. Select the **Code** tab to review the code you could use to process this response and utilize the extracted fields. 
+1. Alternatively, as a developer, you can also use code to submit a document for analysis to the *Document Fields* analyzer. The Foundry playground provides code samples. Select the **Code** tab to review the code you could use to process this response and utilize the extracted fields.
 
     ![Screenshot of the sample code provided in the Foundry playground.](./media/content-understanding-code-example.png)
 
 ## Summary
 
-Consider the three analyzers we tried out: *read*, *layout*, and *document fields* analyzer, one of many full analyzers offered by Azure Content Understanding. 
+Consider the three analyzers we tried out: *read*, *layout*, and *document fields* analyzer, one of many full analyzers offered by Azure Content Understanding.
+
+> **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just another example of an AI agent for you to explore as you learn about what's possible with AI.*
 
 ## Clean up
 

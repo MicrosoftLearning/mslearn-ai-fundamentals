@@ -104,6 +104,12 @@ To use your agent in a custom application, you need to write code that uses the 
     - Audio streaming for input and output.
     - Use of audio devices, such as microphones and speakers.
 
+## Summary
+
+In this exercise, you explored the Azure Speech Voice Live tool in Microsoft Foundry, and how to use it to build a conversational agent. Azure Speech includes multiple speech capabilities that you can use to build AI applications and agents that transcribe speech, or generate spoken output from text.
+
+> **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just another example of an AI agent for you to explore as you learn about what's possible with AI.*
+
 ## Clean up
 
 If you have finished exploring Microsoft Foundry, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
