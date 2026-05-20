@@ -96,7 +96,7 @@ This exercise takes approximately **25** minutes.
 
     ![Screenshot of the results of using the document fields analzyer to analyze the Contoso invoice.](./media/contoso-invoice-analysis-document-fields.png)
 
-7. In the pane on the right where the extracted fields are displayed, view the **Result** tab to see the raw results in JSON. Identify the **analyzerID** field, which contains the type of analyzer used. You can find a list of prebuilt Content Understanding analyzers [here](https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/prebuilt-analyzers). 
+7. In the pane on the right where the extracted fields are displayed, view the **Result** tab to see the raw results in JSON. Identify the **analyzerID** field, which contains the type of analyzer used. You can find a list of prebuilt Content Understanding analyzers [here](https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/prebuilt-analyzers).
 
      ![Screenshot of the JSON results of using the document analyzer on the invoice.](./media/content-understanding-layout-json.png)
 
@@ -171,7 +171,7 @@ In this exercise, you explored Azure Content Understanding in Foundry and learne
 
 You also learned how developers can integrate Content Understanding into applications using the **REST API** (submitting documents via a POST request and polling for results with a GET request) or the **Python SDK**, both of which enable programmatic analysis of documents outside the Foundry playground.
 
-> **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just an example of an AI agent for you to explore as you learn about what's possible with AI.*
+> **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just an example of an AI agent for you to explore as you learn about what's possible with AI.*<br/></br>If you *do* check out Ask Anton, we'd love you to *[tell us about your experience](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}*!
 
 ## Clean up
 
