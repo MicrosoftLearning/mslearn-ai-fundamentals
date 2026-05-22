@@ -294,7 +294,7 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
     ![Screenshot of VS Code for the Web.](./media/vs-code-web.png)
 
-1. After VS Code for the web has opened and the environment has been set up, close the GitHib Copilot **Chat** pane on the right side to give you more room, and note that the **Instructions.md** file contains the instructions you need to run the sample code (which is in the **run_agent.py** file in the VS Code Explorer pane on the left.)
+1. After VS Code for the web has opened and the environment has been set up, close the GitHub Copilot **Chat** pane on the right side to give you more room, and note that the **Instructions.md** file contains the instructions you need to run the sample code (which is in the **run_agent.py** file in the VS Code Explorer pane on the left.)
 1. In the terminal pane at the bottom, enter the following command to run the code:
 
     ```python
