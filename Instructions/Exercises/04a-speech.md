@@ -64,11 +64,11 @@ Now let's create an agent.
 
 Enabling speech mode for a Foundry agent integrates Azure Speech Voice Live - adding speech capabilities to the agent.
 
-1. In the pane on the left, under the model selection list, enable **Speech mode**.
+1. In the pane on the left, under the model selection list, enable **Voice mode**.
 
     If the **Configuration** pane does not open automatically, use the "cog" icon above the chat interface to open it.
 
-1. In the **Configuration** pane, under **Voice Live**, review the default speech input and output configuration. You can try different voices, previewing them until you decide which one to use.
+1. In the **Configuration** pane, under **Voice mode**, review the default speech input and output configuration. You can try different voices, previewing them until you decide which one to use.
 1. Close the **Configuration** pane and use the **Save** button to save the agent.
 
 ## Use speech to interact with the agent
