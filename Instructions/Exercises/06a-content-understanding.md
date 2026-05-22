@@ -40,13 +40,7 @@ This exercise takes approximately **25** minutes.
 ## Extract information from documents in the new Foundry portal
 
 1. In the *new* Foundry portal, navigate to the tool bar at the top of the screen and select **Build**.
-
-    ![Screenshot of the new Foundry's tool bar at the top of the screen with Build selected.](./media/new-foundry-build-tab-1.png)
-
-2. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it by clicking on the expand icon at the bottom of the menu). From the left-side menu, select **Models**. Then, at the top of the *Models* page, select **AI Services**.
-
-    ![Screenshot of the content understanding features listed on the new Foundry models page.](./media/new-portal-content-understanding-1.png)
-
+2. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it by clicking on the expand icon at the bottom of the menu). From the left-side menu, select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
 3. Identify the **Content Understanding** capabilities you can try out in a Foundry playground setting:
    - *Content Understanding - Read*: Raw text extraction only. Answers the question, "What text is here?"
    - *Content Understanding - Layout*: Adds structure, hierarchy, and positioning. Answers the question, "How is this content organized?"
@@ -64,7 +58,7 @@ This exercise takes approximately **25** minutes.
 
 #### Try out Content Understanding's *Layout* capabilities
 
-1. From the *Build - Models* page and *AI Services* tab, select **Content Understanding - Layout**.
+1. On the *AI Services* tab, select **Content Understanding - Layout**.
 
 2. Select the sample **layout_checklist.jpg** and use the **Run analysis** button to extract information from it. When analysis is complete, view the results.
 
@@ -78,7 +72,7 @@ This exercise takes approximately **25** minutes.
 
 #### Try out Content Understanding's other analyzer capabilities
 
-1. From the *Build - Models* page and *AI Services* tab, select **Content Understanding** to test another one of Azure Content Understanding analyzers.
+1. On the *AI Services* tab, select **Content Understanding** to test another one of Azure Content Understanding analyzers.
 
 2. On the *Content Understanding* page, select the **Document** modality.
 

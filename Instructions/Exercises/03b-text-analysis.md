@@ -130,7 +130,7 @@ The **Azure Language in Foundry Tools** provides purpose-built analyzers that us
 
 1. In the *new* Foundry portal, navigate to the menu at the top of the screen and select **Build**.
 
-2. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it by clicking on the expand icon at the bottom of the menu). From the left-side menu, select **Models**. Then, at the top of the *Models* page, select **AI Services**.
+2. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it by clicking on the expand icon at the bottom of the menu). From the left-side menu, select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
 
     ![Screenshot of the Language features listed on the new Foundry models page.](./media/foundry-ai-services.png)
 
