@@ -116,7 +116,7 @@ The Microsoft Foundry portal is where you create and manage agents and AI servic
 
 As you would expect in a platform for developing cutting edge AI solutions, Microsoft Foundry provides AI-based assistance.
 
-1. In the toolbar, use the AI chat icon to open the **Ask AI** pane.
+1. In the toolbar, use the Agent Helper chat icon to open the **Ask AI** pane.
 
     ![Screenshot of Ask AI pane in the Foundry portal.](./media/0-ask-ai.png)
 

@@ -40,7 +40,7 @@ This exercise takes approximately **25** minutes.
 ## Extract information from documents in the new Foundry portal
 
 1. In the *new* Foundry portal, navigate to the tool bar at the top of the screen and select **Build**.
-2. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it by clicking on the expand icon at the bottom of the menu). From the left-side menu, select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
+2. On the *Build* page, in the menu on the left-side of the screen (which you may need to expand), select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
 3. Identify the **Content Understanding** capabilities you can try out in a Foundry playground setting:
    - *Content Understanding - Read*: Raw text extraction only. Answers the question, "What text is here?"
    - *Content Understanding - Layout*: Adds structure, hierarchy, and positioning. Answers the question, "How is this content organized?"

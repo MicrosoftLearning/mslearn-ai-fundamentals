@@ -32,11 +32,11 @@ This exercise takes approximately **20** minutes.
 
     >**Note**: Close any quick start panes in order to access your project's Foundry home page.
 
-## Part 1: Explore a general-purpose AI model's text analysis capabilities
+## Explore a general-purpose AI model's text analysis capabilities
 
 In this part of the exercise, you'll use the *new* Foundry portal and a general-purpose language model to perform text analysis through natural language prompts. A language model can handle a wide variety of tasks through prompting alone.
 
-1. From the Foundry home page in the *new* Foundry portal interface, select **Start building**. Then select **Find models** to view the Microsoft Foundry model catalog.
+1. From the Foundry home page in the *new* Foundry portal interface, select **Explore models** (or on the **Discover** page, select the **Models** tab) to view the Microsoft Foundry model catalog.
 
     ![Screenshot of the AI Foundry model catalog.](./media/0-foundry-model-catalog.png)
 
@@ -122,7 +122,7 @@ In this part of the exercise, you'll use the *new* Foundry portal and a general-
 
     ![Screenshot of summarization results in the chat playground.](./media/text-03.png)
 
-## Part 2: Use a specialized language analysis tool
+## Use a specialized language analysis tool
 
 While a language model that's trained for general generative AI workloads can often do a great job of text analysis, sometimes a more specialized tool can be used by an agent to get more predictable results.
 
@@ -130,7 +130,7 @@ The **Azure Language in Foundry Tools** provides purpose-built analyzers that us
 
 1. In the *new* Foundry portal, navigate to the menu at the top of the screen and select **Build**.
 
-2. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it by clicking on the expand icon at the bottom of the menu). From the left-side menu, select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
+2. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it). In the menu, select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
 
     ![Screenshot of the Language features listed on the new Foundry models page.](./media/foundry-ai-services.png)
 
