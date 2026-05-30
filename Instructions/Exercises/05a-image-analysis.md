@@ -19,7 +19,7 @@ This exercise should take approximately **30** minutes to complete.
 
 Microsoft Foundry uses *projects* to organize models, resources, data, and other assets used to develop an AI solution.
 
-1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
+1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
 1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
@@ -37,7 +37,7 @@ Computer vision models enable AI systems to interpret image-based data, such as 
 1. In a new browser tab, download **[images.zip](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip){:target="_blank"}** `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip` to your local computer.
 1. Extract the downloaded archive in a local folder to see the files it contains. These files are the images you will use AI to analyze.
 1. Return to the browser tab containing your Microsoft Foundry project.
-1. On the **Home** page, select **Explore models** (or on the **Discover** page, select the **Models** tab) to view the Microsoft Foundry model catalog.
+1. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
 1. Search for and deploy the `gpt-4.1-mini` model using the default settings. Deployment may take a minute or so.
 
     > **Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different model - such as gpt-4.1, or gpt-4o. Alternatively, you can create a new project in a different region.

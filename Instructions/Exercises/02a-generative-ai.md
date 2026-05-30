@@ -21,7 +21,7 @@ This exercise should take approximately **35** minutes to complete.
 
 Microsoft Foundry uses *projects* to organize models, resources, data, and other assets used to develop an AI solution.
 
-1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
+1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
 
 1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
@@ -37,7 +37,7 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
 At the heart of every generative AI app or agent, there's a language model - usually a large language model (LLM), though in some cases a more compact small language model (SLM) may be used.
 
-1. Now you're ready to **Start building**. Select **Explore models** (or on the **Discover** page, select the **Models** tab) to view the Microsoft Foundry model catalog.
+1.  Now you're ready to explore models. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
 
     Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
 

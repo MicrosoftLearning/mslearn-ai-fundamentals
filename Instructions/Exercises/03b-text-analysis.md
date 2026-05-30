@@ -18,7 +18,7 @@ This exercise takes approximately **20** minutes.
 
 ## Create a project in Microsoft Foundry
 
-1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
+1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
 
 2. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the **Advanced options** area to specify the following settings for your project:
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
@@ -34,9 +34,9 @@ This exercise takes approximately **20** minutes.
 
 ## Explore a general-purpose AI model's text analysis capabilities
 
-In this part of the exercise, you'll use the *new* Foundry portal and a general-purpose language model to perform text analysis through natural language prompts. A language model can handle a wide variety of tasks through prompting alone.
+In this part of the exercise, you'll use a general-purpose language model to perform text analysis through natural language prompts. A language model can handle a wide variety of tasks through prompting alone.
 
-1. From the Foundry home page in the *new* Foundry portal interface, select **Explore models** (or on the **Discover** page, select the **Models** tab) to view the Microsoft Foundry model catalog.
+1.  Now you're ready to explore models. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
 
     ![Screenshot of the AI Foundry model catalog.](./media/0-foundry-model-catalog.png)
 
@@ -128,7 +128,7 @@ While a language model that's trained for general generative AI workloads can of
 
 The **Azure Language in Foundry Tools** provides purpose-built analyzers that use statistical techniques to return structured, deterministic results — ideal for consistent output in automated pipelines.
 
-1. In the *new* Foundry portal, navigate to the menu at the top of the screen and select **Build**.
+1. In the Foundry portal, navigate to the menu at the top of the screen and select **Build**.
 
 2. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it). In the menu, select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
 

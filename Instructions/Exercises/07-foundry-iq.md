@@ -63,14 +63,14 @@ Let's start by setting up an enterprise data source for HR policy and procedure 
 
 Now that you have the necessary infrastructure in place, you're ready to create an AI agent that can search the HR documentation for answers to employee questions.
 
-1. In your web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
+1. In your web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
 1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, when prompted, create a new project with a unique name; expanding the  **Advanced options** area to deploy the project in the resource group where you deployed Azure AI Search.
 
      After creating a project in the new Foundry portal, it should open in a page similar to the following image:
 
     ![Screenshot of the AI Foundry project home page.](./media/foundry-portal-home.png)
 
-1. On the **Home** page, in the **Build an agent** tile, select **Start building** (or on the **Build** page, select the **Agents** tab); and create a new agent named  `hr-agent`.
+1. On the **Build** page, select the **Agents** tab, and create a new agent named  `hr-agent`.
 
      When ready, your agent opens in the agent playground.
 

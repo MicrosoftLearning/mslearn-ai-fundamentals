@@ -21,7 +21,7 @@ This exercise takes approximately **25** minutes.
 
 ## Create a Microsoft Foundry project
 
-1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com`  and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in (also, close the **Help** pane if it's open).
+1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
 
 2. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a *new project* with a unique name; expanding the **Advanced options** area to specify the following settings for your project:
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
@@ -39,7 +39,7 @@ This exercise takes approximately **25** minutes.
 
 ## Extract information from documents in the new Foundry portal
 
-1. In the *new* Foundry portal, navigate to the tool bar at the top of the screen and select **Build**.
+1. In the Foundry portal, navigate to the tool bar at the top of the screen and select **Build**.
 2. On the *Build* page, in the menu on the left-side of the screen (which you may need to expand), select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
 3. Identify the **Content Understanding** capabilities you can try out in a Foundry playground setting:
    - *Content Understanding - Read*: Raw text extraction only. Answers the question, "What text is here?"
