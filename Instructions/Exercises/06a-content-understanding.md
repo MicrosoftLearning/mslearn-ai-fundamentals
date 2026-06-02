@@ -35,7 +35,7 @@ This exercise takes approximately **25** minutes.
 
 4. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the *new* Foundry portal, it should open in a page similar to the following image:
 
-    ![Screenshot of the AI Foundry project home page.](./media/foundry-portal-home.png)
+    ![Screenshot of the Foundry project home page.](./media/new-foundry-home-page.png)
 
 ## Extract information from documents in the new Foundry portal
 

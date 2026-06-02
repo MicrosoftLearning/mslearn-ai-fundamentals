@@ -28,7 +28,7 @@ This exercise takes approximately **20** minutes.
 
 3. Select **Create**. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
-    ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
+    ![Screenshot of the Foundry project home page.](./media/new-foundry-home-page.png)
 
     >**Note**: Close any quick start panes in order to access your project's Foundry home page.
 

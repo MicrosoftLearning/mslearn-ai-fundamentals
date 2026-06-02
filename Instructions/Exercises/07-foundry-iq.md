@@ -68,7 +68,7 @@ Now that you have the necessary infrastructure in place, you're ready to create 
 
      After creating a project in the new Foundry portal, it should open in a page similar to the following image:
 
-    ![Screenshot of the AI Foundry project home page.](./media/foundry-portal-home.png)
+    ![Screenshot of the Foundry project home page.](./media/new-foundry-home-page.png)
 
 1. On the **Build** page, select the **Agents** tab, and create a new agent named  `hr-agent`.
 
