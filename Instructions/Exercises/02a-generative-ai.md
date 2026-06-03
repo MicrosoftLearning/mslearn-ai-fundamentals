@@ -31,13 +31,13 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
 1. Select **Create**. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
-    ![Screenshot of the Foundry project home page.](./media/new-foundry-home-page.png)
+    ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
 ## Deploy a model
 
 At the heart of every generative AI app or agent, there's a language model - usually a large language model (LLM), though in some cases a more compact small language model (SLM) may be used.
 
-1.  Now you're ready to explore models. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
+1. Now you're ready to explore models. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
 
     Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
 

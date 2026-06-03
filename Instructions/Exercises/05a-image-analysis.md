@@ -28,7 +28,7 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
 1. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
-    ![Screenshot of the Foundry project home page.](./media/new-foundry-home-page.png)
+    ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
 ## Use a generative AI model to analyze images
 

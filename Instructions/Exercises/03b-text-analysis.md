@@ -28,7 +28,7 @@ This exercise takes approximately **20** minutes.
 
 3. Select **Create**. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
-    ![Screenshot of the Foundry project home page.](./media/new-foundry-home-page.png)
+    ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
     >**Note**: Close any quick start panes in order to access your project's Foundry home page.
 
@@ -36,7 +36,7 @@ This exercise takes approximately **20** minutes.
 
 In this part of the exercise, you'll use a general-purpose language model to perform text analysis through natural language prompts. A language model can handle a wide variety of tasks through prompting alone.
 
-1.  Now you're ready to explore models. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
+1. Now you're ready to explore models. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
 
     ![Screenshot of the AI Foundry model catalog.](./media/0-foundry-model-catalog.png)
 
