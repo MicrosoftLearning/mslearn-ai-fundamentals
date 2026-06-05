@@ -98,7 +98,7 @@ Now you're ready to chat with the agent.
 
 To use your agent in a custom application, you need to write code that uses the Azure Speech Voice Live SDK to handle streaming audio input and output.
 
-1. Select **Code** at the top of the chat screen to view sample code for an agent client.
+1. Select **Call agent** at the top of the chat screen to view sample code for an agent client.
 1. Review the code; noting that it handles:
     - Connectivity to your project to access the agent.
     - Audio streaming for input and output.

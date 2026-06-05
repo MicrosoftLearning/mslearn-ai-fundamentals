@@ -76,7 +76,7 @@ You can use the playground to explore the model by chatting with it and observin
 
 When you're satisfied with the responses a model returns in the playground, you can develop client applications that consume it. Microsoft Foundry provides a REST API and multiple language-specific SDKs that you can use to connect to the deployed model and chat with it.
 
-1. In the **Chat** pane, view the **Code** tab. This tab shows sample code that a client application can use to chat with the model. Above the sample code, you can choose preferences for:
+1. In the **Chat** pane, view the **Call model** tab. This tab shows sample code that a client application can use to chat with the model. Above the sample code, you can choose preferences for:
     - **API**: The OpenAI API is a common standard for implementing conversations with generative AI models. There are two variants of the OpenAI API that you can use:
         - **Completions**: A broadly used programmatic syntax for submitting prompts to a model.
         - **Responses**: A newer syntax that offers greater flexibility for building apps that converse with both standalone models and with *agents*.
@@ -251,7 +251,7 @@ Now you have a working agent, you can preview it in a basic web chat application
 
 The agent is defined within your Foundry project, and there's a convenient way to develop apps that connect to it there; allowing you to iteratively refine both the agent and the client app to create the solution you need.
 
-1. In the agent playground, switch from the **Chat** tab to the **Code** tab, and view the sample code for consuming the agent; which should be similar to this:
+1. In the agent playground, switch from the **Chat** tab to the **Call agent** tab, and view the sample code for consuming the agent; which should be similar to this:
 
     ```python
     # Before running the sample:
@@ -286,7 +286,7 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
     After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we peviously saw being used to chat with a model. Since a project can contain multiple agents and models, the specific agent details are specified as **extra_body** in the **responses.create** method.
 
-1. In the **Code** tab, use the **Open in VS Code for the web** button to open Visual Studio Code for the Web in a new browser tab.
+1. In the **Call agent** tab, use the available option to open the code in **VS Code for the web**.
 
     Wait for the environment to be set up.
 

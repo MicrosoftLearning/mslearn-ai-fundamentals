@@ -67,7 +67,7 @@ Computer vision models enable AI systems to interpret image-based data, such as 
 
 To develop a client app or agent that can use the model to interpret images, you can use the OpenAI **Responses** API.
 
-1. In the **Chat** pane, select the **Code** tab to view sample code.
+1. In the **Chat** pane, select the **Call model** tab to view sample code.
 1. Select the following code options:
     - **API**: Responses API
     - **Language**: Python
@@ -131,9 +131,9 @@ So far you've explored the ability of a generative AI model to process visual in
 
 If you want to develop a client app or agent that generates images using your model, you can use the OpenAI API.
 
-> **Note**: Model availability and playground features can vary. Some image-generation models might not show a **Code** tab or **View code** option. If your selected model doesn't include code samples, you can still complete the exercise by generating an image in the playground, or use another deployed text-to-image model that does expose code samples.
+> **Note**: Model availability and playground features can vary. Some image-generation models might not show a **View code** or equivalent option. If your selected model doesn't include code samples, you can still complete the exercise by generating an image in the playground, or use another deployed text-to-image model that does expose code samples.
 
-1. If your deployed model includes code samples, in the **Chat** pane, select the **Code** tab to view sample code.
+1. If your deployed model includes code samples, in the **Chat** pane, select **View code** to view sample code.
 1. Select the following code options:
     - **Language**: Python
     - **SDK**: OpenAI SDK
@@ -193,7 +193,7 @@ In addition to static images, you may want to include video content on the AI Ch
 
 If you want to develop a client app or agent that generates videos using your model, you can use the REST API.
 
-1. In the **Chat** pane, select the **Code** tab to view sample code.
+1. In the **Chat** pane, select **View Code** to view sample code.
 
     The default sample code uses the *curl* command to call the REST endpoint, and should look similar to this:
 
