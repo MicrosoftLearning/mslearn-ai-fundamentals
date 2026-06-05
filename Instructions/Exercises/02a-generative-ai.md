@@ -239,7 +239,7 @@ Agents use *tools* to perform tasks or find information. You can use a general w
 
 Now you have a working agent, you can preview it in a basic web chat application.
 
-1. In the Agent Playground in the Foundry Portal, at the top of the chat pane, in the **Preview** drop-down list, select **Preview agent**.
+1. In the Agent Playground in the Foundry Portal, at the top of the chat pane, in the **Publish** drop-down list, select **Preview web app**.
 
     A preview chat interface is opened in a new browser tab.
 
