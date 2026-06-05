@@ -213,7 +213,7 @@ Try the following prompts. The agent will answer based on its training data, or 
 
     > **Note**: The app uses Azure Speech in Foundry tools in your resource to recognize and synthesize speech.
 
-## Explore computer vision
+### Explore computer vision
 
 1. Download **[computers.zip](https://aka.ms/computer-images){:target="_blank"}** from `https://aka.ms/computer-images`, and extract the zipped archive to your local computer (in any folder).
 
@@ -221,7 +221,7 @@ Try the following prompts. The agent will answer based on its training data, or 
 
 1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `Tell me about this.`
 
-## Explore information extraction
+### Explore information extraction
 
 1. Download **[pcbs.zip](https://aka.ms/pcb-images){:target="_blank"}** from `https://aka.ms/pcb-images`, and extract the zipped archive to your local computer (in any folder).
 
