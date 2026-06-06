@@ -305,8 +305,8 @@ As a developer, you can also use code to extract meaning from content. The Found
     >**Tip**: To actually run the code in your own environment, you will need to follow the setup and configuration instructions shared at the start of the code sample.
     ><details>
     ><summary>Click to see those instructions:</summary>
-    >Create a Python file in a code editor such as Visual Studio Code and call it sample.py. Make sure you have Python 3.9 or later installed. Navigate to the directory containing this file in your terminal. Install dependencies:
-    > `python -m pip install azure-ai-contentunderstanding azure-identity`. Then run the script in the terminal with the command: python sample.py
+    >Create a Python file in a code editor such as Visual Studio Code and call it sample.py. Make sure you have Python 3.9 or later installed. Navigate to the directory containing this file in your terminal. Install dependencies in the terminal with the command:
+    > `python -m pip install azure-ai-contentunderstanding azure-identity`. Then run the script in the terminal with the command: `python sample.py`.
     ></details>    
 
 ## Summary
