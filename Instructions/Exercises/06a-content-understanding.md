@@ -33,7 +33,7 @@ This exercise takes approximately **25** minutes.
 
     ![Screenshot of the create a project page with the set up recommended resources option deselected.](./media/create-new-project.png)
 
-4. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the *new* Foundry portal, it should open in a page similar to the following image:
+4. Wait for your project to be created. It may take a few minutes. After creating a project in the *new* Foundry portal, it should take you to a list of your projects (*note*: you may need to refresh the page). Select the project you just created to open a page similar to the following image:
 
     ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
