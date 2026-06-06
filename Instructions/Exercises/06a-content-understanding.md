@@ -96,64 +96,241 @@ This exercise takes approximately **25** minutes.
 
 >**Tip**: Consider this: the *Fields* tab displays the information from the raw JSON in the *Results* tab in a user-friendly way.
 
-## Understand how to extract content with the REST API
-
-1. Developers can use the REST API to build an app that submits a document for analysis with Content Understanding analyzers using a POST operation. For example, the following cUrl command could be used to analyze an invoice:
-
-    ```bash
-   curl -i -X POST "{endpoint}/contentunderstanding/analyzers/{analyzerId}:analyze?api-version=2025-11-01" \
-      -H "Ocp-Apim-Subscription-Key: {key}" \
-      -H "Content-Type: application/json" \
-      -d '{
-            "inputs":[
-              {
-                "url": "https://{url_path}/invoice.png"
-              }          
-            ]
-          }'
-    ```
-
-1. Consider what you would need to specify in the cUrl command:
-   - *analzyerID*
-   - *endpoint*
-   - *key*
-   - *url_path* to the document
-
-1. When you run the command, you receive a response in JSON. The analysis is performed asynchronously, so the response includes an **id** value specific to the analysis job that can be used to poll for the results:
-
-    ```json
-   {
-      "id": {resultId},
-      "status": "Running",
-      "result": {
-        "analyzerId": {analyzerId},
-        "apiVersion": "2025-11-01",
-        "createdAt": "YYYY-MM-DDTHH:MM:SSZ",
-        "warnings": [],
-        "contents": []
-      }
-    }
-    ```
-
->**Tip**: Polling for results in an asynchronous call means repeatedly checking the status of a request at intervals until the operation is complete and the final result is available. The final result in this case is that the analysis is complete. After the result is returned, another call should be made to retrieve the results.
-
-1. In order to retrieve the results using the ID, the client must submit a GET request:
-
-    ```bash
-   curl -i -X GET "{endpoint}/contentunderstanding/analyzerResults/{resultId}?api-version=2025-11-01" \
-      -H "Ocp-Apim-Subscription-Key: {key}"
-    ```
-
-1. Consider what you would need to specify in the cUrl command:
-   - *resultID*
-   - *endpoint*
-   - *key*
-
 ## Understand how to extract content with the Python SDK
 
-1. Alternatively, as a developer, you can also use code to submit a document for analysis to the *Document Fields* analyzer. The Foundry playground provides code samples. Select the **Code** tab to review the code you could use to process this response and utilize the extracted fields.
+As a developer, you can use code, rather than the Foundry portal UI, to extract meaning from content. The Foundry playground provides various code samples to get you started with information extraction with Azure Content Understanding. 
 
-    ![Screenshot of the sample code provided in the Foundry playground.](./media/content-understanding-code-example.png)
+![Screenshot of the sample code provided in the Foundry playground.](./media/content-understanding-code-example.png)
+
+
+1. Let's take a closer look at the Python code for document layout analysis. In the Content Understanding playground, select the **Code** tab, then select **Modality: Document** and the **Layout** analyzer. The following code is provided:
+
+    ```python
+        import sys
+        import json
+        
+        from azure.ai.contentunderstanding import ContentUnderstandingClient
+        from azure.ai.contentunderstanding.models import AnalysisInput, AnalysisResult
+        from azure.core.credentials import AzureKeyCredential
+        from azure.core.exceptions import AzureError
+        from azure.identity import DefaultAzureCredential
+        
+        
+        def main() -> None:
+            # Insert the following configurations.
+            # 1) AZURE_CONTENT_UNDERSTANDING_ENDPOINT - the endpoint to your Content Understanding resource.
+            endpoint = "https://<your-resource>.services.ai.azure.com/"
+        
+            # 2) CONTENT_UNDERSTANDING_KEY - your Content Understanding API key (optional if using DefaultAzureCredential).
+            key = "{{CONTENT_UNDERSTANDING_KEY}}"
+        
+            # 3) FILE_URL - you can replace this with your own URL.
+            file_url = "https://contentunderstanding.ai.azure.com/assets/prebuilt/layout_checklist.jpg"
+        
+            # ANALYZER_ID - the ID of the analyzer to use.
+            analyzer_id = "prebuilt-layout"
+        
+            # API_VERSION - the API version to use.
+            api_version = "2025-11-01"
+        
+            # Set up Content Understanding client.
+            credential = AzureKeyCredential(key) if key and "{{CONTENT_UNDERSTANDING_KEY}}" not in key else DefaultAzureCredential()
+            client = ContentUnderstandingClient(endpoint=endpoint, credential=credential, api_version=api_version)
+        
+            # [START analyze]
+            print(f"Analyzing with {analyzer_id} analyzer...")
+            print(f"  File URL: {file_url}\n")
+        
+            try:
+                poller = client.begin_analyze(
+                    analyzer_id=analyzer_id,
+                    inputs=[AnalysisInput(url=file_url)],
+                )
+                result: AnalysisResult = poller.result()
+            except AzureError as err:
+                print(f"[Azure Error]: {err.message}")
+                sys.exit(1)
+            except Exception as ex:
+                print(f"[Unexpected Error]: {ex}")
+                sys.exit(1)
+            # [END analyze]
+        
+            # [START output_result]
+            print("=" * 50)
+            print("Analysis result:")
+            print("=" * 50 + "\n")
+        
+            max_display_lines = 50
+            result_str = json.dumps(result.as_dict(), indent=2)
+            ret_lines = result_str.splitlines()
+        
+            if len(ret_lines) > max_display_lines:
+                print("\n".join(ret_lines[:max_display_lines]))
+                print(f"\n {len(ret_lines) - max_display_lines} more lines to be displayed...\n")
+            else:
+                print(result_str)
+            # [END output_result]
+        
+        
+        if __name__ == "__main__":
+            main()
+    ```
+
+2. Consider what you might need to update in the code:
+   - The endpoint to your Content Understanding resource
+   - Your resource key
+   - A URL to the file you'd like analyzed 
+  
+3. Consider what's provided in the code sample that you might alter: 
+   - Analyzer ID (which you can change to use [different prebuilt models](https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/prebuilt-analyzers#content-extraction-analyzers))
+   - API Version
+
+4. First, the code creates a client to talk to Azure Content Understanding. The code decides how to authenticate: if you provided a real API key, it uses that key directly. Otherwise, it falls back to `DefaultAzureCredential()`, which automatically finds credentials from your environment (like your Azure CLI login). Then it creates the client using your endpoint, the chosen credential, and an API version.
+     
+    ```python
+        # Set up Content Understanding client.
+        credential = AzureKeyCredential(key) if key and "{{CONTENT_UNDERSTANDING_KEY}}" not in key else DefaultAzureCredential()
+        client = ContentUnderstandingClient(endpoint=endpoint, credential=credential, api_version=api_version)
+    ```
+     
+5. Next, the code analyzes the content. The SDK starts the analysis as a long-running operation. The function `begin_analyze()` returns a poller that handles checking the operation status (whether the analysis is successfully complete or not). The SDK's poller handles the complete operation automatically when `poller.result()` is called.
+
+    ```python
+        # [START analyze]
+        print(f"Analyzing with {analyzer_id} analyzer...")
+        print(f"  File URL: {file_url}\n")
+        
+        try:
+            poller = client.begin_analyze(
+                analyzer_id=analyzer_id,
+                inputs=[AnalysisInput(url=file_url)],
+            )
+            result: AnalysisResult = poller.result()
+        except AzureError as err:
+            print(f"[Azure Error]: {err.message}")
+            sys.exit(1)
+        except Exception as ex:
+            print(f"[Unexpected Error]: {ex}")
+            sys.exit(1)
+        # [END analyze]
+    ```
+
+    
+6. The output of the analysis is formatted and displayed as JSON using the following code:
+
+    ```python
+        # [START output_result]
+        print("=" * 50)
+        print("Analysis result:")
+        print("=" * 50 + "\n")
+    
+        max_display_lines = 50
+        result_str = json.dumps(result.as_dict(), indent=2)
+        ret_lines = result_str.splitlines()
+    
+        if len(ret_lines) > max_display_lines:
+            print("\n".join(ret_lines[:max_display_lines]))
+            print(f"\n {len(ret_lines) - max_display_lines} more lines to be displayed...\n")
+        else:
+            print(result_str)
+        # [END output_result]
+    ```
+
+    >**Note**: Much of the code above makes the output look more readable. Its purpose is actually very simple: to print the results of the analysis.
+
+7. Running the entire code from step 1 returns JSON like you observed earlier in the lab. For example: 
+
+    ```json
+    {
+	"id": "",
+	"status": "Succeeded",
+	"result": {
+		"analyzerId": "prebuilt-layout",
+		"apiVersion": "2025-11-01",
+		"createdAt": "",
+		"warnings": [],
+		"contents": [
+			{
+				"path": "input1",
+				"markdown": "",
+				"kind": "document",
+				"startPageNumber": 1,
+				"endPageNumber": 1,
+				"unit": "pixel",
+				"pages": [
+					{
+						"pageNumber": 1,
+						"angle": 0,
+						"width": 2580,
+						"height": 3433,
+						"spans": [
+							{
+								"offset": 0,
+								"length": 2269
+							}
+						],
+						"words": [
+							{
+								"content": "Documents",
+								"span": {
+									"offset": 2,
+									"length": 9
+								},
+								"confidence": 0.996,
+								"source": "D(1,213,217,768,201,768,296,214,310)"
+							},
+							{
+								"content": "to",
+								"span": {
+									"offset": 12,
+									"length": 2
+								},
+								"confidence": 0.999,
+								"source": "D(1,802,200,906,197,906,293,803,295)"
+							},
+							{
+								"content": "Store",
+								"span": {
+									"offset": 15,
+									"length": 5
+								},
+								"confidence": 0.998,
+								"source": "D(1,947,196,1218,189,1219,285,947,292)"
+							} 
+    ...
+    ```
+
+    >**Tip**: To actually run the code in your own environment, you will need to follow the setup and configuration instructions shared at the start of the code sample.
+    <details>
+    <summary>Click to see those instructions:</summary>
+    Requirements:
+        - Python 3.9 or later
+    
+    Setup:
+        Follow the steps in the url below to configure your Microsoft Foundry resource and model deployments:
+        https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/contentunderstanding/azure-ai-contentunderstanding#configuring-microsoft-foundry-resource
+    
+    Configuration:
+        Before running, update the following variables in the script:
+        - AZURE_CONTENT_UNDERSTANDING_ENDPOINT: The endpoint to your Content Understanding resource.
+        - CONTENT_UNDERSTANDING_KEY: Your Content Understanding API key (optional if using DefaultAzureCredential).
+        - FILE_URL: URL of the file to analyze.
+    
+    Usage:
+        1. Navigate to the directory containing this file:
+           cd path/to/the/directory/containing/this/file    # In your terminal
+    
+        2. (Optional) Create and activate a virtual environment:
+           python -m venv .venv         # One time setup
+           source .venv/bin/activate      # On Linux/macOS
+           .venv\\Scripts\\activate        # On Windows
+    
+        3. Install dependencies:
+           python -m pip install azure-ai-contentunderstanding azure-identity
+    
+        4. Run the script:
+           python sample.py
+    </details>    
 
 ## Summary
 
@@ -163,7 +340,7 @@ In this exercise, you explored Azure Content Understanding in Foundry and learne
 - **Layout**: Goes a step further by capturing structure, hierarchy, and positioning—including tables—answering, "How is this content organized?"
 - **Document fields**: an analyzer that uses a combination of capabilities to extract fields, organize them into cohesive categories, and generate insights—answering, "What does this content mean and what should I do with it?" Content Understanding analyzers like this one sometimes require deploying additional AI models (such as chat completion and embedding models) to handle complex extraction needs.
 
-You also learned how developers can integrate Content Understanding into applications using the **REST API** (submitting documents via a POST request and polling for results with a GET request) or the **Python SDK**, both of which enable programmatic analysis of documents outside the Foundry playground.
+You also learned how developers can integrate Content Understanding into applications using the **Python SDK**, which enables programmatic analysis of documents outside the Foundry playground.
 
 > **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just an example of an AI agent for you to explore as you learn about what's possible with AI.*<br/><br/>If you *do* check out Ask Anton, we'd love you to *[tell us about your experience](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}*!
 
