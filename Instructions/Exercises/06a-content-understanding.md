@@ -185,7 +185,7 @@ As a developer, you can also use code to extract meaning from content. The Found
    - Analyzer ID (which you can change to use [different prebuilt models](https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/prebuilt-analyzers#content-extraction-analyzers))
    - API Version
 
-4. First, the code creates a client to talk to Azure Content Understanding. The code decides how to authenticate: if you provided a real API key, it uses that key directly. Otherwise, it falls back to `DefaultAzureCredential()`, which automatically finds credentials from your environment (like your Azure CLI login). Then it creates the client using your endpoint, the chosen credential, and an API version.
+4. Now you can review the rest of the code. First, the code creates a client to talk to Azure Content Understanding. The code decides how to authenticate: if you provided a real API key, it uses that key directly. Otherwise, it falls back to `DefaultAzureCredential()`, which automatically finds credentials from your environment (like your Azure CLI login). Then it creates the client using your endpoint, the chosen credential, and an API version.
      
     ```python
         # Set up Content Understanding client.
