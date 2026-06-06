@@ -299,7 +299,7 @@ As a developer, you can also use code to extract meaning from content. The Found
 								"confidence": 0.998,
 								"source": "D(1,947,196,1218,189,1219,285,947,292)"
 							} 
-    ...
+    }]}]}}
     ```
 
     >**Tip**: To actually run the code in your own environment, you will need to follow the setup and configuration instructions shared at the start of the code sample.
@@ -307,29 +307,23 @@ As a developer, you can also use code to extract meaning from content. The Found
     <summary>Click to see those instructions:</summary>
     Requirements:
         - Python 3.9 or later
-    
     Setup:
         Follow the steps in the url below to configure your Microsoft Foundry resource and model deployments:
-        https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/contentunderstanding/azure-ai-contentunderstanding#configuring-microsoft-foundry-resource
-    
+        https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/contentunderstanding/azure-ai-contentunderstanding#configuring-microsoft-foundry-resource   
     Configuration:
         Before running, update the following variables in the script:
         - AZURE_CONTENT_UNDERSTANDING_ENDPOINT: The endpoint to your Content Understanding resource.
         - CONTENT_UNDERSTANDING_KEY: Your Content Understanding API key (optional if using DefaultAzureCredential).
-        - FILE_URL: URL of the file to analyze.
-    
+        - FILE_URL: URL of the file to analyze.  
     Usage:
-        1. Navigate to the directory containing this file:
-           cd path/to/the/directory/containing/this/file    # In your terminal
-    
+        1. Navigate to the directory containing this file in your terminal:
+           cd path/to/the/directory/containing/this/file     
         2. (Optional) Create and activate a virtual environment:
            python -m venv .venv         # One time setup
            source .venv/bin/activate      # On Linux/macOS
            .venv\\Scripts\\activate        # On Windows
-    
         3. Install dependencies:
            python -m pip install azure-ai-contentunderstanding azure-identity
-    
         4. Run the script:
            python sample.py
     </details>    
