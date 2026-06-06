@@ -88,7 +88,7 @@ This exercise takes approximately **25** minutes.
 
 5. Let's try to use the full analyzer with our own invoice. Open a new browser window. Enter the following URL: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf` to download **[contoso-invoice-1.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf){:target="_blank"}** .
 
-6. Use the **Browse for files** link to upload the **contoso-invoice-1.pdf** document you just downloaded. Select **Run analysis** and review the results. Notice that not only is the text rendered, but its layout is captured, and the fields are organized into cohesive categories.  
+6. Back in the Content Understanding playground in the Foundry portal, use the **Browse for files** link to upload the **contoso-invoice-1.pdf** document you just downloaded. Select **Run analysis** and review the results. Notice that not only is the text rendered, but its layout is captured, and the fields are organized into cohesive categories.  
 
     ![Screenshot of the results of using the document fields analzyer to analyze the Contoso invoice.](./media/contoso-invoice-analysis-document-fields.png)
 
