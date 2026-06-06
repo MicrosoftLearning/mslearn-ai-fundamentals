@@ -98,7 +98,7 @@ This exercise takes approximately **25** minutes.
 
 ## Understand how to extract content with the Python SDK
 
-As a developer, you can use code, rather than the Foundry portal UI, to extract meaning from content. The Foundry playground provides various code samples to get you started with information extraction with Azure Content Understanding. 
+As a developer, you can also use code to extract meaning from content. The Foundry playground provides various code samples to get you started with information extraction with Azure Content Understanding. 
 
 ![Screenshot of the sample code provided in the Foundry playground.](./media/content-understanding-code-example.png)
 
