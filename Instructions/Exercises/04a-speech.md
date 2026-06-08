@@ -29,6 +29,7 @@ Microsoft Foundry uses projects to organize models, resources, data, and other a
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select any of the **AI Foundry recommended** regions in **[this list](https://learn.microsoft.com/azure/foundry/openai/how-to/responses#region-availability)**{:target="_blank"}
+    - **Setup Recommended services** toggle this to the off position as this may cause policy errors for your deployment. 
 
 1. Select **Create**. Wait for your project to be created. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 

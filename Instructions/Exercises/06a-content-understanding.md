@@ -28,6 +28,7 @@ This exercise takes approximately **25** minutes.
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select *West US*, *Sweden Central*, *Australia East*, or any of the regions in **[this list](https://learn.microsoft.com/azure/ai-services/content-understanding/language-region-support)**{:target="_blank"}
+    - **Setup Recommended services** toggle this to the off position as this may cause policy errors for your deployment.
 
 3. Deselect the option to *Set up recommended resources...*. Then select **Create**.
 
