@@ -29,6 +29,8 @@ This exercise takes approximately **25** minutes.
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select *West US*, *Sweden Central*, *Australia East*, or any of the regions in **[this list](https://learn.microsoft.com/azure/ai-services/content-understanding/language-region-support)**{:target="_blank"}
 
+    > **Note**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
+
 3. Deselect the option to *Set up recommended resources...*. Then select **Create**.
 
     ![Screenshot of the create a project page with the set up recommended resources option deselected.](./media/create-new-project.png)
@@ -36,8 +38,8 @@ This exercise takes approximately **25** minutes.
 4. Wait for your project to be created. It may take a few minutes. After creating a project in the *new* Foundry portal, it should take you to a list of your projects (*note*: you may need to refresh the page to see your newly created project). Select the project you just created to open a page similar to the following image:
 
     ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
-    
-    >**Tip**: Close any suggestions or 'get-started' tutorials that may appear on the home page. 
+
+    >**Tip**: Close any suggestions or 'get-started' tutorials that may appear on the home page.
 
 ## Extract information from documents in the new Foundry portal
 
@@ -100,10 +102,9 @@ This exercise takes approximately **25** minutes.
 
 ## Understand how to extract content with the Python SDK
 
-As a developer, you can also use code to extract meaning from content. The Foundry playground provides various code samples to get you started with information extraction with Azure Content Understanding. 
+As a developer, you can also use code to extract meaning from content. The Foundry playground provides various code samples to get you started with information extraction with Azure Content Understanding.
 
 ![Screenshot of the sample code provided in the Foundry playground.](./media/content-understanding-code-example.png)
-
 
 1. Let's take a closer look at the Python code for document layout analysis. In the Content Understanding playground, select the **Code** tab, then select **Modality: Document** and the **Layout** analyzer. The following code is provided:
 
@@ -181,20 +182,20 @@ As a developer, you can also use code to extract meaning from content. The Found
 2. Consider what you might need to configure in the code:
    - The endpoint to your Content Understanding resource
    - Your resource key
-   - A URL to the file you'd like analyzed 
+   - A URL to the file you'd like analyzed
   
-3. Consider what's provided in the code sample that you might alter: 
+3. Consider what's provided in the code sample that you might alter:
    - Analyzer ID (which you can change to use [different prebuilt models](https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/prebuilt-analyzers#content-extraction-analyzers))
    - API Version
 
 4. After setting configurations, the code creates a client to talk to Azure Content Understanding. The code decides how to authenticate: if you provided a real API key, it uses that key directly. Otherwise, it falls back to `DefaultAzureCredential()`, which automatically finds credentials from your environment (like your Azure CLI login). Then it creates the client using your endpoint, the chosen credential, and an API version.
-     
+
     ```python
         # Set up Content Understanding client.
         credential = AzureKeyCredential(key) if key and "{{CONTENT_UNDERSTANDING_KEY}}" not in key else DefaultAzureCredential()
         client = ContentUnderstandingClient(endpoint=endpoint, credential=credential, api_version=api_version)
     ```
-     
+
 5. Next, the code analyzes the content. The SDK starts the analysis as a long-running operation. The function `begin_analyze()` returns a poller that handles checking the operation status (whether the analysis is successfully complete or not). The SDK's poller handles the complete operation automatically when `poller.result()` is called.
 
     ```python
@@ -217,7 +218,6 @@ As a developer, you can also use code to extract meaning from content. The Found
         # [END analyze]
     ```
 
-    
 6. The output of the analysis is formatted and displayed as JSON using the following code:
 
     ```python
@@ -240,65 +240,65 @@ As a developer, you can also use code to extract meaning from content. The Found
 
     >**Note**: Much of the code above makes the output look more readable. Its purpose is actually very simple: to print the results of the analysis.
 
-7. Running the entire code from step 1 returns JSON like you observed earlier in the lab. For example: 
+7. Running the entire code from step 1 returns JSON like you observed earlier in the lab. For example:
 
     ```json
     {
-	"id": "",
-	"status": "Succeeded",
-	"result": {
-		"analyzerId": "prebuilt-layout",
-		"apiVersion": "2025-11-01",
-		"createdAt": "",
-		"warnings": [],
-		"contents": [
-			{
-				"path": "input1",
-				"markdown": "",
-				"kind": "document",
-				"startPageNumber": 1,
-				"endPageNumber": 1,
-				"unit": "pixel",
-				"pages": [
-					{
-						"pageNumber": 1,
-						"angle": 0,
-						"width": 2580,
-						"height": 3433,
-						"spans": [
-							{
-								"offset": 0,
-								"length": 2269
-							}
-						],
-						"words": [
-							{
-								"content": "Documents",
-								"span": {
-									"offset": 2,
-									"length": 9
-								},
-								"confidence": 0.996,
-								"source": "D(1,213,217,768,201,768,296,214,310)"
-							},
-							{
-								"content": "to",
-								"span": {
-									"offset": 12,
-									"length": 2
-								},
-								"confidence": 0.999,
-								"source": "D(1,802,200,906,197,906,293,803,295)"
-							},
-							{
-								"content": "Store",
-								"span": {
-									"offset": 15,
-									"length": 5
-								},
-								"confidence": 0.998,
-								"source": "D(1,947,196,1218,189,1219,285,947,292)"
-							} 
+ "id": "",
+ "status": "Succeeded",
+ "result": {
+  "analyzerId": "prebuilt-layout",
+  "apiVersion": "2025-11-01",
+  "createdAt": "",
+  "warnings": [],
+  "contents": [
+   {
+    "path": "input1",
+    "markdown": "",
+    "kind": "document",
+    "startPageNumber": 1,
+    "endPageNumber": 1,
+    "unit": "pixel",
+    "pages": [
+     {
+      "pageNumber": 1,
+      "angle": 0,
+      "width": 2580,
+      "height": 3433,
+      "spans": [
+       {
+        "offset": 0,
+        "length": 2269
+       }
+      ],
+      "words": [
+       {
+        "content": "Documents",
+        "span": {
+         "offset": 2,
+         "length": 9
+        },
+        "confidence": 0.996,
+        "source": "D(1,213,217,768,201,768,296,214,310)"
+       },
+       {
+        "content": "to",
+        "span": {
+         "offset": 12,
+         "length": 2
+        },
+        "confidence": 0.999,
+        "source": "D(1,802,200,906,197,906,293,803,295)"
+       },
+       {
+        "content": "Store",
+        "span": {
+         "offset": 15,
+         "length": 5
+        },
+        "confidence": 0.998,
+        "source": "D(1,947,196,1218,189,1219,285,947,292)"
+       } 
     ...
     ```
 
@@ -307,7 +307,7 @@ As a developer, you can also use code to extract meaning from content. The Found
     ><summary>Click to see those instructions:</summary>
     >Create a Python file in a code editor such as Visual Studio Code and call it sample.py. Make sure you have Python 3.9 or later installed. Navigate to the directory containing this file in your terminal. Install dependencies in the terminal with the command:
     > `python -m pip install azure-ai-contentunderstanding azure-identity`. Then run the script in the terminal with the command: `python sample.py`.
-    ></details>    
+    ></details>
 
 ## Summary
 
