@@ -89,9 +89,7 @@ When you're satisfied with the responses a model returns in the playground, you 
         - **Microsoft Entra ID authentication**: The client app presents an authentication token based on an identify that is assigned to it (or to the current user).
 
 1. Select the following code options:
-    - **API**: Responses API
     - **Language**: Python
-    - **SDK**: OpenAI SDK
     - **Authentication**: Key authentication
 
     The resulting sample should be similar to the following code:
