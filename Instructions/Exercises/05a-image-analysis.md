@@ -67,13 +67,11 @@ Computer vision models enable AI systems to interpret image-based data, such as 
 
 ### View code
 
-To develop a client app or agent that can use the model to interpret images, you can use the OpenAI **Responses** API.
+To develop a client app or agent that can use the model to interpret images, you can use the **OpenAI Responses** API.
 
 1. In the **Chat** pane, select the **Call model** tab to view sample code.
 1. Select the following code options:
-    - **API**: Responses API
     - **Language**: Python
-    - **SDK**: OpenAI SDK
     - **Authentication**: Key authentication
 
     The default sample code includes only a text-based prompt. To submit a prompt that analyzes an image, you can modify the **input** parameter to include both text and image content, as shown here:
