@@ -16,6 +16,8 @@ Speech-capable AI agents enable users to interact conversationally - using spoke
 
 In this exercise, use Azure Speech in Microsoft Foundry Tools to create a speech-capable agent. You'll use Azure Speech Voice Live, a service used to build real-time voice-based agents.
 
+> **Tip**: Speech input works best in a quiet environment with a microphone or headset.
+
 This exercise takes approximately **25** minutes.
 
 ## Create a Microsoft Foundry project
