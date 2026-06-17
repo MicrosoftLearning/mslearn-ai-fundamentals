@@ -11,7 +11,7 @@ lab:
 
 # Get started with generative AI and agents in Microsoft Foundry
 
-In this exercise, you'll use Microsoft Foundry to deploy and explore a generative AI model. You'll then use the model in an agent that includes knowledge tools to answer user questions.
+In this exercise, you'll use Microsoft Foundry to deploy and explore a generative AI model to answer general questions related to expense claims. You'll then use the model in an agent that includes knowledge tools to answer specific expense-related questions.
 
 > **Note**: Many components of Microsoft Foundry, including the Microsoft Foundry portal, are subject to continual development. This reflects the fast-moving nature of artificial intelligence technology. Some elements of your user experience may differ from the images and descriptions in this exercise!
 
@@ -62,17 +62,14 @@ At the heart of every generative AI app or agent, there's a language model - usu
 You can use the playground to explore the model by chatting with it and observing the effect of changes to settings like its instructions (sometimes called the *system prompt*) and parameters.
 
 1. Use the button at the bottom of the left navigation pane to hide it and give yourself more room to work with.
-1. In the **Chat** pane, enter a prompt such as `Who was Ada Lovelace?`, and review the response.
+1. In the **Chat** pane, enter a prompt such as `In the context of a business, what is expense management?`, and review the response.
 
-    ![Screenshot of the chat pane with a response.](./media/0-chat-response.png)
+    ![Screenshot of the chat pane with a response.](./media/chat-response.png)
 
-1. Enter a follow-up prompt, such as `Tell me more about her work with Charles Babbage.` and review the response.
+1. Enter a new prompt, such as `Tell me about per-diem allowances.` and view the response.
+1. Continue the conversation with another prompt, such as `How are they reimbursed?`.
 
     > **Note**: Generative AI chat applications often include the conversation history in the prompt; so the context of the conversation is retained between messages. In this case, "her" is interpreted as referring to Ada Lovelace.
-
-1. At the top-right of the chat pane, use the **New chat** button to restart the conversation. This removes all conversation history.
-1. Enter a new prompt, such as `Tell me about the ELIZA chatbot.` and view the response.
-1. Continue the conversation with prompts such as `How does it compare with modern LLMs?`.
 
 ## View client code to chat with a model
 
@@ -129,11 +126,11 @@ For example, suppose an organization wants to use a generative AI model to power
    You are a helpful AI assistant who supports employees with expense claims. Provide concise, accurate information only on topics related to expenses. Do not provide any information about topics that are not directly related to expenses.
     ```
 
-1. Now enter a new user prompt related to expense claims, such as `What kinds of business expense are typically reimbursed by employers?`
+1. Now enter a new user prompt related to expense claims, such as `What's a purchasing card?`
 
     Review the response, which should provide some general guidance about expense claims.
 
-1. Try re-asking a previously-asked question that is unrelated to expenses, such as `Tell me about the ELIZA chatbot`; and compare the response now that the system prompt has changed.
+1. Try asking a question that is unrelated to expenses, such as `What's the capital of Spain?`; and compare the response now that the system prompt has changed.
 
     So far, we've specified instructions in the *playground*; but they're not saved outside of that environment. In a client application, you would need to include the system prompt as an **instructions** parameter in the **responses.create** method, like this:
 

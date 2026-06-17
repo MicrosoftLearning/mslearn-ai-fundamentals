@@ -11,7 +11,7 @@ lab:
 
 # Get started with Microsoft Foundry
 
-In this exercise, you'll create and explore a Microsoft Foundry project.
+In this exercise, you'll create and explore a Microsoft Foundry project, and explore the assets that you can create to support an AI application; including generative AI models and tools to support AI functionality like speech. Then you'll connect a client application to your project so it can use those assets to implement common AI workloads.
 
 This exercise should take approximately **30** minutes to complete.
 
@@ -152,7 +152,11 @@ Your Microsoft Foundry resource provides an endpoint in which you can deploy mod
 
     > **Tip**: Remember the model deployment name. You'll need it later.
 
-1. In the **Chat** pane, test your model by entering a message like `What is AI?`
+1. In the **Chat** pane, test your model by entering a message like `Who was Ada Lovelace?`
+
+    ![Screenshot of the model playground with a response to a prompt.](./media/0-chat-response.png)
+
+1. Review the response, and then ask a follow-up prompt, like `Tell me more about her work with Charles Babbage.`
 
 ## Use your Foundry resource endpoint
 
@@ -188,8 +192,6 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
 Try the following prompts. The agent will answer based on its training data, or use a web search tool to find information on the web:
 
-- `Who was Ada Lovelace?`
-- `Tell me more about her work with Charles Babbage.`
 - `Tell me about the ELIZA chatbot.`
 - `How does it compare to modern large language models?`
 - `Find a vintage computer store in Seattle.`
