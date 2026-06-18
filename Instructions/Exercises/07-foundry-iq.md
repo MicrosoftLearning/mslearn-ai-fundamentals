@@ -66,7 +66,9 @@ Now that you have the necessary infrastructure in place, you're ready to create 
 1. In your web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
 1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, when prompted, create a new project with a unique name; expanding the  **Advanced options** area to deploy the project in the resource group where you deployed Azure AI Search.
 
-     After creating a project in the new Foundry portal, it should open in a page similar to the following image:
+    > **Note**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
+
+    After creating a project in the new Foundry portal, it should open in a page similar to the following image:
 
     ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
