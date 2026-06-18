@@ -3,7 +3,7 @@ title: Get started with AI apps and agents in Azure
 permalink: index.html
 layout: home
 ---
-These hands-on exercises are designed to support training content on [Microsoft Learn](https://learn.microsoft.com/training/paths/get-started-ai-apps-agents/).
+These hands-on exercises are designed to complement training content on [Microsoft AI Skills Navigator](https://aiskillsnavigator.microsoft.com/explore/search/learningpath-c1207ab7fef2e855e1cebac091002b0b82d99a80c0b10d9bc1b34cdf25be7c5f).
 
 To complete these exercises, you'll need a Microsoft Azure subscription. You can sign up for a free trial at [https://azure.microsoft.com](https://azure.microsoft.com).
 
