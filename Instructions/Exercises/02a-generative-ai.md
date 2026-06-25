@@ -158,59 +158,57 @@ While you can implement generative AI apps using a standalone model, to create a
 
     ![Screenshot of the agent playground.](./media/0-agent-playground.png)
 
-1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Note that its definition includes the model, its parameter settings, and the instructions you specified - similar to this:
-
-    ```yml
-    metadata:
-      logo: Avatar_Default.svg
-      microsoft.voice-live.enabled: "false"
-    object: agent.version
-    id: expenses-agent:1
-    name: expenses-agent
-    version: "1"
-    description: ""
-    created_at: 1776115196
-    definition:
-      kind: prompt
-      model: gpt-4.1-mini
-      instructions: You are a helpful AI assistant who supports employees with expense claims. Provide concise, accurate information only on topics related to expenses. Do not provide any information about topics that are not directly related to expenses.
-      temperature: 1
-      top_p: 1
-      tools: []
-    status: active
-    ```
-
-1. Switch back to the **Chat** tab, and enter the prompt `Who are you?`
+1. In  the **Chat** tab,  enter the prompt `Who are you?`
 
     The response should indicate that the agent is "aware" of its role as an expense claims advisor.
 
 1. Enter an expenses-related prompt, such as `How much can I claim for a taxi?`
 
-    The response is likely to be generic. Accurate; but not particularly helpful to the employee. We need to give the agent some knowledge about the company's expense policies and procedures.
+    The response is likely to be generic, based on the data that the model was trained with. Accurate; but not particularly helpful to the employee. We need to give the agent some knowledge about the company's expense policies and procedures.
 
-## Add a knowledge tool to the agent
+## Add tools to the agent
 
-Agents use *tools* to perform tasks or find information. You can use a general web search tool or a simple file search tool to provide a source of knowledge; or for more comprehensive agentic solutions, you can create a *Microsoft Foundry IQ* knowledge store that connects the agent to one or more data sources within your enterprise. In this exercise, we'll use a simple file search tool.
+Agents use *tools* to perform tasks or find information. You can use a general web search tool or a simple file search tool to provide a source of knowledge; or for more comprehensive agentic solutions, you can create a *Microsoft Foundry IQ* knowledge store that connects the agent to one or more data sources within your enterprise.
+
+1. In the agent playground, in the pane on the left, expand the **Tools** section if it's not already expanded.
+
+    When you saved the model as an agent, Microsoft Foundry may have automatically added the **Web search** tool.
+
+    > **Tip**: If not, you can add it in the **Tools** drop-down list** and then use the **Save** button at the top to save the changes to your agent.
+
+1. In the chat pane, enter the prompt `Find me a credit card that's good for business expenses` and view the response.
+
+    The agent should use the *Web search* tool to find current credit card deals on the Internet.
+
+The web search tool is great for finding general information on the public Internet; but we need our agent to be able to get information from corporate expense policy documentation.
 
 1. Open a new browser tab, and view the **[expenses_policy.docx](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx){:target="_blank"}** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx`. We'll use this to provide a knowledge source that the agent can use to answer questions about expense claims.
 1. Download **expenses_policy.docx** to your local computer.
 1. Return to the tab containing the agent playground, and in the pane on the left, expand the **Tools** section if it's not already expanded.
 1. Upload the **expenses_policy.docx** file, creating a new index with the default index name. When the index has been created, attach it to the agent.
 1. At the top of the agent playground, use the **Save** button to update the agent definition.
-1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Note that its definition now includes the file search tool you added (in the **tools** section):
+1. In the **Chat** tab, enter the same expenses-related prompt as before (for example, `How much can I claim for a taxi?`) and view the response.
+
+    This time the response should be informed by the information in the expenses data source.
+
+1. Try a few more expenses-related prompts, like `What about a hotel?` or `Can I claim the cost of my dinner?`
+
+    You've successfully added tools to your agent, so it now encapsulates the instructions and capabilities you need to support employees with expense enquiries.
+
+1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Note that its definition includes the instructions you set in the system prompt, and web search and file search tools you added (in the **tools** section):
 
     ```yml
     metadata:
       logo: Avatar_Default.svg
       description: ""
-      modified_at: "1776115781"
+      modified_at: "1782426769"
       microsoft.voice-live.enabled: "false"
     object: agent.version
     id: expenses-agent:2
     name: expenses-agent
     version: "2"
     description: ""
-    created_at: 1776115782
+    created_at: 1782426769
     definition:
       kind: prompt
       model: gpt-4.1-mini
@@ -218,19 +216,22 @@ Agents use *tools* to perform tasks or find information. You can use a general w
       temperature: 1
       top_p: 1
       tools:
+        - type: web_search
         - type: file_search
           vector_store_ids:
-            - vs_tmwFZKmfVB3rZJoeaJAcgdy9
+            - vs_erRFXnYdFNlXyK0RHJjn11uL
     status: active
+    instance_identity:
+      principal_id: 44acce74-8425-4e5c-8752-f5e96874eeb4
+      client_id: 44acce74-8425-4e5c-8752-f5e96874eeb4
+    blueprint:
+      principal_id: f5630a7b-af07-4bcd-af2e-5cae44a09a1a
+      client_id: 4b423d44-9d0c-4850-8d7c-a72a8e688d14
+    blueprint_reference:
+      type: ManagedAgentIdentityBlueprint
+      blueprint_id: expenses-agent-ff8f8
+    agent_guid: ff8f8a8a-0fa8-4d30-a715-d6e9588ed9f2
     ```
-
-1. Switch back to the **Chat** tab, and enter the same expenses-related prompt as before (for example, `How much can I claim for a taxi?`) and view the response.
-
-    This time the response should be informed by the information in the expenses data source.
-
-1. Try a few more expenses-related prompts, like `What about a hotel?` or `Can I claim the cost of my dinner?`
-
-    Congratulations! We have a working agent with access to the knowledge it needs.
 
 ## Preview the agent
 
