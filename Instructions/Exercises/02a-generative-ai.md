@@ -174,7 +174,7 @@ Agents use *tools* to perform tasks or find information. You can use a general w
 
     When you saved the model as an agent, Microsoft Foundry may have automatically added the **Web search** tool.
 
-    > **Tip**: If not, you can add it in the **Tools** drop-down list** and then use the **Save** button at the top to save the changes to your agent.
+    > **Tip**: If not, you can add it in the **Tools** drop-down list and then use the **Save** button at the top to save the changes to your agent.
 
 1. In the chat pane, enter the prompt `Find me a credit card that's good for business expenses` and view the response.
 
