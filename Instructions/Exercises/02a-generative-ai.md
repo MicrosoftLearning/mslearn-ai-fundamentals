@@ -43,19 +43,19 @@ At the heart of every generative AI app or agent, there's a language model - usu
 
     Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
 
-    ![Screenshot of the AI Foundry model catalog.](./media/0-foundry-models.png)
+    ![Screenshot of the AI Foundry model catalog.](./media/models_page.png)
 
-1. Search for and select the `gpt-4.1-mini` model, and view the page for this model, which describes its features and capabilities.
+1. Search for and select the `gpt-5-mini` model, and view the page for this model, which describes its features and capabilities.
 
-    ![Screenshot of the gpt-4.1-mini model page.](./media/0-gpt-4.1-mini.png)
+    ![Screenshot of the gpt-5-mini model page.](./media/gpt-5-mini_page.png)
 
 1. Use the **Deploy** button to deploy the model using the default settings. Deployment may take a minute or so.
 
-    > **Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different model - such as gpt-4.1-nano, or gpt-4o-mini. Alternatively, you can create a new project in a different region.
+    > **Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different chat-capable *gpt* model - such as gpt-5, or gpt-5.1. Alternatively, you can create a new project in a different region.
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
-    ![Screenshot of the model playground.](./media/0-model-playground.png)
+    ![Screenshot of the model playground.](./media/model-playground.png)
 
 ## Chat with the model
 
@@ -75,15 +75,7 @@ You can use the playground to explore the model by chatting with it and observin
 
 When you're satisfied with the responses a model returns in the playground, you can develop client applications that consume it. Microsoft Foundry provides a REST API and multiple language-specific SDKs that you can use to connect to the deployed model and chat with it.
 
-1. In the **Chat** pane, view the **Call model** tab. This tab shows sample code that a client application can use to chat with the model. Above the sample code, you can choose preferences for:
-    - **API**: The OpenAI API is a common standard for implementing conversations with generative AI models. There are two variants of the OpenAI API that you can use:
-        - **Completions**: A broadly used programmatic syntax for submitting prompts to a model.
-        - **Responses**: A newer syntax that offers greater flexibility for building apps that converse with both standalone models and with *agents*.
-    - **Language**: You can write code to consume a model in a wide range of programming languages, including Python. Microsoft C#, JavaScript, and others.
-    - **SDK**: You can use a language-specific SDK, which encapsulates the low-level communication details between the client and model; or you can work directly with the REST API, enabling you to have full control over the HTTP request messages that your client sends to the model.
-    - **Authentication**: To use a model deployed in Microsoft Foundry, the client application must be authenticated. You can implement authentication using:
-        - **Key-based authentication**: The client app must present a security key (which you can find by selecting the key icon above the code sample)
-        - **Microsoft Entra ID authentication**: The client app presents an authentication token based on an identify that is assigned to it (or to the current user).
+1. In the **Chat** pane, view the **Call model** tab. This tab shows sample code that a client application can use to chat with the model. Above the sample code, you can choose preferences for programming language (for example, Python, JavaScript, C#, and others) and authentication method (key-based or Microsoft Entra ID).
 
 1. Select the following code options:
     - **Language**: Python
@@ -92,23 +84,23 @@ When you're satisfied with the responses a model returns in the playground, you 
     The resulting sample should be similar to the following code:
 
     ```python
-    from openai import OpenAI
+   from openai import OpenAI
+
+   endpoint = "<https://ai-resrce.services.ai.azure.com/openai/v1>"
+   deployment_name = "gpt-5-mini"
+   api_key = "<your-api-key>"
     
-    endpoint = "https://{your-foundry-resource}.openai.azure.com/openai/v1/"
-    deployment_name = "gpt-4.1-mini"
-    api_key = "<your-api-key>"
-    
-    client = OpenAI(
+   client = OpenAI(
         base_url=endpoint,
         api_key=api_key
-    )
+   )
     
-    response = client.responses.create(
+   response = client.responses.create(
         model=deployment_name,
         input="What is the capital of France?",
-    )
+   )
     
-    print(f"answer: {response.output[0]}")
+   print(f"answer: {response.output[0]}")
     ```
 
     The code connects to the **OpenAI** endpoint for your Microsoft Foundry resource, using its secret authentication key (which you would need to copy into the code to set the **api_key** variable). It then uses the **responses.create** method to generate a response from your deployed model from an input prompt (in this case, the hard-coded question "What is the capital of France?") and prints the response to the output console.
@@ -152,11 +144,11 @@ For example, suppose an organization wants to use a generative AI model to power
 
 While you can implement generative AI apps using a standalone model, to create a fully agentic AI experience, you need to encapsulate the model, its instructions, and any tool configuration that provides additional functionality, in an *agent*.
 
-1. In the model playground, at the top right select **Save as agent**. Then, when prompted, name your new agent `expenses-agent`.
+1. In the model playground, at the top right select **Save as agent**. Then, when prompted, name your new agent `expense-agent`.
 
     When the agent is created, it opens in a new playground specifically for working with agents.
 
-    ![Screenshot of the agent playground.](./media/0-agent-playground.png)
+    ![Screenshot of the agent playground.](./media/agent_playground.png)
 
 1. In  the **Chat** tab,  enter the prompt `Who are you?`
 
@@ -203,14 +195,14 @@ The web search tool is great for finding general information on the public Inter
       modified_at: "1782426769"
       microsoft.voice-live.enabled: "false"
     object: agent.version
-    id: expenses-agent:2
-    name: expenses-agent
+    id: expense-agent:2
+    name: expense-agent
     version: "2"
     description: ""
     created_at: 1782426769
     definition:
       kind: prompt
-      model: gpt-4.1-mini
+      model: gpt-5-mini
       instructions: You are a helpful AI assistant who supports employees with expense claims. Provide concise, accurate information only on topics related to expenses. Do not provide any information about topics that are not directly related to expenses.
       temperature: 1
       top_p: 1
@@ -242,7 +234,7 @@ Now you have a working agent, you can preview it in a basic web chat application
 
 1. Enter a prompt, such as `How do I submit an expense claim?` and view the response from your agent.
 
-    ![Screenshot of an agent preview chat interface.](./media/0-agent-preview.png)
+    ![Screenshot of an agent preview chat interface.](./media/agent_preview.png)
 
 ## View client code to access the agent in your project
 
@@ -252,19 +244,19 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
     ```python
     # Before running the sample:
-    # pip install azure-ai-projects>=2.0.0
+    # pip install azure-ai-projects>=2.1.0
     
     from azure.identity import DefaultAzureCredential
     from azure.ai.projects import AIProjectClient
     
-    my_endpoint = "https://{your-foundry-resource}.services.ai.azure.com/api/projects/{your-project}"
+    endpoint = "<https://ai-resrce.services.ai.azure.com/api/projects/ai-project>"
     
     project_client = AIProjectClient(
-        endpoint=my_endpoint,
+        endpoint=endpoint,
         credential=DefaultAzureCredential(),
     )
     
-    my_agent = "expenses-agent"
+    my_agent = "expense-agent"
     my_version = "2"
     
     openai_client = project_client.get_openai_client()
@@ -283,11 +275,11 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
     After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we peviously saw being used to chat with a model. Since a project can contain multiple agents and models, the specific agent details are specified as **extra_body** in the **responses.create** method.
 
-1. In the **Call agent** tab, use the available option to open the code in **VS Code for the web**.
+1. In the **Call agent** tab, use the available option to start coding in **VS Code for the web**.
 
-    Wait for the environment to be set up.
+    Enter a name for the folder where you want to create your agent client when prompted, and then wait for the environment to be set up (which can take a few minutes).
 
-    > **Tip**: It can take a few minutes to set the envionment up!
+    > **Tip**: Decline any updates if prompted.
 
     ![Screenshot of VS Code for the Web.](./media/vs-code-web.png)
 
@@ -321,7 +313,3 @@ If you have finished exploring Microsoft Foundry, you should delete the resource
 1. Open the [Azure portal](https://portal.azure.com){:target="_blank"} at `https://portal.azure.com` and view the contents of the resource group where you deployed the project used in this exercise.
 1. On the toolbar, select **Delete resource group**.
 1. Enter the resource group name and confirm that you want to delete it.
-
-<!--
-> **Tip**: If you want to keep the Foundry project, but avoid being charged for the published agent, use the **&vellip;** menu next to the **Publish** drop-down list to delete the agent.
--->

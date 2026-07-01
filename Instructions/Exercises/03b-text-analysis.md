@@ -40,11 +40,11 @@ In this part of the exercise, you'll use a general-purpose language model to per
 
 1. Now you're ready to explore models. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
 
-    ![Screenshot of the AI Foundry model catalog.](./media/0-foundry-model-catalog.png)
+    ![Screenshot of the AI Foundry model catalog.](./media/models_page.png)
 
-2. Search for and select the `gpt-4.1` model, and view the page for this model, which describes its features and capabilities.
+2. Search for and select the `gpt-5-mini` model, and view the page for this model, which describes its features and capabilities.
 
-    ![Screenshot of the gpt-4.1 model page with the default settings deployment option highlighted.](./media/0-gpt-4.1.png)
+    ![Screenshot of the gpt-5-mini model page with the default settings deployment option highlighted.](./media/gpt-5-mini_page.png)
 
 3. Use the **Deploy** button to deploy the model using the *default settings*. Wait for the deployment to complete. After the deployment is complete, you are taken to a chat playground, where you can test out the model's capabilities.
 
@@ -52,77 +52,30 @@ In this part of the exercise, you'll use a general-purpose language model to per
 
 **Sentiment analysis** is a common *natural language processing* (NLP) task. It's used to determine whether text conveys a positive, neutral or negative sentiment; which makes it useful for categorizing reviews, social media posts, and other subjective documents.
 
-1. In the chat playground, enter the following prompt:
+1. In the chat playground page, use the button at the bottom of the left navigation pane to hide it and give yourself more room to work with.
+1. In the pane on the left, change the default **Instructions** to:
 
     ```
-    Analyze the following review, and determine whether the sentiment is positive, neutral, or negative:
-    ---
-    I spent several nights at the Riverside Heights Hotel during a fall trip, and the experience was outstanding from start to finish. The welcome at arrival was warm and attentive, and the staff consistently went out of their way to be helpful. The overall atmosphere made my stay smooth and relaxing, and the location was extremely convenient for getting around the city. I left with a very positive impression and would confidently recommend this hotel to others looking for a pleasant and stress‑free stay.
-    ---
+   You are an AI assistant that analyzes and summarizes text.
     ```
 
-1. Review the response, which should include an analysis of the text's sentiment.
-
-    ![Screenshot of sentiment analysis results in the chat playground.](./media/text-01.png)
-
-1. Enter the following prompt to analyze a different review:
+1. In the **Chat** pane, the following prompt (you can press CTRL+ENTER for a new line):
 
     ```
+   Summarize this review as a single, short paragraph:
 
-    What about this one?
-    ---
-    I was disappointed with my visit to the Harbor View Inn earlier this year. The front desk process took much longer than expected, and staff responses to questions felt rushed and unhelpful. The room had ongoing maintenance issues, inconsistent internet access, and noticeable noise from the hallway throughout the night. Overall, the experience fell short of expectations, and I would not choose to stay there again.        
-    ---
-    ```
-
-    You can experiment further by creating your own prompts.
-
-### Extract named entities
-
-**Named entities** are the people, places, dates, and other important items mentioned in text.
-
-1. At the top of the chat pane, use the **New chat** (&#128172;) button to restart the conversation. This removes all conversation history.
-
-2. Enter the following prompt, and review the results:
-
-    ```
-    List the named entities mentioned in this text:
-    ---
-    Welcome to the Global Innovation Workshop!
-    We’re excited to host sessions in London, Toronto, Chicago, and Austin this spring.
-    Visit our event page for specific dates, venues, and city details.
-    ---
-    ```
-
-    The model should identify the specific places mentioned in the text.
-
-    ![Screenshot of named entity recognition results in the chat playground.](./media/text-02.png)
-
-### Summarize text
-
-**Summarization** is a way to distill the main points in a document into a shorter amount of text.
-
-1. At the top of the chat pane, use the **New chat** (&#128172;) button to restart the conversation. This removes all conversation history.
-1. Enter the following prompt, and review the results:
-
-    ```
-
-    Summarize the following meeting transcript in a single paragraph
-    ---
-    Jordan Lee: “We should pick a retreat location that’s convenient for most people—Chicago and Nashville came to mind first.”
-    Anika Sharma: “Chicago is central, but the venue costs there can add up quickly.”
-    Carlos Ramirez: “I looked into a few alternatives, and Phoenix seems much easier when it comes to flights and space.”
-    Jordan Lee: “That makes sense—Phoenix does offer more flexibility than Chicago or Portland.”
-    Anika Sharma: “Portland would be enjoyable, but from a planning standpoint, Phoenix is simpler.”
-    Carlos Ramirez: “Exactly. It scales better and avoids some of the pricing issues.”
-    Jordan Lee: “So it sounds like Phoenix is our strongest option overall.”
-    Anika Sharma: “Yes, I’m comfortable choosing Phoenix over the other cities.”
-    Carlos Ramirez: “Agreed—let’s move forward with Phoenix for the retreat.”
+   This AI training course provides a clear and engaging introduction to core concepts such as machine learning, neural networks, and generative AI, making it accessible even to learners with limited prior experience. The course consistently reinforces key ideas through practical examples and hands-on exercises, which helps learners build confidence while applying AI techniques in real-world scenarios.
+    
+   Another strength is the emphasis on modern tools and workflows, including prompt design and model evaluation, which are highly relevant for current industry needs. The instructors communicate complex topics in a simple, structured way, and the course materials are well organized to support progressive learning. I particularly appreciated how the course revisits important themes like model accuracy, responsible AI, and iterative improvement across multiple modules, reinforcing their importance.
+    
+   Overall, this course offers a highly practical and well-rounded learning experience for anyone looking to develop foundational and applied skills in AI.
     ```
 
     The model should generate a summary of the text.
 
-    ![Screenshot of summarization results in the chat playground.](./media/text-03.png)
+    ![Screenshot of text summarization results in the chat playground.](./media/text_summary.png)
+
+    Large language models (LLMs) are built on machine learning techniques that have their origins in natural language processing and text analysis, so they're good at summarizing text, extracting named entities (such as people and place names), and classifying documents based on sentiment, topic, style, and other factors.
 
 ## Use a specialized language analysis tool
 
@@ -132,20 +85,22 @@ The **Azure Language in Foundry Tools** provides purpose-built analyzers that us
 
 1. In the Foundry portal, navigate to the menu at the top of the screen and select **Build**.
 
-2. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it). In the menu, select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
+1. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it). In the menu, select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
 
-    ![Screenshot of the Language features listed on the new Foundry models page.](./media/foundry-ai-services.png)
+    Microsoft Foundry Tools includes multiple AI Services (formerly known as Microsoft Cognitive Services) that support common speech, translation, language, and content udenrstanding workloads.
+
+    ![Screenshot of Foundry AI services page.](./media/ai_services.png)
 
 ### Detect language
 
 In scenarios where text could potentially be in one of multiple languages, the first step in an analysis workflow is often to determine the primary language so the text can be routed to the most appropriate model or agent for the subsequent processing.
 
-1. From the list of AI services, select the **Azure Language - Language detection** analyzer.
-2. In the **Input text** list, select one of the provided sample documents. Then use the **Detect** button to detect the language in which the sample is written.
+1. In the list of AI services, select the **Azure Language - Language detection** analyzer.
+1. In the **Input text** list, select one of the provided sample documents. Then use the **Detect** button to detect the language in which the sample is written.
 
-    ![Screenshot of a detected language in the Playground](./media/text-04.png)
+    ![Screenshot of a detected language in the Playground](./media/language_detection.png)
 
-3. After reviewing the detected language details, click on the **Edit** button icon to make the input text editable again. Now you can:
+1. After reviewing the detected language details, use the **Edit** button icon to make the input text editable again. Now you can:
     - Select another sample.
     - Type your own text.
     - Upload a text file.
@@ -156,22 +111,20 @@ In scenarios where text could potentially be in one of multiple languages, the f
     ¡Hola! Me llamo Josefina y vivo en Madrid, España. Soy doctora en un hospital, ¡lo que me mantiene muy ocupada!
     ```
 
-4. Experiment with input of your own.
+1. Experiment with input of your own.
 
     > **Tip**: You can use the [Bing Translator](https://www.bing.com/translator){:target="_blank"} at `https://www.bing.com/translator` to generate text in languages you don't speak!
-
-5. Return to the list of AI services when you are done experimenting. You can click on the back button at the top of the playground screen.
 
 ### Identify PII in text
 
 To comply with privacy policies and laws, organizations often need to detect and redact **personally identifiable information (PII)** such as names, addresses, phone numbers, email addresses, and other personal details.
 
-1. In the list of AI services, select the **Azure Language - Text PII extraction** analyzer.
+1. On the language detection playground page, in the **Type** drop-down list, select **Text PII extraction** (or return to the list of AI services and select **Azure Language - Text PII extraction**).
 2. In the **Input text** list, select one of the provided sample documents. Then use the **Detect** button to detect PII values in the text.
 
-    ![Screenshot of a detected PII in the Playground](./media/text-05.png)
+    ![Screenshot of a detected PII in the Playground](./media/pii_extraction.png)
 
-3. After reviewing the detected PII details, click on the **Edit** button to make the input text editable again. Now you can:
+3. After reviewing the detected PII details, use the **Edit** button to make the input text editable again. Now you can:
     - Select another sample.
     - Type your own text.
     - Upload a text file.
@@ -193,32 +146,27 @@ To comply with privacy policies and laws, organizations often need to detect and
 
 Foundry provides sample code for some Azure Language capabilities. You can use the sample code to begin creating your own client application.
 
-1. Select the **Code** tab on the right to view sample code for PII identification.
+1. Select the **Code** tab on the right to view sample code for PII identification, which should be similar to this:
 
-    ![Screenshot of the Code tab open in the Playground.](./media/text-05-code.png)
-
->**Tip**: Below is the same sample code in Python for your reference. You can copy the code and run it in your preferred Python development environment - for example Visual Studio Code. You will need to create environment variables for your Azure Language endpoint and key; which you can find in the code sample window.
-
-```python
-
-    key = "paste-your-key-here"
-    endpoint = "paste-your-endpoint-here"
-
-    from azure.ai.textanalytics import TextAnalyticsClient
-    from azure.core.credentials import AzureKeyCredential
-
-    # Authenticate the client using your key and endpoint 
-    def authenticate_client():
+    ```python
+   key = "<your-api-key>"
+   endpoint = "https://ai-resrce.cognitiveservices.azure.com/"
+    
+   from azure.ai.textanalytics import TextAnalyticsClient
+   from azure.core.credentials import AzureKeyCredential
+    
+   # Authenticate the client using your key and endpoint 
+   def authenticate_client():
         ta_credential = AzureKeyCredential(key)
         text_analytics_client = TextAnalyticsClient(
                 endpoint=endpoint, 
                 credential=ta_credential)
         return text_analytics_client
-
-    client = authenticate_client()
-
-    # Example method for detecting sensitive information (PII) from text 
-    def pii_recognition_example(client):
+    
+   client = authenticate_client()
+    
+   # Example method for detecting sensitive information (PII) from text 
+   def pii_recognition_example(client):
         documents = [
             "$documents"
         ]
@@ -232,8 +180,10 @@ Foundry provides sample code for some Azure Language capabilities. You can use t
                 print(" Confidence Score: {}".format(entity.confidence_score))
                 print(" Offset: {}".format(entity.offset))
                 print(" Length: {}".format(entity.length))
-    pii_recognition_example(client)
-```
+   pii_recognition_example(client)
+    ```
+
+>**Tip**: You can copy the code and run it in your preferred Python development environment - for example Visual Studio Code. You will need to create environment variables for your Azure Language endpoint and key; which you can find in the code sample window.
 
 ## Summary
 
@@ -247,9 +197,3 @@ If you have finished exploring Microsoft Foundry, delete any resources that you 
 
 1. Open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com) and select the resource group that contains the resources you created.
 1. Select **Delete resource group** and then **enter the resource group name** to confirm. The resource group is then deleted.
-
-## Learn more
-
-- Review the [evolution of Foundry](https://learn.microsoft.com/azure/foundry/what-is-foundry#evolution-of-foundry)
-- Read more about [Azure Language in Foundry Tools](https://learn.microsoft.com/azure/ai-services/language-service/overview)
-- Learn more about [Personally identifiable information (PII) detection](https://learn.microsoft.com/azure/ai-services/language-service/personally-identifiable-information/overview)

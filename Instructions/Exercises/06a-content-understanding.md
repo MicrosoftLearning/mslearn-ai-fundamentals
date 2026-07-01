@@ -31,11 +31,7 @@ This exercise takes approximately **25** minutes.
 
     > **Note**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
 
-3. Deselect the option to *Set up recommended resources...*. Then select **Create**.
-
-    ![Screenshot of the create a project page with the set up recommended resources option deselected.](./media/create-new-project.png)
-
-4. Wait for your project to be created. It may take a few minutes. After creating a project in the *new* Foundry portal, it should take you to a list of your projects (*note*: you may need to refresh the page to see your newly created project). Select the project you just created to open a page similar to the following image:
+3. Wait for your project to be created. It may take a few minutes. After creating a project in the *new* Foundry portal, it should take you to a list of your projects (*note*: you may need to refresh the page to see your newly created project). Select the project you just created to open a page similar to the following image:
 
     ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
@@ -244,6 +240,7 @@ As a developer, you can also use code to extract meaning from content. The Found
 
     ```json
     {
+
  "id": "",
  "status": "Succeeded",
  "result": {
@@ -298,7 +295,7 @@ As a developer, you can also use code to extract meaning from content. The Found
         },
         "confidence": 0.998,
         "source": "D(1,947,196,1218,189,1219,285,947,292)"
-       } 
+       }
     ...
     ```
 

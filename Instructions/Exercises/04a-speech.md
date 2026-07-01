@@ -48,7 +48,7 @@ Now let's create an agent.
 
     ![Screenshot of the agent playground.](./media/speech-agent.png)
 
-1. In the model drop-down list, ensure that a **gpt-4.1** model has been deployed and selected for your agent.
+1. In the model drop-down list, ensure that a model has been deployed and selected for your agent.
 1. Assign your agent the following **Instructions**:
 
     ```

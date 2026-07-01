@@ -40,13 +40,13 @@ Computer vision models enable AI systems to interpret image-based data, such as 
 1. Extract the downloaded archive in a local folder to see the files it contains. These files are the images you will use AI to analyze.
 1. Return to the browser tab containing your Microsoft Foundry project.
 1. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
-1. Search for and deploy the `gpt-4.1-mini` model using the default settings. Deployment may take a minute or so.
+1. Search for and deploy the `gpt-5-mini` model using the default settings. Deployment may take a minute or so.
 
-    > **Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different model - such as gpt-4.1, or gpt-4o. Alternatively, you can create a new project in a different region.
+    > **Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different model - such as gpt-5.1. Alternatively, you can create a new project in a different region.
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
-    ![Screenshot of the model playground.](./media/0-model-playground.png)
+    ![Screenshot of the model playground.](./media/model-playground.png)
 
 1. Use the button at the bottom of the left navigation pane to hide it and give yourself more room to work with.
 1. In the pane on the left, set the **Instructions** to `You are an AI cooking assistant who helps chefs with recipes.`
@@ -54,14 +54,12 @@ Computer vision models enable AI systems to interpret image-based data, such as 
 
     You can select the image you have added to view it.
 
-   ![Screenshot of a chat with an image in a prompt.](./media/0-image-input.png)
+   ![Screenshot of a chat with an image in a prompt.](./media/image_prompt.png)
 
 1. Enter prompt text like `What recipes can I use this in?` and submit the prompt, which contains both the uploaded image and the text.
 1. Review the response, which should include relevant recipe suggestions for the image you uploaded.
 
-   ![Screenshot of the chat app with the response to an image-based prompt.](./media/0-image-analysis.png)
-
-    > **NOTE**: If the error *ERR_BAD_REQUEST: The provided data does not match the expected schema* is returned, try switching to the *Classic* portal by de-selecting the **New Foundry** option. In the classic portal, open the **Chat playground** in the **Playgrounds** page.
+   ![Screenshot of the chat app with the response to an image-based prompt.](./media/image_analysis.png)
 
 1. Submit prompts that include the other images, such as `How should I cook this?` or `What desserts could I make with this?`
 
@@ -80,7 +78,7 @@ To develop a client app or agent that can use the model to interpret images, you
     from openai import OpenAI
     
     endpoint = "https://your-project-resource.openai.azure.com/openai/v1/"
-    deployment_name = "gpt-4.1-mini"
+    deployment_name = "gpt-5-mini"
     api_key = "<your-api-key>"
     
     client = OpenAI(
@@ -110,7 +108,7 @@ So far you've explored the ability of a generative AI model to process visual in
 
 > **Note**: This task requires a subscription that has access to image-generation models.
 
-1. Use the "back" arrow next to the **gpt-4.1-mini** header (or select the **Models** page in the navigation pane) to view the model deployments in your project.
+1. Use the "back" arrow next to the **gpt-5-mini** header (or select the **Models** page in the navigation pane) to view the model deployments in your project.
 1. Select **Deploy a base model** to open the model catalog.
 1. In the **Collections** drop-down list, select **Direct from Azure**, and in the **Inference tasks** drop-down list, select **Text to image**. Then view the available models for image generation.
 
@@ -118,7 +116,7 @@ So far you've explored the ability of a generative AI model to process visual in
 
     > **Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availabilty and quota.
 
-1. Select an available text-to-image model, such as **FLUX.2-pro** or **FLUX-1-Kontext-pro**, and deploy it.
+1. Select an available text-to-image model, such as **gpt-image-1-mini** or **FLUX.2-pro**, and deploy it.
 
     *If one of these models is unavailable in your subscription or region, deploy another text-to-image model that is available.*
 

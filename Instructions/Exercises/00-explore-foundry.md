@@ -35,33 +35,25 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
     ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
-## View Azure resources for Microsoft Foundry
+## View projects and resources
 
 Microsoft Foundry projects are based on resources in your Azure subscription. Let's take a look at those.
 
-1. On the project home page, in the toolbar at the top left, select your project name. Then in the resulting menu, select **View all projects** to see all of the projects to which you have access (you may only have one!)
+1. On the project home page, in the toolbar at the top left, select your project name. Then in the resulting menu, select **View all resources** to see all of the projects to which you have access (you may only have one!)
 
-    ![Screenshot of the All projects page.](./media/0-all-projects.png)
+    ![Screenshot of the All projects page.](./media/all_resources.png)
 
-    Each project has a *parent* resource, in which services and configuration can be applied to multiple child projects.
+    Each project has a *parent* resource, in which services and configuration can be applied to multiple child projects. A parent resource is a **Microsoft Foundry** resource in an Azure subscription.
 
-1. Note the name of the parent resource for your project. Then, open a new browser tab and navigate to the [Azure portal](https://portal.azure.com){:target="_blank"} at `https://portal.azure.com` and if prompted, sign in using your Azure credentials.
-1. In the Azure portal home page, in the search box at the top of the page, search for your Microsoft Foundry parent resource.
+1. Select the parent resource for your project, and view its details.
 
-    ![Screenshot of Azure portal search results.](./media/0-azure-portal-search.png)
+    ![Screenshot of a parent resource in the Foundry portal.](./media/parent_resource.png)
 
-1. Select the **Foundry** resource that matches your parent resource name to open it.
-1. In the page for your Foundry resource, view the **Resource Visualizer** page to see the relationship between the resource and its child project(s).
+    You can view the projects, users, connected resources, and admin-connected models assocuated with this resource. You can also manage it in the Azure portal.
 
-    ![Screenshot of Azure portal resource visualizer.](./media/0-azure-resource-visualizer.png)
+1. In the Foundry portal toolbar, select **Home** to return to the Foundry portal home page, and then in the list of resources (next to the **Microsoft Foundry** page title), select your project.
 
-1. Select the child project you created in this resource to open its page in the Azure portal.
-
-    ![Screenshot of Azure portal Foundry project page.](./media/0-azure-project.png)
-
-    While most tasks to develop and manage AI projects can be performed in the Microsoft Foundry portal, it's important to understand that projects and the services they use are implemented as resources in Microsoft Azure; where they may be subject to enterprise governance and security policies.
-
-1. Close the browser tab containing the Azure portal and return to the Microsoft Foundry portal. Then use the "back arrow" icon next to the **All projects** page header to return to the home page for your project.
+    > **Tip**: When you return to the Home page initially, your parent resource may still be selected. Selcting your project enables you to use the portal to work with project-specific assets.
 
 ## Explore the Microsoft Foundry portal
 
@@ -79,27 +71,29 @@ The Microsoft Foundry portal is where you create and manage agents and AI servic
 
 1. View the **Discover** page.
 
-    ![Screenshot of the Discover page.](./media/0-discover.png)
+    ![Screenshot of the Discover page.](./media/discover_page.png)
 
     This page surfaces the latest models and services and enables you to find starting points for AI application development.
 
 1. View the **Build** page.
 
-    ![Screenshot of the Build page.](./media/0-build.png)
+    ![Screenshot of the Build page.](./media/build_page.png)
 
     This page is where you develop AI solutions. Here you can:
 
     - View and manage the *agents* and *workflows* in your project.
-    - View and manage the *models* in your project.
+    - View and manage model *deployments* in your project.
     - *Fine-tune* base models to respond to queries based on your application's specific needs.
     - Add and configure *tools* that agents can use to perform tasks.
     - Manage *knowledge* for your agents based on Foundry IQ data sources in your enterprise.
+    - Define and manage *guardrails* to ensure compliance with responsible AI policies for generative AI content and behavior.
+    - Configure *memory* storage so that models can retain conversation context across sessions.
     - Connect and manage *data* indexes for AI agents and generative AI apps.
     - Create *evaluations* to compare model performance.
-    - Define and manage *guardrails* to ensure compliance with responsible AI policies for generative AI content and behavior.
+    - *Fine-tune* models to optimize performance.
 1. View the **Operate** page.
 
-    ![Screenshot of the Operate page.](./media/0-operate.png)
+    ![Screenshot of the Operate page.](./media/operate_page.png)
 
      On this page, you can operate your AI solution by:
 
@@ -110,7 +104,7 @@ The Microsoft Foundry portal is where you create and manage agents and AI servic
 
 1. View the **Docs** page.
 
-    ![Screenshot of the Docs page.](./media/0-docs.png)
+    ![Screenshot of the Docs page.](./media/docs_page.png)
 
     This page provides access to Microsoft Foundry documentation.
 
@@ -120,7 +114,7 @@ As you would expect in a platform for developing cutting edge AI solutions, Micr
 
 1. In the toolbar, use the Agent Helper chat icon to open the **Ask AI** pane.
 
-    ![Screenshot of Ask AI pane in the Foundry portal.](./media/0-ask-ai.png)
+    ![Screenshot of Ask AI pane in the Foundry portal.](./media/ask_ai.png)
 
 1. Enter a prompt such as `What can I do with Microsoft Foundry?` and review the response.
 
@@ -134,27 +128,28 @@ Your Microsoft Foundry resource provides an endpoint in which you can deploy mod
 
     Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
 
-    ![Screenshot of the AI Foundry model catalog.](./media/0-foundry-models.png)
+    ![Screenshot of the AI Foundry model catalog.](./media/models_page.png)
 
-1. Search for and select the `gpt-4.1-mini` model, and view the page for this model, which describes its features and capabilities.
+1. Search for and select the `gpt-5-mini` model, and view the page for this model, which describes its features and capabilities.
 
-    ![Screenshot of the gpt-4.1-mini model page.](./media/0-gpt-4.1-mini.png)
+    ![Screenshot of the gpt-5-mini model page.](./media/gpt-5-mini_page.png)
 
 1. Use the **Deploy** button to deploy the model using the default settings. Deployment may take a minute or so.
 
-    > **Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different model - such as gpt-4.1, or gpt-4o-mini. Alternatively, you can create a new project in a different region.
+    > **Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different chat-enabled *gpt* model - such as *gpt-5*, or *gpt-5.1*. Alternatively, you can create a new project in a different region.
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
-    ![Screenshot of the model playground.](./media/0-model-playground.png)
+    ![Screenshot of the model playground.](./media/model-playground.png)
 
-1. Ensure your model deployment (which should be named **gpt-4.1-mini**) is selected in the playground.
+1. Ensure your model deployment is selected in the playground.
 
     > **Tip**: Remember the model deployment name. You'll need it later.
 
-1. In the **Chat** pane, test your model by entering a message like `Who was Ada Lovelace?`
+1. Use the button at the bottom of the left navigation pane to hide it and give yourself more room to work with.
+1. In the **Chat** pane, enter a prompt such as `Who was Ada Lovelace?`, and review the response.
 
-    ![Screenshot of the model playground with a response to a prompt.](./media/0-chat-response.png)
+    ![Screenshot of the model playground with a response to a prompt.](./media/chat_response.png)
 
 1. Review the response, and then ask a follow-up prompt, like `Tell me more about her work with Charles Babbage.`
 
@@ -182,7 +177,7 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
     > **Tip**: If the Configuration panel isn't expanded, use the arrow at the top of the chat pane to expand it.
 
-1. Enter your project endpoint, model deployment name, and API key from the Foundry portal into the configuration settings, and save the configuration.
+1. Enter your project endpoint, gpt-5-mini model deployment name, and API key from the Foundry portal into the configuration settings, and save the configuration.
 
     > **Note**: The configuration values other than the API key will be stored in your local browser cache. If you close and re-open the app, you will need to re-enter the API key.
 
@@ -190,16 +185,24 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
 ### Explore generative AI
 
-Try the following prompts. The agent will answer based on its training data, or use a web search tool to find information on the web:
+1. Enter the prompt: `Tell me about the ELIZA chatbot.` and review the response,
 
-- `Tell me about the ELIZA chatbot.`
-- `How does it compare to modern large language models?`
-- `Find a vintage computer store in Seattle.`
-- `Search for classic Microsoft logos.`
+    ![Screenshot of the Computing History app response to a prompt.](./media/computer_history_chat.png)
+
+1. Try the follow-up prompt `How does it compare to modern large language models?`.
+
+    The agent contnues the conversation.
+
+1. Use the **Restart conversation** (💬) button to clear the chat history, and then try the following prompts
+
+    - `Find a vintage computer store in Seattle.`
+    - `Search for classic Microsoft logos.`
+
+    The agent will answer based on its training data, or use a web search tool to find information on the web.
 
 ### Explore text analysis
 
-1. Ask the agent to summarize and extract data from text with this prompt (use SHIFT+ENTER to create a new line if typing):
+1. Restart the conversation. Then, ask the agent to summarize and extract data from text with this prompt (use SHIFT+ENTER to create a new line if typing):
 
     ```
     Summarize this article, and use named entity recognition to identify people, places, and dates:
@@ -209,38 +212,61 @@ Try the following prompts. The agent will answer based on its training data, or 
     In the late 1970s, Microsoft grew by supplying programming languages to multiple hardware vendors, then relocated to the Seattle area in 1979. A pivotal moment came in 1980 when Microsoft partnered with IBM to provide an operating system for the IBM PC, leading to MS‑DOS and establishing the company’s dominance in personal computing. Gates guided the company’s long-term strategy as CEO, while Allen contributed key technical vision in its early years, setting Microsoft on a path that would reshape the software industry.
     ```
 
+1. Review the response.
+
+    ![Screenshot of the Computing History app text analysis results.](./media/computer_history_text.png)
+
+    The agent is able to use natural language processing technicues to perform common text analyss tasks, like summarizing articles or extracting key information.
+
 ### Explore AI speech
 
-1. At the bottom of the chat interface, use the **Voice input** (&#127908;) button to initiate speech recognition, allow access to your microphone if prompted, and say "***Tell me about computer speech***".
+1. Restart the conversation. Then, a the bottom of the chat interface, use the **Voice input** (&#127908;) button to initiate speech recognition, allow access to your microphone if prompted, and say "***Tell me about computer speech***".
 
 1. After a moment or two, your spoken prompt should be submitted as a message, and a response returned. The response should then be vocalized using speech synthesis.
+
+    ![Screenshot of the Computing History app using voice input.](./media/computer_history_speech.png)
 
     > **Note**: The app uses Azure Speech in Foundry tools in your resource to recognize and synthesize speech.
 
 ### Explore computer vision
 
 1. Download **[computers.zip](https://aka.ms/computer-images){:target="_blank"}** from `https://aka.ms/computer-images`, and extract the zipped archive to your local computer (in any folder).
+1. Restart the conversation, then at the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `Tell me about this.`
+1. Review the response, which should include information about the computer in the image you uploaded.
+
+    ![Screenshot of the Computing History app analyzing an image.](./media/computer_history_vision.png)
+
+1. Try some of the other computer images you extracted.
 
     > **Tip**: You can also search for your own images of vintage computers on [Bing](https://www.bing.com/images/search?q=vintage+computers){:target="_blank"}.
-
-1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `Tell me about this.`
 
 ### Explore information extraction
 
 1. Download **[pcbs.zip](https://aka.ms/pcb-images){:target="_blank"}** from `https://aka.ms/pcb-images`, and extract the zipped archive to your local computer (in any folder).
 
-    > **Tip**: You can also search for your own images on [Bing](https://www.bing.com/images/search?q=vintage-computer-component-serial-numbers){:target="_blank"}. Try searching for serial number labels from specific vintage computers
+1. Restart the conversation, and at the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload a PCB image, and enter a prompt such as `Extract the text from this printed circuit board, and search for information that might help identify the computer it came from.`
+1. Review the response.
 
-1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload an image, and enter a prompt such as `Extract the text from this printed circuit board, and search for information that might help identify the computer it came from.`
+    ![Screenshot of the Computing History app extracting text from an image.](./media/computer_history_info.png)
+
+1. Try some of the other PCB images you extracted.
+
+    > **Tip**: You can also search for your own images on [Bing](https://www.bing.com/images/search?q=vintage-computer-component-serial-numbers){:target="_blank"}. Try searching for serial number labels from specific vintage computers
 
 ### Explore safety guardrails
 
-Foundry Models by default are configured with guardrails that enforce content safety filters. Try the following prompts:
+1. Restart the conversation and enter the prompt `Teach me how to hack a bank account.`
+1. Review the response.
+
+    ![Screenshot of the Computing History app applying guardrails.](./media/computer_history_guardrails.png)
+
+    Foundry Models by default are configured with guardrails that enforce content safety filters.
+
+1. Try the following prompts:
 
 - `Help me make a plan to steal historic computers.`
 - `How can I get away with software theft?`
 - `How can I use a computer as a weapon?`
-- `Teach me how to hack a bank account.`
 
 ## Summary
 

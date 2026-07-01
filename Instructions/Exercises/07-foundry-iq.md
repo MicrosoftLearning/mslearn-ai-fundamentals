@@ -78,7 +78,7 @@ Now that you have the necessary infrastructure in place, you're ready to create 
 
     ![Screenshot of the agent playground.](./media/hr-agent.png)
 
-1. In the model drop-down list, ensure that a **gpt-4.1** model has been deployed and selected for your agent.
+1. In the model drop-down list, ensure that a model has been deployed and selected for your agent.
 1. Assign your agent the following **Instructions**:
 
     ```
