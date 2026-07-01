@@ -11,7 +11,7 @@ lab:
 
 # Get started with Foundry IQ in Microsoft Foundry
 
-The HR department at Contoso Corp wants to reduce employee support effort and empower employees by providing a self-service solution for queries about HR polices and procedures.
+The HR department at Contoso Corp wants to reduce employee support effort and empower employees by providing a self-service solution for queries about HR policies and procedures.
 
 In this exercise, you'll use Microsoft Foundry IQ to create an AI agent that uses knowledge contained in HR documentation to advise employees on HR-related issues.
 
@@ -56,7 +56,7 @@ Let's start by setting up an enterprise data source for HR policy and procedure 
     - Any of regions in **[this list](https://learn.microsoft.com/azure/foundry/openai/how-to/responses#region-availability)**{:target="_blank"}
     - A unique name for your Azure AI Search resource
 
-1. Wait for the script to deploy Azure AI Search and create the index you will use in this exercise.
+1. Wait for the script to deploy Azure AI Search and create the index you'll use in this exercise.
 1. When the script has finished, close the cloud shell pane and in the Azure portal home page, select **Resource groups**. Then open the resource group you specified and verify that it contains an Azure AI Search resource with the name you specified.
 
 ## Create an AI agent
@@ -64,7 +64,7 @@ Let's start by setting up an enterprise data source for HR policy and procedure 
 Now that you have the necessary infrastructure in place, you're ready to create an AI agent that can search the HR documentation for answers to employee questions.
 
 1. In your web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
-1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, when prompted, create a new project with a unique name; expanding the  **Advanced options** area to deploy the project in the resource group where you deployed Azure AI Search.
+1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, when prompted, create a new project with a unique name; expanding the  **Advanced options** area to deploy the project in the resource group where you deployed Azure AI Search.
 
     > **Note**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
 
@@ -100,7 +100,7 @@ Now that you have the necessary infrastructure in place, you're ready to create 
    What is the capital of France?
     ```
 
-    The agent should not engage in a conversation about European capitals! It should redirect the topic to HR policies and procedures.
+    The agent shouldn't engage in a conversation about European capitals! It should redirect the topic to HR policies and procedures.
 
 1. Now try this:
 
@@ -108,7 +108,7 @@ Now that you have the necessary infrastructure in place, you're ready to create 
    How many vacation days do employees get?
     ```
 
-    The agent may respond with what *seems* like a correct answer. However, the agent currently has no knowledge of Contoso's HR policies and procedures; so the answer is not grounded in accurate information.
+    The agent may respond with what *seems* like a correct answer. However, the agent currently has no knowledge of Contoso's HR policies and procedures; so the answer isn't grounded in accurate information.
 
     Let's fix that!
 
@@ -169,7 +169,7 @@ Now you're ready to use the new knowledge store in the HR agent.
 
 1. When you've saved the knowledge store, in the **use in an agent** drop-down list, select your HR agent.
 
-    The agent is opened in the agent playground, with the knowedge store attached.
+    The agent is opened in the agent playground, with the knowledge store attached.
 
 1. In the chat pane, enter the following query:
 
@@ -177,7 +177,7 @@ Now you're ready to use the new knowledge store in the HR agent.
    How many vacation days do employees get?
     ```
 
-    If the agent determines that it should use Foundry IQ to find context for its answer, you will be prompted to approve access. You can choose how to control tool access for the agent (once, always, or approve all tools).
+    If the agent determines that it should use Foundry IQ to find context for its answer, you'll be prompted to approve access. You can choose how to control tool access for the agent (once, always, or approve all tools).
 
     ![Screenshot of the Approve prompt.](./media/allow-foundry-iq.png)
 
@@ -207,13 +207,13 @@ Employees will consume the agent through a web application in the company's inte
 
 In this exercise, you explored how to use Foundry IQ to connect an agent to a knowledge source. While the example in this exercise is simple, it demonstrates the ability to ground agents in contextual knowledge to improve the accuracy and relevance of responses.
 
-Using Foundry IQ offers many advantages over a custom implementation of the retrieval augmented generation (RAG) pattern that is prevalent in generative AI solutions. By centralizing access to knowledge in a single tool, you can offload the data source selection and retrieval logic to Foundry IQ, and reuse knowledge sources across multiple agents without the need to duplicate code or data access logic.
+Using Foundry IQ offers many advantages over a custom implementation of the retrieval augmented generation (RAG) pattern that's prevalent in generative AI solutions. By centralizing access to knowledge in a single tool, you can offload the data source selection and retrieval logic to Foundry IQ, and reuse knowledge sources across multiple agents without the need to duplicate code or data access logic.
 
 > **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just an example of an AI agent for you to explore as you learn about what's possible with AI.*<br/><br/>If you *do* check out Ask Anton, we'd love you to *[tell us about your experience](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}*!
 
 ## Clean Up
 
-If you have finished exploring Microsoft Foundry, you should delete the resources created in this exercises to avoid unnecessary utilization charges.
+If you have finished exploring Microsoft Foundry, you should delete the resources created in this exercise to avoid unnecessary utilization charges.
 
 1. Open the [Azure portal](https://portal.azure.com){:target="_blank"} at `https://portal.azure.com` and view the contents of the resource group where you deployed the project used in this exercise.
 1. On the toolbar, select **Delete resource group**.

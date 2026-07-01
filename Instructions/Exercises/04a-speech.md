@@ -26,7 +26,7 @@ Microsoft Foundry uses projects to organize models, resources, data, and other a
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
 
-1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
+1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
@@ -70,7 +70,7 @@ Enabling speech mode for a Foundry agent integrates Azure Speech Voice Live - ad
 
 1. In the pane on the left, under the model selection list, enable **Voice mode**.
 
-    If the **Configuration** pane does not open automatically, use the "cog" icon above the chat interface to open it.
+    If the **Configuration** pane doesn't open automatically, use the "cog" icon above the chat interface to open it.
 
 1. In the **Configuration** pane, under **Voice mode**, review the default speech input and output configuration. You can try different voices, previewing them until you decide which one to use.
 1. Close the **Configuration** pane and use the **Save** button to save the agent.

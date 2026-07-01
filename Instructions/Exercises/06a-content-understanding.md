@@ -11,7 +11,7 @@ lab:
 
 # Get started with information extraction in Microsoft Foundry
 
-In this exercise, you will use Azure Content Understanding in Foundry, Microsoft's platform for creating intelligent applications.
+In this exercise, you'll use Azure Content Understanding in Foundry, Microsoft's platform for creating intelligent applications.
 
 Azure Content Understanding is a Foundry service that uses AI models to turn unstructured, multimodal content (documents, images, video, audio) into structured, usable outputs like JSON. It processes content by extracting, classifying, and generating fields with confidence scores and source grounding.
 
@@ -23,7 +23,7 @@ This exercise takes approximately **25** minutes.
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
 
-2. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a *new project* with a unique name; expanding the **Advanced options** area to specify the following settings for your project:
+2. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a *new project* with a unique name; expanding the **Advanced options** area to specify the following settings for your project:
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
@@ -86,7 +86,7 @@ This exercise takes approximately **25** minutes.
 
 5. Let's try to use the full analyzer with our own invoice. Open a new browser window. Enter the following URL: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf` to download **[contoso-invoice-1.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf){:target="_blank"}** .
 
-6. Back in the Content Understanding playground in the Foundry portal, use the **Browse for files** link to upload the **contoso-invoice-1.pdf** document you just downloaded. Select **Run analysis** and review the results. Notice that not only is the text rendered, but its layout is captured, and the fields are organized into cohesive categories.  
+6. Back in the Content Understanding playground in the Foundry portal, use the **Browse for files** link to upload the **contoso-invoice-1.pdf** document you downloaded. Select **Run analysis** and review the results. Notice that not only is the text rendered, but its layout is captured, and the fields are organized into cohesive categories.  
 
     ![Screenshot of the results of using the document fields analzyer to analyze the Contoso invoice.](./media/contoso-invoice-analysis-document-fields.png)
 

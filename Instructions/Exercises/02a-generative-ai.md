@@ -23,7 +23,7 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
 
-1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
+1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
@@ -107,11 +107,11 @@ When you're satisfied with the responses a model returns in the playground, you 
 
 ## Specify instructions in a *system prompt*
 
-So far, you've used the model to provide general information. To support specific use cases, you should use a *system prompt* to provide the model with instructions that guide its responses. You can use the system prompt to give the model a specific focus or role, and provide guidelines about format, style, and constraints about what the model should and should not include in its responses.
+So far, you've used the model to provide general information. To support specific use cases, you should use a *system prompt* to provide the model with instructions that guide its responses. You can use the system prompt to give the model a specific focus or role, and provide guidelines about format, style, and constraints about what the model should and shouldn't include in its responses.
 
 For example, suppose an organization wants to use a generative AI model to power an AI agent that assists employees with expense claims.
 
-1. In the model playground, switch back to the **Chat** tab. Then, at the top-right of the chat pane, use the **New chat** button to restart the conversation and removes the conversation history.
+1. In the model playground, switch back to the **Chat** tab. Then, at the top right of the chat pane, use the **New chat** button to restart the conversation and removes the conversation history.
 1. In the pane on the left, in the **Instructions** text area, change the system prompt to:
 
     ```
@@ -122,7 +122,7 @@ For example, suppose an organization wants to use a generative AI model to power
 
     Review the response, which should provide some general guidance about expense claims.
 
-1. Try asking a question that is unrelated to expenses, such as `What's the capital of Spain?`; and compare the response now that the system prompt has changed.
+1. Try asking a question that's unrelated to expenses, such as `What's the capital of Spain?`; and compare the response now that the system prompt has changed.
 
     So far, we've specified instructions in the *playground*; but they're not saved outside of that environment. In a client application, you would need to include the system prompt as an **instructions** parameter in the **responses.create** method, like this:
 
@@ -184,9 +184,9 @@ The web search tool is great for finding general information on the public Inter
 
 1. Try a few more expenses-related prompts, like `What about a hotel?` or `Can I claim the cost of my dinner?`
 
-    You've successfully added tools to your agent, so it now encapsulates the instructions and capabilities you need to support employees with expense enquiries.
+    You've successfully added tools to your agent, so it now encapsulates the instructions and capabilities you need to support employees with expense inquiries.
 
-1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Note that its definition includes the instructions you set in the system prompt, and web search and file search tools you added (in the **tools** section):
+1. In the pane on the right, view the **YAML** tab, which contains the definition for your agent. Its definition includes the instructions you set in the system prompt, and web search and file search tools you added (in the **tools** section):
 
     ```yml
     metadata:
@@ -271,9 +271,9 @@ The agent is defined within your Foundry project, and there's a convenient way t
     print(f"Response output: {response.output_text}")
     ```
 
-    The code to connect to your agent uses the **Azure.AI.Projects** library to create an **AIProjectClient** object connected to your Foundry project. Since this involves connecting to a project, which may contain priveleged resources, key-based authentication is <u>not</u> supported, and the application must use an Entra ID identity to be authenticated.
+    The code to connect to your agent uses the **Azure.AI.Projects** library to create an **AIProjectClient** object connected to your Foundry project. Since this involves connecting to a project, which may contain privileged resources, key-based authentication is <u>not</u> supported, and the application must use an Entra ID identity to be authenticated.
 
-    After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we peviously saw being used to chat with a model. Since a project can contain multiple agents and models, the specific agent details are specified as **extra_body** in the **responses.create** method.
+    After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we previously saw being used to chat with a model. Since a project can contain multiple agents and models, the specific agent details are specified as **extra_body** in the **responses.create** method.
 
 1. In the **Call agent** tab, use the available option to start coding in **VS Code for the web**.
 
@@ -290,7 +290,7 @@ The agent is defined within your Foundry project, and there's a convenient way t
    python run_agent.py
     ```
 
-    The output should inlude a response to the prompt *Tell me what you can help with.*
+    The output should include a response to the prompt *Tell me what you can help with.*
 
     ![Screenshot of VS Code for the Web with output from the agent.](./media/vs-code-output.png)
 
@@ -308,7 +308,7 @@ The agent explored in this exercise is a simple example that demonstrates how qu
 
 ## Clean Up
 
-If you have finished exploring Microsoft Foundry, you should delete the resources created in this exercises to avoid unnecessary utilization charges.
+If you have finished exploring Microsoft Foundry, you should delete the resources created in this exercise to avoid unnecessary utilization charges.
 
 1. Open the [Azure portal](https://portal.azure.com){:target="_blank"} at `https://portal.azure.com` and view the contents of the resource group where you deployed the project used in this exercise.
 1. On the toolbar, select **Delete resource group**.

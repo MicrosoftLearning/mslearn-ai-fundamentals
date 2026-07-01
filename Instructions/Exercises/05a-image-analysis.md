@@ -20,7 +20,7 @@ This exercise should take approximately **30** minutes to complete.
 Microsoft Foundry uses *projects* to organize models, resources, data, and other assets used to develop an AI solution.
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
-1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
+1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
@@ -37,7 +37,7 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 Computer vision models enable AI systems to interpret image-based data, such as photographs, videos, and other visual elements. In this exercise, you'll explore how the developer of an AI agent to help aspiring chefs could use a vision-enabled model to interpret images of ingredients and suggest relevant recipes.
 
 1. In a new browser tab, download **[images.zip](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip){:target="_blank"}** `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip` to your local computer.
-1. Extract the downloaded archive in a local folder to see the files it contains. These files are the images you will use AI to analyze.
+1. Extract the downloaded archive in a local folder to see the files it contains. These files are the images you'll use AI to analyze.
 1. Return to the browser tab containing your Microsoft Foundry project.
 1. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
 1. Search for and deploy the `gpt-5-mini` model using the default settings. Deployment may take a minute or so.
@@ -118,10 +118,10 @@ So far you've explored the ability of a generative AI model to process visual in
 
 1. Select an available text-to-image model, such as **gpt-image-1-mini** or **FLUX.2-pro**, and deploy it.
 
-    *If one of these models is unavailable in your subscription or region, deploy another text-to-image model that is available.*
+    *If one of these models is unavailable in your subscription or region, deploy another text-to-image model that's available.*
 
 1. When the model has been deployed, it opens in the image playground.
-1. Enter a prompt describing a desired image; for example `A chef preparing a meal.` Then review the generated image.
+1. Enter a prompt describing a desired image; for example, `A chef preparing a meal.` Then review the generated image.
 
    ![Screenshot of the image playground with a generated image.](./media/0-generated-image.png)
 
@@ -183,7 +183,7 @@ In addition to static images, you may want to include video content on the AI Ch
     *If the Sora-2 model is available in your subscription, you may need to request access to the latest available model.*
 
 1. When the model has been deployed, it opens in the video playground.
-1. Enter a prompt describing a desired video; for example `A chef in a busy kitchen.` Then review the generated video.
+1. Enter a prompt describing a desired video; for example, `A chef in a busy kitchen.` Then review the generated video.
 
    ![Screenshot of the video playground with a generated video.](./media/0-generated-video.png)
 

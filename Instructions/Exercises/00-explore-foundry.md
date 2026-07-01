@@ -23,7 +23,7 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
 
-1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
+1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
@@ -49,11 +49,11 @@ Microsoft Foundry projects are based on resources in your Azure subscription. Le
 
     ![Screenshot of a parent resource in the Foundry portal.](./media/parent_resource.png)
 
-    You can view the projects, users, connected resources, and admin-connected models assocuated with this resource. You can also manage it in the Azure portal.
+    You can view the projects, users, connected resources, and admin-connected models associated with this resource. You can also manage it in the Azure portal.
 
 1. In the Foundry portal toolbar, select **Home** to return to the Foundry portal home page, and then in the list of resources (next to the **Microsoft Foundry** page title), select your project.
 
-    > **Tip**: When you return to the Home page initially, your parent resource may still be selected. Selcting your project enables you to use the portal to work with project-specific assets.
+    > **Tip**: When you return to the Home page initially, your parent resource may still be selected. Selecting your project enables you to use the portal to work with project-specific assets.
 
 ## Explore the Microsoft Foundry portal
 
@@ -191,7 +191,7 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
 1. Try the follow-up prompt `How does it compare to modern large language models?`.
 
-    The agent contnues the conversation.
+    The agent continues the conversation.
 
 1. Use the **Restart conversation** (💬) button to clear the chat history, and then try the following prompts
 
@@ -216,11 +216,11 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
     ![Screenshot of the Computing History app text analysis results.](./media/computer_history_text.png)
 
-    The agent is able to use natural language processing technicues to perform common text analyss tasks, like summarizing articles or extracting key information.
+    The agent is able to use natural language processing techniques to perform common text analysis tasks, like summarizing articles or extracting key information.
 
 ### Explore AI speech
 
-1. Restart the conversation. Then, a the bottom of the chat interface, use the **Voice input** (&#127908;) button to initiate speech recognition, allow access to your microphone if prompted, and say "***Tell me about computer speech***".
+1. Restart the conversation. Then, at the bottom of the chat interface, use the **Voice input** (&#127908;) button to initiate speech recognition, allow access to your microphone if prompted, and say "***Tell me about computer speech***".
 
 1. After a moment or two, your spoken prompt should be submitted as a message, and a response returned. The response should then be vocalized using speech synthesis.
 
@@ -276,7 +276,7 @@ in this exercise, you explored a Microsoft Foundry project and familiarized your
 
 ## Clean Up
 
-If you have finished exploring Microsoft Foundry, you should delete the resources created in this exercises to avoid unnecessary utilization charges.
+If you have finished exploring Microsoft Foundry, you should delete the resources created in this exercise to avoid unnecessary utilization charges.
 
 1. Open the [Azure portal](https://portal.azure.com){:target="_blank"} at `https://portal.azure.com` and view the contents of the resource group where you deployed the project used in this exercise.
 1. On the toolbar, select **Delete resource group**.

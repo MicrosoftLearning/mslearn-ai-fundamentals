@@ -20,7 +20,7 @@ This exercise takes approximately **20** minutes.
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
 
-2. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the **Advanced options** area to specify the following settings for your project:
+2. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the **Advanced options** area to specify the following settings for your project:
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
@@ -46,7 +46,7 @@ In this part of the exercise, you'll use a general-purpose language model to per
 
     ![Screenshot of the gpt-5-mini model page with the default settings deployment option highlighted.](./media/gpt-5-mini_page.png)
 
-3. Use the **Deploy** button to deploy the model using the *default settings*. Wait for the deployment to complete. After the deployment is complete, you are taken to a chat playground, where you can test out the model's capabilities.
+3. Use the **Deploy** button to deploy the model using the *default settings*. Wait for the deployment to complete. After the deployment is complete, you're taken to a chat playground, where you can test out the model's capabilities.
 
 ### Analyze sentiment
 
@@ -81,13 +81,13 @@ In this part of the exercise, you'll use a general-purpose language model to per
 
 While a language model that's trained for general generative AI workloads can often do a great job of text analysis, sometimes a more specialized tool can be used by an agent to get more predictable results.
 
-The **Azure Language in Foundry Tools** provides purpose-built analyzers that use statistical techniques to return structured, deterministic results — ideal for consistent output in automated pipelines.
+The **Azure Language in Foundry Tools** provides purpose-built analyzers that use statistical techniques to return structured, deterministic results—ideal for consistent output in automated pipelines.
 
 1. In the Foundry portal, navigate to the menu at the top of the screen and select **Build**.
 
 1. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it). In the menu, select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
 
-    Microsoft Foundry Tools includes multiple AI Services (formerly known as Microsoft Cognitive Services) that support common speech, translation, language, and content udenrstanding workloads.
+    Microsoft Foundry Tools includes multiple AI Services (formerly known as Microsoft Cognitive Services) that support common speech, translation, language, and content understanding workloads.
 
     ![Screenshot of Foundry AI services page.](./media/ai_services.png)
 
@@ -105,7 +105,7 @@ In scenarios where text could potentially be in one of multiple languages, the f
     - Type your own text.
     - Upload a text file.
 
-    For example, enter the following input text and detect the language it is written in:
+    For example, enter the following input text and detect the language it's written in:
 
     ```
     ¡Hola! Me llamo Josefina y vivo en Madrid, España. Soy doctora en un hospital, ¡lo que me mantiene muy ocupada!
