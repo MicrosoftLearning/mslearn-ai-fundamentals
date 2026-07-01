@@ -123,7 +123,7 @@ So far you've explored the ability of a generative AI model to process visual in
 1. When the model has been deployed, it opens in the image playground.
 1. Enter a prompt describing a desired image; for example, `A chef preparing a meal.` Then review the generated image.
 
-   ![Screenshot of the image playground with a generated image.](./media/0-generated-image.png)
+   ![Screenshot of the image playground with a generated image.](./media/generated_image.png)
 
 ### View code
 
@@ -185,7 +185,7 @@ In addition to static images, you may want to include video content on the AI Ch
 1. When the model has been deployed, it opens in the video playground.
 1. Enter a prompt describing a desired video; for example, `A chef in a busy kitchen.` Then review the generated video.
 
-   ![Screenshot of the video playground with a generated video.](./media/0-generated-video.png)
+   ![Screenshot of the video playground with a generated video.](./media/generated_video.png)
 
 ### View code
 
