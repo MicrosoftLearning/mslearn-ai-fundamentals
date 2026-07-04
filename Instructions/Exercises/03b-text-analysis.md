@@ -2,6 +2,9 @@
 lab:
   title: Get started with text analysis in Microsoft Foundry
   description: Use Microsoft Foundry to try out different types of text analysis.
+  level: 200
+  duration: 25 minutes
+  islab: true
   primarytopics:
     - Microsoft Foundry
 ---
@@ -12,7 +15,7 @@ In this exercise, you'll use **Microsoft Foundry**, Microsoft's platform for cre
 
 Foundry offers *two approaches* to text analysis: **general-purpose AI models** that handle a broad range of tasks through natural language prompts, and **purpose-built language tools** that return structured, deterministic results for specific tasks. By exploring both, you'll gain a clearer understanding of when to use each approach.
 
-In the first part of this exercise, you'll use a general purpose AI model in the *new* Foundry portal's chat playground. In the second part of this exercise, you'll explore some features of Azure Language in Foundry tools.
+In the first part of this exercise, you'll use a general purpose AI model in the Foundry portal's chat playground. In the second part of this exercise, you'll explore some features of Azure Language in Foundry tools.
 
 This exercise takes approximately **20** minutes.
 
