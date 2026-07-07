@@ -17,8 +17,6 @@ Azure Content Understanding is a Foundry service that uses AI models to turn uns
 
 This exercise takes approximately **25** minutes.
 
->**Note**: This exercise utilizes the *new* Foundry portal experience.
-
 ## Create a Microsoft Foundry project
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
@@ -35,66 +33,41 @@ This exercise takes approximately **25** minutes.
 
     ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
-    >**Tip**: Close any suggestions or 'get-started' tutorials that may appear on the home page.
+    >**Tip**: Close any suggestions or tips that may appear on the home page.
 
-## Extract information from documents in the new Foundry portal
+## Use *Content Understanding* to extract information from documents
 
 1. In the Foundry portal, navigate to the tool bar at the top of the screen and select **Build**.
 2. On the *Build* page, in the menu on the left-side of the screen (which you may need to expand), select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
-3. Identify the **Content Understanding** capabilities you can try out in a Foundry playground setting:
-   - *Content Understanding - Read*: Raw text extraction only. Answers the question, "What text is here?"
-   - *Content Understanding - Layout*: Adds structure, hierarchy, and positioning. Answers the question, "How is this content organized?"
-   - *Content Understanding*: offers the full analyzer capability by extracting fields and structure and generating insights. Answers the question, "What does this content mean and what should I do with it?"
+3. Select **Content Understanding** to open the *Content Understanding* tool playground.
 
-#### Try out Content Understanding's *Read* capabilities
+    ![Screenshot of the results of analysing the sample invoice.](./media/content-understanding.png)
 
-1. Select **Content Understanding - Read**. The *Read* capability is the first step in content understanding—it reads and extracts text, but doesn’t try to understand structure or meaning yet.
+4. Select **OCR/Read**, and ensure that **Document** is selected in the **Modality** list, and **OCR/Read** is selected in the list of analyzers.
 
-2. Select the sample **read_barcode.pdf** and use the **Run analysis** button to extract information from the document. When analysis is complete, view the results.
+5. Select any sample, and use the **Run analysis** button to extract information from the document. When analysis is complete, view the results.
 
     ![Screenshot of the results of analysing the sample invoice.](./media/new-portal-read-barcode.png)
 
-3. Select the back button to return to the previous page to test out other capabilities.
+6. In the pane on the right, review the **Markdown**, **Paragraphs**, and **Result** tabs to see the data that has been read from the document by the analyzer.
 
-#### Try out Content Understanding's *Layout* capabilities
+    The *OCR/Read* analyzer extracts text from documents. However, sometimes it may be useful to extract additional information about the *layout* of the text in the document.
 
-1. On the *AI Services* tab, select **Content Understanding - Layout**.
-
-2. Select the sample **layout_checklist.jpg** and use the **Run analysis** button to extract information from it. When analysis is complete, view the results.
-
-    ![Screenshot of the results of analysing the layout checklist.](./media/content-understanding-layout-analysis.png)
-
-3. In the content output, select the **Tables** tab. Review how the *Layout* analyzer is able to capture both the text and structure of the content.
+7. In the list of analyzers, select **Layout**. Then select any of the available samples *and use the **Run analysis** button to extract information from it. When analysis is complete, view the results.
 
     ![Screenshot of the table results of analysing the layout checklist.](./media/content-understanding-layout-table.png)
 
-4. Select the back button to return to the previous page to test out other capabilities.
+8. In the pane on the right, review the **Markdown**, **Paragraphs**, **Tables**, and **Result** tabs to see the ways in which the layout of the data in the document has been interpreted by the analyzer.
 
-#### Try out Content Understanding's other analyzer capabilities
+    Extacting the text and page layout is useful when the documents need to scan have a consistent, well-defined structure. In many cases though, you need to be able to identify which text values map to which data fields; so a more specific analyzer is needed.
 
-1. On the *AI Services* tab, select **Content Understanding** to test another one of Azure Content Understanding analyzers.
+9. In the list of analyzer types, select **Procurement**, and then select the **Receipt** analyzer.
 
-2. On the *Content Understanding* page, select the **Document** modality.
+    > **Tip**: You may be prompted to deploy models during this process. Click **Cancel** when this happens.
 
-    ![Screenshot of the full analzyer with the document modality selected.](./media/full-content-analzyer-document.png)
+10. In the pane on the right, review the **Fields**, **Markdown**, **Paragraphs**, and **Result** tabs to see the ways in which the layout of the data in the document has been interpreted by the analyzer.
 
-3. Next to the *Document* modality, select *Document fields* from the dropdown menu. If asked to deploy models that aren't configured yet, select **Deploy models**.
-
-    >**Tip**: *document fields* and other complex extraction needs require deploying multiple AI models, since each deployment is tied to a specific model version or capability. Using multiple models in Azure AI Foundry lets you handle different types of processing tasks more effectively, with flexibility to choose the right model for each need.
-
-4. Select a recommended *Chat completion model* and *Embedding model* from the drop-down menus. Then select **Apply changes**. Once the changes are applied, you can close the *Configure* panel.
-
-5. Let's try to use the full analyzer with our own invoice. Open a new browser window. Enter the following URL: `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf` to download **[contoso-invoice-1.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf){:target="_blank"}** .
-
-6. Back in the Content Understanding playground in the Foundry portal, use the **Browse for files** link to upload the **contoso-invoice-1.pdf** document you downloaded. Select **Run analysis** and review the results. Notice that not only is the text rendered, but its layout is captured, and the fields are organized into cohesive categories.  
-
-    ![Screenshot of the results of using the document fields analzyer to analyze the Contoso invoice.](./media/contoso-invoice-analysis-document-fields.png)
-
-7. In the pane on the right where the extracted fields are displayed, view the **Result** tab to see the raw results in JSON. Identify the **analyzerID** field, which contains the type of analyzer used. You can find a list of prebuilt Content Understanding analyzers [here](https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/prebuilt-analyzers).
-
-     ![Screenshot of the JSON results of using the document analyzer on the invoice.](./media/content-understanding-layout-json.png)
-
->**Tip**: Consider this: the *Fields* tab displays the information from the raw JSON in the *Results* tab in a user-friendly way.
+    >**Tip**: Consider this: the **Fields** tab displays a user-friendly version of the information from the raw JSON in the **Results** tab, which is how a client application would receive the results of analysis.
 
 ## Understand how to extract content with the Python SDK
 
@@ -102,103 +75,43 @@ As a developer, you can also use code to extract meaning from content. The Found
 
 ![Screenshot of the sample code provided in the Foundry playground.](./media/content-understanding-code-example.png)
 
-1. Let's take a closer look at the Python code for document layout analysis. In the Content Understanding playground, select the **Code** tab, then select **Modality: Document** and the **Layout** analyzer. The following code is provided:
+1. Let's take a closer look at the Python code for document layout analysis. In the Content Understanding playground, while viewing the results of the **Receipt** analyzer, select the **Code** tab. The following code is provided:
 
-    ```python
-        import sys
-        import json
-        
-        from azure.ai.contentunderstanding import ContentUnderstandingClient
-        from azure.ai.contentunderstanding.models import AnalysisInput, AnalysisResult
-        from azure.core.credentials import AzureKeyCredential
-        from azure.core.exceptions import AzureError
-        from azure.identity import DefaultAzureCredential
-        
-        
-        def main() -> None:
-            # Insert the following configurations.
-            # 1) AZURE_CONTENT_UNDERSTANDING_ENDPOINT - the endpoint to your Content Understanding resource.
-            endpoint = "https://<your-resource>.services.ai.azure.com/"
-        
-            # 2) CONTENT_UNDERSTANDING_KEY - your Content Understanding API key (optional if using DefaultAzureCredential).
-            key = "{{CONTENT_UNDERSTANDING_KEY}}"
-        
-            # 3) FILE_URL - you can replace this with your own URL.
-            file_url = "https://contentunderstanding.ai.azure.com/assets/prebuilt/layout_checklist.jpg"
-        
-            # ANALYZER_ID - the ID of the analyzer to use.
-            analyzer_id = "prebuilt-layout"
-        
-            # API_VERSION - the API version to use.
-            api_version = "2025-11-01"
-        
-            # Set up Content Understanding client.
-            credential = AzureKeyCredential(key) if key and "{{CONTENT_UNDERSTANDING_KEY}}" not in key else DefaultAzureCredential()
-            client = ContentUnderstandingClient(endpoint=endpoint, credential=credential, api_version=api_version)
-        
-            # [START analyze]
-            print(f"Analyzing with {analyzer_id} analyzer...")
-            print(f"  File URL: {file_url}\n")
-        
-            try:
-                poller = client.begin_analyze(
-                    analyzer_id=analyzer_id,
-                    inputs=[AnalysisInput(url=file_url)],
-                )
-                result: AnalysisResult = poller.result()
-            except AzureError as err:
-                print(f"[Azure Error]: {err.message}")
-                sys.exit(1)
-            except Exception as ex:
-                print(f"[Unexpected Error]: {ex}")
-                sys.exit(1)
-            # [END analyze]
-        
-            # [START output_result]
-            print("=" * 50)
-            print("Analysis result:")
-            print("=" * 50 + "\n")
-        
-            max_display_lines = 50
-            result_str = json.dumps(result.as_dict(), indent=2)
-            ret_lines = result_str.splitlines()
-        
-            if len(ret_lines) > max_display_lines:
-                print("\n".join(ret_lines[:max_display_lines]))
-                print(f"\n {len(ret_lines) - max_display_lines} more lines to be displayed...\n")
-            else:
-                print(result_str)
-            # [END output_result]
-        
-        
-        if __name__ == "__main__":
-            main()
-    ```
-
-2. Consider what you might need to configure in the code:
-   - The endpoint to your Content Understanding resource
-   - Your resource key
-   - A URL to the file you'd like analyzed
-  
-3. Consider what's provided in the code sample that you might alter:
-   - Analyzer ID (which you can change to use [different prebuilt models](https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/prebuilt-analyzers#content-extraction-analyzers))
-   - API Version
-
-4. After setting configurations, the code creates a client to talk to Azure Content Understanding. The code decides how to authenticate: if you provided a real API key, it uses that key directly. Otherwise, it falls back to `DefaultAzureCredential()`, which automatically finds credentials from your environment (like your Azure CLI login). Then it creates the client using your endpoint, the chosen credential, and an API version.
-
-    ```python
+    ```python  
+    import sys
+    import json
+    
+    from azure.ai.contentunderstanding import ContentUnderstandingClient
+    from azure.ai.contentunderstanding.models import AnalysisInput, AnalysisResult
+    from azure.core.credentials import AzureKeyCredential
+    from azure.core.exceptions import AzureError
+    from azure.identity import DefaultAzureCredential
+    
+    def main() -> None:
+        # Insert the following configurations.
+        # 1) AZURE_CONTENT_UNDERSTANDING_ENDPOINT - the endpoint to your Content Understanding resource.
+        endpoint = "<https://content-project-resource.services.ai.azure.com/>"
+    
+        # 2) CONTENT_UNDERSTANDING_KEY - your Content Understanding API key (optional if using DefaultAzureCredential).
+        key = "{{CONTENT_UNDERSTANDING_KEY}}"
+    
+        # 3) FILE_URL - you can replace this with your own URL.
+        file_url = "{{FILE_URL}}"
+    
+        # ANALYZER_ID - the ID of the analyzer to use.
+        analyzer_id = "prebuilt-receipt"
+    
+        # API_VERSION - the API version to use.
+        api_version = "2025-11-01"
+    
         # Set up Content Understanding client.
         credential = AzureKeyCredential(key) if key and "{{CONTENT_UNDERSTANDING_KEY}}" not in key else DefaultAzureCredential()
         client = ContentUnderstandingClient(endpoint=endpoint, credential=credential, api_version=api_version)
-    ```
-
-5. Next, the code analyzes the content. The SDK starts the analysis as a long-running operation. The function `begin_analyze()` returns a poller that handles checking the operation status (whether the analysis is successfully complete or not). The SDK's poller handles the complete operation automatically when `poller.result()` is called.
-
-    ```python
+    
         # [START analyze]
         print(f"Analyzing with {analyzer_id} analyzer...")
         print(f"  File URL: {file_url}\n")
-        
+    
         try:
             poller = client.begin_analyze(
                 analyzer_id=analyzer_id,
@@ -212,11 +125,7 @@ As a developer, you can also use code to extract meaning from content. The Found
             print(f"[Unexpected Error]: {ex}")
             sys.exit(1)
         # [END analyze]
-    ```
-
-6. The output of the analysis is formatted and displayed as JSON using the following code:
-
-    ```python
+    
         # [START output_result]
         print("=" * 50)
         print("Analysis result:")
@@ -232,87 +141,20 @@ As a developer, you can also use code to extract meaning from content. The Found
         else:
             print(result_str)
         # [END output_result]
+    
+    if **name** == "**main**":
+        main()
     ```
 
-    >**Note**: Much of the code above makes the output look more readable. Its purpose is actually very simple: to print the results of the analysis.
-
-7. Running the entire code from step 1 returns JSON like you observed earlier in the lab. For example:
-
-    ```json
-    {
-
- "id": "",
- "status": "Succeeded",
- "result": {
-  "analyzerId": "prebuilt-layout",
-  "apiVersion": "2025-11-01",
-  "createdAt": "",
-  "warnings": [],
-  "contents": [
-   {
-    "path": "input1",
-    "markdown": "",
-    "kind": "document",
-    "startPageNumber": 1,
-    "endPageNumber": 1,
-    "unit": "pixel",
-    "pages": [
-     {
-      "pageNumber": 1,
-      "angle": 0,
-      "width": 2580,
-      "height": 3433,
-      "spans": [
-       {
-        "offset": 0,
-        "length": 2269
-       }
-      ],
-      "words": [
-       {
-        "content": "Documents",
-        "span": {
-         "offset": 2,
-         "length": 9
-        },
-        "confidence": 0.996,
-        "source": "D(1,213,217,768,201,768,296,214,310)"
-       },
-       {
-        "content": "to",
-        "span": {
-         "offset": 12,
-         "length": 2
-        },
-        "confidence": 0.999,
-        "source": "D(1,802,200,906,197,906,293,803,295)"
-       },
-       {
-        "content": "Store",
-        "span": {
-         "offset": 15,
-         "length": 5
-        },
-        "confidence": 0.998,
-        "source": "D(1,947,196,1218,189,1219,285,947,292)"
-       }
-    ...
-    ```
-
-    >**Tip**: To actually run the code in your own environment, you will need to follow the setup and configuration instructions shared at the start of the code sample.
-    ><details>
-    ><summary>Click to see those instructions:</summary>
-    >Create a Python file in a code editor such as Visual Studio Code and call it sample.py. Make sure you have Python 3.9 or later installed. Navigate to the directory containing this file in your terminal. Install dependencies in the terminal with the command:
-    > `python -m pip install azure-ai-contentunderstanding azure-identity`. Then run the script in the terminal with the command: `python sample.py`.
-    ></details>
+    The code connects to the Content Understanding tool in your Foundry resource, and submits a document file to the *prebuilt-receipt* analyzer. The analyzer runs asynchronously, and returns the results of the analysis in the JSON format you saw in the **Result** tab.
 
 ## Summary
 
 In this exercise, you explored Azure Content Understanding in Foundry and learned how it transforms unstructured content into structured, usable data. You tried out three analyzers, each building on the previous one in capability:
 
-- **Read**: Extracts raw text from documents without interpreting structure or meaning—answering, "What text is here?"
-- **Layout**: Goes a step further by capturing structure, hierarchy, and positioning—including tables—answering, "How is this content organized?"
-- **Document fields**: an analyzer that uses a combination of capabilities to extract fields, organize them into cohesive categories, and generate insights—answering, "What does this content mean and what should I do with it?" Content Understanding analyzers like this one sometimes require deploying additional AI models (such as chat completion and embedding models) to handle complex extraction needs.
+- **Read**: Extracts raw text from documents without interpreting structure or meaning.
+- **Layout**: Goes a step further by capturing structure and hierarchy.
+- **Receipt**: A document -specific analyzer that uses a combination of capabilities to extract text values and map them to data fields.
 
 You also learned how developers can integrate Content Understanding into applications using the **Python SDK**, which enables programmatic analysis of documents outside the Foundry playground.
 
