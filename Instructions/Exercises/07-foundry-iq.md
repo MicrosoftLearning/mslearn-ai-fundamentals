@@ -63,7 +63,7 @@ Let's start by setting up an enterprise data source for HR policy and procedure 
 
 Now that you have the necessary infrastructure in place, you're ready to create an AI agent that can search the HR documentation for answers to employee questions.
 
-1. In your web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
+1. In your web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and **start building**; signing in using your Azure credentials.
 1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, when prompted, create a new project with a unique name; expanding the  **Advanced options** area to deploy the project in the resource group where you deployed Azure AI Search.
 
     > **Note**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
@@ -72,7 +72,7 @@ Now that you have the necessary infrastructure in place, you're ready to create 
 
     ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
-1. On the **Build** page, select the **Agents** tab, and create a new agent named  `hr-agent`.
+1. On the **Build** page, select the **Agents** tab, and build a new agent named  `hr-agent`.
 
      When ready, your agent opens in the agent playground.
 
@@ -93,14 +93,6 @@ Now that you have the necessary infrastructure in place, you're ready to create 
     ```
 
     The agent should respond with an appropriate answer based on its instructions.
-
-1. Try this prompt:
-
-    ```
-   What is the capital of France?
-    ```
-
-    The agent shouldn't engage in a conversation about European capitals! It should redirect the topic to HR policies and procedures.
 
 1. Now try this:
 
@@ -134,11 +126,22 @@ Foundry IQ is a central connection point for data sources that agents can use as
 
     ![Screenshot of the knowledge bases page.](./media/knowledge-bases.png)
 
-    > **Note**: We've added an Azure AI Search resource to the Foundry project so it can support Foundry IQ knowledge stores. It's important to understand that Foundry IQ <u>*always*</u> uses an Azure AI Search resource to create vector indexes for one or more knowledge bases - regardless of the location of the data being accessed. In this case, the data happens to be in an Azure AI Search index; but even if it were in a data lake, SharePoint site, or other location, we'd still need to attach an Azure AI Search resource to the Foundry project!
+    > **Note**: We've added an Azure AI Search resource to the Foundry project so it can support Foundry IQ knowledge stores. It's important to understand that Foundry IQ <u>*always*</u> uses an Azure AI Search resource to create vector indexes for one or more knowledge bases - regardless of the location of the data being accessed. In this case, the data *also* happens to be in an Azure AI Search index; but even if it were in a data lake, SharePoint site, or other location, we'd still need to attach an Azure AI Search resource to the Foundry project!
 
 ### Create a knowledge base
 
-1. Select **Create a knowledge base**, and view the available knowledge base types. These represent the different kinds of data source you can use for knowledge bases in Foundry IQ.
+1. Select **Create a knowledge base**, and complete the basic configuration of the knowledge base by assigning the following values:
+    - **Name**: `contoso-corporate-data`
+    - **Description**: `Corporate documentation for employees`
+    - **Chat completions model**: *Select the existing model deployment*
+    - **Retrieval reasoning effort**: Low
+    - **Output mode**: Answer synthesis
+    - **Answer instructions**: `Answer concisely, based on the available context`
+    - **Retrieval instructions**: `Use the hr-documentation source for all questions related to HR policies and procedures`
+
+    > **Note**: The *output mode* determines how Foundry IQ returns knowledge to the agent. *exractive data* returns verbatim text from the knowledge source while *answer synthesis* uses a generative AI model to compose a suitable response. *Answer instructions* act as a system prompt to specify formatting of the response, and *retrieval instructions* are used by Foundry IQ to guide how knowledge is searched for in the available knowledge bases (in this case, there's only one knowledge base; but there could be more!)
+
+1. View the available knowledge base types. These represent the different kinds of data source you can use for knowledge bases in Foundry IQ.
 
     ![Screenshot of knowledge bases types.](./media/knowledge-base-types.png)
 
@@ -148,26 +151,13 @@ Foundry IQ is a central connection point for data sources that agents can use as
 
     ![Screenshot of the create knowledge source page.](./media/create-knowledge-source.png)
 
-1. After adding the knowledge source, complete the configuration of the knowledge base by assigning the following values:
-    - **Name**: `contoso-corporate-data`
-    - **Description**: `Corporate documentation for employees`
-    - **Chat completions model**: gpt-4.1
-    - **Retrieval reasoning effort**: Low
-    - **Output mode**: Answer synthesis
-    - **Answer instructions**: `Answer concisely, based on the available context`
-    - **Retrieval instructions**: `Use the hr-documentation source for all questions related to HR policies and procedures`
-
-    ![Screenshot of the create knowledge base page.](./media/create-knowledge-base.png)
-
-    > **Note**: The *output mode* determines how Foundry IQ returns knowledge to the agent. *exractive data* returns verbatim text from the knowledge source while *answer synthesis* uses a generative AI model to compose a suitable response. *Answer instructions* act as a system prompt to specify formatting of the response, and *retrieval instructions* are used by Foundry IQ to guide how knowledge is searched for in the available knowledge bases (in this case, there's only one knowledge base; but there could be more!)
-
-1. Save the knowledge store.
+1. After adding the knowledge source, save the knowledge base.
 
 ## Use the knowledge store in the HR agent
 
 Now you're ready to use the new knowledge store in the HR agent.
 
-1. When you've saved the knowledge store, in the **use in an agent** drop-down list, select your HR agent.
+1. When you've saved the knowledge store, in the **Use in an agent** drop-down list, select your HR agent.
 
     The agent is opened in the agent playground, with the knowledge store attached.
 
@@ -177,17 +167,15 @@ Now you're ready to use the new knowledge store in the HR agent.
    How many vacation days do employees get?
     ```
 
-    If the agent determines that it should use Foundry IQ to find context for its answer, you'll be prompted to approve access. You can choose how to control tool access for the agent (once, always, or approve all tools).
-
-    ![Screenshot of the Approve prompt.](./media/allow-foundry-iq.png)
-
 1. Review the response from the agent, and note that at the bottom of the response, a knowledge base with a name similar to *kb_contoso_corporate_d_a12bc* is cited - this confirms that the agent used the knowledge source you created in Foundry IQ.
+
+    ![Screenshot of the agent response.](./media/foundry-iq-response.png)
 
 ### Preview the agent UI for employees
 
 Employees will consume the agent through a web application in the company's internal HR site. Let's see how it might look and behave in production.
 
-1. At the top of the agent playground, in the **Preview** list, select **Preview agent**.
+1. At the top of the agent playground, in the **Publish** list, select **Preview web app**.
 
     The agent opens in a new browser tab.
 
@@ -209,7 +197,7 @@ In this exercise, you explored how to use Foundry IQ to connect an agent to a kn
 
 Using Foundry IQ offers many advantages over a custom implementation of the retrieval augmented generation (RAG) pattern that's prevalent in generative AI solutions. By centralizing access to knowledge in a single tool, you can offload the data source selection and retrieval logic to Foundry IQ, and reuse knowledge sources across multiple agents without the need to duplicate code or data access logic.
 
-> **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just an example of an AI agent for you to explore as you learn about what's possible with AI.*<br/><br/>If you *do* check out Ask Anton, we'd love you to *[tell us about your experience](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}*!
+> **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this lab, *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just an example of an AI agent for you to explore as you learn about what's possible with AI.*<br/><br/>If you *do* check out Ask Anton, we'd love you to *[tell us about your experience](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}*!
 
 ## Clean Up
 
