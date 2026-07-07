@@ -53,7 +53,7 @@ This exercise takes approximately **25** minutes.
 
     The *OCR/Read* analyzer extracts text from documents. However, sometimes it may be useful to extract additional information about the *layout* of the text in the document.
 
-7. In the list of analyzers, select **Layout**. Then select any of the available samples *and use the **Run analysis** button to extract information from it. When analysis is complete, view the results.
+7. In the list of analyzers, select **Layout**. Then select any of the available samples and use the **Run analysis** button to extract information from it. When analysis is complete, view the results.
 
     ![Screenshot of the table results of analysing the layout checklist.](./media/content-understanding-layout-table.png)
 
@@ -65,9 +65,9 @@ This exercise takes approximately **25** minutes.
 
     > **Tip**: You may be prompted to deploy models during this process. Click **Cancel** when this happens.
 
-10. In the pane on the right, review the **Fields**, **Markdown**, **Paragraphs**, and **Result** tabs to see the ways in which the layout of the data in the document has been interpreted by the analyzer.
+10. In the pane on the right, review the **Fields**, **Markdown**, **Paragraphs**, and **Result** tabs to see the data extracted from the document by the analyzer.
 
-    >**Tip**: Consider this: the **Fields** tab displays a user-friendly version of the information from the raw JSON in the **Results** tab, which is how a client application would receive the results of analysis.
+    The **Fields** tab displays a user-friendly version of the information from the raw JSON in the **Results** tab, which is how a client application would receive the results of analysis.
 
 ## Understand how to extract content with the Python SDK
 
