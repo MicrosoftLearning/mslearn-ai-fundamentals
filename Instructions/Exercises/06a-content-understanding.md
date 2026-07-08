@@ -63,7 +63,7 @@ This exercise takes approximately **25** minutes.
 
 9. In the list of analyzer types, select **Procurement**, and then select the **Receipt** analyzer.
 
-    > **Tip**: You may be prompted to deploy models during this process. Click **Cancel** when this happens.
+    > **Tip**: Field extraction requires a custom model, so you may be prompted to deploy models during this process. Click **Cancel** when this happens.<br><br>Do <u>not</u> run analysis - we'll review the pre-prepared analysis results.
 
 10. In the pane on the right, review the **Fields**, **Markdown**, **Paragraphs**, and **Result** tabs to see the data extracted from the document by the analyzer.
 
