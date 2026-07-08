@@ -41,13 +41,13 @@ This exercise takes approximately **25** minutes.
 2. On the *Build* page, in the menu on the left-side of the screen (which you may need to expand), select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
 3. Select **Content Understanding** to open the *Content Understanding* tool playground.
 
-    ![Screenshot of the results of analysing the sample invoice.](./media/content-understanding.png)
+    ![Screenshot of the Content Understanding playground.](./media/content-understanding.png)
 
 4. Select **OCR/Read**, and ensure that **Document** is selected in the **Modality** list, and **OCR/Read** is selected in the list of analyzers.
 
 5. Select any sample, and use the **Run analysis** button to extract information from the document. When analysis is complete, view the results.
 
-    ![Screenshot of the results of analysing the sample invoice.](./media/new-portal-read-barcode.png)
+    ![Screenshot of the results of OCR analysis.](./media/new-portal-read-barcode.png)
 
 6. In the pane on the right, review the **Markdown**, **Paragraphs**, and **Result** tabs to see the data that has been read from the document by the analyzer.
 
@@ -55,7 +55,7 @@ This exercise takes approximately **25** minutes.
 
 7. In the list of analyzers, select **Layout**. Then select any of the available samples and use the **Run analysis** button to extract information from it. When analysis is complete, view the results.
 
-    ![Screenshot of the table results of analysing the layout checklist.](./media/content-understanding-layout-table.png)
+    ![Screenshot of the table results of layout analysis.](./media/content-understanding-layout-table.png)
 
 8. In the pane on the right, review the **Markdown**, **Paragraphs**, **Tables**, and **Result** tabs to see the ways in which the layout of the data in the document has been interpreted by the analyzer.
 
@@ -64,6 +64,8 @@ This exercise takes approximately **25** minutes.
 9. In the list of analyzer types, select **Procurement**, and then select the **Receipt** analyzer.
 
     > **Tip**: Field extraction requires a custom model, so you may be prompted to deploy models during this process. Click **Cancel** when this happens.<br><br>Do <u>not</u> run analysis - we'll review the pre-prepared analysis results.
+
+    ![Screenshot of the table results of receopr analysis.](./media/content-understanding-receipt.png)
 
 10. In the pane on the right, review the **Fields**, **Markdown**, **Paragraphs**, and **Result** tabs to see the data extracted from the document by the analyzer.
 
