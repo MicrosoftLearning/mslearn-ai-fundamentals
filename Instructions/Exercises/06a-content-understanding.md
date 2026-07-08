@@ -65,7 +65,7 @@ This exercise takes approximately **25** minutes.
 
     > **Tip**: Field extraction requires a custom model, so you may be prompted to deploy models during this process. Click **Cancel** when this happens.<br><br>Do <u>not</u> run analysis - we'll review the pre-prepared analysis results.
 
-    ![Screenshot of the table results of receopr analysis.](./media/content-understanding-receipt.png)
+    ![Screenshot of the table results of receipt analysis.](./media/content-understanding-receipt.png)
 
 10. In the pane on the right, review the **Fields**, **Markdown**, **Paragraphs**, and **Result** tabs to see the data extracted from the document by the analyzer.
 
