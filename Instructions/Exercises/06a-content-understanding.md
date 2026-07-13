@@ -38,7 +38,7 @@ This exercise takes approximately **25** minutes.
 ## Use *Content Understanding* to extract information from documents
 
 1. In the Foundry portal, navigate to the tool bar at the top of the screen and select **Build**.
-2. On the *Build* page, in the menu on the left-side of the screen (which you may need to expand), select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
+2. On the *Build* page, in the menu on the left-side of the screen (which you may need to expand), select **Services**.
 3. Select **Content Understanding** to open the *Content Understanding* tool playground.
 
     ![Screenshot of the Content Understanding playground.](./media/content-understanding.png)
