@@ -34,7 +34,7 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
 ## Use a generative AI model to analyze images
 
-Computer vision models enable AI systems to interpret image-based data, such as photographs, videos, and other visual elements. In this exercise, you'll explore how the developer of an AI agent to help aspiring chefs could use a vision-enabled model to interpret images of ingredients and suggest relevant recipes.
+Computer vision models enable AI systems to interpret image-based data, such as photographs, videos, and other visual elements. In this exercise, you'll explore how the computer vision can be used in an agent to help identify vintage computer hardware.
 
 1. In a new browser tab, download **[images.zip](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip){:target="_blank"}** `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip` to your local computer.
 1. Extract the downloaded archive in a local folder to see the files it contains. These files are the images you'll use AI to analyze.
@@ -49,19 +49,17 @@ Computer vision models enable AI systems to interpret image-based data, such as 
     ![Screenshot of the model playground.](./media/model-playground.png)
 
 1. Use the button at the bottom of the left navigation pane to hide it and give yourself more room to work with.
-1. In the pane on the left, set the **Instructions** to `You are an AI cooking assistant who helps chefs with recipes.`
+1. In the pane on the left, set the **Instructions** to `You are an AI assistent that helps people identify vintage computer hardware.`
 1. In the chat pane, use the **Upload image** button to select one of the images you extracted on your computer. The image is added to the prompt area.
+
+1. Enter prompt text like `What can you tell me about this?` and submit the prompt, which contains both the uploaded image and the text.
+1. Review the response, which should include relevant information about the image you uploaded.
 
     You can select the image you have added to view it.
 
    ![Screenshot of a chat with an image in a prompt.](./media/image_prompt.png)
 
-1. Enter prompt text like `What recipes can I use this in?` and submit the prompt, which contains both the uploaded image and the text.
-1. Review the response, which should include relevant recipe suggestions for the image you uploaded.
-
-   ![Screenshot of the chat app with the response to an image-based prompt.](./media/image_analysis.png)
-
-1. Submit prompts that include the other images, such as `How should I cook this?` or `What desserts could I make with this?`
+1. Submit prompts that include the other images, such as `What is this?` or `Tell me about this.`
 
 ### View code
 
@@ -100,11 +98,11 @@ To develop a client app or agent that can use the model to interpret images, you
     print(f"answer: {response.output[0]}")
     ```
 
-    > **Tip**: If you are using a work or school account to sign into Azure, and you have sufficient permissions in the Azure subscription, you can open the sample code in VS Code for Web to experiment with image-based input content. You can obtain the **key** for your service in the **Code** tab of the model playground (above the sample code) and you can use the image **[orange.jpg](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/orange.jpg){:target="_blank"}** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/orange.jpg`. To learn more about using rhe OpenAI API to analyze images, see the [OpenAI documentation](https://platform.openai.com/docs/guides/images-vision#analyze-images).
+    > **Tip**: If you are using a work or school account to sign into Azure, and you have sufficient permissions in the Azure subscription, you can open the sample code in VS Code for Web to experiment with image-based input content. You can obtain the **key** for your service in the **Code** tab of the model playground (above the sample code) and you can use the image **[joystick.png](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/joystick.png){:target="_blank"}** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/joystick.png`. To learn more about using the OpenAI API to analyze images, see the [OpenAI documentation](https://platform.openai.com/docs/guides/images-vision#analyze-images).
 
 ## Use a generative AI model to create new images
 
-So far you've explored the ability of a generative AI model to process visual input. Now let's suppose we want some appropriate images on a web site to support the AI chef agent. Let's see how a model can generate visual output.
+So far you've explored the ability of a generative AI model to process visual input. Now let's suppose we want some appropriate images on a web site to support the computing history. Let's see how a model can generate visual output.
 
 > **Note**: This task requires a subscription that has access to image-generation models.
 
@@ -121,7 +119,7 @@ So far you've explored the ability of a generative AI model to process visual in
     *If one of these models is unavailable in your subscription or region, deploy another text-to-image model that's available.*
 
 1. When the model has been deployed, it opens in the image playground.
-1. Enter a prompt describing a desired image; for example, `A chef preparing a meal.` Then review the generated image.
+1. Enter a prompt describing a desired image; for example, `A vintage PC with a CRT monitor.` Then review the generated image.
 
    ![Screenshot of the image playground with a generated image.](./media/generated_image.png)
 
@@ -168,7 +166,7 @@ If you want to develop a client app or agent that generates images using your mo
 
 > **Note**: This task requires a subscription that has access to video-generation models.
 
-In addition to static images, you may want to include video content on the AI Chef agent web site.
+In addition to static images, you may want to include video content on the computing history agent web site.
 
 1. Use the "back" arrow next to the image-generation model header (or select the **Models** page in the navigation pane) to view the model deployments in your project.
 1. Select **Deploy a base model** to open the model catalog.
@@ -183,7 +181,7 @@ In addition to static images, you may want to include video content on the AI Ch
     *If the Sora-2 model is available in your subscription, you may need to request access to the latest available model.*
 
 1. When the model has been deployed, it opens in the video playground.
-1. Enter a prompt describing a desired video; for example, `A chef in a busy kitchen.` Then review the generated video.
+1. Enter a prompt describing a desired video; for example, `A retro computer game.` Then review the generated video.
 
    ![Screenshot of the video playground with a generated video.](./media/generated_video.png)
 
