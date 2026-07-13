@@ -102,7 +102,7 @@ To develop a client app or agent that can use the model to interpret images, you
 
 ## Use a generative AI model to create new images
 
-So far you've explored the ability of a generative AI model to process visual input. Now let's suppose we want some appropriate images on a web site to support the computing history. Let's see how a model can generate visual output.
+So far you've explored the ability of a generative AI model to process visual input. Now let's suppose we want some appropriate images on a web site to support the computing history agent. Let's see how a model can generate visual output.
 
 > **Note**: This task requires a subscription that has access to image-generation models.
 
