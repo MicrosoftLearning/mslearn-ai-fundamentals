@@ -49,7 +49,7 @@ Computer vision models enable AI systems to interpret image-based data, such as 
     ![Screenshot of the model playground.](./media/model-playground.png)
 
 1. Use the button at the bottom of the left navigation pane to hide it and give yourself more room to work with.
-1. In the pane on the left, set the **Instructions** to `You are an AI assistent that helps people identify vintage computer hardware.`
+1. In the pane on the left, set the **Instructions** to `You are an AI assistant that helps people identify vintage computer hardware.`
 1. In the chat pane, use the **Upload image** button to select one of the images you extracted on your computer. The image is added to the prompt area.
 
 1. Enter prompt text like `What can you tell me about this?` and submit the prompt, which contains both the uploaded image and the text.
@@ -112,7 +112,7 @@ So far you've explored the ability of a generative AI model to process visual in
 
    ![Screenshot of image-generation models in the model catalog.](./media/0-image-generation-models.png)
 
-    > **Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availabilty and quota.
+    > **Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availability and quota.
 
 1. Select an available text-to-image model, such as **gpt-image-1-mini** or **FLUX.2-pro**, and deploy it.
 
@@ -174,7 +174,7 @@ In addition to static images, you may want to include video content on the compu
 
    ![Screenshot of video-generation models in the model catalog.](./media/0-video-generation-models.png)
 
-    > **Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availabilty and quota.
+    > **Note**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availability and quota.
 
 1. Select the **Sora-2** model and deploy it.
 

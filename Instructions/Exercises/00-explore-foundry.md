@@ -173,7 +173,7 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
     The Computing History app should open with its **Configuration** panel expanded, like this:
 
-    ![Screenshot of the Computing History app confguration panel.](./media/configure-computing-history.png)
+    ![Screenshot of the Computing History app configuration panel.](./media/configure-computing-history.png)
 
     > **Tip**: If the Configuration panel isn't expanded, use the arrow at the top of the chat pane to expand it.
 
