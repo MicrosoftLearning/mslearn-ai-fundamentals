@@ -244,12 +244,12 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
 1. Download **[pcbs.zip](https://aka.ms/pcb-images){:target="_blank"}** from `https://aka.ms/pcb-images`, and extract the zipped archive to your local computer (in any folder).
 
-1. Restart the conversation, and at the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload a PCB image, and enter a prompt such as `Extract the text from this printed circuit board, and search for information that might help identify the computer it came from.`
+1. Restart the conversation, and at the bottom of the chat interface, use the **Attach image** (&#128206;) button to upload a PCB image, and enter a prompt such as `What can you tell me about this printed circuit board?`
 1. Review the response.
 
     ![Screenshot of the Computing History app extracting text from an image.](./media/computer_history_info.png)
 
-1. Try some of the other PCB images you extracted.
+1. Try the other PCB image you extracted, and see if the agent can help you identify the type of computer it may have come from.
 
     > **Tip**: You can also search for your own images on [Bing](https://www.bing.com/images/search?q=vintage-computer-component-serial-numbers){:target="_blank"}. Try searching for serial number labels from specific vintage computers
 
