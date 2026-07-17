@@ -13,8 +13,6 @@ lab:
 
 In this exercise, you'll use Azure Content Understanding in Foundry, Microsoft's platform for creating intelligent applications.
 
-Azure Content Understanding is a Foundry service that uses AI models to turn unstructured, multimodal content (documents, images, video, audio) into structured, usable outputs like JSON. It processes content by extracting, classifying, and generating fields with confidence scores and source grounding.
-
 This exercise takes approximately **25** minutes.
 
 ## Create a Microsoft Foundry project
@@ -37,37 +35,55 @@ This exercise takes approximately **25** minutes.
 
 ## Use *Content Understanding* to extract information from documents
 
+Azure Content Understanding is a Foundry service that uses AI models to turn unstructured, multimodal content (documents, images, video, audio) into structured, usable outputs like JSON. It processes content by extracting, classifying, and generating fields with confidence scores and source grounding.
+
+### Open the Content Understanding playground in Foundry portal
+
 1. In the Foundry portal, navigate to the tool bar at the top of the screen and select **Build**.
 2. On the *Build* page, in the menu on the left-side of the screen (which you may need to expand), select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
 3. Select **Content Understanding** to open the *Content Understanding* tool playground.
 
     ![Screenshot of the Content Understanding playground.](./media/content-understanding.png)
 
-4. Select **OCR/Read**, and ensure that **Document** is selected in the **Modality** list, and **OCR/Read** is selected in the list of analyzers.
+### Use OCR to read text in an image
 
-5. Select any sample, and use the **Run analysis** button to extract information from the document. When analysis is complete, view the results.
+Suppose you want to find information related to a piece of computer hardware or some other item with information printed on it. A first step might be to digitize the text so you can use it to look up details on the Internet or in an AI assistant. You can use an AI technique called optical character recognition (OCR) to "read" text in images.
+
+1. Select **OCR/Read**, and ensure that **Document** is selected in the **Modality** list, and **OCR/Read** is selected in the list of analyzers.
+
+1. Select any sample image, and use the **Run analysis** button to extract text from it. When analysis is complete, view the results.
 
     ![Screenshot of the results of OCR analysis.](./media/new-portal-read-barcode.png)
 
-6. In the pane on the right, review the **Markdown**, **Paragraphs**, and **Result** tabs to see the data that has been read from the document by the analyzer.
+1. In the pane on the right, review the **Markdown**, **Paragraphs**, and **Result** tabs to see the data that has been read from the document by the analyzer.
 
-    The *OCR/Read* analyzer extracts text from documents. However, sometimes it may be useful to extract additional information about the *layout* of the text in the document.
+1. In a new browser tab, download **[pcbs.zip](https://aka.ms/pcb-images){:target="_blank"}** from `https://aka.ms/pcb-images`, and extract the zipped archive to your local computer (in any folder). These files are images of printed circuit boards that contain text.
+1. Upload any of the PCB images, and view it in the main content area of the app.
+1. Run analysis on the uploaded image and review the results.
 
-7. In the list of analyzers, select **Layout**. Then select any of the available samples and use the **Run analysis** button to extract information from it. When analysis is complete, view the results.
+    ![Screenshot of the table results of receipt analysis.](./media/content-understanding-pcb.png)
 
-    ![Screenshot of the table results of layout analysis.](./media/content-understanding-layout-table.png)
+1. Repeat the process to analyze the other PCB image you downloaded.
 
-8. In the pane on the right, review the **Markdown**, **Paragraphs**, **Tables**, and **Result** tabs to see the ways in which the layout of the data in the document has been interpreted by the analyzer.
+    > **Tip**: Try uploading any images that contain legible text.
+
+    The *OCR/Read* analyzer extracts text from images. However, sometimes it may be useful to extract additional information about the *layout* of the text in the image.
+
+1. In the list of analyzers, select **Layout**. Then select any of the sample images and use the **Run analysis** button to extract information from it. When analysis is complete, review the **Markdown**, **Paragraphs**, **Tables**, and **Result** tabs to see the ways in which the layout of the data in the document has been interpreted by the analyzer.
 
     Extacting the text and page layout is useful when the documents need to scan have a consistent, well-defined structure. In many cases though, you need to be able to identify which text values map to which data fields; so a more specific analyzer is needed.
 
-9. In the list of analyzer types, select **Procurement**, and then select the **Receipt** analyzer.
+### Extract fields from documents
+
+Now suppose you need to extract data fields from scanned receipts to help automate an expense claim solution. You can use OCR to identify text and its location in images, and then use a generative AI model to associate individual text values with specific data fields - such as company names, phone numbers, dates, amounts, and so on.
+
+1. In the list of analyzer types, select **Procurement**, and then select the **Receipt** analyzer.
 
     > **Tip**: Field extraction requires a custom model, so you may be prompted to deploy models during this process. Click **Cancel** when this happens.<br><br>Do <u>not</u> run analysis - we'll review the pre-prepared analysis results.
 
     ![Screenshot of the table results of receipt analysis.](./media/content-understanding-receipt.png)
 
-10. In the pane on the right, review the **Fields**, **Markdown**, **Paragraphs**, and **Result** tabs to see the data extracted from the document by the analyzer.
+1. In the pane on the right, review the **Fields**, **Markdown**, **Paragraphs**, and **Result** tabs to see the data extracted from the document by the analyzer.
 
     The **Fields** tab displays a user-friendly version of the information from the raw JSON in the **Results** tab, which is how a client application would receive the results of analysis.
 
