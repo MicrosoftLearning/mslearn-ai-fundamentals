@@ -95,7 +95,7 @@ To develop a client app or agent that can use the model to interpret images, you
         }],
     )
     
-    print(f"answer: {response.output[0]}")
+    print(f"answer: {response.output_text}")
     ```
 
     > **Tip**: If you are using a work or school account to sign into Azure, and you have sufficient permissions in the Azure subscription, you can open the sample code in VS Code for Web to experiment with image-based input content. You can obtain the **key** for your service in the **Code** tab of the model playground (above the sample code) and you can use the image **[joystick.png](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/joystick.png){:target="_blank"}** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/joystick.png`. To learn more about using the OpenAI API to analyze images, see the [OpenAI documentation](https://platform.openai.com/docs/guides/images-vision#analyze-images).
