@@ -100,7 +100,7 @@ When you're satisfied with the responses a model returns in the playground, you 
         input="What is the capital of France?",
    )
     
-   print(f"answer: {response.output[0]}")
+   print(f"answer: {response.output_text}")
     ```
 
     The code connects to the **OpenAI** endpoint for your Microsoft Foundry resource, using its secret authentication key (which you would need to copy into the code to set the **api_key** variable). It then uses the **responses.create** method to generate a response from your deployed model from an input prompt (in this case, the hard-coded question "What is the capital of France?") and prints the response to the output console.
