@@ -133,7 +133,7 @@ For example, suppose an organization wants to use a generative AI model to power
                 You are a helpful AI assistant who supports employees with expense claims.
                 Provide concise, accurate information only on topics related to expenses.
                 Do not provide any information about topics that are not directly related to expenses.
-            """
+            """,
             input="What kinds of business expense are typically reimbursed by employers?",
         )
     ```
