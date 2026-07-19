@@ -39,7 +39,7 @@ This exercise takes approximately **20** minutes.
 
 ## Explore a general-purpose AI model's text analysis capabilities
 
-In this part of the exercise, you'll use a general-purpose language model to perform text analysis through natural language prompts. A language model can handle a wide variety of tasks through prompting alone.
+Let's start by using a chat interface to submit prompts to a generative AI model to perform a common text analysis task - summarizing text.
 
 1. Now you're ready to explore models. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
 
@@ -51,7 +51,7 @@ In this part of the exercise, you'll use a general-purpose language model to per
 
 3. Use the **Deploy** button to deploy the model using the *default settings*. Wait for the deployment to complete. After the deployment is complete, you're taken to a chat playground, where you can test out the model's capabilities.
 
-### Analyze sentiment
+### Summarize text
 
 **Sentiment analysis** is a common *natural language processing* (NLP) task. It's used to determine whether text conveys a positive, neutral or negative sentiment; which makes it useful for categorizing reviews, social media posts, and other subjective documents.
 
@@ -62,19 +62,23 @@ In this part of the exercise, you'll use a general-purpose language model to per
    You are an AI assistant that analyzes and summarizes text.
     ```
 
-1. In the **Chat** pane, the following prompt (you can press CTRL+ENTER for a new line):
+    Now, suppose you've found an old article from a computer trade magazine, that includes a review of a home computer that was launched in the 1980s
+
+1. Enter the following prompt (you can press CTRL+ENTER for a new line):
 
     ```
-   Summarize this review as a single, short paragraph:
+   Summarize this review as a single short paragraph:
 
-   This AI training course provides a clear and engaging introduction to core concepts such as machine learning, neural networks, and generative AI, making it accessible even to learners with limited prior experience. The course consistently reinforces key ideas through practical examples and hands-on exercises, which helps learners build confidence while applying AI techniques in real-world scenarios.
-    
-   Another strength is the emphasis on modern tools and workflows, including prompt design and model evaluation, which are highly relevant for current industry needs. The instructors communicate complex topics in a simple, structured way, and the course materials are well organized to support progressive learning. I particularly appreciated how the course revisits important themes like model accuracy, responsible AI, and iterative improvement across multiple modules, reinforcing their importance.
-    
-   Overall, this course offers a highly practical and well-rounded learning experience for anyone looking to develop foundational and applied skills in AI.
+   Commodore 64: A Strong Contender in the Home Computer Market
+
+   Commodore's long-awaited Commodore 64 has finally arrived on dealers' shelves, and first impressions suggest that the company may have another substantial success on its hands. Priced aggressively and boasting a full 64K of RAM, the machine offers specifications that would have seemed remarkable in a home computer only a short time ago. Its colourful graphics and impressive sound capabilities place it among the most capable entertainment-oriented systems currently available.
+
+   Particularly noteworthy is the SID sound generator, which produces effects and musical output far beyond what users have come to expect from machines in this price bracket. Software houses are already expressing strong interest in the platform, and the combination of advanced graphics and sound should make the Commodore 64 an attractive proposition for both game developers and serious hobbyists alike.
+
+   The machine is not without its shortcomings, however. The keyboard, while serviceable, lacks the solid feel of some competing systems, and Commodore's documentation will do little to reassure newcomers to computing. Furthermore, prospective purchasers may wish to consider the total cost of ownership, as disk drives and other peripherals remain relatively expensive. Nevertheless, the Commodore 64 enters the market as one of the most compelling home computers currently available and is likely to be a significant force in the months ahead.
     ```
 
-    The model should generate a summary of the text.
+    The model should generate a summary of the review.
 
     ![Screenshot of text summarization results in the chat playground.](./media/text_summary.png)
 
@@ -94,6 +98,10 @@ The **Azure Language in Foundry Tools** provides purpose-built analyzers that us
 
     ![Screenshot of Foundry AI services page.](./media/ai_services.png)
 
+    > **Tip**: In some cases, you may see a slightly different interface in which the top level item in the left pane is **Models** and the list of AI services can be found on the **Services** page.
+
+1. Note the available services; which include Azure Language services for language detection and PII redaction.
+
 ### Detect language
 
 In scenarios where text could potentially be in one of multiple languages, the first step in an analysis workflow is often to determine the primary language so the text can be routed to the most appropriate model or agent for the subsequent processing.
@@ -108,15 +116,21 @@ In scenarios where text could potentially be in one of multiple languages, the f
     - Type your own text.
     - Upload a text file.
 
-    For example, enter the following input text and detect the language it's written in:
+   For example, suppose you encounter a vintage computer, and you're curious about its history. You find a label that contains the following text on the computer casing. Enter the text and detect the language it is written in:
 
     ```
-    ¡Hola! Me llamo Josefina y vivo en Madrid, España. Soy doctora en un hospital, ¡lo que me mantiene muy ocupada!
+   CPC 464
+   Art.-Nr.: 31020
+   Serien-Nr.: 464-87-041256
+   220–240 V ~ 50 Hz
+   40 W
+   Hergestellt in Korea
+   SCHNEIDER RUNDFUNKWERKE AG
+   Türkheim/Unterallgäu
+   Bundesrepublik Deutschland
     ```
 
-1. Experiment with input of your own.
-
-    > **Tip**: You can use the [Bing Translator](https://www.bing.com/translator){:target="_blank"} at `https://www.bing.com/translator` to generate text in languages you don't speak!
+    > **Tip**: If you want to investigate further, Foundry Tools includes a **Text Translator** service in the AI Services page; which you could use to translate the text.
 
 ### Identify PII in text
 
@@ -132,11 +146,24 @@ To comply with privacy policies and laws, organizations often need to detect and
     - Type your own text.
     - Upload a text file.
 
-    For example, enter the following input text and detect any PII it contains:
+    For example, suppose you find the following invoice in the box of a vintage computer you have purchased:
 
     ```
-    Maria Garcia called from 020 7946 0958 and asked to send documents to 42 Market Road, London, UK, SW1A 1AA.
+   Tailspin Toys Ltd
+   Invoice
+   14 September 1984
+    
+   Customer:
+     Margaret Ellis
+     128 High Street, Reading, Berkshire RG1 2AB
+     Telephone: 021 685 4215
+    
+   Item: ZX Spectrum 48K home computer (includes power supply, RF lead, and user manual)
+   Price: £79.00
+   Payment received:  £79.00
     ```
+
+    Enter this text and determine what personally identifiable information it contains.
 
 4. Experiment with input of your own. Azure Language can recognize an extensive list of PII. You can see the full list [here](https://learn.microsoft.com/azure/ai-services/language-service/personally-identifiable-information/concepts/entity-categories-list). A few of those entities include:
 
