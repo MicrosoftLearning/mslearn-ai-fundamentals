@@ -53,7 +53,9 @@ Let's start by using a chat interface to submit prompts to a generative AI model
 
 ### Summarize text
 
-**Sentiment analysis** is a common *natural language processing* (NLP) task. It's used to determine whether text conveys a positive, neutral or negative sentiment; which makes it useful for categorizing reviews, social media posts, and other subjective documents.
+A common requirement in text processing is to *summarize* a large body of text to distill it to its most salient points.
+
+For example, suppose you've found an old article from a computer trade magazine, that includes a review of a home computer that was launched in the 1980s. Rather than reading the whole artice, you might want to generate a summary that highlights the key positives and negatives the reviewer found; and the overall conclusion.
 
 1. In the chat playground page, use the button at the bottom of the left navigation pane to hide it and give yourself more room to work with.
 1. In the pane on the left, change the default **Instructions** to:
@@ -61,8 +63,6 @@ Let's start by using a chat interface to submit prompts to a generative AI model
     ```
    You are an AI assistant that analyzes and summarizes text.
     ```
-
-    Now, suppose you've found an old article from a computer trade magazine, that includes a review of a home computer that was launched in the 1980s
 
 1. Enter the following prompt (you can press CTRL+ENTER for a new line):
 
