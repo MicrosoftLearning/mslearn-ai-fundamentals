@@ -1,4 +1,4 @@
-# Microsoft Azure AI Fundamentals Exercises
+# Get started with AI apps and agents in Azure
 
 This repository contains instructions and assets for hands-on exercises in the associated training modules on [Microsoft AI Skills Navigator](https://aiskillsnavigator.microsoft.com/explore/search/learningpath-c1207ab7fef2e855e1cebac091002b0b82d99a80c0b10d9bc1b34cdf25be7c5f).
 
