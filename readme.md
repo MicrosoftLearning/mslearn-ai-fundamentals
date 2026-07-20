@@ -1,18 +1,22 @@
 # Microsoft Azure AI Fundamentals Exercises
 
-This repository contains instructions and assets for hands-on exercises in the Microsoft Official Courseware to support the [Microsoft Certified: Azure AI Fundamentals](https://learn.microsoft.com/credentials/certifications/azure-ai-fundamentals/) certification. The exercises are designed to complement the associated training modules on [Microsoft AI Skills Navigator](https://aiskillsnavigator.microsoft.com/explore/search/learningpath-c1207ab7fef2e855e1cebac091002b0b82d99a80c0b10d9bc1b34cdf25be7c5f), and a <u>subset</u> of these exercises comprises the hands-on labs in the official [AI-901: Microsoft Azure AI Fundamentals](https://learn.microsoft.com/training/courses/ai-901t00) instructor-led training course.
+This repository contains instructions and assets for hands-on exercises in the Microsoft Official Courseware to support the associated training modules on [Microsoft AI Skills Navigator](https://aiskillsnavigator.microsoft.com/explore/search/learningpath-c1207ab7fef2e855e1cebac091002b0b82d99a80c0b10d9bc1b34cdf25be7c5f).
 
-## Exercise design principles
+## Notes for AI-901 trainers
 
-The exercises in the repo are designed to support <u>both</u> self-paced learners on Microsoft Learn, and students in official instructor-led training deliveries. In most cases, self-paced learners must provide their own cloud subscription, while students attending official instructor-led courses are typically provided with subscriptions they can use to complete each individual exercise that is included in the course. Note that Microsoft does not support instructor-led deliveries of the exercises in this repo in environments other than those provided by Microsoft authorized lab hosters (ALHs).
+The course, [AI-901: Introduction to AI in Azure](https://learn.microsoft.com/training/courses/ai-901t00), is designed as a 1-day course that includes interactive lab experiences; including labs in this repo.
 
-The exercises are designed to stand alone, independently of one another. This results in some duplicated steps to create a new Microsoft Foundry project in each exercise.
+> Note: Lab repo's in GitHub are no longer mapped 1:1 with ILT courses. The labs support multiple learning modalities, and ILT courses may use a subset of labs from one <u>or  more</u> repo's.
 
-The numbering of the exercises in this repo indicates a suggested logical sequence that reflects the flow of modules in the official learning paths and the instructor-led materials. The numbers do <u>not</u> indicate the corresponding slide deck or "lab" in an instructor-led course.
+The AI-901 course includes Microsoft Foundry-based labs from this repo, *<u>and</u>* conceptual labs from https://github.com/MicrosoftLearning/mslearn-ai-concepts. In one-day deliveries, you're likely only to have time to include a siubset of these labs; and we recommend the Foundry-based ones in this repo. However, you may consider using the conceptual labs as demo's, as additional further exploration for learners, or as fallback labs in the event of technical issues providing students with access to a functional Azure environment.
 
-Trainers can use *any* of the exercises as instructor-led demonstrations at their discretion. Note however that hosted lab profiles and cloud subscriptions may not be provided for exercises that are not included as student labs in courses; and the exercise-specific hosted subscriptions that *are* provided in lab profiles may have policies applied that prevent completion of other exercises. Trainers are advised to test available lab profiles and to use their own cloud subscriptions for demonstrations if necessary.
+In official deliveries, the labs are provided in a hosted environment by a authorized lab hoster (ALH). The lab instructions are also available for self-paced / unhosted completion in the following GitHub Page sites:
 
-When an Azure subscription is not available, the exercises in the [mslearn-ai-concepts](https://github.com/MicrosoftLearning/mslearn-ai-concepts) repo may be of some use as a fallback activity. Though these exercises focus on conceptual learning objectoves rather than Foundry technologies, many of them use browser-based apps that reflect a similar look and feel to Foundry user interfaces.
+- [mslearn-ai-concepts](https://microsoftlearning.github.io/mslearn-ai-concepts/)
+- [mslearn-ai-fundamentals](https://microsoftlearning.github.io/mslearn-ai-fundamentals/)
+
+> **Note**: If you encounter issues with the lab *content* (inaccurate instructions/screenshots, grammatical issues, out-of-date code, and so on), create an issue in the repo containing the lab. If you encounter issues related to the *lab hosting environment* (performance/reliability, Azure policy restrictions, and so on), please <u>raise an issue with your lab hoster</u>.
+
 
 ## Contributing to this repo
 
