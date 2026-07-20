@@ -1,6 +1,8 @@
 # Microsoft Azure AI Fundamentals Exercises
 
-This repository contains instructions and assets for hands-on exercises in the Microsoft Official Courseware to support the associated training modules on [Microsoft AI Skills Navigator](https://aiskillsnavigator.microsoft.com/explore/search/learningpath-c1207ab7fef2e855e1cebac091002b0b82d99a80c0b10d9bc1b34cdf25be7c5f).
+This repository contains instructions and assets for hands-on exercises in the associated training modules on [Microsoft AI Skills Navigator](https://aiskillsnavigator.microsoft.com/explore/search/learningpath-c1207ab7fef2e855e1cebac091002b0b82d99a80c0b10d9bc1b34cdf25be7c5f).
+
+> **Important**: To complete these labs, you require a [Microsoft Azure subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account).
 
 ## Notes for AI-901 trainers
 
