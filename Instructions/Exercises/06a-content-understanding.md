@@ -66,7 +66,7 @@ Suppose you want to find information related to a piece of computer hardware or 
 
     ![Screenshot of the table results of receipt analysis.](./media/content-understanding-pcb.png)
 
-1. Repeat the process to analyze the other PCB image you downloaded.
+1. Repeat the process to analyze the other PCB images you downloaded.
 
     > **Tip**: Try uploading any images that contain legible text.
 

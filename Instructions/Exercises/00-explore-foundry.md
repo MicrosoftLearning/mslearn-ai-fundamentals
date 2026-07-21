@@ -249,7 +249,7 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
     ![Screenshot of the Computing History app extracting text from an image.](./media/computer_history_info.png)
 
-1. Try the other PCB image you extracted, and see if the agent can help you identify the type of computer it may have come from.
+1. Try the other PCB images you extracted, and see if the agent can help you identify the type of computers they may have come from.
 
     > **Tip**: You can also search for your own images on [Bing](https://www.bing.com/images/search?q=vintage-computer-component-serial-numbers){:target="_blank"}. Try searching for serial number labels from specific vintage computers
 
