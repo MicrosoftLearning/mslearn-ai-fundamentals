@@ -11,7 +11,20 @@ lab:
 
 # Get started with Microsoft Foundry
 
-In this exercise, you'll create and explore a Microsoft Foundry project, and explore the assets that you can create to support an AI application; including generative AI models and tools to support AI functionality like speech. Then you'll connect a client application to your project so it can use those assets to implement common AI workloads.
+![Image of Anton.](./media/anton-icon.png)<br/>**Hi, I'm Anton.**<br/>I'll be here to help you with hints and tips as you work through this lab, in which you'll create and explore a Microsoft Foundry project, and explore the assets that you can create to support an AI application.
+
+You can also interact with me in the *Ask Anton* app.
+
+<details>
+<strong><i><a href="https://aka.ms/choose-anton" target="_blank">Ask Anton</a></i></strong> is available in two forms at <code>https://aka.ms/choose-anton</code>:
+<ul>
+<li><strong>Azure-based</strong>: Best experience <i>(requires an Azure subscription and deployment of a model in a Foundry project)</i>.</li>
+<li><strong>Browser-based</strong>: Use a small language model in your browser <i>(reduced functionality - may be slow or work only in "basic" mode in older/lower-spec devices)</i>.</li>
+</ul>
+<blockquote><i>Ask Anton is <u>not</u> a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator.</i>
+</blockquote>
+</details>
+<hr/>
 
 This exercise should take approximately **30** minutes to complete.
 
@@ -22,14 +35,14 @@ This exercise should take approximately **30** minutes to complete.
 Microsoft Foundry uses *projects* to organize models, resources, data, and other assets used to develop an AI solution. Projects are associated with an Azure *Microsoft Foundry* resource, which provides the cloud services required to support AI app and agent development on Azure.
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
-
-1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
+1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option.
+1. If you do not have any existing projects, you will be prompted to create one. Create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project (or you can select an existing project if you have one!):
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select any of the **AI Foundry recommended** regions in **[this list](https://learn.microsoft.com/azure/foundry/openai/how-to/responses#region-availability)**{:target="_blank"}
 
-    > **Note**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
 
 1. Select **Create**. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
@@ -53,7 +66,7 @@ Microsoft Foundry projects are based on resources in your Azure subscription. Le
 
 1. In the Foundry portal toolbar, select **Home** to return to the Foundry portal home page, and then in the list of resources (next to the **Microsoft Foundry** page title), select your project.
 
-    > **Tip**: When you return to the Home page initially, your parent resource may still be selected. Selecting your project enables you to use the portal to work with project-specific assets.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: When you return to the Home page initially, your parent resource may still be selected. Selecting your project enables you to use the portal to work with project-specific assets.
 
 ## Explore the Microsoft Foundry portal
 
@@ -136,7 +149,7 @@ Your Microsoft Foundry resource provides an endpoint in which you can deploy mod
 
 1. Use the **Deploy** button to deploy the model using the default settings. Deployment may take a minute or so.
 
-    > **Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different chat-enabled *gpt* model - such as *gpt-5*, or *gpt-5.1*. Alternatively, you can create a new project in a different region.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different chat-enabled *gpt* model - such as *gpt-5*, or *gpt-5.1*. Alternatively, you can create a new project in a different region.
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
@@ -144,7 +157,7 @@ Your Microsoft Foundry resource provides an endpoint in which you can deploy mod
 
 1. Ensure your model deployment is selected in the playground.
 
-    > **Tip**: Remember the model deployment name. You'll need it later.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Remember the model deployment name. You'll need it later.
 
 1. Use the button at the bottom of the left navigation pane to hide it and give yourself more room to work with.
 1. In the **Chat** pane, enter a prompt such as `Who was Ada Lovelace?`, and review the response.
@@ -163,19 +176,17 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
         *Make sure you use the **Project endpoint**, and <u>not</u> the Azure OpenAI endpoint!*
 
-    - **Project API key**: The authentication key used to access your resource\*.
+    - **Project API key**: The authentication key used to access your resource.
 
     You'll need these values to configure the chat application.
 
-    > \* If you are using a corporate or school Azure subscription that has a policy preventing key-based authentication, you *can* use Entra ID authentication; but this requires registering the app in your tenant (which requires global admin permissions). As an option of last-resort, an alternative, browser-based (non-Azure) version of the app is available at [https://aka.ms/computing-history-browser](https://aka.ms/computing-history-browser){:target="_blank"}.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: If you are using a corporate or school Azure subscription that has a policy preventing key-based authentication, you *can* use Entra ID authentication; but this requires registering the app in your tenant (which requires global admin permissions). As an option of last-resort, an alternative, browser-based (non-Azure) version of the app is available at [https://aka.ms/computing-history-browser](https://aka.ms/computing-history-browser){:target="_blank"}.
 
 1. Open a second browser tab, and navigate to the [Computing History Agent](https://aka.ms/computing-history-foundry){:target="_blank"} app at `https://aka.ms/computing-history-foundry`.
 
-    The Computing History app should open with its **Configuration** panel expanded, like this:
+    The Computing History app should open with its **Configuration** panel expanded (if not, use the arrow at the top of the chat pane to expand it):
 
     ![Screenshot of the Computing History app configuration panel.](./media/configure-computing-history.png)
-
-    > **Tip**: If the Configuration panel isn't expanded, use the arrow at the top of the chat pane to expand it.
 
 1. Enter your project endpoint, gpt-5-mini model deployment name, and API key from the Foundry portal into the configuration settings, and save the configuration.
 
@@ -238,7 +249,7 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
 1. Try some of the other computer images you extracted.
 
-    > **Tip**: You can also search for your own images of vintage computers on [Bing](https://www.bing.com/images/search?q=vintage+computers){:target="_blank"}.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: You can also search for your own images of vintage computers on [Bing](https://www.bing.com/images/search?q=vintage+computers){:target="_blank"}.
 
 ### Explore information extraction
 
@@ -251,7 +262,7 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
 1. Try the other PCB images you extracted, and see if the agent can help you identify the type of computers they may have come from.
 
-    > **Tip**: You can also search for your own images on [Bing](https://www.bing.com/images/search?q=vintage-computer-component-serial-numbers){:target="_blank"}. Try searching for serial number labels from specific vintage computers
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: You can also search for your own images on [Bing](https://www.bing.com/images/search?q=vintage-computer-component-serial-numbers){:target="_blank"}. Try searching for serial number labels from specific vintage computers
 
 ### Explore safety guardrails
 
@@ -272,8 +283,6 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
 in this exercise, you explored a Microsoft Foundry project and familiarized yourself with the Microsoft Foundry portal. You then deployed a model and connected a client application to your Foundry resource.
 
-> **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>Another app that you can connect to a model in your Foundry project is *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}*, a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just another example of an AI agent for you to explore as you learn about what's possible with AI.*<br/><br/>If you *do* check out Ask Anton, we'd love you to *[tell us about your experience](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}*!
-
 ## Clean Up
 
 If you have finished exploring Microsoft Foundry, you should delete the resources created in this exercise to avoid unnecessary utilization charges.
@@ -281,3 +290,5 @@ If you have finished exploring Microsoft Foundry, you should delete the resource
 1. Open the [Azure portal](https://portal.azure.com){:target="_blank"} at `https://portal.azure.com` and view the contents of the resource group where you deployed the project used in this exercise.
 1. On the toolbar, select **Delete resource group**.
 1. Enter the resource group name and confirm that you want to delete it.
+
+> ![Anton avatar.](./media/anton-icon.png)<br/>If you used the [*Ask Anton*](https://aka.ms/choose-anton){:target="_blank"} app during this lab, we'd love you to [tell us about your experience with it](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}!

@@ -12,11 +12,20 @@ lab:
 
 # Get started with speech in Microsoft Foundry
 
-Speech-capable AI agents enable users to interact conversationally - using spoken command and questions that generate vocal responses.
+![Image of Anton.](./media/anton-icon.png)<br/>**Hi, I'm Anton.**<br/>I'll be here to help you with hints and tips as you work through this lab, in which you'll use Azure Speech in Microsoft Foundry Tools to create a speech-capable agent.
 
-In this exercise, use Azure Speech in Microsoft Foundry Tools to create a speech-capable agent. You'll use Azure Speech Voice Live, a service used to build real-time voice-based agents.
+You can also interact with me in the *Ask Anton* app.
 
-> **Tip**: Speech input works best in a quiet environment with a microphone or headset.
+<details>
+<strong><i><a href="https://aka.ms/choose-anton" target="_blank">Ask Anton</a></i></strong> is available in two forms at <code>https://aka.ms/choose-anton</code>:
+<ul>
+<li><strong>Azure-based</strong>: Best experience <i>(requires an Azure subscription and deployment of a model in a Foundry project)</i>.</li>
+<li><strong>Browser-based</strong>: Use a small language model in your browser <i>(reduced functionality - may be slow or work only in "basic" mode in older/lower-spec devices)</i>.</li>
+</ul>
+<blockquote><i>Ask Anton is <u>not</u> a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator.</i>
+</blockquote>
+</details>
+<hr/>
 
 This exercise takes approximately **25** minutes.
 
@@ -25,14 +34,14 @@ This exercise takes approximately **25** minutes.
 Microsoft Foundry uses projects to organize models, resources, data, and other assets used to develop an AI solution.
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
-
-1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
+1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option.
+1. If you do not have any existing projects, you will be prompted to create one. Create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project (or you can select an existing project if you have one!):
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select any of the **AI Foundry recommended** regions in **[this list](https://learn.microsoft.com/azure/foundry/openai/how-to/responses#region-availability)**{:target="_blank"}
 
-    > **Note**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
 
 1. Select **Create**. Wait for your project to be created. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
@@ -79,6 +88,8 @@ Enabling speech mode for a Foundry agent integrates Azure Speech Voice Live - ad
 
 Now you're ready to chat with the agent.
 
+> ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Speech input works best in a quiet environment with a microphone or headset.
+
 1. In the Chat pane, use the **Start session** button to start a conversation with the agent. If prompted, allow access to the system microphone.
 
     The agent will start a speech session, and listen for your prompt.
@@ -89,12 +100,9 @@ Now you're ready to chat with the agent.
 
 1. Verify that the app status changes to **Processing…**. The app will process the spoken input.
 
-    >**Tip**: The processing speed may be so fast that you do not actually see the status before it changes back to *Speaking*.
+    The processing speed may be so fast that you do not actually see the status before it changes back to *Speaking*.
 
 1. When the status changes to **Speaking…**, the app uses text-to-speech to vocalize the response from the model. To see the original prompt and the response as text, select the **cc** button on the bottom of the chat screen.
-
-    >**Tip**: The follow-on prompt is submitted just by speaking. You can even interrupt the agent to keep the interaction focused on what you need done. You can also use the **Stop generation** button in the chat pane to stop long-running responses. The button will end the conversation. You will need to start a new conversation to continue using the agent.
-
 1. To continue the conversation, just ask another question, such as `"How does speech synthesis work?"`, and review the response.
 1. When you have finished chatting with the agent, use the **X** icon to end the session. A transcript of the conversation will be displayed.
 
@@ -112,11 +120,11 @@ To use your agent in a custom application, you need to write code that uses the 
 
 In this exercise, you explored the Azure Speech Voice Live tool in Microsoft Foundry, and how to use it to build a conversational agent. Azure Speech includes multiple speech capabilities that you can use to build AI applications and agents that transcribe speech, or generate spoken output from text.
 
-> **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just an example of an AI agent for you to explore as you learn about what's possible with AI.*<br/><br/>If you *do* check out Ask Anton, we'd love you to *[tell us about your experience](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}*!
-
 ## Clean up
 
 If you have finished exploring Microsoft Foundry, delete any resources that you no longer need. This avoids accruing any unnecessary costs.
 
 1. Open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com) and select the resource group that contains the resources you created.
 1. Select **Delete resource group** and then **enter the resource group name** to confirm. The resource group is then deleted.
+
+> ![Anton avatar.](./media/anton-icon.png)<br/>If you used the [*Ask Anton*](https://aka.ms/choose-anton){:target="_blank"} app during this lab, we'd love you to [tell us about your experience with it](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}!

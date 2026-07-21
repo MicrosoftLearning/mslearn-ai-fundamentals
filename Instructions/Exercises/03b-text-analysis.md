@@ -11,6 +11,21 @@ lab:
 
 # Get started with text analysis in Microsoft Foundry
 
+![Image of Anton.](./media/anton-icon.png)<br/>**Hi, I'm Anton.**<br/>I'll be here to help you with hints and tips as you work through this lab, in which you'll use AI to analyze text.
+
+You can also interact with me in the *Ask Anton* app.
+
+<details>
+<strong><i><a href="https://aka.ms/choose-anton" target="_blank">Ask Anton</a></i></strong> is available in two forms at <code>https://aka.ms/choose-anton</code>:
+<ul>
+<li><strong>Azure-based</strong>: Best experience <i>(requires an Azure subscription and deployment of a model in a Foundry project)</i>.</li>
+<li><strong>Browser-based</strong>: Use a small language model in your browser <i>(reduced functionality - may be slow or work only in "basic" mode in older/lower-spec devices)</i>.</li>
+</ul>
+<blockquote><i>Ask Anton is <u>not</u> a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator.</i>
+</blockquote>
+</details>
+<hr/>
+
 In this exercise, you'll use **Microsoft Foundry**, Microsoft's platform for creating AI applications, to explore common *text analysis techniques*.
 
 Foundry offers *two approaches* to text analysis: **general-purpose AI models** that handle a broad range of tasks through natural language prompts, and **purpose-built language tools** that return structured, deterministic results for specific tasks. By exploring both, you'll gain a clearer understanding of when to use each approach.
@@ -22,20 +37,18 @@ This exercise takes approximately **20** minutes.
 ## Create a project in Microsoft Foundry
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
-
-2. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the **Advanced options** area to specify the following settings for your project:
+1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option.
+1. If you do not have any existing projects, you will be prompted to create one. Create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project (or you can select an existing project if you have one!):
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select any of the **AI Foundry recommended** regions in **[this list](https://learn.microsoft.com/azure/foundry/openai/how-to/responses#region-availability)**{:target="_blank"}
 
-    > **Note**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
 
-3. Select **Create**. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
+1. Select **Create**. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image (you may need to close any *quick start* pages that are displayed):
 
     ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
-
-    >**Note**: Close any quick start panes in order to access your project's Foundry home page.
 
 ## Explore a general-purpose AI model's text analysis capabilities
 
@@ -45,11 +58,13 @@ Let's start by using a chat interface to submit prompts to a generative AI model
 
     ![Screenshot of the AI Foundry model catalog.](./media/models_page.png)
 
-2. Search for and select the `gpt-5-mini` model, and view the page for this model, which describes its features and capabilities.
+1. Search for and select the `gpt-5-mini` model, and view the page for this model, which describes its features and capabilities.
 
     ![Screenshot of the gpt-5-mini model page with the default settings deployment option highlighted.](./media/gpt-5-mini_page.png)
 
-3. Use the **Deploy** button to deploy the model using the *default settings*. Wait for the deployment to complete. After the deployment is complete, you're taken to a chat playground, where you can test out the model's capabilities.
+1. Use the **Deploy** button to deploy the model using the *default settings*. Wait for the deployment to complete. After the deployment is complete, you're taken to a chat playground, where you can test out the model's capabilities.
+
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: If you already have a *gpt* model deployment, you can use it instead of deploying a new one. Model deployments are subject to regional quotas. If you don't have enough quota to deploy a *gpt-5-mini* model in your project's region, you can use a different *gpt* chat-capable model - such as *gpt-5-nano*, or *gpt-5.4-mini*. Alternatively, you can create a new project in a different region.
 
 ### Summarize text
 
@@ -98,7 +113,7 @@ The **Azure Language in Foundry Tools** provides purpose-built analyzers that us
 
     ![Screenshot of Foundry AI services page.](./media/ai_services.png)
 
-    > **Tip**: In some cases, you may see a slightly different interface in which the top level item in the left pane is **Models** and the list of AI services can be found on the **Services** page.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: In some cases, you may see a slightly different interface in which the top level item in the left pane is **Models** and the list of AI services can be found on the **Services** page.
 
 1. Note the available services; which include Azure Language services for language detection and PII redaction.
 
@@ -130,7 +145,7 @@ In scenarios where text could potentially be in one of multiple languages, the f
    Bundesrepublik Deutschland
     ```
 
-    > **Tip**: If you want to investigate further, Foundry Tools includes a **Text Translator** service in the AI Services page; which you could use to translate the text.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: If you want to investigate further, Foundry Tools includes a **Text Translator** service in the AI Services page; which you could use to translate the text.
 
 ### Identify PII in text
 
@@ -213,13 +228,11 @@ Foundry provides sample code for some Azure Language capabilities. You can use t
    pii_recognition_example(client)
     ```
 
->**Tip**: You can copy the code and run it in your preferred Python development environment - for example Visual Studio Code. You will need to create environment variables for your Azure Language endpoint and key; which you can find in the code sample window.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: You can copy the code and run it in your preferred Python development environment - for example Visual Studio Code. You will need to create environment variables for your Azure Language endpoint and key; which you can find in the code sample window.
 
 ## Summary
 
 In this exercise, you explored how to use a generative AI model and the Azure Language tool in Foundry to analyze text. In many scenarios, the native language capabilities of a generative AI model provide all the natural language processing functionality you need. For more specialized scenarios, the Azure Language tool provides a dedicated service for NLP tasks.
-
-> **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just an example of an AI agent for you to explore as you learn about what's possible with AI.*<br/><br/>If you *do* check out Ask Anton, we'd love you to *[tell us about your experience](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}*!
 
 ## Clean up
 
@@ -227,3 +240,5 @@ If you have finished exploring Microsoft Foundry, delete any resources that you 
 
 1. Open the **Azure portal** at [https://portal.azure.com](https://portal.azure.com) and select the resource group that contains the resources you created.
 1. Select **Delete resource group** and then **enter the resource group name** to confirm. The resource group is then deleted.
+
+> ![Anton avatar.](./media/anton-icon.png)<br/>If you used the [*Ask Anton*](https://aka.ms/choose-anton){:target="_blank"} app during this lab, we'd love you to [tell us about your experience with it](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}!

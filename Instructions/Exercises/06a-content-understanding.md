@@ -11,27 +11,38 @@ lab:
 
 # Get started with information extraction in Microsoft Foundry
 
-In this exercise, you'll use Azure Content Understanding in Foundry, Microsoft's platform for creating intelligent applications.
+![Image of Anton.](./media/anton-icon.png)<br/>**Hi, I'm Anton.**<br/>I'll be here to help you with hints and tips as you work through this lab, in which you'll use Azure Content Understanding in Foundry to extract data from images.
+
+You can also interact with me in the *Ask Anton* app.
+
+<details>
+<strong><i><a href="https://aka.ms/choose-anton" target="_blank">Ask Anton</a></i></strong> is available in two forms at <code>https://aka.ms/choose-anton</code>:
+<ul>
+<li><strong>Azure-based</strong>: Best experience <i>(requires an Azure subscription and deployment of a model in a Foundry project)</i>.</li>
+<li><strong>Browser-based</strong>: Use a small language model in your browser <i>(reduced functionality - may be slow or work only in "basic" mode in older/lower-spec devices)</i>.</li>
+</ul>
+<blockquote><i>Ask Anton is <u>not</u> a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator.</i>
+</blockquote>
+</details>
+<hr/>
 
 This exercise takes approximately **25** minutes.
 
 ## Create a Microsoft Foundry project
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
-
-1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a *new project* with a unique name; expanding the **Advanced options** area to specify the following settings for your project:
+1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option.
+1. If you do not have any existing projects, you will be prompted to create one. Create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project (or you can select an existing project if you have one!):
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select *West US*, *Sweden Central*, *Australia East*, or any of the regions in **[this list](https://learn.microsoft.com/azure/ai-services/content-understanding/language-region-support)**{:target="_blank"}
 
-    > **Note**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
 
-1. Wait for your project to be created. It may take a few minutes. After creating a project in the *new* Foundry portal, it should take you to a list of your projects (*note*: you may need to refresh the page to see your newly created project). Select the project you just created to open a page similar to the following image:
+1. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
     ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
-
-    >**Tip**: Close any suggestions or tips that may appear on the home page.
 
 ## Use *Content Understanding* to extract information from documents
 
@@ -42,7 +53,7 @@ Azure Content Understanding is a Foundry service that uses AI models to turn uns
 1. In the Foundry portal, navigate to the tool bar at the top of the screen and select **Build**.
 1. On the *Build* page, in the menu on the left-side of the screen (which you may need to expand), select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
 
-    > **Tip**: In some cases, you may see a slightly different interface in which the top level item in the left pane is **Models** and the list of AI services can be found on the **Services** page.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: In some cases, you may see a slightly different interface in which the top level item in the left pane is **Models** and the list of AI services can be found on the **Services** page.
 
 1. Select **Content Understanding** to open the *Content Understanding* tool playground.
 
@@ -68,7 +79,7 @@ Suppose you want to find information related to a piece of computer hardware or 
 
 1. Repeat the process to analyze the other PCB images you downloaded.
 
-    > **Tip**: Try uploading any images that contain legible text.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Try uploading any images that contain legible text.
 
     The *OCR/Read* analyzer extracts text from images. However, sometimes it may be useful to extract additional information about the *layout* of the text in the image.
 
@@ -82,7 +93,7 @@ Now suppose you need to extract data fields from scanned receipts to help automa
 
 1. In the list of analyzer types, select **Procurement**, and then select the **Receipt** analyzer.
 
-    > **Tip**: Field extraction requires a custom model, so you may be prompted to deploy models during this process. Click **Cancel** when this happens.<br><br>Do <u>not</u> run analysis - we'll review the pre-prepared analysis results.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Field extraction requires a custom model, so you may be prompted to deploy models during this process. Click **Cancel** when this happens.<br><br>Do <u>not</u> run analysis - we'll review the pre-prepared analysis results.
 
     ![Screenshot of the table results of receipt analysis.](./media/content-understanding-receipt.png)
 
@@ -179,10 +190,10 @@ In this exercise, you explored Azure Content Understanding in Foundry and learne
 
 You also learned how developers can integrate Content Understanding into applications using the **Python SDK**, which enables programmatic analysis of documents outside the Foundry playground.
 
-> **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just an example of an AI agent for you to explore as you learn about what's possible with AI.*<br/><br/>If you *do* check out Ask Anton, we'd love you to *[tell us about your experience](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}*!
-
 ## Clean up
 
 If you’ve finished working with the Content Understanding service, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs.
 
 - In the Azure portal, delete the resource group you created in this exercise.
+-
+- > ![Anton avatar.](./media/anton-icon.png)<br/>If you used the [*Ask Anton*](https://aka.ms/choose-anton){:target="_blank"} app during this lab, we'd love you to [tell us about your experience with it](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}!
