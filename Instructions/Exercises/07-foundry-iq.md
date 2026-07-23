@@ -11,9 +11,20 @@ lab:
 
 # Get started with Foundry IQ in Microsoft Foundry
 
-The HR department at Contoso Corp wants to reduce employee support effort and empower employees by providing a self-service solution for queries about HR policies and procedures.
+![Image of Anton.](./media/anton-icon.png)<br/>**Hi, I'm Anton.**<br/>I'll be here to help you with hints and tips as you work through this lab; in which you'll use Microsoft Foundry IQ to create an AI agent that uses knowledge contained in HR documentation to advise employees on HR-related issues.
 
-In this exercise, you'll use Microsoft Foundry IQ to create an AI agent that uses knowledge contained in HR documentation to advise employees on HR-related issues.
+If you want more interactive help, you can chat with me in the *[Ask Anton](https://aka.ms/choose-anton){:target="_blank"}* app.
+
+<details>
+<strong><i><a href="https://aka.ms/choose-anton" target="_blank">Ask Anton</a></i></strong> is a generative AI agent that can answer questions about AI concepts and Microsoft Foundry technologies. It's available in two versions at <code>https://aka.ms/choose-anton</code>:
+<ul>
+<li><strong>Azure-based</strong>: Best experience <i>(requires an Azure subscription and deployment of a model in a Foundry project)</i>.</li>
+<li><strong>Browser-based</strong>: Use a small language model in your browser <i>(reduced functionality - may be slow or work only in "basic" mode in older/lower-spec devices)</i>.</li>
+</ul>
+<blockquote><i>Ask Anton is <u>not</u> a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator.</i>
+</blockquote>
+</details>
+<hr/>
 
 This exercise should take approximately **20** minutes to complete.
 
@@ -23,7 +34,7 @@ This exercise should take approximately **20** minutes to complete.
 
 Let's start by setting up an enterprise data source for HR policy and procedure documentation. In this scenario, the HR department at Contoso Corp. uses Azure AI Search to index HR documentation, so that it can be easily searched.
 
-> **Note**: To keep things simple, we'll use a single Azure AI Search resource in this exercise. This obviously does not represent a real-world volume or variety of data; but will serve to illustrate the principle.
+> ![Image of Anton.](./media/anton-icon.png)<br/>**Note**: To keep things simple, we'll use a single Azure AI Search resource in this exercise. This obviously does not represent a real-world volume or variety of data; but will serve to illustrate the principle.
 
 1. In a web browser, open the [Azure portal](https://portal.azure.com){:target="_blank"} at `https://portal.azure.com`. If prompted, sign in using your Azure credentials.
 
@@ -33,7 +44,7 @@ Let's start by setting up an enterprise data source for HR policy and procedure 
 
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal. You can resize or maximize this pane to make it easier to work in.
 
-    > **Note**: If you have previously created a cloud shell that uses a *PowerShell* environment, switch it to ***Bash***.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: If you have previously created a cloud shell that uses a *PowerShell* environment, switch it to ***Bash***.
 
 1. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise (type the commands, or copy them to the clipboard and then right-click in the command line and paste as plain text):
 
@@ -66,7 +77,7 @@ Now that you have the necessary infrastructure in place, you're ready to create 
 1. In your web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and **start building**; signing in using your Azure credentials.
 1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, when prompted, create a new project with a unique name; expanding the  **Advanced options** area to deploy the project in the resource group where you deployed Azure AI Search.
 
-    > **Note**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
 
     After creating a project in the new Foundry portal, it should open in a page similar to the following image:
 
@@ -120,13 +131,13 @@ Foundry IQ is a central connection point for data sources that agents can use as
 
     ![Screenshot of the Foundry IQ page with an AI Search resource selected.](./media/foundry-iq-search.png)
 
-    > **Important**: In a production solution, you should generally use Microsoft Entra ID authentication. We're using key-based authentication in this exercise for convenience.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: In a production solution, you should generally use *Microsoft Entra ID* authentication. We're using key-based authentication in this exercise for convenience.
 
 1. Connect the Azure AI Search resource. After a moment, it will be opened so you can create knowledge bases in it.
 
     ![Screenshot of the knowledge bases page.](./media/knowledge-bases.png)
 
-    > **Note**: We've added an Azure AI Search resource to the Foundry project so it can support Foundry IQ knowledge stores. It's important to understand that Foundry IQ <u>*always*</u> uses an Azure AI Search resource to create vector indexes for one or more knowledge bases - regardless of the location of the data being accessed. In this case, the data *also* happens to be in an Azure AI Search index; but even if it were in a data lake, SharePoint site, or other location, we'd still need to attach an Azure AI Search resource to the Foundry project!
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: We've added an Azure AI Search resource to the Foundry project so it can support Foundry IQ knowledge stores. It's important to understand that Foundry IQ <u>*always*</u> uses an Azure AI Search resource to create vector indexes for one or more knowledge bases - regardless of the location of the data being accessed. In this case, the data *also* happens to be in an Azure AI Search index; but even if it were in a data lake, SharePoint site, or other location, we'd still need to attach an Azure AI Search resource to the Foundry project!
 
 ### Create a knowledge base
 
@@ -206,3 +217,5 @@ If you have finished exploring Microsoft Foundry, you should delete the resource
 1. Open the [Azure portal](https://portal.azure.com){:target="_blank"} at `https://portal.azure.com` and view the contents of the resource group where you deployed the project used in this exercise.
 1. On the toolbar, select **Delete resource group**.
 1. Enter the resource group name and confirm that you want to delete it.
+
+> ![Anton avatar.](./media/anton-icon.png)<br/>If you used the [*Ask Anton*](https://aka.ms/choose-anton){:target="_blank"} app during this lab, we'd love you to [tell us about your experience with it](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}!
