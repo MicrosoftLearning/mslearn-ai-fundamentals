@@ -64,7 +64,7 @@ Let's start by setting up an enterprise data source for HR policy and procedure 
 
 1. When prompted, enter:
     - The resource group where you want to deploy Azure AI Search
-    - Any of regions in [this list](https://learn.microsoft.com/azure/foundry/openai/how-to/responses#region-availability){:target="_blank"}
+    - Any of regions in [this list](https://learn.microsoft.com/azure/foundry/openai/how-to/responses#supported-regions){:target="_blank"}
     - A unique name for your Azure AI Search resource
 
 1. Wait for the script to deploy Azure AI Search and create the index you'll use in this exercise.
