@@ -109,11 +109,11 @@ The **Azure Language in Foundry Tools** provides purpose-built analyzers that us
 
 1. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it). In the menu, select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
 
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: In some cases, you may see a slightly different interface in which the list of AI services can be found by selecting the **Services** page in the left pane.
+
     Microsoft Foundry Tools includes multiple AI Services (formerly known as Microsoft Cognitive Services) that support common speech, translation, language, and content understanding workloads.
 
     ![Screenshot of Foundry AI services page.](./media/ai_services.png)
-
-    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: In some cases, you may see a slightly different interface in which the top level item in the left pane is **Models** and the list of AI services can be found on the **Services** page.
 
 1. Note the available services; which include Azure Language services for language detection and PII redaction.
 
