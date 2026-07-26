@@ -11,7 +11,7 @@ lab:
 
 # Get started with Foundry IQ in Microsoft Foundry
 
-![Image of Anton.](./media/anton-icon.png)<br/>**Hi, I'm Anton.**<br/>I'll be here to help you with hints and tips as you work through this lab; in which you'll use Microsoft Foundry IQ to create an AI agent that uses knowledge contained in HR documentation to advise employees on HR-related issues.
+![Image of Anton.](./media/anton-icon.png)<br/>**Hi, I'm Anton.**<br/>I'll be here to help you with hints and tips as you work through this lab; in which you'll use Microsoft Foundry IQ to create an AI agent that uses knowledge contained in expenses policy documentation to advise employees on expense claim guidelines and procedures.
 
 If you want more interactive help, you can chat with me in the *[Ask Anton](https://aka.ms/choose-anton){:target="_blank"}* app.
 
@@ -28,72 +28,44 @@ If you want more interactive help, you can chat with me in the *[Ask Anton](http
 
 This exercise should take approximately **20** minutes to complete.
 
-> **Note**: To complete this exercise, you need credentials for an Azure subscription in which you have sufficient permissions to create the required  resources.
+> **Note**: Many components of Microsoft Foundry, including the Microsoft Foundry portal, are subject to continual development. This reflects the fast-moving nature of artificial intelligence technology. Some elements of your user experience may differ from the images and descriptions in this exercise!
 
-## Set up a data source
+## Create a Microsoft Foundry project
 
-Let's start by setting up an enterprise data source for HR policy and procedure documentation. In this scenario, the HR department at Contoso Corp. uses Azure AI Search to index HR documentation, so that it can be easily searched.
+Microsoft Foundry uses *projects* to organize models, resources, data, and other assets used to develop an AI solution.
 
-> ![Image of Anton.](./media/anton-icon.png)<br/>**Note**: To keep things simple, we'll use a single Azure AI Search resource in this exercise. This obviously does not represent a real-world volume or variety of data; but will serve to illustrate the principle.
-
-1. In a web browser, open the [Azure portal](https://portal.azure.com){:target="_blank"} at `https://portal.azure.com`. If prompted, sign in using your Azure credentials.
-
-   Close any welcome notifications to see the Azure portal home page.
-
-1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***Bash*** environment with no storage in your subscription.
-
-    The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal. You can resize or maximize this pane to make it easier to work in.
-
-    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: If you have previously created a cloud shell that uses a *PowerShell* environment, switch it to ***Bash***.
-
-1. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise (type the commands, or copy them to the clipboard and then right-click in the command line and paste as plain text):
-
-    ```
-   rm -r labfiles -f
-   git clone https://github.com/microsoftlearning/mslearn-ai-fundamentals labfiles
-   cd labfiles/setup
-
-    ```
-
-1. After the repo has been cloned, enter the following command to run a setup script that deploys the necessary resources:
-
-    ```
-   bash ./deploy-search.sh
-    
-    ```
-
-1. When prompted, enter:
-    - The resource group where you want to deploy Azure AI Search
-    - Any of regions in [this list](https://learn.microsoft.com/azure/foundry/openai/how-to/responses#supported-regions){:target="_blank"}
-    - A unique name for your Azure AI Search resource
-
-1. Wait for the script to deploy Azure AI Search and create the index you'll use in this exercise.
-1. When the script has finished, close the cloud shell pane and in the Azure portal home page, select **Resource groups**. Then open the resource group you specified and verify that it contains an Azure AI Search resource with the name you specified.
-
-## Create an AI agent
-
-Now that you have the necessary infrastructure in place, you're ready to create an AI agent that can search the HR documentation for answers to employee questions.
-
-1. In your web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and **start building**; signing in using your Azure credentials.
-1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, when prompted, create a new project with a unique name; expanding the  **Advanced options** area to deploy the project in the resource group where you deployed Azure AI Search.
+1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and start building; signing in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
+1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option.
+1. If you do not have any existing projects, you will be prompted to create one. Create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project (or you can select an existing project if you have one!):
+    - **Foundry resource**: *A valid name for your Foundry resource.*
+    - **Subscription**: *Your Azure subscription*
+    - **Resource group**: *Create or select a resource group*
+    - **Region**: Select any of the **AI Foundry recommended** regions in [this list](https://learn.microsoft.com/azure/foundry/openai/how-to/responses#supported-regions){:target="_blank"}
 
     > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
 
-    After creating a project in the new Foundry portal, it should open in a page similar to the following image:
+1. Wait for your project to be created. It may take a few minutes. Then close any welcome dialogs that are displayed.
+
+    After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
     ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
-1. On the **Build** page, select the **Agents** tab, and build a new agent named  `hr-agent`.
+
+## Create an AI agent
+
+Now you're ready to create an agent that can help employees with expense claims.
+
+1. On the **Home** page, in the **Build an agent** tile, select **Start building** (or on the **Build** page, select the **Agents** tab); and create a new agent named `expenses-agent`.
 
      When ready, your agent opens in the agent playground.
 
-    ![Screenshot of the agent playground.](./media/hr-agent.png)
+    ![Screenshot of the agent playground.](./media/expenses-agent.png)
 
 1. In the model drop-down list, ensure that a model has been deployed and selected for your agent.
 1. Assign your agent the following **Instructions**:
 
     ```
-   You are an AI agent in the HR department of Contoso Corp. You answer employee questions about HR policies and processes. Always respond politely and professionally. Do not engage in conversations beyond the subject of HR policies and processes.
+   You are an AI agent that advises employees on expenses policies and expense claim processes.
     ```
 
 1. Use the **Save** button to save the changes.
@@ -108,10 +80,10 @@ Now that you have the necessary infrastructure in place, you're ready to create 
 1. Now try this:
 
     ```
-   How many vacation days do employees get?
+   How much can I claim for a taxi?
     ```
 
-    The agent may respond with what *seems* like a correct answer. However, the agent currently has no knowledge of Contoso's HR policies and procedures; so the answer isn't grounded in accurate information.
+    The agent may respond with what *seems* like a correct answer. However, the agent currently has no knowledge of your company's expense policies and procedures; so the answer isn't grounded in accurate information.
 
     Let's fix that!
 
@@ -119,88 +91,98 @@ Now that you have the necessary infrastructure in place, you're ready to create 
 
 Foundry IQ is a central connection point for data sources that agents can use as knowledge bases. It enables you to create and manage a collection of knowledge that multiple agents can use, without the need to code data access and query logic in each agent.
 
+### Download expenses policy documentation
+
+1. Open a new browser tab, and navigate to the **[expenses_policy.docx](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx){:target="_blank"}** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx`. We'll use this to provide a knowledge source that the agent can use to answer questions about expense claims.
+
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: This is a very small document for the purposes of this lab. In reality, an enterprise knowedge base would likely consist of a large volume of data - often in one or more databases or other enterprise systems.
+
+1. Download **expenses_policy.docx** to your local computer (it doesn't matter where).
+
 ### Configure Foundry IQ
 
-1. In the pane on the left of the playground, expand **Knowledge**. Then in the **Add** list, select **Connect to Foundry IQ**.
+1. Return to the browser tab containing the Foundry portal agent playground, and in the main navigation pane on the left, select **Knowledge** to open the Foundry IQ page.
 
-    You should be prompted to connect to a search resource:
+    ![Screenshot of the Foundry IQ page.](./media/foundry_iq.png)
 
-    ![Screenshot of Connect to Foundry IQ dialog.](./media/connect-foundry-iq.png)
+1. At the bottom of the page, select the **Create a new resource** link to create a new Foundry IQ (Azure AI Search) resource in your Azure subscription.
 
-1. Select **Connect to an AI Search resource** to open the Foundry IQ page. Then, in the list of available AI Search resources, select your Azure AI Search resource and specify the **API Key** auth type.
+    ![Screenshot of the Foundry IQ Resource dialog.](./media/foundry_iq_resource.png)
 
-    ![Screenshot of the Foundry IQ page with an AI Search resource selected.](./media/foundry-iq-search.png)
+    Enter the following values, accept the cost aknowledgement, and create your resource:
 
-    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: In a production solution, you should generally use *Microsoft Entra ID* authentication. We're using key-based authentication in this exercise for convenience.
+    - **Resource name**: *A unique name for your Foundry IQ resource.*
+    - **Subscription**: *Your Azure subscription.*
+    - **Resource group**: *The resource group containing your Microsoft Foundry resource.*
+    - **Region**: Any available region.
+    - **Pricing tier**: Basic
 
-1. Connect the Azure AI Search resource. After a moment, it will be opened so you can create knowledge bases in it.
+1. Wait for the Foundry IQ resource to be created and configured for secure access.
 
-    ![Screenshot of the knowledge bases page.](./media/knowledge-bases.png)
+    When your Foundry IQ resource is ready, the page will list your knowledge bases (currently there are none).
 
-    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: We've added an Azure AI Search resource to the Foundry project so it can support Foundry IQ knowledge stores. It's important to understand that Foundry IQ <u>*always*</u> uses an Azure AI Search resource to create vector indexes for one or more knowledge bases - regardless of the location of the data being accessed. In this case, the data *also* happens to be in an Azure AI Search index; but even if it were in a data lake, SharePoint site, or other location, we'd still need to attach an Azure AI Search resource to the Foundry project!
+    ![Screenshot of the Foundry IQ knowledge bases page.](./media/foundry_iq_knowledge_bases.png)
 
 ### Create a knowledge base
 
 1. Select **Create a knowledge base**, and complete the basic configuration of the knowledge base by assigning the following values:
-    - **Name**: `contoso-corporate-data`
-    - **Description**: `Corporate documentation for employees`
+    - **Name**: `expenses-documentation`
+    - **Description**: `Expense guidelines for employees`
     - **Chat completions model**: *Select the existing model deployment*
     - **Retrieval reasoning effort**: Low
     - **Output mode**: Answer synthesis
     - **Answer instructions**: `Answer concisely, based on the available context`
-    - **Retrieval instructions**: `Use the hr-documentation source for all questions related to HR policies and procedures`
+    - **Retrieval instructions**: `Use the expenses-documentation source for all questions related to expense claim policies and procedures`
 
     > **Note**: The *output mode* determines how Foundry IQ returns knowledge to the agent. *exractive data* returns verbatim text from the knowledge source while *answer synthesis* uses a generative AI model to compose a suitable response. *Answer instructions* act as a system prompt to specify formatting of the response, and *retrieval instructions* are used by Foundry IQ to guide how knowledge is searched for in the available knowledge bases (in this case, there's only one knowledge base; but there could be more!)
 
-1. View the available knowledge base types. These represent the different kinds of data source you can use for knowledge bases in Foundry IQ.
+1. In the **Add knowledge sources** pane, select **Upload files** and upload the **expenses_policy.docx** file you previously downloaded to your computer; assigning the name `expenses-policy` and using he default embedding model.
 
-    ![Screenshot of knowledge bases types.](./media/knowledge-base-types.png)
+    ![Screenshot of the Create a knowledge source dialog.](./media/foundry_iq_file.png)
 
-1. Select **Azure AI Search index** and **connect**.
+1. Wait for the file to be uploaded and processed, and then save the knowledge base.
 
-1. When prompted, create a knowledge source named `hr-documentation` with an appropriate description, based on the **hr-index** in your Azure AI Search resource.
+### Configure access permissions
 
-    ![Screenshot of the create knowledge source page.](./media/create-knowledge-source.png)
+1. Open a new browser tab and navigate to the [Azure portal](https://portal.azure.com){:target="_blank"} at `https://portal.azure.com`; signing in with your Azure credentials.
+1. Browse to the resource group where you created your Foundry IQ resource, and verify that it is listed along with your Microsoft Foundry resource and project.
 
-1. After adding the knowledge source, save the knowledge base.
+    ![Screenshot of resources in the Foundry portal.](./media/azure_resource_group_with_search.png)
 
-## Use the knowledge store in the HR agent
+1. Select the Foundry IQ search service resource to open it, and view its **Access control (IAM)** page.
 
-Now you're ready to use the new knowledge store in the HR agent.
+    ![Screenshot of the AI Search access control page.](./media/ai_search_iam.png)
 
-1. When you've saved the knowledge store, in the **Use in an agent** drop-down list, select your HR agent.
+1. In the **Add** drop-down list, select **Add role assignment**. Then, on the **Role** tab, search for and select the `Search Data Index Reader` role, and then select **Next**.
+
+    ![Screenshot of the Add role assignment (role) page.](./media/add_role_assignment_role.png)
+
+1. On the **Members** tab, select **Managed identity**, and then use the **+Select members** link to search for and select your **Foundry project** identity.
+
+    ![Screenshot of the Add role assignment (member) page.](./media/add_role_assignment_member.png)
+
+1. Complete the process to **Review and assign** the role membership to add you Foundry project's managed identity to the *Search Data Index Reader* role. your Foundry IQ search resource.
+1. Close the tab containing the Azure portal and return to the Foundry portal; where your knowledge store page should still be open.
+
+## Use the knowledge store in the expenses agent
+
+Now you're ready to use the new knowledge store in the expenses agent.
+
+1. In the page for your saved knowledge store, in the **Use in an agent** drop-down list, select your expenses agent.
 
     The agent is opened in the agent playground, with the knowledge store attached.
 
 1. In the chat pane, enter the following query:
 
     ```
-   How many vacation days do employees get?
+   How much can I claim for a taxi?
     ```
 
-1. Review the response from the agent, and note that at the bottom of the response, a knowledge base with a name similar to *kb_contoso_corporate_d_a12bc* is cited - this confirms that the agent used the knowledge source you created in Foundry IQ.
+1. Review the response from the agent, and note that at the bottom of the response, a citation for the expenses documentation is listed.
 
-    ![Screenshot of the agent response.](./media/foundry-iq-response.png)
+    ![Screenshot of the agent response.](./media/expenses_agent_with_knowledge.png)
 
-### Preview the agent UI for employees
-
-Employees will consume the agent through a web application in the company's internal HR site. Let's see how it might look and behave in production.
-
-1. At the top of the agent playground, in the **Publish** list, select **Preview web app**.
-
-    The agent opens in a new browser tab.
-
-1. Enter the following prompt:
-
-    ```
-   How do I request PTO?
-    ```
-
-    When prompted, approve access to the tool, and then review the response.
-
-    ![Screenshot of the agent preview.](./media/preview-hr-agent.png)
-
-1. Try asking about other HR topics (such as remote or hybrid work policy, or employee benefits).
+    The expenses agent is now using Foundry IQ to access the expenses documentation knowledge store when needed to answer a user's question.
 
 ## Summary
 
