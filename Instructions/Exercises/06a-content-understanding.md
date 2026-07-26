@@ -122,7 +122,7 @@ As a developer, you can also use code to extract meaning from content. The Found
     def main() -> None:
         # Insert the following configurations.
         # 1) AZURE_CONTENT_UNDERSTANDING_ENDPOINT - the endpoint to your Content Understanding resource.
-        endpoint = "<https://content-project-resource.services.ai.azure.com/>"
+        endpoint = "https://content-project-resource.services.ai.azure.com/"
     
         # 2) CONTENT_UNDERSTANDING_KEY - your Content Understanding API key (optional if using DefaultAzureCredential).
         key = "{{CONTENT_UNDERSTANDING_KEY}}"
@@ -174,7 +174,7 @@ As a developer, you can also use code to extract meaning from content. The Found
             print(result_str)
         # [END output_result]
     
-    if **name** == "**main**":
+    if __name__ == "__main__":
         main()
     ```
 

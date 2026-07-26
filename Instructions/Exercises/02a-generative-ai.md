@@ -204,7 +204,7 @@ The agent is defined within your Foundry project, and there's a convenient way t
     from azure.identity import DefaultAzureCredential
     from azure.ai.projects import AIProjectClient
     
-    endpoint = "<https://ai-resrce.services.ai.azure.com/api/projects/ai-project>"
+    endpoint = "https://ai-resrce.services.ai.azure.com/api/projects/ai-project"
     
     project_client = AIProjectClient(
         endpoint=endpoint,
