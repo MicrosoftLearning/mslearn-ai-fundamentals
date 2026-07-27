@@ -107,9 +107,9 @@ The **Azure Language in Foundry Tools** provides purpose-built analyzers that us
 
 1. In the Foundry portal, navigate to the menu at the top of the screen and select **Build**.
 
-1. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it). In the menu, select **Deployments**. Then, at the top of the *Deployments* page, select **AI Services**.
+1. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it). In the menu, select the **Services** page.
 
-    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: In some cases, you may see a slightly different interface in which the list of AI services can be found by selecting the **Services** page in the left pane.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: In some cases, you may see a slightly different interface in which the list of AI services can be found by selecting the **Deployments** page, and viewing its **AI Services** tab.
 
     Microsoft Foundry Tools includes multiple AI Services (formerly known as Microsoft Cognitive Services) that support common speech, translation, language, and content understanding workloads.
 
@@ -151,7 +151,7 @@ In scenarios where text could potentially be in one of multiple languages, the f
 
 To comply with privacy policies and laws, organizations often need to detect and redact **personally identifiable information (PII)** such as names, addresses, phone numbers, email addresses, and other personal details.
 
-1. On the language detection playground page, in the **Type** drop-down list, select **Text PII extraction** (or return to the list of AI services and select **Azure Language - Text PII extraction**).
+1. On the language detection playground page, in the **Type** drop-down list, select **Text PII Redaction** (or return to the list of AI services and select **Azure Language - Text PII Redaction**).
 2. In the **Input text** list, select one of the provided sample documents. Then use the **Detect** button to detect PII values in the text.
 
     ![Screenshot of a detected PII in the Playground](./media/pii_extraction.png)
