@@ -53,7 +53,9 @@ Azure Content Understanding is a Foundry service that uses AI models to turn uns
 1. In the Foundry portal, navigate to the tool bar at the top of the screen and select **Build**.
 1. On the *Build* page, in the menu on the left-side of the screen (which you may need to expand), select the **Services** page.
 
-    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: In some cases, you may see a slightly different interface in which the list of AI services can be found by selecting the **Deployments** page, and viewing its **AI Services** tab.
+    Microsoft Foundry Tools includes multiple AI Services (formerly known as Microsoft Cognitive Services) that support common speech, translation, language, and content understanding workloads.
+
+    ![Screenshot of Foundry AI services page.](./media/ai_services.png)
 
 1. Select **Content Understanding** to open the *Content Understanding* tool playground.
 
