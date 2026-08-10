@@ -85,6 +85,16 @@ You can use the playground to explore the model by chatting with it.
 
     > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Generative AI chat applications often include the conversation history in the prompt; so the context of the conversation is retained between messages. In this case, "her" is interpreted as referring to Ada Lovelace.
 
+1. In the model playground, at the top-right of the chat pane, use the **New chat** button to restart the conversation and remove the conversation history.
+
+    Let's try asking about the same subject with a more specific prompt.
+
+1. Enter the prompt `List three facts about Ada Lovelace.` and review the response.
+
+    The response should reflect the explicit instructions in the prompt.
+
+    > ![Image of Anton.](./media/anton-icon.png)<br>**Note**: The difference in the response illustrate a key feature of using an LLM. LLM responses are generated dynamically by the model - not looked up in a static data source. On the one hand, this makes LLMs more flexible; but on the other hand it means that the response generated may not be *grounded* in authoritative facts. Later, we'll explore how to add a knowledge source to ground generative AI responses.
+
 ## Specify *instructions*
 
 To support specific use cases, you should use a *system prompt* to provide the model with instructions that guide its responses. You can use the system prompt to give the model a specific focus or role, and provide guidelines about format, style, and constraints about what the model should and shouldn't include in its responses.
