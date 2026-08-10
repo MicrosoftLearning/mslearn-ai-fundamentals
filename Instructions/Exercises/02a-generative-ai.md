@@ -93,7 +93,7 @@ You can use the playground to explore the model by chatting with it.
 
     The response should reflect the explicit instructions in the prompt.
 
-    > ![Image of Anton.](./media/anton-icon.png)<br>**Tip**: The difference in the response illustrate a key feature of using an LLM. LLM responses are generated dynamically by the model - not looked up in a static data source. On the one hand, this makes LLMs more flexible; but on the other hand it means that the response generated may not be *grounded* in authoritative facts. Later, we'll explore how to add a knowledge source to ground generative AI responses.
+    > ![Image of Anton.](./media/anton-icon.png)<br>**Tip**: The difference in the response illustrates a key feature of using an LLM. LLM responses are generated dynamically by the model - not looked up in a static data source. On the one hand, this makes LLMs more flexible; but on the other hand it means that the response generated may not be *grounded* in authoritative facts. Later, we'll explore how to add a knowledge source to ground generative AI responses.
 
 ## Specify *instructions*
 
