@@ -50,12 +50,11 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
     ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
-
 ## Create an AI agent
 
 Now you're ready to create an agent that can help employees with expense claims.
 
-1. On the **Home** page, in the **Build an agent** tile, select **Start building** (or on the **Build** page, select the **Agents** tab); and create a new agent named `expenses-agent`.
+1. On the **Home** page, in the **Build an agent** tile, select **Start building** (or on the **Build** page, select the **Agents** tab); and create a new agent named `expenses-agent`. If prompted, set the **Interaction mode** to **Text**.
 
      When ready, your agent opens in the agent playground.
 
