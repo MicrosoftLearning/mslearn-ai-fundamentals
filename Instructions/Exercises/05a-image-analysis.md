@@ -176,54 +176,9 @@ If you want to develop a client app or agent that generates images using your mo
         f.write(image_bytes)
     ```
 
-## Use a generative AI model to create video (*if available*)
-
-![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: This task requires a subscription that has access to video-generation models.
-
-In addition to static images, you may want to include video content on the computing history agent web site.
-
-1. Use the "back" arrow next to the image-generation model header (or select the **Models** page in the navigation pane) to view the model deployments in your project.
-1. Select **Deploy a base model** to open the model catalog.
-1. In the **Collections** drop-down list, select **Direct from Azure**, and in the **Inference tasks** drop-down list, select **Video generation**. Then view the available models for video generation.
-
-   ![Screenshot of video-generation models in the model catalog.](./media/0-video-generation-models.png)
-
-    ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availability and quota.
-
-1. Select the **Sora-2** model and deploy it.
-
-    *If the Sora-2 model is available in your subscription, you may need to request access to the latest available model.*
-
-1. When the model has been deployed, it opens in the video playground.
-1. Enter a prompt describing a desired video; for example, `A retro computer game.` Then review the generated video.
-
-   ![Screenshot of the video playground with a generated video.](./media/generated_video.png)
-
-### View code
-
-If you want to develop a client app or agent that generates videos using your model, you can use the REST API.
-
-1. In the **Chat** pane, select **View Code** to view sample code.
-
-    The default sample code uses the *curl* command to call the REST endpoint, and should look similar to this:
-
-    ```bash
-    curl -X POST "https://your-project-resource.openai.azure.com/openai/v1/video/generations/jobs" \
-    -H "Content-Type: application/json" \
-    -H "Authorization: Bearer $AZURE_API_KEY" \
-    -d '{
-        "prompt" : "A video of a cat",
-         "height" : "1080",
-         "width" : "1080",
-         "n_seconds" : "5",
-         "n_variants" : "1",
-        "model": "sora"
-        }'
-    ```
-
 ## Summary
 
-in this exercise, you explored the use of vision-enabled models in Microsoft Foundry, including models that can accept vision data as input, models that can generate static images based on text descriptions, and models that can generate video.
+in this exercise, you explored the use of vision-enabled models in Microsoft Foundry, including models that can accept vision data as input and models that can generate images based on text descriptions.
 
 ## Clean up
 
