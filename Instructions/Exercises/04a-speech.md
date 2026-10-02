@@ -73,6 +73,8 @@ Now let's create an agent.
 
     The agent should respond with an appropriate answer based on its instructions.
 
+    > **TIP**: If an error occurs due to instant reference quota still being initialized, in the **Model** list, select **Browse more models** and then search for a deploy any available gpt-5 or later model.
+
 ## Configure Azure Speech Voice live
 
 Enabling speech mode for a Foundry agent integrates Azure Speech Voice Live - adding speech capabilities to the agent.
