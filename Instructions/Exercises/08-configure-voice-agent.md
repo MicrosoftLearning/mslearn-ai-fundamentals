@@ -41,7 +41,11 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select any of the **AI Foundry recommended** regions in [this list](https://learn.microsoft.com/azure/foundry/openai/how-to/responses#supported-regions){:target="_blank"}
 
-1. Once your project is ready, close any welcome dialogs and navigate to the **Build** section.
+1. Wait for your project to be created. It may take a few minutes. Then close any welcome dialogs that are displayed.
+
+    After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
+
+    ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
 ## Create a voice agent
 
@@ -49,49 +53,44 @@ Now you'll create a voice-based agent for a customer support scenario.
 
 1. On the **Build** page, select the **Agents** tab, then select **Build an agent**.
 
-2. Enter a name for your agent, such as `support-agent`.
+2. Enter a name for your agent, such as `customer-support-agent`.
 
-3. Select **Voice** as the **Interaction mode** and enter a goal for the voice agent, such as "Provide customer support for Contoso Shop."
+3. Select **Voice** as the **Interaction mode** and enter a goal for the voice agent, such as "Provide customer support for Contoso Shop and help customers with online returns."
+
+    ![Screenshot of creating a new voice agent.](./media/new-voice-agent.png)
 
 4. Select **Create agent and open playground**.
 
     Your agent opens in the agent playground.
 
-## Configure the reasoning layer (instructions)
+## Configure the instructions
 
 Voice agents need instructions written for *spoken* conversation, not text. Replace the template instructions with ones optimized for speech.
 
-1. In the **Instructions** panel, clear the existing text and replace it with the following structure:
+1. In the **Instructions** panel, update the personality section with the following content:
 
     ```
     ### Personality
 
-    You are Alex, a friendly customer support agent for Contoso Shop. You're patient, helpful, and professional.
-
-    ### Environment
-    You're on a live phone call. The caller can only hear you. You have tools to look up orders and check account status. Always use your tools—never guess.
-
-    ### Tone
-    Keep your responses short and natural—one or two sentences. Use plain language, no jargon. Speak numbers as words (say "forty-five dollars," not "45 dollars"). Read back any important details before acting.
-
-    ### Goal
-    1. Greet the caller warmly
-    2. Ask what they need help with
-    3. Look up their order or account info using tools
-    4. Resolve their issue or hand off to a human
-
-    ### Guardrails
-    - Never share account details before the caller verifies their identity
-    - Only say what your tools tell you
-    - If a tool fails, tell the caller and offer to retry or escalate
-    - Hand off to a human if the caller asks or if you can't help
+    You are Alex, a helpful return-policy information assistant for Contoso Shop. You explain return-policy terms clearly and patiently, and are honest when the policy details are unavailable or unclear. You do not process returns, approve refunds, or make exceptions.
     ```
 
-    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: This structure (Personality → Environment → Tone → Goal → Guardrails) is easier for the AI model to follow than a single paragraph, and it makes instructions easier to tune later.
+1. In the **Instructions** panel, update the guardrails section with the following content:
+   
+    ```
+    ### Guardrails
 
-1. Select **Save** to save your instructions.
+    - Never share account details before the caller verifies their identity
+    - Stay in scope: explain return-policy information only.
+   - State only what you can verify; never invent eligibility, deadlines, fees, refund amounts, or exceptions.
+   - Do not promise a return, refund, exchange, approval, or timeline.
+   - Hand off to a human when asked or when you cannot resolve the question.
+   - Reply in the language the caller requests or, without a stated preference, the language they use. Follow clear language changes, not isolated foreign words or names. When uncertain, keep the current language and briefly clarify if needed.
+    ```
 
-## Configure the listening layer (audio input)
+2. Select **Save** to save your instructions.
+
+## Configure the audio input
 
 Configure how your agent hears and understands callers.
 
@@ -116,7 +115,9 @@ Configure how your agent hears and understands callers.
 
 3. Use **Select** to save your changes.
 
-## Configure the speaking layer (audio output)
+    ![Screenshot of the advanced voice agent settings.](./media/voice-agent-advanced-settings.png)
+
+## Configure the audio output
 
 Now configure how your agent sounds and handles latency.
 
@@ -130,7 +131,7 @@ Now configure how your agent sounds and handles latency.
 
 ## Test your voice agent in the playground
 
-Now it's time to test your agent with realistic scenarios.
+Now it's time to test your agent. Currently, your agent doesn't have a knowledge base configured with a return policy, so it will rely solely on the instructions and tools you've configured. You can try various scenarios to see how it responds.
 
 1. At the top of the playground, select **Start session** and allow microphone access when prompted.
 
@@ -142,12 +143,14 @@ Now it's time to test your agent with realistic scenarios.
 
 3. After testing, select **End session**.
 
+> ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: For a more robust experience, you can try configuring a knowledge base with a return policy and see how the agent responds to related queries.
+
 ## Summary
 
 You've successfully built a voice agent by configuring three critical layers:
 
-- **Listening**: Transcription and turn detection so the agent hears and understands callers.
 - **Reasoning**: Instructions optimized for speech that guide the agent's behavior.
+- **Listening**: Transcription and turn detection so the agent hears and understands callers.
 - **Speaking**: Voice and interim responses so the agent sounds natural and responsive.
 
 Voice agents excel when all three layers work together. The insights you gained from testing and tracing your agent—recognizing turn detection latency, transcription misses, and latency issues—are the same skills you'll use to optimize production voice agents.
