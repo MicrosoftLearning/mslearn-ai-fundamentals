@@ -54,23 +54,25 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
 At the heart of every AI agent, there's a large language model (LLM). Let's find one in the Foundry models catalog.
 
-1. Now you're ready to explore models. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
+1. Now you're ready to explore models. On the **Catalog** page, view the **Models** tab to see the Microsoft Foundry model catalog.
 
     Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
 
-    ![Screenshot of the AI Foundry model catalog.](./media/0-foundry-models.png)
+    ![Screenshot of the AI Foundry model catalog.](./media/discover_page.png)
 
-1. Search for and select the `gpt-5-mini` model, and view the page for this model, which describes its features and capabilities.
 
-    ![Screenshot of the gpt-5-mini model page.](./media/gpt-5-mini.png)
+1. Search the catalog for the `gpt-5.4-mini` model, and view the page for this model, which describes its features and capabilities.
 
-1. Use the **Deploy** button to deploy the model using the default settings. Deployment may take a minute or so.
+    ![Screenshot of the gpt-5-mini model page.](./media/gpt-5-mini_page.png)
 
-    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: If you already have a *gpt* model deployment, you can use it instead of deploying a new one. Model deployments are subject to regional quotas. If you don't have enough quota to deploy a *gpt-5-mini* model in your project's region, you can use a different *gpt* chat-capable model - such as *gpt-5-nano*, or *gpt-5.4-mini*. Alternatively, you can create a new project in a different region.
+    
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: If you already have a *gpt* model deployment, you can use it instead of deploying a new one. Model availability in a project is subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different chat-enabled *gpt* model that supports chat completion. Alternatively, you can create a new project in a different region.
+
+1. Use the **Deploy** button to deploy the model using the default settings. Deployment may take a minute or so. If deployment with the default settings fails, you can try using custom settings.
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
-    ![Screenshot of the model playground.](./media/0-model-playground.png)
+    ![Screenshot of the model playground.](./media/model-playground.png)
 
 ## Chat with the model
 
@@ -79,7 +81,7 @@ You can use the playground to explore the model by chatting with it.
 1. Use the button at the bottom of the left navigation pane to hide it and give yourself more room to work with.
 1. In the **Chat** pane, enter a prompt such as `Who was Ada Lovelace?`, and review the response.
 
-    ![Screenshot of the chat pane with a response.](./media/0-chat-response.png)
+    ![Screenshot of the chat pane with a response.](./media/chat_response.png)
 
 1. Enter a follow-up prompt, such as `Tell me more about her work with Charles Babbage.` and review the response.
 
@@ -110,36 +112,21 @@ To support specific use cases, you should use a *system prompt* to provide the m
 1. Continue the conversation with prompts such as `How does it compare with modern LLMs?`.
 1. Try asking an "off-topic" question, such as `What's the capital of Spain?`; and view the response.
 
-## Add a web_search tool
+## Add a *web_search* tool
 
 So far, the model has answered questions based on the data with which it was trained. While this is useful, that leaves out a lot of current information on the web; which might help the model give more relevant answers.
 
 We can use *tools* to give models access to external data sources, and to perform custom tasks. Let's add a tool that enables the model to search the Web for up-to-date information.
 
 1. In the pane on the left, under the instructions, expand the **Tools** section if it isn't already expanded.
-1. In the **Add** drop-down list, enable **Web search**. Then read the information about the tool.
+1. In the **Add** drop-down list, ensure **Web search** is enabled.
+
+    ![Screenshot of the web_search tool.](./media/web_search.png)
+
 1. In the model playground, at the top right of the chat pane, use the **New chat** button to restart the conversation.
 1. With the *web_search* tool listed in the pane on the left, in the chat pane, enter the prompt `Find a vintage computer store near Seattle` (*or your local city!*) and review the response.
 
     The model should have searched the Web for vintage computer stores near the specific city.
-
-## Add knowledge
-
-The combination of the model's training data and a tool to search the web can often be enough to support a comprehensive, general-purpose chat agent. However, often an agent needs to work in the context of a particular business or scenario, in which there's specialized or proprietary information that it needs to reason over when responding.
-
-In this exercise, we'll give the model a *file search* tool with access to information about common manufacturer serial numbers that might be found on the printed circuit boards (PCBs) of vintage computers.
-
-1. Open a new browser tab, and view the **[vintage_computer_identifiers.docx](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/vintage_computer_identifiers.docx){:target="_blank"}** at `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/vintage_computer_identifiers.docx`. We'll use this to provide a knowledge source that the agent can use to identify computers based on serial numbers, product IDs, and other common printed details.
-1. Download **vintage_computer_identifiers.docx** to your local computer.
-1. Return to the tab containing the agent playground, and in the pane on the left, in the **Tools** section, upload the **vintage_computer_identifiers.docx** file, creating a new index with the default index name. When the index has been created, attach it to the agent.
-1. In the model playground, at the top right of the chat pane, use the **New chat** button to restart the conversation.
-1. In the **Chat** tab, enter the prompt `I have a printed circuit board with the "ASSY 250425" on it. What can you tell me about it?` and view the response.
-
-    This time the response should be informed by the information in the expenses data source.
-
-1. Try a few more prompts - for example, `What kind of computer does a PCB with "820-001A" come from?` or `What about "i386"?`.
-
-    When there's relevant information in the file, the model will use it to answer. If no information is found, the model will use its own training knowledge or the web_search tool.
 
 ## Save the model configuration as an agent
 
@@ -155,34 +142,38 @@ While you can implement generative AI apps using a standalone model, to create a
 
     ```yml
     metadata:
-      logo: Avatar_Default.svg
-      microsoft.voice-live.enabled: "false"
+        logo: Avatar_Default.svg
+        microsoft.voice-live.enabled: "false"
     object: agent.version
     id: computing-historian:1
     name: computing-historian
     version: "1"
     description: ""
-    created_at: 1784419039
+    created_at: 1794957785
     definition:
-      kind: prompt
-      model: gpt-5-mini
-      instructions: You are an expert in the history of computing and AI. You only answer questions about significant people and events in the development of computing, and about notable vintage computers. Do not engage in conversations on any topic that is unrelated to computing history.
-      tools:
-        - type: web_search
-        - type: file_search
-          vector_store_ids:
-            - vs_qpRG020jZSewWHPI7B06q2V4
+    kind: prompt
+    model: gpt-5.4-mini
+    instructions: You are an expert in the history of computing and AI. You only answer questions about significant people and events in the development of computing, and about notable vintage computers. Do not engage in conversations on any topic that is unrelated to computing history.
+    reasoning:
+        effort: low
+        summary: detailed
+    tools:
+        - type: mcp
+        server_label: computing-historian-toolbox
+        server_url: https://ai-resrce.services.ai.azure.com/api/projects/ai-project/toolboxes/computing-historian-toolbox/versions/1/mcp?api-version=v1
+        require_approval: never
+    draft: false
     status: active
     instance_identity:
-      principal_id: 0000000-0000000-000000000
-      client_id: 0000000-0000000-000000000
+    principal_id: e517e99b-17d6-4775-9abd-e72599d405f8
+    client_id: e517e99b-17d6-4775-9abd-e72599d405f8
     blueprint:
-      principal_id: 0000000-0000000-000000000
-      client_id: 0000000-0000000-000000000
+    principal_id: 307951ec-c015-4fb1-9179-656142b90a1f
+    client_id: c51771af-7be3-48c6-994e-14d5e12ba129
     blueprint_reference:
-      type: ManagedAgentIdentityBlueprint
-      blueprint_id: computing-historian-c9996
-    agent_guid: c0000000-0000000-000000000
+    type: ManagedAgentIdentityBlueprint
+    blueprint_id: computing-historian-35dae
+    agent_guid: 35daef3f-d8a8-473e-8ef3-d144b4e30397
     ```
 
 1. Switch back to the **Chat** tab, and enter the prompt `Who are you?`

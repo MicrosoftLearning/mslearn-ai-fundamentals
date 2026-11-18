@@ -54,7 +54,7 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
 Now you're ready to create an agent that can help employees with expense claims.
 
-1. On the **Home** page, in the **Build an agent** tile, select **Start building** (or on the **Build** page, select the **Agents** tab); and create a new agent named `expenses-agent`. If prompted, set the **Interaction mode** to **Text**.
+1. On the **Home** page, in the **Build an agent** tile, select **Create an agent** (or on the **Build** page, select the **Agents** tab); and create a new agent named `expenses-agent`. If prompted, set the **Interaction mode** to **Text**.
 
      When ready, your agent opens in the agent playground.
 
@@ -129,13 +129,11 @@ Foundry IQ is a central connection point for data sources that agents can use as
     - **Description**: `Expense guidelines for employees`
     - **Chat completions model**: *Select the existing model deployment*
     - **Retrieval reasoning effort**: Low
-    - **Output mode**: Answer synthesis
-    - **Answer instructions**: `Answer concisely, based on the available context`
     - **Retrieval instructions**: `Use the expenses-documentation source for all questions related to expense claim policies and procedures`
 
-    > **Note**: The *output mode* determines how Foundry IQ returns knowledge to the agent. *exractive data* returns verbatim text from the knowledge source while *answer synthesis* uses a generative AI model to compose a suitable response. *Answer instructions* act as a system prompt to specify formatting of the response, and *retrieval instructions* are used by Foundry IQ to guide how knowledge is searched for in the available knowledge bases (in this case, there's only one knowledge base; but there could be more!)
+    > **Note**: The *retrieval instructions* are used by Foundry IQ to guide how knowledge is searched for in the available knowledge bases (in this case, there's only one knowledge base; but there could be more!)
 
-1. In the **Add knowledge sources** pane, select **Upload files** and upload the **expenses_policy.docx** file you previously downloaded to your computer; assigning the name `expenses-policy` and using he default embedding model.
+1. In the **Add knowledge sources** pane, select **Upload files** and upload the **expenses_policy.docx** file you previously downloaded to your computer; assigning the name `expenses-policy` and using the default embedding model.
 
     ![Screenshot of the Create a knowledge source dialog.](./media/foundry_iq_file.png)
 

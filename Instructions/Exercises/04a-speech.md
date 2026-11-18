@@ -51,7 +51,7 @@ Microsoft Foundry uses projects to organize models, resources, data, and other a
 
 Now let's create an agent.
 
-1. On the **Home** page, in the **Build an agent** tile, select **Start building** (or on the **Build** page, select the **Agents** tab); and create a new agent named `speech-agent`. If prompted, set the **Interaction mode** to **Text**.
+1. On the **Home** page, in the **Build an agent** tile, select **Create an agent** (or on the **Build** page, select the **Agents** tab); and create a new agent named `speech-agent`. If prompted, set the **Interaction mode** to **Text**.
 
      When ready, your agent opens in the agent playground.
 
@@ -92,17 +92,13 @@ Now you're ready to chat with the agent.
 
 > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Speech input works best in a quiet environment with a microphone or headset.
 
-1. In the Chat pane, use the **Start session** button to start a conversation with the agent. If prompted, allow access to the system microphone.
+1. In the Chat pane, use the **Start** button to start a conversation with the agent. If prompted, allow access to the system microphone.
 
     The agent will start a speech session, and listen for your prompt.
 
-    ![Screenshot of the selected cc button to see the closed captions.](./media/speech-session.png)
-
 1. When the app status is **Listening…**, say something like `"How does speech recognition work?"` and wait for a response.
 
-1. Verify that the app status changes to **Processing…**. The app will process the spoken input.
-
-    The processing speed may be so fast that you do not actually see the status before it changes back to *Speaking*.
+    ![Screenshot of a speech session.](./media/speech-session.png).
 
 1. When the status changes to **Speaking…**, the app uses text-to-speech to vocalize the response from the model. To see the original prompt and the response as text, select the **cc** button on the bottom of the chat screen.
 1. To continue the conversation, just ask another question, such as `"How does speech synthesis work?"`, and review the response.

@@ -53,10 +53,21 @@ Computer vision models enable AI systems to interpret image-based data, such as 
 1. In a new browser tab, download **[images.zip](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip){:target="_blank"}** `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip` to your local computer.
 1. Extract the downloaded archive in a local folder to see the files it contains. These files are the images you'll use AI to analyze.
 1. Return to the browser tab containing your Microsoft Foundry project.
-1. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
-1. Search for and deploy the `gpt-5-mini` model using the default settings. Deployment may take a minute or so.
+On the **Catalog** page, view the **Models** tab to see the Microsoft Foundry model catalog.
 
-    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: If you already have a *gpt* model deployment, you can use it instead of deploying a new one. Model deployments are subject to regional quotas. If you don't have enough quota to deploy a *gpt-5-mini* model in your project's region, you can use a different *gpt* chat-capable model - such as *gpt-5-nano*, or *gpt-5.4-mini*. Alternatively, you can create a new project in a different region..
+    Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
+
+    ![Screenshot of the AI Foundry model catalog.](./media/discover_page.png)
+
+
+1. Search the catalog for the `gpt-5.4-mini` model, and view the page for this model, which describes its features and capabilities.
+
+    ![Screenshot of the gpt-5-mini model page.](./media/gpt-5-mini_page.png)
+
+    
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: If you already have a *gpt* model deployment, you can use it instead of deploying a new one. Model availability in a project is subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different chat-enabled *gpt* model that supports chat completion. Alternatively, you can create a new project in a different region.
+
+1. Use the **Deploy** button to deploy the model using the default settings. Deployment may take a minute or so. If deployment with the default settings fails, you can try using custom settings.
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
@@ -120,7 +131,7 @@ So far you've explored the ability of a generative AI model to process visual in
 
 > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: This task requires a subscription that has access to image-generation models.
 
-1. Use the "back" arrow next to the **gpt-5-mini** header (or select the **Models** page in the navigation pane) to view the model deployments in your project.
+1. Use the "back" arrow next to the **gpt-5.4-mini** header (or select the **Models** page in the navigation pane) to view the model deployments in your project (don't save the model configuration if prompted).
 1. Select **Deploy a base model** to open the model catalog.
 1. In the **Collections** drop-down list, select **Direct from Azure**, and in the **Inference tasks** drop-down list, select **Text to image**. Then view the available models for image generation.
 
@@ -128,7 +139,7 @@ So far you've explored the ability of a generative AI model to process visual in
 
     > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availability and quota.
 
-1. Select an available text-to-image model, such as **gpt-image-1-mini** or **FLUX.2-pro**, and deploy it.
+1. Select an available text-to-image model, such as **gpt-image-2**, **gpt-image-1-mini** or **FLUX.2-pro**, and deploy it.
 
     *If one of these models is unavailable in your subscription or region, deploy another text-to-image model that's available.*
 

@@ -64,7 +64,7 @@ Microsoft Foundry projects are based on resources in your Azure subscription. Le
 
     You can view the projects, users, connected resources, and admin-connected models associated with this resource. You can also manage it in the Azure portal.
 
-1. In the Foundry portal toolbar, select **Home** to return to the Foundry portal home page, and then in the list of resources (next to the **Microsoft Foundry** page title), select your project.
+1. In the Foundry portal toolbar, select the *Microsoft Foundry* logo to return to the Foundry portal home page, and tview the home page for your project.
 
     > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: When you return to the Home page initially, your parent resource may still be selected. Selecting your project enables you to use the portal to work with project-specific assets.
 
@@ -82,62 +82,52 @@ The Microsoft Foundry portal is where you create and manage agents and AI servic
 
     > **TIP**: You're going to need the project key and project endpoint later!
 
-1. View the **Discover** page.
+1. In the navigation pane on the left, select the **Catalog** page.
 
-    ![Screenshot of the Discover page.](./media/discover_page.png)
+    ![Screenshot of the Catalog page.](./media/discover_page.png)
 
     This page surfaces the latest models and services and enables you to find starting points for AI application development.
 
-1. View the **Build** page.
+1. In the page header at the top, select the **Build** page.
 
     ![Screenshot of the Build page.](./media/build_page.png)
 
-    This page is where you develop AI solutions. Here you can:
+    This page is where you develop AI solutions. Here you can use the items in the **Create** section of the navigation pane:
 
-    - View and manage the *agents* and *workflows* in your project.
-    - View and manage model *deployments* in your project.
-    - *Fine-tune* base models to respond to queries based on your application's specific needs.
+    - Create and manage the *agents* in your project.
+    - Deploy and manage *models* in your project.
+    - Connect AI *services* to use in your solution.
     - Add and configure *tools* that agents can use to perform tasks.
     - Manage *knowledge* for your agents based on Foundry IQ data sources in your enterprise.
     - Define and manage *guardrails* to ensure compliance with responsible AI policies for generative AI content and behavior.
     - Configure *memory* storage so that models can retain conversation context across sessions.
-    - Connect and manage *data* indexes for AI agents and generative AI apps.
-    - Create *evaluations* to compare model performance.
-    - *Fine-tune* models to optimize performance.
-1. View the **Operate** page.
+    - Connect and manage *guardrails* to implement content safety measures.
 
-    ![Screenshot of the Operate page.](./media/operate_page.png)
+1. View the **Manage** page.
 
-     On this page, you can operate your AI solution by:
+    ![Screenshot of the Manage page.](./media/operate_page.png)
 
-    - Managing *assets* like agents, models, and tools in your project.
-    - Manage *compliance* with security policies.
-    - View and manage *quota* configuration that defines limits for usage of models and other assets in your project.
-    - Perform *admin* tasks to manage your projects.
+     On this page, you can manage operations for your AI solution, including cost management, compliance, quotas, and connectivity.
 
-1. View the **Docs** page.
-
-    ![Screenshot of the Docs page.](./media/docs_page.png)
-
-    This page provides access to Microsoft Foundry documentation.
 
 ## Deploy a model
 
 Your Microsoft Foundry resource provides an endpoint in which you can deploy models and use them from applications and agents.
 
-1. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
+1. Return to the **Build** page, and in the navigation pane, in the **Create** section, select **Models**.
 
-    Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
+    If you have previously deployed any models in this project, they will be listed here. Otherwise you can deploy your first model.
 
-    ![Screenshot of the AI Foundry model catalog.](./media/models_page.png)
+    ![Screenshot of the Models page.](./media/create-models.png)
 
-1. Search for and select the `gpt-5-mini` model, and view the page for this model, which describes its features and capabilities.
+1. Select the option to deploy a base model. Then search the catalog for the `gpt-5.4-mini` model, and view the page for this model, which describes its features and capabilities.
 
     ![Screenshot of the gpt-5-mini model page.](./media/gpt-5-mini_page.png)
 
-1. Use the **Deploy** button to deploy the model using the default settings. Deployment may take a minute or so.
+    
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Model availability in a project is subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different chat-enabled *gpt* model that supports chat completion. Alternatively, you can create a new project in a different region.
 
-    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different chat-enabled *gpt* model - such as *gpt-5*, or *gpt-5.1*. Alternatively, you can create a new project in a different region.
+1. Use the **Deploy** button to deploy the model using the default settings. Deployment may take a minute or so. If deployment with the default settings fails, you can try using custom settings.
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
@@ -176,7 +166,7 @@ Now that you have a Microsoft Foundry resource in Azure, you can use its models 
 
     ![Screenshot of the Computing History app configuration panel.](./media/configure-computing-history.png)
 
-1. Enter your project endpoint, gpt-5-mini model deployment name, and API key from the Foundry portal into the configuration settings, and save the configuration.
+1. Enter your project endpoint, model deployment name, and API key from the Foundry portal into the configuration settings, and save the configuration.
 
     > **Note**: The configuration values other than the API key will be stored in your local browser cache. If you close and re-open the app, you will need to re-enter the API key.
 

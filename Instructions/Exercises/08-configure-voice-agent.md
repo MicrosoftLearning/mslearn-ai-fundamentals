@@ -163,4 +163,4 @@ If you've finished exploring Microsoft Foundry, delete the resources created in 
 1. On the toolbar, select **Delete resource group**.
 1. Enter the resource group name and confirm deletion.
 
-> ![Anton avatar.](./media/anton-icon.png)<br/>If you used the [*Ask Anton*](https://aka.ms/choose-anton){:target="_blank"}* app during this lab, we'd love to [hear about your experience](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}!
+> ![Anton avatar.](./media/anton-icon.png)<br/>If you used the [*Ask Anton*](https://aka.ms/choose-anton){:target="_blank"} app during this lab, we'd love to [hear about your experience](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}!

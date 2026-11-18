@@ -54,17 +54,19 @@ This exercise takes approximately **20** minutes.
 
 Let's start by using a chat interface to submit prompts to a generative AI model to perform a common text analysis task - summarizing text.
 
-1. Now you're ready to explore models. On the **Discover** page, select the **Models** tab to view the Microsoft Foundry model catalog.
+1. Now you're ready to explore models. On the **Catalog** page, in the **Models** tab, view the Microsoft Foundry model catalog.
 
-    ![Screenshot of the AI Foundry model catalog.](./media/models_page.png)
+    ![Screenshot of the AI Foundry model catalog.](./media/discover_page.png)
 
-1. Search for and select the `gpt-5-mini` model, and view the page for this model, which describes its features and capabilities.
+1. Search for and select the `gpt-5.4-mini` model, and view the page for this model, which describes its features and capabilities.
 
     ![Screenshot of the gpt-5-mini model page with the default settings deployment option highlighted.](./media/gpt-5-mini_page.png)
 
-1. Use the **Deploy** button to deploy the model using the *default settings*. Wait for the deployment to complete. After the deployment is complete, you're taken to a chat playground, where you can test out the model's capabilities.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: If you already have a *gpt* model deployment, you can use it instead of deploying a new one. Model availability in a project is subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different chat-enabled *gpt* model that supports chat completion. Alternatively, you can create a new project in a different region.
 
-    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: If you already have a *gpt* model deployment, you can use it instead of deploying a new one. Model deployments are subject to regional quotas. If you don't have enough quota to deploy a *gpt-5-mini* model in your project's region, you can use a different *gpt* chat-capable model - such as *gpt-5-nano*, or *gpt-5.4-mini*. Alternatively, you can create a new project in a different region.
+1. Use the **Deploy** button to deploy the model using the default settings. Deployment may take a minute or so. If deployment with the default settings fails, you can try using custom settings.
+
+    After the deployment is complete, you're taken to a chat playground, where you can test out the model's capabilities.
 
 ### Summarize text
 
@@ -105,21 +107,21 @@ While a language model that's trained for general generative AI workloads can of
 
 The **Azure Language in Foundry Tools** provides purpose-built analyzers that use statistical techniques to return structured, deterministic results—ideal for consistent output in automated pipelines.
 
-1. In the Foundry portal, navigate to the menu at the top of the screen and select **Build**.
+1. In the Foundry portal, view the **Build** page (if prompted, don't save the model configration).
 
-1. On the *Build* page, navigate to the menu on the left-side of the screen (you may need to expand it). In the menu, select the **Services** page.
+1. Expand the navigation menu on the left-side of the screen if necessary, and select the **Services** page.
 
     Microsoft Foundry Tools includes multiple AI Services (formerly known as Microsoft Cognitive Services) that support common speech, translation, language, and content understanding workloads.
 
     ![Screenshot of Foundry AI services page.](./media/ai_services.png)
 
-1. Note the available services; which include Azure Language services for language detection and PII redaction.
+1. Note the available services; which include Language services for language detection and PII redaction.
 
 ### Detect language
 
 In scenarios where text could potentially be in one of multiple languages, the first step in an analysis workflow is often to determine the primary language so the text can be routed to the most appropriate model or agent for the subsequent processing.
 
-1. In the list of Services, select the **Azure Language - Language detection** analyzer.
+1. In the list of services, select **Language**, and then select **Language detection**.
 1. In the **Input text** list, select one of the provided sample documents. Then use the **Detect** button to detect the language in which the sample is written.
 
     ![Screenshot of a detected language in the Playground](./media/language_detection.png)

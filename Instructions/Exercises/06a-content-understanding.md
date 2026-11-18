@@ -48,7 +48,9 @@ This exercise takes approximately **25** minutes.
 
 Azure Content Understanding is a Foundry service that uses AI models to turn unstructured, multimodal content (documents, images, video, audio) into structured, usable outputs like JSON. It processes content by extracting, classifying, and generating fields with confidence scores and source grounding.
 
-### Open the Content Understanding playground in Foundry portal
+### Use OCR to read text in an image
+
+Suppose you want to find information related to a piece of computer hardware or some other item with information printed on it. A first step might be to digitize the text so you can use it to look up details on the Internet or in an AI assistant. You can use an AI technique called optical character recognition (OCR) to "read" text in images.al
 
 1. In the Foundry portal, navigate to the tool bar at the top of the screen and select **Build**.
 1. On the *Build* page, in the menu on the left-side of the screen (which you may need to expand), select the **Services** page.
@@ -57,19 +59,11 @@ Azure Content Understanding is a Foundry service that uses AI models to turn uns
 
     ![Screenshot of Foundry AI services page.](./media/ai_services.png)
 
-1. Select **Content Understanding** to open the *Content Understanding* tool playground.
+1. Select **Document Intelligence and Content Understanding**, and then select the **OCR (Read)** analyzer.
 
-    ![Screenshot of the Content Understanding playground.](./media/content-understanding.png)
+1. Select any sample image, and use the **Run** button to extract text from it. When analysis is complete, view the results.
 
-### Use OCR to read text in an image
-
-Suppose you want to find information related to a piece of computer hardware or some other item with information printed on it. A first step might be to digitize the text so you can use it to look up details on the Internet or in an AI assistant. You can use an AI technique called optical character recognition (OCR) to "read" text in images.
-
-1. Select **OCR/Read**, and ensure that **Document** is selected in the **Modality** list, and **OCR/Read** is selected in the list of analyzers.
-
-1. Select any sample image, and use the **Run analysis** button to extract text from it. When analysis is complete, view the results.
-
-    ![Screenshot of the results of OCR analysis.](./media/new-portal-read-barcode.png)
+    ![Screenshot of the results of OCR analysis.](./media/content-understanding.png)
 
 1. In the pane on the right, review the **Markdown**, **Paragraphs**, and **Result** tabs to see the data that has been read from the document by the analyzer.
 
@@ -93,7 +87,7 @@ Suppose you want to find information related to a piece of computer hardware or 
 
 Now suppose you need to extract data fields from scanned receipts to help automate an expense claim solution. You can use OCR to identify text and its location in images, and then use a generative AI model to associate individual text values with specific data fields - such as company names, phone numbers, dates, amounts, and so on.
 
-1. In the list of analyzer types, select **Procurement**, and then select the **Receipt** analyzer.
+1. In the **Category** list, select **Procurement**, and then select the **Receipt** analyzer.
 
     > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Field extraction requires a custom model, so you may be prompted to deploy models during this process. Click **Cancel** when this happens.<br><br>Do <u>not</u> run analysis - we'll review the pre-prepared analysis results.
 
@@ -107,45 +101,93 @@ Now suppose you need to extract data fields from scanned receipts to help automa
 
 As a developer, you can also use code to extract meaning from content. The Foundry playground provides various code samples to get you started with information extraction with Azure Content Understanding.
 
-![Screenshot of the sample code provided in the Foundry playground.](./media/content-understanding-code-example.png)
-
-1. Let's take a closer look at the Python code for document layout analysis. In the Content Understanding playground, while viewing the results of the **Receipt** analyzer, select the **Code** tab. The following code is provided:
+1. Let's take a closer look at the Python code for document layout analysis. In the Content Understanding playground, while viewing the results of the **Receipt** analyzer, select **View Code** tab. The following code is provided:
 
     ```python  
-    import sys
+    """
+    A sample to demonstrate analyzing with Azure AI Content Understanding Python SDK.
+
+    Requirements:
+        - Python 3.9 or later
+
+    Setup:
+        Follow the steps in the URL below to configure your Microsoft Foundry resource and model deployments:
+        https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/contentunderstanding/azure-ai-contentunderstanding#configuring-microsoft-foundry-resource
+
+    Configuration:
+        Before running, update the following variables in the script:
+        - AZURE_CONTENT_UNDERSTANDING_ENDPOINT: The endpoint to your Content Understanding resource.
+        - CONTENT_UNDERSTANDING_KEY: Your Content Understanding API key (optional if using DefaultAzureCredential).
+        - FILE_URL: URL of the file to analyze.
+
+    Usage:
+        1. Navigate to the directory containing this file:
+        # In your terminal
+        cd path/to/the/directory/containing/this/file
+
+        2. (Optional) Create and activate a virtual environment:
+        python -m venv .venv         # One time setup
+        source .venv/bin/activate      # On Linux/macOS
+        .venv\\Scripts\\activate        # On Windows
+
+        3. Install dependencies:
+        python -m pip install --pre azure-ai-contentunderstanding
+        python -m pip install azure-identity
+
+        4. Run the script:
+        python sample.py
+    """
+
     import json
-    
+    from urllib.parse import urlparse
     from azure.ai.contentunderstanding import ContentUnderstandingClient
     from azure.ai.contentunderstanding.models import AnalysisInput, AnalysisResult
     from azure.core.credentials import AzureKeyCredential
     from azure.core.exceptions import AzureError
     from azure.identity import DefaultAzureCredential
-    
+
+
+    def is_absolute_url(value: str) -> bool:
+        parsed_url = urlparse(value)
+        return bool(parsed_url.scheme and parsed_url.netloc)
+
+
     def main() -> None:
         # Insert the following configurations.
         # 1) AZURE_CONTENT_UNDERSTANDING_ENDPOINT - the endpoint to your Content Understanding resource.
-        endpoint = "https://content-project-resource.services.ai.azure.com/"
-    
+        endpoint = "https://ai-resrce.services.ai.azure.com/"
+
         # 2) CONTENT_UNDERSTANDING_KEY - your Content Understanding API key (optional if using DefaultAzureCredential).
         key = "{{CONTENT_UNDERSTANDING_KEY}}"
-    
+
         # 3) FILE_URL - you can replace this with your own URL.
         file_url = "{{FILE_URL}}"
-    
+
         # ANALYZER_ID - the ID of the analyzer to use.
         analyzer_id = "prebuilt-receipt"
-    
+
         # API_VERSION - the API version to use.
-        api_version = "2025-11-01"
-    
+        api_version = "2026-06-01-preview"
+
+        # Validate Endpoint
+        if not is_absolute_url(endpoint):
+            print("[Error] Invalid Endpoint. Please provide a valid 'Endpoint'.")
+            return
+
+        # Validate File URL
+        if not is_absolute_url(file_url):
+            print("[Error] Invalid File URL. Please provide a valid URL.")
+            return
+
         # Set up Content Understanding client.
-        credential = AzureKeyCredential(key) if key and "{{CONTENT_UNDERSTANDING_KEY}}" not in key else DefaultAzureCredential()
+        hasKey = type(key) is str and bool(key.strip()) and "{{CONTENT_UNDERSTANDING_KEY}}" not in key
+        credential = AzureKeyCredential(key) if hasKey else DefaultAzureCredential()
         client = ContentUnderstandingClient(endpoint=endpoint, credential=credential, api_version=api_version)
-    
+
         # [START analyze]
         print(f"Analyzing with {analyzer_id} analyzer...")
         print(f"  File URL: {file_url}\n")
-    
+
         try:
             poller = client.begin_analyze(
                 analyzer_id=analyzer_id,
@@ -154,28 +196,29 @@ As a developer, you can also use code to extract meaning from content. The Found
             result: AnalysisResult = poller.result()
         except AzureError as err:
             print(f"[Azure Error]: {err.message}")
-            sys.exit(1)
+            return
         except Exception as ex:
             print(f"[Unexpected Error]: {ex}")
-            sys.exit(1)
+            return
         # [END analyze]
-    
+
         # [START output_result]
         print("=" * 50)
         print("Analysis result:")
         print("=" * 50 + "\n")
-    
+
         max_display_lines = 50
         result_str = json.dumps(result.as_dict(), indent=2)
         ret_lines = result_str.splitlines()
-    
+
         if len(ret_lines) > max_display_lines:
             print("\n".join(ret_lines[:max_display_lines]))
             print(f"\n {len(ret_lines) - max_display_lines} more lines to be displayed...\n")
         else:
             print(result_str)
         # [END output_result]
-    
+
+
     if __name__ == "__main__":
         main()
     ```
