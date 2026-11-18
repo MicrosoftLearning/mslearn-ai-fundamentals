@@ -32,9 +32,8 @@ This exercise should take approximately **30** minutes to complete.
 
 Microsoft Foundry uses *projects* to organize models, resources, data, and other assets used to develop an AI solution.
 
-1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` to start building; signing in using your Azure credentials.
-1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option.
-1. If you do not have any existing projects, you will be prompted to create one. Create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project (or you can select an existing project if you have one!):
+1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
+1. If you do not have any existing projects, you may be prompted to create one. If so, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
     - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
@@ -42,7 +41,7 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
     > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
 
-1. Wait for your project to be created. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
+1. Wait for your project to be created, and close any welcome dialogs that are displayed. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
     ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
@@ -53,14 +52,14 @@ Computer vision models enable AI systems to interpret image-based data, such as 
 1. In a new browser tab, download **[images.zip](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip){:target="_blank"}** `https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip` to your local computer.
 1. Extract the downloaded archive in a local folder to see the files it contains. These files are the images you'll use AI to analyze.
 1. Return to the browser tab containing your Microsoft Foundry project.
-On the **Catalog** page, view the **Models** tab to see the Microsoft Foundry model catalog.
+In the Navigation pane, select the **Catalog** page.
 
-    Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
+    Microsoft Foundry provides a large catalog of models, services, tools, and other assets that you can use in your AI apps and agents.
 
     ![Screenshot of the AI Foundry model catalog.](./media/discover_page.png)
 
 
-1. Search the catalog for the `gpt-5.4-mini` model, and view the page for this model, which describes its features and capabilities.
+1. On the **Models** tab, search the catalog for the `gpt-5.4-mini` model, and view the page for this model, which describes its features and capabilities.
 
     ![Screenshot of the gpt-5-mini model page.](./media/gpt-5-mini_page.png)
 
