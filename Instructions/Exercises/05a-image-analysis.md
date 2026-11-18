@@ -138,7 +138,7 @@ So far you've explored the ability of a generative AI model to process visual in
 
     > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: The available models in your subscription may vary. Additionally, the ability to deploy models depends on regional availability and quota.
 
-1. Select an available text-to-image model, such as **gpt-image-2**, **gpt-image-1-mini** or **FLUX.2-pro**, and deploy it.
+1. Select an available text-to-image model, such as **MAI-Image-2.7**, **gpt-image-2**, **gpt-image-1-mini** or **FLUX.2-pro**, and deploy it.
 
     *If one of these models is unavailable in your subscription or region, deploy another text-to-image model that's available.*
 
