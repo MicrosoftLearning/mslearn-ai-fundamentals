@@ -239,7 +239,7 @@ After deploying a client application for your agent, users can submit prompts to
 
 1. In the page for your **computing-historian** agent, view the **Monitor** tab, and on the **Overview** tab, view overall metrics recorded for your agent.
 
-    Note that some metrics require configuration of Azure AppInsights, but token usage (from which the cost of using the agent's model is derived) is shown (the estimated cost for the limited activity you've performed in this exercise may be too low to display).
+    Note that some metrics require configuration of Azure AppInsights, but token usage (from which the cost of using the agent's model is derived) is shown (the estimated cost for the limited activity you've performed recently in this exercise may not yet be displayed).
 
     ![Screenshot of the Monitor tab for an agent.](./media/monitor-agent.png)
 
