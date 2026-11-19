@@ -200,36 +200,39 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
     ```python
     # Before running the sample:
-    # pip install azure-ai-projects>=2.1.0
-    
+    #    pip install "azure-ai-projects>=2.1.0"
+
     from azure.identity import DefaultAzureCredential
     from azure.ai.projects import AIProjectClient
-    
+
     endpoint = "https://ai-resrce.services.ai.azure.com/api/projects/ai-project"
-    
-    project_client = AIProjectClient(
-        endpoint=endpoint,
-        credential=DefaultAzureCredential(),
-    )
-    
-    my_agent = "computing-historian"
-    my_version = "1"
-    
-    openai_client = project_client.get_openai_client()
-    
-    # Reference the agent to get a response
-    
-    response = openai_client.responses.create(
-        input=[{"role": "user", "content": "Tell me what you can help with."}],
-        extra_body={"agent_reference": {"name": my_agent, "version": my_version, "type": "agent_reference"}},
-    )
-    
-    print(f"Response output: {response.output_text}")
+    agent_name = "computing-historian"
+    user_message = "Hi computing-historian"
+
+    with (
+        DefaultAzureCredential() as credential,
+        AIProjectClient(
+            endpoint=endpoint,
+            credential=credential,
+            allow_preview=True,
+        ) as project_client,
+    ):
+        # Bind the OpenAI client to the existing agent endpoint.
+        openai_client = project_client.get_openai_client(agent_name=agent_name)
+
+        # GitHub Copilot preview agents require a conversation for every Responses turn.
+        conversation = openai_client.conversations.create()
+        response = openai_client.responses.create(
+            conversation=conversation.id,
+            input=[{"role": "user", "content": user_message}],
+        )
+
+        print(f"Response output: {response.output_text}")
     ```
 
     The code to connect to your agent uses the **Azure.AI.Projects** library to create an **AIProjectClient** object connected to your Foundry project. Since this involves connecting to a project, which may contain privileged resources, key-based authentication is <u>not</u> supported, and the application must use an Entra ID identity to be authenticated.
 
-    After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we previously saw being used to chat with a model. Since a project can contain multiple agents and models, the specific agent details are specified as **extra_body** in the **responses.create** method.
+    After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we previously saw being used to chat with a model.
 
 ## Summary
 
