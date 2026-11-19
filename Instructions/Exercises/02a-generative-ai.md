@@ -231,6 +231,44 @@ The agent is defined within your Foundry project, and there's a convenient way t
 
     After connecting to the project, the code uses the project client's **get_openai_client** method to retrieve an OpenAI client object; with which it can submit prompts to the agent using the same **Responses** API we previously saw being used to chat with a model.
 
+## Monitor agent activity and cost
+
+After deploying a client application for your agent, users can submit prompts to generate responses and perform actions. You can monitor this activity and the costs it incurs.
+
+### View metrics for the agent
+
+1. In the page for your **computing-historian** agent, view the **Monitor** tab, and on the **Overview** tab, view overall metrics recorded for your agent.
+
+    Note that some metrics require configuration of Azure AppInsights, but token usage (from which the cost of using the agent's model is derived) is shown (the estimated cost for the limited activity you've performed in this exercise may be too low to display).
+
+    ![Screenshot of the Monitor tab for an agent.](./media/monitor-agent.png)
+
+    > **Note**: Your metrics may be different to those in this image.
+
+1. View the **Cost** tab, and within it, select the **Token usage** view.
+
+    Here you can see the number of input and output tokens that have been processed by the agent each day.
+
+    ![Screenshot of the token usage visualization tab for an agent.](./media/token-usage.png)
+
+    > **Note**: Your metrics may be different to those in this image.
+
+### View project metrics and cost control measures
+
+1. In the navigation pane on te left, in the **Observe** section, select **Monitor**.
+
+    This page shows overall metrics for the project.
+
+    ![Screenshot of the Monitor page for a project.](./media/monitor-project.png)
+
+    > **Note**: Your metrics may be different to those in this image.
+
+1. View the **Cost** tab, which shows overall costs for the project. Then view the **Cost Control** tab, in which you can create cost control policies to set spending thresholds for the project and individual agents.
+
+    ![Screenshot of the Cost Control page for a project.](./media/cost-control.png)
+
+    > ![Anton avatar.](./media/anton-icon.png)<br/>**Note**: Observability and cost management (sometimes referred to as *FinOps*) is a critical element of an agentic solution, and goes beyond token costs for individual agents (though that is an important consideration). See [Cost and FinOps in Microsoft Foundry](https://learn.microsoft.com/azure/foundry/concepts/manage-costs){:target="_blank"} for more information.
+
 ## Summary
 
 In this exercise, you explored how to deploy and chat with a generative AI model in Microsoft Foundry portal. You then saved the model as an agent with instructions and tools.
