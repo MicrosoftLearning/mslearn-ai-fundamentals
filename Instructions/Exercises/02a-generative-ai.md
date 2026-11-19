@@ -34,19 +34,16 @@ This lab should take approximately **35** minutes to complete.
 
 Microsoft Foundry uses *projects* to organize models, resources, data, and other assets used to develop an AI solution.
 
-1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and start building; signing in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
-1. If it isn't already enabled, in the tool bar the top of the page, enable the **New Foundry** option.
-1. If you do not have any existing projects, you will be prompted to create one. Create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project (or you can select an existing project if you have one!):
-    - **Foundry resource**: *A valid name for your Foundry resource.*
+1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
+1. If you do not have any existing projects, you may be prompted to create one. If so, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
+    - **Foundry resource**: *Enter a valid name for your AI Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select any of the **AI Foundry recommended** regions in [this list](https://learn.microsoft.com/azure/foundry/openai/how-to/responses#supported-regions){:target="_blank"}
 
     > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
 
-1. Wait for your project to be created. It may take a few minutes. Then close any welcome dialogs that are displayed.
-
-    After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
+1. Wait for your project to be created, and close any welcome dialogs that are displayed. It may take a few minutes. After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
     ![Screenshot of the Foundry project home page.](./media/foundry-portal-home.png)
 
@@ -54,14 +51,14 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
 At the heart of every AI agent, there's a large language model (LLM). Let's find one in the Foundry models catalog.
 
-1. Now you're ready to explore models. On the **Catalog** page, view the **Models** tab to see the Microsoft Foundry model catalog.
+1. Now you're ready to explore models. In the Navigation pane, select the **Catalog** page.
 
-    Microsoft Foundry provides a large collection of models from Microsoft, OpenAI, and other providers, that you can use in your AI apps and agents.
+    Microsoft Foundry provides a large catalog of models, services, tools, and other assets that you can use in your AI apps and agents.
 
     ![Screenshot of the AI Foundry model catalog.](./media/discover_page.png)
 
 
-1. Search the catalog for the `gpt-5.4-mini` model, and view the page for this model, which describes its features and capabilities.
+1. On the **Models** tab, search the catalog for the `gpt-5.4-mini` model, and view the page for this model, which describes its features and capabilities.
 
     ![Screenshot of the gpt-5-mini model page.](./media/gpt-5-mini_page.png)
 
