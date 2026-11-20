@@ -189,6 +189,8 @@ Now you have a working agent, you can preview it in a basic web chat application
 
     ![Screenshot of an agent preview chat interface.](./media/agent-preview.png)
 
+1. When you've finished testing the agent, close the tab containing the preview app to return to your agent in the Foundry portal.
+
 ## View client code to access the agent in your project
 
 The agent is defined within your Foundry project, and there's a convenient way to develop apps that connect to it there; allowing you to iteratively refine both the agent and the client app to create the solution you need.
